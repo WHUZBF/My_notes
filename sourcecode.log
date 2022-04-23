@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  20 APR 2022 22:30
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  23 APR 2022 23:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1066,9 +1066,10 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 141--142
 LaTeX Font Warning: Font shape `TU/ntxtlf/b/n' undefined
 (Font)              using `TU/ntxtlf/m/n' instead on input line 174.
 
+[21]
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
-[21] [22]
+ [22]
 附录 B
 ) [23
 
@@ -1080,10 +1081,10 @@ Package rerunfilecheck Info: File `sourcecode.out' has not changed.
 (rerunfilecheck)             Checksum: E8FDFB2E911019A42E47FCCE21675B84;2054.
  ) 
 Here is how much of TeX's memory you used:
- 41380 strings out of 476533
- 1013598 string characters out of 5818886
+ 41393 strings out of 476533
+ 1014343 string characters out of 5818886
  1509955 words of memory out of 5000000
- 61026 multiletter control sequences out of 15000+600000
+ 61039 multiletter control sequences out of 15000+600000
  465335 words of font info for 132 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,15n,97p,727b,1004s stack positions out of 5000i,500n,10000p,200000b,80000s
