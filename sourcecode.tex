@@ -1,0 +1,544 @@
+% 导言区
+\documentclass[a4paper,zihao=-4,linespread=1]{ctexrep}
+
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[titletoc]{appendix}
+\usepackage[normalem]{ulem}         % 关于下划线的一个宏包
+\usepackage[]{indentfirst}          % 强制段首缩进
+\usepackage[]{bm}
+\usepackage[]{amsmath}
+\usepackage[]{esint}
+\usepackage[]{amssymb}
+\usepackage[]{extarrows}
+\usepackage{graphicx}
+\usepackage[]{subfigure}
+\usepackage[colorlinks,linkcolor=blue,bookmarksopen=true,bookmarksnumbered=true,citecolor=blue]{hyperref}             % 目录点击跳转
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}   % 分页
+\tcbuselibrary{skins}       % 箱子分页
+\usepackage[]{tikz}
+\usepackage[]{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{newtxtext}
+\usepackage[strict]{changepage} % 提供一个 adjustwidth 环境
+\usepackage{framed}             % 实现方框效果
+\usetikzlibrary{positioning}   % tikz绘图相对位置
+\tikzset{elegant/.style={smooth,thick,samples=50,cyan}}
+
+% 定义公式环境
+\newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
+\newenvironment{sequation}{\small\begin{equation}}{\end{equation}}
+\newenvironment{tequation}{\tiny\begin{equation}}{\end{equation}}
+% 定义方框
+% 陈述性语句
+\newtcolorbox[]{proposition}[2][]{title = \textbf{#2}, colback=Salmon!20, colframe=Salmon!90!Black,breakable, enhanced jigsaw}
+% 历史注记
+\newtcolorbox[]{history}[2][]{title = \textbf{#2}, colback=Emerald!10, colframe=cyan!40!black,breakable, enhanced jigsaw}
+% 定理
+\newtcolorbox[]{theorem}[2][]{title=\textbf{#2}, colback=red!5,colframe=red!75!black,breakable, enhanced jigsaw}
+% 定义
+\newtcolorbox[]{define}[2][]{title=\textbf{#2},colback=SeaGreen!10!CornflowerBlue!10,colframe=RoyalPurple!55!Aquamarine!100!,breakable, enhanced jigsaw}
+% 思考注记
+\definecolor{formalshade}{rgb}{0.99,0.97,0.93} % 文本框颜色
+\newenvironment{thinknote}{%
+\def\FrameCommand{%
+\hspace{1pt}%
+{\color{BurlyWood}\vrule width 2pt}%
+{\color{formalshade}\vrule width 4pt}%
+\colorbox{formalshade}%
+}%
+\MakeFramed{\advance\hsize-\width\FrameRestore}%
+\noindent\hspace{-4.55pt}% disable indenting first paragraph
+\begin{adjustwidth}{}{7pt}%
+\vspace{2pt}\vspace{2pt}%
+}
+{%
+\vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\setlength{\parindent}{4em}
+\title{Notes of Griffiths Introduction to QM}   % 添加标题
+\author{郑卜凡}                     % 添加作者
+\date{\today}                             %最后更新日期
+
+\begin{document}
+    \maketitle              %制作封面
+    \tableofcontents        %制作目录
+    \setcounter{page}{0}
+    \thispagestyle{empty}
+    \chapter{波函数}
+    \section{薛定谔方程}
+    \begin{lequation}\label{S-1-D}
+        \boxed{
+            i\hbar\frac{\partial \Psi\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi\left(x,t\right)}{\partial x^{2}}+
+            V\left(x,t\right)\Psi\left(x,t\right)
+        }
+    \end{lequation}
+    \begin{lequation}\label{S-3-D}
+        \boxed{
+            i\hbar\frac{\partial \Psi\left(\bm{r},t\right)}{\partial t}=\left[-\frac{\hbar^{2}}{2m}\nabla^{2}+
+            V\left(\bm{r},t\right)\right]\Psi\left(\bm{r},t\right) 
+        }
+    \end{lequation}
+
+
+    上面给出的公式中第一个是一维形式, 第二个是三维一般形式。对于某些公式推导上, 使用薛定谔方程时, 常常是对方程两边进行共轭操作\footnote[1]{物理实质可以理解
+    为时间反演对称性}（以一维形式为例）也即：
+    \begin{lequation}
+        -i\hbar\frac{\partial \Psi^{*}\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi^{*}\left(x,t\right)}{\partial x^{2}}+
+        V\left(x,t\right)\Psi^{*}\left(x,t\right)
+    \end{lequation}
+
+
+    注意到上式的导出我们假定势能函数是实变函数, 这是有道理的, 但是书后面的习题\footnote[2]{详见第三版Problem1.17}也给出了一个例子, 那就是在不稳定的系统中, 找到粒子的概率不是守恒的, 也就是说$P$依赖于时间。
+    这时如果引入含有虚部项的势能就可以很好地解释这一点。在量子力学中Schr{\"o}dinger方程的地位和牛顿第二定律一样, 现在只是描述粒子位置的函数变成了波函数。
+
+
+    Born后面给波函数一个统计上的解释, 这也就说明了在量子力学中的不确定性, 我们无法再像牛顿运动定律一样精确的预言一个例子之后的运动, 我们只能给出它之后在某处的\uwave{概率}是多少
+    \begin{proposition}{波函数的统计诠释}
+        以一维情形为例, Born在统计上给出了对于波函数的解释, 他认为当一个微观粒子处于状态$Psi\left(\bm{r},t\right)$时, 表示在$t$时刻在$x$处发现粒子的\uwave{概率}, 更准确的说\footnote[0]{一个常用的代换是$\left|\Psi\left(x,t\right)\right|^{2}=
+        \Psi^{*}\left(\left(x,t\right)\right) \Psi\left(x,t\right) $}
+        \begin{lequation}
+            \int_{a}^{b}\left|\Psi\left(x,t\right)\right|^{2}dx=\left\{\text{$t$时刻在$\left[a,b\right]$内\\发现粒子的概率}\right\}
+        \end{lequation}
+    
+    \end{proposition}
+    自然的, 我们会问, 测量时我们会发现粒子处于某点(C点), 那么测量之前粒子在哪？历史上有三种观点
+    \begin{history}{测量前粒子在哪？}
+        \textbf{1.现实主义学派:粒子还是在C点}, 这种观点完全否定了量子理论的不确定性, 也是爱因斯坦一直坚信的观点;\\
+        \textbf{2.正统学派:粒子哪也不在}, 这种观点认为正是我们的测量\uwave{迫使}粒子在C点, 这个观点被广泛接受, 但到底什么是测量还有待讨论;\\
+        \textbf{3.不可知论学派:拒绝回答}, 这种观点认为\uwave{测量前}本身就是难以定义的, 去讨论测量前粒子的位置也是没有意义的。
+    \end{history}
+    现代量子理论在实验上说明了正统学派的正确性\footnote[1]{John Bell在1964年派排除了不可知论}, 有一点需要注意, 测量会导致波函数的坍塌(\ref{fig-1.1}), 坍塌成了一个类似于狄拉克delta函数的图像, 在波函数还没有按照薛定谔方程重新弥散开来的时候继续测量, 我们会发现测量结果不变, 也
+    就是说\uwave{测量完全改变了波函数}, 导致连续的测量得到的结果是一样的。
+
+    既然波函数在统计上可以解释为概率密度分布函数, 那么一定要满足\textbf{归一化条件}
+    \begin{proposition}{波函数归一化条件}
+        \begin{lequation}\label{normalized}
+            \int_{-\infty}^{\infty}\left|\Psi\left(x,t\right)\right|^{2}dx=1
+        \end{lequation}
+    \end{proposition}
+    而且从薛定谔方程的线性性可以看出, 如果$\Psi$是方程的解, 那么$A\Psi$也一定是方程的解, 这里的A就类似于微分方程通解里面的系数, 你需要使用归一化条件去确定它, 求解出来的$A$是不需要考虑相位问题的, 不会在物理上产生任何影响, 你只需要确定
+    它的模长就可以了, 下面一个关于归一化的定理让我们能更简单的对波函数进行归一化。
+    \begin{theorem}{$A$是一个与时间无关的常数}
+        \begin{lequation}
+            \label{normalized-independent-time}
+            \frac{d}{dt}\int_{-\infty}^{\infty}\left|\Psi\left(x,t\right)\right|^{2}dx=0
+        \end{lequation}
+    \end{theorem}
+    由于这个定理的正确性, 我们找到波函数的一个可能解后, 只需要任意代入一个$t$的值, 然后将波函数乘上一个常数因子$A$对波函数进行全空间积分解出$A$的大小即得到了波函数的真正有物理意义的解, \textbf{任何无法进行归一化的解(比如$\Psi=0$)都要舍去}。
+    \section{力学量的期望值和标准差}
+    \begin{define}{数学上的定义: 平均值和标准差}
+        \begin{center}
+        \begin{math}
+            \displaystyle
+            \left \langle x \right \rangle \overset{\text{def}}{=}\int_{-\infty}^{\infty}x\rho(x)dx \qquad\qquad\qquad
+            \sigma _{x}\overset{\text{def}}{=}\int_{-\infty }^{\infty } (x-\left \langle x \right \rangle )^2\rho(x)dx
+        \end{math}
+        \end{center}
+        其中$\rho(x)$是概率密度函数, 把上面的$x$换成$f(x)$就可以得到某个一般量的平均值和标准差
+    \end{define}
+    根据上面的定义我们可以得到一个更加常用的计算标准差的公式: $\sigma(x)=\sqrt{\left \langle x^2 \right \rangle-\left \langle x \right \rangle^2}$。
+    
+    在进一步说明力学量的平均值的时候要先明确平均值的意义, 就比如说发现粒子所处位置的平均值, 你不能将其理解成连续测量一个系统很多次之后计算得到的平均值, 因为前面就说过
+    波函数会由于测量而坍缩, 连续多次对一个系统的测量得到的结果是一致的! 这里对平均值的定义是对于\uwave{系综}的, 也就是你需要对大量相同状态下的系统进行测量来求平均值, 或
+    者简单一点, 对一个系统测量很多次, 但每次测量要隔一段时间要等待波函数重新回到测量前未坍缩的样子。
+    \begin{proposition}{位置和动量的算符}
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                \hat{x}=[x] \qquad\qquad\qquad\qquad \hat{p}=\left[-i\hbar\frac{\partial}{\partial x}\right]    
+            \end{math}
+        \end{center}
+        值得一提的是, 上面的动量算符是利用$\left \langle p \right \rangle=\frac{d\left \langle x \right \rangle}{dt}$得出来的
+        \footnote[0]{这里的$\left \langle x \right \rangle$必须要事先写成关于$t$的函数, 另见Problem1.16(c)}
+    \end{proposition}
+    \begin{theorem}{任意一个力学量的统计量}
+        \begin{lequation}
+            \left \langle Q\left(x,p\right) \right \rangle=\int \Psi^{*}\left[Q\left(x,-i\hbar\frac{\partial}{\partial x}\right)\right]\Psi dx
+        \end{lequation}
+        \begin{equation}
+            \sigma_Q = \sqrt{\left \langle Q^2 \right \rangle-\left \langle Q \right \rangle^2}
+        \end{equation}
+    \end{theorem}
+    上面的定理说明了在量子力学中\uwave{算符}显得尤为重要, 你要计算一个力学量$Q$的平均值只要把这个力学量的算子\uwave{夹在}波函数中间再积分即可。确定一个力学量的算子时, 先将
+    这个力学量由经典力学的公式表示成关于位置$x$和动量$p$的函数然后将$x$和$p$全部换成对应的算符即可。\footnote[1]{我们提倡使用算符这个新的工具去计算, 但有时候你会发现, 得到了$\left \langle x \right \rangle(t) $后直接使用
+    $\left \langle p \right \rangle=\frac{d\left \langle x \right \rangle}{dx}$更快。有时候直接使用定义(波函数是实质是测量到粒子在位置$x$的概率密度分布函数), 用$\int x\left| \Psi(x,t)\right|dx$直接计算也能达到事半功倍
+    的效果}
+    \section{海森堡不确定性原理}
+    这个原理在历史上曾经被称作\uwave{测不准原理}, 有很大的误导性, 实际上这个原理与测量误差毫无关系, 这是一个量子力学本身决定的原理。它表明了你对系统位置了解的越多, 比如说你把系统限制在某个
+    确定的轨道狭槽内, 那么你对系统动量的了解程度一定越低, 测出来的动量分布肯定越是分散。其中动量与波函数之间的关系最早由德布罗意(de Broglie)给出:
+    \begin{center}
+    \begin{math}
+        \displaystyle
+        \boxed{
+            p=\frac{h}{\lambda}=\frac{2\pi\hbar}{\lambda}
+        }
+    \end{math}
+    \end{center}
+    \begin{theorem}{Heisenberg Uncertainty Principle}
+        \begin{lequation}
+            \sigma_x\sigma_p \geq \frac{\hbar}{2} 
+        \end{lequation}
+    \end{theorem}
+    \newpage
+    \begin{figure}[htbp]
+        \label{fig-1.1}
+        \begin{tikzpicture}[scale=0.4] %缩放，还可以设置xscale, yscale
+        \draw[->](4,-2)--(4,8) node[above]{$\Psi (x,0^-)$};
+        \draw[->](0,2)--(12,2) node[below]{$x$};  % 画坐标轴
+        \draw (4,2) node[below right]{$O$};
+        \draw[elegant,domain=0:12] plot(\x,{5.5*exp(-(\x-6)^2/4.56)+2});
+        \draw[dashed,red] (8,2)--(8,8);
+        \draw (8,2) node[below]{$C$};
+        \end{tikzpicture}  
+        \hspace{4em}
+        \begin{tikzpicture}[scale=0.4] %缩放，还可以设置xscale, yscale
+        \draw[->](4,-2)--(4,8) node[above]{$\Psi (x,0^+)$};
+        \draw[->](0,2)--(12,2) node[below]{$x$};  % 画坐标轴
+        \draw (4,2) node[below right]{$O$};
+        \draw[dashed,red] (8,2)--(8,8);
+        \draw (8,2) node[below]{$C$};
+        \draw[->,red] (8,2)--(8,6);
+        \draw (8,6) node[right]{$\infty$};
+        \end{tikzpicture}  
+        \caption{在$t=0$时刻测量, 波函数将在$C$处坍塌为狄拉克$\delta$函数}
+    \end{figure}
+    \newpage
+    \chapter{定态Schr\"{o}dinger方程}
+    \section{定态和分离变量法}
+    列出Sch\"{o}dinger方程后的下一步就是解出系统对应的波函数, 首先我们应该从最最初等的分离变量法来解方程, 毫无疑问我们只能通过它来\uwave{猜出}解空间
+    的一小部分子集, 但是这种方法得出来的解却具有非常重要的物理意义, 后面的一系列讨论都默认势能函数不随时间变化(保守场)。
+
+    分离变量法的基本思想就是将$\Psi$拆分为两个函数, 一个只关于$x$, 一个只关于$t$, 即$\Psi(x,t)=\psi(x)\phi(t)$, 带入到Sch\"{o}dinger方程(\ref{S-1-D})我们可以得到
+    下面的式子\footnote[1]{$\phi(t)$附带的常数项我们合并到$\psi(x)$里面了,反正最后是对$\Psi$进行归一化}。
+    \begin{lequation}
+        \label{wiggle-function}
+        \boxed{
+            \phi(t)=e^{-\frac{iEt}{\hbar}}
+        }
+    \end{lequation}
+    \begin{lequation}
+        \label{time-independent-equation}
+        \boxed{
+            -\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2}+V(x)\psi(x)=E\psi(x)
+        }
+    \end{lequation}
+
+    式\ref{wiggle-function}你可以称之为\uwave{wiggle-function}, 它只和时间相关而且你如果使用Euler公式\footnote[2]{$e^{i\theta}=\cos\theta+i\sin\theta$}, 你
+    会发现它是按照正弦规律进行\uwave{振动}的, 暂且就先把它当成是波函数里面的振荡项。后面的式子(\ref{time-independent-equation})及其重要, 它就是我们要
+    谈的\textbf{定态薛定谔方程}, 不含时间, 其中的$E$实际上代表着系统的能量(哈密顿量\footnote[3]{哈密顿量就是动能加势能, 与系统的拉格朗日量对应, 后者是动能减势能})。
+    \begin{define}{哈密顿算子}
+        \begin{center}
+           \begin{math}
+            \displaystyle
+            \hat{H}=\frac{\hat{p}^2}{2m}+[V]=-\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2}+V
+        \end{math} 
+        \end{center}
+    \end{define}
+    使用哈密顿算子可以简化方程的书写为$\hat{H}\psi=E\psi$。下面列出来这些定态解重要的性质。
+    \begin{theorem}{定态解$\Psi(x,t)=\psi(x)e^{iEt/\hbar}$}
+        定态薛定谔方程的每个解都对应某个能量为$E$的\uwave{定态系统}:\\
+        1.每个定态解对应系统能量(Hamiltonian)不随时间改变, 其它力学量的平均值也不随时变;\\
+        2.定态解的时间项对概率密度没有任何贡献, i.e.用$\psi$替代$\Psi$去计算物理量的平均值不会产生任何差异, 因此有时候也刻意不区分两者;\\
+        3.由于定态解能量的选取是任意的\footnote{实际上不完全任意}, 所以存在无穷多个定态解, 一般的解就是这些由分离变量得出来的定态解的\uwave{线性组合}
+        \begin{lequation}
+            \boxed{
+                \Psi(x,t)=\sum_{n=1}^{\infty}c_n\psi_n e^{-iE_nt/\hbar}
+            }
+        \end{lequation}
+        其中常数$c$\footnote{可以是复数}需要使用初始波函数去确定。\\
+        特别注意, 现在由定态解合成的一般解\textbf{不一定}是定态的, 而且比较遗憾的是一般你不能把它写成一个闭公式, 只能用无穷级数表示。
+    \end{theorem}
+    由于波函数需要满足归一化条件(eq.\ref{normalized}), 所以所有不满足归一化条件的解我们都应舍去, 他们是没有物理意义的, 所以这一步可以帮我们排除很多定态解
+    的可能性。
+    \begin{thinknote}
+        这里实际上定态并不是我们真正要求的解, 我们要求的解是这些解的线性组合, 但是我们还是要将他们($\psi$)进行归一化处理, 但没有关系, 反正归一化只是乘上
+        一个常数, 但在这里我们进行归一化后可以使得解的物理意义更加明朗, 更重要的是它会简化我们后续的数学对解的性质上的讨论。
+    \end{thinknote}
+    \begin{proposition}{定态解可归一化必要条件}
+        1.能量$E$的虚部为零, 是一个实数;\\
+        2.能量$E$要大于$V(x)$的最小值, 也就是说的能量不能一直小于势能\footnote{这个蛮好理解的, 因为动能项始终非负}。
+    \end{proposition}
+    \begin{proposition}{$c_n$的物理意义}
+        一般解前面对于定态解$\Psi_n(x,t)=\psi(x)e^{-iE_nt/\hbar}$的权重$\left|c_n\right|^2$表示\textbf{测量到系统能量值为$E_n$的概率}, 这也意味着, 你
+        对一个系统进行测量, 只可能得到它所包含的定态解分量对应的能量值, 一定是一组离散的值。
+    \end{proposition}
+    自然的, $c_n$也要满足归一化条件(eq.\ref{normalized-c})。注意, 我们上面提到是说在某次测量时发现系统能量为$E_n$, 而不是说系统在测量时处于能量为$E_n$的
+    一个定态, 系统的态始终是没有发生改变的。而且我们也注意到系统的能量并不是一成不变的, 不同的测量显现出来的能量也不同, 但是系统的能量的平均值是随时间或者测量改变
+    的(eq.\ref{energy-conservation}), 这一个性质就是在微观量子效应下的\textbf{能量守恒定律}。
+    \begin{lequation}
+        \label{normalized-c}
+        \sum_{n=1}^{\infty}\left|c_n\right|^2=1
+    \end{lequation}
+    \begin{lequation}
+        \label{energy-conservation}
+        \left \langle H \right \rangle=\sum_{n=1}^{\infty}\left|c_n\right|^2E_n 
+        \Rightarrow \frac{\partial H}{\partial t}=0\footnote[1]{实际上你也完全可以使用更简单的方式去计算, 即$\left \langle H \right \rangle=\int \Psi(x,t)^*\hat{H}\Psi(x,t) dx$, 你可以直接代入$t=0$进一步
+        简化运算, 因为这个性质保证了平均能量与时间无关。}
+    \end{lequation}
+    \section{一维无限深方势阱}
+    \begin{define}{The Infinite Square Well}
+        粒子如果处于无限深势阱中, 那么它的势能可以写成下面的这种形式:
+        \begin{center}
+            \begin{math}
+            \displaystyle
+            V(x) = \begin{cases}
+                    0, &0\leq x \leq a\\
+                    \infty, & \text{otherwise}
+                    \end{cases}
+            \end{math}
+        \end{center}
+        就像是在$x=0$和$x=a$处由两堵墙, 粒子被困在两堵墙之间, 然而在两堵墙之间它可以\uwave{自由移动}。
+    \end{define} 
+    首先我们来看一下边界条件, 显然, 在势阱之外$\Psi(x,t)\equiv 0$, 同样也应该有$\Psi(0,t)=\Psi(a,t)=0$。根据定态薛定谔方程(eq.\ref{time-independent-equation}), 我
+    们要去求解的是一个分段函数形式给出的微分方程, 不妨分段去考虑它, $(0,a)$之外波函数恒等于$0$, 对于$(0,a)$那一部分, 势能为$0$, 定态薛定谔方程写成\footnote{注意到$E\leq0$时的解是平凡的或者不能归一化的}:
+    \begin{lequation}
+        \boxed{
+            -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}=k^2\psi,\quad k=\frac{\sqrt{2mE}}{\hbar}
+        }
+    \end{lequation}
+    \begin{thinknote}
+        实际上这里的$k$从经典力学上看可以理解为\textbf{角波数}, $k=2\pi/\lambda\xlongequal[]{de-Broglie-eq.}p/\hbar$, 使用经典力学的观点来看,粒
+        子的能量为$E$, 那么动量为$\sqrt{2mE}$。
+    \end{thinknote}
+    这就是一个自由振子的数学模型, 代入边界条件并且归一化可以得到:
+    \begin{lequation}
+        \boxed{
+            \psi_n(x)=\sqrt{\frac{2}{a}}\sin\left(\frac{n \pi}{a}x\right),\quad k=\frac{n \pi}{a}
+        }
+    \end{lequation}
+    \begin{lequation}
+        \boxed{
+            E_n=\frac{n^2\pi^2\hbar^2 }{2ma^2}
+        }
+    \end{lequation}
+    其中\textbf{$n$是正整数}。计算的时候你会发现, 两个边界条件实际上不能完全确定微分方程解的两个常数项, 但是它却限制了$ka=n\pi(n=1,2,3,\ldots)$, 而$k$
+    的值和能量是相关的, 所以这也就说明了\textbf{量子力学系统中的定态解始终只能取一系列离散数值}, 又考虑到系统的真实解是定态解的叠加, 而且每次测量系统的能量
+    时都会返回某个定态解的能量, 这也就体现了量子力学中\textbf{能量的不连续性}, 真正确定另一个常数的条件是归一化条件\footnote[2]{回想一下对$\Psi$归一化等价于对$\psi$归一化}。
+
+    完整写下定态的波函数应该为:
+    \begin{lequation}
+        \Psi(x,t)=\sqrt{\frac{2}{a}}\sin\left(\frac{n \pi}{a}x\right)e^{in^2\pi^2\hbar t/2ma^2}
+    \end{lequation}
+    
+    $n=1$时我们称作\textbf{基态}, 其它的我们称为\textbf{激发态}。观察不同解在$t=0$时的波函数(fg.\ref{fig-2.1})我们可以发现, 这些定态本质上就是一系列\uwave{驻波}, 势阱的
+    两个边界是它的两个波节。
+    \begin{figure}[htbp]
+        \centering
+        \subfigure[$n=1$]{
+            \begin{tikzpicture}[scale=0.6] %缩放，还可以设置xscale, yscale
+            \draw[->](0,-3)--(0,3) node[above]{$\Psi (x,0)$};
+            \draw[->](-2,0)--(8,0) node[below]{$x$};  % 画坐标轴
+            \draw (0,0) node[below right]{$O$};
+            \draw (6,0) node[below]{$a$};
+            \draw[elegant,domain=0:6] plot(\x,{3*sin(\x*pi/6 r)});
+            \draw[-,red] (-2,0)--(0,0);
+            \draw[-,red] (6,0)--(8,0);
+        \end{tikzpicture} 
+        }
+        \subfigure[$n=2$]{
+            \begin{tikzpicture}[scale=0.6] %缩放，还可以设置xscale, yscale
+            \draw[->](0,-3)--(0,3) node[above]{$\Psi (x,0)$};
+            \draw[->](-2,0)--(8,0) node[below]{$x$};  % 画坐标轴
+            \draw (0,0) node[below right]{$O$};
+            \draw (6,0) node[below]{$a$};
+            \draw[elegant,domain=0:6] plot(\x,{3*sin(2*\x*pi/6 r)});
+            \draw[-,red] (-2,0)--(0,0);
+            \draw[-,red] (6,0)--(8,0);
+        \end{tikzpicture} 
+        } 
+        \subfigure[$n=3$]{
+           \begin{tikzpicture}[scale=0.6] %缩放，还可以设置xscale, yscale
+            \draw[->](0,-3)--(0,3) node[above]{$\Psi (x,0)$};
+            \draw[->](-2,0)--(8,0) node[below]{$x$};  % 画坐标轴
+            \draw (0,0) node[below right]{$O$};
+            \draw (6,0) node[below]{$a$};
+            \draw[elegant,domain=0:6] plot(\x,{3*sin(3*\x*pi/6 r)});
+            \draw[-,red] (-2,0)--(0,0);
+            \draw[-,red] (6,0)--(8,0);
+        \end{tikzpicture}   
+        }
+        \caption{不同的$n$对应不同的驻波波形}
+        \label{fig-2.1}
+    \end{figure}
+
+    下面要谈到的性质虽然是根据无限深势阱总结来的, 但是他们却是普遍适用的\footnote[3]{$\delta$符号的相关定义见附录A}。
+    \begin{theorem}{定态解的重要性质定理}
+        1.不管势能本身是否具有对称性, 定态波函数总是关于势阱的中心成奇函数或偶函数(即关于中心轴对称或中心对称), 且随着$n$的变化交替出现;\\
+        2.不管势能本身形状如何, 波函数的波节(零点)个数总是随着能量的增大而增大, 且公差为$1$;\\
+        $\bigstar$3.\textbf{定态解之间相互正交}\footnote{回忆一下我们已经对$\psi$进行归一化}\footnote{积分为全空间, 对于无限深势阱积分限为$(0,a)$}
+        \begin{lequation}
+            \label{orthogonal}
+            \int \psi_m(x)^*\psi_n(x) dx=\delta_{mn}
+        \end{lequation} 
+        $\bigstar$4.\textbf{定态解集合是完备的}:这个意思就是说你可以使用定态解的线性组合来表示\textbf{任何连续函数}, 对于这里的无限深势阱, 实质就是
+        \uwave{傅里叶级数}。
+    \end{theorem}
+    上面的性质第四点说明了我们始终可以找到一组合适的$c_n$去满足初始波函数, 而如何去求这些$c_n$又是基于定态解的正交性(eq.\ref{orthogonal}), 使用傅里叶方法我们可以
+    很容易的得到$c_n$\footnote[1]{$\Psi(x,0)$是初始波函数, 如果初始波函数不是在$t=0$时刻给定的, 你可能要额外考虑一下wiggle-function项(eq.\ref{wiggle-function})(更改时间原点也是一个不错的选择, 复习一下波动学里面的操作)}:
+    \begin{lequation}
+        \boxed{
+            c_n=\int \psi_n(x)^*\Psi(x,0) dx
+        }
+    \end{lequation}
+
+    使用正交性你还可以去证明\footnote[2]{分别基于初始波函数的归一化和定态薛定谔方程的算子表示法}eq.\ref{normalized-c}和eq.\ref{energy-conservation}。
+    \begin{thinknote}
+        上面的两个证明书上都有, 实际上你也可以证明按照上面的方法解出来的系统的波函数, $\Psi$已经自动归一化。但这是多此一举的, 因为无论是初始波函数, 还是确定$c_n$后的完整波函数, 波函数都是满足薛定谔方程的, 在
+        前面的章节我们就说明了如果$\Psi$在某一时刻是归一化的, 那么之后任一时刻它也是归一化的(eq.\ref{normalized-independent-time})
+    \end{thinknote}
+    在计算能量平均值的级数时, 经常会涉及黎曼函数, 这里不做深入展开, 仅仅列出几个常用的和式。
+    \begin{define}
+        {黎曼$\zeta$函数}
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                \zeta(s)\overset{def}{=}\frac{1}{1^s}+\frac{1}{2^s}+\frac{1}{3^s}+\frac{1}{4^s}+\cdots
+            \end{math} 
+        \end{center}
+    \end{define}
+    可以很容易的发现下面的等式成立：
+    \begin{lequation}
+        \boxed{
+            \frac{1}{1^s}+\frac{1}{3^s}+\frac{1}{5^s}+\frac{1}{7^s}+\cdots = (2^s-1)\zeta(s)
+        }
+    \end{lequation}
+    $s$为偶数时, 可以求出$\zeta$的精确值, 但对于奇数情况却异常复杂, 下面列出具体表达式和几个值供参考：
+    \begin{theorem}{$s$为偶数时的解}
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                \zeta(2n)=\eta_n \pi^{2n}
+            \end{math}
+            \begin{math}
+                \displaystyle
+                 \eta_1=\frac{1}{6},\qquad\eta_n=\sum_{k=1}^{n-1}(-1)^{n-1}\frac{\eta_{n-k}}{(2k+1)!} + (-1)^{n+1}\frac{n}{(2n+1)!}
+            \end{math}
+        \end{center}
+    \end{theorem}
+
+    \begin{table}[htbp]
+        \centering
+        \resizebox{\textwidth}{10mm}{
+        \begin{tabular}{cccccccc} 
+        \hline
+        $s$     & $2$                & $4$                  & $6$                   & $8$                    & $10$                     & $12$                         & $14$                          \\ 
+        \hline
+        value & $\frac{\pi^2}{6}$ & $\frac{\pi^4}{90}$ & $\frac{\pi^6}{945}$ & $\frac{\pi^8}{9450}$ & $\frac{\pi^{10}}{93555}$ & $\frac{\pi^{12}}{638512875}$ & $\frac{2\pi^{14}}{18243225}$  \\
+        \hline
+        \end{tabular}}
+    \end{table}
+
+    \section{简谐振子}
+    通过上一节我们已经大致知道了如何去求解特定势能下的波函数, 大致来说就是找到所有的定态解, 每一个解对应一个常量(能量), 这些常量的选取是离散的, 然后我们再
+    对求出来的定态解进行叠加, 使用傅里叶方法定下权重即可。现在我们要碰到的势能函数形式是一个二次式, 但方程的求解却困难许多, 但这个工作是很有意义的, 因为任何
+    势能函数的驻点附近, 使用Taylor展开, 你都可以将它处理成一个简谐振子的模型。
+    \begin{define}{The Harmonic Oscillator}
+        势能形式是关于$x$的二次式, 我们使用类似离心势能的形式写出:
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                V(x)=\frac{1}{2}m\omega^2x^2
+            \end{math}
+        \end{center}
+    \end{define}
+    定态薛定谔方程相应的写成$$-\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2}+\frac{1}{2}m\omega^2x^2\psi(x)=E\psi(x)$$
+    这个方程可以使用幂级数解法去解决, 我们先介绍一种比较物理的方法去求解, 即\uwave{升降阶算符法}。
+    \subsection{代数方法}
+    \begin{define}{产生/湮灭算子}
+        \begin{lequation}
+            \hat{a}_\pm\overset{def}{=}\frac{1}{\sqrt{2m\omega\hbar}}(\mp i\hat{p}+m\omega x)
+        \end{lequation}
+    \end{define}
+    \begin{thinknote}
+        在计算算符时, 要格外小心, 算符一般情况下并不满足交换律, 你需要先将整个算符作用于一个函数上, 然后按照运算顺序逐个计算, 最后再进行化简。比如
+        $x$和$\hat{p}$就不满足交换律\footnote[1]{量子力学很多与经典力学相冲突的地方就是因为这两个的不可交换性, 有的人将它当作公理去推导其它定理}, $
+        x\hat{p}f(x)=-ix\hbar\frac{df}{dx}$但是$\hat{p}xf(x)=-i\hbar\frac{d}{dx}\left[xf(x)\right]=-i\hbar[f(x)+x\frac{df(x)}{dx}]$。
+    \end{thinknote}
+    \begin{define}{对易子}
+        \begin{lequation}
+            \left[\hat{A},\hat{B}\right]\overset{def}{=}\hat{A}\hat{B}-\hat{B}\hat{A}
+        \end{lequation}
+    \end{define}
+    显然对易子是反对称的, 即$\left[\hat{A},\hat{B}\right]=-\left[\hat{B},\hat{A}\right]$, 计算可以得到下面很有用的关系式：
+    \begin{lequation}
+        \boxed{
+            \left[x,\hat{p}\right]=i\hbar\qquad
+            \left[\hat{a}_-,\hat{a}_+\right]=1
+        }
+    \end{lequation}
+    第一个式子也常称作\textbf{正则对易关系}, 我们继续使用算子重写定态薛定谔方程:
+    \begin{lequation}
+        \boxed{
+            \hat{H}=(\hat{a}_-\hat{a}_+-\frac{1}{2})\omega\hbar=(\hat{a}_+\hat{a}_-+\frac{1}{2})\omega\hbar
+        }
+    \end{lequation}
+    \begin{lequation}
+        \boxed{
+            \omega\hbar(\hat{a}_+\hat{a}_-+\frac{1}{2})\psi(x)=E\psi(x)
+        }
+    \end{lequation}
+    \begin{theorem}{谐振子的定态解}
+        如果$\psi(x)$是谐振子在能量为$E$时的定态解, 那么$A\hat{a}_+\psi(x)$就是在能量为$E+\frac{1}{2}\omega\hbar$时的定态解\footnote[1]{前面乘上
+        常数是归一化需要, 我们前面说过, 你求出来的解都需要进行归一化}, 同理, $A\hat{a}_-\psi(x)$是在能量为$E-\frac{1}{2}\omega\hbar$时的定态解。
+    \end{theorem}
+    直接根据湮灭和产生算子的定义可以很快地证明上述定理。现在很自然的就可以发现, 因为能量是不能一直递减的, 它至少要大于势能的最小值, 所以我们或许可以找到
+    一个具有最低能量的定态解, 不能再使用湮灭算子产生新的解, 这个解我们称为$\psi_0(x)$, 是基态解。构造这个解的思路就是它的下一级是没有物理意义, 不能归一化的。
+    也就是说有条件$$\hat{a}_-\psi_0(x)=0$$使用这个条件就可以得到基态解(不要忘了归一化)以及激发态解:
+    \begin{lequation}
+        \boxed{
+            \psi_0(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{4}}e^{-\frac{m \omega}{2\hbar}x^2}
+        }
+    \end{lequation}
+    \begin{lequation}
+        \boxed{
+            \psi_n(x)=\frac{1}{\sqrt{n!}}\left(\hat{a}_+\right)^n\psi_0(x),E_n=\left(n+\frac{1}{2}\right)\omega \hbar
+        }
+    \end{lequation}
+
+    前面由归一化条件所决定的系数可以使用递推关系来确定, 再次强调, $\hat{a}_+\psi_n(x)=c_n\psi_{n+1}(x)$, $c$要根据归一化去确定, 并不是说使用产生算符可以
+    直接得到高一个能级的解, 前面还有一个归一化条件确定的待定系数。
+    \begin{theorem}{$\hat{a}_-$与$\hat{a}_+$是厄密共轭的(相互为伴随算子)}
+        \begin{lequation}
+            \int f^*(\hat{a}_\pm g)dx=\int (\hat{a}_\mp f)^* gdx
+        \end{lequation}
+    \end{theorem}
+    直接计算$\left \| \hat{a}_+\psi_n(x) \right \|$和$\left \| \hat{a}_-\psi_n(x) \right \|$, 并利用$\hat{a}_+\hat{a}_-\psi_n=n\psi_n$及$\hat{a}_-\hat{a}_+\psi_n=(n+1)\psi_n$
+    可以确定递推关系前面的系数(老规矩, 归一化只能确定模长, 但是我们只取最简单的那个值)。
+    \begin{lequation}
+        \boxed{
+            \hat{a}_+\psi_n=\sqrt[]{n+1}\psi_{n+1},\quad\hat{a}_-\psi_n=\sqrt[]{n}\psi_{n-1}
+        }
+    \end{lequation}
+
+    使用算符去表达可以使得计算更加简便, 你可以很容易的验证这些定态解之间相互正交, 所以可以使用傅里叶方法(你要求哪个常数, 你就在初态前面乘上对应的定态解, 然后
+    全空间内积分, $t\neq0$时要考虑一下wiggle-function项)去定系数。计算力学量平均值的时候也可以使用产生湮灭算符去重新描述$x$和$\hat{p}$简化运算:
+    \begin{lequation}
+        \boxed{
+            x =\sqrt[]{\frac{\hbar}{2m\omega}}\left(\hat{a}_++\hat{a}_-\right), \quad 
+            p =i\,\sqrt[]{\frac{\hbar m \omega}{2}}\left(\hat{a}_+-\hat{a}_-\right)
+        }
+    \end{lequation}
+
+    下面画出前三个能级对应波函数的能量, 不难看出图像具有的规律性和一维无限深势阱相同。
+    \begin{figure}[htbp]
+        \centering
+        \subfigure[$n=1$]{
+            \includegraphics[scale=0.7]{fig/2-3-a.eps}
+        }
+        \subfigure[$n=2$]{
+            \includegraphics[scale=0.7]{fig/2-3-b.eps}
+        }   
+        \subfigure[$n=3$]{
+            \includegraphics[scale=0.7]{fig/2-3-c.eps}
+        }   
+        \caption{可以看到, 图像之间的递推联系还是满足前面的规则的}
+    \end{figure}
+    \subsection{分析方法}
+
+    \include{appendix.tex}
+\end{document}
