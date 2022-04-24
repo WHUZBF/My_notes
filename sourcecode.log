@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  24 APR 2022 10:33
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  24 APR 2022 23:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1033,7 +1033,14 @@ Invalid UTF-8 byte or sequence at line 538 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 538 replaced by U+FFFD.
 File: fig/2-3-c.eps Graphic file (type eps)
 <fig/2-3-c.eps>
- [15]
+ [15] [16]
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 587.
+ (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
+)
+LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.045pt on input line 587.
+ [17] [18]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -1043,17 +1050,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--32
 
  []
 
-[16
+[19
 
 
-] [17]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 98.
- (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
-File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
-)
-LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 98.
- [18]
+] [20] [21]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -1061,34 +1061,34 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-[19] [20]
+[22] [23]
 
 LaTeX Font Warning: Font shape `TU/ntxtlf/b/n' undefined
 (Font)              using `TU/ntxtlf/m/n' instead on input line 174.
 
-[21]
+[24]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [22] [23]
+ [25] [26]
 附录 B
-) [24
+) [27
 
 ] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 050D3AC893AE04D6375AC4F4E11EFA31;2196.
+(rerunfilecheck)             Checksum: A302E9123F241B83E069C9760EDCB350;2305.
  ) 
 Here is how much of TeX's memory you used:
- 41400 strings out of 476533
- 1014433 string characters out of 5818886
+ 41405 strings out of 476533
+ 1014506 string characters out of 5818886
  1509955 words of memory out of 5000000
- 61045 multiletter control sequences out of 15000+600000
+ 61050 multiletter control sequences out of 15000+600000
  465335 words of font info for 132 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,15n,97p,727b,1004s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (26 pages).
+Output written on sourcecode.pdf (29 pages).

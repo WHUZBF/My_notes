@@ -539,6 +539,74 @@
         \caption{可以看到, 图像之间的递推联系还是满足前面的规则的}
     \end{figure}
     \subsection{分析方法}
+    \begin{define}{两个无量纲数}
+        \begin{center}
+            \begin{math}
+            \displaystyle
+            \xi = \sqrt{\frac{m\omega}{\hbar}}x \qquad\qquad K=\frac{2E}{\omega\hbar}
+            \end{math}
+        \end{center}
+    \end{define}
+    重写方程为:
+    \begin{lequation}
+        \label{rewrite}
+        \frac{d^2\psi}{d\xi^2}=(\xi^2-K)\psi
+    \end{lequation}
+    使用幂级数方法求解的第一步就是去求其\uwave{渐进解}, 也就是说去观察$\xi \to \pm\infty$的时候方程的行为。这个方程在$\xi\gg K$时
+    $$\frac{d^2\psi}{d\xi^2}\approx\xi^2\psi$$这个方程的通解形式是$$\psi\approx Ae^{-\xi^2/2}+Be^{\xi^2/2}$$显然$B\neq 0$时波函数不能进行归一化, 所
+    以, 方程\ref{rewrite}的解的形式应该是$\psi = h(\xi)e^{-\xi^2/2}$, 代入后有$$\frac{d^2h}{d\xi^2}-2\xi\frac{dh}{d\xi}+(K-1)h=0$$这是一个二阶方程
+    但是是变系数, 所以也很难求解, 只能考虑使用幂级数解法, 两边进行Taylor展开后解得$$h(\xi)=\sum_{j=0}^\infty a_j\xi^j,\qquad a_{j+2}=\frac{2j+1-K}{(j+1)(j+2)}a_j$$
+    我们只要确定$a_0$和$a_1$也就可以确定解, 二阶方程刚好两个待定系数, 但是我们只有波函数归一化这一个方程似乎无法去完整的确定两个待定系数。这里的原因是能量
+    的量子化取值, 导致了最后方程只会含有一个待定系数。
 
+    我们可以证明, $h(\xi)$只能在某些特定的情况下在$\xi \to \pm \infty$时收敛, 这也就决定了\textbf{$K$的取值是量子化的}。事实上, 收敛的充要条件是, 上面的数列$\{a_j\}$
+    会终止于$0$。
+    \begin{proposition}{$a_j$会终止于$0$}
+        \begin{center}
+            \begin{math}
+            \displaystyle
+            K=2n+1,\quad (n=0,1,2,\ldots)
+            \end{math}
+        \end{center}
+        如果$n$是奇数, 那么$a_{2n+1}$会终止于$0$, 但是$a_0=0$也就是说必须有$a_{2n}\equiv 0$, $n$为偶数时类似
+    \end{proposition}
+    这样方程最终得到的解就只会有一个待定系数了, 而且由递推公式得知是正比于$a_0$或$a_1$的, 再利用归一化条件便可以得到解
+    \begin{define}{厄米多项式}
+        把$h(\xi)$的$a_0$或者$a_1$因子去掉并且乘上一个数将最高次项前面的因子化为$2^n$, 得到的多项式为\textbf{厄米多项式}, 记作$H_n(\xi)$\\
+        例如:$h_2(\xi)=a_0(1-2\xi^2)=-\frac{1}{2}a_0(4\xi^2-2)$则$H_2(\xi)=4\xi^2-2$
+    \end{define}
+    我们不加证明地列出波函数归一化后的解与厄米多项式之间的关系\footnote[1]{前面因子的相位按照惯例按最简单的取}:
+    \begin{lequation}
+        \boxed{
+            \psi(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{4}}\frac{1}{\sqrt{2^nn!}}H_n(\xi)e^{-\xi^2/2}
+        }
+    \end{lequation}
+    \begin{theorem}{$H_n(\xi)$的诸多性质}
+        \begin{itemize}
+            \item 
+                \begin{math}
+                    \displaystyle
+                    H_n(\xi)=(-1)^ne^{\xi^2}\left(\frac{d}{d\xi}\right)^ne^{-\xi^2}
+                \end{math}
+            \item 
+                \begin{math}
+                    \displaystyle
+                    H_{n+1}(\xi)=2\xi H_n(\xi)-2nH_{n-1}(\xi)
+                \end{math}
+            \item 
+                \begin{math}
+                    \displaystyle
+                    \frac{d H_n}{d\xi}=2n H_{n-1}(\xi)
+                \end{math}
+            \item 
+                \begin{math}
+                    \displaystyle
+                    e^{-z^2+2z\xi}=\sum_{n=0}^{\infty}\frac{z^n}{n!}H_n(\xi)\quad\text{(generate function)}
+                \end{math}
+        \end{itemize}
+    \end{theorem}
+    量子效应下, 谐振子的行为和经典力学非常不同, 不再有\uwave{振幅}这一概念, 粒子可以在无穷远处被发现, 不违背能量守恒定律正是因为量子力学中, 我们只谈系综的
+    力学量的平均值, 不再对于某个粒子有诸如动能这些的定义了, 我们只讲系综的平均效应, 只谈概率, 不谈确定性。
+    \section{自由粒子}
     \include{appendix.tex}
 \end{document}
