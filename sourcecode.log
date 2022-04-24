@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  23 APR 2022 23:32
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  24 APR 2022 10:33
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1067,26 +1067,28 @@ LaTeX Font Warning: Font shape `TU/ntxtlf/b/n' undefined
 (Font)              using `TU/ntxtlf/m/n' instead on input line 174.
 
 [21]
+File: fig/a-3.eps Graphic file (type eps)
+<fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [22]
+ [22] [23]
 附录 B
-) [23
+) [24
 
 ] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: E8FDFB2E911019A42E47FCCE21675B84;2054.
+(rerunfilecheck)             Checksum: 050D3AC893AE04D6375AC4F4E11EFA31;2196.
  ) 
 Here is how much of TeX's memory you used:
- 41393 strings out of 476533
- 1014343 string characters out of 5818886
+ 41400 strings out of 476533
+ 1014433 string characters out of 5818886
  1509955 words of memory out of 5000000
- 61039 multiletter control sequences out of 15000+600000
+ 61045 multiletter control sequences out of 15000+600000
  465335 words of font info for 132 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,15n,97p,727b,1004s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (25 pages).
+Output written on sourcecode.pdf (26 pages).

@@ -12,5 +12,6 @@
 \contentsline {section}{\numberline {A.1}指标运算}{16}{section.A.1}%
 \contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{17}{section.A.2}%
 \contentsline {section}{\numberline {A.3}曲线坐标系}{19}{section.A.3}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{23}{appendix.B}%
+\contentsline {section}{\numberline {A.4}直角坐标里的张量}{23}{section.A.4}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{24}{appendix.B}%
 \contentsfinish 
