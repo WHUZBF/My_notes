@@ -242,10 +242,11 @@
     使用哈密顿算子可以简化方程的书写为$\hat{H}\psi=E\psi$。下面列出来这些定态解重要的性质。
     \begin{theorem}{定态解$\Psi(x,t)=\psi(x)e^{iEt/\hbar}$}
         定态薛定谔方程的每个解都对应某个能量为$E$的\uwave{定态系统}:\\
-        1.每个定态解对应系统能量(Hamiltonian)不随时间改变, 其它力学量的平均值也不随时变;\\
+        1.每个定态解对应系统能量(Hamiltonian)无论何时测量都是$E$,很容易通过证明它的方差和平均值都不随时变来证明它, 其它力学量的平均值也不随时变;\\
         2.定态解的时间项对概率密度没有任何贡献, i.e.用$\psi$替代$\Psi$去计算物理量的平均值不会产生任何差异, 因此有时候也刻意不区分两者;\\
         3.由于定态解能量的选取是任意的\footnote{实际上不完全任意}, 所以存在无穷多个定态解, 一般的解就是这些由分离变量得出来的定态解的\uwave{线性组合}
         \begin{lequation}
+            \label{find_c}
             \boxed{
                 \Psi(x,t)=\sum_{n=1}^{\infty}c_n\psi_n e^{-iE_nt/\hbar}
             }
@@ -608,5 +609,52 @@
     量子效应下, 谐振子的行为和经典力学非常不同, 不再有\uwave{振幅}这一概念, 粒子可以在无穷远处被发现, 不违背能量守恒定律正是因为量子力学中, 我们只谈系综的
     力学量的平均值, 不再对于某个粒子有诸如动能这些的定义了, 我们只讲系综的平均效应, 只谈概率, 不谈确定性。
     \section{自由粒子}
+    自由粒子情况下即$V \equiv 0$, 不难发现定态薛定谔方程和无限深势阱的形式是一样的, 即$$\frac{d^2\psi}{dx^2}=-k^2\psi$$解的形式为$$Ae^{ikx}+Be^{-ikx}$$
+    注意, \uwave{我们不再有边界条件去直接确定$A$和$B$的值}, \textbf{这个时候定态解的能量的取值并不是离散的!可以取到任何大于$0$的值!}其实本身量子力学就是不排斥
+    连续性的, 离散可以有很多种, 不一定就表明某个量一定是离散取值。
+
+    考虑wiggle-function后写成下面的形式\footnote[1]{这里$\psi_k$无法进行归一化, 不像前面一样我们先进行归一化后再去定系数会有很多便利。但是这里我们还是在
+    前面添了一个$\frac{1}{\sqrt{2\pi}}$你很快就可以看见他在数学处理上的妙处}:
+    $$\Psi_k(x,t)=Ae^{i\left(kx-\frac{k^2\hbar}{2m}\right)}, \psi(x)=\frac{1}{\sqrt{2\pi}}e^{ikx}$$
+    考虑到最后反正要对解进行线性叠加, 而两项仅仅只在$e$指数上面差了一个负号, 所以我们将负号纳入$k$后得到:
+    $$k\overset{def}{=}\pm\frac{\sqrt{2mE}}{\hbar}$$观察到每一项就代表一个\uwave{行波}, $k<0$的时候正向传播, 反之负向传播, 不再是前面势阱模型里面的
+    驻波。
+    
+    与经典力学中的波动方程相对应, 前面讲过$k$可以理解为角波数, 那么波速$v=\frac{|k|\hbar}{2m}=\sqrt{\frac{E}{2m}}$, 角频率$\omega=\frac{k^2\hbar}{2m}$, 过会我们会再回到波速的问题上来, 目前
+    来看似乎有自由粒子速度$v_p=\sqrt{\frac{2E}{m}}=2v_{wave}$。
+
+    自由粒子的波函数的定态解与前面两个模型最大的不同就是\textbf{它是无法归一化的}。所以现在我们求出来的定态解完全只是数学上的一个过程, 没有实际的物理意义
+    不存在一个状态, 其中自由粒子属于能量始终不变的定态(无论如何测量都是一个值)。但是没事, 虽然不存在定态, 但是我们还是可以使用定态解的线性组合来构造符合初值的
+    解\footnote[2]{这些合成的解沿用波动学的观点, 称为\uwave{波包}, 是可归一化的}, 这些“定态”解也是归一化和完备的。
+
+    我们仍旧对定态解进行线性叠加, 注意是对定态解叠加, 也就是对定态解的波函数进行叠加不是$\psi$而是$\Psi$, 所以不要忘记了每个$\psi$后面的关于时间的指数项。
+    \begin{lequation}
+        \boxed{
+            \Psi=\int_{-\infty}^{\infty}\phi(k)\psi_ke^{-\frac{ik^2\hbar}{2m}}dk=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)e^{i\left(kx-\frac{ik^2\hbar}{2m}\right)}dk  
+        }
+    \end{lequation}
+    和\ref{find_c}对比一下就会发现, $\phi(k)$取代了$c_n$, 这一点很好理解, 因为$\phi_k(x)$变成了一个关于$k$的连续函数, 而数列我们也通常称为\uwave{整标函数}, 所
+    以, 前面变成连续函数来加权, 求和也变成了积分。
+
+    初始值还是在$t=0$处给定\footnote[1]{若不是, 你对$t$进行一个换元平移一下计时零点即可}, 那么可以得到:
+    \begin{lequation}
+        \Psi(x,0)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)e^{ikx}dk  
+    \end{lequation}
+    数学上$\Psi$就是对$\phi$的傅里叶变换, 下面的定理可以很方便的求出$\phi(k)$。
+    \begin{theorem}{Plancherel's theorem}
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                f(x)=\frac{1}{\sqrt{2\pi}} \int\limits_{-\infty}^{\infty}F(k)e^{ikx}dk\Longleftrightarrow F(k)=\frac{1}{\sqrt{2\pi}} \int\limits_{-\infty}^{\infty}f(x)e^{-ikx}dx
+            \end{math}
+        \end{center}
+    \end{theorem}
+    \begin{lequation}
+        \boxed{
+            \phi(k)=\frac{1}{\sqrt{2\pi}} \int _{-\infty}^{\infty}\Psi(x,0)e^{-ikx}dx
+        }
+    \end{lequation}
+    
+    遗憾的是, 很多函数都只能写出积分后进行数值模拟, 无法用基本初等函数表示。
     \include{appendix.tex}
 \end{document}
