@@ -9,10 +9,11 @@
 \contentsline {subsection}{\numberline {2.3.1}代数方法}{13}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}分析方法}{16}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}自由粒子}{18}{section.2.4}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{20}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{20}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{21}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{23}{section.A.3}%
-\contentsline {section}{\numberline {A.4}直角坐标里的张量}{27}{section.A.4}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{28}{appendix.B}%
+\contentsline {section}{\numberline {2.5}$\delta $函数势阱}{20}{section.2.5}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{21}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{21}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{22}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{24}{section.A.3}%
+\contentsline {section}{\numberline {A.4}直角坐标里的张量}{28}{section.A.4}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{29}{appendix.B}%
 \contentsfinish 

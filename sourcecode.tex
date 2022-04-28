@@ -1,6 +1,8 @@
 % 导言区
 \documentclass[a4paper,zihao=-4,linespread=1]{ctexrep}
 
+\usepackage[]{animate}
+\usepackage{color}
 \usepackage{booktabs}
 \usepackage{titlesec}
 \usepackage{titletoc}
@@ -553,6 +555,10 @@
         \label{rewrite}
         \frac{d^2\psi}{d\xi^2}=(\xi^2-K)\psi
     \end{lequation}
+    \begin{thinknote}
+        你可能对这个形式的得到有所疑问, 实际上, 这就是一个求导的链式法则的问题, 注意, 换元前的方程$\frac{d\psi}{dx}$表示把$\psi$写成$f(x)$后再求导, 而
+        换元后的方程中$\frac{d\psi}{d\xi}$表示将$\psi$表示为$\phi(\xi)$后再进行求导。而$\xi=\varphi(x)$, 使用链式法则便可以理解这里的换元了。
+    \end{thinknote}
     使用幂级数方法求解的第一步就是去求其\uwave{渐进解}, 也就是说去观察$\xi \to \pm\infty$的时候方程的行为。这个方程在$\xi\gg K$时
     $$\frac{d^2\psi}{d\xi^2}\approx\xi^2\psi$$这个方程的通解形式是$$\psi\approx Ae^{-\xi^2/2}+Be^{\xi^2/2}$$显然$B\neq 0$时波函数不能进行归一化, 所
     以, 方程\ref{rewrite}的解的形式应该是$\psi = h(\xi)e^{-\xi^2/2}$, 代入后有$$\frac{d^2h}{d\xi^2}-2\xi\frac{dh}{d\xi}+(K-1)h=0$$这是一个二阶方程
@@ -615,7 +621,11 @@
 
     考虑wiggle-function后写成下面的形式\footnote[1]{这里$\psi_k$无法进行归一化, 不像前面一样我们先进行归一化后再去定系数会有很多便利。但是这里我们还是在
     前面添了一个$\frac{1}{\sqrt{2\pi}}$你很快就可以看见他在数学处理上的妙处}:
-    $$\Psi_k(x,t)=Ae^{i\left(kx-\frac{k^2\hbar}{2m}\right)}, \psi(x)=\frac{1}{\sqrt{2\pi}}e^{ikx}$$
+    \begin{lequation}
+        \boxed{
+            \Psi_k(x,t)=Ae^{i\left(kx-\frac{k^2\hbar}{2m}\right)}, \psi(x)=\frac{1}{\sqrt{2\pi}}e^{ikx}
+        }
+    \end{lequation}
     考虑到最后反正要对解进行线性叠加, 而两项仅仅只在$e$指数上面差了一个负号, 所以我们将负号纳入$k$后得到:
     $$k\overset{def}{=}\pm\frac{\sqrt{2mE}}{\hbar}$$观察到每一项就代表一个\uwave{行波}, $k<0$的时候正向传播, 反之负向传播, 不再是前面势阱模型里面的
     驻波。
@@ -656,5 +666,28 @@
     \end{lequation}
     
     遗憾的是, 很多函数都只能写出积分后进行数值模拟, 无法用基本初等函数表示。
+    \begin{define}{群速度和相速度}
+        \begin{itemize}
+            \item \textbf{群速度}：波包的移动速度
+            \item \textbf{相速度}：波包里面有很多小峰, 这些小峰的移动速度便是相速度, 可以理解为一个在波上的质点跟随波的平移速度
+        \end{itemize}
+    \end{define}
+    \animategraphics[scale=0.75,autoplay=True,loop]{24}{videos/wave_group/wave_group-}{0}{250}
+    \begin{center}
+        上面的动画中, {\color{red}红色}表示相速度, {\color{green}绿色}表示群速度
+    \end{center}
+    
+    关于群速度和相速度的讨论应该是波动学的内容, 这里我们不想讨论过多, 只是先说明两个速度的计算公式, 在波包很明显也就是有很好的群速度的定义的时候, 单单从
+    自由粒子的波动方程可以推出下面这一点。
+    \begin{theorem}{群速度和相速度的计算}
+        \begin{lequation}
+            \boxed{
+               v_g=\frac{d\omega}{dk}\qquad\qquad v_p=\frac{\omega}{k} 
+            }
+        \end{lequation}
+    \end{theorem}
+    正是由于多列行波的叠加才形成了波包, 而每个分量(行波)中的频率又是和$k$相关的, 这样就会导致群速度不等于相速度, 这时我们称之为\textbf{色散}, 自由粒子的
+    波函数恰好就是多列行波的叠加, $\omega$是关于$k$的二次式, 那么, 代表粒子的群速度是代表行波前进的相速度的两倍这一论断就不难看出了。
+    \section{\texorpdfstring{$\delta$}.函数势阱}
     \include{appendix.tex}
 \end{document}
