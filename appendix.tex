@@ -319,5 +319,105 @@ $$dx_i=\frac{\partial x_i}{\partial u_j}du_j,\bm{dx}=\frac{\partial \bm{x}}{\par
     使用$\bm{L^T}\bm{L}=\bm{I}$可以导出我们证明需要的等式}
 , 考虑它的基本得到方法, 然后再两个坐标系下的表示, 最后考虑其分量随
 坐标变换的变换关系。
+
+下面将定义推广到张量, 我们前面接触的矢量, 只有一个自由指标, 但是张量却有多个自由指标。
+\begin{define}{张量}
+    $T$是一个\uwave{二阶张量}, iff.坐标变换时满足$$T'_{ij}=L_{ik}L_{jm}T_{km}$$同理, 三阶张量就是坐标变换时满足下面关系的量$$P'_{ijk}=L_{ip}L_{jq}L_{kr}P_{pqr}$$
+    我们也常常将标量称为\uwave{零阶张量}, 矢量称为\uwave{一阶张量}。
+\end{define}
+前面提到的$\delta_{ij},\epsilon_{ijk}$就是张量的例子, 证明方法和证明一个量是否是矢量类似, 下面介绍一个很有用的定理去判断一个量是不是张量, 在物理定律中可以用
+它来迅速发现一个量的张量本质。
+\begin{theorem}{商法则(Quotient Rule)}
+    $$a_i=T_{ij}b_j$$
+    如果对于坐标系的任何一个变换, 对于任何一个矢量$\bm{b}$, 使用上面式子计算出来的$\bm{a}$都是一个矢量, 那么$T$是一个张量。
+    
+    这个定理还可以推广, 如果对于任意一个$n$阶张量$B$和任意坐标变换使用下面的式子得到的$A$总是个$m$阶张量, 那么$T$一定是一个$m+n$阶张量。
+    \begin{center}
+        \begin{math}
+            \displaystyle
+            A_{\underbrace{ijk\ldots}_{m}}=T_{\underbrace{ijk\ldots\alpha\beta\gamma\ldots}_{m+n}}B_{\underbrace{\alpha\beta\gamma\ldots}_{n}}
+        \end{math}
+    \end{center}
+\end{theorem}
+直角坐标系里, 我们可以使用一个n-by-1的矩阵表示一个向量, 而对于一个二阶张量我们需要一个二维的n-by-n矩阵去描述, 三阶张量需要使用一个立体的矩阵去描述, 到了
+更高维就很难去想象这样一个“矩阵”了。注意, 张量、矢量本身是不随坐标系变换改变的, 只是分量在不同坐标系下可能不同, 所以不同坐标系下描述它的矩阵可能有点差别。
+
+\begin{define}{对称张量和反对称张量}
+    这个的定义和对称矩阵的定义非常相似 
+    \begin{itemize}
+        \item \textbf{对称张量}: 任意两个下标对换后得到的两个分量始终相等, 如$T_{ij}\equiv T_{ji}$
+        \item \textbf{反对称张量}: 任意两个下标对换后得到的两个分量始终互为相反数, 如$T_{ij}\equiv -T_{ji}$
+    \end{itemize}
+    $\delta_{ij}$是对称张量, $\epsilon_{ijk}$是反对称张量, 所以$ijk$中任何两个值相等时$\epsilon=0$。
+
+    虽然不同的坐标系下张量的分量不同, 但张量对称性质不随坐标系的变换而变化。
+\end{define}
+\begin{define}{各向同性张量}
+    如果一个张量的每一个分量在不同的坐标系下都相同, 那么这个张量称为\textbf{各向同性张量}。
+\end{define}
+各向同性张量事实上非常少可以证明各向同性张量只可能是下面的形式:
+\begin{proposition}{n阶各向同性张量}
+    \begin{itemize}
+        \item 0-order: 都是各向同性的
+        \item 1-order: 只有$\bm{0}$是各向同性的
+        \item 2-order: 只有$a_{ij}=\lambda \delta_{ij}$是各向同性的
+        \item 3-order: 只有$a_{ijk}=\lambda \epsilon_{ijk}$是各向同性的
+        \item 4-order: 只有$a_{ijkl}=\lambda\delta_{ij}\delta_{kl}+\mu\delta_{ik}\delta_{jl}+\nu\delta_{il}\delta_{jk}$是各向同性的
+    \end{itemize}
+\end{proposition}
+在物理学中, 张量的出现总是伴随着两个矢量, 使用商法则, 我们就可以判断一个量是张量, 正是张量的存在才让两个矢量之间的关系变得复杂起来。
+\subsubsection*{电导率张量}
+我们先回顾一下欧姆定律的微分形式$$\bm{j}=\sigma\bm{E}$$, 初学电磁学时会简单的认为$\bm{j}$和$\bm{E}$的方向相同, 只是在所谓的长度上有一个伸缩关系。实则不然
+在一般的介质中, 这两个矢量是不平行的, 我们考虑一个极端情况
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.3]{fig/a-4.eps}
+    \caption{电导率张量}
+\end{figure}
+这个介质是由两种不同的介质构成的,不再和我们一般的介质一样是各向同性的, 在每一层介质中, 和我们之前学的确实是一致的, 但是当你考虑边界面处$\bm{j}$和$\bm{E}$的
+关系时, 会有很大的不同。 我们假设白色的介质电导率很低,就像是绝缘体一样, 而灰色的介质导电率很高, 是一个良导体。这个时候显然电流更容易沿着边界面流动, 而不是
+穿过界面\footnote[1]{你可以想象一堵墙阻挡你, 无论别人用多大的力气推你, 你也只能沿着墙走},所以就会导致两个矢量方向不同, 这个时候如果$\sigma$是一个标量肯定
+不符合要求, 这个时候就要求$\sigma$是一个张量了, 而且$$j_i=\sigma_{ik}E_k$$在我们讨论的这个情况下, 这个张量可以使用矩阵描述为:
+\begin{center}
+    \begin{math}
+        \displaystyle
+        \sigma=
+        \begin{pmatrix}
+            \sigma_0&0&0\\
+            0&\sigma_0&0\\
+            0&0&0
+        \end{pmatrix}
+    \end{math}
+\end{center}
+其中$x$轴平行于分界面, $y$轴垂直于分界面, $z$轴垂直于纸面。
+
+当我们讨论的介质各向同性, 每个地方的电导率相等时, 这个张量和我们前面定义的各向同性张量是一样的, 分量不随坐标系变换而变化。那么$\sigma_{ij}=\sigma_0\delta_{ij}$
+$$j_i=\sigma_{ik}E_k=\sigma_0\delta_{ik}E_k=\sigma E_i\Rightarrow\bm{j}=\sigma_0bm{E}$$张量退化为了我们熟知的标量。
+\subsubsection*{惯量张量}
+初学力学时, 一直在强调, 刚体的角动量和角速度一般情况下方向是不同的, 我们刚体平行平面运动中所列的转动方程实际上是列的投影式$M_z=I_{zz}\frac{d\omega_z}{dt}$(其中转轴就是
+$z$轴, 角速度方向和$z$轴方向相同), 这也说明转动惯量也应该是一个张量, 只是我们在计算的都是均匀的几何体, 具有各向同性, 惯量张量退化为一个标量。惯量张量也可以
+表示为一个矩阵, 对角线元素是转动惯量, 非对角线元素叫做惯量积。Feynman讲义第一卷中也讨论了这个问题, 就是因为几何体的不均匀性才导致了转动惯量是张量, 这一点
+在刚体做定轴转动是尤为明显。
+
+我们下面计算一个刚体绕某个基点以$\Omega$角速度转动时的角动量矢量的第$i$个分量:
+\begin{center}
+    \begin{equation*}
+        \displaystyle
+        \begin{split}
+            L_i&=\iiint_V \rho(\bm{r}\times\bm{v})_idV\\
+               &=\iiint_V \rho(\bm{r}\times\left(\bm{\Omega}\times\bm{r}\right))_idV\\
+               &=\iiint_V \rho\left(r^2\Omega_i-\left(\bm{r}\cdot\bm{\Omega}\right)r_i\right)dV \qquad\qquad\text{(Lagrange恒等式)}\\
+               &=\iiint_V \rho\left(r^2\delta_{ij}\Omega_j-r_j\Omega_jr_i\right)dV\\
+               &=\iiint_V \rho\left(r^2\delta_{ij}-r_jr_i\right)\Omega_jdV\\
+        \end{split}
+    \end{equation*}
+\end{center}    
+定义惯量张量$$I_{ij}=\iiint_V \rho\left(r^2\delta_{ij}-r_jr_i\right)$$
+那么角动量和角速度之间的关系又下式给定:
+$$L_i=I_{ij}\Omega_j$$
+再从角速度和角动量的矢量性质, 由商法则可以判断$I$是二阶张量, 也正是由于它的张量性质才有了角动量和角速度方向的不同。
+
+
+
 \chapter{Linear Algebra}
 
