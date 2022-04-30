@@ -59,7 +59,7 @@ $\epsilon$和$delta$之间有一个十分有用的关系式:
     \begin{math}
         \displaystyle
         \bm{a}\cdot\bm{b}=a_ib_i \qquad\qquad [\bm{a}\times\bm{b}]_i=\epsilon_{ijk}a_jb_k\\
-        \bm{A}\bm{B}_{ij}=\bm{A}_{ik}\bm{B}_{kj} \qquad\qquad \bm{A}^{T}_{ij}=\bm{A}_{ji}\\
+        \left(\bm{A}\bm{B}\right)_{ij}=\bm{A}_{ik}\bm{B}_{kj} \qquad\qquad \bm{A}^{T}_{ij}=\bm{A}_{ji}\\
         \left|\bm{M}\right| =\epsilon_{ijk}\bm{M}_{1i}\bm{M}_{2j}\bm{M}_{3k}\Longleftrightarrow \epsilon_{pqr}\left|\bm{M}\right|=\epsilon_{ijk}\bm{M}_{pi}\bm{M}_{qj}\bm{M}_{rk}
     \end{math}
 \end{thinknote}
@@ -231,5 +231,93 @@ $$dx_i=\frac{\partial x_i}{\partial u_j}du_j,\bm{dx}=\frac{\partial \bm{x}}{\par
     \caption{曲线坐标系的局部就可以看成一个小(不再是直角坐标里面的正方体了), 图中也标出了参数微元和实际位移量的比例关系}
 \end{figure}
 \section{直角坐标里的张量}
+在探讨什么是张量之前, 我们需要重新定义一下什么是标量和矢量, 下面的讨论都是在直角坐标系下的。
+
+考虑坐标系的旋转, 空间中某一点在两个坐标系中的坐标$\bm{X'}$和$\bm{X}$由一个过渡矩阵$\bm{L}$联系起来。这个矩阵就是我们所熟知的\uwave{转动矩阵}, 是一个正交
+矩阵
+\begin{lequation}
+    \boxed{
+        \bm{L}=
+        \begin{pmatrix}
+           \cos\theta & \sin\theta \\
+           -\sin\theta& \cos\theta
+        \end{pmatrix}
+    }
+\end{lequation}
+\begin{center}
+    \begin{math}
+        \displaystyle
+        \begin{pmatrix}
+            x_1' \\
+            x_2'
+        \end{pmatrix}
+        =\bm{L}
+        \begin{pmatrix}
+            x_1\\
+            x_2
+        \end{pmatrix}
+        \qquad
+        \bm{L}\bm{L^T}=\bm{L^T}\bm{L}=\bm{I}
+        \qquad
+        \left|\bm{L}\right|=1
+    \end{math}
+\end{center}
+上面的后两个式子是正交矩阵自身的性质, 第一式使用求和约定写成
+\begin{center}
+    \begin{math}
+        \displaystyle
+        x_i'=L_{ij}x_j\qquad
+        x_i =L_{ji}x_j'
+    \end{math}
+\end{center}
+注意用到了$\bm{L^T}=\bm{L^{-1}}$这个条件。对于更高纬度的欧式空间, 每个基向量若还是有正交关系, 即$\bm{e_i}\cdot\bm{e_j}=\delta_{ij}$。旋转变换是保长
+变换, 我们仍旧可以使用两个坐标基向量之间的确定转换矩阵为
+\begin{lequation}
+    \boxed{
+        L_{ij}=\bm{e_i'}\cdot\bm{e_j}
+    }
+\end{lequation}
+这个矩阵还是一个正交矩阵, 但是注意, $L^TL=I$不能说明$\left|L\right|=\pm 1$, 行列式的值取$1$才表示\textbf{旋转变换}, 取$-1$表示\textbf{反射变换}。
+这个矩阵还是一个实矩阵, 是一个\uwave{等距同构}算子的矩阵, 线性代数中可以证明实内积空间上的等距同构\footnote[1]{回忆一下等距同构一定是正规的}的矩阵有下面性质
+\begin{theorem}{实内积空间上的等距同构}
+    如果$S$是实内积空间上的某个等距同构, 那么它关于某个规范正交基的矩阵一定是一个分块对角阵, 而且每个块中的元素是$\pm 1$或者
+    \begin{center}
+        \begin{math}
+            \displaystyle
+            \begin{pmatrix}
+                \cos\theta & \sin\theta \\
+                -\sin\theta& \cos\theta
+            \end{pmatrix}
+        \end{math}
+    \end{center}
+\end{theorem}
+显然, 我们这里的等距同构就是一个$R^n$上的旋转变换, $L$就是它的矩阵表示。下面还有关于$L$的两个等式:
+\begin{lequation}
+    \frac{\partial x_i'}{\partial x_j}=L_{ij} \qquad \text{and} \qquad \frac{\partial x_i}{\partial x_j'}=L_{ji}
+\end{lequation}
+\begin{define}{标量和矢量}
+    \begin{itemize}
+        \item 
+        $\bm{v}$是一个矢量, 当且仅当在坐标系进行旋转变换时, 它在两个坐标系下的分量之间的变换与$\bm{L_{ij}}$一致, 也就是说它的变换和点的变换时一致的:$$v_i'=L_{ij}v_j$$
+        \item 标量定义为在坐标系的旋转变换下,值始终不变的量$$s'=s$$
+    \end{itemize}
+\end{define}
+我们抛弃了原先矢量的定义, 一个有大小有方向的量, 取而代之的是一个更加抽象化的描述, 也更加精确, 同时也为我们将定义扩展到张量上带来了便利, 使用定义我们可以证明
+两个矢量的点乘是标量。
+\begin{thinknote}
+    对于矢量$\bm{a}$和$\bm{b}$我们有$$a_i'=L_{ij}a_j,b_i'=L{ij}b_j$$那么$s=\bm{a}\cdot\bm{b}=a_ib_i$, 换到另一个参考系后, 点乘的定义还是不变有
+    \begin{center}
+        \begin{math}
+            s'=(\bm{a}\cdot\bm{b})'=a_i'b_i'=L_{ij}a_jL_{ik}b_k=L_{ij}L_{ik}a_jb_k=\delta_{jk}a_jb_k=a_kb_k=s
+        \end{math}
+    \end{center}
+    这就证明了$\bm{a}\cdot\bm{b}$是标量。 
+\end{thinknote}
+这也是证明一个量是否是矢量或标量的一般方法
+\footnote[1]{注意到上面的证明利用了
+    $$\bm{L}\bm{L^T}=\bm{I}\Rightarrow L_{ij}L^T_{jk}=\delta_{ik} \xLongrightarrow{L^T_{jk}=L_{kj}} L_{ij}L_{kj}=\delta_{ik}$$
+    使用$\bm{L^T}\bm{L}=\bm{I}$可以导出我们证明需要的等式}
+, 考虑它的基本得到方法, 然后再两个坐标系下的表示, 最后考虑其分量随
+坐标变换的变换关系。
 \chapter{Linear Algebra}
 

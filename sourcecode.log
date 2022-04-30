@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  28 APR 2022 23:22
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  30 APR 2022 12:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1878,9 +1878,9 @@ File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [27] [28]
+ [27] [28] [29] [30]
 附录 B
-) [29
+) [31
 
 ] (./sourcecode.aux (./appendix.aux))
 
@@ -1890,12 +1890,12 @@ Package rerunfilecheck Info: File `sourcecode.out' has not changed.
 (rerunfilecheck)             Checksum: 6BA05AF78B957A85282662E08A632DBA;2419.
  ) 
 Here is how much of TeX's memory you used:
- 47562 strings out of 476533
- 1221551 string characters out of 5818886
+ 47565 strings out of 476533
+ 1221599 string characters out of 5818886
  1802613 words of memory out of 5000000
- 66917 multiletter control sequences out of 15000+600000
+ 66920 multiletter control sequences out of 15000+600000
  467876 words of font info for 143 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,15n,97p,727b,1009s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,15n,97p,727b,1017s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (31 pages).
+Output written on sourcecode.pdf (33 pages).
