@@ -260,7 +260,8 @@
     的可能性。
     \begin{thinknote}
         这里实际上定态并不是我们真正要求的解, 我们要求的解是这些解的线性组合, 但是我们还是要将他们($\psi$)进行归一化处理, 但没有关系, 反正归一化只是乘上
-        一个常数, 但在这里我们进行归一化后可以使得解的物理意义更加明朗, 更重要的是它会简化我们后续的数学对解的性质上的讨论。
+        一个常数, 但在这里我们进行归一化后可以使得解的物理意义更加明朗, 更重要的是它会简化我们后续的数学对解的性质上的讨论。叠加后, 定态解前面的系数也更加
+        具有物理意义。
     \end{thinknote}
     \begin{proposition}{定态解可归一化必要条件}
         1.能量$E$的虚部为零, 是一个实数;\\
@@ -308,7 +309,7 @@
         实际上这里的$k$从经典力学上看可以理解为\textbf{角波数}, $k=2\pi/\lambda\xlongequal[]{de-Broglie-eq.}p/\hbar$, 使用经典力学的观点来看,粒
         子的能量为$E$, 那么动量为$\sqrt{2mE}$。
     \end{thinknote}
-    这就是一个自由振子的数学模型, 代入边界条件并且归一化可以得到:
+    这就是一个自由振子的数学模型, 代入边界条件\footnote[2]{$\psi(0)=\psi(a)=0$, 而且这里悄然已经利用了$\psi(x)$的连续性, 后面会再次提到}并且归一化可以得到:
     \begin{lequation}
         \boxed{
             \psi_n(x)=\sqrt{\frac{2}{a}}\sin\left(\frac{n \pi}{a}x\right),\quad k=\frac{n \pi}{a}
@@ -320,8 +321,8 @@
         }
     \end{lequation}
     其中\textbf{$n$是正整数}。计算的时候你会发现, 两个边界条件实际上不能完全确定微分方程解的两个常数项, 但是它却限制了$ka=n\pi(n=1,2,3,\ldots)$, 而$k$
-    的值和能量是相关的, 所以这也就说明了\textbf{量子力学系统中的定态解始终只能取一系列离散数值}, 又考虑到系统的真实解是定态解的叠加, 而且每次测量系统的能量
-    时都会返回某个定态解的能量, 这也就体现了量子力学中\textbf{能量的不连续性}, 真正确定另一个常数的条件是归一化条件\footnote[2]{回想一下对$\Psi$归一化等价于对$\psi$归一化}。
+    的值和能量是相关的, 所以这也就说明了\textbf{量子力学系统中的定态解的能量这个时候只能取一系列离散数值}\footnote[3]{对于束缚态是离散的, 对散射态不是}, 又考虑到系统的真实解是定态解的叠加, 而且每次测量系统的能量
+    时都会返回某个定态解的能量, 这也就体现了量子力学中\textbf{能量的不连续性}, 真正确定另一个常数的条件是归一化条件\footnote[4]{回想一下对$\Psi$归一化等价于对$\psi$归一化}。
 
     完整写下定态的波函数应该为:
     \begin{lequation}
@@ -369,7 +370,7 @@
         \label{fig-2.1}
     \end{figure}
 
-    下面要谈到的性质虽然是根据无限深势阱总结来的, 但是他们却是普遍适用的\footnote[3]{$\delta$符号的相关定义见附录A}。
+    下面要谈到的性质虽然是根据无限深势阱总结来的, 但是他们却是普遍适用的\footnote[5]{$\delta$符号的相关定义见附录A}。
     \begin{theorem}{定态解的重要性质定理}
         1.不管势能本身是否具有对称性, 定态波函数总是关于势阱的中心成奇函数或偶函数(即关于中心轴对称或中心对称), 且随着$n$的变化交替出现;\\
         2.不管势能本身形状如何, 波函数的波节(零点)个数总是随着能量的增大而增大, 且公差为$1$;\\
@@ -452,6 +453,10 @@
     定态薛定谔方程相应的写成$$-\frac{\hbar^2}{2m}\frac{d^2\psi(x)}{dx^2}+\frac{1}{2}m\omega^2x^2\psi(x)=E\psi(x)$$
     这个方程可以使用幂级数解法去解决, 我们先介绍一种比较物理的方法去求解, 即\uwave{升降阶算符法}。
     \subsection{代数方法}
+    定态薛定谔方程的算子写法为$\hat{H}\psi=E\psi$, 代数方法的基本思路是去分解哈密顿算符:
+    $$\hat{H}=\frac{1}{2m}\left[\hat{p}+(m\omega x)^2\right]$$
+    如果是普通的复数$u^2+v^2$我们可以分解为$(u+iv)(u-iv)$, 这也就启发了我们像下面一样去定义升降阶算符, 前面多出来的$\frac{1}{\omega\hbar}$因子可以让
+    后面的形式更加美观。
     \begin{define}{产生/湮灭算子}
         \begin{lequation}
             \hat{a}_\pm\overset{def}{=}\frac{1}{\sqrt{2m\omega\hbar}}(\mp i\hat{p}+m\omega x)
@@ -689,5 +694,104 @@
     正是由于多列行波的叠加才形成了波包, 而每个分量(行波)中的频率又是和$k$相关的, 这样就会导致群速度不等于相速度, 这时我们称之为\textbf{色散}, 自由粒子的
     波函数恰好就是多列行波的叠加, $\omega$是关于$k$的二次式, 那么, 代表粒子的群速度是代表行波前进的相速度的两倍这一论断就不难看出了。
     \section{\texorpdfstring{$\delta$}.函数势阱}
+    \subsection{束缚态和散射态}
+    最好引入束缚态和散射态的方法是使用经典类比, 我们前面提到的谐振子和无限深势阱都是束缚态, 他们每个定态解是可归一化的, 而且是分立谱, 粒子的行为像驻波一
+    般, 会因为某些特定的边界条件使得波函数被限制在一个局域内。但是后面讲的自由粒子是连续谱, 不存在定态, 定态解不可归一化, 它的行为更像是一种行波, 可以自
+    由延伸到无穷远处, 但是由定态解的线性组合构成的波包是可以归一化的, 这也就意味着, 一旦我们讨论的是自由粒子这种散射态, 他一定是很多种
+    定态能量的叠加态, 不可能是测量后只会出现一种能量的某个定态, 一定是很多很多定态的组合, 因为对于散射态定态解是没有物理意义的, 这一点我们后面会再次提到。
+
+    从经典力学来看, 由于物体的动能始终是一个定值, 所以在势能图上, 粒子永远不可能达到势能大于粒子总能量的地方(能量守恒), 从图上来看就是粒子被限制在两个点
+    之间来回折返(\ref{turning_point}), 除非物体的能量大于势能的最大值, 这样粒子就会越过“山峰”, 不断前进。
+    \begin{figure}[htbp]
+        \centering
+        \label{turning_point}
+        \includegraphics[scale=0.5]{fig/2-5-1.eps}
+        \caption{经典力学中, 粒子会被“困在”$x=a$和$x=b$之间}
+    \end{figure}
+    还是以上面的图像为例, 在经典力学看来(如果初始位置在$ab$之间的话), 这个图像会产生一个束缚态, 在量子力学中, 马上你将会看到, 由于所谓的\textbf{量子隧穿效应}
+    , 任何有限高的势能都不能阻挡粒子, 粒子完全可以越过最高点大于其总能量的“山峰”。所以上面的图像对于量子理论来说也是一个散射态, 只有像前面所说的无限深势阱和
+    谐振子, 才会导致粒子的束缚态的产生。
+    \begin{theorem}{束缚态和散射态的判定准则}
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                \begin{cases}
+                    E>V(+\infty) \vee E>V(-\infty) \Rightarrow \text{Bound State}\\
+                    E<V(+\infty) \wedge E<V(-\infty) \Rightarrow \text{Scattering State}
+                \end{cases}
+            \end{math}
+        \end{center}
+        一般情况下, $V(x)$会在$x\to\pm\infty$时趋近于$0$(谐振子和无限深势阱就是特例), 这个时候可以再次简化判定准则为:
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                \begin{cases}
+                    E>0 \Rightarrow \text{Bound State}\\
+                    E<0 \Rightarrow \text{Scattering State}
+                \end{cases}
+            \end{math}
+        \end{center}
+    \end{theorem}
+    注意, 我们前面在求解薛定谔方程时, 都说过$E>V_{min}$, 很遗憾, 这个条件在散射态时, 不起作用, 因为散射态我们并不严格要求定态解一定是可归一化的, 所以这
+    个条件只能对于束缚态使用, 前面我们对谐振子和无限深势阱使用这个条件是完全正确的, 因为无论$E$是大于$0$还是小于$0$, 这两个势阱产生的都是束缚态, 那么束缚
+    态的定态解必须是可归一化的, 这也就间接要求了$E$的非负性。事实上, 你如果在$E<0$的假定下求解这两种模型的解, 你会发现无论是定态还是线性组合后的解都是不可归一化的
+    , 没有实在的物理意义。 在这个时候我们就说$E>0$的解已经构成了一个\uwave{完备集}, 初始的波函数一定是可以归一化的, 也一定是可以由对应的定态解组合而成, 然而
+    $E<0$的解都不可以归一化, 所以这两种势能模型中仅当粒子$E>0$时有物理意义, 这一点实际上根据经典力学我们可以很容易类比得出。
+
+    \subsection{\texorpdfstring{$\delta$}d函数势阱}
+    注意这里我们讨论的是\uwave{势阱}, 主要是为了和后面的\uwave{势垒}区分, 你可以将势阱想象成一口井, 但势垒是一座山。
+    \subsubsection*{狄拉克$\delta$函数}
+    这个函数的定义你可以立即为将克罗内克符号扩充为一个连续函数, 也可以理解为是以个函数序列的极限。
+    \begin{define}{$\delta$ function}
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                \delta(x)\equiv
+                \begin{cases}
+                    0, x\neq 0\\
+                    +\infty,x=0
+                \end{cases},\text{but}\int_{-\infty}^{+\infty}\delta(x) dx=\int_{0^-}^{0^+}\delta(x) dx=1
+            \end{math}
+        \end{center}
+    \end{define}
+    \begin{proposition}{$\delta$函数的提取性质}
+        \begin{itemize}
+            \item $f(x)\delta(x-a)=f(a)$
+            \item $\int_{-\infty}^{\infty}f(x)\delta(x-a)=f(a)$
+        \end{itemize}
+    \end{proposition}
+    我们现在考虑的势阱形式是$V(x)=-\alpha\delta(x),\alpha>0$。显然, $E>0$时是散射态, $E<0$时是束缚态\footnote[1]{考虑束缚态时, 除了根据判据, 你还要
+    观察下, 在这个能量条件下, 定态解是不是平方可积的, 满足束缚态的定义, 在这里由于$V_{min}\to -\infty$, 所以恒有$E>V_{min}$, 粗略来看束缚态是可以在这个
+    能量条件下给出的, 后面的势垒就是个反例。}。
+    \subsubsection*{束缚态($E<0$)}
+    定态薛定谔方程:
+    \begin{center}
+        \begin{math}
+            \displaystyle
+            -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}-\alpha\delta(x)\psi=E\psi
+        \end{math}
+    \end{center}
+    定义$\kappa\equiv\frac{\sqrt{-2mE}}{\hbar}$, 这个解应该是一个分段函数形式, 分段求解首先考虑$x<0$, 方程可以写成:
+    $$\frac{d^2\psi}{dx^2}=\kappa^2\psi$$方程的通解具有形式$\psi(x)=Ae^{\kappa x}+Be^{-\kappa x}$, 实际上对于波函数, 我们有下面的必要边界条件:
+    \begin{proposition}{$\psi$标准条件}
+        \begin{itemize}
+            \item \textbf{连续性}: $\psi(x)$是一个连续函数
+            \item \textbf{一阶导数连续性}: 除了$\delta(x)$这样的奇异函数$\frac{d\psi}{dx}$具有连续性
+            \item \textbf{单值性}: 显然一个点只能对应一个概率密度
+            \item \textbf{有界性}: $x\to\pm\infty$时, $\psi(x)$不能趋近于无穷大
+            \item \textbf{归一化条件}: 当然现在我们\uwave{只能对束缚态这么做了}, 可以用这个定出每个定态前的系数
+        \end{itemize}
+    \end{proposition}
+    利用有界性我们直接推出$A=0$, $x>0$时, 同样分析可以得出$\psi(x)=Fe^{\kappa x}+Ge^{-\kappa x}$, 其中$F=0$。另外, 利用在$x=0$处的连续性可以得到$B=G$
+    , 但是在$x=0$处一阶导\uwave{并不连续}, 我们对定态方程两边积分可以得到$$\frac{\hbar^2}{2m}\left[\psi'_+(0)-\psi'_-(0)\right]+\alpha\psi(0)=0$$
+    然后再代入$\psi'_+(0)-\psi'_-(0)=-2\kappa B$并进行归一化后不难得到
+    \begin{lequation}
+        \boxed{
+            \psi(x)=\frac{\sqrt{m\alpha}}{\hbar}e^{-m\alpha\left|x\right|/\hbar^2}, \qquad E=-\frac{m\alpha^2}{2\hbar^2}
+        }
+    \end{lequation}
+    
+    通常的束缚态都有无穷多个定态, 但是这个问题却出奇的单调, 只有一个定态, 只有一种能量的可取值。
+    \subsubsection*{散射态($E>0$)}
     \include{appendix.tex}
 \end{document}
