@@ -12,10 +12,10 @@
 \contentsline {section}{\numberline {2.5}$\delta $函数势阱}{20}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}束缚态和散射态}{20}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}$\delta $函数势阱}{22}{subsection.2.5.2}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{24}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{24}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{25}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{27}{section.A.3}%
-\contentsline {section}{\numberline {A.4}直角坐标里的张量}{31}{section.A.4}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{38}{appendix.B}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{26}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{26}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{27}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{29}{section.A.3}%
+\contentsline {section}{\numberline {A.4}直角坐标里的张量}{33}{section.A.4}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{40}{appendix.B}%
 \contentsfinish 
