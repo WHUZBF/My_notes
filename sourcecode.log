@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  3 MAY 2022 23:24
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  4 MAY 2022 23:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1061,39 +1061,39 @@ Underfull \hbox (badness 4899) in paragraph at lines 320--322
 
 [9] [10] [11] [12]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.05624pt on input line 466.
+(Font)              scaled to size 15.05624pt on input line 467.
  [13] [14]
-Invalid UTF-8 byte or sequence at line 551 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 551 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 551 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 551 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 551 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 551 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 552 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 552 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 552 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 552 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 552 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 552 replaced by U+FFFD.
 File: fig/2-3-a.eps Graphic file (type eps)
 <fig/2-3-a.eps>
-Invalid UTF-8 byte or sequence at line 554 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 554 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 554 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 554 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 554 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 554 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 555 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 555 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 555 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 555 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 555 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 555 replaced by U+FFFD.
 File: fig/2-3-b.eps Graphic file (type eps)
 <fig/2-3-b.eps>
-Invalid UTF-8 byte or sequence at line 557 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 557 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 557 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 557 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 557 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 557 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 558 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 558 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 558 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 558 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 558 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 558 replaced by U+FFFD.
 File: fig/2-3-c.eps Graphic file (type eps)
 <fig/2-3-c.eps>
  [15] [16]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 610.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 611.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 610.
+(Font)              scaled to size 12.045pt on input line 611.
  [17] [18] [19]
 File: videos/wave_group/wave_group-0.png Graphic file (type bmp)
 <videos/wave_group/wave_group-0.png>
@@ -1850,7 +1850,10 @@ File: videos/wave_group/wave_group-250.png Graphic file (type bmp)
  <a0,fr250> [20]
 File: fig/2-5-1.eps Graphic file (type eps)
 <fig/2-5-1.eps>
- [21] [22] [23] [24] [25]
+ [21] [22]
+File: fig/2-5-2.eps Graphic file (type eps)
+<fig/2-5-2.eps>
+ [23] [24] [25] [26]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -1860,10 +1863,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--32
 
  []
 
-[26
+[27
 
 
-] [27] [28]
+] [28] [29]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -1871,37 +1874,41 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-[29] [30]
+[30] [31]
 
 LaTeX Font Warning: Font shape `TU/ntxtlf/b/n' undefined
 (Font)              using `TU/ntxtlf/m/n' instead on input line 174.
 
-[31]
+[32]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [32] [33] [34] [35] [36]
+ [33] [34] [35] [36] [37]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [37] [38] [39]
+ [38] [39] [40]
 附录 B
-) [40
+[41
+
+]
+附录 C
+) [42
 
 ] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 2128131769FCA675C3A168BB34BE4E32;2700.
+(rerunfilecheck)             Checksum: 3D297CF0A191AB6644838E17B031FAF6;2994.
  ) 
 Here is how much of TeX's memory you used:
- 47624 strings out of 476533
- 1224139 string characters out of 5818886
- 1805874 words of memory out of 5000000
- 66975 multiletter control sequences out of 15000+600000
+ 47629 strings out of 476533
+ 1224225 string characters out of 5818886
+ 1805883 words of memory out of 5000000
+ 66979 multiletter control sequences out of 15000+600000
  467892 words of font info for 145 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1017s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (42 pages).
+Output written on sourcecode.pdf (44 pages).

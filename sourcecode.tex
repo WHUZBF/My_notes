@@ -385,7 +385,8 @@
     \begin{theorem}{定态解的重要性质定理}
         1.不管势能本身是否具有对称性, 定态波函数总是关于势阱的中心成奇函数或偶函数(即关于中心轴对称或中心对称), 且随着$n$的变化交替出现;\\
         2.不管势能本身形状如何, 波函数的波节(零点)个数总是随着能量的增大而增大, 且公差为$1$;\\
-        $\bigstar$3.\textbf{定态解之间相互正交}\footnote{回忆一下我们已经对$\psi$进行归一化}\footnote{积分为全空间, 对于无限深势阱积分限为$(0,a)$}
+        $\bigstar$3.\textbf{定态解之间相互正交}\footnote{回忆一下我们已经对$\psi$进行归一化}\footnote{积分为全空间, 对于无限深势阱积分限为$(0,a)$。
+        实际上这里使用术语\uwave{本征函数}相互正交更好, 因为我们描述的是$\psi$而非$\Psi$之间的关系。}
         \begin{lequation}
             \label{orthogonal}
             \int \psi_m(x)^*\psi_n(x) dx=\delta_{mn}
@@ -656,7 +657,7 @@
     我们仍旧对定态解进行线性叠加, 注意是对定态解叠加, 也就是对定态解的波函数进行叠加不是$\psi$而是$\Psi$, 所以不要忘记了每个$\psi$后面的关于时间的指数项。
     \begin{lequation}
         \boxed{
-            \Psi=\int_{-\infty}^{\infty}\phi(k)\psi_ke^{-\frac{ik^2\hbar}{2m}}dk=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)e^{i\left(kx-\frac{ik^2\hbar}{2m}\right)}dk  
+            \Psi=\int_{-\infty}^{\infty}\phi(k)\psi_ke^{-\frac{ik^2\hbar}{2m}t}dk=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)e^{i\left(kx-\frac{k^2\hbar}{2m}t\right)}dk  
         }
     \end{lequation}
     和\ref{find_c}对比一下就会发现, $\phi(k)$取代了$c_n$, 这一点很好理解, 因为$\phi_k(x)$变成了一个关于$k$的连续函数, 而数列我们也通常称为\uwave{整标函数}, 所
@@ -666,7 +667,7 @@
     \begin{lequation}
         \Psi(x,0)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)e^{ikx}dk  
     \end{lequation}
-    数学上$\Psi$就是对$\phi$的傅里叶变换, 下面的定理可以很方便的求出$\phi(k)$。
+    数学上$\Psi$就是对$\phi$的\uwave{傅里叶逆变换}, 下面的定理可以很方便的求出$\phi(k)$。
     \begin{theorem}{Plancherel's theorem}
         \begin{center}
             \begin{math}
@@ -675,6 +676,8 @@
             \end{math}
         \end{center}
     \end{theorem}
+
+    其中$F(x)$表示$f(x)$的傅里叶变换, 反之即为逆变换。
     \begin{lequation}
         \boxed{
             \phi(k)=\frac{1}{\sqrt{2\pi}} \int _{-\infty}^{\infty}\Psi(x,0)e^{-ikx}dx
@@ -803,6 +806,11 @@
     \end{lequation}
     
     通常的束缚态都有无穷多个定态, 但是这个问题却出奇的单调, 只有一个定态, 只有一种能量的可取值。
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.5]{fig/2-5-2.eps}
+        \caption{这是束缚态$\psi$图像, 不是概率密度曲线}
+    \end{figure}
     \subsubsection*{散射态($E>0$)}
     散射态比较难以处理, 我们还是分段考虑我们可以得到下面的解:
     \begin{center}
@@ -861,5 +869,10 @@
     \end{thinknote}
     那么既然透射系数不一定为$0$, 也就是说, 和经典情况不同, 经典力学中, 粒子不可能穿过$\delta$势垒, 但是量子散射效应下, 粒子完全有概率穿过势垒, 而且与其
     携带的能量正相关, 这种现象称之为\textbf{量子隧穿效应}, 在电子显微镜及其它很多领域中有广泛的应用。
+    \subsubsection*{$\delta$函数势阱束缚态计算}
+    我们之前讲的计算方法就是利用连续性和薛定谔方程两端积分, 这对于只有一个$\delta$函数的势阱很实用, 但是$\delta$函数数目较多时, 由于还要分段求解方程, 计算就显得比较繁琐了, 下面介绍一种
+    利用傅里叶变换快速计算的方法\footnote[2]{cf.顾樵, 量子力学, vol.1, P140-144}。
+    
+    \section{有限深势阱}
     \include{appendix.tex}
 \end{document}
