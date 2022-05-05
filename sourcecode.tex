@@ -1,6 +1,7 @@
 % 导言区
 \documentclass[a4paper,zihao=-4,linespread=1]{ctexrep}
 
+\usepackage[]{mathrsfs}
 \usepackage[]{animate}
 \usepackage{color}
 \usepackage{booktabs}
@@ -872,6 +873,85 @@
     \subsubsection*{$\delta$函数势阱束缚态计算}
     我们之前讲的计算方法就是利用连续性和薛定谔方程两端积分, 这对于只有一个$\delta$函数的势阱很实用, 但是$\delta$函数数目较多时, 由于还要分段求解方程, 计算就显得比较繁琐了, 下面介绍一种
     利用傅里叶变换快速计算的方法\footnote[2]{cf.顾樵, 量子力学, vol.1, P140-144}。
+
+    傅里叶变换使用如下定义方法:
+    \begin{equation}
+        \label{傅里叶变换}
+        \begin{aligned}
+        \mathscr{F}[f(t)] &=F(\omega)=\int_{-\infty}^{+\infty} f(t) e^{-i \omega t} d t \\
+        \mathscr{F}^{-1}[F(\omega)] &=f(t)=\frac{1}{2 \pi} \int_{-\infty}^{+\infty} F(\omega) e^{i \omega t} d \omega
+        \end{aligned}
+    \end{equation}
+    \begin{proposition}{傅里叶变换常用性质}
+        \begin{itemize}
+            \item \textbf{线性性}\footnote[1]{使用$\mathscr{F}$表示变换, 大写字母表示变换后相应的函数}:$$
+            \begin{gathered}
+            \mathscr{F}[\alpha f(t)+\beta g(t)]=\alpha F(\omega)+\beta G(\omega) \\
+            \mathscr{F}^{-1}[\alpha F(\omega)+\beta G(\omega)]=\alpha f(t)+\beta g(t)
+            \end{gathered}$$
+            \item \textbf{位移性}:$$
+            \begin{gathered}
+            \mathscr{F}\left[f\left(t-t_{0}\right)\right]=e^{-i \omega t_{0}} F(\omega) \\
+            \mathscr{F}^{-1}\left[F\left(\omega-\omega_{0}\right)\right]=e^{i \omega_{0} t} f(t)
+            \end{gathered}
+            $$
+            \item \textbf{放缩性}:$$
+            \mathscr{F}[f(a t)]=\frac{1}{|a|} F\left(\frac{\omega}{a}\right)
+            $$
+            \item \textbf{对称性}:$$
+            \mathscr{F}[F(t)]=2 \pi f(-\omega)
+            $$
+            \item \textbf{微分关系}:$$
+            \begin{gathered}
+            \mathscr{F}\left[\frac{d^{n} f(t)}{d t^{n}}\right]=(i \omega)^{n} F(\omega) \\
+            \mathscr{F}^{-1}\left[\frac{d^{n} F(\omega)}{d \omega^{n}}\right]=(-i t)^{n} f(t)
+            \end{gathered}$$
+            \item \textbf{积分关系}:$$\mathscr{F}\left[\int f(t)dt\right]=\frac{1}{i\omega}F(\omega)$$
+            \item \textbf{帕萨瓦尔定理}:$$
+            \int_{-\infty}^{+\infty} f(t) g^*(t) d t=\frac{1}{2 \pi} \int_{-\infty}^{+\infty} F(\omega) G^*(\omega) d \omega
+            $$
+            \item \textbf{时域卷积定理}:$$
+            \mathscr{F}[f(t) * g(t)]=F(\omega) G(\omega)
+            $$
+            \item \textbf{频域卷积定理}:$$
+            \mathscr{F}[f(t) g(t)]=\frac{1}{2 \pi} F(\omega) * G(\omega)
+            $$
+            \item \textbf{与$\delta$函数关系}:$$\delta(x)=\mathscr{F}^{-1}[1](x)$$
+        \end{itemize}
+    \end{proposition}
+
+    我们下面以双$\delta$势阱为例来讲解这种方法。
+    \begin{define}{双$\delta$势阱}
+        \begin{equation}
+            V(x)=-\alpha\left[\delta(x-a)+\delta(x+a)\right]
+        \end{equation}
+    \end{define}
+    定态薛定谔方程写为:
+    \begin{equation}
+        -\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}-\alpha\left[\delta(x-a)+\delta(x+a)\right]\psi=E\psi
+    \end{equation}
+    方程两边进行傅里叶变换(\ref{傅里叶变换}), $k$的定义同前, 有:
+    \begin{equation}
+        \begin{aligned}
+        -\omega^2\mathscr{P}(\omega)-k^2\mathscr{P}(\omega)&=-\frac{2m\alpha}{\hbar^2}\int_{-\infty}^{\infty}\left[\delta(x-a)+\delta(x+a)\right]\psi(x)e^{-i\omega x}dx\\
+        &=-\frac{2m\alpha}{\hbar^2}\left(e^{i\omega a}\psi(-a)+e^{-i\omega a}\psi(a)\right)
+        \end{aligned}
+    \end{equation}
+    其中$\mathscr{F}\left[\psi(x)\right](\omega)\equiv\mathscr{P}(\omega)$, 解得:
+    \begin{equation}
+        \mathscr{P}(\omega)=\frac{2m\alpha}{\left(k^2+\omega^2\right)\hbar^2}\left(e^{i\omega a}\psi(-a)+e^{-i\omega a}\psi(a)\right)
+    \end{equation}
+    再进行傅里叶逆变换得到:
+    \begin{equation}
+        \psi(x)= \frac{m\alpha}{k\hbar^2}\left[\psi(a)e^{-k|x-a|}+\psi(-a)e^{-k|x+a|}\right]
+    \end{equation}
+    
+    
+    
+    
+    
+    
+    
     
     \section{有限深势阱}
     \include{appendix.tex}
