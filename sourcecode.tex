@@ -945,11 +945,40 @@
     \begin{equation}
         \psi(x)= \frac{m\alpha}{k\hbar^2}\left[\psi(a)e^{-k|x-a|}+\psi(-a)e^{-k|x+a|}\right]
     \end{equation}
-    
-    
-    
-    
-    
+    上式中, 我们取$x=-a$和$x=a$得到:
+    \begin{equation}
+        \begin{pmatrix}
+            \frac{m\alpha}{k\hbar^2}-1&\frac{m\alpha}{k\hbar^2}e^{-2ka}\\
+            \frac{m\alpha}{k\hbar^2}e^{-2ka}&\frac{m\alpha}{k\hbar^2}-1
+        \end{pmatrix}
+        \begin{pmatrix}
+            \psi(a)\\
+            \psi(-a)
+        \end{pmatrix}
+        =\begin{pmatrix}
+            0\\0
+        \end{pmatrix}
+    \end{equation}
+    这个方程显然必须要有非零解, 倘若只有平凡解, 则$\psi(x)\equiv0$, 显然不能归一化。对于非零解, 最终定态解的系数由归一化条件确定。
+    \begin{equation}
+        \Delta=\begin{vmatrix}
+            \frac{m\alpha}{k\hbar^2}-1&\frac{m\alpha}{k\hbar^2}e^{-2ka}\\
+            \frac{m\alpha}{k\hbar^2}e^{-2ka}&\frac{m\alpha}{k\hbar^2}-1
+        \end{vmatrix}=0
+        \Rightarrow e^{-2ka}=\pm\left(1-\frac{k\hbar^2}{m\alpha}\right)
+    \end{equation}
+    上式给出的是一个超越方程, 我们对它进行如下变形:
+    \begin{equation}
+        \left.\begin{matrix} 
+           X\equiv 2ka=\frac{2a\sqrt{-2mE}}{\hbar}\\
+            \sigma\equiv\frac{\hbar^2}{2ma\alpha}\\
+            y^\pm(x) \equiv 1-\sigma X
+          \end{matrix}\right\}\Rightarrow Y(X)=y^\pm(x)
+    \end{equation}
+    绘图后可以发现$\sigma<1$时图像有两个交点, $\sigma\geq 1$时图像只有一个交点, 而交点的个数就代表着能量的可取值, 一个交点对应了一个束缚态。
+    \begin{center}  
+        \animategraphics[scale=0.75,autoplay=True,loop]{8}{videos/equation_insection/equation_insection-}{0}{59}
+    \end{center}
     
     
     
