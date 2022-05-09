@@ -9,15 +9,15 @@
 \contentsline {subsection}{\numberline {2.3.1}代数方法}{13}{subsection.2.3.1}%
 \contentsline {subsection}{\numberline {2.3.2}分析方法}{15}{subsection.2.3.2}%
 \contentsline {section}{\numberline {2.4}自由粒子}{18}{section.2.4}%
-\contentsline {section}{\numberline {2.5}$\delta $函数势阱}{20}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}束缚态和散射态}{20}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.5}$\delta $函数势阱}{21}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}束缚态和散射态}{21}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}$\delta $函数势阱}{22}{subsection.2.5.2}%
-\contentsline {section}{\numberline {2.6}有限深势阱}{28}{section.2.6}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{29}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{29}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{30}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{32}{section.A.3}%
-\contentsline {section}{\numberline {A.4}直角坐标里的张量}{36}{section.A.4}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{43}{appendix.B}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{44}{appendix.C}%
+\contentsline {section}{\numberline {2.6}有限深势阱}{29}{section.2.6}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{32}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{32}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{33}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{35}{section.A.3}%
+\contentsline {section}{\numberline {A.4}直角坐标里的张量}{39}{section.A.4}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{46}{appendix.B}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{47}{appendix.C}%
 \contentsfinish 

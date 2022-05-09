@@ -647,6 +647,11 @@
     考虑到最后反正要对解进行线性叠加, 而两项仅仅只在$e$指数上面差了一个负号, 所以我们将负号纳入$k$后得到:
     $$k\overset{def}{=}\pm\frac{\sqrt{2mE}}{\hbar}$$观察到每一项就代表一个\uwave{行波}, $k>0$的时候正向传播(向右), 反之负向传播, 不再是前面势阱模型里面的
     驻波。
+    \begin{thinknote}
+        对于某个确定的振幅对应了一个$x$, 也就是说概率波上面的某一个确定的点, 其$x$和$t$之间满足$x\pm vt=\text{const}$的演化关系, 也即$x=\mp v +\text{const}$。所以可以认为概率
+        波上的每个点都以$v$的速度在\uwave{平移运动}, 也很容易根据速度前的正负号确定是左行波还是右行波了。顺带一提, 这种形式下的行波, 模长平方(概率密度)与位置
+        无关(不同位置找到粒子概率都一样), 都等于指数项前面振幅的平方, 这也是后面$\delta$势阱散射态求透射系数的基础。
+    \end{thinknote}
     
     与经典力学中的波动方程相对应, 前面讲过$k$可以理解为角波数, 那么波速$v=\frac{|k|\hbar}{2m}=\sqrt{\frac{E}{2m}}$, 角频率$\omega=\frac{k^2\hbar}{2m}$, 过会我们会再回到波速的问题上来, 目前
     来看似乎有自由粒子速度$v_p=\sqrt{\frac{2E}{m}}=2v_{wave}$。
@@ -979,9 +984,85 @@
     \begin{center}  
         \animategraphics[scale=0.75,autoplay=True,loop]{8}{videos/equation_insection/equation_insection-}{0}{59}
     \end{center}
-    
-    
-    
+    \newpage
     \section{有限深势阱}
+    \begin{define}{有限深势阱}
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                V(x)=\begin{cases}
+                    -V_0,\quad &-a\leq x \leq a\\
+                    0, &|x|>a
+                \end{cases}
+            \end{math}
+        \end{center}
+    \end{define}
+    对于束缚态, 定义$k\equiv\frac{\sqrt{-2mE}}{\hbar}$, 对于散射态定义$k\equiv\frac{\sqrt{2mE}}{\hbar}$, 无论散射态还是束缚态, 统一定义
+    $l=\frac{\sqrt{2m\left(E+V_0\right)}}{\hbar}$。
+    \subsection*{束缚态($E<0$)}
+    \subsubsection*{(\romannumeral1)$x<a$}
+    这个范围内$V=0$, 利用$\psi(-\infty)=0$的边界条件可以得到解为:$$\psi(x)=Ae^{kx}$$
+    \subsubsection*{(\romannumeral2)$-a\leq x\leq a$}
+    这个范围内$V=-V_0$, 通解的指数形式为$Ce^{ikx}+De^{-ikx}$, 这种形式我们称之为\textbf{行波形式}, 主要是散射态用的多。还可以利用Euler公式写成三角
+    形式为$C\cos (kx)+D\cos (kx)$, 这种我们一般称为\textbf{驻波形式解}。这两种表达方式是完全等价的, 其中两个任意常数在复数域中取值在这里我们采用第二种
+    驻波形式, 后面的数学处理更加简便。我们有:$$\psi(x)=C\cos (kx)+D\cos (kx)$$
+    \subsubsection*{(\romannumeral3)$x>a$}
+    和第一个范围形式一样, 为:$$\psi(x)=Fe^{-kx}$$
+    \subsubsection*{边界条件}
+    利用$\psi(x)$和$\psi\prime(x)$的连续性可以列出四个方程, 再利用归一化条件便可以完全定下五个参数。这里我们使用了一阶导的连续性, 实际上, 只要势能的性质
+    并不是像$\delta$函数这么坏, 这个条件都是成立的, 不成立时我们可以得到两侧导数之间的关系。
+
+    其实, 我们可以使用对称性进一步简化我们的运算, 在束缚态的求解中, 下面的陈述十分有效:
+    \begin{proposition}{定态波函数的对称性}
+        如果所给势能$V(x)$是一个\textbf{偶函数}, 那么$\psi(x)$\textbf{只可能是偶函数和奇函数}, 分奇偶讨论后根据条件取舍就可以得到全部的解。
+    \end{proposition}
+    上面的定理帮我们排除了那些没有对称性的解, 下面分类求解。
+    
+    首先讨论偶函数情况, 我们事先将$\psi(x)$在势阱内部的形式写成了驻波解形式, 这样我们就很容易根据对称性进一步得出$D=0$, 事实上, 实际问题求解中到底选择
+    行波形式还是驻波形式就是要尽可能让其中的一个待定系数为$0$, 比如$\delta$势阱散射态中我们取行波形式, 一是为了突出问题的物理内涵, 二是可以直接去掉另一个
+    方向入射的波。我们还得到了$A=F$这个关系。
+
+    利用边界条件和方程解算后可以得到:$$k=l\tan(al)$$我们再一次得到了能量取值应满足的条件, 这又是一个超越方程需要数值求解。我们不去具体计算能量, 我们通过这个式子将波函数进行
+    归一化处理, 仍旧最简单的选取系数的相位, 可以得到:
+    \begin{equation}
+        \psi(x)=\begin{cases}
+            \frac{e^{ka}\cos(la)}{\sqrt{a+1/k}}e^{kx},&x<-a\\
+            \frac{1}{\sqrt{a+1/k}}\cos(lx),&-a\leq x\leq 0\\
+        \end{cases}
+    \end{equation}
+    利用$\psi(x)$是偶函数可以得到另一边的解。
+
+    同理, 对于奇函数情况, 我们可以得到$A=-F$, $C=0$。解得:$$k=-l\cot (la)$$归一化得到:
+    \begin{equation}
+        \psi(x)=\begin{cases}
+            \frac{e^{ka}\cos(la)}{\sqrt{a+2\cos^2(la)/k}}e^{kx},&x<-a\\
+            \frac{1}{\sqrt{a+2\cos^2(la)/k}}\sin(lx),&-a\leq x\leq 0\\
+        \end{cases}
+    \end{equation}
+    利用$\psi(x)$是奇函数可以得到另一边的解。
+
+    值得注意的是, 上面的解在$V_0\to+\infty$, $a\to 0$是退化为$\delta $势阱模型的解; 在$V_0\to +\infty$, $a$保持为有限值时, 退化为无限深势阱的解, 只是宽度
+    为$2a$能量的取值应写为$$E_n=\frac{n^2\pi^2\hbar^2}{2m(2a)^2},\quad(n=1,2,3\ldots)$$
+    \subsection*{散射态$E>0$}
+    散射态的求解和前面过程差不多, 只是对应微分方程解的形式变了一下, 即:
+    \begin{equation}
+        \psi(x)=\begin{cases}
+            Ae^{ikx}+Be^{-ikx},&x<-a\\
+            C\cos(lx)+D\sin(lx),&-a\leq x\leq a\\
+            Fe^{ikx}+Ge^{-ikx},&x>a
+        \end{cases}
+    \end{equation}
+    势阱外部我们写成行波形式, 是为了突出物理意义, 势阱内部写成驻波形式主要是为了表示方便。不失一般性, 我们还是假定只有从$-\infty$向右入射的粒子, 也就是
+    说$G=0$, 再去求解透射系数和反射系数。
+
+    同样利用波函数的连续性和一阶导数的连续性, 最后我们解得透射系数和反射系数(这需要花点时间):
+    \begin{equation}
+        \begin{aligned}
+        &B=i \frac{\sin (2 l a)}{2 k l}\left(l^{2}-k^{2}\right) F \\
+        &F=\frac{e^{-2 i k a} A}{\cos (2 l a)-i \frac{\left(k^{2}+l^{2}\right)}{2 k l} \sin (2 l a)}
+        \end{aligned}
+    \end{equation}
+    令$T=1$, 解得$$E_n+V_0=\frac{n^2\pi^2\hbar^2}{2m(2a)^2}$$方程右边正好就是无限深势阱束缚态能量的取值。这个现象在量子理论还不成熟时首先在实验上被发
+    现, 称为\textbf{Ramsauer-Townsend effect}。
     \include{appendix.tex}
 \end{document}

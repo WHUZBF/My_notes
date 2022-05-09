@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  8 MAY 2022 00:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  9 MAY 2022 23:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1862,15 +1862,15 @@ File: videos/wave_group/wave_group-250.png Graphic file (type bmp)
  <a0,fr250>
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 711.
+(Font)              size <17.28> substituted on input line 716.
 
 [20]
 File: fig/2-5-1.eps Graphic file (type eps)
 <fig/2-5-1.eps>
- [21] [22]
+ [21] [22] [23]
 File: fig/2-5-2.eps Graphic file (type eps)
 <fig/2-5-2.eps>
- [23] [24] [25] [26] [27]
+ [24] [25] [26] [27]
 File: videos/equation_insection/equation_insection-0.png Graphic file (type bmp)
 <videos/equation_insection/equation_insection-0.png>
  <a1,fr0>
@@ -1957,7 +1957,7 @@ File: videos/equation_insection/equation_insection-55.png Graphic file (type bmp
  <a1,fr55> <a1,fr56> <a1,fr57> <a1,fr58>
 File: videos/equation_insection/equation_insection-59.png Graphic file (type bmp)
 <videos/equation_insection/equation_insection-59.png>
- <a1,fr59> [28]
+ <a1,fr59> [28] [29] [30] [31]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -1967,10 +1967,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--32
 
  []
 
-[29
+[32
 
 
-] [30] [31]
+] [33] [34]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -1978,26 +1978,26 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-[32] [33]
+[35] [36]
 
 LaTeX Font Warning: Font shape `TU/ntxtlf/b/n' undefined
 (Font)              using `TU/ntxtlf/m/n' instead on input line 174.
 
-[34]
+[37]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [35] [36] [37] [38] [39]
+ [38] [39] [40] [41] [42]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [40] [41] [42]
+ [43] [44] [45]
 附录 B
-[43
+[46
 
 ]
 附录 C
-) [44
+) [47
 
 ] (./sourcecode.aux (./appendix.aux))
 
@@ -2011,12 +2011,12 @@ Package rerunfilecheck Info: File `sourcecode.out' has not changed.
 (rerunfilecheck)             Checksum: 3D297CF0A191AB6644838E17B031FAF6;2994.
  ) 
 Here is how much of TeX's memory you used:
- 48538 strings out of 476533
- 1271045 string characters out of 5818886
- 1806042 words of memory out of 5000000
- 67817 multiletter control sequences out of 15000+600000
+ 48540 strings out of 476533
+ 1271077 string characters out of 5818886
+ 1813026 words of memory out of 5000000
+ 67819 multiletter control sequences out of 15000+600000
  469045 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1017s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (46 pages).
+Output written on sourcecode.pdf (49 pages).
