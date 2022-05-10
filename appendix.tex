@@ -420,6 +420,37 @@ $$L_i=I_{ij}\Omega_j$$
 
 
 \chapter{Linear Algebra}
-
+这个附录主要是关于线性代数一些基本知识的回顾, 使用量子力学中的记号表示。
 
 \chapter{Gaussian Integral}
+\section*{1-dimensional Gaussian integral}
+\begin{center}
+    \begin{equation*}
+        \begin{aligned}
+            &\int_{-\infty}^{\infty} e^{-x^{2}} d x=\sqrt{\pi}\\
+            &\int_{-\infty}^{\infty} e^{-\frac{1}{2} a x^{2}+b x} d x=\sqrt{\frac{2 \pi}{a}} \exp \left(\frac{b^{2}}{2 a}\right)\\
+            &\int_{-\infty}^{\infty} e^{-\frac{1}{2} a x^{2}+i b x} d x=\sqrt{\frac{2 \pi}{a}} \exp \left(-\frac{b^{2}}{2 a}\right)\\
+            &I=\int_{-\infty}^{\infty} e^{-\frac{1}{2} a x^{2}+b x} d x=\sqrt{\frac{2 \pi}{a}} \exp \left(\frac{b^{2}}{2 a}\right)\\
+            &\frac{\partial I}{\partial b}=\int_{-\infty}^{\infty} x e^{-\frac{1}{2} a x^{2}+b x} d x=\frac{b}{a} \sqrt{\frac{2 \pi}{a}} \exp \left(\frac{b^{2}}{2 a}\right)\\
+            &\frac{\partial^{2} I}{\partial b^{2}}=\int_{-\infty}^{\infty} x^{2} e^{-\frac{1}{2} a x^{2}+b x} d x=\frac{1}{a}\left(1+\frac{b^{2}}{a}\right) \sqrt{\frac{2 \pi}{a}} \exp \left(\frac{b^{2}}{2 a}\right)\\
+            &\int_{-\infty}^{\infty} x^{2} e^{-\frac{1}{2} a x^{2}} d x=\frac{1}{a} \sqrt{\frac{2 \pi}{a}}\\
+            &\int_{-\infty}^{\infty} x^{4} e^{-\frac{1}{2} a x^{2}} d x=\frac{3}{a^{2}} \sqrt{\frac{2 \pi}{a}}\\
+            &\int_{-\infty}^{\infty} x^{2 n} e^{-\frac{1}{2} a x^{2}} d x=\frac{(2 n-1) ! !}{a^{n}} \sqrt{\frac{2 \pi}{a}}\\
+            &\int_{0}^{\infty} x^{2 n+1} e^{-a x^{2}} d x=\frac{n !}{2 a^{n+1}}\\
+            &\int_{0}^{\infty} x^{n} e^{-a x^{2}} d x=\frac{\Gamma\left(\frac{n+1}{2}\right)}{2 a^{\frac{n+1}{2}}}
+        \end{aligned}
+    \end{equation*}
+\end{center}
+\section*{n-dimensional Gaussian integral (such as multivariate normal distribution)}
+\begin{center}
+    \begin{equation*}
+        \begin{gathered}
+        \int_{-\infty}^{\infty} \exp \left(-\frac{1}{2} \sum_{i, j=1}^{n} A_{i j} x_{i} x_{j}\right) d \mathbf{x}=\int_{-\infty}^{\infty} \exp \left(-\frac{1}{2} x^{T} A x\right) d \mathbf{x}=\sqrt{\frac{(2 \pi)^{n}}{\operatorname{det} A}} \\
+        \int_{-\infty}^{\infty} \exp \left(-\frac{1}{2} x^{T} A x+i B^{T} x\right) d^{n} x=\sqrt{\frac{(2 \pi)^{n}}{\operatorname{det} A}} \exp \left(-\frac{1}{2} B^{T} A^{-1} B\right) \\
+        \int_{-\infty}^{\infty} \exp \left(\frac{i}{2} x^{T} A x+i B^{T} x\right) d^{n} x=\sqrt{\frac{(2 \pi i)^{n}}{\operatorname{det} A}} \exp \left(-\frac{i}{2} B^{T} A^{-1} B\right) \\
+        \int_{-\infty}^{\infty} \exp \left(-\frac{1}{2} \sum_{i, j=1}^{n} A_{i j} x_{i} x_{j}+\sum_{i=1}^{n} B_{i} x_{i}\right) d^{n}\\
+        =\int_{-\infty}^{\infty} \exp \left(-\frac{1}{2} x^{T} A x+B^{T} x\right) d^{n} x=\sqrt{\frac{(2 \pi)^{n}}{\operatorname{det} A}} \exp \left(\frac{1}{2} B^{T} A^{-1} B\right) \\
+        \end{gathered}
+    \end{equation*}
+\end{center}
+
