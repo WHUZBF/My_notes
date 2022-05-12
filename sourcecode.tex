@@ -662,6 +662,7 @@
 
     我们仍旧对定态解进行线性叠加, 注意是对定态解叠加, 也就是对定态解的波函数进行叠加不是$\psi$而是$\Psi$, 所以不要忘记了每个$\psi$后面的关于时间的指数项。
     \begin{lequation}
+        \label{2.26}
         \boxed{
             \Psi=\int_{-\infty}^{\infty}\phi(k)\psi_ke^{-\frac{ik^2\hbar}{2m}t}dk=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)e^{i\left(kx-\frac{k^2\hbar}{2m}t\right)}dk  
         }
@@ -711,6 +712,8 @@
             }
         \end{lequation}
     \end{theorem}
+    其中, 波包是由一系列定态解叠加而成的, 具有下面的形式(对比\ref{2.26}):
+    $$\Psi=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)e^{i\left(kx-\omega t\right)}dk,\quad \omega=\frac{k^2\hbar}{2m}$$
     正是由于多列行波的叠加才形成了波包, 而每个分量(行波)中的频率又是和$k$相关的, 这样就会导致群速度不等于相速度, 这时我们称之为\textbf{色散}, 自由粒子的
     波函数恰好就是多列行波的叠加, $\omega$是关于$k$的二次式, 那么, 代表粒子的群速度是代表行波前进的相速度的两倍这一论断就不难看出了。
     \section{\texorpdfstring{$\delta$}.函数势阱}

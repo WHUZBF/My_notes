@@ -18,7 +18,8 @@
 \contentsline {section}{\numberline {A.1}指标运算}{33}{section.A.1}%
 \contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{34}{section.A.2}%
 \contentsline {section}{\numberline {A.3}曲线坐标系}{36}{section.A.3}%
-\contentsline {section}{\numberline {A.4}直角坐标里的张量}{40}{section.A.4}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{47}{appendix.B}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{48}{appendix.C}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{40}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{42}{section.A.5}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{49}{appendix.B}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{50}{appendix.C}%
 \contentsfinish 

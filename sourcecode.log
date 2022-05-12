@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  10 MAY 2022 22:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  12 MAY 2022 14:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1859,15 +1859,14 @@ File: videos/wave_group/wave_group-249.png Graphic file (type bmp)
  <a0,fr249>
 File: videos/wave_group/wave_group-250.png Graphic file (type bmp)
 <videos/wave_group/wave_group-250.png>
- <a0,fr250>
+ <a0,fr250> [20]
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 716.
+(Font)              size <17.28> substituted on input line 719.
 
-[20]
 File: fig/2-5-1.eps Graphic file (type eps)
 <fig/2-5-1.eps>
- [21] [22] [23]
+[21] [22] [23]
 File: fig/2-5-2.eps Graphic file (type eps)
 <fig/2-5-2.eps>
  [24] [25] [26] [27]
@@ -1992,18 +1991,18 @@ File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [39] [40] [41] [42] [43]
+ [39] [40] [41] [42] [43] [44] [45]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [44] [45] [46]
+ [46] [47] [48]
 附录 B
-[47
+[49
 
 ]
 附录 C
-[48
+[50
 
-]) [49] (./sourcecode.aux (./appendix.aux))
+]) [51] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
@@ -2012,15 +2011,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: AD1B2BD386387302AB17243BAA60DF12;3117.
+(rerunfilecheck)             Checksum: CB971CCE453962D23BD17AA194FB2939;3267.
  ) 
 Here is how much of TeX's memory you used:
- 48540 strings out of 476533
- 1271077 string characters out of 5818886
- 1813026 words of memory out of 5000000
- 67819 multiletter control sequences out of 15000+600000
+ 48542 strings out of 476533
+ 1271099 string characters out of 5818886
+ 1810063 words of memory out of 5000000
+ 67821 multiletter control sequences out of 15000+600000
  469045 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,22n,97p,727b,1017s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,22n,97p,727b,1009s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (51 pages).
+Output written on sourcecode.pdf (53 pages).
