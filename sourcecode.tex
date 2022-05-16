@@ -293,7 +293,7 @@
     \begin{lequation}
         \label{energy-conservation}
         \left \langle H \right \rangle=\sum_{n=1}^{\infty}\left|c_n\right|^2E_n 
-        \Rightarrow \frac{\partial H}{\partial t}=0\footnote[1]{实际上你也完全可以使用更简单的方式去计算, 即$\left \langle H \right \rangle=\int \Psi(x,t)^*\hat{H}\Psi(x,t) dx$, 你可以直接代入$t=0$进一步
+        \Rightarrow \frac{\partial H}{\partial t}=0\footnote[1]{利用这个性质, 你可以进一步简化平均能量的计算, 即计算$\left \langle H \right \rangle=\int \Psi(x,t)^*\hat{H}\Psi(x,t) dx$, 你可以直接代入$t=0$进一步
         简化运算, 因为这个性质保证了平均能量与时间无关。}
     \end{lequation}
     \section{一维无限深方势阱}
@@ -467,7 +467,7 @@
     这个方程可以使用幂级数解法去解决, 我们先介绍一种比较物理的方法去求解, 即\uwave{升降阶算符法}。
     \subsection{代数方法}
     定态薛定谔方程的算子写法为$\hat{H}\psi=E\psi$, 代数方法的基本思路是去分解哈密顿算符:
-    $$\hat{H}=\frac{1}{2m}\left[\hat{p}+(m\omega x)^2\right]$$
+    $$\hat{H}=\frac{1}{2m}\left[\hat{p}^2+(m\omega x)^2\right]$$
     如果是普通的复数$u^2+v^2$我们可以分解为$(u+iv)(u-iv)$, 这也就启发了我们像下面一样去定义升降阶算符, 前面多出来的$\frac{1}{\omega\hbar}$因子可以让
     后面的形式更加美观。
     \begin{define}{产生/湮灭算子}
@@ -862,7 +862,7 @@
     我们再将其写成能量的关系式:
     \begin{lequation}
         \boxed{
-            R=\frac{1}{1+\left(2\hbar^2E/m\alpha^2\right)}, T=\frac{1}{1+\left(m\aleph^2/2\hbar^2E\right)}
+            R=\frac{1}{1+\left(2\hbar^2E/m\alpha^2\right)}, T=\frac{1}{1+\left(m\alpha^2/2\hbar^2E\right)}
         }
     \end{lequation}
 
@@ -1017,7 +1017,7 @@
 
     其实, 我们可以使用对称性进一步简化我们的运算, 在束缚态的求解中, 下面的陈述十分有效:
     \begin{proposition}{定态波函数的对称性}
-        如果所给势能$V(x)$是一个\textbf{偶函数}, 那么$\psi(x)$\textbf{只可能是偶函数和奇函数}, 分奇偶讨论后根据条件取舍就可以得到全部的解。
+        如果所给势能$V(x)$是一个\textbf{偶函数}, 那么$\psi(x)$\textbf{总可以取作偶函数或者奇函数}\footnote[1]{注意这里是\uwave{取作},意思是用奇函数和偶函数作为基底是完全等价的, 不是说$\psi$一定有奇偶性}, 分奇偶讨论后根据条件取舍就可以得到全部的解。
     \end{proposition}
     上面的定理帮我们排除了那些没有对称性的解, 下面分类求解。
     
@@ -1070,6 +1070,40 @@
     方程右边正好就是无限深势阱束缚态能量的取值。这个现象在量子理论还不成熟时首先在实验上被发
     现, 称为\textbf{Ramsauer-Townsend effect}。
     
+    \section*{习题分析}
+    \subsection*{2.34(c)}
+    之前我们计算透射率和反射率, 都是在透射后势能与入射时的势能相同时的情况, 光学上的类比就是界面两边是同种介质。但是对于这个题目, 显然, 阶跃型势阱, 虽然反射
+    后还是和入射时势能情况相同, 但透射后就不一样了, 所以透射系数不能使用原先的方法进行计算, 需要引入概率流, 在之后会介绍其引入经过:
+    \begin{define}{概率流密度}
+        \begin{equation*}
+            J\overset{def}{=}\frac{\mathrm{i} \hbar}{2 m}\left(\Psi \frac{\partial \Psi^{*}}{\partial x}-\Psi^{*} \frac{\partial \Psi}{\partial x}\right)\tag{1-D}
+        \end{equation*}
+        \begin{equation}
+            J\overset{def}{=}\frac{\mathrm{i} \hbar}{2 m}\left(\Psi \frac{\nabla \Psi^{*}}{\partial x}-\Psi^{*} \frac{\nabla \Psi}{\partial x}\right)\tag{2-D}
+        \end{equation}
+    \end{define}
+    计算反射率和透射率的时候就需要通过概率流密度来计算, 即:
+    \begin{equation}
+        R=\frac{|J_R|^2}{|J_I|^2},T=\frac{|J_T|^2}{|J_I|^2}
+    \end{equation}
+    前面的计算方式是上面的特例。
+    \subsection*{2.36}
+    这个题我想再次强调一下归一化只能得到解前面的系数的模方, 还有不确定的复数幅角, 所以得到的$\psi_n$前面的负号完全可以直接丢掉, 只要不改变前面归一化系数的
+    模长, 就可以随便扔, 使得方程更加简洁。反正最后代入初始波函数的时候还要再确定一下系数。
+    \subsection*{2.40}
+    \begin{itemize}
+        \item 给定了初始波函数之后, 由于波函数的演化必须连续的按照薛定谔方程进行(也就是说演化过程中解出来的$c_n$不会改变), 按照这个约束初始波函数前面系数相位给定后, 后面的也就都唯一确定了；
+        \item 不一定要严格按照傅里叶方法去积分计算$c_n$, 有时候可以直接\uwave{猜出来}, 并且有利于后面的分析。
+    \end{itemize}
+    \subsection*{2.44}
+    \begin{define}{简并性}
+        如果定态薛定谔方程的两个\uwave{线性无关解}所对应的能量$E$相等, 那么就称这两个态是简并的。比如对于自由粒子波函数, $e^{ikx}$和$e^{-ikx}$都是能量为
+        $\frac{k^2\hbar^2}{2m}$时的解。一个往右传播, 一个往左传播。
+    \end{define}
+    \begin{theorem}{束缚态的能级非简并性}
+        对于一维束缚态, 除了2.45提及的情况, 只要$lim_{x\to\pm\infty}\psi(x)=0$, 那么一定有, 束缚态的能级没有简并性, 也就是说, 对于$E$的同一个取值, 波函数的
+        解一定是线性相关的, 或者说归一化后只相差一个相位因子$e^{i\theta}$, 本质上是一个东西。
+    \end{theorem}
     \chapter{形式化理论}
     \include{appendix.tex}
 \end{document}
