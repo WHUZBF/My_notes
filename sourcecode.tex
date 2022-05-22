@@ -1070,7 +1070,7 @@
     方程右边正好就是无限深势阱束缚态能量的取值。这个现象在量子理论还不成熟时首先在实验上被发
     现, 称为\textbf{Ramsauer-Townsend effect}。
     
-    \section*{习题分析}
+    \section{习题分析}
     \subsection*{2.34(c)}
     之前我们计算透射率和反射率, 都是在透射后势能与入射时的势能相同时的情况, 光学上的类比就是界面两边是同种介质。但是对于这个题目, 显然, 阶跃型势阱, 虽然反射
     后还是和入射时势能情况相同, 但透射后就不一样了, 所以透射系数不能使用原先的方法进行计算, 需要引入概率流, 在之后会介绍其引入经过:
@@ -1104,6 +1104,34 @@
         对于一维束缚态, 除了2.45提及的情况, 只要$lim_{x\to\pm\infty}\psi(x)=0$, 那么一定有, 束缚态的能级没有简并性, 也就是说, 对于$E$的同一个取值, 波函数的
         解一定是线性相关的, 或者说归一化后只相差一个相位因子$e^{i\theta}$, 本质上是一个东西。
     \end{theorem}
+    \subsection*{2.53 \& 2.54}
+    这两个题目引入了\uwave{散射矩阵}和\uwave{转移矩阵}的概念, 重点在于说明了总的透射系数并不是两次透射系数直接相乘(本质在于两个势阱之间的部分向左向右
+    的波都有)。
+    \subsection*{2.59}
+    通过这个题我们可以补充艾里函数(Airy function)的概念。
+
+    艾里函数分为$\mathrm{Ai}(x)$和$\mathrm{Bi}(x)$, 它们是下面的艾里方程(又称斯托克斯方程)的两个线性无关解
+    $$\frac{d^2y}{dx^2}-xy=0$$
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.85]{fig/2-7-1.eps}
+        \caption{Airy function}
+    \end{figure}
+    注意到$\lim\limits_{x\to +\infty}\mathrm{Bi}(x)=+\infty$, 无法归一化, 所以量子力学中我们会舍去$\mathrm{Bi}(x)$。
+
+    还可以利用反常积分直接定义艾里函数:
+    \begin{equation*}
+        \mathrm{Ai}(x)=\frac{1}{\pi}\int_{0}^{+\infty}\cos\left(\frac{t^3}{3}+xt\right)dt
+    \end{equation*}
+    \begin{equation*}
+        \mathrm{Bi}(x)=\frac{1}{\pi}\int_{0}^{+\infty}\left[\exp\left(-\frac{t^3}{3}+xt\right)+\sin\left(\frac{t^3}{3}+xt\right)\right]dt
+    \end{equation*}
+    
+    而且$\mathrm{Ai}(x)$是正交归一的, 这也印证了量子力学本征态之间的正交归一关系:
+    \begin{equation*}
+        \int_{-\infty}^{+\infty}\mathrm{Ai}(t+x)\mathrm{Ai}(t+x)\mathrm{d}t=\delta(x-y)
+    \end{equation*}
     \chapter{形式化理论}
     \include{appendix.tex}
 \end{document}

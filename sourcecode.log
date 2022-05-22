@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  16 MAY 2022 23:21
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  22 MAY 2022 12:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1957,8 +1957,11 @@ File: videos/equation_insection/equation_insection-55.png Graphic file (type bmp
 File: videos/equation_insection/equation_insection-59.png Graphic file (type bmp)
 <videos/equation_insection/equation_insection-59.png>
  <a1,fr59> [28] [29] [30] [31] [32]
+File: fig/2-7-1.eps Graphic file (type eps)
+<fig/2-7-1.eps>
+ [33] [34]
 第三章
-[33
+[35
 
 ]
 \openout2 = `appendix.aux'.
@@ -1970,10 +1973,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 23--32
 
  []
 
-[34
+[36
 
 
-] [35] [36]
+] [37] [38]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -1981,28 +1984,28 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-[37] [38]
+[39] [40]
 
 LaTeX Font Warning: Font shape `TU/ntxtlf/b/n' undefined
 (Font)              using `TU/ntxtlf/m/n' instead on input line 174.
 
-[39]
+[41]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [40] [41] [42] [43] [44] [45] [46]
+ [42] [43] [44] [45] [46] [47] [48]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [47] [48] [49]
+ [49] [50] [51]
 附录 B
-[50
+[52
 
 ]
 附录 C
-[51
+[53
 
-]) [52] (./sourcecode.aux (./appendix.aux))
+]) [54] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
@@ -2011,15 +2014,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: CB971CCE453962D23BD17AA194FB2939;3267.
+(rerunfilecheck)             Checksum: 9485926E89D6C7E390E3E6DB2E009D0B;3376.
  ) 
 Here is how much of TeX's memory you used:
- 48557 strings out of 476533
- 1271876 string characters out of 5818886
- 1810063 words of memory out of 5000000
- 67836 multiletter control sequences out of 15000+600000
+ 48562 strings out of 476533
+ 1271962 string characters out of 5818886
+ 1809063 words of memory out of 5000000
+ 67840 multiletter control sequences out of 15000+600000
  469045 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (54 pages).
+Output written on sourcecode.pdf (56 pages).
