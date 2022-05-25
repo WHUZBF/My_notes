@@ -1,6 +1,5 @@
 \titleformat{\chapter}[display]
 {\normalfont\Large\bfseries}{Appendix~\Alph{chapter}}{11pt}{\Large}
-
 \appendix
 \renewcommand{\thechapter}{\Alph{chapter}}
 \chapter{Vector Calculus}
@@ -468,7 +467,171 @@ $$L_i=I_{ij}\Omega_j$$
 
 
 \chapter{Linear Algebra}
-这个附录主要是关于线性代数一些基本知识的回顾, 使用量子力学中的记号表示。
+这个附录主要是关于线性代数一些基本知识的回顾, 使用量子力学中的记号表示, 主要参考的是科恩塔诺基《量子力学》卷一第二章。
+\section{向量空间}
+在附录A中我们讨论的向量和通常物理里面所说的\uwave{有大小有方向的量}是一致的, 实际上它们是所谓欧几里得空间中的向量, 我们下面要以更抽象的思维来对待向量。
+\begin{define}{向量空间}
+    在数域$\mathbb{P}$上定义的向量空间$\mathscr{A}$是一个\textbf{带有数乘和加法运算的集合}, 这两种运算对于$\mathscr{A}$是\uwave{封闭的}, 且满足下面的公理。
+在量子力学中, 我们使用$\left| \alpha  \right\rangle ,\left| \beta  \right\rangle $表示矢量, 后面会详细谈到这种记号。至于数域$\mathbb{P}$中的数我们一律用小写英文字母表示。
+\begin{itemize}
+    \item \textbf{封闭性}:
+        \[\begin{array}{l}
+        \left| \alpha  \right\rangle  \in \mathscr{A} \wedge \left| \beta  \right\rangle  \in \mathscr{A} \to \left| \alpha  \right\rangle  + \left| \beta  \right\rangle  \in \mathscr{A}\\
+        \left| \alpha  \right\rangle  \in \mathscr{A} \to a\left| \alpha  \right\rangle  \in \mathscr{A}
+        \end{array}\]
+    \item \textbf{交换律}:\[\left| \alpha  \right\rangle  + \left| \beta  \right\rangle  = \left| \beta  \right\rangle  + \left| \alpha  \right\rangle \]
+    \item \textbf{结合律}:\[\begin{array}{l}
+        \left( {\left| \alpha  \right\rangle  + \left| \beta  \right\rangle } \right) + \left| \gamma  \right\rangle  = \left| \alpha  \right\rangle  + \left( {\left| \beta  \right\rangle  + \left| \gamma  \right\rangle } \right)\\
+        \left( {ab} \right)\left| \alpha  \right\rangle  = a\left( {b\left| \alpha  \right\rangle } \right)
+        \end{array}\]
+    \item \textbf{分配律}:\[\begin{array}{l}
+        a\left( {\left| \alpha  \right\rangle  + \left| \beta  \right\rangle } \right) = a\left| \alpha  \right\rangle  + a\left| \beta  \right\rangle \\
+        \left( {a + b} \right)\left| \alpha  \right\rangle  = a\left| \alpha  \right\rangle  + b\left| \alpha  \right\rangle 
+        \end{array}\]
+    \item \textbf{加法单位元存在性}:\[\exists \left| \vmathbb{0} \right\rangle  \in \mathscr{A},\forall \left| \alpha  \right\rangle  \in \mathscr{A},\left| \alpha  \right\rangle  + \left| \vmathbb{0} \right\rangle  = \left| \alpha  \right\rangle \]
+    \item \textbf{加法逆元存在性}:\[\forall \left| \alpha  \right\rangle  \in \mathscr{A},\exists \left| { - \alpha } \right\rangle  \in \mathscr{A},\left| \alpha  \right\rangle  + \left| { - \alpha } \right\rangle  = \left| \vmathbb{0} \right\rangle \]
+    \item \textbf{数乘单位元存在性}:\[\exists \mathbbm{1}\in \mathbb{P},\forall \left| \alpha  \right\rangle  \in \mathscr{A},\mathbbm{1}\left| \alpha  \right\rangle  = \left| \alpha  \right\rangle \]
+\end{itemize}
+\end{define}
+这里定义的\uwave{向量}, 不再具有具体的含义, 而是一个有特殊结构的集合中的元素。
+\begin{define}{线性相关}
+    若下列命题为真, 则称${\left| {{\alpha _1}} \right\rangle  ,\left| {{\alpha _2}} \right\rangle  ,\left| {{\alpha _3}} \right\rangle , \ldots,\left| {{\alpha _n}} \right\rangle }$线性无关。
+    \[{k_1}\left| {{\alpha _1}} \right\rangle  + {k_2}\left| {{\alpha _2}} \right\rangle  + {k_3}\left| {{\alpha _3}} \right\rangle +\ldots + {k_n}\left| {{\alpha _n}} \right\rangle  \Leftrightarrow {k_1} = {k_2} = {k_3} =\ldots  = {k_n} = 0\]
+\end{define}
+不难验证${\left| {{\alpha _1}} \right\rangle  ,\left| {{\alpha _2}} \right\rangle  , \ldots,\left| {{\alpha _n}} \right\rangle }$
+的线性组合可以构成一个新的向量空间$\mathscr{B}$, 称为它们张成的线性空间。如果张成向量组是线性无关的, 那么它们构成$\mathscr{B}$的一组\textbf{基}, 且其中
+的向量个数也就是这里的$n$称为向量空间$\mathscr{B}$的\textbf{维数}, 记作$\mathrm{dim} \mathscr{B}$。
+
+选取了一组基后, 我们就可以使用一个$n$元数组来表示向量:\[\left| \alpha  \right\rangle  = {a_1}\left| {{e_1}} \right\rangle  + {a_2}\left| {{e_2}} \right\rangle  + \ldots + {a_n}\left| {{e_n}} \right\rangle  \leftrightarrow \left( {{a_1},{a_2},\ldots,{a_n}} \right)\]
+这其实就是向量的矩阵表示, 基的选取不是唯一的, 所以不同基下的表示形式可能会有很大的区别。
+\section{内积}
+内积就是一个$\mathscr{A}\times\mathscr{A}\leftarrow\mathbb{F}$的一个映射, 在数学中常用$\langle \alpha ,\beta \rangle $表示, 这里使用物理学记号
+$\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \kern-\nulldelimiterspace}{\beta } \right\rangle $表示。
+\begin{define}{内积}
+    \begin{itemize}
+        \item \textbf{正定性}:  \[\left\langle \alpha  \right|\left. \alpha  \right\rangle \ge 0,\mathrm{iff}\text{   }\left| \alpha \right\rangle=\left| \vmathbb{0} \right\rangle \text{取等号}\]
+        \item \textbf{第二位置加性}:\[\left\langle \alpha  \right|\left( {\left| \beta  \right\rangle  + \left| \gamma  \right\rangle } \right) = \left\langle {\alpha }
+        \mathrel{\left | {\vphantom {\alpha  \beta }}
+        \right. \kern-\nulldelimiterspace}
+        {\beta } \right\rangle  + \left\langle {\alpha }
+        \mathrel{\left | {\vphantom {\alpha  \gamma }}
+        \right. \kern-\nulldelimiterspace}
+        {\gamma } \right\rangle \]
+        \item \textbf{第二位置齐性}:\[\left\langle \alpha  \right|b\left| \beta  \right\rangle  = b\left\langle {\alpha }
+        \mathrel{\left | {\vphantom {\alpha  \beta }}
+        \right. \kern-\nulldelimiterspace}
+        {\beta } \right\rangle \]
+        \item \textbf{共轭对称性}:\[\left\langle {\alpha }
+        \mathrel{\left | {\vphantom {\alpha  \beta }}
+        \right. \kern-\nulldelimiterspace}
+        {\beta } \right\rangle  = \left\langle {\beta }
+        \mathrel{\left | {\vphantom {\beta  \alpha }}
+        \right. \kern-\nulldelimiterspace}
+        {\alpha } \right\rangle^* \]
+    \end{itemize}
+\end{define}
+注意, 数学家定义内积都是要求第二位置的加性和齐性, 所以物理里面很多公式内积的位置和数学都是反过来的。
+
+定义了内积的空间称为\textbf{内积空间}。内积空间中我们通常选取一组正交归一的基底, 具有性质
+\begin{equation}
+    \boxed{\left\langle {{{e_i}}}\mathrel{\left | {\vphantom {{{e_i}} {{e_j}}}}\right. \kern-\nulldelimiterspace}{{{e_j}}} \right\rangle  = {\delta _{ij}}}
+\end{equation}
+很容易证明在正交归一基底下, 向量和它们的内积可以表示为:
+\begin{equation}
+    \left| \alpha  \right\rangle  = \sum\limits_{i = 1}^n {\left\langle {{{e_i}}}\mathrel{\left | {\vphantom {{{e_i}} \alpha }}\right. \kern-\nulldelimiterspace}
+ {\alpha } \right\rangle } \left| {{e_i}} \right\rangle \qquad
+ \left\langle {\alpha }
+ \mathrel{\left | {\vphantom {\alpha  \beta }}
+ \right. \kern-\nulldelimiterspace}
+ {\beta } \right\rangle  = \sum\limits_{i = 1}^n {{a_i}^*{b_i}} 
+\end{equation}
+
+内积还有很多很好的性质, 比如由于正定性, 我们可以定义\[\left\| {\left| \alpha  \right\rangle } \right\| = \sqrt {\left\langle {\alpha }
+\mathrel{\left | {\vphantom {\alpha  \alpha }}\right. \kern-\nulldelimiterspace}{\alpha } \right\rangle } \]
+称之为$\left| \alpha  \right\rangle $的\textbf{范数}。
+\begin{theorem}{Cauchy-Schwarz不等式}
+    \begin{equation}
+        \left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \kern-\nulldelimiterspace}{\beta } \right\rangle \le
+        \left\| {\left| \alpha  \right\rangle } \right\|\left\| {\left| \beta  \right\rangle } \right\|
+    \end{equation}
+\end{theorem}
+这个不等式非常重要, 因为它只依赖于内积的良好定义, 在欧几里得空间上的柯西不等式就是它的一个特例。
+\begin{proposition}{Schmidt正交化过程}
+    对于任何一个向量组${\left| {{\alpha _1}} \right\rangle  ,\left| {{\alpha _2}} \right\rangle  , \ldots,\left| {{\alpha _n}} \right\rangle }$
+    , 都可以从其出发构造一组正交归一的向量组, 且张成的空间不发生改变。
+    \[\begin{array}{l}
+        \left| {{e_1}} \right\rangle  = \frac{{\left| {{\alpha _1}} \right\rangle }}{{\left\| {\left| {{\alpha _1}} \right\rangle } \right\|}}\\
+        \left| {{e_2}} \right\rangle  = \frac{{\left| {{\alpha _2}} \right\rangle  - \left\langle {{{e_1}}}
+         \mathrel{\left | {\vphantom {{{e_1}} {{\alpha _2}}}}
+         \right. \kern-\nulldelimiterspace}
+         {{{\alpha _2}}} \right\rangle \left| {{e_1}} \right\rangle }}{{\left\| {\left| {{\alpha _2}} \right\rangle  - \left\langle {{{e_1}}}
+         \mathrel{\left | {\vphantom {{{e_1}} {{\alpha _2}}}}
+         \right. \kern-\nulldelimiterspace}
+         {{{\alpha _2}}} \right\rangle \left| {{e_1}} \right\rangle } \right\|}}\\
+         \vdots \\
+        \left| {{e_n}} \right\rangle  = \frac{{\left| {{\alpha _n}} \right\rangle  - \sum\limits_{k = 1}^{n - 1} {\left\langle {{{e_k}}}
+         \mathrel{\left | {\vphantom {{{e_k}} {{\alpha _n}}}}
+         \right. \kern-\nulldelimiterspace}
+         {{{\alpha _n}}} \right\rangle \left| {{e_k}} \right\rangle } }}{{\left\| {\left| {{\alpha _n}} \right\rangle  - \sum\limits_{k = 1}^{n - 1} {\left\langle {{{e_k}}}
+         \mathrel{\left | {\vphantom {{{e_k}} {{\alpha _n}}}}
+         \right. \kern-\nulldelimiterspace}
+         {{{\alpha _n}}} \right\rangle \left| {{e_k}} \right\rangle } } \right\|}}
+        \end{array}\]
+\end{proposition}
+三角不等式:
+\[\left\| {\left| \alpha  \right\rangle  + \left| \beta  \right\rangle } \right\| \le \left\| {\left| \alpha  \right\rangle } \right\| + \left\| {\left| \beta  \right\rangle } \right\|\]
+
+极化恒等式:
+\[{\left\| {\left| \alpha  \right\rangle  + \left| \beta  \right\rangle } \right\|^2} + {\left\| {\left| \alpha  \right\rangle  - \left| \beta  \right\rangle } \right\|^2} = 2\left( {{{\left\| {\left| \alpha  \right\rangle } \right\|}^2} + {{\left\| {\left| \beta  \right\rangle } \right\|}^2}} \right)\]
+\section{波函数的空间}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \chapter{Gaussian Integral}
 \section*{1-dimensional Gaussian integral}
