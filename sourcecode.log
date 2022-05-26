@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  25 MAY 2022 23:45
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  26 MAY 2022 23:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2115,25 +2115,30 @@ Overfull \hbox (7.7486pt too wide) in paragraph at lines 472--495
 
 [51
 
-] [52] [53] [54]
-附录 C
-[55
+] [52] [53]
+Overfull \hbox (12.5569pt too wide) in paragraph at lines 598--605
+[]\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
+ []
 
-]) [56] (./sourcecode.aux (./appendix.aux))
+[54] [55] [56]
+附录 C
+[57
+
+]) [58] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 93F6FCDD3D2E4991A93FC99810C7ED56;3706.
+(rerunfilecheck)             Checksum: 3E021903831476485B2357B35BD2F721;3856.
  ) 
 Here is how much of TeX's memory you used:
- 50630 strings out of 476533
- 1296171 string characters out of 5818886
+ 50654 strings out of 476533
+ 1297622 string characters out of 5818886
  1811482 words of memory out of 5000000
- 69862 multiletter control sequences out of 15000+600000
+ 69886 multiletter control sequences out of 15000+600000
  517510 words of font info for 247 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (59 pages).
+Output written on sourcecode.pdf (61 pages).

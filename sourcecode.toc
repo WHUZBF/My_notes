@@ -25,5 +25,6 @@
 \contentsline {section}{\numberline {B.1}向量空间}{51}{section.B.1}%
 \contentsline {section}{\numberline {B.2}内积}{52}{section.B.2}%
 \contentsline {section}{\numberline {B.3}波函数的空间}{54}{section.B.3}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{55}{appendix.C}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{56}{section.B.4}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{57}{appendix.C}%
 \contentsfinish 

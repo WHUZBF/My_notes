@@ -551,7 +551,7 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
 称之为$\left| \alpha  \right\rangle $的\textbf{范数}。
 \begin{theorem}{Cauchy-Schwarz不等式}
     \begin{equation}
-        \left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \kern-\nulldelimiterspace}{\beta } \right\rangle \le
+        \left|\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \kern-\nulldelimiterspace}{\beta } \right\rangle \right| \le
         \left\| {\left| \alpha  \right\rangle } \right\|\left\| {\left| \beta  \right\rangle } \right\|
     \end{equation}
 \end{theorem}
@@ -584,15 +584,61 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
 极化恒等式:
 \[{\left\| {\left| \alpha  \right\rangle  + \left| \beta  \right\rangle } \right\|^2} + {\left\| {\left| \alpha  \right\rangle  - \left| \beta  \right\rangle } \right\|^2} = 2\left( {{{\left\| {\left| \alpha  \right\rangle } \right\|}^2} + {{\left\| {\left| \beta  \right\rangle } \right\|}^2}} \right)\]
 \section{波函数的空间}
+函数的和还是函数, 数乘后也是函数, 我们可以验证, 所有函数的集合可以构成一个向量空间。但是这个范围太大了, 由于有物理意义的波函数都需要满足归一化条件, 所以我们
+转而去关注, 平方可积的函数, 也就是下式成立：
+\[\int_{ - \infty }^{ + \infty } {{d^3}r\left| {f({\bf{r}})} \right|}  <  + \infty \]
+数学家把这个叫$L^2$空间, 本质上是希尔伯特空间的结构, 但是对于物理来说还是比较广的一个范围, 我们进一步只研究在$L^2$空间中\textbf{处处连续, 处处确定, 且处处有任意阶导数}的
+函数构成的子空间$\mathscr{F}$, 波函数就存在于这个空间中。
 
+可以证明$\mathscr{F}$是一个向量空间, 我们还要给他定义一个内积(使用数学中的记号):
+\begin{equation}
+    \boxed{\left\langle {\varphi ,\left. \psi  \right\rangle } \right. \overset{def}{=} \int {{d^3}r} {\varphi ^*}\left( {\bf{r}} \right)\psi \left( {\bf{r}} \right)}
+\end{equation}
+\subsection*{离散基}
+和通常的向量空间一样, 我们也可以找出一组基$\{{u_1}\left( {\bf{r}} \right),{u_2}\left( {\bf{r}} \right),{u_3}\left( {\bf{r}} \right),\ldots\}$
+去表示空间中的其它波函数, 比如束缚态的$\psi_n$。只是这里基变成了无穷多个, 但是还是可列的, 也就是基数为${\aleph _0}$。有限维向量空间中建立的等式在这里几乎都可以直接套用。
+也正是因为这里是无穷维, 我们构建正交归一基时, 除了要计算两两内积, 还要验证\uwave{封闭性关系}, 保证每一个波函数都可以用这个基底线性表示。
+\begin{proposition}{封闭性关系}
+    \begin{equation}
+        \sum\limits_{i = 1}{{u_i}\left( {\bf{r}} \right)} {u_i}^*\left( {\bf{r^\prime}} \right) = \delta \left( {{\bf{r}} - {\bf{r^\prime}}} \right)
+    \end{equation}
+\end{proposition}
+\begin{thinknote}
+    利用$\delta$函数性质, 任何波函数都可以写成:
+    \begin{align}
+        \psi(\bf{r}) & = \int d^3r^\prime \psi(\bf{r^\prime})\delta({\bf{r}-\bf{r^\prime}})\\ 
+        & = \int d^3r^\prime \psi(\bf{r^\prime})\sum\limits_{i = 1}{{u_i}\left( {\bf{r}} \right)} {u_i}^*\left( {\bf{r^\prime}} \right)\\
+        &=\sum\limits_{i = 1}\left(\int d^3r^\prime {u_i}^*\left( {\bf{r^\prime}} \right) \psi(\bf{r^\prime})\right){{u_i}\left( {\bf{r}} \right)}
+        \end{align}
+    可见满足封闭性关系, 任何一个波函数确实可以由这组基底线性表出。
+\end{thinknote}
+\subsection*{连续基}
+注意, 我们下面讨论的, 就和单色波, 散射态一样, 是一种理想化的、但数学上易于处理的状态, 在物理上没有意义, 但是可以帮助我们在数学上简化运算。我们从自由粒子
+的散射态来引入连续基的概念。
 
+利用德布罗意关系$p=k\hbar$, 我们将\ref{2.26}改写为:
+\begin{align}
+    &\psi(x)\equiv\Psi(x,0)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{+\infty}\tilde{\phi}(p)e^{ipx/\hbar}dp\\
+    &\tilde{\phi}(x)=\frac{1}{\sqrt{2\pi\hbar}}\int_{-\infty}^{+\infty}\tilde{\psi}(p)e^{-ipx/\hbar}dx
+\end{align}
+其中$\tilde{\phi}(p)=\phi(x)/\sqrt{\hbar}=\phi(\frac{p}{\hbar})/\sqrt{\hbar}$。我们考虑$$v_p(x)\equiv\frac{1}{\sqrt{2\pi\hbar}}e^{ipx/\hbar}$$
 
+与之前的情况对比, 可以发现任何一个波函数都可以用这一簇函数线性表示, 注意, 这个时候的线性表示从求和变成积分, 因为“基”的指标是连续的。但是这簇函数是\textbf{平方不可积}的, 所以不属于$\mathscr{F}$, 但是为了在数学上计算
+得以简化, 我们还是考虑引入这样的一组“基”, 这个时候我们需要它满足下面的\uwave{狄拉克意义下的正交归一关系}和封闭性关系。再次强调, 你可以将他们视作一种很好的
+计算工具, 但没有实际的物理意义。
+\begin{define}{连续指标的“正交归一”基}
+    对于$\{w_\alpha(\bf{r})\}$, 满足:
+    \begin{align}
+            &\int d^3r w^*_\alpha(\bm{r}) w_\alpha^\prime(\bm{r})=\delta\left(\alpha-\alpha^\prime\right)\\
+            &\int d\alpha w^*_\alpha(\bm{r}) w_\alpha(\bm{r^\prime})=\delta\left(\bm{r}-\bm{r^\prime}\right)
+    \end{align}
+    称其构成了一组连续的“正交归一”基。
+\end{define}
+对于上面的$v_p(x)$注意到\[\frac{1}{{2\pi }}\int_{ - \infty }^{ + \infty } {{e^{iku}}} dk = \delta (u)\]就可以验证上面的两个等式, 然后关于有限维中的向量分解方法等等都可以直接套用, 只是求和变成求积分。
 
-
-
-
-
-
+更近一步, 还有“混合基”, 这里不介绍了。
+\section{态空间和狄拉克符号}
+前面我们讨论的是波函数的空间$\mathscr{F}$, 下面我们需要考虑一个跟他同构的空间$\mathscr{E}$空间, 它由粒子的\textbf{态矢量}构成。
 
 
 
