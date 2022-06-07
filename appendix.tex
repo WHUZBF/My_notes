@@ -597,7 +597,7 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
 \subsection*{离散基}
 和通常的向量空间一样, 我们也可以找出一组基$\{{u_1}\left( {\bf{r}} \right),{u_2}\left( {\bf{r}} \right),{u_3}\left( {\bf{r}} \right),\ldots\}$
 去表示空间中的其它波函数, 比如束缚态的$\psi_n$。只是这里基变成了无穷多个, 但是还是可列的, 也就是基数为${\aleph _0}$。有限维向量空间中建立的等式在这里几乎都可以直接套用。
-也正是因为这里是无穷维, 我们构建正交归一基时, 除了要计算两两内积, 还要验证\uwave{封闭性关系}, 保证每一个波函数都可以用这个基底线性表示。
+也正是因为这里是无穷维, 我们构建正交归一基时, 除了要计算两两内积, 还要验证\uwave{封闭性关系}, 保证每一个波函数都可以用这个基底线性表示\footnote[1]{注意, $\psi=\sum\limits_{i = 1}\left\langle{e_i,\psi}\right\rangle e_i$不能导出$\{e_i\}$之间正交归一, 但是逆命题为真, 所以上面所述判定基的两个条件是独立的}。
 \begin{proposition}{封闭性关系}
     \begin{equation}
         \sum\limits_{i = 1}{{u_i}\left( {\bf{r}} \right)} {u_i}^*\left( {\bf{r^\prime}} \right) = \delta \left( {{\bf{r}} - {\bf{r^\prime}}} \right)
@@ -605,11 +605,12 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
 \end{proposition}
 \begin{thinknote}
     利用$\delta$函数性质, 任何波函数都可以写成:
-    \begin{align}
+    \begin{align*}
         \psi(\bf{r}) & = \int d^3r^\prime \psi(\bf{r^\prime})\delta({\bf{r}-\bf{r^\prime}})\\ 
-        & = \int d^3r^\prime \psi(\bf{r^\prime})\sum\limits_{i = 1}{{u_i}\left( {\bf{r}} \right)} {u_i}^*\left( {\bf{r^\prime}} \right)\\
-        &=\sum\limits_{i = 1}\left(\int d^3r^\prime {u_i}^*\left( {\bf{r^\prime}} \right) \psi(\bf{r^\prime})\right){{u_i}\left( {\bf{r}} \right)}
-        \end{align}
+        & = \int d^3r^\prime \psi(\bm{r^\prime})\sum\limits_{i = 1}{{u_i}\left( {\bf{r}} \right)} {u_i}^*\left( {\bf{r^\prime}} \right)\\
+        &=\sum\limits_{i = 1}\left(\int d^3r^\prime {u_i}^*\left( {\bf{r^\prime}} \right) \psi(\bf{r^\prime})\right){{u_i}\left( {\bf{r}} \right)}\\
+        &=\sum\limits_{i = 1}\left\langle{u_i,\psi}\right\rangle u_i(\bf{r})
+    \end{align*}
     可见满足封闭性关系, 任何一个波函数确实可以由这组基底线性表出。
 \end{thinknote}
 \subsection*{连续基}
@@ -638,13 +639,72 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
 
 更近一步, 还有“混合基”, 这里不介绍了。
 \section{态空间和狄拉克符号}
-前面我们讨论的是波函数的空间$\mathscr{F}$, 下面我们需要考虑一个跟他同构的空间$\mathscr{E}$空间, 它由粒子的\textbf{态矢量}构成。
+前面我们讨论的是波函数的空间$\mathscr{F}$, 下面我们需要考虑一个跟他同构的空间$\mathscr{E}$空间, 它由粒子的\textbf{态矢量}构成, 粒子的一个量子态就对应
+一个态矢量。下面我们正式引入狄拉克符号来表示向量, 会为后面的形式运算带来巨大的便利。
+\subsection*{狄拉克符号}
+\subsubsection*{右矢(ket vector)}
+对于态空间$\mathscr{E}$中的矢量, 我们用类似$\left | \psi  \right \rangle $的符号标记, 其中$\psi$只是一个记号, 来区分不同的量子态, 并不是矢量本身, 但是有时候
+处于方便的考虑, 我们也将$\lambda\left | \psi  \right \rangle $记作$\left | \lambda\psi  \right \rangle $。
+\subsubsection*{左矢(bra vector)}
+就像是每一个复数都有对应的共轭复数一样, 这个不太恰当的对比也可以移植到态空间来, 这样便有了对偶空间的概念。
+\begin{define}{对偶空间和线性泛函}
+    线性泛函是一个函数, 将$\mathscr{E}$中的矢量和一个\textbf{数}对应, 而且
+    \[
+    \begin{array}{l}
+        \chi \left( {\left| \psi  \right\rangle  + \left| \phi  \right\rangle } \right) = \chi \left| \psi  \right\rangle  + \chi \left| \phi  \right\rangle \\
+        \chi \left( {\lambda \left| \psi  \right\rangle } \right) = \lambda \left( {\chi \left| \psi  \right\rangle } \right)
+    \end{array}\]
+    所有的定义在$\mathscr{E}$空间上的所有线性泛函所构成的集合就构成了$\mathscr{E}$的一个对偶空间$\mathscr{E}^*$。
+\end{define}
+内积是把两个右矢对应到一个复数的映射, 而且满足线性, 所以对于右矢$\left| \psi  \right\rangle$, 我们可以说它确定了一个线性泛函$\left(\left| \psi  \right\rangle, \right)$.
+既然是线性泛函, 那么一定就是$\mathscr{E}^*$空间中的元素, 为了表明这个线性泛函是用右矢$\left| \psi  \right\rangle$定义出来的, 我们将其表示为左矢$\left\langle \psi  \right|$.
+作用在右矢上得到$\left| \psi  \right\rangle$和这个右矢的内积。
 
+所以, 每个右矢唯一确定了一个左矢, 实际上, 对于有限维向量空间, 反过来也是对的\footnote[1]{里斯表示定理}。但是对于无限维向量空间就不适用了, 也就是说$\mathscr{E}$和
+$\mathscr{E}^*$不是同构的, 而且后者比前者要\uwave{大一些}。比如$\delta$函数, 不是平方可积的, 但和$\mathscr{E}$中的矢量的内积始终是有限值, 所以是一个线性泛函, 但
+你无法找到一个右矢与之对应, 这个时候只能引入广义右矢消除这种不对称, 但广义右矢就像前面说的连续基底一样, 没有物理意义, 只是方便中间过程的计算。
 
+\subsection*{线性算符}
+数学上喜欢把这种值域和定义域相等的映射称为算子, 我们称为算符。
+\begin{define}{线性算符}
+    线性算符$\hat{A}$将每一个右矢唯一映射为另一个右矢, 而且满足:
+    \begin{itemize}
+        \item 齐性: \[\hat {A}\left( {\lambda \left| \alpha  \right\rangle } \right) = \lambda \left( {\hat{A}\left| \alpha  \right\rangle } \right)\]
+        \item 加性: \[\hat {A}\left( {\left| \alpha  \right\rangle  + \left| \beta  \right\rangle } \right) = \hat {A}\left| \alpha  \right\rangle  + \widehat A\left| \beta  \right\rangle \]
+    \end{itemize}
+\end{define}
+算符乘法定义为:\[( {\hat A\hat B} )\left| \psi  \right\rangle  = \hat A\left( {\hat B\left| \psi  \right\rangle } \right)\]
 
+对易子定义为: \[\left[\hat{A},\hat{B}\right]\overset{def}{=}\hat{A}\hat{B}-\hat{B}\hat{A}\]
+\begin{theorem}{对易子常用等式}
+    \begin{itemize}
+        \item 对易子实际上是一个双重线性映射:
+        \begin{equation*}
+        \begin{array}{c}
+            \left [ a_1\hat{A}_1+a_2\hat{A}_2 ,\hat{B}  \right ] = a_1\left [ \hat{A}_1, \hat{B}\right ] +a_2\left [ \hat{A}_2, \hat{B}\right ]\\
+            \left [ \hat{A},b_1\hat{B}_1+b_2\hat{B}_2   \right ] = b_1\left [ \hat{A}, \hat{B}_1\right ] +b_2\left [ \hat{A}, \hat{B}_2\right ]
+        \end{array}
+        \end{equation*}
+        \item 反对称: \[\left[\hat{A},\hat{B}\right]=- \left[\hat{B},\hat{A}\right]\]
+        \item 雅可比等式: \[\left[\hat{A},\left[\hat{B},\hat{C}\right]\right]+\left[\hat{B},\left[\hat{C},\hat{A}\right]\right]+\left[\hat{C},\left[\hat{A},\hat{B}\right]\right]=0\]
+        \item 乘法分配: \[\left[\hat{A}\hat{B},\hat{C}\right]=\hat{A}\left[\hat{B},\hat{C}\right]+\left[\hat{A},\hat{C}\right]\hat{B}\]
+    \end{itemize}
+\end{theorem}
+上面的规则和泊松括号非常相似, 实际上狄拉克就是在注意到这一点后, 进一步发展了量子力学。
+\begin{thinknote}
+    使用狄拉克符号时, 一定要注意符号之间的相对顺序, 比如$\left\langle {\psi }\mathrel{\left | {\vphantom {\psi  \varphi }}
+    \right. \kern-\nulldelimiterspace}{\varphi } \right\rangle $看作内积表示一个数, 但是$\left| \varphi  \right\rangle \left\langle \psi  \right|$实际上是一个算符。
+\end{thinknote}
+例如$P_{\psi}=\left| \varphi  \right\rangle \left\langle \psi  \right|$定义成投影算符, 可以对照着数学里面的投影算子结合正交补空间来理解。更广泛意义上
+的在一个空间上的投影算符定义成:
+\[P_{\mathscr{E}_q}=\sum\limits_{i = 1}^{\rm{q}} {\left| {{\psi _i}} \right\rangle \left\langle {{\psi _i}} \right|} \]
+其中$\left|\psi\right\rangle$张成子空间$\mathscr{E}_q$, 且为正交归一基。
 
-
-
+算子作用与右矢会得到一个右矢, 算子对一个左矢同样可以定义, 实际上对应了一个新的左矢, 一个新的线性泛函:
+\[\left( {\left\langle \psi  \right|\hat A} \right)\left| \varphi  \right\rangle  = \left\langle \psi  \right|\left( {\hat A\left| \varphi  \right\rangle } \right)\]
+在这个定义下, 写$\left\langle \psi  \right|\hat A\left| \varphi  \right\rangle $就不会有歧义了。
+\subsection*{厄米共轭}
+我们用*表示一个数的共轭复数, 这里谈到的厄米共轭($\dagger$)是一种操作, 在空间和其对偶空间之间建立了一座桥梁, 下面的重点便是建立算符的厄米共轭概念。
 
 
 
