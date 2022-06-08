@@ -706,10 +706,44 @@ $\mathscr{E}^*$不是同构的, 而且后者比前者要\uwave{大一些}。比�
 \subsection*{厄米共轭}
 我们用*表示一个数的共轭复数, 这里谈到的厄米共轭($\dagger$)是一种操作, 在空间和其对偶空间之间建立了一座桥梁, 下面的重点便是建立算符的厄米共轭概念。
 
+这里厄米共轭的概念对应于数学中的伴随映射。将$\hat{A}\left|\psi\right\rangle$记为$\left|\hat{A}\psi\right\rangle$, 数学上用下式定义算符的厄米共轭算符:\footnote[1]{$\left\langle {{\hat A}^\dag }\psi  \right|$是$\left| \hat A^\dagger\psi  \right\rangle $对应的左矢}
+\[\left\langle {{{{\hat A}^\dag }\psi }}\mathrel{\left | {\vphantom {{{{\hat A}^\dag }\psi } \varphi }}\right. \kern-\nulldelimiterspace}{\varphi } 
+\right\rangle  = \left\langle {\psi }\mathrel{\left | {\vphantom {\psi  {\hat A\varphi }}}\right. \kern-\nulldelimiterspace}{{\hat A\varphi }} \right\rangle \]
 
+直接从对偶出发, 也可以自然的去理解这个概念。 $\hat A$将右矢映射为一个右矢, 两个右矢在对偶空间里有对应的左矢, 而$\hat{A}^\dagger$就建立了两个左矢之间的联系。
+\begin{figure}[htbp]
+    \centering
+    \caption{从左矢右矢之间的关系出发定义伴随算符}
+    \includegraphics[scale=0.8]{fig/b-1.eps}
+\end{figure}
+\begin{proposition}{厄米共轭的运算特性}
+    \begin{equation}
+        \begin{gathered}
+        \left(A^{\dagger}\right)^{\dagger}=A \\
+        (\lambda A)^{\dagger}=\lambda^{*} A^{\dagger}( \text { $\lambda$是一个数 }) \\
+        (A+B)^{\dagger}=A^{\dagger}+B^{\dagger}\\
+        \boxed{(AB)^{\dagger}=B^{\dagger}A^{\dagger}}
+        \end{gathered}
+    \end{equation}
+\end{proposition}
+既然狄拉克符号的组合可以形成算子, 那么我们也可以对狄拉克符号的一个组合进行厄米共轭操作, 具体方法如下:
+\begin{theorem}{狄拉克符号取共轭运算的规则}
+    当一个式子中含有常数、右矢、左矢及算符时, 要得到这个式子的厄 米共轭式 (或伴随式), 必须:\\
+\textbf{代换}:
+$$\left\{\begin{array}{l}\text { 将常数换成其共轭复数 } \\ \text { 将右矢换成其对应的左矢 } \\ \text { 将左矢换成其对应的右矢 } \\ \text { 将算符换成其伴随算符 }\end{array}\right.$$
+\textbf{反序}: 即颠倒各因子的顺序 (但常数的位置无关紧要).
+\end{theorem}
+所以我们说$\left|\psi\right\rangle$和$\left\langle \psi \right|$共轭, 复数的共轭正好和厄米共轭一致。在这个意义下, 厄米共轭操作就不单单对于算符了, 等式两边
+只要都是狄拉克符号, 都可以直接按照上面的方法取厄米共轭, 狄拉克符号在形式运算中有很大的简便性。
+\begin{thinknote}
+    \textbf{例子}:  $\lambda\langle u|\hat{A}| v\rangle|w\rangle\langle\psi|$\\
+    上面的符号全部取成其厄米共轭, 然后从又往左写成$|\psi\rangle\langle w|\left\langle v\left|\hat{A}^{\dagger}\right| u\right\rangle \lambda^{*}$, 注意到
+    数$\left\langle v\left|\hat{A}^{\dagger}\right| u\right\rangle,\lambda^{*}$的位置是可以随便变动的, 所以最终答案为$\lambda^{*}\left\langle v\left|\hat{A}^{\dagger}\right| u\right\rangle\lambda^{*}|\psi\rangle\langle w|$
+\end{thinknote}
+你还可以发现左矢是反线性的, $\left\langle\lambda_1\psi_1+\lambda_2\psi_2\right| =\lambda_1^*\left\langle\psi_1\right|+\lambda_2^*\left\langle\psi_2\right|$
+你只要记住对应的右矢是$\left|\lambda_1\psi_1+\lambda_2\psi_2\right\rangle$, 而这个右矢实际上是$\lambda_1\left|\psi_1\right\rangle+\lambda_2\left|\psi_2\right\rangle $, 取厄米共轭即可得到上式, 不要被这些简写了的记号弄混。
 
-
-
+\section{态空间表象和算子的矩阵表示}
 
 
 
