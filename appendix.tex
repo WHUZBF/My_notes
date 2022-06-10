@@ -839,12 +839,67 @@ $$\left\{\begin{array}{l}\text { 将常数换成其共轭复数 } \\ \text { 将
 至此, 我们已经初步建立了算符和态矢量的矩阵表示理论, 狄拉克符号的组合也是左矢右矢或者算符, 也可以根据上面的定义去得到某基底下的矩阵表述。我们下面通过几个例子
 说明, 你计算任何狄拉克符号的矩阵表述时, 只需要把所有的狄拉克符号按照顺序写下其矩阵表述, 然后\textbf{再按照矩阵的运算法则计算即可}。
 
+\begin{equation*}
+    \begin{aligned}
+        \left|\psi^{\prime}\right\rangle=\hat{A}|\psi\rangle \Rightarrow c_{i}^{\prime} &=\left\langle u_{i} \mid \psi^{\prime}\right\rangle=\left\langle u_{i}|\hat{A}| \psi\right\rangle \\
+        &=\left\langle u_{i}|\hat{A} \mathbbm{1}| \psi\right\rangle=\sum_{j}\left\langle u_{i}|\hat{A}| u_{j}\right\rangle\left\langle u_{j}\right| \\
+        &=A_{i j} u_{j}=A_{i j} c_{j}
+    \end{aligned}
+\end{equation*}
+\begin{thinknote}
+    所以狄拉克符号中的封闭性关系真的很好用, 下面要推导的式子都不用记结论, 学会推导方法即可。
+\end{thinknote}
+\begin{equation*}
+    \boxed{
+        A^{\dagger}{ }_{i j}=\left\langle u_{i}\left|\hat{A}^{\dagger}\right| u_{j}\right\rangle=\left\langle u_{j}|\hat{A}| u_{i}\right\rangle^{*}=A_{j i}{ }^{*}
+    }
+    \end{equation*}
+在正交归一基下, 对算符进行厄米共轭操作, 它的矩阵相当于转置后再取复数共轭。
+\begin{define}{厄米算符/矩阵}
+    若$\hat{A}^\dagger=\hat{A}$我们就趁算符$\hat{A}$是厄米的。由于我们前面说明了厄米共轭和复数共轭的相似性, 这里厄米算符也可以和实数类比。按照定义, 厄米算符的
+    矩阵的对角线上元素全为实数。
+\end{define}
+最后推导一下投影算符的矩阵元表示:
+\begin{equation*}
+    P_{ij} =\left\langle u_i|\psi\right\rangle\left\langle\psi| u_j \right\rangle\rightarrow\\
+    \left(\begin{array}{c}
+        c_{1} \\
+        c_{2} \\
+        \vdots \\
+        c_{i} \\
+        \vdots
+        \end{array}\right)\left(c_{1}^{*} c_{2}^{*} \cdots c_{j}^{*} \cdots\right)=\left(\begin{array}{ccccc}
+        c_{1} c_{1}^{*} & c_{1} c_{2}^{*} & \cdots & c_{1} c_{j}^{*} & \cdots \\
+        c_{2} c_{1}^{*} & c_{2} c_{2}^{*} & \cdots & c_{2} c_{j}^{*} & \cdots \\
+        \vdots & \vdots & & \vdots & \\
+        c_{i} c_{1}^{*} & c_{i} c_{2}^{*} & \cdots & c_{i} c_{j}^{*} & \cdots \\
+        \vdots & \vdots & & \vdots &
+        \end{array}\right)
+\end{equation*}
+这也说明了前面我们将左矢的矩阵写成行向量的好处, 计算上与矩阵完全一致了。
+\subsection*{表象的变换}
+选取不同的表象, 不会导致态矢量或者算符本身发生变化, 但是描述它们的矩阵会有很大的不同, 但是它们之间是有联系的, 对于算符, 这些矩阵互为相似矩阵。
 
-
-
-
-
-
+令$$S_{ik}=\left\langle u_i  | t_k  \right\rangle$$称为两个基之间的变换矩阵, 下面的推导只需要使用封闭性关系就可以很容易做到。它的厄米共轭可计算为:
+$$
+\left(S^{\dagger}\right)_{k i}=\left(S_{i k}\right)^{*}=\left\langle t_{k} \mid u_{i}\right\rangle
+$$
+\begin{define}{幺正算子}
+    \begin{equation}
+        \boxed{U^\dagger U=U U^\dagger=I}
+    \end{equation}
+    则称$U$为幺正算子, 对应的矩阵称为幺正矩阵(酉矩阵)\footnote[1]{可以证明幺正算子的矩阵在任何表象下均为幺正矩阵}。它对应于实向量空间中的正交矩阵, 类比实向量空间中, 正交矩阵是一个等距同构, 正交变换恰如坐标系旋转。
+\end{define}
+实际上上面的变换矩阵就是一个幺正矩阵。下面利用封闭性关系插入$\mathbbm{1}$有:
+\begin{equation*}
+   \begin{aligned}
+    A_{i j} &=\left\langle u_{i}|\mathbbm{1}A|\mathbbm{1}u_{j}\right\rangle=\left\langle u_{i}\left|P_{\left\{t_{k}\right\}} A P_{\left\{t_{l}\right\}}\right| u_{j}\right\rangle \\
+    &=\sum_{k, l}\left\langle u_{i} \mid t_{k}\right\rangle\left\langle t_{k}|A| t_{l}\right\rangle\left\langle t_{l} \mid u_{j}\right\rangle \\
+    &=\sum_{k, l} S_{i k} A_{k l} S_{l j}^{\dagger}
+    \end{aligned} 
+\end{equation*}
+右矢左矢的变换也是一样的推导, 不用背公式, 使用狄拉克符号插入$\mathbbm{1}$即可。
+\section{*线性算符的一些性质}
 
 
 
