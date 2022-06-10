@@ -32,11 +32,14 @@
 \tikzset{elegant/.style={smooth,thick,samples=50,cyan}}
 \usepackage[]{newtxmath}
 \usepackage[]{bbm}
+\usepackage[]{relsize}
 
 % 定义公式环境
 \newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
 \newenvironment{sequation}{\small\begin{equation}}{\end{equation}}
 \newenvironment{tequation}{\tiny\begin{equation}}{\end{equation}}
+% 向下的长箭头
+\newcommand\longdownarrow[1]{\mathrel{\scalebox{1}[#1]{$\downarrow$}}}
 % 定义方框
 % 陈述性语句
 \newtcolorbox[]{proposition}[2][]{title = \textbf{#2}, colback=Salmon!20, colframe=Salmon!90!Black,breakable, enhanced jigsaw}

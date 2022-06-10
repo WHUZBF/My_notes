@@ -713,9 +713,14 @@ $\mathscr{E}^*$不是同构的, 而且后者比前者要\uwave{大一些}。比�
 直接从对偶出发, 也可以自然的去理解这个概念。 $\hat A$将右矢映射为一个右矢, 两个右矢在对偶空间里有对应的左矢, 而$\hat{A}^\dagger$就建立了两个左矢之间的联系。
 \begin{figure}[htbp]
     \centering
+    \includegraphics[scale=0.4]{fig/b-1.eps}
     \caption{从左矢右矢之间的关系出发定义伴随算符}
-    \includegraphics[scale=0.8]{fig/b-1.eps}
 \end{figure}
+\begin{thinknote}
+    注意我们谈论算符一般都是在右矢构成的$\mathscr{E}$中讨论, 也就是说$\hat{A}^\dagger$也应该是一个$\mathscr{E}$中的算符。但是前面谈到过可以自然的将算子
+    延伸定义到左作用于左矢, 按照上面图像定义, 我们确定$\hat{A}^\dagger$是通过它的左作用和$\hat{A}$本身来确定。这种定义方式物理意义更清晰, 不过直接使用数学
+    上的方式定义会更加严谨, 而且也更好的去说明伴随算子的存在性和唯一性。
+\end{thinknote}
 \begin{proposition}{厄米共轭的运算特性}
     \begin{equation}
         \begin{gathered}
@@ -744,16 +749,95 @@ $$\left\{\begin{array}{l}\text { 将常数换成其共轭复数 } \\ \text { 将
 你只要记住对应的右矢是$\left|\lambda_1\psi_1+\lambda_2\psi_2\right\rangle$, 而这个右矢实际上是$\lambda_1\left|\psi_1\right\rangle+\lambda_2\left|\psi_2\right\rangle $, 取厄米共轭即可得到上式, 不要被这些简写了的记号弄混。
 
 \section{态空间表象和算子的矩阵表示}
+\begin{define}{表象}
+    我们说在态空间中选取了一个表象就是选取了一个离散的或者连续的\textbf{正交归一基}\footnote[1]{基可以由广义右矢组成, 保证运算上的简便}, 在一组确定的基下, 我们可以使用矩阵来描述态矢量和算符。
+\end{define}
+我们使用狄拉克记号重新来写一下正交归一基底需要满足的正交归一和封闭性关系式
 
+\textbf{正交归一性}:
+\begin{lequation}
+    \boxed{
+        \begin{array}{c}
+            \left \langle u_i  | u_j  \right \rangle = \delta_{ij}\\
+            \left \langle w_\alpha  | w_{\alpha^\prime }  \right \rangle =\delta(\alpha -\alpha^\prime )
+        \end{array}
+    }
+\end{lequation}
 
+\textbf{封闭性}
+\begin{equation}
+    \boxed{
+        \begin{array}{c}
+            P_{\{u_i\}}=\sum\limits _{i}\left | u_i  \right \rangle \left\langle u_i\right|= \mathbbm{1}\\
+            P_{\{w_\alpha \}}=\int \mathrm{d}\alpha \left | w_\alpha   \right \rangle \left\langle  w_\alpha \right |=\mathbbm{1}
+        \end{array}
+    }
+\end{equation}
+其实这个封闭性也蛮好理解, 就是这组基张成空间的投影算符刚好是恒等算符, 也就说明了$\mathscr{E}$空间和基矢量张成的空间重合, 也就说明了封闭性。
 
+\subsection*{态矢量和算符的矩阵表示}
+选取离散基表象, 右矢可以借助基向量写成:
+\[\left | \psi  \right \rangle =\mathbbm{1}\left | \psi  \right \rangle =\sum\limits_{i}\left | u_i  \right \rangle \left\langle u_i|\psi  \right \rangle \]
+那么我们可以将分量$v_i=\left\langle u_i|\psi  \right \rangle$排成一个列矩阵形式表示$\left|\psi\right\rangle$, 其行数为可数无穷大($\aleph_0$)
+\begin{equation*}
+    \begin{pmatrix}
+        \left\langle u_1|\psi  \right \rangle \\
+        \left\langle u_2|\psi  \right \rangle \\
+        \vdots \\
+        \left\langle u_i|\psi  \right \rangle\\
+        \vdots 
+    \end{pmatrix}
+\end{equation*}
 
+对于连续基, $\left|\psi\right\rangle=\int \mathrm{d}\alpha\left\langle w_{\alpha} \mid \psi\right\rangle$, 这个时候分量变成了一个连续函数, $c(\alpha)=\left\langle w_\alpha|\psi  \right \rangle$, 我
+们还是可以将其写成一个列矩阵, 在矩阵旁边画上一个数轴, 数轴上的每一个点对应一个矩阵上的分量。
+\begin{equation*}
+    \alpha \longdownarrow{2.2} \left(\begin{array}{c}
+    \vdots \\
+    \left\langle w_{\alpha} \mid \psi\right\rangle \\
+    \vdots
+    \end{array}\right)
+\end{equation*}
 
-
-
-
-
-
+类似的, 单纯从共轭对称性来看, 我们可以把左矢按照${\left\langle u_i\right|}$展开。
+\[\left\langle\varphi\right|=\left\langle\varphi\right|\mathbb{1}=\sum\limits_{i}\left\langle\varphi| u_i\right\rangle\left\langle u_i \right| \]
+这个时候我们把矩阵写成行向量, 这样定义会方便后面的矩阵运算。
+\begin{equation*}
+    \begin{pmatrix}
+        \left \langle \varphi  | u_1 \right \rangle& \left \langle \varphi  | u_2 \right \rangle &\cdots
+    \end{pmatrix} 
+\end{equation*}
+同理分析, 在连续基下矩阵表示为:
+\begin{equation*}
+    \underrightarrow{
+        \begin{pmatrix}
+        \cdots& \left \langle \varphi  | w_\alpha  \right \rangle &\cdots
+        \end{pmatrix} 
+    }
+\end{equation*}
+\begin{define}{矩阵元}
+    我们将$\left \langle \varphi  \right |\hat A\left| \psi  \right \rangle $称为态$\left | \varphi  \right \rangle ,\left | \psi  \right \rangle $之间的矩阵元
+\end{define}
+一般情况下一个线性映射可以使用一个矩阵来描述, 这里对于算符, 可以用一个方阵来描述, 只不过行数和列数都是无穷大。很容易说明, 只要给定数组\[A_{ij}=\left \langle u_i  \right |\hat A\left| u_j  \right \rangle \]这也就是基之间的矩阵元, 只
+是由于是算子所以定义域和值域的基相同, 由于这个数组唯一决定了基之间的对应关系, 所以也就唯一决定了一个算子。
+\begin{equation*}
+    \left(\begin{array}{ccccc}
+        A_{11} & A_{12} & \cdots & A_{1 j} & \cdots \\
+        A_{21} & A_{22} & \cdots & A_{2 j} & \cdots \\
+        \vdots & \vdots & & \vdots & \\
+        A_{i 1} & A_{i 2} & \cdots & A_{i j} & \cdots \\
+        \vdots & \vdots & & \vdots &
+        \end{array}\right)
+\end{equation*}
+对于连续基底, 你需要给定一个二元函数\[A\left(\alpha,\alpha^\prime\right)=\left \langle w_\alpha \right |\hat A\left| w_{\alpha^\prime}  \right \rangle \]
+算符矩阵的行列使用两个正交的坐标轴去标记:
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=4cm,height=2cm]{fig/b-2.eps}
+\end{figure}
+\newpage
+至此, 我们已经初步建立了算符和态矢量的矩阵表示理论, 狄拉克符号的组合也是左矢右矢或者算符, 也可以根据上面的定义去得到某基底下的矩阵表述。我们下面通过几个例子
+说明, 你计算任何狄拉克符号的矩阵表述时, 只需要把所有的狄拉克符号按照顺序写下其矩阵表述, 然后\textbf{再按照矩阵的运算法则计算即可}。
 
 
 
