@@ -467,6 +467,7 @@ $$L_i=I_{ij}\Omega_j$$
 
 
 \chapter{Linear Algebra}
+\label{Appendix B}
 这个附录主要是关于线性代数一些基本知识的回顾, 使用量子力学中的记号表示, 主要参考的是科恩塔诺基《量子力学》卷一第二章。
 \section{向量空间}
 在附录A中我们讨论的向量和通常物理里面所说的\uwave{有大小有方向的量}是一致的, 实际上它们是所谓欧几里得空间中的向量, 我们下面要以更抽象的思维来对待向量。
@@ -555,7 +556,7 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
         \left\| {\left| \alpha  \right\rangle } \right\|\left\| {\left| \beta  \right\rangle } \right\|
     \end{equation}
 \end{theorem}
-这个不等式非常重要, 因为它只依赖于内积的良好定义, 在欧几里得空间上的柯西不等式就是它的一个特例。
+这个不等式非常重要, 因为它只依赖于内积的良好定义, 在欧几里得空间上的柯西不等式就是它的一个特例\footnote[1]{对于无穷维向量空间, 这个不等式也成立}。
 \begin{proposition}{Schmidt正交化过程}
     对于任何一个向量组${\left| {{\alpha _1}} \right\rangle  ,\left| {{\alpha _2}} \right\rangle  , \ldots,\left| {{\alpha _n}} \right\rangle }$
     , 都可以从其出发构造一组正交归一的向量组, 且张成的空间不发生改变。
@@ -588,7 +589,7 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
 转而去关注, 平方可积的函数, 也就是下式成立：
 \[\int_{ - \infty }^{ + \infty } {{d^3}r\left| {f({\bf{r}})} \right|}  <  + \infty \]
 数学家把这个叫$L^2$空间, 本质上是希尔伯特空间的结构, 但是对于物理来说还是比较广的一个范围, 我们进一步只研究在$L^2$空间中\textbf{处处连续, 处处确定, 且处处有任意阶导数}的
-函数构成的子空间$\mathscr{F}$, 波函数就存在于这个空间中。
+函数构成的子空间$\mathscr{F}$, 波函数就存在于这个空间中\footnote[1]{无穷维向量空间大致都可以理解为向量空间, 物理里面一般特指$L^2$空间}\footnote[2]{我们不直接研究那些已经归一化的波函数组成的空间, 是因为他们根本不构成向量空间!}。
 
 可以证明$\mathscr{F}$是一个向量空间, 我们还要给他定义一个内积(使用数学中的记号):
 \begin{equation}

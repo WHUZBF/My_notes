@@ -1138,5 +1138,55 @@
         \int_{-\infty}^{+\infty}\mathrm{Ai}(t+x)\mathrm{Ai}(t+x)\mathrm{d}t=\delta(x-y)
     \end{equation*}
     \chapter{形式化理论}
+    \section{可观测量}
+    虽然量子力学需要引入虚数, 但是实际上实验测得的量都是实数, 也就是说可观测量$Q$的测量值始终是实数。
+    \[Q = {Q^*} \Rightarrow \left\langle Q \right\rangle  = {\left\langle Q \right\rangle ^*}\]
+    第一章我们就强调了, 计算某个量的平均值时, 把\textbf{这个量对应的算符}夹在波函数之间后积分即可\footnote[1]{其实更好的记号是狄拉克符号$\left\langle \Psi  \right|\hat Q\left| \Psi  \right\rangle $}：
+    \[\left\langle Q \right\rangle  = \int {{\Psi ^*}\hat Q\Psi dx}  = \left\langle {\Psi }\mathrel{\left | {\vphantom {\Psi  {\hat Q\Psi }}}\right. \kern-\nulldelimiterspace}
+    {{\hat Q\Psi }} \right\rangle ,{\left\langle Q \right\rangle ^*} = \left\langle {{\hat Q\Psi }}\mathrel{\left | {\vphantom {{\hat Q\Psi } \Psi }}\right. \kern-\nulldelimiterspace}
+    {\Psi } \right\rangle \]
+    利用算符的厄米共轭的定义, 可以发现:
+    \begin{equation}
+        \boxed{
+            \hat{Q}^\dagger=\hat{Q}
+        }
+    \end{equation}
+    也就是说：
+    \begin{equation}
+        \boxed{
+            \text{每个可观测量都对应了一个厄米算符}
+        }
+    \end{equation}
+    很容易验证$\hat{p}=id/dx,\hat{x}=x$都是厄米算符, 但是微分算符$\hat{D}\equiv\frac{d}{dx}$不是厄米算符, 我们还可以得到一个更强的结论:
+    \begin{lequation}
+        \begin{array}{c}
+            \hat{D}^\dagger = -\hat{D} \\ 
+            \left(\hat{D}^n\right)^\dagger\equiv\left[\frac{\rm{d}^n}{\rm{d}x^n} \right]^\dagger=\left(\hat{D}\hat{D}\cdots\hat{D}\right)^\dagger=(-1)^n\hat{D}^n
+        \end{array}
+    \end{lequation}
+
+    量子力学与经典力学最大的不同就是当你对系综测量某个可观测量$Q$时, 测量结果会呈现一定的概率分布。那么, 能否对于某个可观测量找到对应的一个量子态$\left|Psi\right\rangle$, 当系综中所有的粒子均处于
+    这个态时, 对这个系综测量$Q$那么得到的值失去了概率分布, 总是固定值(比方说$q$)?答案是肯定的, 而且我们将这种态称为\uwave{定值态}(不是前面定态波函数解的那个定态, 不过那个定态波函数的解, 确实是关于$\hat{H}$的定值态)。
+    \begin{equation*}
+        \left.\begin{matrix} 
+            \left \langle Q \right \rangle=q \\ 
+            \sigma^2=0
+          \end{matrix}\right\}\Rightarrow \left \langle \left( Q-\left \langle Q \right \rangle  \right )^2\right \rangle  =0
+    \end{equation*}
+    利用前面求$\left\langle Q \right\rangle$的方法可以验证:
+    \[\left \langle \left( Q-\left \langle Q \right \rangle  \right )^2\right \rangle =\left\langle {\Psi }
+    \mathrel{\left | {\vphantom {\Psi  {{{\left( {\hat Q - q} \right)}^2}\Psi }}}
+    \right. \kern-\nulldelimiterspace}
+    {{{{\left( {\hat Q - q} \right)}^2}\Psi }} \right\rangle \]
+    再注意到$q$为实数, $Q$为可观测量, 所以$\hat{Q}-q$是厄米算符, 所以
+    \[\left\langle {{\left( {\hat Q - q} \right)\Psi }}
+    \mathrel{\left | {\vphantom {{\left( {\hat Q - q} \right)\Psi } {\left( {\hat Q - q} \right)\Psi }}}
+    \right. \kern-\nulldelimiterspace}
+    {{\left( {\hat Q - q} \right)\Psi }} \right\rangle =0\Rightarrow
+    \boxed{\hat{Q}\Psi=q\Psi}\]
+    也就是说, 定值态是算符$\hat{Q}$的本征向量, 而对应的测量值就是本征值。\footnote[1]{更多这方面的内容, 请翻阅附录\ref{Appendix B}}
+
+    比如定态薛定谔方程$$\hat{H}\psi=E\psi$$
+    很好解释为什么定态解是关于哈密顿算符的定值态, 注意到波函数$\Psi(x,t)=\psi(x)e^{iEt/\hbar}$仍是$E$特征向量, 所以定态波函数确实就是能量的定值态。
     \include{appendix.tex}
 \end{document}
