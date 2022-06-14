@@ -942,16 +942,46 @@ $$
     其敛散性与$F(z)$的收敛半径和算符$\hat{A}$的本征值有关。
 \end{define}
 
+不难证明:
+\begin{equation}
+    \hat A\left | \psi  \right \rangle =\lambda\left | \psi  \right \rangle \Rightarrow F(\hat A)\left | \psi  \right \rangle =F(\lambda)\left | \psi  \right \rangle
+\end{equation}
 从上面的定义可以定义一个比较重要的算符函数, 实际上在解微分方程组中也用矩阵形式对其进行过类似的定义。
 \begin{lequation}
     e^{\hat A}\equiv\sum_{n=0}^{\infty }\frac{1}{n!}\hat{A}^n=\mathbbm{1}+\hat{A}+\frac{1}{2}\hat{A}^2+\cdots
 \end{lequation}
+\begin{define}{BCH定理}
+    若$\hat{A},\hat{B}$关于他们的对易子都是可对易的, 即:
+    \[\left[\hat{A},\left[\hat{A},\hat{B}\right]\right]=\left[\hat{B},\left[\hat{A},\hat{B}\right]\right]=0\]
+    则有:
+    \begin{lequation}
+        e^{\hat{A}}e^{\hat{B}}=e^{\hat{A}+\hat{B}+\left[\hat{A},\hat{B}\right]/2}
+    \end{lequation}
+    左边式子的意义根据级数的柯西乘积定义。
+\end{define}
 
+\subsection*{算符的导数}
+对于$\hat{A}(t)$, 我们将其看作是一个函数, 定义域是数域, 值域是一个算符, 即$t$的映射。
+\begin{define}{算符的导数}
+    \begin{equation}
+        \frac{ \mathrm{d}\hat{A}(t)}{\mathrm{d}t} \equiv\lim_{\Delta t \to 0} \frac{\hat{A}(t+\Delta t)-\hat{A}(t)}{\Delta t}
+    \end{equation}
+    “导函数”对于$t$还是一个算符
+\end{define}
+\begin{lequation}
+    \begin{array}{l}
+        \frac{\mathrm{d}}{\mathrm{dt}}(\hat{F}+\hat{G})=\frac{\mathrm{d} \hat{F}}{\mathrm{dt}}+\frac{\mathrm{d} \hat{G}}{\mathrm{dt}} \\
+        \frac{\mathrm{d}}{\mathrm{dt}}(\hat{F} \hat{G})=\frac{\mathrm{d} \hat{F}}{\mathrm{dt}} \hat{G}+\hat{F} \frac{\mathrm{d} \hat{G}}{\mathrm{dt}}
+    \end{array}
+\end{lequation}
+在某个确定的表象下, 可以证明矩阵元之间的关系为:
+\begin{equation}
+    \left ( \frac{\mathrm{d} \hat{A}(t) }{\mathrm{d} t}  \right )_{ij}=\frac{\mathrm{d} [\hat{A}(t)]_{ij} }{\mathrm{d} t} 
+\end{equation}
+也就是说, 在某个确定的表象下, \textbf{对算符求导, 就相当于把它矩阵的每个元素进行求导, 再按原位置排列}。
 
-
-
-
-
+最后强调, 实分析中的求导公式, 在这里要小心使用, 例如, $\left[\hat{A}(t),\frac{\mathrm{d}\hat{A}}{\mathrm{d}t}\right]\neq 0$时
+\[\frac{\mathrm{d} }{\mathrm{d} t}e^{\hat{A}(t) }\neq\frac{\mathrm{d} \hat{A}(t)}{\mathrm{d} x}e^{\hat{A}(t) }\]
 
 
 

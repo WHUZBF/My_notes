@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  14 JUN 2022 14:34
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  14 JUN 2022 23:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2060,11 +2060,11 @@ File: videos/equation_insection/equation_insection-59.png Graphic file (type bmp
  <a1,fr59> [28] [29] [30] [31] [32]
 File: fig/2-7-1.eps Graphic file (type eps)
 <fig/2-7-1.eps>
- [33]
+ [33] [34]
 第三章
-[34
+[35
 
-] [35]
+] [36]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2074,10 +2074,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[36
+[37
 
 
-] [37] [38]
+] [38] [39]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2085,27 +2085,27 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[39] [40] [41]
+[40] [41] [42]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [42] [43]
+ [43] [44]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [44]
+ [45]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.045pt on input line 320.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 320.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 6.0pt on input line 320.
- [45] [46] [47] [48]
+ [46] [47] [48] [49]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [49] [50] [51]
+ [50] [51] [52]
 附录 B
 LaTeX Font Info:    Trying to load font information for U+bbm on input line 494.
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
@@ -2115,9 +2115,9 @@ Overfull \hbox (7.7486pt too wide) in paragraph at lines 473--496
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[52
+[53
 
-] [53] [54]
+] [54] [55]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 9.03374pt on input line 592.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
@@ -2127,10 +2127,10 @@ Overfull \hbox (12.5569pt too wide) in paragraph at lines 599--606
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[55] [56] [57] [58] [59]
+[56] [57] [58] [59] [60]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [60] [61]
+ [61] [62]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 15.05624pt on input line 759.
 
@@ -2138,21 +2138,21 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.05624> not available
 (Font)              size <14.4> substituted on input line 759.
 
-[62]
+[63]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [63]
+ [64]
 Overfull \hbox (4.90611pt too wide) detected at line 879
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[64] [65] [66] [67]
+[65] [66] [67] [68] [69]
 附录 C
-[68
+[70
 
-]) [69] (./sourcecode.aux (./appendix.aux))
+]) [71] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
@@ -2161,12 +2161,12 @@ Package rerunfilecheck Info: File `sourcecode.out' has not changed.
 (rerunfilecheck)             Checksum: E4799CAFBE136A6E4DAACE18CD5F39D7;4302.
  ) 
 Here is how much of TeX's memory you used:
- 50758 strings out of 476533
- 1299097 string characters out of 5818886
+ 50759 strings out of 476533
+ 1299113 string characters out of 5818886
  1812661 words of memory out of 5000000
- 69982 multiletter control sequences out of 15000+600000
+ 69983 multiletter control sequences out of 15000+600000
  522225 words of font info for 256 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1020s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (72 pages).
+Output written on sourcecode.pdf (74 pages).
