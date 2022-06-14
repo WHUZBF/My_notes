@@ -901,6 +901,60 @@ $$
 \end{equation*}
 右矢左矢的变换也是一样的推导, 不用背公式, 使用狄拉克符号插入$\mathbbm{1}$即可。
 \section{*线性算符的一些性质}
+\subsection*{本征值和本征矢}
+对于$\mathscr{E}$的子空间$\mathscr{E}_q$, 如果算符$\hat{A}$将其中的矢量仍旧全部映射为$\mathscr{E}_q$中的矢量, 那么称其为算符$\hat{A}$作用下的\uwave{不变子空间}, 不
+变子空间的概念在算子的分解中应用很大, 最小的不变子空间\footnote[1]{非平凡}自然是一维的, 具有下面的形式：
+\[\mathscr{E}_1=\left \{ a\left|\psi\right\rangle:a\in\mathbbm{F} \right \} \]
+进一步, 如果$\mathscr{E}_1$是算符$\hat{A}$的不变子空间, 则:
+\begin{lequation}
+    \boxed{\hat{A}\left|\psi\right\rangle=\lambda\left|\psi\right\rangle}
+\end{lequation}
+满足上面方程的$\lambda$称为算符的本征值, 全体本征值的集合我们称为算符$\hat{A}$的\textbf{谱}。$\left|\psi\right\rangle$称为本征矢, 本征矢不能为$\vmathbb{0}$. 每个线性无关的本征矢可以张成一个一维不变子空间。
+设对于本征值$\lambda_i$有$g$个对应的线性无关的本征矢, 这些本征矢张成一个向量空间(解空间), 称为$\lambda_i$的\textbf{本征空间}, $g$正好就是本征空间的维数, 数
+学上称作$\lambda_i$的几何重数\footnote[2]{还有一个对应的代数重数, 是广义本征空间的维数, 和特征多项式的解的重数相等}。在量子力学中我们称之为本征值$\lambda_i$的
+\textbf{简并度}, 如果$g=1$那么我们称$\lambda_i$是\textbf{非简并}的(比如束缚态的每个能级), 反之我们称其\textbf{简并}。
+
+选取一个表象后, 算符和矢量都可以使用矩阵来描述, 解下面的久期方程便可以很容易得到本征值和本征矢。
+\begin{equation}
+    \boxed{\det\left[A-\lambda I\right]=0}
+\end{equation}
+
+线性代数中对于算符的迹和行列式的定义分别为:
+\[
+\begin{array}{c}
+    \text{tr } \hat{A} \equiv \sum \lambda \\
+    \det \hat{A}\equiv \prod \lambda  
+\end{array}\]
+
+从算符在某个表象下的矩阵上定义的迹和行列式和这里的定义是相等的, 因为从矩阵出发的定义, 数学上他们被称为\uwave{相似不变量}, 物理这边可以理解为算符的矩阵的行列式和迹与你选取的表象无关。
+算符的本征值肯定是不依赖于表象的, 所以数学上也给了我们在固定表象下计算迹和行列式的可行手段。
+
+\subsection*{算符函数}
+\begin{define}{以算符为自变量的函数}
+    若在复数域上定义的函数可以在某个区间内展开为幂级数:
+    \begin{equation}
+        F(z)=\sum_{n=0}^{\infty }f_nz^n
+    \end{equation}
+    那么可以定义$F\left(\hat{A}\right)$为:
+    \begin{equation}
+        F\left(\hat{A}\right)\equiv\sum_{n=0}^{\infty }f_n\hat{A}^n
+    \end{equation}
+    其敛散性与$F(z)$的收敛半径和算符$\hat{A}$的本征值有关。
+\end{define}
+
+从上面的定义可以定义一个比较重要的算符函数, 实际上在解微分方程组中也用矩阵形式对其进行过类似的定义。
+\begin{lequation}
+    e^{\hat A}\equiv\sum_{n=0}^{\infty }\frac{1}{n!}\hat{A}^n=\mathbbm{1}+\hat{A}+\frac{1}{2}\hat{A}^2+\cdots
+\end{lequation}
+
+
+
+
+
+
+
+
+
 
 
 

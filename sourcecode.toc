@@ -29,5 +29,5 @@
 \contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{57}{section.B.4}%
 \contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{62}{section.B.5}%
 \contentsline {section}{\numberline {B.6}*线性算符的一些性质}{65}{section.B.6}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{66}{appendix.C}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{68}{appendix.C}%
 \contentsfinish 
