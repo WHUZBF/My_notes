@@ -107,7 +107,7 @@
 
     Born后面给波函数一个统计上的解释, 这也就说明了在量子力学中的不确定性, 我们无法再像牛顿运动定律一样精确的预言一个例子之后的运动, 我们只能给出它之后在某处的\uwave{概率}是多少
     \begin{proposition}{波函数的统计诠释}
-        以一维情形为例, Born在统计上给出了对于波函数的解释, 他认为当一个微观粒子处于状态$Psi\left(\bm{r},t\right)$时, 表示在$t$时刻在$x$处发现粒子的\uwave{概率}, 更准确的说\footnote[0]{一个常用的代换是$\left|\Psi\left(x,t\right)\right|^{2}=
+        以一维情形为例, Born在统计上给出了对于波函数的解释, 他认为当一个微观粒子处于状态$\Psi\left(\bm{r},t\right)$时, 表示在$t$时刻在$x$处发现粒子的\uwave{概率}, 更准确的说\footnote[0]{一个常用的代换是$\left|\Psi\left(x,t\right)\right|^{2}=
         \Psi^{*}\left(\left(x,t\right)\right) \Psi\left(x,t\right) $}
         \begin{lequation}
             \int_{a}^{b}\left|\Psi\left(x,t\right)\right|^{2}dx=\left\{\text{$t$时刻在$\left[a,b\right]$内\\发现粒子的概率}\right\}
@@ -1188,5 +1188,116 @@
 
     比如定态薛定谔方程$$\hat{H}\psi=E\psi$$
     很好解释为什么定态解是关于哈密顿算符的定值态, 注意到波函数$\Psi(x,t)=\psi(x)e^{iEt/\hbar}$仍是$E$特征向量, 所以定态波函数确实就是能量的定值态。
+    \section{观察算符和算符的谱}
+    厄米算符的谱可能是离散谱(比如无限深势阱), 也可能是连续谱(比如自由粒子)。对于离散谱, 我们已经通过模型的计算大约了解到特征矢都是平方可积的, 但对于连续谱就不再成立。
+    但是这些本征矢之间有些重要性质, 比如正交性, 完备性, 我们用标准的线性代数语言再来描述一下。注意, 我们讨论的范围一直是可观测量对应的厄米算符。
+    \subsection*{离散谱}
+    \begin{itemize}
+        \item \textbf{本征值都是实数}
+        \item \textbf{对应于不同本征值的本征矢相互正交}
+    \end{itemize}
+    \begin{thinknote}
+        上面的两个性质都很容易证明, 我们证明第一个:
+        \begin{align*}
+            \hat{Q}|\psi\rangle  = \lambda|\psi\rangle &\Rightarrow\langle\psi|\hat{Q}| \psi\rangle = \lambda\langle\psi \mid \psi\rangle \Rightarrow\left\langle\psi\left|\hat{Q}^{\dagger}\right| \psi\right\rangle = \lambda^{*}\langle\psi \mid \psi\rangle\\
+            &\Rightarrow \lambda =\lambda ^*\Leftrightarrow \lambda \in \mathbbm{R} 
+        \end{align*}
+    \end{thinknote}
+    另外一个很重要的概念就是\textbf{完备性}。我们在算符$\hat{Q}$的本征值$\lambda_n$所对应的本征空间$g_n$中选取一组已正交归一化的基, 其中的第$i$个矢量标记为$\left|\psi_n^i\right\rangle$, 最后我们
+    将这些基合起来, 根据前面的定理, 我们事实上已经选取了算符$\hat{Q}$的一个正交归一系:
+    \begin{equation}
+        \left\langle {{\psi _n^i}}
+        \mathrel{\left | {\vphantom {{\psi _n^i} {\psi _{n'}^{i'}}}}
+        \right. \kern-\nulldelimiterspace}
+        {{\psi _{n'}^{i'}}} \right\rangle  = {\delta _{ii'}}{\delta _{nn'}}
+    \end{equation}
+    对于有限维向量空间, 根据\uwave{复谱定理}, 厄米算符$\hat{Q}$一定可对角化, $\mathscr{E}$一定可以写成$g_n$的直和形式, 上面确定的正交归一系一定是$\mathscr{E}$的一个基底。
+    但是这个定理在无限维向量空间中并不能推广。
+    \begin{define}{观察算符}
+        对于厄米算符$\hat{Q}$, 如果$\mathscr{E}$可以使用它的一组本征矢作为基底, 也就是说它的正交归一系满足:
+        \begin{equation}
+            \sum\limits_{n = 1}^\infty  {\sum\limits_{i = 1}^{{g_n}} {\left| {\psi _n^i} \right\rangle \left\langle {\psi _n^i} \right|} }=\mathbbm{1}
+        \end{equation}
+        那么我们称$\hat{Q}$是观察算符, 这只是在离散基中的定义, 对于连续基, 定义类似, 后面再阐述。
+    \end{define}
+    我们现在对可观测量做一个更强的假定:
+    \begin{equation*}
+        \boxed{\text{\textbf{可观测量对应的实际上是观察算符}}}
+    \end{equation*}
+    \subsection*{连续谱}
+    我们通过两个例子来说明这个问题, 实际上他们是重要的$\left | \bf{p}  \right \rangle$表象和$\left | \bf{r}  \right \rangle$表象。
+    \begin{thinknote}
+        \textbf{动量算符的本征值和本征矢}
+        \begin{equation}
+            -i\hbar\frac{d}{dx}f_p(x)=pf_p(x)
+        \end{equation}
+        分离变量解方程得:
+        \begin{equation}
+            f_p(x)=Ae^{\frac{ipx}{\hbar}}\notin\mathscr{E},p\in\mathbbm{F}
+        \end{equation}
+        我们现在只关注本征值为实数对应的本征矢:
+        \begin{equation}
+            \left \langle f_{p^\prime}  | f_{p}  \right \rangle=\int \left | A \right |^2e^{\frac{i(p-p^\prime )x}{\hbar } }\mathrm{d}x =\left | A \right |^22\pi\hbar \delta(p-p^\prime) 
+        \end{equation}
+        我们取\[\left|A\right|=\frac{1}{2\pi\hbar}\]
+        与离散基相似我们得到了一个“正交归一系”
+        \begin{equation}
+            \left \langle f_{p^\prime}  | f_{p}  \right \rangle=\delta(p-p^\prime)
+        \end{equation}
+
+        由于这些本征右矢实际上是广义右矢, 所以我们说他们在\textbf{狄拉克意义下正交}, 区别于通常所说的正交关系, 但是非常相似。
+        
+        至于完备性, 对于连续基, 我们应该验证下面的式子:
+        \begin{equation}
+            \int_{{\nu _1}}^{{\nu _2}} {d\nu \left| {{\psi _\nu }} \right\rangle \left\langle {{\psi _\nu }} \right|} =\mathbbm{1}
+        \end{equation}
+        对于动量算符, 全体实数都可以作为本征值, 所以积分上下限, 也就是连续指标范围应该是$\left(-\infty,+\infty\right)$.
+        \begin{align*}
+            &\int_{-\infty }^{+\infty}\mathrm{d}p\left | f_p \right \rangle\left \langle f_p  | g  \right \rangle   \\
+            =&\int_{-\infty }^{+\infty }\frac{1}{\sqrt{2\pi\hbar}}e^{\frac{ipx}{\hbar}}\int_{-\infty }^{+\infty }\frac{1}{\sqrt{2\pi\hbar}}e^{\frac{-ipx}{\hbar}}g(x)\mathrm{d}x \mathrm{d}p\\   
+            =&\mathscr{F}^{-1}\left[\mathscr{F}\right(g)]=g(x)
+        \end{align*}
+        所以本征值为实数的本征矢构成了一个\textbf{完备的}正交归一系。
+    \end{thinknote}
+    从上面的例子我们就注意到, 对于连续谱的厄米算符, 如果是观察算符, 那么应该满足连续的封闭性关系和狄拉克意义下的正交归一性：
+    \begin{equation*}
+        \begin{array}{c}
+            \left \langle \psi_\nu   | \psi_{\nu^\prime }  \right \rangle=\delta (\nu -\nu ^\prime ) \\
+            \int_{{\nu _1}}^{{\nu _2}} {d\nu \left| {{\psi _\nu }} \right\rangle \left\langle {{\psi _\nu }} \right|} =\mathbbm{1}
+        \end{array}
+    \end{equation*}
+    再看一例。
+    \begin{thinknote}
+        \textbf{位置算符的本征值和本征矢}
+        \begin{equation}
+            xg_y(x)=yg_y(x)
+        \end{equation}
+        根据$\delta$函数的取样性质可以得出:
+        \[g_y(x)=\delta(x-y),y\in\mathbbm{R}\]
+        \begin{align*}
+            \int g_{y^\prime} ^*(x)g_y(x)\mathrm{d}x & = \int \delta (x-y^\prime )\delta(x-y)\mathrm{d}x\\ 
+            & = \delta (y-y^\prime )
+        \end{align*}
+        \begin{align*}
+            f(x)&=\int\delta(x-y)f(y)\mathrm{d}y\\
+                &=\int\delta(x-y)\int\delta(x-y)f(x)\mathrm{d}x\mathrm{d}y\\
+                &\equiv\int\mathrm{d}y\left | g_y \right \rangle\left \langle g_y  | f \right \rangle   
+        \end{align*}
+    \end{thinknote}
+    我们再次发现, 在连续谱情况下, 对于实本征值对应的本征矢也有和离散谱下类似的性质。
+    \subsection*{可对易观察算符的集合}
+
+
+
+
+
+
+
+
+
+
+
+
+
     \include{appendix.tex}
 \end{document}
