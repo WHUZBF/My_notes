@@ -1286,18 +1286,58 @@
     \end{thinknote}
     我们再次发现, 在连续谱情况下, 对于实本征值对应的本征矢也有和离散谱下类似的性质。
     \subsection*{可对易观察算符的集合}
+    下面的讨论都以离散谱为例。
+    \begin{theorem}{可对易算符$\hat{A}$的本征子空间在$\hat{B}$的作用下不变}
+        \begin{equation*}
+            \left [ \hat A,\hat B \right ] =0\land \hat{A}\left | \psi  \right \rangle =\alpha\left | \psi  \right \rangle \Rightarrow\hat{A}(\hat B\left | \psi  \right \rangle )=\alpha(\hat B\left | \psi  \right \rangle  )
+        \end{equation*}
+        也就是说$\hat{A}$的本征矢被$\hat{B}$作用后仍然是属于同一本征值的本征矢, 也即$\hat{A}$的本征空间在$\hat{B}$的作用下不变。
+    \end{theorem}
+    \begin{theorem}{可对易观察算符的一个性质}
+        若$\left | \psi_1  \right \rangle  $和$\left | \psi_2  \right \rangle  $分别是属于$\hat{A}$的\uwave{不同}本征值的本征矢, 那么:
+        \[\left\langle {{\psi _1}} \right|\hat B\left| {{\psi _2}} \right\rangle \]
+    \end{theorem}
+    使用前面两个定理, 我们可以得到一个基本定理:
+    \begin{theorem}{基本定理}
+        可对易观察算符$\hat A,\hat B $的共同本征矢构成态空间的一个正交归一基。
+    \end{theorem}
+    上面的定理告诉我们对应于两个可对易观察算符, 我们总能找到一组基底使得他们\textbf{同时对角化}。
+    \begin{thinknote}
+        Proof:
 
+        按照我们之前已经提到的本征矢的标记方法, 我们记
+        \[\hat A\left| {{\rm{u}}_n^i} \right\rangle  = {a_n}\left| {{\rm{u}}_n^i} \right\rangle \]
+        并且, 由于$\hat{A}$是观察算符, 所以我们假定我们已经对这些本征矢做了归一化处理, 他们构成了一个完备的正交归一基。所以在这个表象下$\hat{A}$的矩阵是一个
+        对角矩阵我们来看一下$\hat{B}$在这个表象下的矩阵元:
+        \[\left\langle {{\rm{u}}_n^i} \right|\hat B\left| {{\rm{u}}_n^i} \right\rangle \xrightarrow{\text{定理}\uppercase\expandafter{\romannumeral2}}\text{$n\neq n^\prime$时, 矩阵元为$0$}\]
+        假设基底的排列顺序如下:
+        \[\left|u_{1}^{1}\right\rangle,\left|u_{1}^{2}\right\rangle, \cdots,\left|u_{1}^{g_{1}}\right\rangle ; \quad\left|u_{2}^{1}\right\rangle,\left|u_{2}^{2}\right\rangle, \cdots,\left|u_{2}^{g_{2}}\right\rangle ; \quad\left|u_{3}^{1}\right\rangle, \cdots\]
+        
+        那么在这样的排列顺序下, $\hat{B}$的矩阵是一个分块对角阵(\ref{分块对角阵})。
+        我们考察第$k$个本征子空间$\mathscr{E}_k$
+        \begin{itemize}
+            \item $g_k=1$\\
+                   这时$\mathscr{E}_k$这个矩阵块在$\hat{B}$看来也是对角的, 也就是说归一化后的$\left| {{\text{u}}_k} \right\rangle $同时为$\hat A$
+                   和$\hat B$的本征矢。
+            \item $g_k\neq 1$\\
+                   在这种情况下我们不知道$\mathscr{E}_k$这个矩阵块是不是对角的, 表象的这一部分是
+                   \[\left|u_{k}^{1}\right\rangle,\left|u_{k}^{2}\right\rangle, \cdots,\left|u_{1}^{g_{k}}\right\rangle\]
+                   但是可能无法使得$\hat{B}$对角化, 所以需要重新选择, 注意到这些本征矢的线性组合仍然是本征矢, 所以只要我们选取的新基底可以使用原先的$\mathscr{E}_k$这个矩阵块
+                   对应的基底线性表示, 那么在这个新的表象下, $\hat{A}$仍然是对角化的。
 
+                   根据第一个定理, 我们可以得出${\left. {\hat B} \right|_{\mathscr{E}_k}}$是$\mathscr{E}_k$上的一个算符, 而且因为$\hat{B}$是观察算符
+                   , 所以${\left. {\hat B} \right|_{\mathscr{E}_k}}$是$\mathscr{E}_k$是厄米的, 这里再使用有限维向量空间中的复谱定理, 始终可以在$\mathscr{E}_k$中
+                   选取一个正交归一基, 使得${\left. {\hat B} \right|_{\mathscr{E}_k}}$对角化, 而这一组基很显然刚好就是$\hat{A}$和$\hat{B}$的公共本征矢。
+        \end{itemize}
 
-
-
-
-
-
-
-
-
-
-
+        我们对于所有的本征子空间都做出这样的选取后, 由于本征空间的和是直和(不同本征值对应的本征矢显然线性无关), 我们把这些基并起来便构成了$\mathscr{E}_k$的一个基底。
+        \hfill $\square$\par
+    \end{thinknote}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.3]{fig/3-1.eps}
+        \caption{$\hat{B}$的矩阵}
+        \label{分块对角阵}
+    \end{figure}
     \include{appendix.tex}
 \end{document}
