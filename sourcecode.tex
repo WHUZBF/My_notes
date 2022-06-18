@@ -1139,9 +1139,9 @@
     \end{equation*}
     \chapter{形式化理论}
     \section{可观测量}
-    虽然量子力学需要引入虚数, 但是实际上实验测得的量都是实数, 也就是说可观测量$Q$的测量值始终是实数。
+    虽然量子力学需要引入虚数, 但是实际上实验测得的量都是实数, 也就是说可观测量$Q$的测量值始终是实数。\footnote[1]{与书上顺序不同, 我假定已经看过附录B, 对狄拉克符号已经有所了解}
     \[Q = {Q^*} \Rightarrow \left\langle Q \right\rangle  = {\left\langle Q \right\rangle ^*}\]
-    第一章我们就强调了, 计算某个量的平均值时, 把\textbf{这个量对应的算符}夹在波函数之间后积分即可\footnote[1]{其实更好的记号是狄拉克符号$\left\langle \Psi  \right|\hat Q\left| \Psi  \right\rangle $}：
+    第一章我们就强调了, 计算某个量的平均值时, 把\textbf{这个量对应的算符}夹在波函数之间后积分即可\footnote[2]{其实更好的记号是狄拉克符号$\left\langle \Psi  \right|\hat Q\left| \Psi  \right\rangle $}：
     \[\left\langle Q \right\rangle  = \int {{\Psi ^*}\hat Q\Psi dx}  = \left\langle {\Psi }\mathrel{\left | {\vphantom {\Psi  {\hat Q\Psi }}}\right. \kern-\nulldelimiterspace}
     {{\hat Q\Psi }} \right\rangle ,{\left\langle Q \right\rangle ^*} = \left\langle {{\hat Q\Psi }}\mathrel{\left | {\vphantom {{\hat Q\Psi } \Psi }}\right. \kern-\nulldelimiterspace}
     {\Psi } \right\rangle \]
@@ -1214,7 +1214,7 @@
     对于有限维向量空间, 根据\uwave{复谱定理}, 厄米算符$\hat{Q}$一定可对角化, $\mathscr{E}$一定可以写成$g_n$的直和形式, 上面确定的正交归一系一定是$\mathscr{E}$的一个基底。
     但是这个定理在无限维向量空间中并不能推广。
     \begin{define}{观察算符}
-        对于厄米算符$\hat{Q}$, 如果$\mathscr{E}$可以使用它的一组本征矢作为基底, 也就是说它的正交归一系满足:
+        对于厄米算符$\hat{Q}$, 如果$\mathscr{E}$可以使用它的一组本征矢作为基底, 也就是说\uwave{它的正交归一系满足}:
         \begin{equation}
             \sum\limits_{n = 1}^\infty  {\sum\limits_{i = 1}^{{g_n}} {\left| {\psi _n^i} \right\rangle \left\langle {\psi _n^i} \right|} }=\mathbbm{1}
         \end{equation}
@@ -1339,5 +1339,80 @@
         \caption{$\hat{B}$的矩阵}
         \label{分块对角阵}
     \end{figure}
+    \section{广义概率诠释}
+    薛定谔只是捣鼓出来了一个波函数方程, 但全然不知波函数方程的物理意义是什么, 前面我们说了它的模方可以解释为粒子位置分布的概率密度函数, 这是广义解释的一个特例。
+    \begin{proposition}{广义概率诠释}
+        \setlength\parindent{2em}先考虑离散谱情况。我们对一个量子态$\Psi(x,t)$进行测量, 会得到观察算符$\hat{Q}$的一个本征值$q_n$, 而且因为测量, 体系会坍缩为$q_n$对应的一个本征态$\left|u_n^i\right\rangle$(已正交归一化)\footnote[1]{就是前面讲的定值态}, 而具体坍缩到这个本征态
+        的概率为:
+        \begin{equation}
+            \mathscr{P}_n^i=\left | c_n^i \right | ^2,c_n^i=\left\langle {{{\text{u}}_n^i}}
+            \mathrel{\left | {\vphantom {{{\text{u}}_n^i} \Psi }}
+            \right. \kern-\nulldelimiterspace}
+            {\Psi } \right\rangle 
+        \end{equation}
+        那么, 测量值为$q_n$的概率为:
+            \[\mathscr{P}_n=\sum\limits_{i=1}^{g_n}\mathscr{P}_n^i\]
+        
+        \setlength\parindent{2em}对于连续谱, 我们前面提到过其本征矢是没有物理意义的, 也就是说, 进行测量时, 体系不会坍缩为一个确定的本征态, 而是一个很狭窄的
+        范围, 因为只有这些本征矢组合成的波包才有确定的物理意义。
+
+        \setlength\parindent{2em}对于非简并连续谱, 测量值在$\alpha\sim\alpha+\mathrm{d}\alpha$范围内的概率为:
+        \begin{equation}
+            \mathscr{P}(\alpha)\mathrm{d}\alpha=\left|c(\alpha)\right|^2\mathrm{d}\alpha,c(\alpha)=\left \langle u_\alpha  | \Psi  \right \rangle 
+        \end{equation}
+        这时, $\mathscr{P}(\alpha)$已经过渡为一个概率密度函数。
+
+        \setlength\parindent{2em}至于连续非简并、部分连续部分离散等等情况都很容易依照上面的思路直接进行推广。
+    \end{proposition}
+    下面的叙述都以离散非简并情况为例, 对于一般情况也很好扩展。
+
+    对于观察算符, 我们已经知道它的正交归一系是完备的, 所以态可以展开成:
+    \[\left | \Psi  \right \rangle =\sum\limits_{n=1}^{\infty } c_n\left | u_n \right \rangle \]
+    $c_n$就是态在某个本征态上的分量, 这样来看似乎前面的概率诠释也很有道理, 但是注意, 概率一定要取这个分量的模方。
+
+    由于波函数在任何时间都是归一化的, 那么:
+    \begin{equation*}
+        1 = \left\langle {\Psi }
+    \mathrel{\left | {\vphantom {\Psi  \Psi }}
+    \right. \kern-\nulldelimiterspace}
+    {\Psi } \right\rangle  = \left\langle \Psi  \right|\mathbbm{1}\left| \Psi  \right\rangle  = \sum\limits_n {\left\langle {\Psi }
+    \mathrel{\left | {\vphantom {\Psi  {{u_n}}}}
+    \right. \kern-\nulldelimiterspace}
+    {{{u_n}}} \right\rangle \left\langle {{{u_n}}}
+    \mathrel{\left | {\vphantom {{{u_n}} \Psi }}
+    \right. \kern-\nulldelimiterspace}
+    {\Psi } \right\rangle }  = \sum\limits_n {c_n^*{c_n} = } \sum\limits_n {{{\left| {{c_n}} \right|}^2}} 
+    \end{equation*}
+    从概率的角度看, 这个理论完全自洽。
+    \begin{align*}
+        \left\langle \Psi \right| \hat{Q}  \left| \Psi  \right\rangle & = \left\langle \Psi \right| \hat{Q} \mathbbm{1} \left| \Psi  \right\rangle = \sum_{n} \left\langle \Psi \right| \hat{Q} \left| u_n  \right \rangle\left \langle u_n  | \Psi  \right \rangle \\ 
+        &=\sum_{n} q_n\left\langle  \Psi  |u_n  \right\rangle\left \langle u_n  | \Psi  \right \rangle\\
+        &=\sum_{n} q_n\left| c_n \right| ^2\\
+        &=\left\langle Q \right\rangle 
+    \end{align*}
+    我们得到了计算测量平均值的一般方法, 与前面提到的方法完全一致：
+    \begin{equation}
+        \boxed{\left\langle Q \right\rangle=\left\langle \Psi \right| \hat{Q}  \left| \Psi  \right\rangle}
+    \end{equation}
+    \begin{thinknote}
+        \setlength\parindent{2em}前面已经算出了位置和动量算符的本征值及本征矢, 那么粒子位置的概率分布函数:
+        \begin{align*}
+            c\left ( y \right ) & = \left \langle g_y| \Psi  \right \rangle \\& = \int \Psi \left ( x,t \right ) \delta(x-y)\mathrm{d}x
+            \\&=\Psi \left ( y,t \right ) 
+        \end{align*}
+        和波函数是完全一致的, 波尔概率诠释也就是这个内容。
+
+        \setlength\parindent{2em}粒子动量的密度分布函数也可以计算出来:
+        \begin{align*}
+            c\left ( p \right ) & = \left \langle f_p  | \Psi  \right \rangle \\ & = \frac{1}{\sqrt{2\pi\hbar} } \int  \Psi(x,t)e^{-\frac{ipx}{\hbar } }\\
+            &\equiv \Phi(p,t)
+        \end{align*}
+    \end{thinknote}
+    这里引入了一个新的概念, \textbf{动量空间波函数}, $\Phi(p,t)$. 原先的$\Psi(x,t)$可以称为\textbf{位置空间波函数}。他们之间的关系就是傅里叶变换\footnote[1]{量子力学里面更喜欢这样写傅里叶变换, 很容易证明它和我们之前讲自由粒子波函数时引进的傅里叶变换的等价性}:
+    \begin{align}
+        &\Phi(p,t)=\frac{1}{\sqrt{2\pi\hbar}}\int\Psi(x,t)e^{-\frac{ipx}{\hbar}}\mathrm{d}x\\
+        &\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int\Phi(p,t)e^{-\frac{ipx}{\hbar}}\mathrm{d}p
+    \end{align}
+    两个表示粒子状态的波函数都非常重要。
     \include{appendix.tex}
 \end{document}
