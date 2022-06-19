@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  18 JUN 2022 14:30
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  19 JUN 2022 23:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2097,7 +2097,10 @@ Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [42] [43]
+ [42]
+Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
+Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
+ [43] [44] [45] [46]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2107,7 +2110,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[44
+[47
 
 
 ]
@@ -2118,7 +2121,7 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.05624> not available
 (Font)              size <14.4> substituted on input line 42.
 
-[45] [46]
+[48] [49]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2126,66 +2129,66 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[47] [48] [49]
+[50] [51] [52]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [50] [51]
+ [53] [54]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [52] [53] [54] [55] [56]
+ [55] [56] [57] [58] [59]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [57] [58] [59]
+ [60] [61] [62]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 473--496
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[60
+[63
 
-] [61] [62]
+] [64] [65]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 599--606
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[63] [64] [65] [66] [67]
+[66] [67] [68] [69] [70] [71]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [68] [69] [70]
+ [72] [73]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [71]
+ [74]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [72]
-Overfull \hbox (4.90611pt too wide) detected at line 892
+ [75]
+Overfull \hbox (4.90611pt too wide) detected at line 904
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[73] [74] [75] [76] [77]
+[76] [77] [78] [79]
 附录 C
-[78
+[80
 
-]) [79] (./sourcecode.aux (./appendix.aux))
+]) [81] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 09A9CE351F8FFD6A3429F67D0761AD6C;4576.
+(rerunfilecheck)             Checksum: 2051CDEEC0F5B371FBF0BF15EDF4D4E5;4701.
  ) 
 Here is how much of TeX's memory you used:
- 50781 strings out of 476533
- 1299504 string characters out of 5818886
- 1812688 words of memory out of 5000000
- 70002 multiletter control sequences out of 15000+600000
+ 50784 strings out of 476533
+ 1299538 string characters out of 5818886
+ 1812775 words of memory out of 5000000
+ 70005 multiletter control sequences out of 15000+600000
  527839 words of font info for 260 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (82 pages).
+Output written on sourcecode.pdf (84 pages).

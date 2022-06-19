@@ -1414,5 +1414,146 @@
         &\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int\Phi(p,t)e^{-\frac{ipx}{\hbar}}\mathrm{d}p
     \end{align}
     两个表示粒子状态的波函数都非常重要。
+    \begin{proposition}{算符的两种不同形式}
+        我们之前提到的$\hat x=x,\hat p=-i\hbar\frac{\partial}{\partial x}$实际上时算符在位置空间\footnote[1]{暂时先这么说, 实际上应该说成$\left|\bm{r}\right\rangle$}下的描述, 在动量空间中应该是\footnote[2]{为了和前面区分, 我改用$\tilde{}$表示算符}:
+        \[\tilde{x}=i\hbar\frac{\partial}{\partial p},\tilde{p}=p\]
+        或者更一般的, 使用两种不同空间波函数求力学量平均值应该写成:
+        \begin{equation}
+            \langle Q(x, p, t)\rangle=\left\{\begin{array}{ll}
+                \int \Psi^{*} \hat{Q}\left(x,-i \hbar \frac{\partial}{\partial x}, t\right) \Psi d x, & \text { in position space; } \\
+                \int \Phi^{*} \hat{Q}\left(i \hbar \frac{\partial}{\partial p}, p, t\right) \Phi d p, & \text { in momentum space. }
+                \end{array}\right.
+        \end{equation}
+    \end{proposition}
+    概率诠释是量子力学逻辑体系里面的一条基本假设, 这条假设之前的一个假设是我们上一节提到的, \textbf{每个可观测量对应一个观察算符}。
+    \section{不确定性原理}
+    在知晓广义概率诠释之后, 我们下面规定$\left\langle Q \right\rangle$, 即观测量的平均值, 有时也索性直接写成$\left\langle \hat Q \right\rangle$, 它
+    和$\left\langle \Psi \right| \hat{Q}  \left| \Psi  \right\rangle$直接对应。后面的推导有时也不会严格使用狄拉克符号, 但请记住下面的转换关系：
+    \[\left|\hat Q\Psi\right\rangle=\hat Q\left|\Psi\right\rangle, \left\langle \hat Q \Psi\right|=\left\langle \Psi\right|\hat{Q}^\dagger\]
+    \begin{theorem}{不确定性原理}
+        对于任意两个可观测量$\hat{A}, \hat{B}$, 对同一个系综测量后得到的方差总是满足下面的关系式：
+        \begin{equation}
+            \label{不确定性原理}
+            \boxed{
+                \sigma_A\sigma_B\geq\frac{1}{2}\left|\left\langle\left[\hat A,\hat B\right]\right\rangle\right|
+            }
+        \end{equation}
+    \end{theorem}
+    \begin{thinknote}
+        Proof:
+        \begin{align}
+            &\sigma _A^2 = \left\langle {{\left( {\hat A - \left\langle A \right\rangle } \right)\Psi }}
+            \mathrel{\left | {\vphantom {{\left( {\hat A - \left\langle A \right\rangle } \right)\Psi } {\left( {\hat A - \left\langle A \right\rangle } \right)\Psi }}}
+            \right. \kern-\nulldelimiterspace}
+            {{\left( {\hat A - \left\langle A \right\rangle } \right)\Psi }} \right\rangle  \equiv \left\langle {f}
+            \mathrel{\left | {\vphantom {f f}}
+            \right. \kern-\nulldelimiterspace}
+            {f} \right\rangle \\
+            &\sigma _B^2 = \left\langle {{\left( {\hat B - \left\langle B \right\rangle } \right)\Psi }}
+            \mathrel{\left | {\vphantom {{\left( {\hat B - \left\langle B \right\rangle } \right)\Psi } {\left( {\hat B - \left\langle B \right\rangle } \right)\Psi }}}
+            \right. \kern-\nulldelimiterspace}
+            {{\left( {\hat B - \left\langle B \right\rangle } \right)\Psi }} \right\rangle  \equiv \left\langle {g}
+            \mathrel{\left | {\vphantom {g g}}
+            \right. \kern-\nulldelimiterspace}
+            {g} \right\rangle 
+        \end{align}
+        根据Cauchy-Schwarz不等式, 可以得到：
+        \[\sigma _A^2\sigma _B^2 = \left\langle {f}
+        \mathrel{\left | {\vphantom {f f}}
+        \right. \kern-\nulldelimiterspace}
+        {f} \right\rangle \left\langle {g}
+        \mathrel{\left | {\vphantom {g g}}
+        \right. \kern-\nulldelimiterspace}
+        {g} \right\rangle  \geqslant {\left| {\left\langle {f}
+        \mathrel{\left | {\vphantom {f g}}
+        \right. \kern-\nulldelimiterspace}
+        {g} \right\rangle } \right|^2}\]
+        任意复数可以拆分实部和虚部：
+        \[{\left| {\left\langle {f}
+        \mathrel{\left | {\vphantom {f g}}
+        \right. \kern-\nulldelimiterspace}
+        {g} \right\rangle } \right|^2} = {\left( {\operatorname{Re} \left\langle {f}
+        \mathrel{\left | {\vphantom {f g}}
+        \right. \kern-\nulldelimiterspace}
+        {g} \right\rangle } \right)^2} + {\left( {\operatorname{Im} \left\langle {f}
+        \mathrel{\left | {\vphantom {f g}}
+        \right. \kern-\nulldelimiterspace}
+        {g} \right\rangle } \right)^2} \geqslant {\left( {\operatorname{Im} \left\langle {f}
+        \mathrel{\left | {\vphantom {f g}}
+        \right. \kern-\nulldelimiterspace}
+        {g} \right\rangle } \right)^2}\]
+        \[\operatorname{Im} \left\langle {f}
+        \mathrel{\left | {\vphantom {f g}}
+        \right. \kern-\nulldelimiterspace}
+        {g} \right\rangle  = \frac{{\left\langle {f}
+        \mathrel{\left | {\vphantom {f g}}
+        \right. \kern-\nulldelimiterspace}
+        {g} \right\rangle  - \left\langle {g}
+        \mathrel{\left | {\vphantom {g f}}
+        \right. \kern-\nulldelimiterspace}
+        {f} \right\rangle }}{{2\mathrm{i}}}\]
+        \begin{align*}
+            \left\langle {f}
+            \mathrel{\left | {\vphantom {f g}}
+            \right. \kern-\nulldelimiterspace}
+            {g} \right\rangle  &= \left\langle {{\left( {\hat A - \left\langle A \right\rangle } \right)\Psi }}
+            \mathrel{\left | {\vphantom {{\left( {\hat A - \left\langle A \right\rangle } \right)\Psi } {\left( {\hat B - \left\langle B \right\rangle } \right)\Psi }}}
+            \right. \kern-\nulldelimiterspace}
+            {{\left( {\hat B - \left\langle B \right\rangle } \right)\Psi }} \right\rangle  \\ 
+                &= \left\langle {\Psi }
+            \mathrel{\left | {\vphantom {\Psi  {\left( {\hat A - \left\langle A \right\rangle } \right)\left( {\hat B - \left\langle B \right\rangle } \right)\Psi }}}
+            \right. \kern-\nulldelimiterspace}
+            {{\left( {\hat A - \left\langle A \right\rangle } \right)\left( {\hat B - \left\langle B \right\rangle } \right)\Psi }} \right\rangle  \\ 
+                &= \left\langle \Psi  \right|\hat A\hat B\left| \Psi  \right\rangle  - \left\langle A \right\rangle \left\langle \Psi  \right|\hat B\left| \Psi  \right\rangle  - \left\langle B \right\rangle \left\langle \Psi  \right|\hat A\left| \Psi  \right\rangle  + \left\langle A \right\rangle \left\langle B \right\rangle \left\langle {\Psi }
+            \mathrel{\left | {\vphantom {\Psi  \Psi }}
+            \right. \kern-\nulldelimiterspace}
+            {\Psi } \right\rangle  \\ 
+                &= \left\langle {\hat A\hat B} \right\rangle  - \left\langle A \right\rangle \left\langle B \right\rangle  \\ 
+            \end{align*} 
+        第二个等号成立是因为$\left\langle A \right\rangle \in \mathbbm{R}$且$\hat A$是厄米算符, 所以${\hat A - \left\langle A \right\rangle }$是厄米的。
+
+        同理可得：
+        \[\left\langle {g}\mathrel{\left | {\vphantom {g f}}\right. \kern-\nulldelimiterspace}{f} \right\rangle  = \left\langle {\hat B\hat A} \right\rangle  - \left\langle A \right\rangle \left\langle B \right\rangle \]
+        结合上面的等式立即得到:
+        \[\sigma _A^2\sigma _B^2 = {\left| {\frac{1}{{2i}}\left\langle {\left[ {\hat A,\hat B} \right]} \right\rangle } \right|^2}\]
+        推导不确定性关系不需要额外的假设, 它可以看作是概率诠释和柯西不等式的一个推论。
+        \hfill $\square$\par
+    \end{thinknote}
+    这个不等式中, 所谓的\uwave{不确定度}就蕴含在$\sigma$中, 它就表征了我们对一个系综测量, 整个测量结果的数据分散程度, 偏离平均值的程度。
+    对于位置和动量之间的不确定性正是上面的普遍关系式的一个推论:
+    \begin{equation}
+        \label{x-p 不确定性}
+        {\sigma _x}{\sigma _p} \geqslant \frac{1}{2}\left| {\left\langle {\left[ {\hat x,\hat p} \right]} \right\rangle } \right| = \frac{1}{2}\left| {\left\langle {i\hbar } \right\rangle } \right| = \frac{\hbar }{2}
+    \end{equation}
+    \begin{history}{海森堡对不确定性关系的理解}
+        \setlength\parindent{2em}最初解释不确定性关系的时候, 海森堡总是认为它和测量是相关的, 因此有了个著名的思想实验。大致说的是当我们对一个电子进行测量时, 我们需要使用一个光子
+        去撞击它, 也就是说会对它本身进行干扰, 我们对位置了解的越多, 那么我们对它的干扰也就越大, 我们对动量的了解程度就越少, 反之, 我们对动量了解的越多, 对
+        位置信息了解的也越少了。
+        
+        \setlength\parindent{2em}这是海森堡当时对不确定性原理的解释, 因此不确定性原理也在上世纪常常被称为测不准原理, 事实上这个理解是很有问题的, 不确定性原理是量子力学不同于经典力学的
+        一个原理, 是粒子本身的性质, 是一个普遍物理规律, 和你是否进行测量是毫无关系的。
+    \end{history}
+    在前面我们证明过, 两个可对易观察算符可以同时对角化。我们称在这两个\textbf{可观测量是相容的}, 从不确定性原理的角度理解就是这两个观测量是可以同时测量的。
+    测量两个量的顺序是无关紧要的, 测量$A$之后测量$B$也不会让第一次测量的信息得到损失, 反而会得到补充, 这一切的一切定性点来看就是两次坍缩得到的本征态同时是两个
+    算符的本征态。仔细分析有点复杂, 可以参考科恩第三章$\S B$。
+
+    我们再来看一下不等式\ref{不确定性原理}等号成立的\uwave{必要条件}:
+    \[g = cf \wedge \operatorname{Re} \left\langle {f}\mathrel{\left | {\vphantom {f g}}\right. \kern-\nulldelimiterspace}{g} \right\rangle  = 0,c\in \mathbbm{C}\]
+    根据内积的正定性, 直接得到$c$是一个纯虚数, 我们记作$\mathrm{i}a$, 其中$a\in\mathbbm{R}$
+
+    回到动量位置不确定性关系上来, 如果式\ref{x-p 不确定性}可以取等号, 那么根据前面分析
+    \[\left( {\hat p - \left\langle p \right\rangle } \right)\Psi  = ia\left( {\hat x - \left\langle x \right\rangle } \right)\Psi  \Rightarrow \left( { - i\hbar \frac{d}{{dx}} - \left\langle p \right\rangle } \right)\Psi  = ia\left( {x - \left\langle x \right\rangle } \right)\Psi \]
+    解微分方程得到波函数的形式是\footnote[1]{$\left\langle x \right\rangle,\left\langle p \right\rangle$和位置$x$无关。}:
+    \begin{equation}
+        \Psi  = A{e^{ - \frac{a}{{2\hbar }}{{\left( {\hat x - \left\langle x \right\rangle } \right)}^2}}}{e^{\frac{i}{\hbar }\left\langle p \right\rangle x}}
+    \end{equation}
+    这显然是一个高斯分布的形式。当然, 只是当某个时刻波函数有这个形式时式\ref{x-p 不确定性}取等号, 之后波函数随时间演化后可能就不再满足取等条件了。
+    \subsection*{时间能量不确定性关系}
+    很多书籍把不确定性关系也写作\[\Delta {x} \Delta {p} \ge \frac{\hbar}{{2 }} \]
+    对应的还会有一个时间和能量之间的不确定性关系\footnote[1]{从狭义相对论动力学的四位动量和四维时空坐标中你可以看出这种对应性}:
+    \[\Delta {t} \Delta {E} \ge \frac{\hbar}{{2 }}\]
+    
+    这两个公式看起来非常相似, 但是物理实质却有很大的区别, 从$\Delta t$就可以看出来。难道指的是时间的标准差？时间只是演化之中的一个参数而已, 何来标准差一说。
+    所以从我们下面的推导中, 要格外注意两个公式的不同之处。
     \include{appendix.tex}
 \end{document}

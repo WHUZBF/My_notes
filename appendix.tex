@@ -678,6 +678,18 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
 $\mathscr{E}^*$不是同构的, 而且后者比前者要\uwave{大一些}。比如$\delta$函数, 不是平方可积的, 但和$\mathscr{E}$中的矢量的内积始终是有限值, 所以是一个线性泛函, 但
 你无法找到一个右矢与之对应, 这个时候只能引入广义右矢消除这种不对称, 但广义右矢就像前面说的连续基底一样, 没有物理意义, 只是方便中间过程的计算。
 
+两个右矢之间的标量积我们今后只使用狄拉克符号$\left\langle \phi | \psi \right\rangle$去描述, 性质如下:
+\begin{equation}
+    \boxed{
+        \begin{array}{l}
+            \langle\varphi \mid \psi\rangle=\langle\psi \mid \varphi\rangle^{*} \\
+            \left\langle\varphi \mid \lambda_{1} \psi_{1}+\lambda_{2} \psi_{2}\right\rangle=\lambda_{1}\left\langle\varphi \mid \psi_{1}\right\rangle+\lambda_{2}\left\langle\varphi \mid \psi_{2}\right\rangle \\
+            \left\langle\lambda_{1} \varphi_{1}+\lambda_{2} \varphi_{2} \mid \psi\right\rangle=\lambda_{1}^{*}\left\langle\varphi_{1} \mid \psi\right\rangle+\lambda_{2}^{*}\left\langle\varphi_{2} \mid \psi\right\rangle \\
+            \langle\psi \mid \psi\rangle \text { 为正实数, 当而且仅当 }|\psi\rangle=0 \text { 时, 其值为零. }
+        \end{array}
+    }
+\end{equation}
+
 \subsection*{线性算符}
 数学上喜欢把这种值域和定义域相等的映射称为算子, 我们称为算符。
 \begin{define}{线性算符}
@@ -849,7 +861,7 @@ $$\left\{\begin{array}{l}\text { 将常数换成其共轭复数 } \\ \text { 将
     \centering
     \includegraphics[width=4cm,height=2cm]{fig/b-2.eps}
 \end{figure}
-\newpage
+
 至此, 我们已经初步建立了算符和态矢量的矩阵表示理论, 狄拉克符号的组合也是左矢右矢或者算符, 也可以根据上面的定义去得到某基底下的矩阵表述。我们下面通过几个例子
 说明, 你计算任何狄拉克符号的矩阵表述时, 只需要把所有的狄拉克符号按照顺序写下其矩阵表述, 然后\textbf{再按照矩阵的运算法则计算即可}。
 
