@@ -19,18 +19,18 @@
 \contentsline {section}{\numberline {3.2}观察算符和算符的谱}{36}{section.3.2}%
 \contentsline {section}{\numberline {3.3}广义概率诠释}{41}{section.3.3}%
 \contentsline {section}{\numberline {3.4}不确定性原理}{43}{section.3.4}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{47}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{47}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{48}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{50}{section.A.3}%
-\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{54}{section.A.4}%
-\contentsline {section}{\numberline {A.5}直角坐标里的张量}{56}{section.A.5}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{63}{appendix.B}%
-\contentsline {section}{\numberline {B.1}向量空间}{63}{section.B.1}%
-\contentsline {section}{\numberline {B.2}内积}{64}{section.B.2}%
-\contentsline {section}{\numberline {B.3}波函数的空间}{66}{section.B.3}%
-\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{68}{section.B.4}%
-\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{73}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{77}{section.B.6}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{80}{appendix.C}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{48}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{48}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{49}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{51}{section.A.3}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{55}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{57}{section.A.5}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{64}{appendix.B}%
+\contentsline {section}{\numberline {B.1}向量空间}{64}{section.B.1}%
+\contentsline {section}{\numberline {B.2}内积}{65}{section.B.2}%
+\contentsline {section}{\numberline {B.3}波函数的空间}{67}{section.B.3}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{69}{section.B.4}%
+\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{74}{section.B.5}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{78}{section.B.6}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{81}{appendix.C}%
 \contentsfinish 

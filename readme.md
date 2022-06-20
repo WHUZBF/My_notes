@@ -11,3 +11,10 @@
 主要参考的就是*Griffiths*的量子力学英文版和*Cohen*的大部头，比如第三章的形式理论讲述的方式和*Griffiths*的就有很大的不同，直接引入Dirac符号，正是*Cohen*书中第二章的内容。向量分析附录主要参考的是*Mathews*的*Vector Calculus*，内容基础但是讲的非常细致(~~非常适合我这种渣渣~~)。
 
 另外还看了下[斯坦福教授莱昂纳德的理论物理量子力学讲座](https://www.bilibili.com/video/BV1Wa411Y7gC?spm_id_from=333.337.search-card.all.click)。也参考了*David Tong*[量子力学部分的讲义](http://www.damtp.cam.ac.uk/user/tong/quantum.html)。国内的中文书也经常查，可以补充一些遗漏的地方。
+
+# 联系方式
+如果发现笔记中存在问题，欢迎讨论！！！
+
+qqEmail：1271570053@qq.com
+
+学校邮箱：2021302022016@whu.edu.cn(~~话说当时为什么不设计一个好点的别名。。。~~)

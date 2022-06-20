@@ -33,6 +33,7 @@
 \usepackage[]{newtxmath}
 \usepackage[]{bbm}
 \usepackage[]{relsize}
+\usepackage[]{braket}
 
 % 定义公式环境
 \newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
@@ -1549,11 +1550,59 @@
     \end{equation}
     这显然是一个高斯分布的形式。当然, 只是当某个时刻波函数有这个形式时式\ref{x-p 不确定性}取等号, 之后波函数随时间演化后可能就不再满足取等条件了。
     \subsection*{时间能量不确定性关系}
-    很多书籍把不确定性关系也写作\[\Delta {x} \Delta {p} \ge \frac{\hbar}{{2 }} \]
+    很多书籍把不确定性关系也写作
+    \begin{equation}
+       \Delta {x} \Delta {p} \ge \frac{\hbar}{{2 }} 
+    \end{equation}
     对应的还会有一个时间和能量之间的不确定性关系\footnote[1]{从狭义相对论动力学的四位动量和四维时空坐标中你可以看出这种对应性}:
-    \[\Delta {t} \Delta {E} \ge \frac{\hbar}{{2 }}\]
+    \begin{equation}
+        \label{E-t}
+        \Delta {t} \Delta {E} \ge \frac{\hbar}{{2 }}
+    \end{equation}
+    
     
     这两个公式看起来非常相似, 但是物理实质却有很大的区别, 从$\Delta t$就可以看出来。难道指的是时间的标准差？时间只是演化之中的一个参数而已, 何来标准差一说。
     所以从我们下面的推导中, 要格外注意两个公式的不同之处。
+    \begin{equation}
+        \label{求导式子}
+        \frac{d}{d t}\langle Q\rangle=\frac{d}{d t}\langle\Psi|\hat{Q}| \Psi\rangle=\Braket{\frac{\partial \Psi}{\partial t}|\hat{Q}| \Psi}+\Braket{\Psi|\frac{d \hat{Q}}{d t}|\Phi}+\Braket{\Psi|\hat{Q}| \frac{\partial \Psi}{\partial t}}
+    \end{equation}
+    上面的求导具体过程可以使用定义直接推导, 有点像实分析中三个函数相乘的导数公式。
+    
+    含时薛定谔方程可以写为:
+    \[i\hbar\frac{\partial \Psi}{\partial t}=\hat H\Psi\Rightarrow\frac{\partial \Psi}{\partial t}=-\frac{i\hat H}{\hbar}\Psi\]
+    代入\ref{求导式子}得到:
+    \begin{align*}
+        \frac{d\braket{Q}}{dt}&=\Braket{\frac{\hat{H}}{i\hbar}\Psi |\hat{Q}|\Psi}+\Braket{\Psi|\frac{d \hat{Q}}{d t}|\Phi}+\Braket{\Psi|\hat{Q}| \frac{\hat H}i\hbar\Psi}\\
+        &=\frac{i}{\hbar}\Braket{\Psi|\hat H\hat Q|\Psi}+\Braket{\Psi|\frac{d \hat{Q}}{d t}|\Phi}-\frac{i}{\hbar}\Braket{\Psi|\hat Q\hat H|\Psi}\\
+        &=\frac{i}{\hbar}\Braket{\Psi|\left[\hat H,\hat Q\right]|\Psi}+\Braket{\frac{\partial \hat Q}{\partial t}}
+    \end{align*}
+    也就是说对于任何的可观测量, 我们可以得到它的平均值随时间变化的规律, 是与体系的哈密顿算符(量)之间相关的：
+    \begin{equation}
+        \label{广义欸费斯托定理}
+        \boxed{
+            \frac{d\braket{Q}}{dt}=\frac{i}{\hbar}\Braket{\Psi|\left[\hat H,\hat Q\right]|\Psi}+\Braket{\frac{\partial \hat Q}{\partial t}}
+        }
+    \end{equation}
+    一般来说, 很多算符都是不显含时间的, 与时间无关, 我们着重研究这些算符, 式\ref{广义欸费斯托定理}写成:
+    \[\frac{d\braket{Q}}{dt}=\frac{i}{\hbar}\Braket{\Psi|\left[\hat H,\hat Q\right]|\Psi}\]
+    又因为$\hat{H}$和$\hat{Q}$都是两个可观测量, 那么由不确定性原理有：
+    \[\sigma_H\sigma_Q\geq\frac{1}{2}\left|\Braket{\left[\hat H,\hat Q\right]}\right|\]
+    联立以上两式, 得：
+    \begin{equation}
+        \label{H-Q}
+        \sigma_H\sigma_Q\geq\frac{\hbar}{2}\left|\frac{d\braket{Q}}{dt}\right|
+    \end{equation}
+    由于哈密顿量对应的是体系的能量, 所以我们把$\sigma_H$记作$\Delta E$, 为了凑出不确定性原理, 我们\textbf{定义}$\Delta t$为：
+    \begin{equation}
+        \sigma_Q=\left|\frac{d\braket{Q}}{dt}\right|\Delta t
+    \end{equation}
+    
+    它确实具有时间量纲, 可见这个时候, \ref{E-t}和我们关注的可观测量是相关的。按照上面的公式你可以严格去验证不确定性原理, 但是这通常很麻烦, 借用计算机方面的
+    一个词语, \textbf{时间能量不确定性关系又很好的鲁棒性}。所以我们一半对于$\Delta t$的解释很随意, 用来进行一些估算是很好的, 根据$\Delta t$的定义, 其实我们也有理由
+    说：\textbf{\textcolor{red}{$\Delta t$可以解释为系统产生一个“显著”的变化所需要的时间}}。
+    \begin{thinknote}
+        
+    \end{thinknote}
     \include{appendix.tex}
 \end{document}
