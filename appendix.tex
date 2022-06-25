@@ -506,7 +506,7 @@ $$L_i=I_{ij}\Omega_j$$
 选取了一组基后, 我们就可以使用一个$n$元数组来表示向量:\[\left| \alpha  \right\rangle  = {a_1}\left| {{e_1}} \right\rangle  + {a_2}\left| {{e_2}} \right\rangle  + \ldots + {a_n}\left| {{e_n}} \right\rangle  \leftrightarrow \left( {{a_1},{a_2},\ldots,{a_n}} \right)\]
 这其实就是向量的矩阵表示, 基的选取不是唯一的, 所以不同基下的表示形式可能会有很大的区别。
 \section{内积}
-内积就是一个$\mathscr{A}\times\mathscr{A}\leftarrow\mathbb{F}$的一个映射, 在数学中常用$\langle \alpha ,\beta \rangle $表示, 这里使用物理学记号
+内积就是一个$\mathscr{A}\times\mathscr{A}\rightarrow\mathbb{F}$的一个映射, 在数学中常用$\langle \alpha ,\beta \rangle $表示, 这里使用物理学记号
 $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \kern-\nulldelimiterspace}{\beta } \right\rangle $表示。
 \begin{define}{内积}
     \begin{itemize}
@@ -531,7 +531,7 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
         {\alpha } \right\rangle^* \]
     \end{itemize}
 \end{define}
-注意, 数学家定义内积都是要求第二位置的加性和齐性, 所以物理里面很多公式内积的位置和数学都是反过来的。
+注意, 数学家定义内积都是要求第一位置的加性和齐性, 所以物理里面很多公式内积的位置和数学都是反过来的。
 
 定义了内积的空间称为\textbf{内积空间}。内积空间中我们通常选取一组正交归一的基底, 具有性质
 \begin{equation}
@@ -700,6 +700,7 @@ $\mathscr{E}^*$不是同构的, 而且后者比前者要\uwave{大一些}。比�
     \end{itemize}
 \end{define}
 算符乘法定义为:\[( {\hat A\hat B} )\left| \psi  \right\rangle  = \hat A\left( {\hat B\left| \psi  \right\rangle } \right)\]
+算符的乘法满足结合律和左右分配律。
 
 对易子定义为: \[\left[\hat{A},\hat{B}\right]\overset{def}{=}\hat{A}\hat{B}-\hat{B}\hat{A}\]
 \begin{theorem}{对易子常用等式}
@@ -782,6 +783,7 @@ $$\left\{\begin{array}{l}\text { 将常数换成其共轭复数 } \\ \text { 将
 
 \textbf{正交归一性}:
 \begin{lequation}
+    \label{eq:B.12}
     \boxed{
         \begin{array}{c}
             \left \langle u_i  | u_j  \right \rangle = \delta_{ij}\\
@@ -791,14 +793,15 @@ $$\left\{\begin{array}{l}\text { 将常数换成其共轭复数 } \\ \text { 将
 \end{lequation}
 
 \textbf{封闭性}
-\begin{equation}
+\begin{lequation}
+    \label{eq:B.13}
     \boxed{
         \begin{array}{c}
             P_{\{u_i\}}=\sum\limits _{i}\left | u_i  \right \rangle \left\langle u_i\right|= \mathbbm{1}\\
             P_{\{w_\alpha \}}=\int \mathrm{d}\alpha \left | w_\alpha   \right \rangle \left\langle  w_\alpha \right |=\mathbbm{1}
         \end{array}
     }
-\end{equation}
+\end{lequation}
 其实这个封闭性也蛮好理解, 就是这组基张成空间的投影算符刚好是恒等算符, 也就说明了$\mathscr{E}$空间和基矢量张成的空间重合, 也就说明了封闭性。
 
 \subsection*{态矢量和算符的矩阵表示}

@@ -1412,7 +1412,7 @@
     这里引入了一个新的概念, \textbf{动量空间波函数}, $\Phi(p,t)$. 原先的$\Psi(x,t)$可以称为\textbf{位置空间波函数}。他们之间的关系就是傅里叶变换\footnote[1]{量子力学里面更喜欢这样写傅里叶变换, 很容易证明它和我们之前讲自由粒子波函数时引进的傅里叶变换的等价性}:
     \begin{align}
         &\Phi(p,t)=\frac{1}{\sqrt{2\pi\hbar}}\int\Psi(x,t)e^{-\frac{ipx}{\hbar}}\mathrm{d}x\\
-        &\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int\Phi(p,t)e^{-\frac{ipx}{\hbar}}\mathrm{d}p
+        &\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int\Phi(p,t)e^{\frac{ipx}{\hbar}}\mathrm{d}p
     \end{align}
     两个表示粒子状态的波函数都非常重要。
     \begin{proposition}{算符的两种不同形式}
@@ -1427,6 +1427,30 @@
         \end{equation}
     \end{proposition}
     概率诠释是量子力学逻辑体系里面的一条基本假设, 这条假设之前的一个假设是我们上一节提到的, \textbf{每个可观测量对应一个观察算符}。
+    \begin{thinknote}
+        \textbf{例：证明对于定态(能量本征态), 有$\braket{p}=0$。}
+
+        \flushleft{Proof:}
+
+        \setlength\parindent{2em}首先通过计算可以得到下面的关系：
+        \[\left[x,\hat{p}^2\right]=2i\hbar\hat p\Rightarrow\left[x,\hat H\right]=\frac{i\hbar}{m}\hat p\]
+        利用广义概率诠释：
+        \begin{align*}
+            \braket{p}&=\Braket{\Psi|\hat p|\Psi}=\Braket{\psi|\hat p|\psi}\\
+            &=\Braket{\psi|\frac{m}{i\hbar}\left[x,\hat H\right]|\psi}\\
+            &=\frac{m}{i\hbar}\left(\Braket{\psi|x\hat H|\psi}-\Braket{\psi|\hat H x|\psi}\right)
+        \end{align*}
+        第一个等号的成立是因为$\ket{\Psi}$和$\ket{\psi}$只相差一个$\phi(t)$(而这个的本质是因为薛定谔方程的可分离变量性), 而且相位因子对平均值的计算没有影响。
+        
+        \setlength\parindent{2em}由于$\ket{\psi}$是能量本征态(严格来说应该是$\ket{\Psi}$, 但是相位因子对于定态问题真的没啥作用, 有没有这个相位因子都还是本征矢), 所以有:
+        \[\hat H\ket{\psi}=E\ket{\psi}\]
+        又因为$\hat H$是厄米算符, 而且$E\in\mathbbm{R}$, 所以上式取厄米共轭得：
+        \[\bra{\psi}\hat H=\bra{\psi}E\]
+        \begin{equation*}
+            \braket{p}=\frac{m}{i\hbar}\left(\braket{\psi|xE|\psi}-\braket{\psi|Ex|\psi}\right)=0
+        \end{equation*}
+        \hfill $\square$\par
+    \end{thinknote}
     \section{不确定性原理}
     在知晓广义概率诠释之后, 我们下面规定$\left\langle Q \right\rangle$, 即观测量的平均值, 有时也索性直接写成$\left\langle \hat Q \right\rangle$, 它
     和$\left\langle \Psi \right| \hat{Q}  \left| \Psi  \right\rangle$直接对应。后面的推导有时也不会严格使用狄拉克符号, 但请记住下面的转换关系：
@@ -1573,8 +1597,8 @@
     \[i\hbar\frac{\partial \Psi}{\partial t}=\hat H\Psi\Rightarrow\frac{\partial \Psi}{\partial t}=-\frac{i\hat H}{\hbar}\Psi\]
     代入\ref{求导式子}得到:
     \begin{align*}
-        \frac{d\braket{Q}}{dt}&=\Braket{\frac{\hat{H}}{i\hbar}\Psi |\hat{Q}|\Psi}+\Braket{\Psi|\frac{d \hat{Q}}{d t}|\Phi}+\Braket{\Psi|\hat{Q}| \frac{\hat H}i\hbar\Psi}\\
-        &=\frac{i}{\hbar}\Braket{\Psi|\hat H\hat Q|\Psi}+\Braket{\Psi|\frac{d \hat{Q}}{d t}|\Phi}-\frac{i}{\hbar}\Braket{\Psi|\hat Q\hat H|\Psi}\\
+        \frac{d\braket{Q}}{dt}&=\Braket{\frac{\hat{H}}{i\hbar}\Psi |\hat{Q}|\Psi}+\Braket{\Psi|\frac{\partial \hat{Q}}{\partial t}|\Psi}+\Braket{\Psi|\hat{Q}| \frac{\hat H}{i\hbar}\Psi}\\
+        &=\frac{i}{\hbar}\Braket{\Psi|\hat H\hat Q|\Psi}+\Braket{\Psi|\frac{\partial \hat{Q}}{\partial t}|\Psi}-\frac{i}{\hbar}\Braket{\Psi|\hat Q\hat H|\Psi}\\
         &=\frac{i}{\hbar}\Braket{\Psi|\left[\hat H,\hat Q\right]|\Psi}+\Braket{\frac{\partial \hat Q}{\partial t}}
     \end{align*}
     也就是说对于任何的可观测量, 我们可以得到它的平均值随时间变化的规律, 是与体系的哈密顿算符(量)之间相关的：
@@ -1584,6 +1608,11 @@
             \frac{d\braket{Q}}{dt}=\frac{i}{\hbar}\Braket{\Psi|\left[\hat H,\hat Q\right]|\Psi}+\Braket{\frac{\partial \hat Q}{\partial t}}
         }
     \end{equation}
+    当\ref{广义欸费斯托定理}中的$\hat Q=\hat p$时\footnote[2]{我们目前的讨论都在位置空间中, 所以$\hat p=-i\hbar\frac{\partial}{\partial x}$}, 我们得到\textbf{Ehrenfest's theorem}:
+    \begin{equation}
+        \boxed{\frac{d}{dt}\braket{p}=\Braket{-\frac{\partial V(x)}{\partial x}}}
+    \end{equation}
+    
     一般来说, 很多算符都是不显含时间的, 与时间无关, 我们着重研究这些算符, 式\ref{广义欸费斯托定理}写成:
     \[\frac{d\braket{Q}}{dt}=\frac{i}{\hbar}\Braket{\Psi|\left[\hat H,\hat Q\right]|\Psi}\]
     又因为$\hat{H}$和$\hat{Q}$都是两个可观测量, 那么由不确定性原理有：
@@ -1595,6 +1624,7 @@
     \end{equation}
     由于哈密顿量对应的是体系的能量, 所以我们把$\sigma_H$记作$\Delta E$, 为了凑出不确定性原理, 我们\textbf{定义}$\Delta t$为：
     \begin{equation}
+        \label{define dt}
         \sigma_Q=\left|\frac{d\braket{Q}}{dt}\right|\Delta t
     \end{equation}
     
@@ -1602,7 +1632,56 @@
     一个词语, \textbf{时间能量不确定性关系又很好的鲁棒性}。所以我们一半对于$\Delta t$的解释很随意, 用来进行一些估算是很好的, 根据$\Delta t$的定义, 其实我们也有理由
     说：\textbf{\textcolor{red}{$\Delta t$可以解释为系统产生一个“显著”的变化所需要的时间}}。
     \begin{thinknote}
-        
+        “显著”变化的时间, 这个论述就非常的缺乏严谨性, 非常模棱两可。所以这个不等式中的$\Delta t$在很多情况下都有非常“物理”的解释, 可以说通, 但比不上式\ref{define dt}的
+        严谨性, 很多时候这个式子用来估算非常好, 这方面的例子{\itshape Griffiths}书里面有三个。
     \end{thinknote}
+    \section{表象理论}
+    {\itshape Griffiths}书里面的这一节的绝大部分内容在附录\ref{Appendix B}中已讲, 这里我们回到{\itshape Cohen}第二章, 给狄拉克符号相关内容结尾。
+    
+    在附录\ref{Appendix B}中我们最先研究了波函数空间$\mathscr{F}$, 这里的波函数指的是以坐标为参数表示的波函数, 可以用波函数表示一个量子态。但是实际上我们发现量子态更本质上可以
+    使用态矢量来描述, 我们便引进了$\mathscr{E}_r$空间, 实际上你可以认为波函数空间中的元素就是对应态空间矢量在\uwave{位置表象}下的分量函数。实际上, 量子力学的一个基本假设就是任何一个体系的
+    量子态可以使用态空间中的一个右矢表示, 在附录\ref{Appendix B}中我们已经讨论了这个空间的运算性质, 其代数本质是线性空间, 下面我们正式从$\mathscr{F}$空间定义与其联系的$\mathscr {E}_r$空间, 其实就是一个
+    通过分量和一组完备的正交基确定矢量的过程。
+    \begin{proposition}{$\mathscr{F}$空间与$\mathscr {E}_r$空间的联系}
+        对于波函数空间中的每一个波函数$\psi(bm{r})$, 我们唯一选取态空间中的一个右矢$\ket{\psi}$与之对应, 这种对应是线性的, 而且这种对应使得内积定义为\footnote[1]{我们正是在定义一个内积空间}:
+        \begin{equation}
+            \label{eq:3.30}
+            \braket{\varphi|\psi}=\int d^3r\varphi^*(\bm{r})\psi(\bm{r})
+        \end{equation}
+    \end{proposition}
+    我们下面的讨论直接使用三维形式, 实际上就是每个维度的缩并形式。
+    \subsection*{$\ket{\bm{r}}$和$\ket{\bm{p}}$表象}
+    波函数空间中可以找到两组不属于$\mathscr{F}$的基, 满足封闭性关系和狄拉克正交归一关系：
+    \begin{align}
+        \label{eq:3.31}& \xi_{\bm{r}_0}(\bm{r})=\delta({\bm{r}-\bm{r}_0})\\
+        \label{eq:3.32}& \nu_{\bm{p}_0}(\bm{r})=\left(2\pi\hbar\right)^{-\frac{3}{2}}e^{\frac{i}{\hbar}\bm{p}_0\cdot\bm{r}}
+    \end{align}
+    
+    我们可以给这两个波函数分别对应两个\uwave{广义右矢}$\ket{\bm{r}_0},\ket{\bm{p}_0}$。再根据\ref{eq:3.30}我们可以得出态矢量$\Ket{\Psi}$在这两组基下的分量：
+    \begin{align}
+        &\Braket{\bm{r}_0|\Psi}=\Psi(\bm{r}_0)\\
+        &\Braket{\bm{p}_0|\Psi}=\mathscr{F}\left[\Psi(\bm{r})\right](\bm{p}_0)=\Phi(\bm{p}_0)
+    \end{align}
+    可见态矢量在$\ket{\bm{r}}$上的分量正是波函数在这个指标下的取值。我们将$\ket{\bm{r}_0}$换成$\ket{\bm{r}}$, 那么内积得到的就是一个关于$\ket{\bm{r}}$
+    的函数, 也正是波函数本身。我们将上式写成下面更紧凑的形式, 方便我们看清之前定义的位置空间波函数和动量空间波函数的意义：
+    \begin{align}
+        &\braket{\bm{r}|\Psi}=\Psi(\bm{r})\Rightarrow \ket{\Psi}=\int d^3r \ket{\bm{r}}\braket{\bm{r}|\Psi}=\int d^3r \Psi(\bm{r})\ket{\bm{r}}\\
+        &\braket{\bm{p}|\Psi}=\Phi(\bm{p})\Rightarrow \ket{\Psi}=\int d^3p \ket{\bm{r}}\braket{\bm{p}|\Psi}=\int d^3p \Phi(\bm{p})\ket{\bm{p}}
+    \end{align}
+    实际上, 任何一个可观测量对应的观察算符的特征矢都可以组成一个规范正交基(满足\ref{eq:B.12}和\ref{eq:B.13}), 也就确定了一个表象。比如同样经常用的能量表象, 就是根据
+    哈密顿算符定义的, 也就是我们第二章一直在求的定态解$\ket{\psi}$, 他们也可以构成一个基底, 对于束缚态同样可以写：
+    \[\ket{\Psi}=\sum\limits_n c_n\ket{\psi}\]  
+    如果量子态$\ket{\Psi}$随时间演化, 那么上面的分量波函数或者是$c_n$都要带上时间参量, 基底还是一般不用随时变的。
+    
+    根据式\ref{eq:3.31}和式\ref{eq:3.32}, 我们可以得到\[\braket{\bm{r}|\bm{p}}=\left(2\pi\hbar\right)^{-\frac{3}{2}}e^{\frac{i}{\hbar}\bm{p}\cdot\bm{r}}\]
+    使用附录B中类似的方法, 可以得到表象之间的变换关系：
+    \begin{align*}
+        \Phi(\bm{r})&=\Braket{\bm{r}|\Psi}=\Braket{\bm{r}|\mathbbm{1}|\Psi}\\
+        &=\int d^3p\Braket{\bm{r}|\bm{p}}\Braket{\bm{p}|\Psi}=\int d^3p\left(2\pi\hbar\right)^{\frac{3}{2}}e^{\frac{i}{\hbar}\bm{p}_0\cdot\bm{r}}\Phi(\bm{p})\\
+        &=\mathscr{F}^{-1}\left[\Phi(\bm{p})\right](\bm{r})
+    \end{align*}
+    我们使用了一种新的方式去说明两种波函数之间的傅里叶变换关系, 当然, 这里的傅里叶变换是一个三维形式。
+    \subsection*{算符$\hat{\bm{R}}$和算符$\hat{\bm{P}}$}
+
     \include{appendix.tex}
 \end{document}
