@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  25 JUN 2022 22:05
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  3 JUL 2022 12:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2075,14 +2075,14 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 1229.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 6.0pt on input line 1229.
- [37] [38] [39]
+ [37] [38] [39] [40]
 File: fig/3-1.eps Graphic file (type eps)
 <fig/3-1.eps>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 9.03374pt on input line 1346.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 5.0pt on input line 1346.
- [40] [41]
+ [41]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
@@ -2097,30 +2097,30 @@ Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [42]
-Underfull \vbox (badness 1546) detected at line 1453
- []
-
-[43]
+ [42] [43]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [44] [45] [46] [47]
+ [44] [45] [46] [47] [48]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.045pt on input line 1636.
- [48]
+(Font)              scaled to size 12.045pt on input line 1637.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.05624pt on input line 1653.
+(Font)              scaled to size 15.05624pt on input line 1654.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 1653.
+(Font)              size <14.4> substituted on input line 1654.
 
-
-Overfull \hbox (8.4405pt too wide) in paragraph at lines 1660--1661
+[49]
+Overfull \hbox (8.4405pt too wide) in paragraph at lines 1661--1662
 []\TU/SimSun(0)/m/n/12.045 我 们 可 以 给 这 两 个 波 函 数 分 别 对 应 两 个|   []$[] \OML/ntxmi/m/it/12.045 ; []$\TU/SimSun(0)/m/n/12.045 。|  再 根 据[][]\T1/ntxtlf/m/n/12.045 3.30[][]\TU/SimSun(0)/m/n/12.045 我
  []
 
-[49] [50]
+[50] [51] [52]
+Overfull \hbox (1.5488pt too wide) in paragraph at lines 1745--1746
+[]\TU/SimSun(0)/m/n/12.045 比 如 三 维 问 题 中 $[]$ 算 符 的 三 个 分 量 算 符 $\OML/ntxmi/m/it/12.045 X; Y; Z$ \TU/SimSun(0)/m/n/12.045 就 构 成 了 一 个 \T1/ntxtlf/m/n/12.045 CSCO,
+ []
+
+[53] [54]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2130,10 +2130,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[51
+[55
 
 
-] [52] [53]
+] [56] [57]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2141,66 +2141,66 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[54] [55] [56]
+[58] [59] [60]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [57] [58]
+ [61] [62]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [59] [60] [61] [62] [63]
+ [63] [64] [65] [66] [67]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [64] [65] [66]
+ [68] [69] [70]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 473--496
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[67
+[71
 
-] [68] [69]
+] [72] [73]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 599--606
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[70] [71] [72] [73] [74] [75]
+[74] [75] [76] [77] [78] [79]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [76] [77]
+ [80] [81]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [78]
+ [82]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [79]
-Overfull \hbox (4.90611pt too wide) detected at line 907
+ [83]
+Overfull \hbox (4.90611pt too wide) detected at line 909
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[80] [81] [82] [83]
+[84] [85] [86] [87]
 附录 C
-[84
+[88
 
-]) [85] (./sourcecode.aux (./appendix.aux))
+]) [89] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 66522C4D8666182B044E877F352B626D;4810.
+(rerunfilecheck)             Checksum: 8D68FE41B805C26F335B87CF7974CC2F;4967.
  ) 
 Here is how much of TeX's memory you used:
- 50849 strings out of 476533
- 1301529 string characters out of 5818886
- 1813338 words of memory out of 5000000
- 70066 multiletter control sequences out of 15000+600000
+ 50888 strings out of 476533
+ 1303664 string characters out of 5818886
+ 1813473 words of memory out of 5000000
+ 70105 multiletter control sequences out of 15000+600000
  530628 words of font info for 261 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (88 pages).
+Output written on sourcecode.pdf (92 pages).

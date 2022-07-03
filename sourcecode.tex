@@ -1188,7 +1188,7 @@
     也就是说, 定值态是算符$\hat{Q}$的本征向量, 而对应的测量值就是本征值。\footnote[1]{更多这方面的内容, 请翻阅附录\ref{Appendix B}}
 
     比如定态薛定谔方程$$\hat{H}\psi=E\psi$$
-    很好解释为什么定态解是关于哈密顿算符的定值态, 注意到波函数$\Psi(x,t)=\psi(x)e^{iEt/\hbar}$仍是$E$特征向量, 所以定态波函数确实就是能量的定值态。
+    很好解释为什么定态解是关于哈密顿算符的定值态, 注意到波函数$\Psi(x,t)=\psi(x)e^{iEt/\hbar}$仍是$E$的特征向量, 所以定态波函数确实就是能量的定值态。\footnote[2]{或者说成比例的两个右矢表示的是同一个物理状态。}
     \section{观察算符和算符的谱}
     厄米算符的谱可能是离散谱(比如无限深势阱), 也可能是连续谱(比如自由粒子)。对于离散谱, 我们已经通过模型的计算大约了解到特征矢都是平方可积的, 但对于连续谱就不再成立。
     但是这些本征矢之间有些重要性质, 比如正交性, 完备性, 我们用标准的线性代数语言再来描述一下。注意, 我们讨论的范围一直是可观测量对应的厄米算符。
@@ -1351,7 +1351,7 @@
             \right. \kern-\nulldelimiterspace}
             {\Psi } \right\rangle 
         \end{equation}
-        那么, 测量值为$q_n$的概率为:
+        那么, 测量值为$q_n$的概率为\footnote[2]{对于非简并情况, $\{\Ket{u_n^i}\}$这一组基的选取是多种多样的, 要注意坍缩只是坍缩为一个本征态, 不一定就是这组基里面的矢量, 利用上面的式子照样可以计算坍缩概率, 只是选取一组基方便我们下面计算测量到某个值的概率罢了, 而且可以证明下面的计算结果与基底的选取无关。}:
             \[\mathscr{P}_n=\sum\limits_{i=1}^{g_n}\mathscr{P}_n^i\]
         
         \setlength\parindent{2em}对于连续谱, 我们前面提到过其本征矢是没有物理意义的, 也就是说, 进行测量时, 体系不会坍缩为一个确定的本征态, 而是一个很狭窄的
@@ -1393,6 +1393,7 @@
     \end{align*}
     我们得到了计算测量平均值的一般方法, 与前面提到的方法完全一致：
     \begin{equation}
+        \label{eq:3.14}
         \boxed{\left\langle Q \right\rangle=\left\langle \Psi \right| \hat{Q}  \left| \Psi  \right\rangle}
     \end{equation}
     \begin{thinknote}
@@ -1578,7 +1579,7 @@
     \begin{equation}
        \Delta {x} \Delta {p} \ge \frac{\hbar}{{2 }} 
     \end{equation}
-    对应的还会有一个时间和能量之间的不确定性关系\footnote[1]{从狭义相对论动力学的四位动量和四维时空坐标中你可以看出这种对应性}:
+    对应的还会有一个时间和能量之间的不确定性关系\footnote[2]{从狭义相对论动力学的四位动量和四维时空坐标中你可以看出这种对应性}:
     \begin{equation}
         \label{E-t}
         \Delta {t} \Delta {E} \ge \frac{\hbar}{{2 }}
@@ -1591,9 +1592,9 @@
         \label{求导式子}
         \frac{d}{d t}\langle Q\rangle=\frac{d}{d t}\langle\Psi|\hat{Q}| \Psi\rangle=\Braket{\frac{\partial \Psi}{\partial t}|\hat{Q}| \Psi}+\Braket{\Psi|\frac{d \hat{Q}}{d t}|\Phi}+\Braket{\Psi|\hat{Q}| \frac{\partial \Psi}{\partial t}}
     \end{equation}
-    上面的求导具体过程可以使用定义直接推导, 有点像实分析中三个函数相乘的导数公式。
+    上面的求导具体过程可以使用定义直接推导, 有点像实分析中三个函数相乘的导数公式。\footnote[3]{$\Ket{\frac{\partial \Psi}{\partial t}}$表示$\frac{\partial }{\partial t}\Ket{\Psi}$, 对应的左矢为$\Bra{\frac{\partial \Psi}{\partial t}}$, 注意不是$\frac{\partial }{\partial t}\Bra{\Psi}$}
     
-    含时薛定谔方程可以写为:
+    含时薛定谔方程可以写为\footnote[4]{严格使用狄拉克符号的话这里的$\Psi$要加上$\ket{}$}:
     \[i\hbar\frac{\partial \Psi}{\partial t}=\hat H\Psi\Rightarrow\frac{\partial \Psi}{\partial t}=-\frac{i\hat H}{\hbar}\Psi\]
     代入\ref{求导式子}得到:
     \begin{align*}
@@ -1670,7 +1671,7 @@
     \end{align}
     实际上, 任何一个可观测量对应的观察算符的特征矢都可以组成一个规范正交基(满足\ref{eq:B.12}和\ref{eq:B.13}), 也就确定了一个表象。比如同样经常用的能量表象, 就是根据
     哈密顿算符定义的, 也就是我们第二章一直在求的定态解$\ket{\psi}$, 他们也可以构成一个基底, 对于束缚态同样可以写：
-    \[\ket{\Psi}=\sum\limits_n c_n\ket{\psi}\]  
+    \[\ket{\Psi}=\sum\limits_n c_n\ket{\psi_n}\]  
     如果量子态$\ket{\Psi}$随时间演化, 那么上面的分量波函数或者是$c_n$都要带上时间参量, 基底还是一般不用随时变的。
     
     根据式\ref{eq:3.31}和式\ref{eq:3.32}, 我们可以得到\[\braket{\bm{r}|\bm{p}}=\left(2\pi\hbar\right)^{-\frac{3}{2}}e^{\frac{i}{\hbar}\bm{p}\cdot\bm{r}}\]
@@ -1682,6 +1683,109 @@
     \end{align*}
     我们使用了一种新的方式去说明两种波函数之间的傅里叶变换关系, 当然, 这里的傅里叶变换是一个三维形式。
     \subsection*{算符$\hat{\bm{R}}$和算符$\hat{\bm{P}}$}
+    下面我们要讨论的可以看作是$\hat x$和$\hat p$的三维形式。
+    \begin{define}{两个重要算符}
+        \begin{itemize}
+            \item 算符$\hat{\bm{R}}$\\
+            这个算符在$\ket{\bm{r}}$表象下由三个“分量算符”$X,Y,Z$确定。\footnote[1]{这里的$\bm{r}$是个缩并的记号, 波函数实际上是一个三元函数$\Psi(x,y,z)$, 下式中的$x,y,z$就是包含在$\ket{\bm{r}}$中的三个指标。算符$\hat{\bm{P}}$同理。}
+            \begin{align*}
+                &\Braket{\bm{r}|X|\Psi}=x \Braket{\bm{r}|\Psi}=x\Psi(\bm{r})\\
+                &\Braket{\bm{r}|Y|\Psi}=y \Braket{\bm{r}|\Psi}=y\Psi(\bm{r})\\
+                &\Braket{\bm{r}|Z|\Psi}=z \Braket{\bm{r}|\Psi}=z\Psi(\bm{r})
+            \end{align*}
+            \item 算符$\hat{\bm{P}}$\\
+            这个算符在$\ket{\bm{p}}$表象下由三个“分量算符”$P_x,P_y,P_z$确定。\footnote[2]{如果考虑随时间演化的态, 式中要加上时间项, 形式不变。}
+            \begin{align*}
+                &\Braket{\bm{p}|P_x|\Psi}=p_x \Braket{\bm{p}|\Psi}=p_x\Phi(\bm{p})\\
+                &\Braket{\bm{p}|P_y|\Psi}=p_y \Braket{\bm{p}|\Psi}=p_y\Phi(\bm{p})\\
+                &\Braket{\bm{p}|P_z|\Psi}=p_z \Braket{\bm{p}|\Psi}=p_z\Phi(\bm{p})
+            \end{align*}
+        \end{itemize}
+    \end{define}
+    那么根据上面的定义, 就可以解释我们一直说的在位置空间中$\hat{x}\leftrightarrow x$, 换成矩阵的语言, 就是在位置表象下, 算符$\hat{x}$的矩阵是$x\mathbbm{1}$, 因为波函数完全可以看作一个列矩阵。
+    两者相乘便得到了$\hat{x}\ket{\psi}$在位置表象下的形式(波函数)。
+
+    我们来看一下动量算符在位置表象下的形式, 我们不去直接计算矩阵元, 先将它作用于一个右矢再取分量可以很快的看出它的等价形式：
+    \begin{align*}
+        \Braket{\bm{r}|P_x|\Psi}&=\int d^3p\Braket{\bm{r}|\bm{p}}\Braket{\bm{p}|P_x|\Psi}=\int d^3pp_x\Braket{\bm{r}|\bm{p}}\Braket{\bm{p}|\Psi}\\
+        &=\int d^3pp_x\left(2\pi\hbar\right)^{-\frac{3}{2}}e^{\frac{i}{\hbar}\bm{p}\cdot\bm{r}}\Phi(\bm{p})\\
+        &=-i\hbar\frac{\partial}{\partial x}\int d^3p\left(2\pi\hbar\right)^{-\frac{3}{2}}e^{\frac{i}{\hbar}\bm{p}\cdot\bm{r}}\Phi(\bm{p})\\
+        &=-i\hbar\frac{\partial}{\partial x}\Psi(\bm{r})
+    \end{align*}
+    所以在位置空间中$\hat p\leftrightarrow -i\hbar\frac{\partial}{\partial x}$, 进一步写成缩并形式便有：
+    \begin{equation}
+        \Braket{\bm{r}|\hat{\bm{P}}|\Psi}=-i\hbar\nabla\Braket{\bm{r}|\Psi}
+    \end{equation}
+    
+    式\ref{eq:3.14}, 告诉了我们计算物理量平均值的办法, 实际上我们一般用的都是它在位置或动量空间下的形式, 严格点说, 式\ref{eq:3.14}可以利用封闭性关系重新写成
+    \[\Braket{Q}=\int d^3r\Braket{\Psi|\bm{r}}\Braket{\bm{r}|\hat Q|\Psi}\]
+    再利用上面已经得出的动量和位置算符在位置空间中的表示替换上式中的第二项即可, 也就是第一章就说的“把算符夹在中间, 然后积分”。
+
+    很容易证明, $\ket{\bm{r}}$和$\ket{\bm{p}}$分别是$\hat {\bm{R}}$和$\hat {\bm{P}}$的本征矢。
+    \subsection*{力学量完全集(CSCO)}
+    对于某个观察算符$\hat{A}$, 可以选取一组它的正交归一本征矢$\{\ket{u^i_n}\}$作为$\mathscr{E}$中的一组基。如果对于$\hat A$的每一个本征值都是非简并的, 那
+    么, 给定了$\hat{A}$的本征值也就唯一确定了这个正交归一基$\{\ket{u_n}\}$(显然这个时候我们不再需要额外使用指标$i$去区分), 因为每个本征子空间$\mathscr{E}_n$的维数都是一, 我
+    们认为成比例的两个基矢是没有区别的, 即$\ket{u_n}\leftrightarrow e^{i\theta}\ket{u_n}$。这个时候我们就称算符$\hat{A}$单独构成了一个CSCO。
+    
+    如果存在一些非简并的本征值, 那么这个时候$\mathscr{E}_n$中本征矢的取法就有无限多种线性组合, 那么$\{\ket{u_n^i}\}$的取法就并不唯一了, 但我们这个时候如果引进一个
+    与$\hat{A}$对易的算符$\hat{B}$, 考察他们的公共本征矢, 根据$\S{3.2}$的推导, 他们的公共本征矢构成了一组基$\{\ket{u_{n,p}^i}\}$, 由$\hat{A},\hat{B}$的本征矢对$\left(a_n,b_p\right)$确定。
+    如果每一个本征矢对唯一确定了一个$\{\ket{u_{n,p}^i}\}$(同样, 成比例算作相同的本征矢), 那么$\hat{A},\hat{B}$的公共本征矢确定的基底是唯一的\footnote[1]{根据$\S{3.2}$构造这组基的过程
+    , 可以发现, 这个条件等价于${\left. {\hat B} \right|_{\mathscr{E}_n}}$(也就是那每一个分块小矩阵)有$g_n$个不同的本征值, 其中$g_n\equiv \dim \mathscr{E}_n$}, 这时我们称$\{\hat{A},\hat{B}\}$
+    构成了一个CSCO。
+    
+    如果这个时候对于每个本征矢对还是无法唯一确定一个本征矢, 那么我们可以引进第三个同时与$\hat A,\hat B$对易的算符$\hat C$, 再次按照前面的情况分类讨论, 一般的CSCO定义如下:
+    \begin{define}{力学量完全集(CSCO)}
+        \setlength\parindent{2em}按定义, 把观察算符$\hat A,\hat B,\hat C\cdots$的一个集合叫做可对易观察算符的完全集合的条件是:
+        \begin{itemize}
+            \item 所有的这些观察算符\uwave{两两对易}；
+            \item 给出了全体算符$\hat A,\hat B,\hat C\cdots$的本征值的一个数组，便足以决定唯一的一个共同本征矢\footnote[1]{有且仅有($\exists!$)}(倍乘因子除外)。
+        \end{itemize}
+        \setlength\parindent{2em}或者说:存在着由共同本征矢构成的一个正交归一基，而且这个基是唯一的（除相位因子以外）。
+    \end{define}
+    比如三维问题中$\hat{bm{R}}$算符的三个分量算符$X,Y,Z$就构成了一个CSCO, 很容易证明它们两两对易, 而且给定了本征值$(x_0,y_0,z_0)$就唯一确定了本征矢$\ket{\bm{r}}$, 显然这正是$\ket{\bm{r}}$表象。
+
+    \section{薛定谔方程的分离变量}
+    第二章中我们直接从波函数出发, 给出了很多结论, 实际上现在看来就是一些更广泛的结论在位置表象下的描述。比如我们第二章都是分离变量先解出定态解, 然后说明波动方程
+    的通解是这些定态解的线性组合。现在我们知道这些定态解就是哈密顿算符的本征矢(用$\ket{\psi_n}$表示), 哈密顿算符是一个观察算符, 显然这些本征矢构成了一组基, 那么态矢量显然就可以用这组基底表示(以离散谱为例):
+    \begin{equation}
+        \label{eq:3.38}
+        \Ket{\Psi(t)}=\sum_n c_n(t)\ket{\psi_n}
+    \end{equation}
+    
+    但是这远远不够, 显然, 我们如果不对$c_n$加以限制的话, 式\ref{eq:3.38}实际上可以表示态空间的所有矢量！真正满足量子力学规律的矢量显然有一定限制, 而这个限制就是通过薛定谔方程和$\ket{\psi_n}$对应的本征值完成的。
+    实际上之前我们利用分离变量法求解薛定谔方程(哈密顿量不显含时间, 即保守体系)就已经得出了$c_n$要满足的规律(式\ref{find_c}), 即\[c_n(t)=c_n(0) e^{-iE_n t/\hbar}\]
+    下面我们全程使用更广泛的狄拉克符号法来推导一下\footnote[1]{这里作为例子考虑最简单的离散谱非简并情况, 其他情况的推广非常简单}。
+    
+    我们之前解的薛定谔方程都是下面更加普遍的方程在$\ket{\bm{r}}$表象下的形式：
+    \begin{lequation}
+        \label{eq:3.39}
+        i\hbar\frac{\partial}{\partial t}\ket{\Psi(t)}=\hat{H}\ket{\Psi(t)}
+    \end{lequation}
+    定态方程可以写为:
+    \begin{lequation}
+        \hat{H}\ket{\psi_n}=E_n\ket{\psi_n}\Rightarrow\bra{\psi_n}\hat{H}=E_n\bra{\psi_n}
+    \end{lequation}
+    在能量表象下, \ref{eq:3.39}变为:
+    \[i\hbar\Braket{\psi_n|\frac{\partial}{\partial t}|\Psi(t)}=\Braket{\psi_n|\hat{H}|\Psi(t)}\]
+    又因为$\ket{\psi_n}$与时间无关\footnote[2]{因为$\hat H$不显含时间, 我们始终可以选取一组与时间无关的定态作为基底}, 那么上式又可以写为：
+    \begin{align*}
+        i\hbar\frac{\partial}{\partial t}\Braket{\psi_n|\Psi(t)}&=\Braket{\psi_n|\hat{H}|\Psi(t)}\\
+        &=E_n\Braket{\psi_n|\Psi(t)}
+    \end{align*}
+    \[i\hbar\frac{d}{dt}c_n(t)=E_n c_n(t)\]
+    对时间积分得到：
+    \[c_n(t)=c_n(t_0)e^{-iE_n(t-t_0)/\hbar}\]
+    为了方便, 有时我们从初态开始计时,$t_0=0$, 方程也就变成了我们经常看见的\ref{wiggle-function}。
+
+    所以, 要计算态随时间的演化, 我们先解出系统的能量本征态(定态), 然后根据初态对能量表象展开计算出对应的$c_n(t_0)$
+    $$c_n(t_0)=\Braket{\psi_n|\Psi(t_0)}$$
+    然后再对于每个$c_n$乘上对应的波动项即可:
+    \begin{equation}
+        \ket{\Psi(t)}=\sum_n c_n(t_0)e^{-iE_n(t-t_0)/\hbar}\ket{\psi_n}
+    \end{equation}
+
+    这里再次强调一下, 按照上面的做法, 可以发现定态, 即能量本征态随时间的演化始终只是乘上一个$e^{i\theta}$, 而我们提到过这种成比例的态在物理上是不可区分的, 所以
+    定态的一切物理性质都不会随时间改变。而其它的算符对应的定值态就不一定有这样的性质了, 只是每次对相应力学量的测量都返回同一个值(这个本征态对应的本征值), 而不像定态一样是所有物理性质不随时变。
 
     \include{appendix.tex}
 \end{document}
