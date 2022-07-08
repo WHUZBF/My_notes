@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  3 JUL 2022 12:32
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  8 JUL 2022 22:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2121,6 +2121,17 @@ Overfull \hbox (1.5488pt too wide) in paragraph at lines 1745--1746
  []
 
 [53] [54]
+第四章
+
+Overfull \vbox (0.325pt too high) detected at line 1861
+ []
+
+[55
+
+] [56]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
+(Font)              scaled to size 9.03374pt on input line 1875.
+ [57] [58] [59]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2130,10 +2141,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[55
+[60
 
 
-] [56] [57]
+] [61] [62]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2141,66 +2152,66 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[58] [59] [60]
+[63] [64] [65]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [61] [62]
+ [66] [67]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [63] [64] [65] [66] [67]
+ [68] [69] [70] [71] [72]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [68] [69] [70]
+ [73] [74] [75]
 附录 B
 
-Overfull \hbox (7.7486pt too wide) in paragraph at lines 473--496
+Overfull \hbox (7.7486pt too wide) in paragraph at lines 474--497
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[71
+[76
 
-] [72] [73]
-Overfull \hbox (12.5569pt too wide) in paragraph at lines 599--606
+] [77] [78]
+Overfull \hbox (12.5569pt too wide) in paragraph at lines 600--607
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[74] [75] [76] [77] [78] [79]
+[79] [80] [81] [82] [83] [84]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [80] [81]
+ [85] [86]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [82]
+ [87]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [83]
-Overfull \hbox (4.90611pt too wide) detected at line 909
+ [88]
+Overfull \hbox (4.90611pt too wide) detected at line 910
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[84] [85] [86] [87]
+[89] [90] [91] [92]
 附录 C
-[88
+[93
 
-]) [89] (./sourcecode.aux (./appendix.aux))
+]) [94] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 8D68FE41B805C26F335B87CF7974CC2F;4967.
+(rerunfilecheck)             Checksum: A2CFC35A210DF37FDDC6A5799DDE5C26;5287.
  ) 
 Here is how much of TeX's memory you used:
- 50888 strings out of 476533
- 1303664 string characters out of 5818886
- 1813473 words of memory out of 5000000
- 70105 multiletter control sequences out of 15000+600000
- 530628 words of font info for 261 fonts, out of 8000000 for 9000
+ 50900 strings out of 476533
+ 1303801 string characters out of 5818886
+ 1813758 words of memory out of 5000000
+ 70117 multiletter control sequences out of 15000+600000
+ 533417 words of font info for 262 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1013s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (92 pages).
+Output written on sourcecode.pdf (97 pages).

@@ -1107,7 +1107,7 @@
         $\frac{k^2\hbar^2}{2m}$时的解。一个往右传播, 一个往左传播。
     \end{define}
     \begin{theorem}{束缚态的能级非简并性}
-        对于一维束缚态, 除了2.45提及的情况, 只要$lim_{x\to\pm\infty}\psi(x)=0$, 那么一定有, 束缚态的能级没有简并性, 也就是说, 对于$E$的同一个取值, 波函数的
+        对于\textbf{一维束缚态}, 除了2.45提及的情况, 只要$\lim\limits_{x\to\pm\infty}\psi(x)=0$, 那么一定有, 束缚态的能级没有简并性, 也就是说, 对于$E$的同一个取值, 波函数的
         解一定是线性相关的, 或者说归一化后只相差一个相位因子$e^{i\theta}$, 本质上是一个东西。
     \end{theorem}
     \subsection*{2.53 \& 2.54}
@@ -1786,6 +1786,158 @@
 
     这里再次强调一下, 按照上面的做法, 可以发现定态, 即能量本征态随时间的演化始终只是乘上一个$e^{i\theta}$, 而我们提到过这种成比例的态在物理上是不可区分的, 所以
     定态的一切物理性质都不会随时间改变。而其它的算符对应的定值态就不一定有这样的性质了, 只是每次对相应力学量的测量都返回同一个值(这个本征态对应的本征值), 而不像定态一样是所有物理性质不随时变。
+
+
+    \chapter{三维空间的量子力学}
+    \section{三维空间薛定谔方程求解}
+    量子力学在三维空间的推广非常自然, 我们只需要把动量和位置算符都改成上一章已经提及的三维形式($\hat{\bm{R}}$和$\hat{\bm{P}}$)即可, 在位置表象下, 三维薛定谔方程便写为：
+    \begin{lequation}
+        \boxed{
+            i\hbar\frac{\partial \Psi\left(\bm{r},t\right)}{\partial t}=\left[-\frac{\hbar^{2}}{2m}\nabla^{2}+
+            V\left(\bm{r},t\right)\right]\Psi\left(\bm{r},t\right) 
+        }
+    \end{lequation}
+    如果势能不显含时间项, 那么薛定谔方程依然是可以分离变量求定态解的：
+    \begin{lequation}
+        \label{eq:4.2}
+        \boxed{
+            \left[-\frac{\hbar^{2}}{2m}\nabla^{2}+
+            V\left(\bm{r}\right)\right]\psi\left(\bm{r}\right)=E\psi \left(\bm{r}\right)
+        }
+    \end{lequation}
+    
+    时间依赖项依然是$e^{-iEt/\hbar}$, 这些定态解构成了一组规范正交完备基, 它们的线性组合也就是真正的解, 这里的说法和第二章第三章没有多大差别, 第三章我们就已经通过
+    抽象的语言直接使用态矢量去描述了, 所以这种近乎照搬的推广也不应感到意外。
+
+    现在我们真正要去解偏微分方程了, 在讨论它更一般的解之前, 我们先来用它讨论一维无限深势阱在三维情况下的推广, 这时势函数具有下面的性质：
+    \begin{equation}
+        V(\bm{r})=\begin{cases}
+            0&,0\leq x,y,z \leq a\\
+            \infty &,\text{else}
+            \end{cases}
+    \end{equation}
+    也就是说粒子被限制在一个盒子里面移动。
+    \begin{thinknote}
+        \textbf{解}:
+
+
+        \setlength\parindent{2em}显然在区域$[0,a]\times[0,a]\times[0,a]$外部波函数的值为$0$, 在内部定态薛定谔方程可以写为：
+        \begin{equation}
+            \label{eq:4.4}
+            -\frac{\hbar^2}{2m}\nabla^2\psi=E\psi
+        \end{equation} 
+        这是一个具有Dirichlet条件的Possion方程, 在这种边界为长方体的情况下, 解是可以分离变量的, 也就是说$\psi(\bm{r})$可以写成：
+        \begin{equation}
+            \psi(x,y,z)=A(x)B(y)C(z)
+        \end{equation}
+        代入\ref{eq:4.4}得到：
+        \begin{equation}
+            \frac{1}{A}\frac{d^2A}{dx^2}+\frac{1}{B}\frac{d^2B}{dy^2}+\frac{1}{C}\frac{d^2C}{dz^2}=-\frac{2mE}{\hbar^2}
+        \end{equation}
+        上式左边的三项分别依赖于三个不同的独立变量, 最后相加是常数, 所以最终只能是都是常数, 得到：
+        \begin{lequation}
+            \begin{cases}
+                \frac{1}{A}\frac{d^2A}{dx^2}=-\frac{2mE_1}{\hbar^2}\\
+                \frac{1}{B}\frac{d^2B}{dy^2}=-\frac{2mE_2}{\hbar^2}\\
+                \frac{1}{C}\frac{d^2C}{dz^2}=-\frac{2mE_3}{\hbar^2}
+            \end{cases}
+        \end{lequation}
+        其中$E_1+E_2+E_3=E$, 我们得到的这三个方程恰好就是之前在一维情况下已经推导过的, 它只具有束缚态的解, 所有舒服态的解构成了一个完备基, 令$k_i=\frac{\sqrt{2mE_i}}{\hbar}$, 根据
+        第二章的分析我们直接得到：
+        \begin{lequation}
+            \begin{cases}
+                A(x)=\sqrt{\frac{2}{a}}\sin\left(\frac{n_1\pi}{a}x\right)\\
+                B(x)=\sqrt{\frac{2}{a}}\sin\left(\frac{n_2\pi}{a}y\right)\\
+                C(x)=\sqrt{\frac{2}{a}}\sin\left(\frac{n_3\pi}{a}z\right)
+            \end{cases}
+        \end{lequation}
+        综上, 我们便得到了定态解：
+        \begin{equation}
+            \Psi_n(\bm{r},t)=\left(\frac{2}{a}\right)^\frac{3}{2}\sin\left(\frac{n_1\pi}{a}x\right)\sin\left(\frac{n_2\pi}{a}y\right)\sin\left(\frac{n_3\pi}{a}z\right)e^\frac{-iE_nt}{\hbar}
+        \end{equation}
+        其中能量$E_n$需要三个参数去确定：
+        \[E_n=\left(n_1^2+n_2^2+n_3^2\right)\frac{\pi^2\hbar^2}{2ma^2},\qquad(n_i=1,2,3,4,5,\cdots)\]
+        这个时候同一个能量显然对应多组$\left(n_1,n_2,n_3\right)$, 所以这个三维束缚态每个能级并不都是简并的。
+    \end{thinknote}
+    \subsection*{极坐标下的薛定谔方程}
+    对于一类中心势场, 势函数具有各向同性, 也就是说势函数只与$\bm{r}$的模长有关, 和其方向无关, 势函数退化为$V(r)$。由于这种独特的球对称性, 我们考虑在球坐标系下
+    重新写出定态薛定谔方程。
+
+    根据附录$\S \rm{A}.3$, 我们得到拉普拉斯算符在极坐标下的表示为：
+    \begin{equation}
+        \nabla^{2}=\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} \frac{\partial}{\partial r}\right)+\frac{1}{r^{2} \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial}{\partial \theta}\right)+\frac{1}{r^{2} \sin ^{2} \theta}\left(\frac{\partial^{2}}{\partial \phi^{2}}\right)
+    \end{equation}
+    那么式\ref{eq:4.2}便改写成：
+    \begin{equation}
+        \label{eq:4.11}
+        -\frac{\hbar^{2}}{2 m}\left[\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} \frac{\partial \psi}{\partial r}\right)+\frac{1}{r^{2} \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial \psi}{\partial \theta}\right)+\frac{1}{r^{2} \sin ^{2} \theta}\left(\frac{\partial^{2} \psi}{\partial \phi^{2}}\right)\right]+V \psi=E \psi
+    \end{equation}
+    再次使用分离变量法去求解薛定谔方程\footnote[1]{Hassani在其名著\textit{Mathematical in Physics}中有一句话, 大意是说我们物理学中所关心的方程几乎都能分离变量去解。}, 令
+    \[\psi(r,\theta,\phi)=R(r)Y(\theta,\phi)\]
+    代入\ref{eq:4.11}得到:
+    \begin{equation}
+        \left\{\frac{1}{R} \frac{d}{d r}\left(r^{2} \frac{d R}{d r}\right)-\frac{2 m r^{2}}{\hbar^{2}}[V(r)-E]\right\}+\frac{1}{Y}\left\{\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2} Y}{\partial \phi^{2}}\right\}=0
+    \end{equation}
+    再次, 我们又利用到两项依赖于不同的独立变量, 得到：
+    \begin{align}
+        &\frac{1}{R} \frac{d}{d r}\left(r^{2} \frac{d R}{d r}\right)-\frac{2 m r^{2}}{\hbar^{2}}[V(r)-E]=\ell(\ell+1) \label{eq:4.13}\\
+        &\frac{1}{Y}\left\{\frac{1}{\sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial Y}{\partial \theta}\right)+\frac{1}{\sin ^{2} \theta} \frac{\partial^{2} Y}{\partial \phi^{2}}\right\}=-\ell(\ell+1)\label{eq:4.14}
+    \end{align}
+    其中$\ell\in\mathbbm{C}$.
+    \subsection*{角向解}
+    首先我们来看方程\ref{eq:4.14}, 其中不含势能项, 是可以求出一般解的。这个方程实际上会在电动力学问题求解Laplace方程中得到, 还是利用分离变量法, 令：
+    \[Y(\theta,\phi)=\Theta(\theta)\Phi(\phi)\]
+    代入\ref{eq:4.14}得到：
+    \begin{equation}
+        \left\{\frac{1}{\Theta}\left[\sin \theta \frac{d}{d \theta}\left(\sin \theta \frac{d \Theta}{d \theta}\right)\right]+\ell(\ell+1) \sin ^{2} \theta\right\}+\frac{1}{\Phi} \frac{d^{2} \Phi}{d \phi^{2}}=0
+    \end{equation}
+    我们便得到了两个常微分方程：
+    \begin{gather}
+        \frac{1}{\Theta}\left[\sin \theta \frac{d}{d \theta}\left(\sin \theta \frac{d \Theta}{d \theta}\right)\right]+\ell(\ell+1) \sin ^{2} \theta=m^2\label{eq:4.16}\\
+        \frac{1}{\Phi} \frac{d^{2} \Phi}{d \phi^{2}}=-m^2\label{eq:4.17}
+    \end{gather}
+    式\ref{eq:4.17}的解为:
+    \begin{equation}
+        \label{eq:4.18}
+        \Phi(\phi)=ce^{imt}+de^{-imt},\qquad\text{(c,d为任意常数)}
+    \end{equation}
+    由于薛定谔方程是线性方程, 所以重点是找到一组线性无关解, 那么上面的解可以简写为
+    \[\Phi(\phi)=e^{imt}\]
+    只要允许$m$是负值即可, 这些解和\ref{eq:4.18}表示的解是等价的, 我们把前面的常数因子纳入到$\Theta$中了, 最后再归一化一并求出。
+    
+    $\Phi$还需要满足边界条件$\Phi(\phi+2\pi)=\Phi(\phi)$, 所以$m$只能取整数：
+    \begin{equation}
+        \boxed{\Phi(\phi)=e^{imt}, \quad(m=0,\pm 1,\pm 2,\pm 3\ldots)}
+    \end{equation}
+
+    方程\ref{eq:4.16}的求解在一般的数理方法书中都会提到, 它的解可以用\textbf{连带勒让德函数表达}\footnote[1]{当然, 这个方程还有别的解, 但没有物理意义, 详见数学物理方法内容}：
+    \begin{equation}
+        \Theta(\theta)=AP_\ell^m\left(\cos\left(\theta\right)\right),\quad(\ell=0,1,2\ldots)
+    \end{equation}
+    \begin{define}{勒让德函数}
+        \begin{lequation}
+            P_\ell(x)\equiv\frac{1}{2^\ell\ell!}\left(\frac{d}{dx}\right)^\ell\left(x^2-1\right)^2
+        \end{lequation}
+    \end{define}
+    \begin{define}{连带勒让德函数}
+        \begin{lequation}
+            P_\ell^m\equiv(-1)^m\left(x^2-1\right)^\frac{m}{2}\left(\frac{d}{dx}\right)^mP_\ell(x),\quad(m>0)
+        \end{lequation}
+        \begin{lequation}
+            P_\ell^{-m}=(-1)^m\frac{\left(\ell-m\right)!}{\left(\ell+m\right)!}P_\ell^m(x)
+        \end{lequation}
+    \end{define}
+    现在完全确定一个定态解的角向函数需要给出$l$和$m$两个参数, 而且根据上面的定义, 在$\ell$确定后, $m$只能取某些固定的值才能使方程\ref{eq:4.16}有(含物理意义的)解。即：
+    \[\ell=0,1,2\ldots\Rightarrow m=0,\pm 1,\pm 2,\pm 3,\ldots, \pm \ell\]
+    最后归一化\footnote[1]{不要忘记三重积分球坐标换元后的雅可比系数}我们得到:
+    \begin{lequation}
+        \boxed{Y_{\ell}^{m}(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^{m l}(\cos \theta)}
+    \end{lequation}
+    在数学上被称为\textbf{球谐函数}, 满足：
+    \begin{equation}
+        \int_{0}^{\pi} \int_{0}^{2 \pi}\left[Y_{\ell}^{m}(\theta, \phi)\right]^{*}\left[Y_{\ell^{\prime}}^{m^{\prime}}(\theta, \phi)\right] \sin \theta d \theta d \phi=\delta_{\ell \ell^{\prime}} \delta_{m m^{\prime}}
+    \end{equation}
+    \subsection*{径向求解}
 
     \include{appendix.tex}
 \end{document}
