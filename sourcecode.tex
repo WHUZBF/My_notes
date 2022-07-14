@@ -1789,7 +1789,7 @@
 
 
     \chapter{三维空间的量子力学}
-    \section{三维空间薛定谔方程求解}
+    \section{三维薛定谔方程求解}
     量子力学在三维空间的推广非常自然, 我们只需要把动量和位置算符都改成上一章已经提及的三维形式($\hat{\bm{R}}$和$\hat{\bm{P}}$)即可, 在位置表象下, 三维薛定谔方程便写为：
     \begin{lequation}
         \boxed{
@@ -1938,6 +1938,86 @@
         \int_{0}^{\pi} \int_{0}^{2 \pi}\left[Y_{\ell}^{m}(\theta, \phi)\right]^{*}\left[Y_{\ell^{\prime}}^{m^{\prime}}(\theta, \phi)\right] \sin \theta d \theta d \phi=\delta_{\ell \ell^{\prime}} \delta_{m m^{\prime}}
     \end{equation}
     \subsection*{径向求解}
+    方程\ref{eq:4.13}的求解必须要在知道具体的势函数后才能完全求解, 但是我们可以做换元：
+    \[R(r)=\frac{u(r)}{r}\Rightarrow \frac{dR}{dr}=\frac{1}{r}\frac{du}{dr}-\frac{u}{r^2}\]
+    方程\ref{eq:4.13}可以写为：
+    \begin{lequation}
+        \label{eq:4.26}
+        \boxed{
+            -\frac{\hbar^2}{2m}\frac{d^2u}{dr^2}+\left[V(r)+\frac{\hbar^2}{2m}\frac{\ell\left(\ell+1\right)}{r^2}\right]u(r)=Eu(r)
+        }
+    \end{lequation}
+    与一维的定态薛定谔方程对比：
+    \[-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2}+V\psi=E\psi\]
+    径向方程\ref{eq:4.26}等价于一个\uwave{有效势能}为
+    \begin{equation}
+        \label{eq:4.27}
+        V_{\text{eff}}(r)=V(r)+\frac{\hbar^2}{2m}\frac{\ell\left(\ell+1\right)}{r^2}
+    \end{equation}
+   的一维粒子波函数方程。
+    
+    经典力学中我们解决中心力场问题时, 在质心系下系统的拉格朗日量可以写成：
+    \[\mathcal{L}=\frac{1}{2}\mu\bm{r}^2-V(\bm{r})\]
+    其中$\bm{r}$是相对位矢, $\mu$是二体约化质量。使用极坐标重写上面的拉格朗日量为:
+    \[\mathcal{L}=\frac{1}{2}\mu\left(\dot{r}^2+\dot{\theta}^2r^2\right)-V({r})\]
+    利用角动量$J=\mu\dot{\theta}r^2$守恒, 上面的拉格朗日量可以写成完全不依赖于$\theta$的形式：
+    \[\mathcal{L}=\frac{1}{2}\mu\dot{r}^2-\left[V({r})+\frac{J^2}{2mr^2}\right]\]
+    定义等效势能：
+    \[V_{\text{eff}}(r)=V(r)+\frac{J^2}{2mr^2}\]
+    
+    根据拉格朗日量可以写出径向的运动方程, 和一个在等效势场下运动的一维粒子等价。我们将等效势能中的第二项称为\textbf{离心势能}, 在转动非惯性系下, 离心力是一个保守力
+    可以定义势能, 势能的形式正是一个关于$\bm{r}$的二次型的形式。事实上, 我们如果在跟随系统转动的参考系下写拉格朗日量, 这一项的出现会非常自然。
+    
+    现在, 回到量子力学, 量子力学相对于对经典力学, 力学量变成了算符, 经典态变成了量子态。沿用经典力学的一些说法, 我们也称\ref{eq:4.27}中的第二项为\textbf{离心项}。
+    下面求解一个具体的问题。
+    \begin{define}{无限深球形势阱}
+        \begin{equation}
+          V(r)=\begin{cases}
+            0,&r\leq a\\
+            \infty,&r>a
+            \end{cases}  
+        \end{equation}
+    \end{define}
+    在外部$u(r)=0$, 在内部定态方程可以写为：
+    \begin{equation}
+        \frac{d^2u}{dr^2}=\left[\frac{\ell\left(\ell+1\right)}{r^2}-k^2\right]u,\quad k\equiv\frac{\sqrt{2mE}}{\hbar}
+    \end{equation}
+    $\ell=0$时, 方程的解和一维无限深势阱非常相似
+    \[R(r)=\frac{u(r)}{r}=A\frac{\sin(kr)}{r}+B\frac{\cos(kr)}{r}\]
+    $r\to0$时, $R(r)\to \frac{1}{r}\Rightarrow \Psi(\bm{r})\to \frac{1}{r}$, 由于$\nabla^2\left(\frac{1}{r}\right)=-4\pi\delta(r)$, 薛定谔方程:
+    \[-\frac{\hbar^2}{2m}\nabla^2\Psi=E\Psi\]
+    左边是病态delta函数, 右边是一个解析函数, 显然无法满足。所以$B$必须为$0$, 否则在$r=0$时不满足薛定谔方程, 而且由于$u(a)=0$, $k$的取值也有一定限制, $ka=N\pi$, $N$是自然数。
+    再根据归一化条件：\[
+        \iiint d^3r\Psi(\bm{r})=\int rR(r)dr\iint\limits_{\theta,\phi}Y_\ell^m(\theta,\phi)d\theta d\phi\]
+    球谐函数已经归一化, 所以解得\footnote[1]{这里的下标"0"是指$ell=0$}
+    \begin{equation}
+        u_{N0}=\sqrt{\frac{2}{a}}\sin\left(\frac{N\pi r}{a}\right),\quad E=\frac{N^2\pi^2\hbar^2}{2ma^2}
+    \end{equation}
+
+    $\ell\neq 0$时方程的解是特殊函数:
+    \[u(r)=Arj_\ell(kr)+Brn_\ell(kr)\]
+    \begin{define}{球贝塞尔函数}
+        \begin{equation}
+            j_\ell(x)\equiv(-x)^\ell\left(\frac{1}{x}\frac{d}{dx}\right)^\ell\frac{\sin x}{x}
+        \end{equation}
+        \[x\to 0\Rightarrow j_\ell(x)\to\frac{2^\ell \ell!}{(2\ell+1)!}x^\ell \to 0\]
+    \end{define}
+    \begin{define}{球诺伊曼函数}
+        \begin{equation}
+            n_\ell(x)\equiv-(-x)^\ell\left(\frac{1}{x}\frac{d}{dx}\right)^\ell\frac{\cos x}{x}
+        \end{equation}
+        \[x\to 0\Rightarrow n_\ell(x)\to-\frac{(2\ell)!}{2^\ell \ell!}\frac{1}{x^{\ell+1}}\to \infty \]
+    \end{define}
+    按照之前的方法不难得出$B=0$, 再根据边界条件得出：
+    \[R(r)=Aj_\ell(kr),ka=\beta_{N\ell},N=1,2,\ldots\]
+    其中$\beta_{N\ell}$指$j_l(x)$的第$N$个零点。对应的定态解的能量为：\[E_{N\ell}=\frac{\hbar^2}{2ma^2}\beta_{N\ell}^2\]
+    
+    之前一维问题求解定态解时(非简并情况), 我们要确定定态解中的某个量子态只需要知道一个参数$n$, 也就是能级, 结合问题本身我们就能唯一确定这个量子态。但是在
+    三维情况下, 大多问题都是简并的, 我们确定一个量子态就需要$N,m,\ell$三个参数。其中我们仿照一维问题再引入一个量子数$n$, 常被称为\textbf{主量子数}, 与
+    能量直接相关。按照能量$E_{N\ell}$的大小排列可以确定这个量子数, 也就是说$n$与$N,\ell$相关。
+
+    \section{氢原子}
+
 
     \include{appendix.tex}
 \end{document}
