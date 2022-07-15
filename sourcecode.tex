@@ -34,6 +34,8 @@
 \usepackage[]{bbm}
 \usepackage[]{relsize}
 \usepackage[]{braket}
+\usepackage{siunitx}
+\DeclareSIUnit\angstrom{\text {Å}}
 
 % 定义公式环境
 \newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
@@ -1988,7 +1990,7 @@
     \[-\frac{\hbar^2}{2m}\nabla^2\Psi=E\Psi\]
     左边是病态delta函数, 右边是一个解析函数, 显然无法满足。所以$B$必须为$0$, 否则在$r=0$时不满足薛定谔方程, 而且由于$u(a)=0$, $k$的取值也有一定限制, $ka=N\pi$, $N$是自然数。
     再根据归一化条件：\[
-        \iiint d^3r\Psi(\bm{r})=\int rR(r)dr\iint\limits_{\theta,\phi}Y_\ell^m(\theta,\phi)d\theta d\phi\]
+        \iiint d^3r\left|\Psi(\bm{r})\right|^2=\int r^2\left|R(r)\right|^2dr\iint\limits_{\theta,\phi}\left|Y_\ell^m(\theta,\phi)\right|^2d\theta d\phi\]
     球谐函数已经归一化, 所以解得\footnote[1]{这里的下标"0"是指$ell=0$}
     \begin{equation}
         u_{N0}=\sqrt{\frac{2}{a}}\sin\left(\frac{N\pi r}{a}\right),\quad E=\frac{N^2\pi^2\hbar^2}{2ma^2}
@@ -2017,7 +2019,144 @@
     能量直接相关。按照能量$E_{N\ell}$的大小排列可以确定这个量子数, 也就是说$n$与$N,\ell$相关。
 
     \section{氢原子}
+    \subsection{波函数求解}
+    我们现在要考虑的是氢原子核外电子的波函数, 由于质子的质量远大于电子, 所以可以认为电子在库仑中心势场中运动\[V(r)=-\frac{e^2}{4\pi\epsilon_0}\frac{1}{r}\]
+    径向定态薛定谔方程写成：
+    \begin{equation}
+        \label{eq:4.33}
+        -\frac{\hbar^2}{2m_e}\frac{d^2u}{dr^2}+\left[\frac{e^2}{4\pi\varepsilon_0}\frac{1}{r}+\frac{\hbar^2}{2m_e}\frac{\ell(\ell+1)}{r^2}\right]u=Eu
+    \end{equation}
+    等效势能为\[V_{\text{eff}}=\frac{e^2}{4\pi\varepsilon_0}\frac{1}{r}+\frac{\hbar^2}{2m}\frac{\ell(\ell+1)}{r^2}\]
+    
+    显然, 根据我们解一维薛定谔方程的经验, $E<0$为束缚态, $E>0$为散射态。其实这又可以和经典力学中的开普勒问题类比, 开普勒问题中, 运动轨迹为圆锥曲线, 当且仅当
+    $E<0$时轨道为椭圆, 为束缚态。其它情况下轨道为抛物线或者双曲线, 也就是说这个时候粒子运动没有被限制在一定的空间范围中, 也即散射态。我们下面的讨论中主要考虑束缚态情况。
 
+    定义$\kappa\equiv\frac{\sqrt{-2m_eE}}{\hbar}$, 我们可以将\ref{eq:4.33}改写为：
+    \begin{equation}
+        \label{eq:4.34}
+        \frac{1}{\kappa^2}\frac{d^2u}{dr^2}+\left[\frac{m_ee^2}{2\pi\varepsilon_0\hbar^2\kappa}\frac{1}{\kappa r}-\frac{\ell\left(\ell+1\right)}{\left(\kappa r\right)^2}\right]u=u
+    \end{equation}
+    我们再做换元\[\rho=\kappa r,\quad \rho_0=\frac{m_ee^2}{2\pi\varepsilon_0\hbar^2\kappa}\]
+    \ref{eq:4.34}写为(注意这里$u$变成了关于$\rho$的函数):
+    \begin{equation}
+        \label{eq:4.35}
+        \frac{d^2u}{d\rho^2}=\left[1+\frac{\ell\left(\ell+1\right)}{\rho^2}-\frac{\rho_0}{\rho}\right]u
+    \end{equation}
+    我们考察下这个方程的渐进解:
+    \begin{itemize}
+        \item $\rho\to\infty$\\
+                方程\ref{eq:4.35}形式变为:
+                \[\frac{d^2u}{d\rho^2}=u\]
+                那么在$\rho $充分大时, 方程的解应该具有如下形式：\[u_\infty=Ae^{-\rho}+Be^{+\rho}\]
+                显然根据波函数有界性, 有$B=0$, 故$u_\infty\sim e^{-\rho}$.
+        \item $\rho\to 0$\\
+                方程\ref{eq:4.35}形式变为:
+                \[\frac{d^2u}{d\rho^2}=\frac{\ell\left(\ell+1\right)}{\rho^2}u\]
+                这是一个Euler方程, 解得$\rho$充分小时, 方程解的形式为：\[u_0=C\rho^{\ell+1}+D\rho^{-\ell}\]
+                同样根据波函数的有界性, 有$D=0$, 故$u_0\sim \rho^{\ell+1}$.
+    \end{itemize}
+    
+    有了上面的讨论, 我们从$u(\rho)$中分离出渐进解, 下面的变换也显得比较自然：
+    \[u=\rho^{\ell+1}e^{-\rho}v(\rho)\]
+    $v(\rho)$是个未知函数, 下面我们将方程\ref{eq:4.35}转换为关于$v(\rho)$的方程：
+    \begin{equation}
+        \label{eq:4.36}
+        \rho\frac{d^2v}{d\rho^2}+2\left(\ell+1-\rho\right)\frac{dv}{d\rho}+\left(\rho_0-2\ell-2\right)v=0
+    \end{equation}
+    
+    方程在形式上好像并没有变得更加简单, 但是分离出渐进解后, 会让我们后面的级数解讨论变得更加简洁。
+    
+    为了解\ref{eq:4.36}, 我们设：
+    \[v(\rho)=\sum\limits_{j=0}c_j\rho^j\Rightarrow\frac{dv}{d\rho}=\sum\limits_{j=0}\left(j+1\right)c_{j+1}\rho^j,\frac{d^2v}{d\rho^2}=\sum\limits_{j=0}j\left(j+1\right)c_{j+1}\rho^{j-1}\]
+    代入原方程得到递推公式：
+    \begin{equation}
+        \label{eq:4.37}
+        c_{j+1}=\frac{2\left(j+\ell+1\right)-\rho_0}{\left(j+1\right)\left(j+2\ell+2\right)}c_j
+    \end{equation}
+    $j$充分大时, 上式变为\footnote[1]{你也可以近似的更狠一点, 把分母中的1拿掉, 也可以导出正确的结果, 但是推导略微复杂一点。}:
+    \[c_{j+1}=\frac{2}{j+1}c_j\Rightarrow c_j\approx\frac{2^j}{j!}c_0\Rightarrow v(\rho)=c_0e^{2\rho}\]
+    那么我们得到了一个$u(\rho)$的渐进解：
+    \[u(\rho)=c_0e\rho\rho^{\ell+1}\]
+    显然不满足$\rho\to\infty$时的波函数有界性要求, 所以这个解并不具有物理意义, 回忆一下我们在求解一维谐振子模型中使用过的技巧, 为了让最终的解具有物理意义,
+    只能是递推公式\ref{eq:4.37}在某处截断, 这样$j$充分大时$c_j$为$0$.
 
+    假设$c_N=0$且$c_{N-1}\neq 0$, 那么：
+    \[2\left(N+\ell\right)-\rho_0=0\]
+    $n\equiv N+\ell$, 为主量子数\footnote[1]{由于历史原因, $\ell$称为\textbf{角量子数}, $m$称为\textbf{磁量子数}}, 根据$\rho_0$的定义式, 我们得到:
+    \begin{lequation}
+        \boxed{
+            E_n=-\frac{m_e}{2\hbar^2}\left(\frac{e^2}{4\pi\varepsilon_0}\right)^2\frac{1}{n^2}\equiv\frac{E_1}{n^2}, n=1,2,3\ldots
+        }
+    \end{lequation}
+    其中：
+    \begin{lequation}
+        \boxed{
+            E_1=-\frac{m_e}{2\hbar^2}\left(\frac{e^2}{4\pi\varepsilon_0}\right)^2=\SI{-13.6}{\eV}
+        }
+    \end{lequation}
+    这个公式称为\textbf{波尔公式}, 可以称得上是量子力学发展史中的一个里程碑, 结合$\kappa$的定义式可以得到：
+    \[\kappa=\left(\frac{m e^{2}}{4 \pi \varepsilon_{0} \hbar^{2}}\right) \frac{1}{n}=\frac{1}{a n}\]
+    其中
+    \begin{equation}
+        \boxed{
+            a\equiv\frac{4 \pi \varepsilon_{0} \hbar^{2}}{m e^{2}}=\SI{0.592}{\angstrom}
+        }
+    \end{equation}
+    称为\textbf{玻尔半径}。薛定谔方程在1924年才被给出, 玻尔当时使用半经典半量子的方法在1913年“推导”出了这些公式。
+    在继续我们下面的推导之前, 我认为花点功夫介绍一下波尔当时推导出来这个公式的思路是必要的。
+    \begin{history}{波尔公式}
+        \setlength\parindent{2em}其实对于氢原子的离散谱线的解释, 当时已经有诸如巴尔末公式等经验公式。玻尔主要的思想还是经典力学那一套, 认为电子在核外做圆周运动, 库仑力充当向心力, 那么：
+        \[\frac{e^2}{4\pi\varepsilon_0r^2}=m\frac{v^2}{r}\]
+        然后玻尔认为电子的轨道是离散的, 进一步应该认为电子绕核运动的角动量只能取一系列离散的值：
+        \[L_z=mvr=n\hbar,\quad (n=1,2,3\ldots)\]
+        结合第一个运动方程：
+        \[r=n^2\frac{4\pi\varepsilon_0\hbar^2}{m_ee^2}\equiv n^2 a\]
+        电子的总能量(当然这又是经典的考虑, 只计动能和势能)：
+        \[E=-\frac{1}{2}\frac{e^2}{4\pi\varepsilon_0r}\Rightarrow E_n=\frac{E_1}{n^2}\]
+        
+        \setlength\parindent{2em}不难验证基态能量$E_1$和玻尔半径$a$都和我们使用量子力学的解一致。不过我们之前计算的都是量子力学的图象, 这里只能说使用经典方法凑了个巧。$E_1$也被称为
+        氢原子的\textbf{结合能}, 表示了电离核外电子需要多少能量。
+        
+        \setlength\parindent{2em}当然, 现在看来玻尔当时的想法是非常荒诞的, 在试图用一个经典的图像解释一个量子力学问题, 但是不得不说这一量子化的想法对今后量子力学的建立还是起到了很大的推动作用, 特别是
+        玻尔使用这个模型很好的解释了外层电子为$1$的原子的光谱, 但就连铍也无法再用这个模型解释。
+    \end{history}
+    由于$N\in\mathbbm{N}^*$, 所以当主量子数确定时, 角量子数的可取值只能为：
+    \[\ell=0,1,2,\ldots,n-1\]
+    求解角向薛定谔方程时我们就知晓了磁量子数和角量子数之间的取值关系, 所以能级$E_n$的简并度为:
+    \[d_n=\sum\limits_{\ell=0}^{n-1}{\left(2\ell-1\right)}=n^2\]
+
+    $n$取$1$时, 根据上面的讨论, $\ell,m$的取值只能是$0$
+    \[\psi_{100}=R_{10}Y_0^0=\frac{1}{\sqrt{4\pi}}R_{10},\quad R_{n\ell}=\frac{1}{r}\rho^{\ell+1}e^{-\rho}v(\rho)\]
+    $n=1$时, $c_1=0$, 故$v(\rho)=c_0$, 再根据$\rho=\kappa r=\frac{r}{n a}$, 对波函数进行归一化求得$c_0$后得到基态定态波函数解：
+    \begin{lequation}
+        \boxed{\psi_{100}(r,\theta,\phi)=\frac{1}{\sqrt{\pi a^3}}e^{-\frac{r}{a}}}
+    \end{lequation}
+    \begin{define}{拉盖尔函数}
+        \begin{equation}
+            L_q\equiv\frac{e^x}{q!}\left(\frac{d}{dx}\right)^q\left(e^{-x}x^q\right)    
+        \end{equation}
+    \end{define}
+    \begin{define}{连带拉盖尔函数}
+        \begin{equation}
+            L_q^p(x)\equiv(-1)^p\left(\frac{d}{dx}\right)^pL_{p+q}(x)=\frac{x^{-p}e^x}{q!}\left(\frac{d}{dx}\right)^q\left(e^{-x}x^{p+q}\right)
+        \end{equation}
+    \end{define}
+    $v(\rho)$可以利用拉盖尔函数写成(已经略去前面的归一化常数)：
+    \begin{equation}
+        v(\rho)=L_{n-\ell-1}^{2\ell+1}(2\rho)
+    \end{equation}
+    最后归一化后得到定态解为：
+    \begin{equation}
+        \boxed{
+            \psi_{n \ell m}=\sqrt{\left(\frac{2}{n a}\right)^{3} \frac{(n-\ell-1) !}{2 n(n+\ell) !}} e^{-r / n a}\left(\frac{2 r}{n a}\right)^{\ell}\left[L_{n-\ell-1}^{2 \ell+1}(2 r / n a)\right] Y_{\ell}^{m}(\theta, \phi)
+        }
+    \end{equation}
+    而且由三个量子数确定的定态解是一组完备的正交归一基, 我们不用再进行施密特正交化了！
+    \begin{equation}
+        \int d^3r \psi_{n\ell m}^*\psi_{n^\prime\ell^\prime m^\prime}=\delta_{nn^\prime}\delta_{\ell \ell^\prime}\delta_{mm^\prime}
+    \end{equation}
+    
+    其中$\ell$和$m$之间的正交归一性是球谐函数的性质, $n$的正交归一性可以由$\hat{H}$属于不同本征值的本征向量正交性得出。也就是说, 从代数结构上看, $n$确定
+    本征空间, 由于三维量子力学中简并态的普遍性, $\ell$和$m$是在这个本征空间中寻找基底。
     \include{appendix.tex}
 \end{document}
