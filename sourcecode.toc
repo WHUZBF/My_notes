@@ -1,0 +1,42 @@
+\contentsline {chapter}{\numberline {第一章\hspace {.3em}}波函数}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}薛定谔方程}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}力学量的期望值和标准差}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}海森堡不确定性原理}{4}{section.1.3}%
+\contentsline {chapter}{\numberline {第二章\hspace {.3em}}定态Schr\"{o}dinger方程}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}定态和分离变量法}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}一维无限深方势阱}{8}{section.2.2}%
+\contentsline {section}{\numberline {2.3}简谐振子}{12}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}代数方法}{13}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}分析方法}{16}{subsection.2.3.2}%
+\contentsline {section}{\numberline {2.4}自由粒子}{18}{section.2.4}%
+\contentsline {section}{\numberline {2.5}$\delta $函数势阱}{20}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}束缚态和散射态}{20}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}$\delta $函数势阱}{22}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}有限深势阱}{29}{section.2.6}%
+\contentsline {section}{\numberline {2.7}习题分析}{32}{section.2.7}%
+\contentsline {chapter}{\numberline {第三章\hspace {.3em}}形式化理论}{35}{chapter.3}%
+\contentsline {section}{\numberline {3.1}可观测量}{35}{section.3.1}%
+\contentsline {section}{\numberline {3.2}观察算符和算符的谱}{36}{section.3.2}%
+\contentsline {section}{\numberline {3.3}广义概率诠释}{41}{section.3.3}%
+\contentsline {section}{\numberline {3.4}不确定性原理}{45}{section.3.4}%
+\contentsline {section}{\numberline {3.5}表象理论}{49}{section.3.5}%
+\contentsline {section}{\numberline {3.6}薛定谔方程的分离变量}{53}{section.3.6}%
+\contentsline {chapter}{\numberline {第四章\hspace {.3em}}三维空间的量子力学}{55}{chapter.4}%
+\contentsline {section}{\numberline {4.1}三维薛定谔方程求解}{55}{section.4.1}%
+\contentsline {section}{\numberline {4.2}氢原子}{62}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}波函数求解}{62}{subsection.4.2.1}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{67}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{67}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{68}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{70}{section.A.3}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{74}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{76}{section.A.5}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{83}{appendix.B}%
+\contentsline {section}{\numberline {B.1}向量空间}{83}{section.B.1}%
+\contentsline {section}{\numberline {B.2}内积}{84}{section.B.2}%
+\contentsline {section}{\numberline {B.3}波函数的空间}{86}{section.B.3}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{88}{section.B.4}%
+\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{93}{section.B.5}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{97}{section.B.6}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{100}{appendix.C}%
+\contentsfinish 
