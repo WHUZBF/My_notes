@@ -2158,5 +2158,23 @@
     
     其中$\ell$和$m$之间的正交归一性是球谐函数的性质, $n$的正交归一性可以由$\hat{H}$属于不同本征值的本征向量正交性得出。也就是说, 从代数结构上看, $n$确定
     本征空间, 由于三维量子力学中简并态的普遍性, $\ell$和$m$是在这个本征空间中寻找基底。
+    \subsection{氢原子光谱}
+    一般情况下, 氢原子处于基态, 但是当它吸收能量之后便会\textbf{跃迁}到激发态, 里面的具体机制我们不探究, 我们还是按照中学的知识来大致解释。氢原子吸收光子的能量, 当且仅当吸收的能量是两
+    能级之差时发生跃迁, 否则不吸收能量, 这个时候产生的谱线称为\textbf{吸收谱}；反之, 氢原子自发的从激发态向低能级跃迁会向外发出对应能量的电磁辐射(光子形式), 这个时候产生的谱线称为\textbf{发射谱}。
+    
+    根据$E_n=E_1/n^2=-\SI{13.6}{eV}/{n^2}$和普朗克公式$E=h\nu$.可以得到从第$n_f$能级跃迁到$n_i$释放的光子的波长：
+    \begin{equation}
+        \label{eq:4.47}
+        \frac{1}{\lambda}=\mathcal{R}\left(\frac{1}{n_f}-\frac{1}{n_i}\right)     
+    \end{equation}
+    其中:
+    \[\mathcal{R} \equiv \frac{-E_1}{hc} = \frac{m_{e}}{4 \pi c \hbar^{3}}\left(\frac{e^{2}}{4 \pi \epsilon_{0}}\right)^{2}=1.097 \times 10^{7} \mathrm{~m}^{-1}\]
+    称为\textbf{Rydberg constant}, \ref{eq:4.47}最先开始是作为经验公式给出的。
+    \begin{itemize}
+        \item $n_f=1$\quad 谱线位于紫外光区, 称为\textbf{Lyman series}
+        \item $n_f=2$\quad 谱线位于可见光区, 称为\textbf{Balmer series}
+        \item $n_f=3$\quad 谱线位于红外光区, 称为\textbf{Paschen series}
+    \end{itemize}
+    \section{角动量}
     \include{appendix.tex}
 \end{document}
