@@ -2131,6 +2131,12 @@
     \begin{lequation}
         \boxed{\psi_{100}(r,\theta,\phi)=\frac{1}{\sqrt{\pi a^3}}e^{-\frac{r}{a}}}
     \end{lequation}
+    \begin{thinknote}
+        这里要格外注意, 粒子并非最有可能出现在半径为$r=0$的球面上, 虽然波函数的值随着半径的增大而减小, 但是球面面积也在变大, 而波函数的概率解释是与体积元相关的。
+        也就是说\[P=\left|\psi_{100}(r,\theta,\phi)\right|^2dV\]在直角坐标中$dV=dxdydz$, 球坐标中$dV=r^2\sin\theta drd\theta d\phi$.这里对于一个球面, 我们应当使用积分
+        去计算粒子出现在半径为$r\sim r+dr$的球壳内的概率, 根据波函数球对称性很容易得到：\[P(r)=\frac{4}{a^3}r^2e^{-2r/a}dr\]
+        求得上式在$r=a$的时候取极大值, 所以玻尔使用经典理论预测到\uwave{轨道半径}为$a$在量子力学上看就是求出了最概然位置。
+    \end{thinknote}
     \begin{define}{拉盖尔函数}
         \begin{equation}
             L_q\equiv\frac{e^x}{q!}\left(\frac{d}{dx}\right)^q\left(e^{-x}x^q\right)    
@@ -2176,5 +2182,105 @@
         \item $n_f=3$\quad 谱线位于红外光区, 称为\textbf{Paschen series}
     \end{itemize}
     \section{角动量}
+    在经典力学中, 粒子的角动量定义为:\[\bm{L}=\bm{r}\times\bm{p}\]写成分量形式为:\[L_x=yp_z-zp_y,L_y=zp_x-xp_z,L_z=xp_y-yp_x\]
+    涉及到经典力学中的两个力学量相乘转换为算符时, 可能要考虑一下算符结合的顺序, 但是好在这里我们不需要考虑, 因为正则对易关系的三维形式为:
+    \begin{equation}
+        \left[r_i,p_j\right]=i\hbar\delta_{ij}\quad\left[r_i,r_j\right]=\left[p_i,p_j\right]=0
+    \end{equation}
+    显然角动量涉及到的都是两个可对易算符相乘。
+    
+    我们先来计算这三个角动量分量算符之间的对易子\footnote[1]{后面的推导中我们一律略去算符上面的$\hat{}$}:
+    \begin{align*}
+        \left[L_x,L_y\right]&=\left[yp_z-zp_y\right]\\&=\left[yp_zz,zp_x\right]-\left[y,x\right]p_z-z\left[p_y,p_x\right]+\left[zp_y,xp_z\right]
+        \\&=yp_zzp_x-zp_xyp_z+zp_yxp_z-xp_zzp_y\\&=yp_x\left[p_z,z\right]-xp_y\left[p_z,z\right]\\&=\left[z,p_z\right]L_z
+        \\&=i\hbar L_z
+    \end{align*}
+    根据自变量的$x\to y\to z\to x$轮换性, 我们得到:
+    \begin{lequation}
+        \label{eq:4.48}
+        \boxed{
+            \left[L_x,L_y\right]=i\hbar L_z,\left[L_y,L_z\right]=i\hbar L_x,\left[L_z,L_x\right]=i\hbar L_y
+        }
+    \end{lequation}
+
+    \subsection*{$L^2$和$L_z$的本征矢}
+    根据$\S 3.4$的讨论, 不对易的算符找不到一组共同的本征矢, 但是对易的可以, 矩阵的观点看来也即可以同时对角化。显然我们不应浪费时间在寻找三个分量算符之间的共同本征矢上面。
+    根据\[L^2=L_x^2+L_y^2,L_z^2\]我们可以计算
+    \begin{align*}
+        \left[L^2,L_z\right]&=\left[L_x^2,L_z\right]+\left[L_y^2,L_z\right]+\left[L_z^2,L_z\right]
+        \\ &=L_x\left[L_x,L_z\right]+\left[L_x,L_z\right]L_x+L_y\left[L_y,L_z\right]+\left[L_y,L_z\right]L_y
+        \\ &=0
+    \end{align*}
+    第二个等号利用了下面的事实:\[\left[\hat{A}\hat{B},\hat{C}\right]=\hat{A}\left[\hat{B},\hat{C}\right]+\left[\hat{A},\hat{C}\right]\hat{B}\]
+    第三个等号利用了正则对易关系。
+
+    那么我们可以尝试去寻找$L^2$与某个分量算符之间的本征矢, 索性就取$L_z$, 对于某个共同本征矢有:
+    \[L^2f=\lambda f,L_zf=\mu f\]
+    我们下面利用的方法是$\S 2.3$中已经用到的\uwave{升降阶算符法}, 定义：
+    \[L_\pm \equiv L_x\pm iL_y\]
+    \begin{theorem}{$L_\pm f$也是$L^2$的本征矢}
+        \begin{equation}
+            \label{eq:4.50}
+            L^2f=\lambda f\Rightarrow L_\pm L^2f=\lambda L_\pm f\Rightarrow L^2\left(L_\pm f\right)=\lambda\left(L_\pm f\right)
+        \end{equation}
+    \end{theorem}
+    $L_\pm$的\uwave{升降}是针对$L_z$而言的:
+    \begin{align*}
+        \left[L_z,L_\pm\right]&=\left[L_z,L_x\right]+i\left[L_z,L_y\right]\\
+        &=\pm \hbar L_\pm
+    \end{align*}
+    我们再来计算：
+    \begin{align*}
+        L_z\left(L_\pm f\right)&=\left[L_z,L_\pm\right]f+L_\pm L_\pm L_z f\\
+        &=\pm\hbar \left(L_\pm f\right)+\mu \left(L_\pm f\right)\\
+        &=\left(\mu\pm\hbar\right)\left(L_\pm f\right)
+    \end{align*}
+    根据上面的推导又可以得到下面的定理：
+    \begin{theorem}{$L_\pm f$也是$L_z$的本征矢}
+        \begin{equation}
+            L_zf=\mu f\Rightarrow L_z\left({L_\pm}^nf\right)=\left(\mu + n\hbar\right){L_\pm}^nf
+        \end{equation}
+    \end{theorem}  
+    以本征矢$f$为基础, 我们便可以使用$L_\pm$去生成本征值更大或者更小的$L_z$的本征矢, 而且依旧是$L^2$关于本征值$\lambda$的本征矢。但是这个“阶梯”是不能无限延伸的
+    \begin{align*}
+        \lambda^2=\braket{L^2}&=\braket{L_x^2}+\braket{L_y^2}+\braket{L_z^2}\\ &=\braket{L_x^2}+\braket{L_y^2}+\braket{f|L_z^2|f}\\
+                    &=\braket{L_x^2}+\braket{L_y^2}+\braket{L_zf|L_zf}>\mu^2
+    \end{align*}
+    所以这个阶梯一定有一个顶端和一个底端, 暂且记为$f_t$和$f_b$, 且满足\footnote[1]{根据求谐振子的经验, 我们最终要让阶梯延伸终止, 也就是要让通过升降阶算符法得到的本征矢无法归一化, 这里直接选为$0$有些不明不白, 但是是可以证明的}:
+    \[L_+f_t=0,L_-f_b=0\]
+    相应的本征值设为：
+    \[L_zf_t=\hbar \ell f_t,L_zf_b=\hbar \bar \ell f_b\]
+    \begin{align*}
+        L_\pm L_\mp&=\left(L_x\pm iL_y\right)\left(L_x\mp iL_y\right)\\
+                   &=L_x^2+L_y^2\mp i\left[L_x,L_y\right]\\
+                   &=L^2-L_z^2\pm \hbar L_z
+    \end{align*}
+    利用上式$L^2$可以表示为：
+    \[L^2=L_z^2+L_\pm L_\mp \pm \hbar L_z\]
+    依照$f_t$和$f_b$的定义：
+    \begin{align*}
+        L^2f_t&=L_z^2+L_- L_+ - \hbar L_z\\
+        &=L_z^2f_t-\hbar L_zf_t\\
+        &=\hbar^2\ell\left(\ell+1\right)f_t
+    \end{align*}
+    类似的推导可以得到
+    \[ L^2f_b=\hbar^2\bar \ell\left(\bar \ell-1\right)f_b\]
+    根据\ref{eq:4.50}, $f_t$和$f_b$都是$L^2$的关于$\lambda$的本征矢, 所以:
+    \[\lambda=\hbar^2\ell\left(\ell+1\right)=\hbar^2\bar \ell\left(\bar \ell-1\right)\Rightarrow\bar \ell=-\ell\]
+    显然根据升降阶算符的定义, $\bar\ell $和$\ell$之间肯定相差的一个整数, 故$2\ell=N$得出$\ell $取值为:
+    \[\ell=0,\frac{1}{2},1,\frac{3}{2},\ldots\]
+    当$\lambda$确定之后也便确定了$\ell$, 那么根据升降阶算符生成的两算符之间的共同本征矢可以使用$\ell$和$m$标识:
+    \begin{equation}
+        \begin{cases}
+            L^2f_\ell^m=\hbar^2\ell\left(\ell+1\right)f_\ell^m\\
+            L_zf_\ell^m=\hbar m f_\ell^m
+        \end{cases}
+    \end{equation}
+    $m$取值为:$-\ell,-\ell+1,\cdot,\ell-1,\ell$
+
+    求出了$L^2$所有的本征值$\lambda$后我们便确定了$\ell$的取值, $\ell$和$m$便一起标识了$L^2$和$L_z$的本征值, 下一步我们就是要去求出对应的一组共同的本征矢。
+    当然, 这两个字母的设置绝不是空穴来风, 我们说氢原子定态解由三个量子数完全描绘, 主量子数$n$与能量相关, 角量子数$\ell $和磁量子数$m$与角动量相关。
+
+    \subsection*{$L^2$和$L_z$的本征矢}
     \include{appendix.tex}
 \end{document}
