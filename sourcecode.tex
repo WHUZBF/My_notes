@@ -2256,7 +2256,10 @@
                    &=L^2-L_z^2\pm \hbar L_z
     \end{align*}
     利用上式$L^2$可以表示为：
-    \[L^2=L_z^2+L_\pm L_\mp \pm \hbar L_z\]
+    \begin{equation}
+        \label{eq:4.52}
+        L^2=L_z^2+L_\pm L_\mp \pm \hbar L_z
+    \end{equation}
     依照$f_t$和$f_b$的定义：
     \begin{align*}
         L^2f_t&=L_z^2+L_- L_+ - \hbar L_z\\
@@ -2281,6 +2284,78 @@
     求出了$L^2$所有的本征值$\lambda$后我们便确定了$\ell$的取值, $\ell$和$m$便一起标识了$L^2$和$L_z$的本征值, 下一步我们就是要去求出对应的一组共同的本征矢。
     当然, 这两个字母的设置绝不是空穴来风, 我们说氢原子定态解由三个量子数完全描绘, 主量子数$n$与能量相关, 角量子数$\ell $和磁量子数$m$与角动量相关。
 
+    \begin{thinknote}
+        注意, 不确定性原理意味着, \textbf{你永远无法让角动量指向$z$轴！}
+
+        \setlength\parindent{2em}如果你要让角动量只有$z$轴分量, 说明你必须\textbf{同时测得}$L_x=L_y=0$。但是不确定性原理告诉你这是不可能的, 所以角动量矢量的
+        尾端始终没有指向一个确定的方位, 这与你的测量是无关的, 这是量子力学本身的性质。
+    \end{thinknote}
+
     \subsection*{$L^2$和$L_z$的本征矢}
+    因为我们之前列方程都是在球坐标系下表达的, 这里我们也想到在位置表象下, 用球坐标去表示出角动量算符\footnote[1]{下面我们使用向量运算去推导角动量算符, 但是实际上也可以使用其分量算符在直角坐标下的表述, 结合直角坐标和球坐标之间的关系去得到角动量算符。但是下面介绍的方法可以一次计算直接得到三个分量算符。}。
+    \[\bm{L}=bm{r}\times\bm{p}=-i\hbar\left(\bm{r}\times\nabla\right)\]
+    注意我们说过$\bm{L}$是一个缩并的记号, 实际上代表三个分量算符, 即$L\ket{\psi}\equiv\left(L_x\ket{\psi},L_y\ket{\psi},L_z\ket{\psi}\right)$。根据正交曲线坐标系的相关知识, 我们可以得到梯度算符在球坐标系下的表示:
+    \begin{equation}
+        \nabla=\hat {\bm{e}}_r\frac{\partial}{\partial r}+\hat {\bm{e}}_\theta\frac{1}{r}\frac{\partial}{\partial \theta}+\hat {\bm{e}}_\phi\frac{1}{r\sin \theta}\frac{\partial}{\partial \phi}
+    \end{equation}
+    再利用$\bm{r}=r\hat{\bm{e_r}}$有如下推导：
+    \begin{align*}
+        \bm{L}&=-i\hbar r\left[\left(\hat{\bm{e}}_r\times \hat{\bm{e}}_r\right)\frac{\partial}{\partial r}+\left(\hat{\bm{e}}_r\times \hat{\bm{e}}_\theta\frac{1}{r}\frac{\partial}{\partial \theta}+\left(\hat{\bm{e}}_r\times\hat{\bm{e}}_\phi\frac{1}{r\sin\theta}\frac{\partial}{\partial\phi}\right)\right)\right]\\
+              &=-i\hbar r\left[0+\hat{\bm{e}}_\phi\frac{1}{r}\frac{\partial}{\partial \theta}-\hat{\bm{e}}_\theta\frac{1}{r\sin\theta}\frac{\partial}{\partial\phi}\right]\\
+              &=-i\hbar\frac{\partial}{\partial\theta}\hat{\bm{e}}_\phi+i\hbar\frac{1}{\sin\theta}\frac{\partial}{\partial\phi}\hat{\bm{e}}_\theta
+    \end{align*}
+    事实上我们已经求出$L_\theta$和$L_\psi$了, 但记住最终我们要的是$L_x,L_y,L_z$在球坐标下的表达。利用：
+    \begin{eqnarray*}
+        &&\hat{\bm{e}}_\theta\cos\theta\cos\phi\hat{\bm{i}}+\cos\theta\sin\phi\hat{\bm{j}}-\sin\theta\hat{\bm{k}}\\
+        &&\hat{\bm{e}}_\phi=-\sin\phi\hat{\bm{i}}+\cos\phi\hat{\bm{j}}
+    \end{eqnarray*}
+    将上式转为直角坐标单位矢量的表述：
+    \begin{align*}
+        \bm{L}=&+\left(i\hbar\sin\phi\frac{\partial}{\partial\theta}+i\hbar\cot\theta\cos\phi\frac{\partial}{\partial\phi}\right)\hat{\bm{i}}\\
+               &+\left(-i\hbar\cos\phi\frac{\partial}{\partial\theta}+i\hbar\cot\theta\sin\phi\frac{\partial}{\partial\phi}\right)\hat{\bm{j}}\\
+               &+\left(-i\hbar\frac{\partial}{\partial\phi}\right)\hat{\bm{k}}\\
+               \equiv& L_x\hat{\bm{i}}+L_y\hat{\bm{j}}+L_z\hat{\bm{k}}
+    \end{align*}
+    \begin{equation}
+        \boxed{
+            L_z = -i\hbar\frac{\partial}{\partial\phi}
+        }
+    \end{equation}
+    为了进一步计算$L^2$, 我们先来计算$L_\pm$:
+    \begin{align*}
+        L_\pm&\equiv L_x\pm iL_y\\
+             &=i\hbar\sin\phi\frac{\partial}{\partial\theta}+i\hbar\cot\theta\cos\phi\frac{\partial}{\partial\phi}\pm\hbar\cos\phi\frac{\partial}{\partial\theta}\mp\hbar\cot\theta\sin\phi\frac{\partial}{\partial\phi}\\
+             &=\pm\hbar e^{\pm i\phi}\left(\frac{\partial}{\partial\theta}\pm i\cot\theta\frac{\partial}{\partial\phi}\right)
+    \end{align*}
+    上面的推导利用了Euler公式简化结果。
+    \begin{align*}
+        L_+L_-&=-\hbar^2 e^{+i\phi}\left(\frac{\partial}{\partial\theta}+ i\cot\theta\frac{\partial}{\partial\phi}\right)e^{- i\phi}\left(\frac{\partial}{\partial\theta}-i\cot\theta\frac{\partial}{\partial\phi}\right)\\
+              &\cdots\cdots\\
+              &=-\hbar^2 \left(\cot\theta\frac{\partial}{\partial \theta}+i\frac{\partial}{\partial\phi}+\frac{\partial^2}{\partial\theta^2}+\cot^2\theta\frac{\partial^2}{\partial\phi^2}\right)
+    \end{align*}
+    上面的推导要格外小心, 注意运算的次序, 不要直接把$e^{i\phi}$消掉了。再利用\ref{eq:4.52}:
+    \begin{align*}
+        L^2&=-\hbar^2\frac{\partial^2}{\partial\phi^2}+i\hbar^2\frac{\partial}{\partial\phi}+L_+L_-\\
+           &=-\hbar^2\left(\frac{\partial^2}{\partial\phi^2}+\cot^2\theta\frac{\partial^2}{\partial\phi^2}+\cot\theta\frac{\partial}{\partial\theta}+\frac{\partial^2}{\partial\theta^2}\right)\\
+           &=-\hbar^2\left[\frac{1}{\sin\theta}\left(\sin\theta\frac{\partial}{\partial\theta}+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right)\right]
+    \end{align*}
+    我们来看一下特征方程$L^2f_\ell^m=\hbar^2\ell\left(\ell+1\right)f_\ell^m$, 实际上它等价于：
+    \begin{equation}
+        -\hbar^2\left[\frac{1}{\sin\theta}\left(\sin\theta\frac{\partial}{\partial\theta}+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right)\right]f_\ell^m=\hbar^2\ell\left(\ell+1\right)f_\ell^m
+    \end{equation}
+    特征方程$L_zf_\ell^m=\hbar mf_\ell^m$, 写为：
+    \begin{equation}
+        -i\hbar\frac{\partial}{\partial\phi}f_\ell^m=\hbar mf_\ell^m
+    \end{equation}
+    对照\ref{eq:4.14}和\ref{eq:4.17}, 其实满足上面两个方程的函数就是我们已经用纯分析方法得到的球谐函数\footnote[1]{请注意, 角向解是薛定谔方程的通解, 与所处势场无关, 只要可分离变量求解即可, 这要求薛定谔方程势能不含时。}:
+    \[f_\ell^m=Y_\ell^m\]
+
+    再广泛点说, 我们在解薛定谔方程时, 由于角向和径向是分离的, 所以我们解出定态薛定谔方程的解实际上是构造了一个$L_z,L^2,\hat H$的共同本征矢：
+    \[\hat H \psi=E\psi,L_z\psi=\hbar m \psi,L^2 \psi=\hbar^2\ell\left(\ell+1\right)\psi\]
+    
+    回头再看\ref{eq:4.26}的离心势能项, 当我们将$L^2$顺利与$\hbar^2\ell\left(\ell+1\right)$联系起来后, 离心项和经典力学里面的${L^2}/({2m r^2})$更加相似了。现在只剩下一个问题是我们前面纯代数推导
+    本征矢和前面的纯分析解薛定谔方程不相容的了, 那就是根据前面的推导, 球谐函数中的$\ell$只能取整数, 但是我们求本征值时允许$\ell$取值为半整数, 这并不是所谓的增根, 而是与有深刻物理意义的自旋相联系。
+
+    \section{自旋}
     \include{appendix.tex}
 \end{document}
