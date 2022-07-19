@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  19 JUL 2022 01:08
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  19 JUL 2022 22:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2120,9 +2120,9 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 File: fig/3-1.eps Graphic file (type eps)
 <fig/3-1.eps>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 1348.
+(Font)              scaled to size 9.03374pt on input line 1351.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 5.0pt on input line 1348.
+(Font)              scaled to size 5.0pt on input line 1351.
  [41]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
@@ -2143,38 +2143,38 @@ Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
  [44] [45] [46] [47] [48]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.045pt on input line 1639.
+(Font)              scaled to size 12.045pt on input line 1642.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.05624pt on input line 1656.
+(Font)              scaled to size 15.05624pt on input line 1659.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 1656.
+(Font)              size <14.4> substituted on input line 1659.
 
 [49]
-Overfull \hbox (8.4405pt too wide) in paragraph at lines 1663--1664
-[]\TU/SimSun(0)/m/n/12.045 我 们 可 以 给 这 两 个 波 函 数 分 别 对 应 两 个|   []$[] \OML/ntxmi/m/it/12.045 ; []$\TU/SimSun(0)/m/n/12.045 。|  再 根 据[][]\T1/ntxtlf/m/n/12.045 3.30[][]\TU/SimSun(0)/m/n/12.045 我
+Overfull \hbox (8.4405pt too wide) in paragraph at lines 1666--1667
+[]\TU/SimSun(0)/m/n/12.045 我 们 可 以 给 这 两 个 波 函 数 分 别 对 应 两 个|   []$[] \OML/ntxmi/m/it/12.045 ; []$\TU/SimSun(0)/m/n/12.045 。|  再 根 据[][]\T1/ntxtlf/m/n/12.045 3.31[][]\TU/SimSun(0)/m/n/12.045 我
  []
 
 [50] [51] [52]
-Overfull \hbox (1.5488pt too wide) in paragraph at lines 1747--1748
+Overfull \hbox (1.5488pt too wide) in paragraph at lines 1750--1751
 []\TU/SimSun(0)/m/n/12.045 比 如 三 维 问 题 中 $[]$ 算 符 的 三 个 分 量 算 符 $\OML/ntxmi/m/it/12.045 X; Y; Z$ \TU/SimSun(0)/m/n/12.045 就 构 成 了 一 个 \T1/ntxtlf/m/n/12.045 CSCO,
  []
 
 [53] [54]
 第四章
 
-Overfull \vbox (0.325pt too high) detected at line 1863
+Overfull \vbox (0.325pt too high) detected at line 1866
  []
 
 [55
 
 ] [56]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.03374pt on input line 1877.
+(Font)              scaled to size 9.03374pt on input line 1880.
  [57] [58] [59] [60] [61] [62] [63]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 2085.
+(Font)              scaled to size 9.03374pt on input line 2088.
  [64] [65] [66] [67] [68] [69] [70] [71] [72] [73]
 \openout2 = `appendix.aux'.
 
@@ -2252,7 +2252,7 @@ Package rerunfilecheck Info: File `sourcecode.out' has not changed.
 Here is how much of TeX's memory you used:
  54327 strings out of 476533
  1408259 string characters out of 5818886
- 1888107 words of memory out of 5000000
+ 1888108 words of memory out of 5000000
  73529 multiletter control sequences out of 15000+600000
  536224 words of font info for 264 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

@@ -1168,7 +1168,7 @@
         \end{array}
     \end{lequation}
 
-    量子力学与经典力学最大的不同就是当你对系综测量某个可观测量$Q$时, 测量结果会呈现一定的概率分布。那么, 能否对于某个可观测量找到对应的一个量子态$\left|Psi\right\rangle$, 当系综中所有的粒子均处于
+    量子力学与经典力学最大的不同就是当你对系综测量某个可观测量$Q$时, 测量结果会呈现一定的概率分布。那么, 能否对于某个可观测量找到对应的一个量子态$\left|\Psi\right\rangle$, 当系综中所有的粒子均处于
     这个态时, 对这个系综测量$Q$那么得到的值失去了概率分布, 总是固定值(比方说$q$)?答案是肯定的, 而且我们将这种态称为\uwave{定值态}(不是前面定态波函数解的那个定态, 不过那个定态波函数的解, 确实是关于$\hat{H}$的定值态)。
     \begin{equation*}
         \left.\begin{matrix} 
@@ -1345,16 +1345,19 @@
     \section{广义概率诠释}
     薛定谔只是捣鼓出来了一个波函数方程, 但全然不知波函数方程的物理意义是什么, 前面我们说了它的模方可以解释为粒子位置分布的概率密度函数, 这是广义解释的一个特例。
     \begin{proposition}{广义概率诠释}
-        \setlength\parindent{2em}先考虑离散谱情况。我们对一个量子态$\Psi(x,t)$进行测量, 会得到观察算符$\hat{Q}$的一个本征值$q_n$, 而且因为测量, 体系会坍缩为$q_n$对应的一个本征态$\left|u_n^i\right\rangle$(已正交归一化)\footnote[1]{就是前面讲的定值态}, 而具体坍缩到这个本征态
-        的概率为:
+        \setlength\parindent{2em}先考虑离散谱情况。我们对一个量子态$\Psi(x,t)$进行测量, 会得到观察算符$\hat{Q}$的一个本征值$q_n$, 而且因为测量, 体系会坍缩为$q_n$对应的一个本征态$\ket{\psi_n}$。
+        且$\ket{\psi_n}$实际上是$\ket{\Psi}$在$q_n$所对应的本征空间的归一化投影。定义投影算符：
+        \[P_n\equiv\sum\limits_{i=1}^{g_n} \ket{u_n^i} \bra{u_n^i}\]
+        那么$\ket{\psi_n}$满足\footnote[1]{利用了$P_n^2=P_n$}:
         \begin{equation}
-            \mathscr{P}_n^i=\left | c_n^i \right | ^2,c_n^i=\left\langle {{{\text{u}}_n^i}}
-            \mathrel{\left | {\vphantom {{{\text{u}}_n^i} \Psi }}
-            \right. \kern-\nulldelimiterspace}
-            {\Psi } \right\rangle 
+            \ket{\psi_n}=\frac{P_n\ket{\Psi}}{\sqrt{\braket{\Psi|P_n|\Psi}}}
         \end{equation}
-        那么, 测量值为$q_n$的概率为\footnote[2]{对于非简并情况, $\{\Ket{u_n^i}\}$这一组基的选取是多种多样的, 要注意坍缩只是坍缩为一个本征态, 不一定就是这组基里面的矢量, 利用上面的式子照样可以计算坍缩概率, 只是选取一组基方便我们下面计算测量到某个值的概率罢了, 而且可以证明下面的计算结果与基底的选取无关。}:
-            \[\mathscr{P}_n=\sum\limits_{i=1}^{g_n}\mathscr{P}_n^i\]
+        \textbf{体系在测量之后会以$\ket{\psi_n}$为初态继续按照薛定谔方程演化}, 所以我们说测量一定会影响系统\footnote[2]{但是对于一个本身就处于$\hat Q$的某个定值态的系统, 你测量$Q$并不会影响系统}。
+        对这个系统测量, 得到$q_n$的概率为：
+        \begin{equation}
+            \mathscr{P}_n=\sum\limits_{i=1}^{g_n}\left|\Braket{u_n^i|\Psi}\right|
+        \end{equation}
+            
         
         \setlength\parindent{2em}对于连续谱, 我们前面提到过其本征矢是没有物理意义的, 也就是说, 进行测量时, 体系不会坍缩为一个确定的本征态, 而是一个很狭窄的
         范围, 因为只有这些本征矢组合成的波包才有确定的物理意义。
