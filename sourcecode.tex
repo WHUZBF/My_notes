@@ -2357,8 +2357,146 @@
     \[\hat H \psi=E\psi,L_z\psi=\hbar m \psi,L^2 \psi=\hbar^2\ell\left(\ell+1\right)\psi\]
     
     回头再看\ref{eq:4.26}的离心势能项, 当我们将$L^2$顺利与$\hbar^2\ell\left(\ell+1\right)$联系起来后, 离心项和经典力学里面的${L^2}/({2m r^2})$更加相似了。现在只剩下一个问题是我们前面纯代数推导
-    本征矢和前面的纯分析解薛定谔方程不相容的了, 那就是根据前面的推导, 球谐函数中的$\ell$只能取整数, 但是我们求本征值时允许$\ell$取值为半整数, 这并不是所谓的增根, 而是与有深刻物理意义的自旋相联系。
+    本征矢和前面的纯分析解薛定谔方程不相容的了, 那就是根据前面的推导, 球谐函数中的$\ell$只能取整数, 但是我们求本征值时允许$\ell$取值为半整数, 在这里, $\ell$确实取整数才有物理意义, 但是半整数解在我们下面要
+    提到的自旋也是有物理意义的。
 
     \section{自旋}
+    经典力学中, 刚体就是一个质点组, 根据柯尼希定理, 这个质点组的总角动量可以分为两部分。一部分是因为质心的运动引起的, 也称为\textbf{轨道角动量}；还有一部分
+    是因为质点绕质心运动带来的, 也就是在质心系下相对质心的角动量, 这也称为\textbf{自旋角动量}。
+
+    在量子力学中, 也有类似的概念, 我们前面谈到的$\bm{L}$都是指电子的轨道角动量, 它和电子的空间运动相关, 由球谐函数$Y_\ell^m$描述, 但是还有一部分角动量是自旋角动量$\mathcal{S}$, 与粒子的空间运动无关, 也常常被
+    称为内禀角动量。经典力学上我们区分这两种角动量更多的是为了方便, 但是在量子力学中, 自旋的存在是不能类比为粒子的自转的。 其一是我们现在对于基本粒子都处理成数学上一个没有大小
+    的点；其二, 如果去按照这种经典的自转去计算电子表面的线速度, 会发现其已远远超过光速。所以现在我们暂且把它的存在当作是公理, 而且认为自旋角动量的代数结构和轨道角动量的完全一致:
+    \begin{equation}
+        \boxed{\left[\mathcal{S_x},\mathcal{S_y}\right]=i\hbar \mathcal{S}_z,\left[\mathcal{S_y},\mathcal{S_z}\right]=i\hbar \mathcal{S}_x,\left[\mathcal{S_z},\mathcal{S_x}\right]=i\hbar \mathcal{S}_y}
+    \end{equation}
+    由于代数结构的一致性, 下面这些结论也就直接复制于$\S \operatorname{3.2-3.3}$
+    \begin{equation}
+        \boxed{\mathcal{S}^2\ket{s,m}=\hbar^2s\left(s+1\right),\mathcal{S_z}\ket{s,m}=\hbar m\ket{s,m}}
+    \end{equation}
+
+    上面的$\ket{s,m}$表示粒子的\textbf{自旋态}, 无法在位置表象下用波函数表示出来, 这也是为何我们要引入狄拉克符号的一个重要原因。现在引入粒子的自旋态后, 这些自旋态也
+    构成了一个线性空间, $\mathcal{S}$是这个空间中的观察算符\footnote[1]{我们下面的讨论无特殊说明都是指粒子的自旋态空间。实际上它比前面的量子态空间好处理, 我们后面会看到, 很多时候它是一个有限维的向量空间。}。
+    其中$s,m$取值为：
+    \[s=0,\frac{1}{2},1,\frac{3}{2},\ldots\quad m=-s,-s+1,\ldots,s-1,s\]
+    这里我们并没有任何理由忽略半整数的$s$取值。
+
+    类似定义$\mathcal{S}_\pm$, 有\footnote[2]{参考下书上习题4.21}：
+    \begin{equation}
+        \label{eq:4.60}
+        \mathcal{S_\pm}\ket{s,m}=\hbar\sqrt{s(s+1)-m(m\pm 1)}\ket{s,m\pm 1}
+    \end{equation}
+
+    最后提一下, 基本粒子都有一个独特的自旋量子数$s$, 虽然粒子的量子态受到扰动后, 其轨道角量子数$\ell$可能发生改变, 但是自旋量子数$s$是永远不变的。
+
+    \subsection{自旋1/2}
+    $s=1/2$的自旋系统是最简单的非平凡系统, 因为$m$只有$\pm\frac{1}{2}$两个取值, 对应的两个自旋态构成了一组正交归一基\footnote[3]{之前提到过, 我们现在只考虑自旋态, $\mathcal{S}_z$是自旋态空间中的观察算符}。
+    我们用$\ket{\frac{1}{2}, \uparrow}$和$\ket{\frac{1}{2},\downarrow}$分别表示对应$\mathcal{S}_z$本征值$\frac{\hbar}{2}$和$-\frac{\hbar}{2}$的自旋态。在这两个自旋态构成的表象下, 其它自旋态可以用一个列向量表示, 我们
+    称之为\textbf{自旋量}$\chi$。
+
+    定义：
+    \begin{equation}
+        \chi_+\equiv\begin{pmatrix}
+            1\\0
+        \end{pmatrix},\chi_-\equiv\begin{pmatrix}
+            0\\1
+        \end{pmatrix}
+    \end{equation}
+    则:
+    \begin{equation}
+        \chi =\begin{pmatrix}
+            a\\b
+        \end{pmatrix}=a\chi_++b\chi_-
+    \end{equation}
+    表示一个自旋态为$a\ket{\frac{1}{2},\uparrow}+b\ket{\frac{1}{2},\downarrow}$的粒子。再根据广义概率诠释, 在在这个态下测量$\mathcal{S}_z$得到$\hbar/2$的
+    概率为$|a|^2$, 得到$-\hbar/2$的概率为$|b|^2$。那么应该有$|a|^2+|b|^2=1$, 也就是说$\chi $是归一化的, $\chi^\dagger\chi=1$.
+
+    如果进一步问在这个态下测量$\mathcal{S}_x$和$\mathcal{S}_y$会得到怎样的结果, 我们就需要在这个表象下去计算$\mathcal{S}_x$的矩阵表示了。
+
+    $\mathbf{S}_z$在这个基下是对角的：
+    \begin{equation}
+    \mathbf{S}_z = \frac{\hbar }{2} \begin{pmatrix}
+        1& 0\\
+        0& -1
+    \end{pmatrix}
+    \end{equation}
+    根据\ref{eq:4.60}, 可以得出：
+    \begin{equation}
+        \mathbf{S}_+=\begin{pmatrix}
+            0&1\\
+            0&0
+        \end{pmatrix},
+        \mathbf{S}_-=\begin{pmatrix}
+            0&0\\
+            1&0
+        \end{pmatrix}
+    \end{equation}
+    再根据$\mathcal{S}_\pm$的定义：
+    \begin{equation}
+        \mathcal{S}_x=\frac{S_++S_-}{2}=\frac{\hbar}{2}
+        \begin{pmatrix}
+            0&1\\
+            1&0
+        \end{pmatrix},
+        \mathcal{S}_y=\frac{S_+-S_-}{2i}=\frac{\hbar}{2}
+        \begin{pmatrix}
+            0&-i\\
+            i&0
+        \end{pmatrix}
+    \end{equation}
+    观察到这些矩阵前面都有系数$\hbar/2$, 我们定义泡利矩阵：
+    \begin{lequation}
+        \boxed{
+            \sigma_x\equiv\begin{pmatrix}
+                0&1\\
+                1&0
+            \end{pmatrix},
+            \sigma_y\equiv\begin{pmatrix}
+                0&-i\\
+                i&0
+            \end{pmatrix},
+            \sigma_z\equiv\begin{pmatrix}
+                1&0\\
+                0&-1
+            \end{pmatrix}
+        }
+    \end{lequation}
+    
+    对应的自旋角动量算符的矩阵只要在前面乘一个$\hbar/2$即可。注意到这些矩阵都是厄米矩阵, 这也力学量算符都是厄米算符相一致。
+    
+    回到以开始的问题, 假设我们要对$\chi$测量$\mathcal{S}_x$, 我们先去根据$\mathbf{S}_x$计算本征值和本征矢。不难得出$\mathbf{S}_x$的本征值为
+    $\pm\frac{\hbar}{2}$, 对应的本征矢为：
+    \begin{equation}
+        \chi_+^(x)=\begin{pmatrix}
+            1/\sqrt{2}\\
+            1/\sqrt{2}
+        \end{pmatrix},
+        \chi_-^(x)=\begin{pmatrix}
+            1/\sqrt{2}\\
+            -1/\sqrt{2}
+        \end{pmatrix}
+    \end{equation}
+    那么$\chi$可以写成$\mathcal{S}_x$的两个本征矢的线性组合：
+    \begin{equation}
+        \chi=\left(\frac{a+b}{\sqrt{2}}\right) \chi_{+}^{(x)}+\left(\frac{a-b}{\sqrt{2}}\right) \chi_{-}^{(x)}
+    \end{equation}
+    根据广义概率诠释, 有$|a+b|^2/2$的概率测得$\hbar/2$, 有$|a-b|^2/2$的概率测得$-\hbar/2$.
+
+    \subsection{可观测量的相容性}
+    其实这部分内容在讲不确定性原理的时候就应该讲到了, 但是现在我们将它放到自旋-$\frac{1}{2}$系统中来重新思考一下, 当然也只是一个简单的探讨。
+
+    如果我们有一个$\ket{\frac{1}{2},\uparrow}$的自旋, 我们知道如果测量$\mathcal{S}_z$, 一定会得到$\hbar/2$, 且无论做多少次测量, 都不会对系统产生影响
+    , 但是一旦我们去测量$\mathcal{S}_x$, 那么我们有各自一半的概率得到$\hbar/2$和$-\hbar/2$(假设得到了$\hbar/2$)。确实, 对于$\mathcal{S}_z$和$\mathcal{S}_x$的这两次测量我们都
+    精确的得到了$\hbar/2$的结果\footnote[1]{前面动量、位置这种连续谱确实得到的只能是个范围, 因为波函数肯定坍缩成一定范围内的波包, 而这种离散谱, 只要我们的测量手段足够先进就能保证测量的精确性。}。
+    那有的人可能马上就会跳出来说：“你看, 我们不是\uwave{同时}精确确定了$\mathcal{S}_x$和$\mathcal{S}_z$吗？不确定性原理一定是错的！”。实际上, 造成这种误解的原因就在于\textbf{测量是一定会对
+    态造成扰动的}, 当你$\mathcal{S}_x$测量完成后, 体系已经坍缩为$\chi_{+}^x$, 如果你再去立即测量$\mathcal{S}_z$, 结果就不再是确定的$\hbar/2$, 而是还有百分之五十的概率
+    为$-\hbar/2$, 又具有了随机性。\footnote[2]{为了完成这个实验你可能需要一个系综。}也就是说我们前面测量得到的$\mathcal{S}_z$的信息已经完全丢失了, 我们永远不能\uwave{同时}确定$\mathcal{S}_x$和$\mathcal{S}_z$。
+    而且你如果两个量的测量顺序不同, 你还会得到不同的结果。这也就是算符之间的不相容导致的直接后果。
+
+    对于两个可对易算符$\hat A,\hat B$, 它们一定有一对共同本征矢构成的完备基。根据广义概率诠释, 我们可以证明, 无论$A,B$的测量顺序如何, 得到的结果(概率)都是一样的, 而且
+    如果测量$A$后得到$a_n$, 测量$B$后得到$b_p$, 那么之后继续测量$A$(或者$B$), 得到的结果都是$a_n$(或$b_p$)。也就是说可以认为测量$A$不会对$B$的测量产生干扰, 测量$B$非但不会让之前
+    测量$A$的信息丢失, 还会得到补充, 反之亦然。所以相容的两个可观测量是可以同时确定的。更详细的推导可以参考科恩书的$\S3\mbox{-}C\mbox{-}6$
+
+
     \include{appendix.tex}
 \end{document}
