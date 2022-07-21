@@ -2433,12 +2433,12 @@
     \end{equation}
     再根据$\mathcal{S}_\pm$的定义：
     \begin{equation}
-        \mathcal{S}_x=\frac{S_++S_-}{2}=\frac{\hbar}{2}
+        \mathbf{S}_x=\frac{S_++S_-}{2}=\frac{\hbar}{2}
         \begin{pmatrix}
             0&1\\
             1&0
         \end{pmatrix},
-        \mathcal{S}_y=\frac{S_+-S_-}{2i}=\frac{\hbar}{2}
+        \mathbf{S}_y=\frac{S_+-S_-}{2i}=\frac{\hbar}{2}
         \begin{pmatrix}
             0&-i\\
             i&0
@@ -2490,13 +2490,109 @@
     精确的得到了$\hbar/2$的结果\footnote[1]{前面动量、位置这种连续谱确实得到的只能是个范围, 因为波函数肯定坍缩成一定范围内的波包, 而这种离散谱, 只要我们的测量手段足够先进就能保证测量的精确性。}。
     那有的人可能马上就会跳出来说：“你看, 我们不是\uwave{同时}精确确定了$\mathcal{S}_x$和$\mathcal{S}_z$吗？不确定性原理一定是错的！”。实际上, 造成这种误解的原因就在于\textbf{测量是一定会对
     态造成扰动的}, 当你$\mathcal{S}_x$测量完成后, 体系已经坍缩为$\chi_{+}^x$, 如果你再去立即测量$\mathcal{S}_z$, 结果就不再是确定的$\hbar/2$, 而是还有百分之五十的概率
-    为$-\hbar/2$, 又具有了随机性。\footnote[2]{为了完成这个实验你可能需要一个系综。}也就是说我们前面测量得到的$\mathcal{S}_z$的信息已经完全丢失了, 我们永远不能\uwave{同时}确定$\mathcal{S}_x$和$\mathcal{S}_z$。
+    为$-\hbar/2$, 又具有了随机性。\footnote[1]{为了完成这个实验你可能需要一个系综。}也就是说我们前面测量得到的$\mathcal{S}_z$的信息已经完全丢失了, 我们永远不能\uwave{同时}确定$\mathcal{S}_x$和$\mathcal{S}_z$。
     而且你如果两个量的测量顺序不同, 你还会得到不同的结果。这也就是算符之间的不相容导致的直接后果。
 
     对于两个可对易算符$\hat A,\hat B$, 它们一定有一对共同本征矢构成的完备基。根据广义概率诠释, 我们可以证明, 无论$A,B$的测量顺序如何, 得到的结果(概率)都是一样的, 而且
     如果测量$A$后得到$a_n$, 测量$B$后得到$b_p$, 那么之后继续测量$A$(或者$B$), 得到的结果都是$a_n$(或$b_p$)。也就是说可以认为测量$A$不会对$B$的测量产生干扰, 测量$B$非但不会让之前
     测量$A$的信息丢失, 还会得到补充, 反之亦然。所以相容的两个可观测量是可以同时确定的。更详细的推导可以参考科恩书的$\S3\mbox{-}C\mbox{-}6$
+    
+    \subsection{磁场中的带电粒子}
+    在电磁学课程中我们讲过带电粒子在磁场中运动时会受到洛伦兹力的作用, 在电动力学中有关于磁偶极矩的介绍, 原子核外运动的电子有轨道角动量, 这一部分就是我们经典
+    力学中研究的磁矩的构成部分。实际上, 一个自旋不为$0$的带电粒子单独构成了一个磁偶极子, 磁矩可以写为：
+    \[\mathbf{\mu}=\gamma\mathcal{S}\]
+    其中$\gamma$叫做\textbf{旋磁比}, 对于电子, $\gamma=-e/m$。磁偶极子在匀强磁场中受到的合力为$0$, 但是受到的合力矩不为$0$\footnote[2]{这个力矩是力偶矩, 与参考点位置的选取无关。}:
+    \[\mathbf{M}=\mathbf{\mu}\times\mathbf{B}\]
+    如果粒子还在磁场中运动, 那么需要考虑洛伦兹力, 这个时候薛定谔方程会变得比较复杂, 我们只考虑静止情形。那么这个时候我们哈密顿量只需要考虑力偶矩做功相应的机械能：
+    \[\mathcal{H}=-\mathbf{\mu}\cdot\mathbf{B}\]
+    在自旋表象下\footnote[3]{后面的推导都在$\chi_+$和$\chi_-$下完成, 这样我们就只需要直接操作矩阵}, 哈密顿矩阵可以写成：
+    \[\mathbf{H}=-\gamma\mathbf{B}\cdot\mathbf{S}=-\gamma\left(\mathbf{B}_x\cdot\mathbf{S}_x+\mathbf{B}_y\cdot\mathbf{S}_y+\mathbf{B}_z\cdot\mathbf{S}_z\right)\]
+    \subsubsection*{拉莫尔进动}
+    我们先看一下经典力学中的拉莫尔进动, 由角动量定理：
+    \begin{equation}
+        \frac{d\mathbf{L}}{dt}=\mathbf{M}=\mathbf{\mu}\times\mathbf{B}
+    \end{equation}
+    由于$\mathbf{L}\parallel\mathbf{\mu}$, 所以角动量尾端绕磁感线做圆周运动, 大小不变, 方向改变, 这也就是所谓的进动。
 
+    上面的结论在电动力学中早已学习, 只是做简要介绍, 下面详细看量子力学情形。
 
+    假设磁场沿$z$轴方向：\[\mathbf{B}=B_0\hat{\mathbf{k}}\]
+    那么哈密顿矩阵可以写为：
+    \begin{equation}
+        \mathbf{H}=\gamma B_0 \mathbf{S}=\gamma B_0 \begin{pmatrix}
+            1&0\\
+            0&-1
+        \end{pmatrix}
+    \end{equation}
+    由于自旋角动量算符是不显含时间的, 而且磁场是不随时变的, 所以$\hat{H}$不显含时间。所以我们先解定态薛定谔方程, 再加上时间变化因子就行了。我们很容易解得哈密顿
+    算符的本征值和本征矢：
+    \begin{equation}
+        \chi_+,E_+=\frac{\gamma B_0\hbar}{2};\chi_-,E_-=-\frac{\gamma B_0\hbar}{2}
+    \end{equation}
+    因为哈密顿算符在这里就是$\mathcal{S}_z$的倍数, 所以不用额外的计算。则薛定谔方程的解为：
+    \begin{equation}
+        \chi = a \chi_+ e^{-iE_+t/\hbar}+b \chi_- e^{-iE_-t/\hbar}=\begin{pmatrix}
+            a e^\frac{i\gamma B_0t}{2}\\
+            b e^\frac{-i\gamma B_0t}{2}
+        \end{pmatrix}
+    \end{equation}
+    其中$a,b$由初态决定, 且$|a|^2+|b|^2=1$。按照下面的方式重写$a,b$：
+    \begin{equation}
+        a=\cos\frac{\alpha}{2}e^{iB_0 t_1/2}, b=\sin\frac{\alpha}{2}e^{iB_0 t_2/2}
+    \end{equation}
+    下面计算自旋角动量的平均值：
+    \begin{align}
+        \braket{\mathcal{S}_x}&=\chi^\dagger\mathbf{S}_x\chi\\
+        &=\frac{\hbar}{2}\begin{pmatrix}
+            \cos\frac{\alpha}{2}e^\frac{-i\gamma B_0 (t+t_1)}{2}&\sin\frac{\alpha}{2}e^\frac{i\gamma B_0 (t-t_2)}{2}
+        \end{pmatrix}\begin{pmatrix}
+            1&0\\
+            0&-1
+        \end{pmatrix}\begin{pmatrix}
+            \cos\frac{\alpha}{2}e^\frac{i\gamma B_0 (t+t_1)}{2}\\\sin\frac{\alpha}{2}e^\frac{-i\gamma B_0 (t-t_2)}{2}
+        \end{pmatrix}\\
+        &=\frac{\hbar}{2}\sin\alpha\cos\left(\omega t+\phi\right)
+    \end{align}
+    其中$\omega$称为\textbf{拉莫尔频率}:
+    \[\omega\equiv\gamma B_0,\phi\equiv \frac{t_1-t_2}{2}\gamma B_0\]
+    同理：
+    \begin{equation}
+        \braket{\mathcal{S}_y}=-\frac{\hbar}{2}\cos\alpha\sin\left(\omega t+\phi\right)
+        , \braket{\mathcal{S}_z}=\frac{\hbar}{2}\cos\alpha
+    \end{equation}
+    自旋$z$分量不变, 总长度不变, $x,y$分量做相位相同的谐振, 显然, 这正是进动的特征。这个结果与经典力学是及其类似的, 但是力学量都变成了平均值。
+    
+    \subsubsection*{Stern–Gerlach实验}
+    % \begin{figure}[htbp]
+    %     \centering
+    %     \includegraphics[]{fig/4-1.svg}
+    %     \caption{Larmor precession}
+    % \end{figure}
+    我们下面考虑非均匀磁场, 这时不仅力偶矩不为$0$, 所受的合力也不为$0$, 合力的公式为：
+    \begin{equation}
+        \label{eq:4.78}
+        \mathbf{F}=\nabla\left(\mathbf{\mu}\cdot\mathbf{B}\right)
+    \end{equation}
+    这里计算梯度的时候把$\mathbf{\mu}$当作只与时间有关, 与空间无关的矢量\footnote[1]{确实, 由于粒子的运动, 磁矩也应该看作是与位置有关, 但是如果看一下
+    这个公式的推导过程, 我们会发现它是在\uwave{某一时刻}考虑偶极子附近磁场变化情况得出的, 所以实际上求梯度的时候$\mathbf{\mu}$不参与, 它与时间的依赖性, 造成了$\mathbf{F}$随时间的变化}。
+    我们考虑所加磁场在$z$方向上有个偏差$(\alpha\ll 1)$：
+    \[\mathbf{B}\sim\left(B_0+\alpha z\right)\hat{\mathbf{k}}\]
+    显然, 根据$\nabla\cdot\mathbf{B}=0$, 磁场一定会在$x$方向也有个偏差：
+    \[\mathbf{B}=-\alpha x \hat{\mathbf{i}}+\left(B_0+\alpha z\right)\hat{\mathbf{k}}\]
+    根据\ref{eq:4.78}, 受力可以写成:
+    \begin{equation}
+        \mathbf{F}=\gamma\alpha\left(S_z\hat{\mathbf{k}}-S_x\hat{\mathbf{i}}\right)
+    \end{equation}
+    
+    由于拉莫尔进动效应, $S_x$变化的很快(磁场还是$z$方向占主导作用), 所以可以认为$F_x$平均效果为$0$, 最终粒子受到$z$方向的作用力偏转, 而且与$S_z$成正比。
+    
+    实验观测到最终粒子被分为一系列离散的粒子流, 这也说明了粒子的自旋角动量的量子性(如果是连续的显然应该各个方向出射的粒子都有)。这个实验在量子态的测量和制备上也具有
+    重大意义, 我们可以利用这个实验装置入射粒子流最终得到一系列的$S_z$取值不同的粒子, 这个过程是量子态的\textbf{制备}。我们还可以让一个粒子通过这个装置, 根据它出射的角度去确定
+    其$S_z$的取值, 这便是量子态的\textbf{测量}。
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.42]{fig/4-2.eps}
+        \caption{The Stern–Gerlach apparatus:自旋向上的粒子向上偏转, 反之向下偏转}
+    \end{figure}
     \include{appendix.tex}
 \end{document}
