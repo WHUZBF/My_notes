@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  22 JUL 2022 00:47
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  23 JUL 2022 23:12
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2175,10 +2175,13 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
  [57] [58] [59] [60] [61] [62] [63]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 9.03374pt on input line 2088.
- [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77]
+ [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76]
+File: fig/4-1.png Graphic file (type bmp)
+<fig/4-1.png>
+ [77] [78]
 File: fig/4-2.eps Graphic file (type eps)
 <fig/4-2.eps>
- [78] [79]
+ [79] [80] [81] [82]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2188,10 +2191,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[80
+[83
 
 
-] [81] [82]
+] [84] [85]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2199,66 +2202,66 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[83] [84] [85]
+[86] [87] [88]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [86] [87]
+ [89] [90]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [88] [89] [90] [91] [92]
+ [91] [92] [93] [94] [95]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [93] [94] [95]
+ [96] [97] [98]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 474--497
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[96
+[99
 
-] [97] [98]
+] [100] [101]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 600--607
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[99] [100] [101] [102] [103] [104]
+[102] [103] [104] [105] [106] [107]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [105] [106]
+ [108] [109]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [107]
+ [110]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [108]
+ [111]
 Overfull \hbox (2.89873pt too wide) detected at line 910
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[109] [110] [111] [112]
+[112] [113] [114] [115]
 附录 C
-[113
+[116
 
-]) [114] (./sourcecode.aux (./appendix.aux))
+]) [117] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: BB077A8F31F0903EA9158A0C295B1263;6275.
+(rerunfilecheck)             Checksum: 8A44C418582B1D63A4AF942CFE255747;6541.
  ) 
 Here is how much of TeX's memory you used:
- 54386 strings out of 476533
- 1411714 string characters out of 5818886
- 1888177 words of memory out of 5000000
- 73587 multiletter control sequences out of 15000+600000
+ 54415 strings out of 476533
+ 1413184 string characters out of 5818886
+ 1888179 words of memory out of 5000000
+ 73615 multiletter control sequences out of 15000+600000
  536224 words of font info for 264 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1158s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (117 pages).
+Output written on sourcecode.pdf (120 pages).

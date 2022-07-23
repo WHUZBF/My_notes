@@ -2391,7 +2391,7 @@
 
     \subsection{自旋1/2}
     $s=1/2$的自旋系统是最简单的非平凡系统, 因为$m$只有$\pm\frac{1}{2}$两个取值, 对应的两个自旋态构成了一组正交归一基\footnote[3]{之前提到过, 我们现在只考虑自旋态, $\mathcal{S}_z$是自旋态空间中的观察算符}。
-    我们用$\ket{\frac{1}{2}, \uparrow}$和$\ket{\frac{1}{2},\downarrow}$分别表示对应$\mathcal{S}_z$本征值$\frac{\hbar}{2}$和$-\frac{\hbar}{2}$的自旋态。在这两个自旋态构成的表象下, 其它自旋态可以用一个列向量表示, 我们
+    我们用$\ket{\frac{1}{2}, \uparrow}$和$\ket{\frac{1}{2},\downarrow}$分别表示对应$\mathcal{S}_z$本征值$\frac{\hbar}{2}$和$-\frac{\hbar}{2}$的自旋态。\footnote[4]{分别称为自旋向上和自旋向下, 因为它们是$\mathcal{S}_z$的定态。}在这两个自旋态构成的表象下, 其它自旋态可以用一个列向量表示, 我们
     称之为\textbf{自旋量}$\chi$。
 
     定义：
@@ -2561,13 +2561,13 @@
         , \braket{\mathcal{S}_z}=\frac{\hbar}{2}\cos\alpha
     \end{equation}
     自旋$z$分量不变, 总长度不变, $x,y$分量做相位相同的谐振, 显然, 这正是进动的特征。这个结果与经典力学是及其类似的, 但是力学量都变成了平均值。
-    
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[]{fig/4-1.png}
+        \caption{Larmor precession:图中的自旋矢量是平均值$\braket{\mathcal{S}}$}
+    \end{figure}
+
     \subsubsection*{Stern–Gerlach实验}
-    % \begin{figure}[htbp]
-    %     \centering
-    %     \includegraphics[]{fig/4-1.svg}
-    %     \caption{Larmor precession}
-    % \end{figure}
     我们下面考虑非均匀磁场, 这时不仅力偶矩不为$0$, 所受的合力也不为$0$, 合力的公式为：
     \begin{equation}
         \label{eq:4.78}
@@ -2594,5 +2594,98 @@
         \includegraphics[scale=0.42]{fig/4-2.eps}
         \caption{The Stern–Gerlach apparatus:自旋向上的粒子向上偏转, 反之向下偏转}
     \end{figure}
+    \section{数学准备：张量积}
+    这一节主要是线性代数的补充附录, 其实这部分内容早该讲了, 因为从一维量子力学引入到三维是自然的, $\mathscr{E}_r\cong\mathscr{E}_x\otimes\mathscr{E}_y\otimes \mathscr{E}_z $。
+    
+    \begin{define}{张量积空间}
+        张量积空间是两个向量空间通过运算“$\otimes$”生成的新的向量空间:
+        \[\mathscr{E}=\mathscr{E}_1\otimes\mathscr{E}_2\]
+        $\mathscr{E}$中的元素由$\mathscr{E}_1$和$\mathscr{E}_2$中元素的张量积构成\footnote[1]{$\ket{\chi}\otimes\ket{\varphi}$和$\ket{\varphi}\otimes\ket{\chi}$是一样的。}：
+        \[\forall\ket{\varphi}\in\mathscr{E}_1,\ket{\chi}\in\mathscr{E}_2\Rightarrow\ket{\varphi}\otimes\ket{\chi}\]
+        其中张量积运算满足“双线性”：
+        \begin{align}
+            & \left[\lambda\ket{\varphi}\right]\otimes\ket{\chi}=\lambda\left[\ket{\varphi}\otimes\ket{\chi}\right]\\
+            & \ket{\varphi}\otimes\left[\mu\ket{\chi}\right]=\mu\left[\ket{\varphi}\otimes\ket{\chi}\right]
+        \end{align}
+        \begin{align}
+            & \ket{\varphi}\otimes\left[\ket{\chi_1}+\ket{\chi_2}\right]=\ket{\varphi}\otimes\ket{\chi_1}+\ket{\varphi}\otimes\ket{\chi_2}\\
+            & \left[\ket{\varphi_1}+\ket{\varphi_2}\right]\otimes\ket{\chi}=\ket{\varphi_1}\otimes\ket{\chi}+\ket{\varphi_2}\otimes\ket{\chi}
+        \end{align}
+        而且如果$\{\ket{\varphi_i}\}$是$\mathscr{E}_1$中的一组基, $\{\ket{\chi_l}\}$是$\mathscr{E}_2$中的一组基。那么他们的张量积$\{\ket{\varphi_i}\otimes\ket{\chi_l}\}$
+        构成了$\mathscr{E}$中的一组基。
+    \end{define}
+    \subsection*{$\mathscr{E}$中的内积}
+    张量积空间中内积的定义依赖于$\mathscr{E}_1,\mathscr{E}_2$中标量积的定义。首先我们换一个更加清爽的符号记$\mathscr{E}$中的向量：
+    \[\ket{\varphi\chi}\equiv\ket{\varphi}\otimes\ket{\chi}\]
+    下式给出了内积的定义:
+    \begin{equation}
+        \boxed{
+            \Braket{\varphi_2\chi_2|\varphi_1\chi_1}\equiv\Braket{\varphi_2|\varphi_1}\Braket{\chi_2|\chi_1}
+        }
+    \end{equation}
+    根据这个定义我们可以立即得出, 如果我们得到了两个空间中的正交归一基, 那么对应的张量积在张量积空间中构成的基底也是正交归一的, 只是这个时候要使用两个指标来标记：
+    \[\Braket{\varphi_{i^\prime}\chi_{l^\prime}|\varphi_i\chi_l}=\delta_{ii^\prime}\delta_{ll^\prime}\]
+    \subsection*{算符的张量积}
+    设$\hat{A}$是定义在$\mathscr{E}_1$上的一个算符, $\hat{B}$定义在$\mathscr{E}_2$上, 它们的延伸算符按照下式定义：
+    \[\tilde{A}\left[\ket{\varphi}\otimes\ket{\chi}\right]=\left[\tilde{A}\ket{\varphi}\right]\otimes\ket{\chi}
+    ,\tilde{B}\left[\ket{\varphi}\otimes\ket{\chi}\right]=\ket{\varphi}\otimes\left[\tilde{B}\ket{\chi}\right]\]
+   
+    按照上面的定义可以得出：\[\left[\tilde{A},\tilde{B}\right]=0\]这实际上就是在说, 两个无相互作用的粒子构成的体系, 它们两个之间的任意力学量都是对易相容的, 也
+    就是说一定可以同时精确确定两个粒子的任意力学量。\footnote[1]{当然, 这是非常自然的, 除非两个粒子之间建立了纠缠态, 否则我测量一个粒子肯定不会干扰到另一个粒子的测量, 但是我单独测量一个粒子, 根据不确定性原理, 测量是会干扰体系影响下一次测量的。}
+
+    算符$A,B$的张量积定义为：
+    \begin{equation}
+        \boxed{
+            \hat{A}\otimes\hat{B}\equiv\tilde{A}\tilde{B}
+        }
+    \end{equation}
+    或直接写为：
+    \begin{equation}
+        \left(\hat{A}\otimes\hat{B}\right)\ket{\varphi\chi}=\left[\hat{A}\ket{\varphi}\right]\otimes\left[\hat{B}\ket{\chi}\right]
+    \end{equation}
+    
+    例如, 按照这个定义, $\mathscr{E}$中的投影算符可以写为：
+    \begin{equation}
+        \ket{\varphi\chi}\bra{\varphi\chi}=\left(\ket{\varphi}\bra{\varphi}\right)\otimes\left(\ket{\chi}\bra{\chi}\right)
+    \end{equation}
+    \subsection*{符号约定}
+    量子力学中, 我们的符号体系尽量简化, 但是有时候会存在含糊不清的情况, 这个时候就要根据上下文来判断了, 具体简化如下：
+    \begin{itemize}
+        \item $\ket{\varphi}\otimes\ket{\chi}\Rightarrow\ket{\varphi}\ket{\chi}$
+        \item $\hat A\otimes \hat B\Rightarrow \hat{A}\hat{B}$
+        \item $\tilde{A}\Rightarrow\hat{A}$
+    \end{itemize}
+    
+    一般来说, 只要根据上下文确定算符的作用对象, 就不会有含糊的地方, 而且这里的符号简化在物理上也很自然。我们这里只是简要的介绍了一下多重线性代数的一些定义, 不过
+    对于下一节要讲的内容来说已经够用了。
+
+    \section{角动量的合成}
+    这一部分的内容还是比较深奥的, 我们只是用初等的方法做一个极其简单的介绍。
+
+    我们下面考虑两个自旋耦合的粒子体系, 我们只考虑它们的自旋。 单个粒子的态空间为$\mathscr{E}_1$和$\mathscr{E}_2$。 以第一个粒子为例, 在自旋态空间中, $\mathcal{S}^2, \mathcal{S}_z$
+    构成了一个CSCO, 所以我们可以使用它们的本征值所对应的参数$s_1,m_1$, 去完整描述这单个粒子, 而且它们的共同本征矢$\ket{s_1,m_1}$构成了$\mathscr{E}_1$中的基底。对于某个粒子来说, 其自旋角量子数$s$
+    是不会变的, 所以实际上我们只需要$m_1$这一个参数就可以完整描述一个$s_1$已知的粒子的自旋态。
+    
+    两个粒子耦合的自旋态空间$\mathscr{E}$是两个粒子自身的自旋态空间的张量积, 且对应的基底可以用下式确定：
+    \[\ket{s_1,s_2,m_1,m_2}=\ket{s_1,m_1}\otimes\ket{s_2,m_2}\]
+    显然$s_1,s_2,m_1,m_2$四个参数加上态之间的线性组合完全描绘了整个系统, 实际上是因为${\mathcal{S}_1}^2,{\mathcal{S}_2}^2,{\mathcal{S}_{1z}},{\mathcal{S}_{2z}}$在$\mathscr{E}$中构成了一个CSCO,
+    由于$s_1,s_2$又是固定的, 所以实际上只需要$m_1,m_2$就可以描绘整个系统。当然我们也可以找其它的CSCO, 用别的参数去描述这个系统, 但是总的自由度就是$4$\footnote[1]{当然, 如果你不算$s_1,s_2$的话就是$2$}。
+
+    可以证明总的自旋角动量算符和其$z$轴上的分量算符\footnote[2]{下面的推导中我们使用上一节的符号约定, 略去延伸算符的$\tilde{}$}与${\mathcal{S}_1}^2,{\mathcal{S}_2}^2$一起构成了一个CSCO：
+    \begin{align}
+        &\mathcal{S}^2=\left(\mathcal{S}_1+\mathcal{S}_2\right)^2={\mathcal{S}_1}^2+{\mathcal{S}_2}^2+2\mathcal{S}_1\cdot\mathcal{S}_2\\
+        &\mathcal{S}_z=\mathcal{S}_{1z}+\mathcal{S}_{2z}
+    \end{align}
+    上式中利用了$\left[\mathcal{S}_1,\mathcal{S}_2\right]=0$, 而且：
+    \[\mathcal{S}_1\cdot\mathcal{S}_2\equiv\mathcal{S}_{1x}\mathcal{S}_{2x}+\mathcal{S}_{1y}\mathcal{S}_{2y}+\mathcal{S}_{1z}\mathcal{S}_{2z}\]
+    那么根据代数结构上的类似性我们就可以考虑使用$\mathcal{S}^2$和$\mathcal{S}_z$对应的联系本征值的参数$s,m$以及其共同本征矢$\ket{s,m}$去描绘整个系统。且类似的去定义本征值和$s,m$之间的关系：
+    \begin{align}
+        &\mathcal{S}^2\ket{s,m}=\hbar^2s(s+1)\ket{s,m}\\
+        &\mathcal{S}_z\ket{s,m}=\hbar m\ket{s,m}    
+    \end{align}
+    这也就是我们要做的事情, 把两个自旋等效为一个自旋, 并且写出对应的自旋量子数。对于一个粒子而言,$s$是确定的, 但是对于两个粒子构成的体系来说, 就不一定了, $s$的取值受$m_1,m_2$的影响, 所以现在正是要去求出所有的本征值和本征矢。
+    这个问题很复杂, 我们下面在两个自旋$\frac{1}{2}$的粒子体系中具体考虑这个问题, 用的也是初等的方法。
+
+
     \include{appendix.tex}
 \end{document}
