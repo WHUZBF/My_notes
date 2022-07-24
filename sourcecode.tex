@@ -36,6 +36,8 @@
 \usepackage[]{braket}
 \usepackage{siunitx}
 \DeclareSIUnit\angstrom{\text {Å}}
+\usepackage{diagbox}
+\usepackage[final]{pdfpages}
 
 % 定义公式环境
 \newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
@@ -71,7 +73,7 @@
 }
 
 \setlength{\parindent}{4em}
-\title{Notes of Griffiths Introduction to QM}   % 添加标题
+\title{Notes of Griffiths' Introduction to QM}   % 添加标题
 \author{郑卜凡}                     % 添加作者
 \date{\today}                             %最后更新日期
 
@@ -2186,6 +2188,7 @@
     \end{itemize}
     \section{角动量}
     在经典力学中, 粒子的角动量定义为:\[\bm{L}=\bm{r}\times\bm{p}\]写成分量形式为:\[L_x=yp_z-zp_y,L_y=zp_x-xp_z,L_z=xp_y-yp_x\]
+    
     涉及到经典力学中的两个力学量相乘转换为算符时, 可能要考虑一下算符结合的顺序, 但是好在这里我们不需要考虑, 因为正则对易关系的三维形式为:
     \begin{equation}
         \left[r_i,p_j\right]=i\hbar\delta_{ij}\quad\left[r_i,r_j\right]=\left[p_i,p_j\right]=0
@@ -2359,6 +2362,39 @@
     回头再看\ref{eq:4.26}的离心势能项, 当我们将$L^2$顺利与$\hbar^2\ell\left(\ell+1\right)$联系起来后, 离心项和经典力学里面的${L^2}/({2m r^2})$更加相似了。现在只剩下一个问题是我们前面纯代数推导
     本征矢和前面的纯分析解薛定谔方程不相容的了, 那就是根据前面的推导, 球谐函数中的$\ell$只能取整数, 但是我们求本征值时允许$\ell$取值为半整数, 在这里, $\ell$确实取整数才有物理意义, 但是半整数解在我们下面要
     提到的自旋也是有物理意义的。
+    \subsection*{CSCO的物理意义简单探讨}
+    广义概率诠释中提到, 当我们对某个态进行测量时, 态会坍缩到测量(本征)值对应的一个本征态, 比如在$\ell=1$的角动量问题中, 选取$f_\ell^m$为表象, 则角动量算符的矩阵为：
+    \[L_z=\hbar\begin{pmatrix}
+        1&0&0\\
+        0&0&0\\
+        0&0&-1
+    \end{pmatrix}\]
+    
+    显然对于每个本征矢都不是简并的, 所以我们测量$L_z$, 在只要知道了测量值, 就相当于知道体系坍缩到了哪个态, 当然, 相差相位因子的态认为是物理上相同的态。但是一旦当我们测量$L_z^2$：
+    \[L_z^2=\hbar\begin{pmatrix}
+        1&0&0\\
+        0&0&0\\
+        0&0&1
+    \end{pmatrix}\]
+    
+    对于本征值$\hbar$, 简并度为$2$, 所以这个时候如果测量到$L_z^2=\hbar$, 我们不能再区分体系到底坍缩到了哪个态, 只能说坍缩到了$\mathscr{E}_1$空间。这个时候要想去确定体系到底坍缩到了哪个本征态, 可以选择再测一个力学量。
+    显然, 根据不确定性原理, 这个力学量应该是要和$L_z^2$是对易的, 这样才能同时确定两个力学量的值, 也就是说两次测量可以看作是独立的, 不会相互影响。我们索性就取$L_z$\footnote[2]{当然, 这个例子举得不是很恰当, 因为在$\ell$一定时, $L_z$由于非简并性, 本身就可以很好的描述这个系统了。}, 共同本征矢叫做$\ket{u_i}$:
+    \begin{center}
+        \begin{tabular}{|l|c|c|c|}
+            \hline
+            \diagbox{本征矢}{本征值}{算符} & $L_z$ & $L_z^2$ \\
+            \hline
+            $\ket{u_1}$ & 1&1\\
+            \hline
+            $\ket{u_2}$ & 0&0\\
+            \hline
+            $\ket{u_3}$ & 1&-1\\
+            \hline
+        \end{tabular}
+    \end{center}
+
+    那么现在如果我们对体系同时测量$L_z$和$L_z^2$, 得到的一组本征值就一定能完全确定体系坍缩到了哪个本征矢, 只是缺了一个相位因子, 但是它们在物理上是一样的。那么这几个力学量, 基于其共同本征矢和相应的本征值就可以完全描述这个系统, 这在量子态
+    的制备和测量都是有很重要的意义的。
 
     \section{自旋}
     经典力学中, 刚体就是一个质点组, 根据柯尼希定理, 这个质点组的总角动量可以分为两部分。一部分是因为质心的运动引起的, 也称为\textbf{轨道角动量}；还有一部分
@@ -2678,14 +2714,95 @@
     \end{align}
     上式中利用了$\left[\mathcal{S}_1,\mathcal{S}_2\right]=0$, 而且：
     \[\mathcal{S}_1\cdot\mathcal{S}_2\equiv\mathcal{S}_{1x}\mathcal{S}_{2x}+\mathcal{S}_{1y}\mathcal{S}_{2y}+\mathcal{S}_{1z}\mathcal{S}_{2z}\]
+    
     那么根据代数结构上的类似性我们就可以考虑使用$\mathcal{S}^2$和$\mathcal{S}_z$对应的联系本征值的参数$s,m$以及其共同本征矢$\ket{s,m}$去描绘整个系统。且类似的去定义本征值和$s,m$之间的关系：
     \begin{align}
         &\mathcal{S}^2\ket{s,m}=\hbar^2s(s+1)\ket{s,m}\\
         &\mathcal{S}_z\ket{s,m}=\hbar m\ket{s,m}    
     \end{align}
+    
     这也就是我们要做的事情, 把两个自旋等效为一个自旋, 并且写出对应的自旋量子数。对于一个粒子而言,$s$是确定的, 但是对于两个粒子构成的体系来说, 就不一定了, $s$的取值受$m_1,m_2$的影响, 所以现在正是要去求出所有的本征值和本征矢。
     这个问题很复杂, 我们下面在两个自旋$\frac{1}{2}$的粒子体系中具体考虑这个问题, 用的也是初等的方法。
 
+    \subsection*{双自旋$\frac{1}{2}$体系}
+    根据$\mathcal{S}$的定义可以证明它也具有\ref{eq:4.48}所示的代数结构, 所以我们也类似定义$\mathcal{S_\pm}$, $\mathcal{S}$与$\mathcal{S}_z$的共同本征矢$\ket{s,m}$也应该
+    满足\ref{eq:4.60}。
 
+    如果我们考虑使用$m_1,m_2$去描述系统, 那么很容易得出系统的一组基底：
+    \begin{equation}
+        \label{eq:4.92}
+        \begin{split}
+            &\ket{\uparrow\uparrow}=\ket{\frac{1}{2},\frac{1}{2},\frac{1}{2},\frac{1}{2}}\\
+            &\ket{\uparrow\downarrow}=\ket{\frac{1}{2},\frac{1}{2},\frac{1}{2},-\frac{1}{2}}\\
+            &\ket{\downarrow\uparrow}=\ket{\frac{1}{2},\frac{1}{2},-\frac{1}{2},\frac{1}{2}}\\
+            &\ket{\downarrow\downarrow}=\ket{\frac{1}{2},\frac{1}{2},-\frac{1}{2},-\frac{1}{2}}
+        \end{split}
+    \end{equation}
+    实际上就是$\{\ket{\uparrow},\ket{\downarrow}\}\otimes\{\ket{\uparrow},\ket{\downarrow}\}$。而且这些本征矢同时也是$\mathcal{S}_z$的本征矢：
+    \begin{align*}
+        &\mathcal{S}_z\ket{\uparrow\uparrow}=+\ket{\uparrow\uparrow}&m&=1\\
+        &\mathcal{S}_z\ket{\uparrow\downarrow}=0&m&=0\\
+        &\mathcal{S}_z\ket{\downarrow\uparrow}=0&m&=0\\
+        &\mathcal{S}_z\ket{\downarrow\downarrow}=-\ket{\downarrow\downarrow} &m&=-1
+    \end{align*}
+   
+    但是这些本征矢却不全是$\mathcal{S}^2$的本征矢, 下面的方法具有猜测性, 根据对于某个自旋有：
+    \[\mathcal{S}_-\ket{\uparrow}=\hbar\ket{\uparrow}\quad\mathcal{S}_-\ket{\downarrow}=0\]
+    可以得到：
+    \begin{align*}
+        \mathcal{S}_-\ket{\uparrow\uparrow}&=\hbar\left(\ket{\downarrow\uparrow}+\ket{\uparrow\downarrow}\right)\\
+        &=\hbar\sqrt{2}\cdot\frac{1}{\sqrt{2}}\left(\ket{\downarrow\uparrow}+\ket{\uparrow\downarrow}\right)
+    \end{align*}
+    通过上式的第二步变形, 后面的叠加态满足了归一化原理, 我们再次对其作用降阶算符：
+    \[\mathcal{S}_-\left[\frac{1}{\sqrt{2}}\left(\ket{\downarrow\uparrow}+\ket{\uparrow\downarrow}\right)\right]=\hbar\sqrt{2}\ket{\downarrow\downarrow}\]
+    上面得到的态再次降阶就变成$0$了。
+
+    通过上面的铺垫我们下面的说法也显得比较自然了。如果$\ket{\uparrow\uparrow}$是$\mathcal{S}^2$和$\mathcal{S}_z$的共同本征矢, 那么显然$m=1$, 再根据\ref{eq:4.60}
+    和文中出现的$\sqrt{2}$, 以及$m=-1,0,1$的取值。种种迹象表明$s$应该等于$1$, 而且按照这个想法, $\mathcal{S}_-$每次操作确实是降低了$m$的值。
+    \begin{equation}
+        \boxed{
+            \left\{
+                \begin{matrix}
+                   &\ket{1,1}=\ket{\uparrow\uparrow}\\
+                    &\ket{1,0}=\frac{1}{\sqrt{2}}\left(\ket{\downarrow\uparrow}+\ket{\uparrow\downarrow}\right)\\
+                    &\ket{1,-1}=\ket{\uparrow\uparrow} 
+                \end{matrix}
+            \right\}s=1\text{(triplet)}
+        }
+    \end{equation}
+    而且\ref{eq:4.92}中$m=0$的$\mathcal{S}_z$简并的情况应该是对应了$s=0$的另一种取值：
+    \begin{equation}
+        \boxed{
+            \left\{\ket{0,0}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow}\right)\right\}\quad s=0\text{singlet}
+        }
+    \end{equation}
+
+    当然, 目前为止我们都只能说是把结果\uwave{猜}出来了, 还应该进一步去证明。 其实, 只要利用$\mathcal{S}^2$的定义, 是很好证明上面的三重态和单重态分别对应其本征值$2\hbar$和$0$的
+    本征矢\footnote[1]{后面会专门规范一下\uwave{矢量算符}的符号问题}：
+    \[\mathcal{S}^2={\mathcal{S}_1}^2+{\mathcal{S}_2}^2+2\mathcal{S}_1\cdot\mathcal{S}_2\]
+    
+
+    事实上, 对于一般的系统, 可以证明$s$的取值为：
+    \begin{equation}
+        \boxed{s=(s_1+s_2),(s_1+s_2-1),\ldots,|s_1-s_2|}
+    \end{equation}
+    
+    当然, $m$的取值问题就非常trival了, 直接相加就好了, 并且也会从$-s$取到$s$。而且$\ket{s,m}$(耦合表象)和$\ket{s_1,s_2,m_1,m_2}$(非耦合表象)这两种表象之间有如下的变换关系：
+    \begin{equation}
+        \ket{s,m}=\sum_{m_1+m_2=m}C_{m_1m_2m}^{s_1s_2s}\ket{s_1,s_2,m_1,m_2}
+    \end{equation}
+    其中$C_{m_1m_2m}^{s_1s_2s}$是\textbf{CG系数}\footnote[2]{Clebsch–Gordan coefficients}。利用这个式子, 我们可以根据$s$和$m$的取值推断出测量体系中的单个粒子得到结果的概率分布。
+    反过来, 也可以已知单个粒子的状态参量, 根据下面的式子使用$\ket{s,m}$表出, 从而计算出测量结果$s,m$的取值和概率分布：
+    \begin{equation}
+        \ket{s_1,s_2,m_1,m_2}=\sum_{m}C_{m_1m_2m}^{s_1s_2s}\ket{s,m}\quad (m=m_1+m_2)
+    \end{equation}
+    
+    这一切的一切都需要使用$CG$系数表, 其使用方法从书上的具体例子和习题中去领会。
+    
+    最后, 我们这里虽然只考虑了两个自旋的叠加, 但实际上轨道角动量和自旋也是能如此操作的, 一样的套路, 把其中一个$s_1$(或者$s_2$)换成$\ell$就可以了, 因为就从代数结构上来说, 自旋和轨道角动量没啥差别, 
+    要说差别只能说一个的本征矢只能使用狄拉克符号表示, 无法在位置表象下表示为波函数。
+    \includepdf{fig/CG-coefficients.pdf}
+    \newpage
+    \section{电磁作用}
     \include{appendix.tex}
 \end{document}
