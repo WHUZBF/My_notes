@@ -2803,6 +2803,52 @@
     要说差别只能说一个的本征矢只能使用狄拉克符号表示, 无法在位置表象下表示为波函数。
     \includepdf{fig/CG-coefficients.pdf}
     \newpage
-    \section{电磁作用}
+    \subsection*{$\vec{R}$到底表示什么？}
+    我们前面写的$\vec{R},\vec{P},\vec{L},\ldots$这些算符实际上都应该看成是三个算符的缩并记法。这样的话我们可以大大简化我们的记号, 比如三个对易式：
+    \begin{equation}
+        \left[L^2,L_x\right]=\left[L^2,L_y\right]=\left[L^2,L_z\right]=0
+    \end{equation}
+    可以简单的记为：
+    \begin{equation}
+        \left[L^2,\vec{L}\right]=0
+    \end{equation}
+
+    你显然不能直接把这样记录的算符直接作用在波函数上, 因为$\vec{R}\Psi$你要认为是三个分量算符$X,Y,Z$分别作用在$\Psi$上, 这样得到的就不是$L^2$中的波函数了, 而是
+    三个波函数构成的一个向量。
+    
+    但是使用这个记号要非常小心, 因为每个这样的式子都表示了三个分量式子, 特别是缩写的对易子, 下面的对易子是有意义的：
+    \begin{equation}
+        \label{eq:4.100}
+        \left[\frac{P^2}{2m},\vec{R}\right]=
+    \end{equation}
+    
+    因为$P^2$解释为$P_x^2+P_y^2+P_z^2$, 上面的式子根据$R$的下标来标记,等价于三个分量式。使用这种矢量形式记的式子可以很大程度上方便我们的形式计算, 比如:
+    \begin{align*}
+        \left(\vec{P}-q\vec{A}\right)^2 f&= \left(\vec{P}-q\vec{A}\right)\cdot\left(\vec{P}-q\vec{A}\right)f\\
+        &=\left(P^2+q^2A^2-q\vec{P}\cdot\vec{A}-q\vec{A}\cdot \vec{P}\right)f\\
+        &=-\hbar^2\nabla^2 f+q^2A^2f+i\hbar q\vec{A}\cdot\nabla f+i\hbar qf\nabla \cdot\vec{A}+i\hbar q\vec{A}\cdot \nabla f\\
+        &=\left(-\hbar^2\nabla^2+2i\hbar q\vec{A}\cdot\nabla\right) \quad (\text{利用规范变换我们取:}\nabla\cdot \vec{A}=0)
+    \end{align*}
+    对的, 形式上和矢量的运算法则是一样的！基本上你形式上这样算不会出现差错。但是一旦涉及到对易子的计算就要格外小心了, 比如：
+    \[
+        \left[\left(\vec{P}-q\vec{A}\right)^2,\vec{P}-q\vec{A}\right]
+    \]
+    
+    你不能想当然的就认为是$\left[f(\hat{A}),\hat{A}\right]$形式, 觉得它就是$0$。实际上你在考虑这个运算时, 应当先把这个式子分解为三个分量式, 分别考虑, 最后再看能不能写成合并的形式。
+    而不是只想着一步到位。
+    
+    再比如计算\ref{eq:4.100}的时候你也不能使用公式把它拆开成下面的式子去计算：
+    \[\vec{P}\left[\frac{\vec{P}}{2m},\vec{R}\right]+\left[\frac{\vec{P}}{2m},\vec{R}\right]\vec{P}\]
+    
+    因为我们碰到的对易子形式上看都是[scalar,vector]的形式, 但是$[\vec{P},\vec{R}]$是[vector,vector]的形式。如果你硬是想搞一个良好的定义的话
+    需要涉及到$3\times 3$个指标, 而且这种缩并的记号每个都不是代表单独的一个算符, 它们之间的算符复合乘法运算已经失去了意义, 也不能想当然的直接把$[\vec{P},\vec{R}]$
+    用对易子的定义拆开来算。总之, 遇到这种记号就回到分量形式去看, 也不需要复杂地定义一套对于这套记号的专属对易子运算法则。只要清楚$P^2$这种平方的算符记号代表什么就可以消除很多疑惑了。
+
+
+    \section{电磁相互作用}
+    本节我们讨论一下在电磁场的作用下, 带电粒子的量子行为, 前面已经对有自旋粒子做了部分修正, 下面的考虑都是无自旋粒子的动力学, 经典情况已经由麦克斯韦方程加洛伦兹力公式
+    完全描述了。但是当我们考虑量子力学的时候会有意想不到的事情发生。
+
+    
     \include{appendix.tex}
 \end{document}
