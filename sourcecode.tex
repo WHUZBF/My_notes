@@ -2849,6 +2849,138 @@
     本节我们讨论一下在电磁场的作用下, 带电粒子的量子行为, 前面已经对有自旋粒子做了部分修正, 下面的考虑都是无自旋粒子的动力学, 经典情况已经由麦克斯韦方程加洛伦兹力公式
     完全描述了。但是当我们考虑量子力学的时候会有意想不到的事情发生。
 
+    \subsection*{最小电磁耦合原理}
+    矢量力学中对电磁作用动力学的描述是洛伦兹力公式：
+    \begin{equation}
+        \mathbf{F}=q\left(\mathbf{E}+\mathbf{v}\times\mathbf{B}\right)
+    \end{equation}
+    哈密顿力学版本：
+    \begin{equation}
+        \label{eq:4.102}
+        H=\frac{1}{2m}\left(\mathbf{p}-q\mathbf{A}\right)^2+q\varphi
+    \end{equation}
+    其中：
+    \begin{equation}
+        \mathbf{E}=-\nabla\varphi-\frac{\partial\mathbf{A}}{\partial t},\mathbf{B}=\nabla\times \mathbf{A}
+    \end{equation}
+    我们直接将\ref{eq:4.102}中的力学量换成算符得到哈密顿算符：
+    \begin{equation}
+        \hat{H}=\frac{1}{2m}\left(-i\hbar\nabla-q\mathbf{A}\right)^2+q\varphi
+    \end{equation}
+    故薛定谔方程在电磁作用下变成了：
+    \begin{equation}
+        \label{eq:4.105}
+        \boxed{
+            i\hbar\frac{\partial\Psi}{\partial t}=\left[\frac{1}{2m}\left(-i\hbar\nabla-q\mathbf{A}\right)^2+q\varphi\right]\Psi
+        }
+    \end{equation}
+    \subsection*{规范不变性}
+    我们对$A$和$\varphi$施以下面的变换：
+    \begin{equation}
+        \mathbf{A}\rightarrow\mathbf{A}+\nabla\Lambda,\varphi\rightarrow\varphi-\frac{\partial\Lambda}{\partial t}
+    \end{equation}
     
+    其中$\Lambda$是一个任意的关于时间和空间的函数。我们称之为\textbf{规范变换}, 而且很容易证明在这个变换下$E$和$B$具有不变性。这也说明了$A$和$\varphi$是没有绝对意义的, 就像势能一定要先选取势能点一样, 它们也是有多种形式的。
+    一般我们选取$\nabla\cdot\mathbf{A}=0$。
+
+    在这个变换下, 薛定谔方程\ref{eq:4.105}变成了：
+    \begin{equation}
+        \label{eq:4.107}
+        i\hbar\frac{\partial\Psi^\prime}{\partial t}=\left[\frac{1}{2m}\left(-i\hbar\nabla-q\mathbf{A}^\prime\right)^2+q\varphi^\prime\right]\Psi^\prime
+    \end{equation}
+    下面我们来证明, 这个变换只是让解多出了一个指数因子：
+    \begin{equation}
+        \label{eq:4.108}
+        \Psi^\prime=e^{iq\Lambda/\hbar}\Psi
+    \end{equation}
+
+    而我们知道这样的两个解在物理上是不可区分的, 也就是说虽然薛定谔方程是直接与矢势相关联的, 但是矢势的选取不同, 也就是做规范变换, 并不会对解造成任何影响。所以薛定谔方程
+    具有\textbf{规范不变性}。
+    \begin{thinknote}
+        Proof:
+
+        \setlength\parindent{2em}我们的证明是验证性证明, 依据\ref{eq:4.108}先去计算\ref{eq:4.107}的左边:
+        \begin{align*}
+            i\hbar\frac{\partial\Psi^\prime}{\partial t}&=i\hbar\left[e^{iq\Lambda/\hbar}\frac{\partial\Psi}{\partial t}+\frac{i q}{\hbar}\frac{\partial\Lambda}{\partial t}e^{iq\Lambda/\hbar}\Psi\right]\\
+            &=e^{iq\Lambda/\hbar}\left[\frac{1}{2m}\left(-i\hbar\nabla-q\mathbf{A}\right)^2+q\varphi-q\frac{\partial\Lambda}{\partial t}\right]\Psi
+        \end{align*}
+        上面最后一步代入了\ref{eq:4.105}。下面代入规范变换得：
+        \begin{equation}
+            i\hbar\frac{\partial\Psi^\prime}{\partial t}=e^{iq\Lambda/\hbar}\left[\frac{1}{2m}\left(-i\hbar\nabla-q\mathbf{A}^\prime+q\nabla\Lambda\right)^2+q\varphi\right]\Psi
+        \end{equation}
+        看来我们要做的就是将$e^{iq\Lambda/\hbar}$移到$\Psi$那里去。首先注意到：
+        \begin{equation}
+            i\hbar\nabla\left(e^{iq\Lambda/\hbar} f\right)=-i\hbar e^{iq\Lambda/\hbar}\nabla f+q\left(\nabla\Lambda\right)e^{iq\Lambda/\hbar}f=e^{iq\Lambda/\hbar}\left[i\hbar\nabla+q\nabla\Lambda\right]f
+        \end{equation}
+        其中$f$是任意的一个函数。所以我们立刻得到：
+        \[e^{i q \Lambda / \hbar}\left[-i \hbar \nabla-q \mathbf{A}^{\prime}+q(\boldsymbol{\nabla} \Lambda)\right] f=\left(-i \hbar \nabla-q \mathbf{A}^{\prime}\right)\left(e^{i q \Lambda / \hbar} f\right)\]
+        最后：
+        \begin{equation}
+            \begin{aligned}
+            &e^{i q \Lambda / \hbar}\left[-i \hbar \nabla-q \mathbf{A}^{\prime}+q(\boldsymbol{\nabla} \Lambda)\right]^{2} \Psi\\ &=e^{i q \Lambda / \hbar}\left[-i \hbar \boldsymbol{\nabla}-q \mathbf{A}^{\prime}+q(\boldsymbol{\nabla} \Lambda)\right] \underbrace{e^{-i q \Lambda / \hbar} e^{i q \Lambda / \hbar}\left[-i \hbar \nabla-q \mathbf{A}^{\prime}+q(\boldsymbol{\nabla} \Lambda)\right] \Psi}_{f} \\
+            &=\left(-i \hbar \boldsymbol{\nabla}-q \mathbf{A}^{\prime}\right)\left[e^{i q \Lambda / \hbar} e^{-i q \Lambda / \hbar}\left(-i \hbar \nabla-q \mathbf{A}^{\prime}\right)\left(e^{i q \Lambda / \hbar} \Psi\right)\right] \\
+            &=\left(-i \hbar \boldsymbol{\nabla}-q \mathbf{A}^{\prime}\right)^{2} \Psi^{\prime} .
+        \end{aligned}
+        \end{equation}
+        即：
+        \begin{equation}
+            i \hbar \frac{\partial \Psi^{\prime}}{\partial t}=\left[\frac{1}{2 m}\left(-i \hbar \nabla-q \mathbf{A}^{\prime}\right)^{2}+q \varphi^{\prime}\right] \Psi^{\prime}
+        \end{equation}
+        \hfill $\square$\par
+    \end{thinknote}
+    
+    在电动力学中, 我们引入矢势很大程度上是为了数学上的便利。但是在量子力学中, 矢势往往较与经典理论有更大的物理意义, 当然, 它们虽然会导致一些物理上和经典力学有很大
+    不同的可观测效应, 但是它们本省仍旧是不可测量的, 否则它们将是绝对的, 量子力学就不再是规范对称了。这里有个很有趣的例子就是下面要讲的A-B效应, 因为它说明了即使某处并没有
+    磁场和电场, 只要$\mathbf{A}\neq 0$, 在量子尺度上就会产生电磁作用的可观测效应。颠覆了很长一段时间科学界的认识, 之前认为发生电磁相互作用必须要有电场和磁场, 现在看来未必如此。 
+    
+    \subsection*{Aharonov-Bohm效应}
+    这里我们只是粗略的介绍, 初步定性了解。
+
+    考虑一根不带电无限长螺线管, 半径为$a$, 通入稳恒电流$I$, 外部电场和磁场都为$0$, 只有内部有磁场, 且磁通量为$\Phi$。虽然螺线管外部没有电磁场, 但是矢势不为$0$, 且可以得出：
+    \[\mathbf{A}=\frac{\Phi}{2\pi r}\hat\phi(r>a)\]
+    这里我们取的是柱坐标, $\hat{\phi}$是方位角方向单位矢量。
+    % \begin{figure}[htbp]
+    %     \centering
+    %     \includegraphics[]{fig/4-3.eps}
+    %     \label{AB效应}
+    %     \caption{AB效应}
+    % \end{figure}
+    由于没有电场, 所以$\varphi=0$, 我们来具体考虑螺线管外部粒子的波函数, 薛定谔方程为:
+    \[\left[\frac{1}{2 m}(-i \hbar \nabla-q \mathbf{A})^{2}\right] \Psi=i \hbar \frac{\partial \Psi}{\partial t}\]
+    我们做如下换元：
+    \[\Psi=e^{ig}\Psi^\prime\]
+    其中$g(\mathbf{r})$定义为：
+    \begin{equation}
+        \label{eq:4.113}
+        g(\mathbf{r})\equiv\frac{q}{\hbar}\int_\mathcal{O}^\mathbf{r}\mathbf{A}(\mathbf{r}^\prime)\cdot d\mathbf{r}^\prime
+    \end{equation}
+    
+    上面的定义要求积分是与路径无关的, $\mathcal{O}$是任选的一个参考点, 显然这里的$\mathbf{A}$满足这些条件。注意到\footnote[1]{注意下面的式子是$d\mathbf{r}$不是$\Delta\mathbf{r}$, 所以隐含了一个取极限的过程, 高阶项直接扔掉, 只保留一阶项, 而且是严格等于。}：
+    \begin{align*}
+        \nabla g\cdot d\mathbf{r}&=g(\mathbf{r}+d\mathbf{r})-g(\mathbf{r})\\
+        &=\frac{q}{\hbar}\int_{\mathbf{r}}^{\mathbf{r}+d\mathbf{r}}\mathbf{A}(\mathbf{r}^\prime)\cdot d\mathbf{r}^\prime\\
+        &=\frac{q}{\hbar}\mathbf{A}\cdot d\mathbf{r}
+    \end{align*}
+    故$ \nabla g=\frac{q}{\hbar}\mathbf{A}$, 代入$\nabla \Psi$表达式得到：
+    \[(-i \hbar \nabla-q \mathbf{A}) \Psi=-i \hbar e^{i g} \nabla \Psi^\prime\]
+    进一步运算得到：
+    \[(-i \hbar \nabla-q \mathbf{A})^{2} \Psi=-\hbar^{2} e^{i g} \nabla^{2} \Psi^{\prime}\]
+    故我们通过这个换元将薛定谔方程简化为了：
+    \[-\frac{\hbar^{2}}{2 m} \nabla^{2} \Psi^{\prime}=i \hbar \frac{\partial \Psi^{\prime}}{\partial t}\]
+    
+    这个方程是一个与$\mathbf{A}$等环境参数都无关的方程, 假设解为$\Psi_0$, 我们只需要通过积分求出$g(\mathbf{r})$并代入粒子的初始条件, 便可以完全确定粒子的波函数。
+    回到图\ref{AB效应}, 粒子从左边入射, 在螺线管前分成两束, 分别对应了逆着电流方向传播和顺着电流方向传播的两股波函数, 最后在螺线管右侧交汇叠加。就如我们在波动光学中所做的一样
+    计算相位差来判断干涉条纹, 这里我们只是简单的计算一下两股波函数是否因为传播路径的不同而出现相位差, 最终产生干涉条纹。
+
+    利用积分\ref{eq:4.113}, 我们来计算一下波函数传播过程中相对于分离处积累的相位差：
+    \begin{equation}
+        \label{eq:4.114}
+        g=\frac{q}{\hbar} \int \mathbf{A} \cdot d \mathbf{r}=\frac{q \Phi}{2 \pi \hbar} \int\left(\frac{1}{r} \hat{\phi}\right) \cdot(r \hat{\phi} d \phi)=\pm \frac{q \Phi}{2 \hbar}
+    \end{equation}
+    计算时选取柱坐标, 显然$\phi$的范围是$0\sim\pm\pi$。这里的“$+$”指的是和电流方向一致的那股波函数的相位。显然, 相位差：
+    \[|\Delta \varphi|=\frac{q\Phi}{\hbar}\neq 0\]
+    
+    所以最终因为$\mathbf{A}\neq 0$, 造成了可观测的电磁效应, 而更加令人震惊的是粒子所经过的地方没有任何的电磁场, 而且最终的结果竟然于螺线管内部的磁场, 就好像是“隔空”
+    影响了他们一样。这也是为什么说在量子力学中电磁作用里面的矢势开始有了些明显的物理意义。
     \include{appendix.tex}
 \end{document}
