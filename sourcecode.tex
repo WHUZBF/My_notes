@@ -1928,7 +1928,7 @@
     \end{define}
     \begin{define}{连带勒让德函数}
         \begin{lequation}
-            P_\ell^m\equiv(-1)^m\left(x^2-1\right)^\frac{m}{2}\left(\frac{d}{dx}\right)^mP_\ell(x),\quad(m>0)
+            P_\ell^m\equiv(-1)^m\left(1-x^2\right)^\frac{m}{2}\left(\frac{d}{dx}\right)^mP_\ell(x),\quad(m>0)
         \end{lequation}
         \begin{lequation}
             P_\ell^{-m}=(-1)^m\frac{\left(\ell-m\right)!}{\left(\ell+m\right)!}P_\ell^m(x)
@@ -2503,11 +2503,11 @@
     回到以开始的问题, 假设我们要对$\chi$测量$\mathcal{S}_x$, 我们先去根据$\mathbf{S}_x$计算本征值和本征矢。不难得出$\mathbf{S}_x$的本征值为
     $\pm\frac{\hbar}{2}$, 对应的本征矢为：
     \begin{equation}
-        \chi_+^(x)=\begin{pmatrix}
+        \chi_+^{(x)}=\begin{pmatrix}
             1/\sqrt{2}\\
             1/\sqrt{2}
         \end{pmatrix},
-        \chi_-^(x)=\begin{pmatrix}
+        \chi_-^{(x)}=\begin{pmatrix}
             1/\sqrt{2}\\
             -1/\sqrt{2}
         \end{pmatrix}
@@ -2773,7 +2773,7 @@
     而且\ref{eq:4.92}中$m=0$的$\mathcal{S}_z$简并的情况应该是对应了$s=0$的另一种取值：
     \begin{equation}
         \boxed{
-            \left\{\ket{0,0}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow}\right)\right\}\quad s=0\text{singlet}
+            \left\{\ket{0,0}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow}\right)\right\}\quad s=0\text{(singlet)}
         }
     \end{equation}
 
@@ -2939,12 +2939,12 @@
     考虑一根不带电无限长螺线管, 半径为$a$, 通入稳恒电流$I$, 外部电场和磁场都为$0$, 只有内部有磁场, 且磁通量为$\Phi$。虽然螺线管外部没有电磁场, 但是矢势不为$0$, 且可以得出：
     \[\mathbf{A}=\frac{\Phi}{2\pi r}\hat\phi(r>a)\]
     这里我们取的是柱坐标, $\hat{\phi}$是方位角方向单位矢量。
-    % \begin{figure}[htbp]
-    %     \centering
-    %     \includegraphics[]{fig/4-3.eps}
-    %     \label{AB效应}
-    %     \caption{AB效应}
-    % \end{figure}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.1]{fig/4-3.eps}
+        \caption{AB效应}
+        \label{AB效应}
+    \end{figure}
     由于没有电场, 所以$\varphi=0$, 我们来具体考虑螺线管外部粒子的波函数, 薛定谔方程为:
     \[\left[\frac{1}{2 m}(-i \hbar \nabla-q \mathbf{A})^{2}\right] \Psi=i \hbar \frac{\partial \Psi}{\partial t}\]
     我们做如下换元：
@@ -2982,5 +2982,79 @@
     
     所以最终因为$\mathbf{A}\neq 0$, 造成了可观测的电磁效应, 而更加令人震惊的是粒子所经过的地方没有任何的电磁场, 而且最终的结果竟然于螺线管内部的磁场, 就好像是“隔空”
     影响了他们一样。这也是为什么说在量子力学中电磁作用里面的矢势开始有了些明显的物理意义。
+
+    \section{两个自旋体系的计算警示}
+    我们以单重态为例：
+    \[\ket{0,0}=\frac{1}{\sqrt{2}}\left(\ket{\uparrow\downarrow}+\ket{\downarrow\uparrow}\right)\]
+    
+    对于这个态中$\mathcal{S}_{1z}, \mathcal{S}_{2z}$的测量, 对于两个粒子都是$\pm\frac{\hbar}{2}$各一半概率。 这就很容易造成一种错觉, 是不是我每次在这个态中计算
+    测量$\mathcal{S}_x,\mathcal{S}_z$或是粒子$2$的力学量把单重态完全看作是下面两个态的复合然后分开算？
+    \begin{equation}
+        \begin{cases}
+            \frac{1}{\sqrt{2}}\left(\ket{\uparrow}-\ket{\downarrow}\right)\\
+            \frac{1}{\sqrt{2}}\left(\ket{\downarrow}-\ket{\uparrow}\right)
+        \end{cases}
+    \end{equation}
+    
+    如果你按照上面的式子得出无论是测量$\mathcal{S}_1x$还是$\mathcal{S}_2x$, 结果都一定是$-\frac{\hbar}{2}$, 那你就大错特错了。要分析清楚这个问题还是要回到张量积空间的运算上去。
+
+    我们首先来直接计算一下$\braket{\mathcal{S}_1x}$\footnote[1]{实际上根据定义, 两个自旋体系中, 我们计算的是$\braket{\tilde{\mathcal{S}_1x}}$}, 根据$\S 4.4$的相关内容：
+    \[\mathcal{S}_{1x}\ket{\uparrow,\cdot}=\frac{\hbar}{2}\ket{\downarrow,\cdot}\quad\mathcal{S}_{1x}\ket{\downarrow,\cdot}=\frac{\hbar}{2}\ket{\uparrow,\cdot}\]
+    再根据广义概率诠释：
+    \begin{align*}
+        \braket{\mathcal{S}_{1x}}&=\Braket{0,0|\mathcal{S}_{1x}|0,0}=\Braket{0,0|\mathcal{S}_1x|\frac{1}{\sqrt{2}}\left(\ket{\uparrow\downarrow}+\ket{\downarrow\uparrow}\right)}\\
+        &=\frac{\hbar}{2}\Braket{0,0|\frac{1}{\sqrt{2}}\left(\ket{\downarrow\downarrow}+\ket{\uparrow\uparrow}\right)}\\
+        &=\frac{\hbar}{2}\ket{0,0}\left(\ket{1,-1}-\ket{1,1}\right)\\
+        &=0
+    \end{align*}
+    
+    到这里, 就已经说明了把态拆成完全独立的两个单粒子自旋态去计算$\mathcal{S}_{1x}$的取值是错误的, 因为按照那个思想, $\mathcal{S}_{1x}$应该为$-\frac{\hbar}{2}$。我们接下来进行更仔细的计算,
+    第一步显然是要在双粒子自旋态空间中建立起$\tilde{\mathcal{S}}_{1x}$的本征矢构成的基底。对于单粒子的自旋态空间, $\mathcal{S}_{1x}$的本征矢构成的基底为：
+    \[\frac{1}{\sqrt{2}}\left(\ket{\uparrow}+\ket{\downarrow}\right),\frac{1}{\sqrt{2}}\left(\ket{\uparrow}-\ket{\downarrow}\right)\]
+    而由$\mathcal{S}_{2z}$的本征矢也可以建立一个$\mathscr{E}_2$中的基底\footnote[1]{可观测量一定是观察算符}：
+    \[\{\ket{\uparrow},\ket{\downarrow}\}\]
+    这两组基底做张量积便构成了$\mathscr{E}$中的(正交归一)基底：
+    \begin{align*}
+        \ket{++}=&\frac{1}{\sqrt{2}}\left(\ket{\uparrow\uparrow}+\ket{\downarrow\uparrow}\right)&\mathcal{S}_{1x}&=+\frac{\hbar}{2}&\mathcal{S}_{2z}&=+\frac{\hbar}{2}\\
+        \ket{+-}=&\frac{1}{\sqrt{2}}\left(\ket{\uparrow\downarrow}+\ket{\downarrow\downarrow}\right)&\mathcal{S}_{1x}&=+\frac{\hbar}{2}&\mathcal{S}_{2z}&=-\frac{\hbar}{2}\\
+        \ket{-+}=&\frac{1}{\sqrt{2}}\left(\ket{\uparrow\downarrow}-\ket{\downarrow\downarrow}\right)&\mathcal{S}_{1x}&=-\frac{\hbar}{2}&\mathcal{S}_{2z}&=+\frac{\hbar}{2}\\
+        \ket{--}=&\frac{1}{\sqrt{2}}\left(\ket{\uparrow\uparrow}+\ket{\downarrow\uparrow}\right)&\mathcal{S}_{1x}&=-\frac{\hbar}{2}&\mathcal{S}_{2z}&=-\frac{\hbar}{2}
+    \end{align*}
+    
+    不难验证, 这组基底仍然是$\tilde{\mathcal{S}}_{1x}$的本征矢, 而且从这些本征矢对应的本征值我们还额外发现$\mathcal{S}_{1x},\mathcal{S}_{2z}$构成了一个CSCO。
+
+    我们将$\ket{0,0}$写成这组基底的线性组合:
+    \[\ket{0,0}=-\frac{1}{2}\ket{++}+\frac{1}{2}\ket{+-}+\frac{1}{2}\ket{-+}+\frac{1}{2}\ket{--}\]
+    
+    根据这个我们才能肯定的说, 测量$\mathcal{S}_{1x}$得到$\pm\frac{\hbar}{2}$的概率各为一半。现在更复杂的力学量你也应该知道如何去计算了, 也应该知道为啥$\mathcal{S}_z$就可以直接拆开来搞。
+    习题$4.59$就给了一个这个方面的练习,而且答案的解法比较巧妙。总之, 这类计算回归到张量积本身的计算就行了。
+
+    还有一个点之前一直没有明确说明, 就是我们之前在讨论自旋或是角动量时, 都是在某个坐标框架下讨论。当然这个坐标框架完完全全是可以取向随便选区的, 因为空间具有各向同性。
+    在某个坐标框架下, 还是$\mathcal{S}_z$的本征矢作为基底, 可以写出任意$\hat{r}$方向的自旋算符矩阵表示$S_r$:\footnote[1]{习题4.33}
+    \begin{equation}
+        \begin{aligned}
+            \mathrm{S}_{r} &=\mathrm{S} \cdot \hat{r}=\mathrm{S}_{x} \sin \theta \cos \phi+\mathrm{S}_{y} \sin \theta \sin \phi+\mathrm{S}_{z} \cos \theta \\
+            &=\frac{\hbar}{2}\left[\sigma_{x} \sin \theta \cos \phi+\sigma_{y} \sin \theta \sin \phi+\sigma_{z} \cos \theta\right]
+            \\ &=\boxed{\frac{\hbar }{2} \begin{pmatrix}
+            \cos\theta &e^{-i\phi}\sin\theta \\
+            e^{i\phi}\sin\theta &-\cos\theta 
+            \end{pmatrix}}
+        \end{aligned}
+    \end{equation}
+    对应的本征值和本征矢为：
+    \begin{equation}
+        \label{eq:4.117}
+        \chi_{+}^{(r)}=\begin{pmatrix}
+        \cos (\theta / 2) \\
+        e^{i \phi} \sin (\theta / 2)
+        \end{pmatrix},S_r=\frac{\hbar}{2} ; \quad \chi_{-}^{(r)}=\begin{pmatrix}
+        e^{-i \phi} \sin (\theta / 2) \\
+        -\cos (\theta / 2)
+        \end{pmatrix},S_r=-\frac{\hbar}{2} 
+    \end{equation}
+    显然, 各个方向上测量自旋, 得到的结果都是$\pm\frac{\hbar}{2}$, 这正好就是我们之前所说的空间各向同性。
+    
+    所以, 很多时候为了方便, 我们完全可以选取某个更利于计算的$z$轴取向\footnote[2]{习题4.70就是个很好的例子}。$(1,0)^\mathrm{T}$总要比直接写式\ref{eq:4.117}好, 而且这种坐标系的旋转不难看到就是选取$S_z$还是$S_r$
+    的本征矢作为基底的区别。
     \include{appendix.tex}
 \end{document}

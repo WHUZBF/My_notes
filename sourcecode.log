@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  27 JUL 2022 01:55
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  30 JUL 2022 15:57
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2255,11 +2255,10 @@ File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
- [86] [87] [88] [89] [90]
-
-LaTeX Warning: Reference `AB效应' on page 91 undefined on input line 2972.
-
-[91] [92]
+ [86] [87] [88] [89]
+File: fig/4-3.eps Graphic file (type eps)
+<fig/4-3.eps>
+ [90] [91] [92] [93] [94]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2269,10 +2268,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[93
+[95
 
 
-] [94] [95]
+] [96] [97]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2280,72 +2279,66 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[96] [97] [98]
+[98] [99] [100]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [99] [100]
+ [101] [102]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [101] [102] [103] [104] [105]
+ [103] [104] [105] [106] [107]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [106] [107] [108]
+ [108] [109] [110]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 474--497
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[109
+[111
 
-] [110] [111]
+] [112] [113]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 600--607
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[112] [113] [114] [115] [116] [117]
+[114] [115] [116] [117] [118] [119]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [118] [119]
+ [120] [121]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [120]
+ [122]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [121]
+ [123]
 Overfull \hbox (2.89873pt too wide) detected at line 910
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[122] [123] [124] [125]
+[124] [125] [126] [127]
 附录 C
-[126
+[128
 
-]) [127] (./sourcecode.aux (./appendix.aux))
+]) [129] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 520C8E6912B4F39F04B6CC66909EE7A3;6666.
+(rerunfilecheck)             Checksum: 91E2662207622BE33092FE1ABE813BC6;6831.
  ) 
 Here is how much of TeX's memory you used:
- 55389 strings out of 476533
- 1430188 string characters out of 5818886
- 1909034 words of memory out of 5000000
- 74556 multiletter control sequences out of 15000+600000
+ 55395 strings out of 476533
+ 1430274 string characters out of 5818886
+ 1908114 words of memory out of 5000000
+ 74561 multiletter control sequences out of 15000+600000
  536224 words of font info for 264 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,22n,97p,727b,1158s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,22n,97p,727b,1156s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (130 pages).
+Output written on sourcecode.pdf (132 pages).
