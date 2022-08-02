@@ -3056,5 +3056,115 @@
     
     所以, 很多时候为了方便, 我们完全可以选取某个更利于计算的$z$轴取向\footnote[2]{习题4.70就是个很好的例子}。$(1,0)^\mathrm{T}$总要比直接写式\ref{eq:4.117}好, 而且这种坐标系的旋转不难看到就是选取$S_z$还是$S_r$
     的本征矢作为基底的区别。
+
+    \chapter{全同粒子}
+    \section{两个粒子的相互作用体系}
+    前面我们一直讨论的系统都只有一个粒子, 如果现在又加入了一个粒子, 自由度变成了$6$, 体系的波函数应该用$\Psi(\mathbf{r}_1,\mathbf{r}_2,t)$去描述。我们首先可以断言体系的哈密顿算符可以写为：
+    \[\hat{H}=\frac{{\hat{p}_1}^2}{2m_1}+\frac{{\hat{p}_2}^2}{2m_2}+V(\mathbf{r}_1,\mathbf{r}_2,t)\]
+    故薛定谔方程写为：
+    \begin{equation}
+        i\hbar\frac{\partial }{\partial t}\Psi(\mathbf{r}_1,\mathbf{r}_2,t)=\left[-\frac{\hbar^2}{2m_1}\nabla_1^2-\frac{\hbar^2}{2m_2}\nabla_2^2+V(\mathbf{r}_1,\mathbf{r}_2,t)\right]\Psi(\mathbf{r}_1,\mathbf{r}_2,t)
+    \end{equation}
+    其中$\nabla_1\equiv\frac{\partial}{\partial\mathbf{r}_1}$, 而且波函数的概率诠释也很显然, 它表示\textbf{在$\mathbf{r}_1$附近测量到粒子1\uwave{并且}在$\mathbf{r}_2$附近测量到粒子2}的概率为：
+    \begin{equation}
+        \left|\Psi(\mathbf{r}_1,\mathbf{r}_2,t)\right|^2d^3r_1d^3r_2
+    \end{equation}
+    
+    现在如果哈密顿算符不显含时间, 我们仍旧可以分离出时间项进行求解：
+    \[\Psi(\mathbf{r}_1,\mathbf{r}_2,t)=\sum\psi_n(\mathbf{r}_1,\mathbf{r}_2)e^{iE_nt/\hbar}\]
+    其中$\psi_n(\mathbf{r}_1,\mathbf{r}_2)$由下面的定态薛定谔方程给出：
+    \begin{equation}
+        \label{eq:5.3}
+        \left[-\frac{\hbar^2}{2m_1}\nabla_1^2-\frac{\hbar^2}{2m_2}\nabla_2^2+V(\mathbf{r}_1,\mathbf{r}_2)\right]\psi_n=E_n\psi_n
+    \end{equation}
+    
+    上面的方程一般来说求解是及其困难的, 但是对于两种特殊情况, 两个粒子的问题实际上可以化简为一个粒子体系的问题。
+    \subsubsection*{两个粒子之间没有相互作用}
+    这也就是说, $V(\mathbf{r}_1,\mathbf{r}_2)$可以完全分离：
+    \[V(\mathbf{r}_1,\mathbf{r}_2)=V_1(\mathbf{r}_1)+V_2(\mathbf{r}_2)\]
+    这时, 波函数可以分离变量：
+    \[\psi(\mathbf{r}_1,\mathbf{r}_2)=\psi_1(\mathbf{r}_1)\psi_2(\mathbf{r}_2)\]
+    方程\ref{eq:5.3}可以写为：
+    \begin{align*}
+        &-\frac{\hbar^2}{2m_1}\nabla_1^2\psi_1+V_1(\mathbf{r}_1)\psi_1=E_1\psi_1\\
+        &-\frac{\hbar^2}{2m_2}\nabla_2^2\psi_2+V_2(\mathbf{r}_2)\psi_2=E_2\psi_2
+    \end{align*}
+    且$E_1+E_2=E$。显然, 现在双粒子体系问题变成了两个单粒子体系问题, 比如粒子1处于本征态$\psi_a$, 能量为$E_a$, 粒子2处于本征态$\psi_b$, 能量为$E_b$。则整个体系波函数就应该为：
+    \[\Psi\left(\mathbf{r}_{1}, \mathbf{r}_{2}, t\right)=\psi_{a}\left(\mathbf{r}_{1}\right) \psi_{b}\left(\mathbf{r}_{2}\right) e^{-i\left(E_{a}+E_{b}\right) t / \hbar}
+    =\Psi_1(\mathbf{r}_{1})\Psi_2(\mathbf{r}_{2})\]
+    
+    是总能量$E=E_a+E_b$对应的本征矢。目前看来一切的推导都很合理, 但是别忘了, 薛定谔是线性方程, 所以本征态的叠加态也是体系可能处于的状态, 一旦涉及到多个单粒子体系的本征态, 事情就开始变得有些微妙了。
+    比如在合适的初始条件下, 粒子的波函数假设是：
+    \[\Psi\left(\mathbf{r}_{1}, \mathbf{r}_{2}, t\right)=\frac{3}{5} \Psi_{a}\left(\mathbf{r}_{1}, t\right) \Psi_{b}\left(\mathbf{r}_{2}, t\right)+\frac{4}{5} \Psi_{c}\left(\mathbf{r}_{1}, t\right) \Psi_{d}\left(\mathbf{r}_{2}, t\right)\]
+    
+    这个波函数演化是满足薛定谔方程的, 那么如果在这个体系中去测量粒子1, 可能得到$E_a$(概率为$\frac{9}{25}$)或者$E_c$(概率为$\frac{16}{25}$), 单独测量$E_2$也是随机得到$E_b$或者$E_d$, 但是一旦
+    当我们测量到$E_1=E_a$, 体系将不可避免地坍缩到$\psi_a\psi_b$这个态, 这时我们可以断定测量$E_2$得到的一定是$E_b$, 失去了随机性。这种量子层面上神奇的粒子间的“互相纠缠”效应, 我们称体系
+    处于一个\textbf{纠缠态(entanglement)}。比如最初用来说明这个问题的典例, 就是双$1/2$粒子的单重态$\ket{0,0}$, 它无法写成单个粒子的态的直积形式, 比如
+    \[\frac{1}{\sqrt{2}}\left(\ket{\uparrow\uparrow}+\ket{\downarrow\downarrow}\right)=\frac{1}{\sqrt{2}}\left(\ket{\uparrow}+\ket{\downarrow}\right)\otimes\ket{\uparrow}\]
+    这个态就没有像$\ket{0,0}$一样纠缠, 而是如$\Psi_a\Psi_b$一般。
+
+    量子纠缠是一个非常复杂深奥的问题, 当时爱因斯坦先提出了这个问题来质疑量子力学的完备性, 这里不展开解释。
+
+    \subsubsection*{中心势场}
+    这时势能相退化为：
+    \[V(\mathbf{r}_1,\mathbf{r}_2)\rightarrow V(\left|\mathbf{r}_1-\mathbf{r}_2\right|)\]
+    
+    参考我们经典力学中研究二体运动的思路, 首先我们改用质心坐标$\mathbf{R}$和相对坐标$\mathbf{r}$去描述系统, 我们这里也作坐标变换, 用这两个矢量去描述系统波函数。根据：
+    \[\mathbf{R}\equiv\frac{m_1\mathbf{r}_1+m_2\mathbf{r}_2}{m_1+m_2},\mathbf{r}=\mathbf{r}_1-\mathbf{r}_2,\mu\equiv\frac{m_1m_2}{m_1+m_2}\]
+    得到：
+    \[r_1=\mathbf{R}+\frac{\mu}{m_1}\mathbf{r},r_2=\mathbf{R}-\frac{\mu}{m_2}\mathbf{r}\]
+    且微分算符$\nabla$：
+    \[\nabla_1=\frac{\mu}{m_2}\nabla_R+\nabla_r,\nabla_2=\frac{\mu}{m_1}\nabla_R-\nabla_r\]
+    关于$\psi(\mathbf{R},\mathbf{r})$定态薛定谔方程变为：
+    \begin{equation}
+        -\frac{^2}{2(m_1+m_2)}\nabla_R^2\psi-\frac{\hbar^2}{2\mu}\nabla_r^2\psi+V(\mathbf{r})\psi=E\psi
+    \end{equation}
+    然后现在对$\psi$分离变量求解方程, $\psi(\mathbf{R},\mathbf{r})=\psi_R(\mathbf{R})\psi_r(\mathbf{r})$:
+    \begin{align*}
+        \left.\begin{array}{r}
+            -\frac{\hbar^{2}}{2\left(m_{1}+m_{2}\right)} \nabla^{2} \psi_{R}=E_{R} \psi_{R} \\ 
+           -\frac{\hbar^{2}}{2 \mu} \nabla^{2} \psi_{r}+V(\mathrm{r}) \psi_{r}=E_{r} \psi_{r}
+          \end{array}\right\}E_R+E_r=E
+    \end{align*}
+
+    可见, “质心”位矢$R$的波函数正是自由粒子波函数, 和我们在经典力学里面预测的质心保持匀速直线运动相一致。相对位矢的波函数就是前面解氢原子的球谐函数加上径向解, 只要把电子质量$m_e$改为约化质量$\mu$即可。
+    \subsection{玻色子和费米子}
+    现在我们假设粒子1和粒子2分别处于$\psi_a$和$\psi_b$那么根据前面的讨论, 总的系统波函数应该为两者乘积\footnote[1]{这里我们讨论定态, 忽略时间项}：
+    \begin{equation}
+        \label{eq:5.5}
+        \psi(\mathbf{r}_1,\mathbf{r}_2)=\psi_a(\mathbf{r}_1)\psi_b(\mathbf{r}_2)
+    \end{equation}  
+    
+    打住, 我们现在一直在讨论粒子1和粒子2, 说它们分别处于两个态, 如果说一个是氢原子, 一个是氦原子, 那还好, 我们不会搞混, 我们可以完全区分这两个粒子。但是要是你面对的是两个电子呢？你还能区分吗？
+    在经典力学里面, 当然是可以的, 就算两个球做工完全一致, 外观看来完全没有差异, 但是在经典力学层面上我们始终可以追踪每个单独的球从而区分它们。但是基本粒子却是\textbf{全同的}, 意思就是无论如何你都不能区分它们, 这
+    和不确定性原理一样, 不是一个技术上的难题。在量子力学里面, 一旦我们进行了测量, 就不可避免的影响了整个系统。对于全同粒子我们不能再说某个粒子处于$\psi_a$, 另
+    一个处于$\psi_b$, 我们只能说两个粒子中有一个处于$\psi_a$, 有一个处于$\psi_b$, 而且两个粒子的地位完全等同, 我们无法区分。全同粒子假设目前已经经历了无数实验验证, 这里我们姑且就当作公理。
+
+    既然现在两个电子不能区分了, 那么\ref{eq:5.5}也就失去了意义, 我们现在应该去构造关于$\mathbf{r}_1$和$\mathbf{r}_2$交换对称的波函数, 注意这里包含反对称, 因为这样相当于只是差了个相位因子。
+    所以有下面的两种构造方式：
+    \begin{equation}
+        \label{eq:5.6}
+        \psi_\pm(\mathbf{r}_1,\mathbf{r}_2)=A\left[\psi_a(\mathbf{r}_1)\psi_b(\mathbf{r}_2)\pm\psi_b(\mathbf{r}_1)\psi_a(\mathbf{r}_2)\right]
+    \end{equation}
+    
+    显然$\psi_+(\mathbf{r}_1,\mathbf{r}_2)=\psi_+(\mathbf{r}_2,\mathbf{r}_1)$, 满足这种对称性的粒子称为\textbf{玻色子(bosons)}；另外, $\psi_-(\mathbf{r}_1,\mathbf{r}_2)=-\psi_-(\mathbf{r}_2,\mathbf{r}_1)$, 满足反对称的称为
+    \textbf{费米子(fermions)}。而且有下面的\uwave{经验规律}\footnote[1]{要完整解释只能用量子场论}：
+    \begin{theorem}{自旋-统计定理}
+        \begin{itemize}
+            \item 自旋量子数$s$为整数的粒子是\textbf{玻色子}, 满足玻色-爱因斯坦统计
+            \item 自旋量子数$s$为半整数的粒子是\textbf{费米子}, 满足费米-狄拉克统计
+        \end{itemize}
+    \end{theorem}
+
+    现在如果两个粒子始终处于完全相同的状态, 也就是说\ref{eq:5.6}中有$\psi_a=\psi_b$。对于玻色子
+    \[\psi_+(\mathbf{r}_1,\mathbf{r}_2)=\psi_a(\mathbf{r}_1)\psi_b(\mathbf{r}_2)\]
+    但是对于费米子\footnote[2]{我们这里的讨论少了粒子的自旋, 当然真实情况是包含自旋的}：
+    \[\psi_-(\mathbf{r}_1,\mathbf{r}_2)=0\]
+    这就是熟知的\textbf{泡利不相容原理}。
+    \begin{theorem}{泡利不相容原理}
+        两个(或以上)全同的\textbf{费米子}不能处于相同的量子态
+    \end{theorem}
+    
+    \subsection{交换力}
     \include{appendix.tex}
 \end{document}
