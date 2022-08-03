@@ -3164,7 +3164,72 @@
     \begin{theorem}{泡利不相容原理}
         两个(或以上)全同的\textbf{费米子}不能处于相同的量子态
     \end{theorem}
+    那根据泡利不相容原理, 难道两个氢原子里面的电子就不能都处于基态了吗？这显然是荒谬的, 就拿我们上面的例子来说, $\psi_-=0$的条件是$\psi_a=\psi_b$也就是
+    $\psi_a(\mathbf{r}_1)=\psi_b(\mathbf{r}_1)$且$\psi_a(\mathbf{r}_2)=\psi_b(\mathbf{r}_2)$, 对于两个相隔$\mathbf{r}$的氢原子, 它们的电子都处于基态, 相应的波函数分别是：
+    \[\psi_a(\mathbf{r}_1)=\psi_{100}(\mathbf{r}_1), \psi_b(\mathbf{r}_2)=\psi_{100}(\mathbf{r}_2-\mathbf{r})\]
     
+    显然这里不再有$\psi_a=\psi_b$, 虽然两个电子确实是都处于氢原子基态。但是对于同一个氦原子, 在高中化学中就接触到同一个轨道上的两个电子\footnote[1]{这里说的都是基态, 也就是$n=1$, 那么$\ell=m=0$}, 必定一个自旋向上, 一个自旋向下。
     \subsection{交换力}
+    我们继续考虑两个粒子, 现在只考虑一维情况。如果两个粒子是可以去区分的, 其中一个处于$\psi_a$另一个处于$\psi_b$而且这两个态是正交归一的。在没有纠缠的情况下, 总的态可以写成：
+    \[\psi(x_1,x_2)=\psi_a(x_1)\psi_b(x_2)\]
+    我们现在计算一下两个粒子之间的平均距离：
+    \[\Braket{\left(x_1-x_2\right)^2}=\Braket{x_1^2}+\Braket{x_2^2}-2\Braket{x_1}\Braket{x_2}\]
+    对于两个可区分的粒子显然有\footnote[2]{注意这里我并没有用$\braket{x_1^2}_a$去指代$\int x_1^2|\psi_a(x_1)|^2dx_1$, 因为$x_1$只是一个类似于哑标的中间记号, 这样写有助于后面的化简。}：
+    \begin{align*}
+        &\braket{x_1^2}=\int x_1^2|\psi_a(x_1)|^2dx_1\int |\psi_b(x_2)|^2dx_2=\braket{x^2}_a\\
+        &\braket{x_1^2}=\int |\psi_a(x_1)|^2dx_1\int x_2^2 |\psi_b(x_2)|^2dx_2=\braket{x^2}_b\\
+        &\braket{x_1x_2}=\int x_1x_2|\psi_a(x_1)|^2|\psi_b(x_2)|dx_1dx_2=\braket{x}_a\braket{x}_b\\
+    \end{align*}
+    故对于可分辨的两个粒子：
+    \begin{equation}
+        \label{eq:5.7}
+        \Braket{\left(x_1-x_2\right)^2}=\braket{x^2}_a+\braket{x^2}_b-\braket{x}_a\braket{x}_b
+    \end{equation}
+    
+    但是如果是两个全同的玻色子或是费米子, 根据我们前面所说的这要求我们必须去构造堆成或是反对称的波函数, 也就是说：
+    \[\psi_\pm(x_1,x_2)=\frac{1}{\sqrt{2}}\left(\psi_a(x_1)\psi_b(x_2)\pm\psi_b(x_1)\psi_a(x_2)\right)\]
+    这个时候我们再去计算：
+    \begin{equation}
+       \begin{aligned}
+            \left\langle x_{1}^{2}\right\rangle=& \frac{1}{2}\left[\int x_{1}^{2}\left|\psi_{a}\left(x_{1}\right)\right|^{2} d x_{1} \int\left|\psi_{b}\left(x_{2}\right)\right|^{2} d x_{2}\right.\\
+            &\left.+\int x_{1}^{2}\left|\psi_{b}\left(x_{1}\right)\right|^{2} d x_{1} \int\left|\psi_{a}\left(x_{2}\right)\right|^{2} d x_{2} \right.\\
+            &\left.\pm \int x_{1}^{2} \psi_{a}\left(x_{1}\right)^{*} \psi_{b}\left(x_{1}\right) d x_{1} \int \psi_{b}\left(x_{2}\right)^{*} \psi_{a}\left(x_{2}\right) d x_{2}\right. \\
+            &\left.\pm \int x_{1}^{2} \psi_{b}\left(x_{1}\right)^{*} \psi_{a}\left(x_{1}\right) d x_{1} \int \psi_{a}\left(x_{2}\right)^{*} \psi_{b}\left(x_{2}\right) d x_{2}\right] \\
+            =& \frac{1}{2}\left[\left\langle x^{2}\right\rangle_{a}+\left\langle x^{2}\right\rangle_{b} \pm 0 \pm 0\right]=\frac{1}{2}\left(\left\langle x^{2}\right\rangle_{a}+\left\langle x^{2}\right\rangle_{b}\right)
+        \end{aligned} 
+    \end{equation}
+    同理, 有：
+    \begin{equation}
+        \braket{x_2^2}=\frac{1}{2}\left(\left\langle x^{2}\right\rangle_{b}+\left\langle x^{2}\right\rangle_{a}\right)
+    \end{equation}
+    最后计算交叉项：
+    \begin{equation}
+        \begin{aligned}
+            \left\langle x_{1} x_{2}\right\rangle=& \frac{1}{2}\left[\int x_{1}\left|\psi_{a}\left(x_{1}\right)\right|^{2} d x_{1} \int x_{2}\left|\psi_{b}\left(x_{2}\right)\right|^{2} d x_{2}\right.\\
+            &\left.+\int x_{1}\left|\psi_{b}\left(x_{1}\right)\right|^{2} d x_{1} \int x_{2}\left|\psi_{a}\left(x_{2}\right)\right|^{2} d x_{2}\right. \\
+            &\left. \pm \int x_{1} \psi_{a}\left(x_{1}\right)^{*} \psi_{b}\left(x_{1}\right) d x_{1} \int x_{2} \psi_{b}\left(x_{2}\right)^{*} \psi_{a}\left(x_{2}\right) d x_{2}\right. \\
+            &\left.\pm \int x_{1} \psi_{b}\left(x_{1}\right)^{*} \psi_{a}\left(x_{1}\right) d x_{1} \int x_{2} \psi_{a}\left(x_{2}\right)^{*} \psi_{b}\left(x_{2}\right) d x_{2}\right] \\
+            =& \frac{1}{2}\left(\langle x\rangle_{a}\langle x\rangle_{b}+\langle x\rangle_{b}\langle x\rangle_{a} \pm\langle x\rangle_{a b}\langle x\rangle_{b a} \pm\langle x\rangle_{b a}\langle x\rangle_{a b}\right) \\
+            =&\langle x\rangle_{a}\langle x\rangle_{b} \pm\left|\langle x\rangle_{a b}\right|^{2}
+        \end{aligned}
+    \end{equation}
+    其中：
+    \begin{equation}
+        \label{eq:5.11}
+        \langle x\rangle_{a b} \equiv \int x \psi_{a}(x)^{*} \psi_{b}(x) d x
+    \end{equation}
+    故对于全同粒子有：
+    \begin{equation}
+        \Braket{\left(x_1-x_2\right)^2}=\Braket{x^2}_a+\Braket{x^2}_b-2\Braket{x}_a\Braket{x}_b\mp 2|\Braket{x}_a\Braket{x}_b|^2
+    \end{equation}
+    
+    对照一下式\ref{eq:5.7}, 可以发现全同粒子多了一项$\mp 2|\Braket{x}_a\Braket{x}_b|^2$, 对于玻色子, 这一项倾向于让粒子相互靠近, 而对于费米子, 这一项倾向于让粒子相互远离。
+    就\uwave{好像}是它们之间有一股神奇的作用力一样, 我们称之为\textbf{交换力}。但是请特别注意, 交换力并不是真实存在的我们通常意义上的四大基本作用力之一或其某种表现, 而是纯粹的
+    由于费米子和玻色子的波函数对称性导致的几何结果, 而且是一种纯粹的量子效应。
+
+    有一种情况可以使得修正项\ref{eq:5.11}贡献为0, 那就是当两个波函数没有“重叠”的地方, 或者说通常意义下的两个粒子隔得很远。比如一个电子在武大一个电子在华科, 那么
+    这两个电子的波函数由于隔得很远基本上可以认为相乘之后总是0, 那么这个时候无论我们是直接使用波函数$\psi_a\psi_b$去描述, 还是使用对称化后的波函数$\psi_\pm$去描述都是一样的, 没有差别。
+    所以, 原则上虽然整个宇宙的电子都是全同的, 看起来我们不能只单单研究其中一个, 但是只要两个电子充分隔离, 我们在实际操作中就可以认为这两个电子是可以分辨的。所以我们可以明确的说\uwave{武大实验室的哪个电子}, 或者
+    \uwave{华科实验室的哪个电子}。但是在原子尺度范围内的两个电子, 我们就必须去考虑它们之间的全同粒子效应了。
     \include{appendix.tex}
 \end{document}
