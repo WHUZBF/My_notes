@@ -98,7 +98,7 @@
     \end{lequation}
 
 
-    上面给出的公式中第一个是一维形式, 第二个是三维一般形式。对于某些公式推导上, 使用薛定谔方程时, 常常是对方程两边进行共轭操作\footnote[1]{物理实质可以理解
+    上面给出的公式中第一个是一维形式, 第二个是三维一般形式。对于某些公式推导上, 使用薛定谔方程时, 常常是对方程两边进行共轭操作\footnote{物理实质可以理解
     为时间反演对称性}（以一维形式为例）也即：
     \begin{lequation}
         -i\hbar\frac{\partial \Psi^{*}\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi^{*}\left(x,t\right)}{\partial x^{2}}+
@@ -106,13 +106,13 @@
     \end{lequation}
 
 
-    注意到上式的导出我们假定势能函数是实变函数, 这是有道理的, 但是书后面的习题\footnote[2]{详见第三版Problem1.17}也给出了一个例子, 那就是在不稳定的系统中, 找到粒子的概率不是守恒的, 也就是说$P$依赖于时间。
+    注意到上式的导出我们假定势能函数是实变函数, 这是有道理的, 但是书后面的习题\footnote{详见第三版Problem1.17}也给出了一个例子, 那就是在不稳定的系统中, 找到粒子的概率不是守恒的, 也就是说$P$依赖于时间。
     这时如果引入含有虚部项的势能就可以很好地解释这一点。在量子力学中Schr{\"o}dinger方程的地位和牛顿第二定律一样, 现在只是描述粒子位置的函数变成了波函数。
 
 
     Born后面给波函数一个统计上的解释, 这也就说明了在量子力学中的不确定性, 我们无法再像牛顿运动定律一样精确的预言一个例子之后的运动, 我们只能给出它之后在某处的\uwave{概率}是多少
     \begin{proposition}{波函数的统计诠释}
-        以一维情形为例, Born在统计上给出了对于波函数的解释, 他认为当一个微观粒子处于状态$\Psi\left(\bm{r},t\right)$时, 表示在$t$时刻在$x$处发现粒子的\uwave{概率}, 更准确的说\footnote[0]{一个常用的代换是$\left|\Psi\left(x,t\right)\right|^{2}=
+        以一维情形为例, Born在统计上给出了对于波函数的解释, 他认为当一个微观粒子处于状态$\Psi\left(\bm{r},t\right)$时, 表示在$t$时刻在$x$处发现粒子的\uwave{概率}, 更准确的说\footnote{一个常用的代换是$\left|\Psi\left(x,t\right)\right|^{2}=
         \Psi^{*}\left(\left(x,t\right)\right) \Psi\left(x,t\right) $}
         \begin{lequation}
             \int_{a}^{b}\left|\Psi\left(x,t\right)\right|^{2}dx=\left\{\text{$t$时刻在$\left[a,b\right]$内\\发现粒子的概率}\right\}
@@ -125,7 +125,7 @@
         \textbf{2.正统学派:粒子哪也不在}, 这种观点认为正是我们的测量\uwave{迫使}粒子在C点, 这个观点被广泛接受, 但到底什么是测量还有待讨论;\\
         \textbf{3.不可知论学派:拒绝回答}, 这种观点认为\uwave{测量前}本身就是难以定义的, 去讨论测量前粒子的位置也是没有意义的。
     \end{history}
-    现代量子理论在实验上说明了正统学派的正确性\footnote[1]{John Bell在1964年派排除了不可知论}, 有一点需要注意, 测量会导致波函数的坍塌(\ref{fig-1.1}), 坍塌成了一个类似于狄拉克delta函数的图像, 在波函数还没有按照薛定谔方程重新弥散开来的时候继续测量, 我们会发现测量结果不变, 也
+    现代量子理论在实验上说明了正统学派的正确性\footnote{John Bell在1964年派排除了不可知论}, 有一点需要注意, 测量会导致波函数的坍塌(\ref{fig-1.1}), 坍塌成了一个类似于狄拉克delta函数的图像, 在波函数还没有按照薛定谔方程重新弥散开来的时候继续测量, 我们会发现测量结果不变, 也
     就是说\uwave{测量完全改变了波函数}, 导致连续的测量得到的结果是一样的。
 
     既然波函数在统计上可以解释为概率密度分布函数, 那么一定要满足\textbf{归一化条件}
@@ -167,7 +167,7 @@
             \end{math}
         \end{center}
         值得一提的是, 上面的动量算符是利用$\left \langle p \right \rangle=m\frac{d\left \langle x \right \rangle}{dt}$得出来的
-        \footnote[0]{这里的$\left \langle x \right \rangle$必须要事先写成关于$t$的函数, 另见Problem1.16(c)}
+        \footnote{这里的$\left \langle x \right \rangle$必须要事先写成关于$t$的函数, 另见Problem1.16(c)}
     \end{proposition}
     \begin{theorem}{任意一个力学量的统计量}
         \begin{lequation}
@@ -178,7 +178,7 @@
         \end{equation}
     \end{theorem}
     上面的定理说明了在量子力学中\uwave{算符}显得尤为重要, 你要计算一个力学量$Q$的平均值只要把这个力学量的算子\uwave{夹在}波函数中间再积分即可。确定一个力学量的算子时, 先将
-    这个力学量由经典力学的公式表示成关于位置$x$和动量$p$的函数然后将$x$和$p$全部换成对应的算符即可。\footnote[1]{我们提倡使用算符这个新的工具去计算, 但有时候你会发现, 得到了$\left \langle x \right \rangle(t) $后直接使用
+    这个力学量由经典力学的公式表示成关于位置$x$和动量$p$的函数然后将$x$和$p$全部换成对应的算符即可。\footnote{我们提倡使用算符这个新的工具去计算, 但有时候你会发现, 得到了$\left \langle x \right \rangle(t) $后直接使用
     $\left \langle p \right \rangle=\frac{d\left \langle x \right \rangle}{dx}$更快。有时候直接使用定义(波函数是实质是测量到粒子在位置$x$的概率密度分布函数), 用$\int x\left| \Psi(x,t)\right|dx$直接计算也能达到事半功倍
     的效果}
     \section{海森堡不确定性原理}
@@ -238,7 +238,7 @@
     的一小部分子集, 但是这种方法得出来的解却具有非常重要的物理意义, 后面的一系列讨论都默认势能函数不随时间变化(保守场)。
 
     分离变量法的基本思想就是将$\Psi$拆分为两个函数, 一个只关于$x$, 一个只关于$t$, 即$\Psi(x,t)=\psi(x)\phi(t)$, 带入到Sch\"{o}dinger方程(\ref{S-1-D})我们可以得到
-    下面的式子\footnote[1]{$\phi(t)$附带的常数项我们合并到$\psi(x)$里面了,反正最后是对$\Psi$进行归一化}。
+    下面的式子\footnote{$\phi(t)$附带的常数项我们合并到$\psi(x)$里面了,反正最后是对$\Psi$进行归一化}。
     \begin{lequation}
         \label{wiggle-function}
         \boxed{
@@ -252,9 +252,9 @@
         }
     \end{lequation}
 
-    式\ref{wiggle-function}你可以称之为\uwave{wiggle-function}, 它只和时间相关而且你如果使用Euler公式\footnote[2]{$e^{i\theta}=\cos\theta+i\sin\theta$}, 你
+    式\ref{wiggle-function}你可以称之为\uwave{wiggle-function}, 它只和时间相关而且你如果使用Euler公式\footnote{$e^{i\theta}=\cos\theta+i\sin\theta$}, 你
     会发现它是按照正弦规律进行\uwave{振动}的, 暂且就先把它当成是波函数里面的振荡项。后面的式子(\ref{time-independent-equation})及其重要, 它就是我们要
-    谈的\textbf{定态薛定谔方程}, 不含时间, 其中的$E$实际上代表着系统的能量(哈密顿量\footnote[3]{哈密顿量就是动能加势能, 与系统的拉格朗日量对应, 后者是动能减势能})。
+    谈的\textbf{定态薛定谔方程}, 不含时间, 其中的$E$实际上代表着系统的能量(哈密顿量\footnote{哈密顿量就是动能加势能, 与系统的拉格朗日量对应, 后者是动能减势能})。
     \begin{define}{哈密顿算子}
         \begin{center}
            \begin{math}
@@ -303,7 +303,7 @@
     \begin{lequation}
         \label{energy-conservation}
         \left \langle H \right \rangle=\sum_{n=1}^{\infty}\left|c_n\right|^2E_n 
-        \Rightarrow \frac{\partial H}{\partial t}=0\footnote[1]{利用这个性质, 你可以进一步简化平均能量的计算, 即计算$\left \langle H \right \rangle=\int \Psi(x,t)^*\hat{H}\Psi(x,t) dx$, 你可以直接代入$t=0$进一步
+        \Rightarrow \frac{\partial H}{\partial t}=0\footnote{利用这个性质, 你可以进一步简化平均能量的计算, 即计算$\left \langle H \right \rangle=\int \Psi(x,t)^*\hat{H}\Psi(x,t) dx$, 你可以直接代入$t=0$进一步
         简化运算, 因为这个性质保证了平均能量与时间无关。}
     \end{lequation}
     \section{一维无限深方势阱}
@@ -331,7 +331,7 @@
         实际上这里的$k$从经典力学上看可以理解为\textbf{角波数}, $k=2\pi/\lambda\xlongequal[]{de-Broglie-eq.}p/\hbar$, 使用经典力学的观点来看,粒
         子的能量为$E$, 那么动量为$\sqrt{2mE}$。
     \end{thinknote}
-    这就是一个自由振子的数学模型, 代入边界条件\footnote[2]{$\psi(0)=\psi(a)=0$, 而且这里悄然已经利用了$\psi(x)$的连续性, 后面会再次提到}并且归一化可以得到:
+    这就是一个自由振子的数学模型, 代入边界条件\footnote{$\psi(0)=\psi(a)=0$, 而且这里悄然已经利用了$\psi(x)$的连续性, 后面会再次提到}并且归一化可以得到:
     \begin{lequation}
         \boxed{
             \psi_n(x)=\sqrt{\frac{2}{a}}\sin\left(\frac{n \pi}{a}x\right),\quad k=\frac{n \pi}{a}
@@ -343,8 +343,8 @@
         }
     \end{lequation}
     其中\textbf{$n$是正整数}。计算的时候你会发现, 两个边界条件实际上不能完全确定微分方程解的两个常数项, 但是它却限制了$ka=n\pi(n=1,2,3,\ldots)$, 而$k$
-    的值和能量是相关的, 所以这也就说明了\textbf{量子力学系统中的定态解的能量这个时候只能取一系列离散数值}\footnote[3]{对于束缚态是离散的, 对散射态不是}, 又考虑到系统的真实解是定态解的叠加, 而且每次测量系统的能量
-    时都会返回某个定态解的能量, 这也就体现了量子力学中\textbf{能量的不连续性}, 真正确定另一个常数的条件是归一化条件\footnote[4]{回想一下对$\Psi$归一化等价于对$\psi$归一化}。
+    的值和能量是相关的, 所以这也就说明了\textbf{量子力学系统中的定态解的能量这个时候只能取一系列离散数值}\footnote{对于束缚态是离散的, 对散射态不是}, 又考虑到系统的真实解是定态解的叠加, 而且每次测量系统的能量
+    时都会返回某个定态解的能量, 这也就体现了量子力学中\textbf{能量的不连续性}, 真正确定另一个常数的条件是归一化条件\footnote{回想一下对$\Psi$归一化等价于对$\psi$归一化}。
 
     完整写下定态的波函数应该为:
     \begin{lequation}
@@ -392,7 +392,7 @@
         \label{fig-2.1}
     \end{figure}
 
-    下面要谈到的性质虽然是根据无限深势阱总结来的, 但是他们却是普遍适用的\footnote[5]{$\delta$符号的相关定义见附录A}。
+    下面要谈到的性质虽然是根据无限深势阱总结来的, 但是他们却是普遍适用的\footnote{$\delta$符号的相关定义见附录A}。
     \begin{theorem}{定态解的重要性质定理}
         1.不管势能本身是否具有对称性, 定态波函数总是关于势阱的中心成奇函数或偶函数(即关于中心轴对称或中心对称), 且随着$n$的变化交替出现;\\
         2.不管势能本身形状如何, 波函数的波节(零点)个数总是随着能量的增大而增大, 且公差为$1$;\\
@@ -406,14 +406,14 @@
         \uwave{傅里叶级数}。
     \end{theorem}
     上面的性质第四点说明了我们始终可以找到一组合适的$c_n$去满足初始波函数, 而如何去求这些$c_n$又是基于定态解的正交性(eq.\ref{orthogonal}), 使用傅里叶方法我们可以
-    很容易的得到$c_n$\footnote[1]{$\Psi(x,0)$是初始波函数, 如果初始波函数不是在$t=0$时刻给定的, 你可能要额外考虑一下wiggle-function项(eq.\ref{wiggle-function})(更改时间原点也是一个不错的选择, 复习一下波动学里面的操作)}:
+    很容易的得到$c_n$\footnote{$\Psi(x,0)$是初始波函数, 如果初始波函数不是在$t=0$时刻给定的, 你可能要额外考虑一下wiggle-function项(eq.\ref{wiggle-function})(更改时间原点也是一个不错的选择, 复习一下波动学里面的操作)}:
     \begin{lequation}
         \boxed{
             c_n=\int \psi_n(x)^*\Psi(x,0) dx
         }
     \end{lequation}
 
-    使用正交性你还可以去证明\footnote[2]{分别基于初始波函数的归一化和定态薛定谔方程的算子表示法}eq.\ref{normalized-c}和eq.\ref{energy-conservation}。
+    使用正交性你还可以去证明\footnote{分别基于初始波函数的归一化和定态薛定谔方程的算子表示法}eq.\ref{normalized-c}和eq.\ref{energy-conservation}。
     \begin{thinknote}
         上面的两个证明书上都有, 实际上你也可以证明按照上面的方法解出来的系统的波函数, $\Psi$已经自动归一化。但这是多此一举的, 因为无论是初始波函数, 还是确定$c_n$后的完整波函数, 波函数都是满足薛定谔方程的, 在
         前面的章节我们就说明了如果$\Psi$在某一时刻是归一化的, 那么之后任一时刻它也是归一化的(eq.\ref{normalized-independent-time})
@@ -487,7 +487,7 @@
     \end{define}
     \begin{thinknote}
         在计算算符时, 要格外小心, 算符一般情况下并不满足交换律, 你需要先将整个算符作用于一个函数上, 然后按照运算顺序逐个计算, 最后再进行化简。比如
-        $x$和$\hat{p}$就不满足交换律\footnote[1]{量子力学很多与经典力学相冲突的地方就是因为这两个的不可交换性, 有的人将它当作公理去推导其它定理}, $
+        $x$和$\hat{p}$就不满足交换律\footnote{量子力学很多与经典力学相冲突的地方就是因为这两个的不可交换性, 有的人将它当作公理去推导其它定理}, $
         x\hat{p}f(x)=-ix\hbar\frac{df}{dx}$但是$\hat{p}xf(x)=-i\hbar\frac{d}{dx}\left[xf(x)\right]=-i\hbar[f(x)+x\frac{df(x)}{dx}]$。
     \end{thinknote}
     \begin{define}{对易子}
@@ -514,7 +514,7 @@
         }
     \end{lequation}
     \begin{theorem}{谐振子的定态解}
-        如果$\psi(x)$是谐振子在能量为$E$时的定态解, 那么$A\hat{a}_+\psi(x)$就是在能量为$E+\frac{1}{2}\omega\hbar$时的定态解\footnote[1]{前面乘上
+        如果$\psi(x)$是谐振子在能量为$E$时的定态解, 那么$A\hat{a}_+\psi(x)$就是在能量为$E+\frac{1}{2}\omega\hbar$时的定态解\footnote{前面乘上
         常数是归一化需要, 我们前面说过, 你求出来的解都需要进行归一化}, 同理, $A\hat{a}_-\psi(x)$是在能量为$E-\frac{1}{2}\omega\hbar$时的定态解。
     \end{theorem}
     直接根据湮灭和产生算子的定义可以很快地证明上述定理。现在很自然的就可以发现, 因为能量是不能一直递减的, 它至少要大于势能的最小值, 所以我们或许可以找到
@@ -610,7 +610,7 @@
         把$h(\xi)$的$a_0$或者$a_1$因子去掉并且乘上一个数将最高次项前面的因子化为$2^n$, 得到的多项式为\textbf{厄米多项式}, 记作$H_n(\xi)$\\
         例如:$h_2(\xi)=a_0(1-2\xi^2)=-\frac{1}{2}a_0(4\xi^2-2)$则$H_2(\xi)=4\xi^2-2$
     \end{define}
-    我们不加证明地列出波函数归一化后的解与厄米多项式之间的关系\footnote[1]{前面因子的相位按照惯例按最简单的取}:
+    我们不加证明地列出波函数归一化后的解与厄米多项式之间的关系\footnote{前面因子的相位按照惯例按最简单的取}:
     \begin{lequation}
         \boxed{
             \psi(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{4}}\frac{1}{\sqrt{2^nn!}}H_n(\xi)e^{-\xi^2/2}
@@ -647,7 +647,7 @@
     注意, \uwave{我们不再有边界条件去直接确定$A$和$B$的值}, \textbf{这个时候定态解的能量的取值并不是离散的!可以取到任何大于$0$的值!}其实本身量子力学就是不排斥
     连续性的, 离散可以有很多种, 不一定就表明某个量一定是离散取值。
 
-    考虑wiggle-function后写成下面的形式\footnote[1]{这里$\psi_k$无法进行归一化, 不像前面一样我们先进行归一化后再去定系数会有很多便利。但是这里我们还是在
+    考虑wiggle-function后写成下面的形式\footnote{这里$\psi_k$无法进行归一化, 不像前面一样我们先进行归一化后再去定系数会有很多便利。但是这里我们还是在
     前面添了一个$\frac{1}{\sqrt{2\pi}}$你很快就可以看见他在数学处理上的妙处}:
     \begin{lequation}
         \boxed{
@@ -666,9 +666,9 @@
     与经典力学中的波动方程相对应, 前面讲过$k$可以理解为角波数, 那么波速$v=\frac{|k|\hbar}{2m}=\sqrt{\frac{E}{2m}}$, 角频率$\omega=\frac{k^2\hbar}{2m}$, 过会我们会再回到波速的问题上来, 目前
     来看似乎有自由粒子速度$v_p=\sqrt{\frac{2E}{m}}=2v_{wave}$。
 
-    自由粒子的波函数的定态解与前面两个模型最大的不同就是\textbf{它是无法归一化的}。所以现在我们求出来的定态解完全只是数学上的一个过程\footnote[1]{虽然不存在这样一个定态, 但是我们前面介绍的解薛定谔方程的一般手段仍旧不变, 只是这些“定态”不可归一化且是连续谱}, 没有实际的物理意义
+    自由粒子的波函数的定态解与前面两个模型最大的不同就是\textbf{它是无法归一化的}。所以现在我们求出来的定态解完全只是数学上的一个过程\footnote{虽然不存在这样一个定态, 但是我们前面介绍的解薛定谔方程的一般手段仍旧不变, 只是这些“定态”不可归一化且是连续谱}, 没有实际的物理意义
     不存在一个状态, 其中自由粒子属于能量始终不变的定态(无论如何测量都是一个值)。但是没事, 虽然不存在定态, 但是我们还是可以使用定态解的线性组合来构造符合初值的
-    解\footnote[2]{这些合成的解沿用波动学的观点, 称为\uwave{波包}, 是可归一化的}, 这些“定态”解也是归一化和完备的。
+    解\footnote{这些合成的解沿用波动学的观点, 称为\uwave{波包}, 是可归一化的}, 这些“定态”解也是归一化和完备的。
 
     我们仍旧对定态解进行线性叠加, 注意是对定态解叠加, 也就是对定态解的波函数进行叠加不是$\psi$而是$\Psi$, 所以不要忘记了每个$\psi$后面的关于时间的指数项。
     \begin{lequation}
@@ -680,7 +680,7 @@
     和\ref{find_c}对比一下就会发现, $\phi(k)$取代了$c_n$, 这一点很好理解, 因为$\phi_k(x)$变成了一个关于$k$的连续函数, 而数列我们也通常称为\uwave{整标函数}, 所
     以, 前面变成连续函数来加权, 求和也变成了积分。
 
-    初始值还是在$t=0$处给定\footnote[3]{若不是, 你对$t$进行一个换元平移一下计时零点即可}, 那么可以得到:
+    初始值还是在$t=0$处给定\footnote{若不是, 你对$t$进行一个换元平移一下计时零点即可}, 那么可以得到:
     \begin{lequation}
         \Psi(x,0)=\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty}\phi(k)e^{ikx}dk  
     \end{lequation}
@@ -793,7 +793,7 @@
             \item $\int_{-\infty}^{\infty}f(x)\delta(x-a)=f(a)$
         \end{itemize}
     \end{proposition}
-    我们现在考虑的势阱形式是$V(x)=-\alpha\delta(x),\alpha>0$。显然, $E>0$时是散射态, $E<0$时是束缚态\footnote[1]{考虑束缚态时, 除了根据判据, 你还要
+    我们现在考虑的势阱形式是$V(x)=-\alpha\delta(x),\alpha>0$。显然, $E>0$时是散射态, $E<0$时是束缚态\footnote{考虑束缚态时, 除了根据判据, 你还要
     观察下, 在这个能量条件下, 定态解是不是平方可积的, 满足束缚态的定义, 在这里由于$V_{min}\to -\infty$, 所以恒有$E>V_{min}$, 粗略来看束缚态是可以在这个
     能量条件下给出的, 后面的势垒就是个反例。}。
     \subsubsection*{束缚态($E<0$)}
@@ -805,7 +805,7 @@
         \end{math}
     \end{center}
     定义$\kappa\equiv\frac{\sqrt{-2mE}}{\hbar}$, 这个解应该是一个分段函数形式, 分段求解首先考虑$x<0$, 方程可以写成:
-    $$\frac{d^2\psi}{dx^2}=\kappa^2\psi$$方程的通解具有形式$\psi(x)=Ae^{\kappa x}+Be^{-\kappa x}$, 实际上对于波函数, 我们有下面的必要边界条件\footnote[1]{实际上是量子力学几条基本原理之一}:
+    $$\frac{d^2\psi}{dx^2}=\kappa^2\psi$$方程的通解具有形式$\psi(x)=Ae^{\kappa x}+Be^{-\kappa x}$, 实际上对于波函数, 我们有下面的必要边界条件\footnote{实际上是量子力学几条基本原理之一}:
     \begin{proposition}{$\psi$标准条件}
         \begin{itemize}
             \item \textbf{连续性}: $\psi(x)$是一个连续函数
@@ -878,7 +878,7 @@
 
     能量越高透射波的振幅越大, 也就是说粒子\uwave{穿过}势阱的可能性越高, 这显然是与常识相符的。
 
-    当然, 由于定态解合成的波包才是真正有物理意义的解, 所以我们推出来的$R$和$T$应当理解成粒子的能量在某一个很小的范围的时候的近似值\footnote[1]{前面提到过需要多个态叠加
+    当然, 由于定态解合成的波包才是真正有物理意义的解, 所以我们推出来的$R$和$T$应当理解成粒子的能量在某一个很小的范围的时候的近似值\footnote{前面提到过需要多个态叠加
     才有物理意义, 这也就意味着粒子测量时的能量一定是在某个连续的范围内, 散射态的能量本征值是连续谱。}
     \subsubsection*{$\delta$函数势垒}
     形式上来看势垒的解形式上应该和上面讨论的势阱的散射态相同, 只是$\alpha$的符号刚好相反。但是透射系数和反射系数是不变的。
@@ -890,7 +890,7 @@
     携带的能量正相关, 这种现象称之为\textbf{量子隧穿效应}, 在电子显微镜及其它很多领域中有广泛的应用。
     \subsubsection*{$\delta$函数势阱束缚态计算}
     我们之前讲的计算方法就是利用连续性和薛定谔方程两端积分, 这对于只有一个$\delta$函数的势阱很实用, 但是$\delta$函数数目较多时, 由于还要分段求解方程, 计算就显得比较繁琐了, 下面介绍一种
-    利用傅里叶变换快速计算的方法\footnote[2]{cf.顾樵, 量子力学, vol.1, P140-144}。
+    利用傅里叶变换快速计算的方法\footnote{cf.顾樵, 量子力学, vol.1, P140-144}。
 
     傅里叶变换使用如下定义方法:
     \begin{equation}
@@ -902,7 +902,7 @@
     \end{equation}
     \begin{proposition}{傅里叶变换常用性质}
         \begin{itemize}
-            \item \textbf{线性性}\footnote[1]{使用$\mathscr{F}$表示变换, 大写字母表示变换后相应的函数}:$$
+            \item \textbf{线性性}\footnote{使用$\mathscr{F}$表示变换, 大写字母表示变换后相应的函数}:$$
             \begin{gathered}
             \mathscr{F}[\alpha f(t)+\beta g(t)]=\alpha F(\omega)+\beta G(\omega) \\
             \mathscr{F}^{-1}[\alpha F(\omega)+\beta G(\omega)]=\alpha f(t)+\beta g(t)
@@ -1025,9 +1025,9 @@
     利用$\psi(x)$和$\psi\prime(x)$的连续性可以列出四个方程, 再利用归一化条件便可以完全定下五个参数。这里我们使用了一阶导的连续性, 实际上, 只要势能的性质
     并不是像$\delta$函数这么坏, 这个条件都是成立的, 不成立时我们可以得到两侧导数之间的关系。
 
-    其实, 我们可以使用对称性进一步简化我们的运算\footnote[1]{如果没有想到对称性, 直接根据方程组有非零解, 系数行列式为0, 也可以计算出能级, 只是最后波函数的形式有点不同。}, 在束缚态的求解中, 下面的陈述十分有效:
+    其实, 我们可以使用对称性进一步简化我们的运算\footnote{如果没有想到对称性, 直接根据方程组有非零解, 系数行列式为0, 也可以计算出能级, 只是最后波函数的形式有点不同。}, 在束缚态的求解中, 下面的陈述十分有效:
     \begin{proposition}{定态波函数的对称性}
-        如果所给势能$V(x)$是一个\textbf{偶函数}, 那么$\psi(x)$\textbf{总可以取作偶函数或者奇函数}\footnote[1]{注意这里是\uwave{取作},意思是用奇函数和偶函数作为基底是完全等价的, 不是说$\psi$一定有奇偶性}, 分奇偶讨论后根据条件取舍就可以得到全部的解。
+        如果所给势能$V(x)$是一个\textbf{偶函数}, 那么$\psi(x)$\textbf{总可以取作偶函数或者奇函数}\footnote{注意这里是\uwave{取作},意思是用奇函数和偶函数作为基底是完全等价的, 不是说$\psi$一定有奇偶性}, 分奇偶讨论后根据条件取舍就可以得到全部的解。
     \end{proposition}
     上面的定理告诉我们可以只关心那些有对称性的解, 计算结果等价。下面分类求解。
     
@@ -1144,9 +1144,9 @@
     \end{equation*}
     \chapter{形式化理论}
     \section{可观测量}
-    虽然量子力学需要引入虚数, 但是实际上实验测得的量都是实数, 也就是说可观测量$Q$的测量值始终是实数。\footnote[1]{与书上顺序不同, 我假定已经看过附录B, 对狄拉克符号已经有所了解}
+    虽然量子力学需要引入虚数, 但是实际上实验测得的量都是实数, 也就是说可观测量$Q$的测量值始终是实数。\footnote{与书上顺序不同, 我假定已经看过附录B, 对狄拉克符号已经有所了解}
     \[Q = {Q^*} \Rightarrow \left\langle Q \right\rangle  = {\left\langle Q \right\rangle ^*}\]
-    第一章我们就强调了, 计算某个量的平均值时, 把\textbf{这个量对应的算符}夹在波函数之间后积分即可\footnote[2]{其实更好的记号是狄拉克符号$\left\langle \Psi  \right|\hat Q\left| \Psi  \right\rangle $}：
+    第一章我们就强调了, 计算某个量的平均值时, 把\textbf{这个量对应的算符}夹在波函数之间后积分即可\footnote{其实更好的记号是狄拉克符号$\left\langle \Psi  \right|\hat Q\left| \Psi  \right\rangle $}：
     \[\left\langle Q \right\rangle  = \int {{\Psi ^*}\hat Q\Psi dx}  = \left\langle {\Psi }\mathrel{\left | {\vphantom {\Psi  {\hat Q\Psi }}}\right. \kern-\nulldelimiterspace}
     {{\hat Q\Psi }} \right\rangle ,{\left\langle Q \right\rangle ^*} = \left\langle {{\hat Q\Psi }}\mathrel{\left | {\vphantom {{\hat Q\Psi } \Psi }}\right. \kern-\nulldelimiterspace}
     {\Psi } \right\rangle \]
@@ -1189,10 +1189,10 @@
     \right. \kern-\nulldelimiterspace}
     {{\left( {\hat Q - q} \right)\Psi }} \right\rangle =0\Rightarrow
     \boxed{\hat{Q}\Psi=q\Psi}\]
-    也就是说, 定值态是算符$\hat{Q}$的本征向量, 而对应的测量值就是本征值。\footnote[1]{更多这方面的内容, 请翻阅附录\ref{Appendix B}}
+    也就是说, 定值态是算符$\hat{Q}$的本征向量, 而对应的测量值就是本征值。\footnote{更多这方面的内容, 请翻阅附录\ref{Appendix B}}
 
     比如定态薛定谔方程$$\hat{H}\psi=E\psi$$
-    很好解释为什么定态解是关于哈密顿算符的定值态, 注意到波函数$\Psi(x,t)=\psi(x)e^{iEt/\hbar}$仍是$E$的特征向量, 所以定态波函数确实就是能量的定值态。\footnote[2]{或者说成比例的两个右矢表示的是同一个物理状态。}
+    很好解释为什么定态解是关于哈密顿算符的定值态, 注意到波函数$\Psi(x,t)=\psi(x)e^{iEt/\hbar}$仍是$E$的特征向量, 所以定态波函数确实就是能量的定值态。\footnote{或者说成比例的两个右矢表示的是同一个物理状态。}
     \section{观察算符和算符的谱}
     厄米算符的谱可能是离散谱(比如无限深势阱), 也可能是连续谱(比如自由粒子)。对于离散谱, 我们已经通过模型的计算大约了解到特征矢都是平方可积的, 但对于连续谱就不再成立。
     但是这些本征矢之间有些重要性质, 比如正交性, 完备性, 我们用标准的线性代数语言再来描述一下。注意, 我们讨论的范围一直是可观测量对应的厄米算符。
@@ -1350,11 +1350,11 @@
         \setlength\parindent{2em}先考虑离散谱情况。我们对一个量子态$\Psi(x,t)$进行测量, 会得到观察算符$\hat{Q}$的一个本征值$q_n$, 而且因为测量, 体系会坍缩为$q_n$对应的一个本征态$\ket{\psi_n}$。
         且$\ket{\psi_n}$实际上是$\ket{\Psi}$在$q_n$所对应的本征空间的归一化投影。定义投影算符：
         \[P_n\equiv\sum\limits_{i=1}^{g_n} \ket{u_n^i} \bra{u_n^i}\]
-        那么$\ket{\psi_n}$满足\footnote[1]{利用了$P_n^2=P_n$}:
+        那么$\ket{\psi_n}$满足\footnote{利用了$P_n^2=P_n$}:
         \begin{equation}
             \ket{\psi_n}=\frac{P_n\ket{\Psi}}{\sqrt{\braket{\Psi|P_n|\Psi}}}
         \end{equation}
-        \textbf{体系在测量之后会以$\ket{\psi_n}$为初态继续按照薛定谔方程演化}, 所以我们说测量一定会影响系统\footnote[2]{但是对于一个本身就处于$\hat Q$的某个定值态的系统, 你测量$Q$并不会影响系统}。
+        \textbf{体系在测量之后会以$\ket{\psi_n}$为初态继续按照薛定谔方程演化}, 所以我们说测量一定会影响系统\footnote{但是对于一个本身就处于$\hat Q$的某个定值态的系统, 你测量$Q$并不会影响系统}。
         对这个系统测量, 得到$q_n$的概率为：
         \begin{equation}
             \mathscr{P}_n=\sum\limits_{i=1}^{g_n}\left|\Braket{u_n^i|\Psi}\right|
@@ -1417,14 +1417,14 @@
             &\equiv \Phi(p,t)
         \end{align*}
     \end{thinknote}
-    这里引入了一个新的概念, \textbf{动量空间波函数}, $\Phi(p,t)$. 原先的$\Psi(x,t)$可以称为\textbf{位置空间波函数}。他们之间的关系就是傅里叶变换\footnote[1]{量子力学里面更喜欢这样写傅里叶变换, 很容易证明它和我们之前讲自由粒子波函数时引进的傅里叶变换的等价性}:
+    这里引入了一个新的概念, \textbf{动量空间波函数}, $\Phi(p,t)$. 原先的$\Psi(x,t)$可以称为\textbf{位置空间波函数}。他们之间的关系就是傅里叶变换\footnote{量子力学里面更喜欢这样写傅里叶变换, 很容易证明它和我们之前讲自由粒子波函数时引进的傅里叶变换的等价性}:
     \begin{align}
         &\Phi(p,t)=\frac{1}{\sqrt{2\pi\hbar}}\int\Psi(x,t)e^{-\frac{ipx}{\hbar}}\mathrm{d}x\\
         &\Psi(x,t)=\frac{1}{\sqrt{2\pi\hbar}}\int\Phi(p,t)e^{\frac{ipx}{\hbar}}\mathrm{d}p
     \end{align}
     两个表示粒子状态的波函数都非常重要。
     \begin{proposition}{算符的两种不同形式}
-        我们之前提到的$\hat x=x,\hat p=-i\hbar\frac{\partial}{\partial x}$实际上时算符在位置空间\footnote[1]{暂时先这么说, 实际上应该说成$\left|\bm{r}\right\rangle$}下的描述, 在动量空间中应该是\footnote[2]{为了和前面区分, 我改用$\tilde{}$表示算符}:
+        我们之前提到的$\hat x=x,\hat p=-i\hbar\frac{\partial}{\partial x}$实际上时算符在位置空间\footnote{暂时先这么说, 实际上应该说成$\left|\bm{r}\right\rangle$}下的描述, 在动量空间中应该是\footnote{为了和前面区分, 我改用$\tilde{}$表示算符}:
         \[\tilde{x}=i\hbar\frac{\partial}{\partial p},\tilde{p}=p\]
         或者更一般的, 使用两种不同空间波函数求力学量平均值应该写成:
         \begin{equation}
@@ -1576,7 +1576,7 @@
 
     回到动量位置不确定性关系上来, 如果式\ref{x-p 不确定性}可以取等号, 那么根据前面分析
     \[\left( {\hat p - \left\langle p \right\rangle } \right)\Psi  = ia\left( {\hat x - \left\langle x \right\rangle } \right)\Psi  \Rightarrow \left( { - i\hbar \frac{d}{{dx}} - \left\langle p \right\rangle } \right)\Psi  = ia\left( {x - \left\langle x \right\rangle } \right)\Psi \]
-    解微分方程得到波函数的形式是\footnote[1]{$\left\langle x \right\rangle,\left\langle p \right\rangle$和位置$x$无关。}:
+    解微分方程得到波函数的形式是\footnote{$\left\langle x \right\rangle,\left\langle p \right\rangle$和位置$x$无关。}:
     \begin{equation}
         \Psi  = A{e^{ - \frac{a}{{2\hbar }}{{\left( {\hat x - \left\langle x \right\rangle } \right)}^2}}}{e^{\frac{i}{\hbar }\left\langle p \right\rangle x}}
     \end{equation}
@@ -1586,7 +1586,7 @@
     \begin{equation}
        \Delta {x} \Delta {p} \ge \frac{\hbar}{{2 }} 
     \end{equation}
-    对应的还会有一个时间和能量之间的不确定性关系\footnote[2]{从狭义相对论动力学的四位动量和四维时空坐标中你可以看出这种对应性}:
+    对应的还会有一个时间和能量之间的不确定性关系\footnote{从狭义相对论动力学的四位动量和四维时空坐标中你可以看出这种对应性}:
     \begin{equation}
         \label{E-t}
         \Delta {t} \Delta {E} \ge \frac{\hbar}{{2 }}
@@ -1599,9 +1599,9 @@
         \label{求导式子}
         \frac{d}{d t}\langle Q\rangle=\frac{d}{d t}\langle\Psi|\hat{Q}| \Psi\rangle=\Braket{\frac{\partial \Psi}{\partial t}|\hat{Q}| \Psi}+\Braket{\Psi|\frac{d \hat{Q}}{d t}|\Phi}+\Braket{\Psi|\hat{Q}| \frac{\partial \Psi}{\partial t}}
     \end{equation}
-    上面的求导具体过程可以使用定义直接推导, 有点像实分析中三个函数相乘的导数公式。\footnote[3]{$\Ket{\frac{\partial \Psi}{\partial t}}$表示$\frac{\partial }{\partial t}\Ket{\Psi}$, 对应的左矢为$\Bra{\frac{\partial \Psi}{\partial t}}$, 注意不是$\frac{\partial }{\partial t}\Bra{\Psi}$}
+    上面的求导具体过程可以使用定义直接推导, 有点像实分析中三个函数相乘的导数公式。\footnote{$\Ket{\frac{\partial \Psi}{\partial t}}$表示$\frac{\partial }{\partial t}\Ket{\Psi}$, 对应的左矢为$\Bra{\frac{\partial \Psi}{\partial t}}$, 注意不是$\frac{\partial }{\partial t}\Bra{\Psi}$}
     
-    含时薛定谔方程可以写为\footnote[4]{严格使用狄拉克符号的话这里的$\Psi$要加上$\ket{}$}:
+    含时薛定谔方程可以写为\footnote{严格使用狄拉克符号的话这里的$\Psi$要加上$\ket{}$}:
     \[i\hbar\frac{\partial \Psi}{\partial t}=\hat H\Psi\Rightarrow\frac{\partial \Psi}{\partial t}=-\frac{i\hat H}{\hbar}\Psi\]
     代入\ref{求导式子}得到:
     \begin{align*}
@@ -1616,7 +1616,7 @@
             \frac{d\braket{Q}}{dt}=\frac{i}{\hbar}\Braket{\Psi|\left[\hat H,\hat Q\right]|\Psi}+\Braket{\frac{\partial \hat Q}{\partial t}}
         }
     \end{equation}
-    当\ref{广义欸费斯托定理}中的$\hat Q=\hat p$时\footnote[2]{我们目前的讨论都在位置空间中, 所以$\hat p=-i\hbar\frac{\partial}{\partial x}$}, 我们得到\textbf{Ehrenfest's theorem}:
+    当\ref{广义欸费斯托定理}中的$\hat Q=\hat p$时\footnote{我们目前的讨论都在位置空间中, 所以$\hat p=-i\hbar\frac{\partial}{\partial x}$}, 我们得到\textbf{Ehrenfest's theorem}:
     \begin{equation}
         \boxed{\frac{d}{dt}\braket{p}=\Braket{-\frac{\partial V(x)}{\partial x}}}
     \end{equation}
@@ -1651,7 +1651,7 @@
     量子态可以使用态空间中的一个右矢表示, 在附录\ref{Appendix B}中我们已经讨论了这个空间的运算性质, 其代数本质是线性空间, 下面我们正式从$\mathscr{F}$空间定义与其联系的$\mathscr {E}_r$空间, 其实就是一个
     通过分量和一组完备的正交基确定矢量的过程。
     \begin{proposition}{$\mathscr{F}$空间与$\mathscr {E}_r$空间的联系}
-        对于波函数空间中的每一个波函数$\psi(bm{r})$, 我们唯一选取态空间中的一个右矢$\ket{\psi}$与之对应, 这种对应是线性的, 而且这种对应使得内积定义为\footnote[1]{我们正是在定义一个内积空间}:
+        对于波函数空间中的每一个波函数$\psi(bm{r})$, 我们唯一选取态空间中的一个右矢$\ket{\psi}$与之对应, 这种对应是线性的, 而且这种对应使得内积定义为\footnote{我们正是在定义一个内积空间}:
         \begin{equation}
             \label{eq:3.30}
             \braket{\varphi|\psi}=\int d^3r\varphi^*(\bm{r})\psi(\bm{r})
@@ -1694,14 +1694,14 @@
     \begin{define}{两个重要算符}
         \begin{itemize}
             \item 算符$\hat{\bm{R}}$\\
-            这个算符在$\ket{\bm{r}}$表象下由三个“分量算符”$X,Y,Z$确定。\footnote[1]{这里的$\bm{r}$是个缩并的记号, 波函数实际上是一个三元函数$\Psi(x,y,z)$, 下式中的$x,y,z$就是包含在$\ket{\bm{r}}$中的三个指标。算符$\hat{\bm{P}}$同理。}
+            这个算符在$\ket{\bm{r}}$表象下由三个“分量算符”$X,Y,Z$确定。\footnote{这里的$\bm{r}$是个缩并的记号, 波函数实际上是一个三元函数$\Psi(x,y,z)$, 下式中的$x,y,z$就是包含在$\ket{\bm{r}}$中的三个指标。算符$\hat{\bm{P}}$同理。}
             \begin{align*}
                 &\Braket{\bm{r}|X|\Psi}=x \Braket{\bm{r}|\Psi}=x\Psi(\bm{r})\\
                 &\Braket{\bm{r}|Y|\Psi}=y \Braket{\bm{r}|\Psi}=y\Psi(\bm{r})\\
                 &\Braket{\bm{r}|Z|\Psi}=z \Braket{\bm{r}|\Psi}=z\Psi(\bm{r})
             \end{align*}
             \item 算符$\hat{\bm{P}}$\\
-            这个算符在$\ket{\bm{p}}$表象下由三个“分量算符”$P_x,P_y,P_z$确定。\footnote[2]{如果考虑随时间演化的态, 式中要加上时间项, 形式不变。}
+            这个算符在$\ket{\bm{p}}$表象下由三个“分量算符”$P_x,P_y,P_z$确定。\footnote{如果考虑随时间演化的态, 式中要加上时间项, 形式不变。}
             \begin{align*}
                 &\Braket{\bm{p}|P_x|\Psi}=p_x \Braket{\bm{p}|\Psi}=p_x\Phi(\bm{p})\\
                 &\Braket{\bm{p}|P_y|\Psi}=p_y \Braket{\bm{p}|\Psi}=p_y\Phi(\bm{p})\\
@@ -1736,7 +1736,7 @@
     
     如果存在一些非简并的本征值, 那么这个时候$\mathscr{E}_n$中本征矢的取法就有无限多种线性组合, 那么$\{\ket{u_n^i}\}$的取法就并不唯一了, 但我们这个时候如果引进一个
     与$\hat{A}$对易的算符$\hat{B}$, 考察他们的公共本征矢, 根据$\S{3.2}$的推导, 他们的公共本征矢构成了一组基$\{\ket{u_{n,p}^i}\}$, 由$\hat{A},\hat{B}$的本征矢对$\left(a_n,b_p\right)$确定。
-    如果每一个本征矢对唯一确定了一个$\{\ket{u_{n,p}^i}\}$(同样, 成比例算作相同的本征矢), 那么$\hat{A},\hat{B}$的公共本征矢确定的基底是唯一的\footnote[1]{根据$\S{3.2}$构造这组基的过程
+    如果每一个本征矢对唯一确定了一个$\{\ket{u_{n,p}^i}\}$(同样, 成比例算作相同的本征矢), 那么$\hat{A},\hat{B}$的公共本征矢确定的基底是唯一的\footnote{根据$\S{3.2}$构造这组基的过程
     , 可以发现, 这个条件等价于${\left. {\hat B} \right|_{\mathscr{E}_n}}$(也就是那每一个分块小矩阵)有$g_n$个不同的本征值, 其中$g_n\equiv \dim \mathscr{E}_n$}, 这时我们称$\{\hat{A},\hat{B}\}$
     构成了一个CSCO。
     
@@ -1745,7 +1745,7 @@
         \setlength\parindent{2em}按定义, 把观察算符$\hat A,\hat B,\hat C\cdots$的一个集合叫做可对易观察算符的完全集合的条件是:
         \begin{itemize}
             \item 所有的这些观察算符\uwave{两两对易}；
-            \item 给出了全体算符$\hat A,\hat B,\hat C\cdots$的本征值的一个数组，便足以决定唯一的一个共同本征矢\footnote[1]{有且仅有($\exists!$)}(倍乘因子除外)。
+            \item 给出了全体算符$\hat A,\hat B,\hat C\cdots$的本征值的一个数组，便足以决定唯一的一个共同本征矢\footnote{有且仅有($\exists!$)}(倍乘因子除外)。
         \end{itemize}
         \setlength\parindent{2em}或者说:存在着由共同本征矢构成的一个正交归一基，而且这个基是唯一的（除相位因子以外）。
     \end{define}
@@ -1761,7 +1761,7 @@
     
     但是这远远不够, 显然, 我们如果不对$c_n$加以限制的话, 式\ref{eq:3.38}实际上可以表示态空间的所有矢量！真正满足量子力学规律的矢量显然有一定限制, 而这个限制就是通过薛定谔方程和$\ket{\psi_n}$对应的本征值完成的。
     实际上之前我们利用分离变量法求解薛定谔方程(哈密顿量不显含时间, 即保守体系)就已经得出了$c_n$要满足的规律(式\ref{find_c}), 即\[c_n(t)=c_n(0) e^{-iE_n t/\hbar}\]
-    下面我们全程使用更广泛的狄拉克符号法来推导一下\footnote[1]{这里作为例子考虑最简单的离散谱非简并情况, 其他情况的推广非常简单}。
+    下面我们全程使用更广泛的狄拉克符号法来推导一下\footnote{这里作为例子考虑最简单的离散谱非简并情况, 其他情况的推广非常简单}。
     
     我们之前解的薛定谔方程都是下面更加普遍的方程在$\ket{\bm{r}}$表象下的形式：
     \begin{lequation}
@@ -1774,7 +1774,7 @@
     \end{lequation}
     在能量表象下, \ref{eq:3.39}变为:
     \[i\hbar\Braket{\psi_n|\frac{\partial}{\partial t}|\Psi(t)}=\Braket{\psi_n|\hat{H}|\Psi(t)}\]
-    又因为$\ket{\psi_n}$与时间无关\footnote[2]{因为$\hat H$不显含时间, 我们始终可以选取一组与时间无关的定态作为基底}, 那么上式又可以写为：
+    又因为$\ket{\psi_n}$与时间无关\footnote{因为$\hat H$不显含时间, 我们始终可以选取一组与时间无关的定态作为基底}, 那么上式又可以写为：
     \begin{align*}
         i\hbar\frac{\partial}{\partial t}\Braket{\psi_n|\Psi(t)}&=\Braket{\psi_n|\hat{H}|\Psi(t)}\\
         &=E_n\Braket{\psi_n|\Psi(t)}
@@ -1879,7 +1879,7 @@
         \label{eq:4.11}
         -\frac{\hbar^{2}}{2 m}\left[\frac{1}{r^{2}} \frac{\partial}{\partial r}\left(r^{2} \frac{\partial \psi}{\partial r}\right)+\frac{1}{r^{2} \sin \theta} \frac{\partial}{\partial \theta}\left(\sin \theta \frac{\partial \psi}{\partial \theta}\right)+\frac{1}{r^{2} \sin ^{2} \theta}\left(\frac{\partial^{2} \psi}{\partial \phi^{2}}\right)\right]+V \psi=E \psi
     \end{equation}
-    再次使用分离变量法去求解薛定谔方程\footnote[1]{Hassani在其名著\textit{Mathematical in Physics}中有一句话, 大意是说我们物理学中所关心的方程几乎都能分离变量去解。}, 令
+    再次使用分离变量法去求解薛定谔方程\footnote{Hassani在其名著\textit{Mathematical in Physics}中有一句话, 大意是说我们物理学中所关心的方程几乎都能分离变量去解。}, 令
     \[\psi(r,\theta,\phi)=R(r)Y(\theta,\phi)\]
     代入\ref{eq:4.11}得到:
     \begin{equation}
@@ -1917,7 +1917,7 @@
         \boxed{\Phi(\phi)=e^{imt}, \quad(m=0,\pm 1,\pm 2,\pm 3\ldots)}
     \end{equation}
 
-    方程\ref{eq:4.16}的求解在一般的数理方法书中都会提到, 它的解可以用\textbf{连带勒让德函数表达}\footnote[1]{当然, 这个方程还有别的解, 但没有物理意义, 详见数学物理方法内容}：
+    方程\ref{eq:4.16}的求解在一般的数理方法书中都会提到, 它的解可以用\textbf{连带勒让德函数表达}\footnote{当然, 这个方程还有别的解, 但没有物理意义, 详见数学物理方法内容}：
     \begin{equation}
         \Theta(\theta)=AP_\ell^m\left(\cos\left(\theta\right)\right),\quad(\ell=0,1,2\ldots)
     \end{equation}
@@ -1936,7 +1936,7 @@
     \end{define}
     现在完全确定一个定态解的角向函数需要给出$l$和$m$两个参数, 而且根据上面的定义, 在$\ell$确定后, $m$只能取某些固定的值才能使方程\ref{eq:4.16}有(含物理意义的)解。即：
     \[\ell=0,1,2\ldots\Rightarrow m=0,\pm 1,\pm 2,\pm 3,\ldots, \pm \ell\]
-    最后归一化\footnote[1]{不要忘记三重积分球坐标换元后的雅可比系数}我们得到:
+    最后归一化\footnote{不要忘记三重积分球坐标换元后的雅可比系数}我们得到:
     \begin{lequation}
         \boxed{Y_{\ell}^{m}(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^{m l}(\cos \theta)}
     \end{lequation}
@@ -1996,7 +1996,7 @@
     左边是病态delta函数, 右边是一个解析函数, 显然无法满足。所以$B$必须为$0$, 否则在$r=0$时不满足薛定谔方程, 而且由于$u(a)=0$, $k$的取值也有一定限制, $ka=N\pi$, $N$是自然数。
     再根据归一化条件：\[
         \iiint d^3r\left|\Psi(\bm{r})\right|^2=\int r^2\left|R(r)\right|^2dr\iint\limits_{\theta,\phi}\left|Y_\ell^m(\theta,\phi)\right|^2d\theta d\phi\]
-    球谐函数已经归一化, 所以解得\footnote[1]{这里的下标"0"是指$ell=0$}
+    球谐函数已经归一化, 所以解得\footnote{这里的下标"0"是指$ell=0$}
     \begin{equation}
         u_{N0}=\sqrt{\frac{2}{a}}\sin\left(\frac{N\pi r}{a}\right),\quad E=\frac{N^2\pi^2\hbar^2}{2ma^2}
     \end{equation}
@@ -2078,7 +2078,7 @@
         \label{eq:4.37}
         c_{j+1}=\frac{2\left(j+\ell+1\right)-\rho_0}{\left(j+1\right)\left(j+2\ell+2\right)}c_j
     \end{equation}
-    $j$充分大时, 上式变为\footnote[1]{你也可以近似的更狠一点, 把分母中的1拿掉, 也可以导出正确的结果, 但是推导略微复杂一点。}:
+    $j$充分大时, 上式变为\footnote{你也可以近似的更狠一点, 把分母中的1拿掉, 也可以导出正确的结果, 但是推导略微复杂一点。}:
     \[c_{j+1}=\frac{2}{j+1}c_j\Rightarrow c_j\approx\frac{2^j}{j!}c_0\Rightarrow v(\rho)=c_0e^{2\rho}\]
     那么我们得到了一个$u(\rho)$的渐进解：
     \[u(\rho)=c_0e\rho\rho^{\ell+1}\]
@@ -2087,7 +2087,7 @@
 
     假设$c_N=0$且$c_{N-1}\neq 0$, 那么：
     \[2\left(N+\ell\right)-\rho_0=0\]
-    $n\equiv N+\ell$, 为主量子数\footnote[1]{由于历史原因, $\ell$称为\textbf{角量子数}, $m$称为\textbf{磁量子数}}, 根据$\rho_0$的定义式, 我们得到:
+    $n\equiv N+\ell$, 为主量子数\footnote{由于历史原因, $\ell$称为\textbf{角量子数}, $m$称为\textbf{磁量子数}}, 根据$\rho_0$的定义式, 我们得到:
     \begin{lequation}
         \boxed{
             E_n=-\frac{m_e}{2\hbar^2}\left(\frac{e^2}{4\pi\varepsilon_0}\right)^2\frac{1}{n^2}\equiv\frac{E_1}{n^2}, n=1,2,3\ldots
@@ -2195,7 +2195,7 @@
     \end{equation}
     显然角动量涉及到的都是两个可对易算符相乘。
     
-    我们先来计算这三个角动量分量算符之间的对易子\footnote[1]{后面的推导中我们一律略去算符上面的$\hat{}$}:
+    我们先来计算这三个角动量分量算符之间的对易子\footnote{后面的推导中我们一律略去算符上面的$\hat{}$}:
     \begin{align*}
         \left[L_x,L_y\right]&=\left[yp_z-zp_y\right]\\&=\left[yp_zz,zp_x\right]-\left[y,x\right]p_z-z\left[p_y,p_x\right]+\left[zp_y,xp_z\right]
         \\&=yp_zzp_x-zp_xyp_z+zp_yxp_z-xp_zzp_y\\&=yp_x\left[p_z,z\right]-xp_y\left[p_z,z\right]\\&=\left[z,p_z\right]L_z
@@ -2252,7 +2252,7 @@
         \lambda^2=\braket{L^2}&=\braket{L_x^2}+\braket{L_y^2}+\braket{L_z^2}\\ &=\braket{L_x^2}+\braket{L_y^2}+\braket{f|L_z^2|f}\\
                     &=\braket{L_x^2}+\braket{L_y^2}+\braket{L_zf|L_zf}>\mu^2
     \end{align*}
-    所以这个阶梯一定有一个顶端和一个底端, 暂且记为$f_t$和$f_b$, 且满足\footnote[1]{根据求谐振子的经验, 我们最终要让阶梯延伸终止, 也就是要让通过升降阶算符法得到的本征矢无法归一化, 这里直接选为$0$有些不明不白, 但是是可以证明的}:
+    所以这个阶梯一定有一个顶端和一个底端, 暂且记为$f_t$和$f_b$, 且满足\footnote{根据求谐振子的经验, 我们最终要让阶梯延伸终止, 也就是要让通过升降阶算符法得到的本征矢无法归一化, 这里直接选为$0$有些不明不白, 但是是可以证明的}:
     \[L_+f_t=0,L_-f_b=0\]
     相应的本征值设为：
     \[L_zf_t=\hbar \ell f_t,L_zf_b=\hbar \bar \ell f_b\]
@@ -2298,7 +2298,7 @@
     \end{thinknote}
 
     \subsection*{$L^2$和$L_z$的本征矢}
-    因为我们之前列方程都是在球坐标系下表达的, 这里我们也想到在位置表象下, 用球坐标去表示出角动量算符\footnote[1]{下面我们使用向量运算去推导角动量算符, 但是实际上也可以使用其分量算符在直角坐标下的表述, 结合直角坐标和球坐标之间的关系去得到角动量算符。但是下面介绍的方法可以一次计算直接得到三个分量算符。}。
+    因为我们之前列方程都是在球坐标系下表达的, 这里我们也想到在位置表象下, 用球坐标去表示出角动量算符\footnote{下面我们使用向量运算去推导角动量算符, 但是实际上也可以使用其分量算符在直角坐标下的表述, 结合直角坐标和球坐标之间的关系去得到角动量算符。但是下面介绍的方法可以一次计算直接得到三个分量算符。}。
     \[\bm{L}=bm{r}\times\bm{p}=-i\hbar\left(\bm{r}\times\nabla\right)\]
     注意我们说过$\bm{L}$是一个缩并的记号, 实际上代表三个分量算符, 即$L\ket{\psi}\equiv\left(L_x\ket{\psi},L_y\ket{\psi},L_z\ket{\psi}\right)$。根据正交曲线坐标系的相关知识, 我们可以得到梯度算符在球坐标系下的表示:
     \begin{equation}
@@ -2353,7 +2353,7 @@
     \begin{equation}
         -i\hbar\frac{\partial}{\partial\phi}f_\ell^m=\hbar mf_\ell^m
     \end{equation}
-    对照\ref{eq:4.14}和\ref{eq:4.17}, 其实满足上面两个方程的函数就是我们已经用纯分析方法得到的球谐函数\footnote[1]{请注意, 角向解是薛定谔方程的通解, 与所处势场无关, 只要可分离变量求解即可, 这要求薛定谔方程势能不含时。}:
+    对照\ref{eq:4.14}和\ref{eq:4.17}, 其实满足上面两个方程的函数就是我们已经用纯分析方法得到的球谐函数\footnote{请注意, 角向解是薛定谔方程的通解, 与所处势场无关, 只要可分离变量求解即可, 这要求薛定谔方程势能不含时。}:
     \[f_\ell^m=Y_\ell^m\]
 
     再广泛点说, 我们在解薛定谔方程时, 由于角向和径向是分离的, 所以我们解出定态薛定谔方程的解实际上是构造了一个$L_z,L^2,\hat H$的共同本征矢：
@@ -2378,7 +2378,7 @@
     \end{pmatrix}\]
     
     对于本征值$\hbar$, 简并度为$2$, 所以这个时候如果测量到$L_z^2=\hbar$, 我们不能再区分体系到底坍缩到了哪个态, 只能说坍缩到了$\mathscr{E}_1$空间。这个时候要想去确定体系到底坍缩到了哪个本征态, 可以选择再测一个力学量。
-    显然, 根据不确定性原理, 这个力学量应该是要和$L_z^2$是对易的, 这样才能同时确定两个力学量的值, 也就是说两次测量可以看作是独立的, 不会相互影响。我们索性就取$L_z$\footnote[2]{当然, 这个例子举得不是很恰当, 因为在$\ell$一定时, $L_z$由于非简并性, 本身就可以很好的描述这个系统了。}, 共同本征矢叫做$\ket{u_i}$:
+    显然, 根据不确定性原理, 这个力学量应该是要和$L_z^2$是对易的, 这样才能同时确定两个力学量的值, 也就是说两次测量可以看作是独立的, 不会相互影响。我们索性就取$L_z$\footnote{当然, 这个例子举得不是很恰当, 因为在$\ell$一定时, $L_z$由于非简并性, 本身就可以很好的描述这个系统了。}, 共同本征矢叫做$\ket{u_i}$:
     \begin{center}
         \begin{tabular}{|l|c|c|c|}
             \hline
@@ -2412,12 +2412,12 @@
     \end{equation}
 
     上面的$\ket{s,m}$表示粒子的\textbf{自旋态}, 无法在位置表象下用波函数表示出来, 这也是为何我们要引入狄拉克符号的一个重要原因。现在引入粒子的自旋态后, 这些自旋态也
-    构成了一个线性空间, $\mathcal{S}$是这个空间中的观察算符\footnote[1]{我们下面的讨论无特殊说明都是指粒子的自旋态空间。实际上它比前面的量子态空间好处理, 我们后面会看到, 很多时候它是一个有限维的向量空间。}。
+    构成了一个线性空间, $\mathcal{S}$是这个空间中的观察算符\footnote{我们下面的讨论无特殊说明都是指粒子的自旋态空间。实际上它比前面的量子态空间好处理, 我们后面会看到, 很多时候它是一个有限维的向量空间。}。
     其中$s,m$取值为：
     \[s=0,\frac{1}{2},1,\frac{3}{2},\ldots\quad m=-s,-s+1,\ldots,s-1,s\]
     这里我们并没有任何理由忽略半整数的$s$取值。
 
-    类似定义$\mathcal{S}_\pm$, 有\footnote[2]{参考下书上习题4.21}：
+    类似定义$\mathcal{S}_\pm$, 有\footnote{参考下书上习题4.21}：
     \begin{equation}
         \label{eq:4.60}
         \mathcal{S_\pm}\ket{s,m}=\hbar\sqrt{s(s+1)-m(m\pm 1)}\ket{s,m\pm 1}
@@ -2426,8 +2426,8 @@
     最后提一下, 基本粒子都有一个独特的自旋量子数$s$, 虽然粒子的量子态受到扰动后, 其轨道角量子数$\ell$可能发生改变, 但是自旋量子数$s$是永远不变的。
 
     \subsection{自旋1/2}
-    $s=1/2$的自旋系统是最简单的非平凡系统, 因为$m$只有$\pm\frac{1}{2}$两个取值, 对应的两个自旋态构成了一组正交归一基\footnote[3]{之前提到过, 我们现在只考虑自旋态, $\mathcal{S}_z$是自旋态空间中的观察算符}。
-    我们用$\ket{\frac{1}{2}, \uparrow}$和$\ket{\frac{1}{2},\downarrow}$分别表示对应$\mathcal{S}_z$本征值$\frac{\hbar}{2}$和$-\frac{\hbar}{2}$的自旋态。\footnote[4]{分别称为自旋向上和自旋向下, 因为它们是$\mathcal{S}_z$的定态。}在这两个自旋态构成的表象下, 其它自旋态可以用一个列向量表示, 我们
+    $s=1/2$的自旋系统是最简单的非平凡系统, 因为$m$只有$\pm\frac{1}{2}$两个取值, 对应的两个自旋态构成了一组正交归一基\footnote{之前提到过, 我们现在只考虑自旋态, $\mathcal{S}_z$是自旋态空间中的观察算符}。
+    我们用$\ket{\frac{1}{2}, \uparrow}$和$\ket{\frac{1}{2},\downarrow}$分别表示对应$\mathcal{S}_z$本征值$\frac{\hbar}{2}$和$-\frac{\hbar}{2}$的自旋态。\footnote{分别称为自旋向上和自旋向下, 因为它们是$\mathcal{S}_z$的定态。}在这两个自旋态构成的表象下, 其它自旋态可以用一个列向量表示, 我们
     称之为\textbf{自旋量}$\chi$。
 
     定义：
@@ -2523,10 +2523,10 @@
 
     如果我们有一个$\ket{\frac{1}{2},\uparrow}$的自旋, 我们知道如果测量$\mathcal{S}_z$, 一定会得到$\hbar/2$, 且无论做多少次测量, 都不会对系统产生影响
     , 但是一旦我们去测量$\mathcal{S}_x$, 那么我们有各自一半的概率得到$\hbar/2$和$-\hbar/2$(假设得到了$\hbar/2$)。确实, 对于$\mathcal{S}_z$和$\mathcal{S}_x$的这两次测量我们都
-    精确的得到了$\hbar/2$的结果\footnote[1]{前面动量、位置这种连续谱确实得到的只能是个范围, 因为波函数肯定坍缩成一定范围内的波包, 而这种离散谱, 只要我们的测量手段足够先进就能保证测量的精确性。}。
+    精确的得到了$\hbar/2$的结果\footnote{前面动量、位置这种连续谱确实得到的只能是个范围, 因为波函数肯定坍缩成一定范围内的波包, 而这种离散谱, 只要我们的测量手段足够先进就能保证测量的精确性。}。
     那有的人可能马上就会跳出来说：“你看, 我们不是\uwave{同时}精确确定了$\mathcal{S}_x$和$\mathcal{S}_z$吗？不确定性原理一定是错的！”。实际上, 造成这种误解的原因就在于\textbf{测量是一定会对
     态造成扰动的}, 当你$\mathcal{S}_x$测量完成后, 体系已经坍缩为$\chi_{+}^x$, 如果你再去立即测量$\mathcal{S}_z$, 结果就不再是确定的$\hbar/2$, 而是还有百分之五十的概率
-    为$-\hbar/2$, 又具有了随机性。\footnote[1]{为了完成这个实验你可能需要一个系综。}也就是说我们前面测量得到的$\mathcal{S}_z$的信息已经完全丢失了, 我们永远不能\uwave{同时}确定$\mathcal{S}_x$和$\mathcal{S}_z$。
+    为$-\hbar/2$, 又具有了随机性。\footnote{为了完成这个实验你可能需要一个系综。}也就是说我们前面测量得到的$\mathcal{S}_z$的信息已经完全丢失了, 我们永远不能\uwave{同时}确定$\mathcal{S}_x$和$\mathcal{S}_z$。
     而且你如果两个量的测量顺序不同, 你还会得到不同的结果。这也就是算符之间的不相容导致的直接后果。
 
     对于两个可对易算符$\hat A,\hat B$, 它们一定有一对共同本征矢构成的完备基。根据广义概率诠释, 我们可以证明, 无论$A,B$的测量顺序如何, 得到的结果(概率)都是一样的, 而且
@@ -2537,11 +2537,11 @@
     在电磁学课程中我们讲过带电粒子在磁场中运动时会受到洛伦兹力的作用, 在电动力学中有关于磁偶极矩的介绍, 原子核外运动的电子有轨道角动量, 这一部分就是我们经典
     力学中研究的磁矩的构成部分。实际上, 一个自旋不为$0$的带电粒子单独构成了一个磁偶极子, 磁矩可以写为：
     \[\mathbf{\mu}=\gamma\mathcal{S}\]
-    其中$\gamma$叫做\textbf{旋磁比}, 对于电子, $\gamma=-e/m$。磁偶极子在匀强磁场中受到的合力为$0$, 但是受到的合力矩不为$0$\footnote[2]{这个力矩是力偶矩, 与参考点位置的选取无关。}:
+    其中$\gamma$叫做\textbf{旋磁比}, 对于电子, $\gamma=-e/m$。磁偶极子在匀强磁场中受到的合力为$0$, 但是受到的合力矩不为$0$\footnote{这个力矩是力偶矩, 与参考点位置的选取无关。}:
     \[\mathbf{M}=\mathbf{\mu}\times\mathbf{B}\]
     如果粒子还在磁场中运动, 那么需要考虑洛伦兹力, 这个时候薛定谔方程会变得比较复杂, 我们只考虑静止情形。那么这个时候我们哈密顿量只需要考虑力偶矩做功相应的机械能：
     \[\mathcal{H}=-\mathbf{\mu}\cdot\mathbf{B}\]
-    在自旋表象下\footnote[3]{后面的推导都在$\chi_+$和$\chi_-$下完成, 这样我们就只需要直接操作矩阵}, 哈密顿矩阵可以写成：
+    在自旋表象下\footnote{后面的推导都在$\chi_+$和$\chi_-$下完成, 这样我们就只需要直接操作矩阵}, 哈密顿矩阵可以写成：
     \[\mathbf{H}=-\gamma\mathbf{B}\cdot\mathbf{S}=-\gamma\left(\mathbf{B}_x\cdot\mathbf{S}_x+\mathbf{B}_y\cdot\mathbf{S}_y+\mathbf{B}_z\cdot\mathbf{S}_z\right)\]
     \subsubsection*{拉莫尔进动}
     我们先看一下经典力学中的拉莫尔进动, 由角动量定理：
@@ -2609,7 +2609,7 @@
         \label{eq:4.78}
         \mathbf{F}=\nabla\left(\mathbf{\mu}\cdot\mathbf{B}\right)
     \end{equation}
-    这里计算梯度的时候把$\mathbf{\mu}$当作只与时间有关, 与空间无关的矢量\footnote[1]{确实, 由于粒子的运动, 磁矩也应该看作是与位置有关, 但是如果看一下
+    这里计算梯度的时候把$\mathbf{\mu}$当作只与时间有关, 与空间无关的矢量\footnote{确实, 由于粒子的运动, 磁矩也应该看作是与位置有关, 但是如果看一下
     这个公式的推导过程, 我们会发现它是在\uwave{某一时刻}考虑偶极子附近磁场变化情况得出的, 所以实际上求梯度的时候$\mathbf{\mu}$不参与, 它与时间的依赖性, 造成了$\mathbf{F}$随时间的变化}。
     我们考虑所加磁场在$z$方向上有个偏差$(\alpha\ll 1)$：
     \[\mathbf{B}\sim\left(B_0+\alpha z\right)\hat{\mathbf{k}}\]
@@ -2636,7 +2636,7 @@
     \begin{define}{张量积空间}
         张量积空间是两个向量空间通过运算“$\otimes$”生成的新的向量空间:
         \[\mathscr{E}=\mathscr{E}_1\otimes\mathscr{E}_2\]
-        $\mathscr{E}$中的元素由$\mathscr{E}_1$和$\mathscr{E}_2$中元素的张量积构成\footnote[1]{$\ket{\chi}\otimes\ket{\varphi}$和$\ket{\varphi}\otimes\ket{\chi}$是一样的。}：
+        $\mathscr{E}$中的元素由$\mathscr{E}_1$和$\mathscr{E}_2$中元素的张量积构成\footnote{$\ket{\chi}\otimes\ket{\varphi}$和$\ket{\varphi}\otimes\ket{\chi}$是一样的。}：
         \[\forall\ket{\varphi}\in\mathscr{E}_1,\ket{\chi}\in\mathscr{E}_2\Rightarrow\ket{\varphi}\otimes\ket{\chi}\]
         其中张量积运算满足“双线性”：
         \begin{align}
@@ -2667,7 +2667,7 @@
     ,\tilde{B}\left[\ket{\varphi}\otimes\ket{\chi}\right]=\ket{\varphi}\otimes\left[\tilde{B}\ket{\chi}\right]\]
    
     按照上面的定义可以得出：\[\left[\tilde{A},\tilde{B}\right]=0\]这实际上就是在说, 两个无相互作用的粒子构成的体系, 它们两个之间的任意力学量都是对易相容的, 也
-    就是说一定可以同时精确确定两个粒子的任意力学量。\footnote[1]{当然, 这是非常自然的, 除非两个粒子之间建立了纠缠态, 否则我测量一个粒子肯定不会干扰到另一个粒子的测量, 但是我单独测量一个粒子, 根据不确定性原理, 测量是会干扰体系影响下一次测量的。}
+    就是说一定可以同时精确确定两个粒子的任意力学量。\footnote{当然, 这是非常自然的, 除非两个粒子之间建立了纠缠态, 否则我测量一个粒子肯定不会干扰到另一个粒子的测量, 但是我单独测量一个粒子, 根据不确定性原理, 测量是会干扰体系影响下一次测量的。}
 
     算符$A,B$的张量积定义为：
     \begin{equation}
@@ -2705,9 +2705,9 @@
     两个粒子耦合的自旋态空间$\mathscr{E}$是两个粒子自身的自旋态空间的张量积, 且对应的基底可以用下式确定：
     \[\ket{s_1,s_2,m_1,m_2}=\ket{s_1,m_1}\otimes\ket{s_2,m_2}\]
     显然$s_1,s_2,m_1,m_2$四个参数加上态之间的线性组合完全描绘了整个系统, 实际上是因为${\mathcal{S}_1}^2,{\mathcal{S}_2}^2,{\mathcal{S}_{1z}},{\mathcal{S}_{2z}}$在$\mathscr{E}$中构成了一个CSCO,
-    由于$s_1,s_2$又是固定的, 所以实际上只需要$m_1,m_2$就可以描绘整个系统。当然我们也可以找其它的CSCO, 用别的参数去描述这个系统, 但是总的自由度就是$4$\footnote[1]{当然, 如果你不算$s_1,s_2$的话就是$2$}。
+    由于$s_1,s_2$又是固定的, 所以实际上只需要$m_1,m_2$就可以描绘整个系统。当然我们也可以找其它的CSCO, 用别的参数去描述这个系统, 但是总的自由度就是$4$\footnote{当然, 如果你不算$s_1,s_2$的话就是$2$}。
 
-    可以证明总的自旋角动量算符和其$z$轴上的分量算符\footnote[2]{下面的推导中我们使用上一节的符号约定, 略去延伸算符的$\tilde{}$}与${\mathcal{S}_1}^2,{\mathcal{S}_2}^2$一起构成了一个CSCO：
+    可以证明总的自旋角动量算符和其$z$轴上的分量算符\footnote{下面的推导中我们使用上一节的符号约定, 略去延伸算符的$\tilde{}$}与${\mathcal{S}_1}^2,{\mathcal{S}_2}^2$一起构成了一个CSCO：
     \begin{align}
         &\mathcal{S}^2=\left(\mathcal{S}_1+\mathcal{S}_2\right)^2={\mathcal{S}_1}^2+{\mathcal{S}_2}^2+2\mathcal{S}_1\cdot\mathcal{S}_2\\
         &\mathcal{S}_z=\mathcal{S}_{1z}+\mathcal{S}_{2z}
@@ -2778,7 +2778,7 @@
     \end{equation}
 
     当然, 目前为止我们都只能说是把结果\uwave{猜}出来了, 还应该进一步去证明。 其实, 只要利用$\mathcal{S}^2$的定义, 是很好证明上面的三重态和单重态分别对应其本征值$2\hbar$和$0$的
-    本征矢\footnote[1]{后面会专门规范一下\uwave{矢量算符}的符号问题}：
+    本征矢\footnote{后面会专门规范一下\uwave{矢量算符}的符号问题}：
     \[\mathcal{S}^2={\mathcal{S}_1}^2+{\mathcal{S}_2}^2+2\mathcal{S}_1\cdot\mathcal{S}_2\]
     
 
@@ -2791,7 +2791,7 @@
     \begin{equation}
         \ket{s,m}=\sum_{m_1+m_2=m}C_{m_1m_2m}^{s_1s_2s}\ket{s_1,s_2,m_1,m_2}
     \end{equation}
-    其中$C_{m_1m_2m}^{s_1s_2s}$是\textbf{CG系数}\footnote[2]{Clebsch–Gordan coefficients}。利用这个式子, 我们可以根据$s$和$m$的取值推断出测量体系中的单个粒子得到结果的概率分布。
+    其中$C_{m_1m_2m}^{s_1s_2s}$是\textbf{CG系数}\footnote{Clebsch–Gordan coefficients}。利用这个式子, 我们可以根据$s$和$m$的取值推断出测量体系中的单个粒子得到结果的概率分布。
     反过来, 也可以已知单个粒子的状态参量, 根据下面的式子使用$\ket{s,m}$表出, 从而计算出测量结果$s,m$的取值和概率分布：
     \begin{equation}
         \ket{s_1,s_2,m_1,m_2}=\sum_{m}C_{m_1m_2m}^{s_1s_2s}\ket{s,m}\quad (m=m_1+m_2)
@@ -2955,7 +2955,7 @@
         g(\mathbf{r})\equiv\frac{q}{\hbar}\int_\mathcal{O}^\mathbf{r}\mathbf{A}(\mathbf{r}^\prime)\cdot d\mathbf{r}^\prime
     \end{equation}
     
-    上面的定义要求积分是与路径无关的, $\mathcal{O}$是任选的一个参考点, 显然这里的$\mathbf{A}$满足这些条件。注意到\footnote[1]{注意下面的式子是$d\mathbf{r}$不是$\Delta\mathbf{r}$, 所以隐含了一个取极限的过程, 高阶项直接扔掉, 只保留一阶项, 而且是严格等于。}：
+    上面的定义要求积分是与路径无关的, $\mathcal{O}$是任选的一个参考点, 显然这里的$\mathbf{A}$满足这些条件。注意到\footnote{注意下面的式子是$d\mathbf{r}$不是$\Delta\mathbf{r}$, 所以隐含了一个取极限的过程, 高阶项直接扔掉, 只保留一阶项, 而且是严格等于。}：
     \begin{align*}
         \nabla g\cdot d\mathbf{r}&=g(\mathbf{r}+d\mathbf{r})-g(\mathbf{r})\\
         &=\frac{q}{\hbar}\int_{\mathbf{r}}^{\mathbf{r}+d\mathbf{r}}\mathbf{A}(\mathbf{r}^\prime)\cdot d\mathbf{r}^\prime\\
@@ -2998,7 +2998,7 @@
     
     如果你按照上面的式子得出无论是测量$\mathcal{S}_1x$还是$\mathcal{S}_2x$, 结果都一定是$-\frac{\hbar}{2}$, 那你就大错特错了。要分析清楚这个问题还是要回到张量积空间的运算上去。
 
-    我们首先来直接计算一下$\braket{\mathcal{S}_{1x}}$\footnote[1]{实际上根据定义, 两个自旋体系中, 我们计算的是$\braket{\tilde{\mathcal{S}_{1x}}}$}, 根据$\S 4.4$的相关内容：
+    我们首先来直接计算一下$\braket{\mathcal{S}_{1x}}$\footnote{实际上根据定义, 两个自旋体系中, 我们计算的是$\braket{\tilde{\mathcal{S}_{1x}}}$}, 根据$\S 4.4$的相关内容：
     \[\mathcal{S}_{1x}\ket{\uparrow,\cdot}=\frac{\hbar}{2}\ket{\downarrow,\cdot}\quad\mathcal{S}_{1x}\ket{\downarrow,\cdot}=\frac{\hbar}{2}\ket{\uparrow,\cdot}\]
     再根据广义概率诠释：
     \begin{align*}
@@ -3011,7 +3011,7 @@
     到这里, 就已经说明了把态拆成完全独立的两个单粒子自旋态去计算$\mathcal{S}_{1x}$的取值是错误的, 因为按照那个思想, $\mathcal{S}_{1x}$应该为$-\frac{\hbar}{2}$。我们接下来进行更仔细的计算,
     第一步显然是要在双粒子自旋态空间中建立起$\tilde{\mathcal{S}}_{1x}$的本征矢构成的基底。对于单粒子的自旋态空间, $\mathcal{S}_{1x}$的本征矢构成的基底为：
     \[\frac{1}{\sqrt{2}}\left(\ket{\uparrow}+\ket{\downarrow}\right),\frac{1}{\sqrt{2}}\left(\ket{\uparrow}-\ket{\downarrow}\right)\]
-    而由$\mathcal{S}_{2z}$的本征矢也可以建立一个$\mathscr{E}_2$中的基底\footnote[1]{可观测量一定是观察算符}：
+    而由$\mathcal{S}_{2z}$的本征矢也可以建立一个$\mathscr{E}_2$中的基底\footnote{可观测量一定是观察算符}：
     \[\{\ket{\uparrow},\ket{\downarrow}\}\]
     这两组基底做张量积便构成了$\mathscr{E}$中的(正交归一)基底：
     \begin{align*}
@@ -3030,7 +3030,7 @@
     习题$4.59$就给了一个这个方面的练习,而且答案的解法比较巧妙。总之, 这类计算回归到张量积本身的计算就行了。
 
     还有一个点之前一直没有明确说明, 就是我们之前在讨论自旋或是角动量时, 都是在某个坐标框架下讨论。当然这个坐标框架完完全全是可以取向随便选区的, 因为空间具有各向同性。
-    在某个坐标框架下, 还是$\mathcal{S}_z$的本征矢作为基底, 可以写出任意$\hat{r}$方向的自旋算符矩阵表示$S_r$:\footnote[1]{习题4.33}
+    在某个坐标框架下, 还是$\mathcal{S}_z$的本征矢作为基底, 可以写出任意$\hat{r}$方向的自旋算符矩阵表示$S_r$:\footnote{习题4.33}
     \begin{equation}
         \begin{aligned}
             \mathrm{S}_{r} &=\mathrm{S} \cdot \hat{r}=\mathrm{S}_{x} \sin \theta \cos \phi+\mathrm{S}_{y} \sin \theta \sin \phi+\mathrm{S}_{z} \cos \theta \\
@@ -3054,7 +3054,7 @@
     \end{equation}
     显然, 各个方向上测量自旋, 得到的结果都是$\pm\frac{\hbar}{2}$, 这正好就是我们之前所说的空间各向同性。
     
-    所以, 很多时候为了方便, 我们完全可以选取某个更利于计算的$z$轴取向\footnote[2]{习题4.70就是个很好的例子}。$(1,0)^\mathrm{T}$总要比直接写式\ref{eq:4.117}好, 而且这种坐标系的旋转不难看到就是选取$S_z$还是$S_r$
+    所以, 很多时候为了方便, 我们完全可以选取某个更利于计算的$z$轴取向\footnote{习题4.70就是个很好的例子}。$(1,0)^\mathrm{T}$总要比直接写式\ref{eq:4.117}好, 而且这种坐标系的旋转不难看到就是选取$S_z$还是$S_r$
     的本征矢作为基底的区别。
 
     \chapter{全同粒子}
