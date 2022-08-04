@@ -2347,7 +2347,7 @@
     \end{align*}
     我们来看一下特征方程$L^2f_\ell^m=\hbar^2\ell\left(\ell+1\right)f_\ell^m$, 实际上它等价于：
     \begin{equation}
-        -\hbar^2\left[\frac{1}{\sin\theta}\left(\sin\theta\frac{\partial}{\partial\theta}+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right)\right]f_\ell^m=\hbar^2\ell\left(\ell+1\right)f_\ell^m
+        -\hbar^2\left[\frac{1}{\sin\theta}\frac{\partial}{\partial\theta}\left(\sin\theta\frac{\partial}{\partial\theta}\right)+\frac{1}{\sin^2\theta}\frac{\partial^2}{\partial\phi^2}\right]f_\ell^m=\hbar^2\ell\left(\ell+1\right)f_\ell^m
     \end{equation}
     特征方程$L_zf_\ell^m=\hbar mf_\ell^m$, 写为：
     \begin{equation}
@@ -2998,7 +2998,7 @@
     
     如果你按照上面的式子得出无论是测量$\mathcal{S}_1x$还是$\mathcal{S}_2x$, 结果都一定是$-\frac{\hbar}{2}$, 那你就大错特错了。要分析清楚这个问题还是要回到张量积空间的运算上去。
 
-    我们首先来直接计算一下$\braket{\mathcal{S}_1x}$\footnote[1]{实际上根据定义, 两个自旋体系中, 我们计算的是$\braket{\tilde{\mathcal{S}_1x}}$}, 根据$\S 4.4$的相关内容：
+    我们首先来直接计算一下$\braket{\mathcal{S}_{1x}}$\footnote[1]{实际上根据定义, 两个自旋体系中, 我们计算的是$\braket{\tilde{\mathcal{S}_{1x}}}$}, 根据$\S 4.4$的相关内容：
     \[\mathcal{S}_{1x}\ket{\uparrow,\cdot}=\frac{\hbar}{2}\ket{\downarrow,\cdot}\quad\mathcal{S}_{1x}\ket{\downarrow,\cdot}=\frac{\hbar}{2}\ket{\uparrow,\cdot}\]
     再根据广义概率诠释：
     \begin{align*}
@@ -3129,7 +3129,7 @@
 
     可见, “质心”位矢$R$的波函数正是自由粒子波函数, 和我们在经典力学里面预测的质心保持匀速直线运动相一致。相对位矢的波函数就是前面解氢原子的球谐函数加上径向解, 只要把电子质量$m_e$改为约化质量$\mu$即可。
     \subsection{玻色子和费米子}
-    现在我们假设粒子1和粒子2分别处于$\psi_a$和$\psi_b$那么根据前面的讨论, 总的系统波函数应该为两者乘积\footnote[1]{这里我们讨论定态, 忽略时间项}：
+    现在我们假设粒子1和粒子2分别处于$\psi_a$和$\psi_b$那么根据前面的讨论, 总的系统波函数应该为两者乘积\footnote{这里我们讨论定态, 忽略时间项}：
     \begin{equation}
         \label{eq:5.5}
         \psi(\mathbf{r}_1,\mathbf{r}_2)=\psi_a(\mathbf{r}_1)\psi_b(\mathbf{r}_2)
@@ -3141,14 +3141,14 @@
     一个处于$\psi_b$, 我们只能说两个粒子中有一个处于$\psi_a$, 有一个处于$\psi_b$, 而且两个粒子的地位完全等同, 我们无法区分。全同粒子假设目前已经经历了无数实验验证, 这里我们姑且就当作公理。
 
     既然现在两个电子不能区分了, 那么\ref{eq:5.5}也就失去了意义, 我们现在应该去构造关于$\mathbf{r}_1$和$\mathbf{r}_2$交换对称的波函数, 注意这里包含反对称, 因为这样相当于只是差了个相位因子。
-    所以有下面的两种构造方式：
+    所以有下面的两种构造方式\footnote{注意这里实际上有很大的漏洞, 我们目前还没有讨论自旋部分, 其实\textbf{并不是}说费米子的波函数一定要反对称, 我们说的对称反对称是相较于粒子空间波函数和自旋整体而言的, 后面我们将会看到, 如果两个电子的自旋是反对称的, 那么它们也会处在对称的空间波函数状态。这里没有考虑自旋, 只是先初步有一个费米子玻色子的量子态对称性概念。}：
     \begin{equation}
         \label{eq:5.6}
         \psi_\pm(\mathbf{r}_1,\mathbf{r}_2)=A\left[\psi_a(\mathbf{r}_1)\psi_b(\mathbf{r}_2)\pm\psi_b(\mathbf{r}_1)\psi_a(\mathbf{r}_2)\right]
     \end{equation}
     
     显然$\psi_+(\mathbf{r}_1,\mathbf{r}_2)=\psi_+(\mathbf{r}_2,\mathbf{r}_1)$, 满足这种对称性的粒子称为\textbf{玻色子(bosons)}；另外, $\psi_-(\mathbf{r}_1,\mathbf{r}_2)=-\psi_-(\mathbf{r}_2,\mathbf{r}_1)$, 满足反对称的称为
-    \textbf{费米子(fermions)}。而且有下面的\uwave{经验规律}\footnote[1]{要完整解释只能用量子场论}：
+    \textbf{费米子(fermions)}。而且有下面的\uwave{经验规律}\footnote{要完整解释只能用量子场论}：
     \begin{theorem}{自旋-统计定理}
         \begin{itemize}
             \item 自旋量子数$s$为整数的粒子是\textbf{玻色子}, 满足玻色-爱因斯坦统计
@@ -3158,7 +3158,7 @@
 
     现在如果两个粒子始终处于完全相同的状态, 也就是说\ref{eq:5.6}中有$\psi_a=\psi_b$。对于玻色子
     \[\psi_+(\mathbf{r}_1,\mathbf{r}_2)=\psi_a(\mathbf{r}_1)\psi_b(\mathbf{r}_2)\]
-    但是对于费米子\footnote[2]{我们这里的讨论少了粒子的自旋, 当然真实情况是包含自旋的}：
+    但是对于费米子\footnote{我们这里的讨论少了粒子的自旋, 当然真实情况是包含自旋的}：
     \[\psi_-(\mathbf{r}_1,\mathbf{r}_2)=0\]
     这就是熟知的\textbf{泡利不相容原理}。
     \begin{theorem}{泡利不相容原理}
@@ -3168,17 +3168,17 @@
     $\psi_a(\mathbf{r}_1)=\psi_b(\mathbf{r}_1)$且$\psi_a(\mathbf{r}_2)=\psi_b(\mathbf{r}_2)$, 对于两个相隔$\mathbf{r}$的氢原子, 它们的电子都处于基态, 相应的波函数分别是：
     \[\psi_a(\mathbf{r}_1)=\psi_{100}(\mathbf{r}_1), \psi_b(\mathbf{r}_2)=\psi_{100}(\mathbf{r}_2-\mathbf{r})\]
     
-    显然这里不再有$\psi_a=\psi_b$, 虽然两个电子确实是都处于氢原子基态。但是对于同一个氦原子, 在高中化学中就接触到同一个轨道上的两个电子\footnote[1]{这里说的都是基态, 也就是$n=1$, 那么$\ell=m=0$}, 必定一个自旋向上, 一个自旋向下。
+    显然这里不再有$\psi_a=\psi_b$, 虽然两个电子确实是都处于氢原子基态。但是对于同一个氦原子, 在高中化学中就接触到同一个轨道上的两个电子\footnote{这里说的都是基态, 也就是$n=1$, 那么$\ell=m=0$}, 必定一个自旋向上, 一个自旋向下。
     \subsection{交换力}
     我们继续考虑两个粒子, 现在只考虑一维情况。如果两个粒子是可以去区分的, 其中一个处于$\psi_a$另一个处于$\psi_b$而且这两个态是正交归一的。在没有纠缠的情况下, 总的态可以写成：
     \[\psi(x_1,x_2)=\psi_a(x_1)\psi_b(x_2)\]
     我们现在计算一下两个粒子之间的平均距离：
     \[\Braket{\left(x_1-x_2\right)^2}=\Braket{x_1^2}+\Braket{x_2^2}-2\Braket{x_1}\Braket{x_2}\]
-    对于两个可区分的粒子显然有\footnote[2]{注意这里我并没有用$\braket{x_1^2}_a$去指代$\int x_1^2|\psi_a(x_1)|^2dx_1$, 因为$x_1$只是一个类似于哑标的中间记号, 这样写有助于后面的化简。}：
+    对于两个可区分的粒子显然有\footnote{注意这里我并没有用$\braket{x_1^2}_a$去指代$\int x_1^2|\psi_a(x_1)|^2dx_1$, 因为$x_1$只是一个类似于哑标的中间记号, 这样写有助于后面的化简。}：
     \begin{align*}
         &\braket{x_1^2}=\int x_1^2|\psi_a(x_1)|^2dx_1\int |\psi_b(x_2)|^2dx_2=\braket{x^2}_a\\
         &\braket{x_1^2}=\int |\psi_a(x_1)|^2dx_1\int x_2^2 |\psi_b(x_2)|^2dx_2=\braket{x^2}_b\\
-        &\braket{x_1x_2}=\int x_1x_2|\psi_a(x_1)|^2|\psi_b(x_2)|dx_1dx_2=\braket{x}_a\braket{x}_b\\
+        &\braket{x_1x_2}=\int x_1x_2|\psi_a(x_1)|^2|\psi_b(x_2)|dx_1dx_2=\braket{x}_a\braket{x}_b
     \end{align*}
     故对于可分辨的两个粒子：
     \begin{equation}
@@ -3220,10 +3220,10 @@
     \end{equation}
     故对于全同粒子有：
     \begin{equation}
-        \Braket{\left(x_1-x_2\right)^2}=\Braket{x^2}_a+\Braket{x^2}_b-2\Braket{x}_a\Braket{x}_b\mp 2|\Braket{x}_a\Braket{x}_b|^2
+        \Braket{\left(x_1-x_2\right)^2}=\Braket{x^2}_a+\Braket{x^2}_b-2\Braket{x}_a\Braket{x}_b\mp 2|\Braket{x}_{ab}|^2
     \end{equation}
     
-    对照一下式\ref{eq:5.7}, 可以发现全同粒子多了一项$\mp 2|\Braket{x}_a\Braket{x}_b|^2$, 对于玻色子, 这一项倾向于让粒子相互靠近, 而对于费米子, 这一项倾向于让粒子相互远离。
+    对照一下式\ref{eq:5.7}, 可以发现全同粒子多了一项$\mp 2|\Braket{x}_{ab}|^2$, 对于玻色子, 这一项倾向于让粒子相互靠近, 而对于费米子, 这一项倾向于让粒子相互远离。
     就\uwave{好像}是它们之间有一股神奇的作用力一样, 我们称之为\textbf{交换力}。但是请特别注意, 交换力并不是真实存在的我们通常意义上的四大基本作用力之一或其某种表现, 而是纯粹的
     由于费米子和玻色子的波函数对称性导致的几何结果, 而且是一种纯粹的量子效应。
 
