@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  5 AUG 2022 01:02
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  5 AUG 2022 22:07
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2267,7 +2267,7 @@ Overfull \hbox (1.88501pt too wide) in paragraph at lines 3150--3157
 []\TU/SimSun(0)/m/n/12.045 显 然 $\OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 满 足 这 种 对 称 性 的 粒 子 称 为 \TU/SimSun(0)/b/n/12.045 玻 色 子 \T1/ntxtlf/b/n/12.045 (bosons)\TU/SimSun(0)/m/n/12.045 ；|
  []
 
-[98] [99] [100] [101]
+[98] [99] [100] [101] [102] [103]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2277,10 +2277,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[102
+[104
 
 
-] [103] [104]
+] [105] [106]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2288,66 +2288,66 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[105] [106] [107]
+[107] [108] [109]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [108] [109]
+ [110] [111]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [110] [111] [112] [113] [114]
+ [112] [113] [114] [115] [116]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [115] [116] [117]
+ [117] [118] [119]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 474--497
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[118
+[120
 
-] [119] [120]
+] [121] [122]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 600--607
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[121] [122] [123] [124] [125] [126]
+[123] [124] [125] [126] [127] [128]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [127] [128]
+ [129] [130]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [129]
+ [131]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [130]
+ [132]
 Overfull \hbox (2.89873pt too wide) detected at line 910
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[131] [132] [133] [134]
+[133] [134] [135] [136]
 附录 C
-[135
+[137
 
-]) [136] (./sourcecode.aux (./appendix.aux))
+]) [138] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 1856B6A351508D3FAF948B2872492949;7379.
+(rerunfilecheck)             Checksum: B62BD4DF39FEAD5F70FDB1B005D45FF3;7472.
  ) 
 Here is how much of TeX's memory you used:
- 55404 strings out of 476533
- 1430373 string characters out of 5818886
- 1909306 words of memory out of 5000000
- 74570 multiletter control sequences out of 15000+600000
+ 55406 strings out of 476533
+ 1430399 string characters out of 5818886
+ 1909341 words of memory out of 5000000
+ 74572 multiletter control sequences out of 15000+600000
  536224 words of font info for 264 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1158s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (139 pages).
+Output written on sourcecode.pdf (141 pages).
