@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  8 AUG 2022 01:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  8 AUG 2022 17:45
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2272,7 +2272,7 @@ File: fig/5-1-a.eps Graphic file (type eps)
 <fig/5-1-a.eps>
 File: fig/5-1-b.eps Graphic file (type eps)
 <fig/5-1-b.eps>
- [101] [102] [103] [104] [105]
+ [101] [102] [103] [104] [105] [106]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2282,10 +2282,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[106
+[107
 
 
-] [107] [108]
+] [108] [109]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2293,66 +2293,75 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[109] [110] [111]
+[110] [111] [112]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [112] [113]
+ [113] [114]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [114] [115] [116] [117] [118]
+ [115] [116] [117] [118] [119]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [119] [120] [121]
+ [120] [121] [122]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 474--497
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[122
+[123
 
-] [123] [124]
+] [124] [125]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 600--607
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[125] [126] [127] [128] [129] [130]
+[126] [127] [128] [129] [130] [131]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [131] [132]
+ [132] [133]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [133]
+ [134]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [134]
+ [135]
 Overfull \hbox (2.89873pt too wide) detected at line 910
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[135] [136] [137] [138]
+[136] [137] [138] [139]
 附录 C
-[139
+[140
 
-]) [140] (./sourcecode.aux (./appendix.aux))
+]) [141] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
-Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: B62BD4DF39FEAD5F70FDB1B005D45FF3;7472.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `sourcecode.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `sourcecode.out':
+(rerunfilecheck)             Before: B62BD4DF39FEAD5F70FDB1B005D45FF3;7472
+(rerunfilecheck)             After:  15B2817D03FF4C4E930DDEB2B5C1C842;7565.
  ) 
 Here is how much of TeX's memory you used:
  55428 strings out of 476533
  1431304 string characters out of 5818886
- 1909374 words of memory out of 5000000
+ 1909375 words of memory out of 5000000
  74592 multiletter control sequences out of 15000+600000
  536224 words of font info for 264 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,22n,97p,727b,1156s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,22n,97p,727b,1158s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (143 pages).
+Output written on sourcecode.pdf (144 pages).
