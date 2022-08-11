@@ -29,6 +29,8 @@
 \usepackage[strict]{changepage} % 提供一个 adjustwidth 环境
 \usepackage{framed}             % 实现方框效果
 \usetikzlibrary{positioning}   % tikz绘图相对位置
+\usetikzlibrary{decorations.pathreplacing} % tikz画大括号
+\usetikzlibrary{patterns}  %条纹
 \tikzset{elegant/.style={smooth,thick,samples=50,cyan}}
 \usepackage[]{newtxmath}
 \usepackage[]{bbm}
@@ -3483,9 +3485,173 @@
         P=\frac{2}{3} \frac{E_{\text {tot }}}{V}=\frac{2}{3} \frac{\hbar^{2} k_{F}^{5}}{10 \pi^{2} m}=\frac{\left(3 \pi^{2}\right)^{2 / 3} \hbar^{2}}{5 m} \rho^{5 / 3}
     \end{equation}
     
-    我们现在电子气的压力只是对固体为何不会坍缩的一部分解释, 实际上还有一种相互作用, 它与电子之间的库伦斥力或者电子的热运动无关, 是纯粹的一种量子力学现象。
-    我们称为\textbf{简并压(degeneracy pressure)}。是费米子的态的反对称性要求导致的, 也是泡利不相容原理的必然结果。天文学上的中子星的产生就跟引力塌缩突破简并压
-    有关。
+    这个固有压强是支撑起固体使其不会塌缩的部分原因, 我们称之为\textbf{简并压(degeneracy pressure)}。这和电子之间的库仑斥力或是电子的热运动无关, 是一个
+    纯粹的量子力学结果, 是费米子的量子态的反对称性要求导致的, 也是泡利不相容原理的必然结果。天文学上的中子星的产生就跟引力塌缩突破简并压有关。
+
+    \subsection{价带结构}
+    如果按照我们前面的最简单的自由电子气模型, 那么所有的固体都应该是导体, 因为都或多或少有自由电子存在。所以我们现在要前进一点点, 把周期性的\footnote{这个周期性也很好理解, 因为晶体结构具有周期性}原子对电子的作用考虑进来。
+    但是我们依旧认为电子之间是没有相互作用的, 我们下面先考虑一维情形单个电子在周期性势场中的问题求解, 因为不考虑电子之间相互作用, 所以多个电子只需要把单个电子问题的解相乘即可。
+    \begin{define}{狄拉克梳}
+        没啥好讨论的, 不过就是前面的狄拉克$\delta$函数加了个周期性而已
+        \begin{equation}
+            V(x)=\alpha \sum_{j=0}^{N-1} \delta(x-j a)
+        \end{equation}
+    \end{define}
+    \begin{figure}
+        \centering
+        \begin{tikzpicture}[scale=0.4] %缩放，还可以设置xscale, yscale
+            \draw[->](9,-0.7)--(9,6) node[above]{$V(x)$};
+            \draw[->](0.8,0)--(29.2,0) node[below]{$x$};  % 画坐标轴
+            \draw (9,0) node[below right]{$O$};
+            \draw (3,0) node[below]{$-2a$};
+            \draw[->,red] (3,0)--(3,4);
+            \draw (6,0) node[below]{$-a$};
+            \draw[->,red] (6,0)--(6,4);
+            \draw[->,red] (9,0)--(9,4);
+            \draw (12,0) node[below]{$a$};
+            \draw[->,red] (12,0)--(12,4);
+            \draw (15,0) node[below]{$2a$};
+            \draw[->,red] (15,0)--(15,4);
+            \draw (18,0) node[below]{$3a$};
+            \draw[->,red] (18,0)--(18,4);
+            \draw (21,0) node[below]{$4a$};
+            \draw[->,red] (21,0)--(21,4);
+            \draw (24,0) node[below]{$5a$};
+            \draw[->,red] (24,0)--(24,4);
+            \draw (27,0) node[below]{$6a$};
+            \draw[->,red] (27,0)--(27,4);
+        \end{tikzpicture}  
+        \caption{狄拉克梳状函数}
+        \label{fig:5.4}
+    \end{figure}
+    这个狄拉克梳状函数就是我们要面对的势场, 或许我们需要取$\alpha<0$才能描述原子核对电子的吸引性质, 不过我们现在仅仅只是想定性的去分析势场的周期性质到底会给我们带来什么, 所以
+    势场的具体性状我们并不是那么关心, 更关心它的周期性, 所以我们为了最大的简化我们的计算, 就选取$\alpha>0$的狄拉克梳状函数。
+
+    为了求解具有空间周期性的势场下的薛定谔方程, 我们首先介绍布洛赫(Bloch)定理\footnote{我们现在探讨的问题是空间周期性对解的影响, 在经典力学中曾经处理过
+    参数共振的问题, 那个时候是势场的时间周期性对解的影响, 那个时候也有和Bloch定理对应的Floquet理论, 整个问题的求解和这里也极为相似。}。
+    \begin{theorem}{Bloch's theorem}
+        如果势场$V(x)$以$a$为周期, 那么定态薛定谔方程的解一定满足下面的性质：
+        \begin{equation}
+            \label{eq:5.34}
+            \boxed{
+                \psi(x+a)=e^{iqa}\psi(x)
+            }
+        \end{equation}
+        其中$q$是与$x$无关(但与$E$有关)的一个常数。
+    \end{theorem}
+
+    可惜没有固体是无限大的, 所以严格意义上来说根本没有周期性的势场。所以这样的边界效应需要我们对Bloch定理进行修正, 不过好在固体的原子数目众多, 达到了$N_A$量级, 所以
+    这样的修正还算简单。我们现在考虑把x轴首位相连形成一个圆, 这个修正就是在这样的基础上有边界条件：
+    \begin{equation}
+        \psi(x+Na)=\psi(x)
+    \end{equation}
+    $N$是原子数目。所以我们可以得到q必须满足：
+    \begin{equation}
+        \label{eq:5.36}
+        e^{iqNa}=1\Rightarrow q=\frac{n\pi}{Na},(n=0,\pm 1,\pm 2,\ldots)
+    \end{equation}
+    
+    我们只需要解出$[0,a]$内的解, 其它区间内的解可以直接由\ref{eq:5.34}迭代得到。在$(0,a)$内有：
+    \begin{equation}
+        \frac{d^2\psi}{dx^2}=-k^2\psi,k\equiv\frac{\sqrt{2mE}}{\hbar}
+    \end{equation}
+    驻波形式解为：
+    \begin{equation}
+        \label{eq:5.38}
+        \psi(x)=A\sin(kx)+B\cos(kx),x\in(0,a)
+    \end{equation}
+    再利用\ref{eq:5.34}我们得到$[-a,0]$内的解：
+    \begin{equation}
+        \label{eq:5.39}
+       \psi(x)=e^{-iqa}\left[A\sin k(x+a)+B\cos k(x+a)\right] ,x\in(-a,0)
+    \end{equation}
+    再根据波函数在$x=0$处的连续性：
+    \begin{equation}
+        \label{eq:5.40}
+        \psi(0^+)=\psi(0^-)\Rightarrow B=e^{-iqa}\left[A\sin ka+B\cos ka\right]
+    \end{equation}
+    然后再根据薛定谔方程在$0^-\sim 0^+$上积分得出$\delta$函数导致的一阶导在$0$附近的突变值：\footnote{在$\S$2-5中已经处理过很多次}
+    \begin{equation}
+        \label{eq:5.41}
+        \psi^\prime(0^+)-\psi^\prime(0^-)=\frac{2m\alpha}{\hbar^2}\psi(0)=\frac{2m\alpha}{\hbar^2}B
+    \end{equation}
+    对\ref{eq:5.38}和\ref{eq:5.39}求导后代入\ref{eq:5.41}得：
+    \begin{equation}
+        \label{eq:5.42}
+        kA-e^{-iqa}k\left(A \cos ka-B\sin ka\right)=\frac{2m\alpha}(\hbar^2) B
+    \end{equation}
+    将\ref{eq:5.40}和\ref{eq:5.42}联立求解得到：
+    \begin{equation}
+        \label{eq:5.43}
+        \cos qa=\cos z+\beta\frac{\sin z}{z}
+    \end{equation}
+    其中：
+    \[z\equiv ka, \beta\equiv\frac{m\alpha a}{\hbar^2} \]
+    方程\ref{eq:5.43}给出了$k$的可能取值, 也即能量取值。我们作下面函数的图像来分析：
+    \[f(z)=\cos z+\beta\frac{\sin z}{z}\]
+    \begin{figure}[htbp]
+        \centering
+        \begin{tikzpicture}[scale=0.7] %缩放，还可以设置xscale, yscale
+            \draw (0,0) rectangle (5*pi,5.2*1.82);
+            \draw[elegant,orange,domain=2.29524:5*pi] plot(\x,{1.82*cos(\x r) + 18.2*sin(\x r)/\x +2.6*1.82});
+            \draw (0,0) node[below]{$0$};
+            \draw (pi,0) node[below]{$\pi$};
+            \draw (2*pi,0) node[below]{$2\pi$};
+            \draw (3*pi,0) node[below]{$3\pi$};
+            \draw (4*pi,0) node[below]{$4\pi$};
+            \draw (5*pi,0) node[below]{$5\pi$};
+            \draw (0,2.6*1.82) node[left]{$O$};
+            \draw (0,2.6*1.82)--(5*pi,2.6*1.82) node[right]{$z$};
+            \draw[help lines] (0,1.6*1.82)--(5*pi,1.6*1.82);
+            \draw (0,1.6*1.82) node[left]{$-1$};
+            \draw[help lines] (0,3.6*1.82)--(5*pi,3.6*1.82);
+            \draw (0,3.6*1.82) node[left]{$1$};
+            \draw[help lines] (pi,0)--(pi,5.2*1.82);
+            \draw[help lines] (2*pi,0)--(2*pi,5.2*1.82);
+            \draw[help lines] (3*pi,0)--(3*pi,5.2*1.82);
+            \draw[help lines] (4*pi,0)--(4*pi,5.2*1.82);
+            \filldraw[draw=blue!80,fill=blue!20,fill opacity=0.5] (2.62768,1.6*1.82) rectangle (pi,3.6*1.82);
+            \filldraw[draw=blue!80,fill=blue!20,fill opacity=0.5] (5.30732 ,1.6*1.82) rectangle (2*pi,3.6*1.82);
+            \filldraw[draw=blue!80,fill=blue!20,fill opacity=0.5] (8.06714 ,1.6*1.82) rectangle (3*pi,3.6*1.82);
+            \filldraw[draw=blue!80,fill=blue!20,fill opacity=0.5] (10.9087 ,1.6*1.82) rectangle (4*pi,3.6*1.82);
+            \filldraw[draw=blue!80,fill=blue!20,fill opacity=0.5] (13.8192 ,1.6*1.82) rectangle (5*pi,3.6*1.82);
+        \end{tikzpicture}  
+        \caption{$\beta=10$时$f(z)$的图像}
+        \label{fig:5.5}
+    \end{figure}
+    \begin{figure}
+        \centering
+        \begin{tikzpicture}[scale=0.92]
+            \draw[->] (0,0)--(14,0) node[below]{$E$};
+            \draw (0,0) -- (0,3);
+            \draw (0,3) -- (13.8,3);
+            \fill[pattern=vertical lines,pattern color=blue]
+            (0,0) rectangle (3.2,3);
+            \fill[pattern=vertical lines,pattern color=blue]
+            (6.1,0) rectangle (9.3,3);
+            \fill[pattern=vertical lines,pattern color=blue]
+            (10.6,0) rectangle (13.8,3);
+            \draw[decorate,decoration={brace,mirror,amplitude=0.2cm},red] (0,0) -- (3.2,0)node[black,midway,yshift=-0.4cm]{允带};
+            \draw[decorate,decoration={brace,mirror,amplitude=0.2cm},orange] (3.2,0) -- (6.1,0)node[black,midway,yshift=-0.4cm]{带隙};
+            \draw[decorate,decoration={brace,mirror,amplitude=0.2cm},red] (6.1,0) -- (9.3,0)node[black,midway,yshift=-0.4cm]{允带};
+            \draw[decorate,decoration={brace,mirror,amplitude=0.2cm},orange] (9.3,0) -- (10.6,0)node[black,midway,yshift=-0.4cm]{带隙};
+            \draw[decorate,decoration={brace,mirror,amplitude=0.2cm},red] (10.6,0) -- (13.8,0)node[black,midway,yshift=-0.4cm]{允带};
+        \end{tikzpicture}
+        \caption{固体的能带}
+        \label{fig:5.6}
+    \end{figure}
+    
+
+    见图\ref{fig:5.5}中阴影部分, 这一部分才是有解的部分, 因为$|\cos(qa)|\leq 1$。根据\ref{eq:5.36}, q的取值使得在每个阴影部分内, $\cos(qa)$都有N种不同的取值, 
+    这也直接导致了最终每个阴影部分内可以得到$N$个不同的可取能量的解。我们把能级在图上标识出来即为图\ref{fig:5.6}所示, 这里的效应和我们以往见得的有很大的不同。
+    主要在于能带是由一些离的特别近的分立的谱线组成的, 每个能带之间又隔了很远的距离, 这部分我们称为能隙。由于$N$实在是太大了, 有时我们也直接认为能带见能量的取值是连续的。
+
+    由于电子的自旋, 根据泡利不相容原理, 每条能带最多容纳$2N$个电子。 定性的看\footnote{三维情况或者更复杂的周期势场, 结果会很复杂, 但是大体上的特征就是
+    能带被能隙分割开}。, $d=1$时, 第一条能带被半充满, 这个时候要激发电子需要的能量较低,因为能带之中的能级几乎是连续分布的 ；$d=2$时, 第一条能带被完全充满,这个时候若想激发电子必须让电子跨越能隙,需要的能量较大, 这个时候固体为\textbf{绝缘体}；\footnote{d更大情况以此类推。}
+    如果有能带被全充满但是能隙很小, 温度又足够大,这样的话有些电子就能随机被激发到下一能带, 这样的固体导电性介于导体和绝缘体之间, 我们称为\textbf{半导体}。\footnote{半导体的能隙一般小于$\SI{4}{\eV}$, 以至于室温下就可以产生可观的激发。}
+    关于半导体有一个常听的词就是\textbf{掺杂}, 这是说在半导体中掺入$d$或更大或更小的材料, 这些材料会将一些额外的电子放入下一能带, 或是在先前填充的能带中产生一些\textbf{空穴}, 
+    以此来控制半导体的导电性。
+
 
     \include{appendix.tex}
-\end{document}
+\end{document}  
