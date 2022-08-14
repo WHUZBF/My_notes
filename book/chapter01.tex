@@ -1,0 +1,148 @@
+\chapter{波函数}
+    \section{薛定谔方程}
+    \begin{lequation}\label{S-1-D}
+        \boxed{
+            i\hbar\frac{\partial \Psi\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi\left(x,t\right)}{\partial x^{2}}+
+            V\left(x,t\right)\Psi\left(x,t\right)
+        }
+    \end{lequation}
+    \begin{lequation}\label{S-3-D}
+        \boxed{
+            i\hbar\frac{\partial \Psi\left(\bm{r},t\right)}{\partial t}=\left[-\frac{\hbar^{2}}{2m}\nabla^{2}+
+            V\left(\bm{r},t\right)\right]\Psi\left(\bm{r},t\right) 
+        }
+    \end{lequation}
+
+
+    上面给出的公式中第一个是一维形式, 第二个是三维一般形式。对于某些公式推导上, 使用薛定谔方程时, 常常是对方程两边进行共轭操作\footnote{物理实质可以理解
+    为时间反演对称性}（以一维形式为例）也即：
+    \begin{lequation}
+        -i\hbar\frac{\partial \Psi^{*}\left(x,t\right)}{\partial t}=-\frac{\hbar^{2}}{2m}\frac{\partial^{2}\Psi^{*}\left(x,t\right)}{\partial x^{2}}+
+        V\left(x,t\right)\Psi^{*}\left(x,t\right)
+    \end{lequation}
+
+
+    注意到上式的导出我们假定势能函数是实变函数, 这是有道理的, 但是书后面的习题\footnote{详见第三版Problem1.17}也给出了一个例子, 那就是在不稳定的系统中, 找到粒子的概率不是守恒的, 也就是说$P$依赖于时间。
+    这时如果引入含有虚部项的势能就可以很好地解释这一点。在量子力学中Schr{\"o}dinger方程的地位和牛顿第二定律一样, 现在只是描述粒子位置的函数变成了波函数。
+
+
+    Born后面给波函数一个统计上的解释, 这也就说明了在量子力学中的不确定性, 我们无法再像牛顿运动定律一样精确的预言一个例子之后的运动, 我们只能给出它之后在某处的\uwave{概率}是多少
+    \begin{proposition}{波函数的统计诠释}
+        以一维情形为例, Born在统计上给出了对于波函数的解释, 他认为当一个微观粒子处于状态$\Psi\left(\bm{r},t\right)$时, 表示在$t$时刻在$x$处发现粒子的\uwave{概率}, 更准确的说\footnote{一个常用的代换是$\left|\Psi\left(x,t\right)\right|^{2}=
+        \Psi^{*}\left(\left(x,t\right)\right) \Psi\left(x,t\right) $}
+        \begin{lequation}
+            \int_{a}^{b}\left|\Psi\left(x,t\right)\right|^{2}dx=\left\{\text{$t$时刻在$\left[a,b\right]$内\\发现粒子的概率}\right\}
+        \end{lequation}
+    
+    \end{proposition}
+    自然的, 我们会问, 测量时我们会发现粒子处于某点(C点), 那么测量之前粒子在哪？历史上有三种观点
+    \begin{history}{测量前粒子在哪？}
+        \textbf{1.现实主义学派:粒子还是在C点}, 这种观点完全否定了量子理论的不确定性, 也是爱因斯坦一直坚信的观点;\\
+        \textbf{2.正统学派:粒子哪也不在}, 这种观点认为正是我们的测量\uwave{迫使}粒子在C点, 这个观点被广泛接受, 但到底什么是测量还有待讨论;\\
+        \textbf{3.不可知论学派:拒绝回答}, 这种观点认为\uwave{测量前}本身就是难以定义的, 去讨论测量前粒子的位置也是没有意义的。
+    \end{history}
+    现代量子理论在实验上说明了正统学派的正确性\footnote{John Bell在1964年派排除了不可知论}, 有一点需要注意, 测量会导致波函数的坍塌(\ref{fig-1.1}), 坍塌成了一个类似于狄拉克delta函数的图像, 在波函数还没有按照薛定谔方程重新弥散开来的时候继续测量, 我们会发现测量结果不变, 也
+    就是说\uwave{测量完全改变了波函数}, 导致连续的测量得到的结果是一样的。
+
+    既然波函数在统计上可以解释为概率密度分布函数, 那么一定要满足\textbf{归一化条件}
+    \begin{proposition}{波函数归一化条件}
+        \begin{lequation}\label{normalized}
+            \int_{-\infty}^{\infty}\left|\Psi\left(x,t\right)\right|^{2}dx=1
+        \end{lequation}
+    \end{proposition}
+    而且从薛定谔方程的线性性可以看出, 如果$\Psi$是方程的解, 那么$A\Psi$也一定是方程的解, 这里的A就类似于微分方程通解里面的系数, 你需要使用归一化条件去确定它, 求解出来的$A$是不需要考虑相位问题的, 不会在物理上产生任何影响, 你只需要确定
+    它的模长就可以了, 下面一个关于归一化的定理让我们能更简单的对波函数进行归一化。
+    \begin{theorem}{$A$是一个与时间无关的常数}
+        \begin{lequation}
+            \label{normalized-independent-time}
+            \frac{d}{dt}\int_{-\infty}^{\infty}\left|\Psi\left(x,t\right)\right|^{2}dx=0
+        \end{lequation}
+    \end{theorem}
+    由于这个定理的正确性, 我们找到波函数的一个可能解后, 只需要任意代入一个$t$的值, 然后将波函数乘上一个常数因子$A$对波函数进行全空间积分解出$A$的大小即得到了波函数的真正有物理意义的解, \textbf{任何无法进行归一化的解(比如$\Psi=0$)都要舍去}。
+    \section{力学量的期望值和标准差}
+    \begin{define}{数学上的定义: 平均值和标准差}
+        \begin{center}
+        \begin{math}
+            \displaystyle
+            \left \langle x \right \rangle \overset{\text{def}}{=}\int_{-\infty}^{\infty}x\rho(x)dx \qquad\qquad\qquad
+            \sigma _{x}\overset{\text{def}}{=}\int_{-\infty }^{\infty } (x-\left \langle x \right \rangle )^2\rho(x)dx
+        \end{math}
+        \end{center}
+        其中$\rho(x)$是概率密度函数, 把上面的$x$换成$f(x)$就可以得到某个一般量的平均值和标准差
+    \end{define}
+    根据上面的定义我们可以得到一个更加常用的计算标准差的公式: $$\sigma(x)=\sqrt{\left \langle x^2 \right \rangle-\left \langle x \right \rangle^2}$$
+    
+    在进一步说明力学量的平均值的时候要先明确平均值的意义, 就比如说发现粒子所处位置的平均值, 你不能将其理解成连续测量一个系统很多次之后计算得到的平均值, 因为前面就说过
+    波函数会由于测量而坍缩, 连续多次对一个系统的测量得到的结果是一致的! 这里对平均值的定义是对于\uwave{系综}的, 也就是你需要对大量相同状态下的系统进行测量来求平均值, 或
+    者简单一点, 对一个系统测量很多次, 但每次测量要隔一段时间要等待波函数重新回到测量前未坍缩的样子。
+    \begin{proposition}{位置和动量的算符}
+        \begin{center}
+            \begin{math}
+                \displaystyle
+                \hat{x}=[x] \qquad\qquad\qquad\qquad \hat{p}=\left[-i\hbar\frac{\partial}{\partial x}\right]    
+            \end{math}
+        \end{center}
+        值得一提的是, 上面的动量算符是利用$\left \langle p \right \rangle=m\frac{d\left \langle x \right \rangle}{dt}$得出来的
+        \footnote{这里的$\left \langle x \right \rangle$必须要事先写成关于$t$的函数, 另见Problem1.16(c)}
+    \end{proposition}
+    \begin{theorem}{任意一个力学量的统计量}
+        \begin{lequation}
+            \left \langle Q\left(x,p\right) \right \rangle=\int \Psi^{*}\left[Q\left(x,-i\hbar\frac{\partial}{\partial x}\right)\right]\Psi dx
+        \end{lequation}
+        \begin{equation}
+            \sigma_Q = \sqrt{\left \langle Q^2 \right \rangle-\left \langle Q \right \rangle^2}
+        \end{equation}
+    \end{theorem}
+    上面的定理说明了在量子力学中\uwave{算符}显得尤为重要, 你要计算一个力学量$Q$的平均值只要把这个力学量的算子\uwave{夹在}波函数中间再积分即可。确定一个力学量的算子时, 先将
+    这个力学量由经典力学的公式表示成关于位置$x$和动量$p$的函数然后将$x$和$p$全部换成对应的算符即可。\footnote{我们提倡使用算符这个新的工具去计算, 但有时候你会发现, 得到了$\left \langle x \right \rangle(t) $后直接使用
+    $\left \langle p \right \rangle=\frac{d\left \langle x \right \rangle}{dx}$更快。有时候直接使用定义(波函数是实质是测量到粒子在位置$x$的概率密度分布函数), 用$\int x\left| \Psi(x,t)\right|dx$直接计算也能达到事半功倍
+    的效果}
+    \section{海森堡不确定性原理}
+    这个原理在历史上曾经被称作\uwave{测不准原理}, 有很大的误导性, 实际上这个原理与测量误差毫无关系, 这是一个量子力学本身决定的原理。它表明了你对系统位置了解的越多, 比如说你把系统限制在某个
+    确定的轨道狭槽内, 那么你对系统动量的了解程度一定越低, 测出来的动量分布肯定越是分散。其中动量与波函数之间的关系最早由德布罗意(de Broglie)给出:
+    \begin{center}
+    \begin{math}
+        \displaystyle
+        \boxed{
+            p=\frac{h}{\lambda}=\frac{2\pi\hbar}{\lambda}
+        }
+    \end{math}
+    \end{center}
+    \begin{theorem}{Heisenberg Uncertainty Principle}
+        \begin{lequation}
+            \sigma_x\sigma_p \geq \frac{\hbar}{2} 
+        \end{lequation}
+    \end{theorem}
+    \begin{figure}[htbp]
+        \label{fig-1.1}
+        \begin{tikzpicture}[scale=0.4] %缩放，还可以设置xscale, yscale
+        \draw[->](4,-2)--(4,8) node[above]{$\Psi (x,0^-)$};
+        \draw[->](0,2)--(12,2) node[below]{$x$};  % 画坐标轴
+        \draw (4,2) node[below right]{$O$};
+        \draw[elegant,domain=0:12] plot(\x,{5.5*exp(-(\x-6)^2/4.56)+2});
+        \draw[dashed,red] (8,2)--(8,8);
+        \draw (8,2) node[below]{$C$};
+        \end{tikzpicture}  
+        \hspace{4em}
+        \begin{tikzpicture}[scale=0.4] %缩放，还可以设置xscale, yscale
+        \draw[->](4,-2)--(4,8) node[above]{$\Psi (x,0^+)$};
+        \draw[->](0,2)--(12,2) node[below]{$x$};  % 画坐标轴
+        \draw (4,2) node[below right]{$O$};
+        \draw[dashed,red] (8,2)--(8,8);
+        \draw (8,2) node[below]{$C$};
+        \draw[->,red] (8,2)--(8,6);
+        \draw (8,6) node[right]{$\infty$};
+        \end{tikzpicture}  
+        \caption{在$t=0$时刻测量, 波函数将在$C$处坍塌为狄拉克$\delta$函数}
+    \end{figure}
+    \begin{history}{关于sch\"{o}dinger方程}
+        薛定谔方程在现在的物理意义上来看应该认为是量子力学的一条基本假设, 因为这个公式并不是推出来的, 而是在受到德布罗意物质波的启发下\textbf{猜}出来的。
+        薛定谔的博士导师试图让它根据德布罗意的观点找出一个对应的波函数描述, 最开始想从相对论来构建方程, 后来走不通, 有的人说薛定谔是受到经典力学的波动方程
+        启发, 类比构造薛定谔方程的; 还有一种观点也比较有根据, 认为薛定谔是受到了它导师的导师玻尔兹曼的启发, 利用热力学第二定律中的玻尔兹曼熵$S=k\ln W$,一步步
+        构建出来的薛定谔方程, 具体做法就是将$k$换成$\hbar$, 然后根据能量量纲将$S$换为作用量$H$, 由于是波动方程, 所以还要在指数项上加一个虚数单位, 方程就
+        变成了这样:$$W=e^{\frac{iH}{\hbar}}$$然后经典力学里面刚好在正则变换中有一个Hamilton-Jacobi方程(这里的$S$不是熵)$$\frac{\partial S}{\partial t}+H=0$$
+        然后带入后将$W$换成更加\textbf{量子力学}的$\Psi$, 将$H$写成算符$\hat{H}$。
+
+        对的, 整个过程就是这么的没有道理, 所以我们说这个方程是猜出来的, 后来海森堡证明了波动力学与其创立的矩阵力学是等价的。薛定谔自己其实也没搞清楚他搞出来
+        的波函数有什么意义, 也是后来波恩给出了个统计解释, 不禁感叹新兴学科的发展总是迂回曲折!
+    \end{history}

@@ -1,0 +1,97 @@
+% 导言区
+\documentclass[a4paper,zihao=-4,linespread=1]{ctexbook}
+
+\usepackage{geometry}
+\geometry{a4paper,scale=0.8}
+\usepackage[]{mathrsfs}
+\usepackage[]{animate}
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[titletoc]{appendix}
+\usepackage[normalem]{ulem}         % 关于下划线的一个宏包
+\usepackage{CJKulem}
+\usepackage[]{indentfirst}          % 强制段首缩进
+\usepackage[]{bm}
+\usepackage[]{amsmath}
+\usepackage[]{esint}
+\usepackage[]{amssymb}
+\usepackage[]{extarrows}
+\usepackage{graphicx}
+\usepackage[]{subfigure}
+\usepackage[colorlinks,linkcolor=blue,bookmarksopen=true,bookmarksnumbered=true,citecolor=blue]{hyperref}             % 目录点击跳转
+\usepackage[dvipsnames,svgnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{breakable}   % 分页
+\tcbuselibrary{skins}       % 箱子分页
+\usepackage[]{tikz}
+\usepackage[]{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{newtxtext}
+\usepackage[strict]{changepage} % 提供一个 adjustwidth 环境
+\usepackage{framed}             % 实现方框效果
+\usetikzlibrary{positioning}   % tikz绘图相对位置
+\usetikzlibrary{decorations.pathreplacing} % tikz画大括号
+\usetikzlibrary{patterns}  %条纹
+\tikzset{elegant/.style={smooth,thick,samples=50,cyan}}
+\usepackage[]{newtxmath}
+\usepackage[]{bbm}
+\usepackage[]{relsize}
+\usepackage[]{braket}
+\usepackage{siunitx}
+\DeclareSIUnit\angstrom{\text {Å}}
+\usepackage{diagbox}
+\usepackage[final]{pdfpages}
+
+% 定义公式环境
+\newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
+\newenvironment{sequation}{\small\begin{equation}}{\end{equation}}
+\newenvironment{tequation}{\tiny\begin{equation}}{\end{equation}}
+% 向下的长箭头
+\newcommand\longdownarrow[1]{\mathrel{\scalebox{1}[#1]{$\downarrow$}}}
+% 定义方框
+% 陈述性语句
+\newtcolorbox[]{proposition}[2][]{title = \textbf{#2}, colback=Salmon!20, colframe=Salmon!90!Black,breakable, enhanced jigsaw}
+% 历史注记
+\newtcolorbox[]{history}[2][]{title = \textbf{#2}, colback=Emerald!10, colframe=cyan!40!black,breakable, enhanced jigsaw}
+% 定理
+\newtcolorbox[]{theorem}[2][]{title=\textbf{#2}, colback=red!5,colframe=red!75!black,breakable, enhanced jigsaw}
+% 定义
+\newtcolorbox[]{define}[2][]{title=\textbf{#2},colback=SeaGreen!10!CornflowerBlue!10,colframe=RoyalPurple!55!Aquamarine!100!,breakable, enhanced jigsaw}
+% 思考注记
+\definecolor{formalshade}{rgb}{0.99,0.97,0.93} % 文本框颜色
+\newenvironment{thinknote}{%
+\def\FrameCommand{%
+\hspace{1pt}%
+{\color{BurlyWood}\vrule width 2pt}%
+{\color{formalshade}\vrule width 4pt}%
+\colorbox{formalshade}%
+}%
+\MakeFramed{\advance\hsize-\width\FrameRestore}%
+\noindent\hspace{-4.55pt}% disable indenting first paragraph
+\begin{adjustwidth}{}{7pt}%
+\vspace{2pt}\vspace{2pt}%
+}
+{%
+\vspace{2pt}\end{adjustwidth}\endMakeFramed%
+}
+
+\setlength{\parindent}{4em}
+\title{Notes of Griffiths Introduction to QM}   % 添加标题
+\author{郑卜凡}                     % 添加作者
+\date{\today}                             %最后更新日期
+
+\begin{document}
+    \maketitle              %制作封面
+    \thispagestyle{empty}
+    \setcounter{page}{0}
+    \tableofcontents        %制作目录
+    \setcounter{page}{0}
+    \include{chapter01.tex}
+    \include{chapter02.tex}
+    \include{chapter03.tex}
+    \include{chapter04.tex}
+    \include{chapter05.tex}
+    \include{appendix.tex}
+\end{document}
