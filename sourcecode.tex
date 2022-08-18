@@ -30,7 +30,8 @@
 \usepackage{framed}             % 实现方框效果
 \usetikzlibrary{positioning}   % tikz绘图相对位置
 \usetikzlibrary{decorations.pathreplacing} % tikz画大括号
-\usetikzlibrary{patterns}  %条纹
+\usetikzlibrary{arrows.meta} % tikz画各种箭头
+\usetikzlibrary{patterns}  % 条纹
 \tikzset{elegant/.style={smooth,thick,samples=50,cyan}}
 \usepackage[]{newtxmath}
 \usepackage[]{bbm}
@@ -3657,5 +3658,183 @@
     分析钱德拉塞卡极限等等。而且扩展到了相对论效应情形, 比较精彩。
 
 
+    \chapter{量子力学中的对称性}
+    经典力学中我们就利用拉格朗日量的不变性讨论过了经典力学中的守恒律与对称性之间的关系, 这里我们再来量子力学中探讨一下。
+
+    简单点说谈系统的某个对称性就是说系统关于某个操作具有不变性。比如我们把整个系统平移后, 整个系统仍然按照相同的物理规律演化, 只是换了个地方继续演化, 这时候我们说物理规律是具有空间平移对称性的。
+    同样的还有时间平移对称性, 空间各向同性等等。在量子力学中, 描述操作的正是算符, 所以我们先来讲几个对称操作对应的算符。
+    \subsection*{平移算符}
+    \begin{define}{平移算符(translation operator)}
+        平移算符在位置表象下看来就是把某个波函数平移一段距离, 也就是：
+        \begin{equation}
+            \boxed{\hat{T}(a)\psi(x)=\psi(x-a)}
+        \end{equation}
+    \end{define}
+    \begin{figure}[htbp]
+        \centering
+        \begin{tikzpicture}[scale=1]
+            \draw[->] (-2,0)--(7,0);
+            \draw[->] (0,-1.5)--(0,3.5);
+            \draw (0,0) node[below right]{$O$};
+            \draw[elegant,blue,dashed,domain=-2:2] plot(\x,{3 *(e^(1/((2* \x)^4 + 1)) - 1) *sin(2* (\x r)+ 0.3 r)}) ;
+            \draw[elegant,orange,domain=2.5:6.5] plot(\x,{3 *(e^(1/((2* (\x - 4.5))^4 + 1)) - 1) *sin(2* (\x r) -8.7 r )});
+            \draw (-0.3,3) node[blue,left]{$\psi(x)$};
+            \draw (5.3,3) node[orange,right]{$\psi(x-a)$};
+            \draw [red!50,line width=0.4cm,-{Stealth[length=0.8cm,red!50,width=0.7cm]}] (1,2) -- (4,2);
+        \end{tikzpicture}
+        \caption{波函数的平移}
+    \end{figure}
+    \subsection*{宇称算符}
+    \begin{define}{宇称算符(parity operator)}
+        宇称算符可以看成是给波函数\uwave{照镜子}：
+        \begin{equation}
+            \boxed{\hat \Pi\psi(\mathbf{r})=\psi(-\mathbf{r})}
+        \end{equation}
+        或者你也可以利用球坐标写为：
+        \begin{equation}
+            \hat \Pi\psi(r,\theta,\phi)=\psi(r,\pi-\theta,\phi+\pi)
+        \end{equation}
+    \end{define}
+    \begin{figure}[htbp]
+        \centering
+        \begin{tikzpicture}[scale=1]
+            \draw[->] (-5,0)--(5.2,0);
+            \draw[red,->] (0,-1.5)--(0,3.5);
+            \draw (0,0) node[below right]{$O$};
+            \draw[elegant,blue,dashed,domain=-5:-1]  plot(\x,{3 *(e^(1/((2* (-\x - 3))^4 + 1)) - 1) *sin(2* (-\x r) -5.7 r )}) ;
+            \draw[elegant,orange,domain=1:5] plot(\x,{3 *(e^(1/((2* (\x - 3))^4 + 1)) - 1) *sin(2* (\x r) -5.7 r )}) ;
+            \draw (-3.7,2) node[blue,left]{$\psi(x)$};
+            \draw (3.7,2) node[orange,right]{$\psi(-x)$};
+            \draw [red!50,line width=0.4cm,-{Stealth[length=0.8cm,red!50,width=0.7cm]}] (-1.7,2) -- (2,2);
+        \end{tikzpicture}
+        \caption{宇称操作}
+    \end{figure}
+    对于中心势场, 波函数的一般解是$\psi_{n\ell m}R_{n\ell}(r)Y_\ell^m(\theta,\phi)$形式, 其中只有$R_{n\ell}(r)$依赖于势场的具体形式, 但宇称变换下对它没有影响。
+    所以中心势场的定态波函数宇称变换为:$$\hat\Pi\psi_{n\ell m}(r,\theta,\phi)=(-1)^{\ell}\psi_{n\ell m}(r,\theta,\phi)$$
+    
+    \subsection*{旋转算符}
+    \begin{define}{旋转算符(rotation operator)}
+        我们现在只讨论绕z轴的旋转, 这时在球坐标系下讨论是合适的：
+        \begin{equation}
+            \boxed{\hat{R(\varphi)}_z\psi(r,\theta,\phi)=\psi(r,\theta,\phi-\varphi)}
+        \end{equation}
+    \end{define}
+    比如上面的一维情况下的宇称变换就可以看作是$180^\circ$的旋转变换。
+    
+    下面我们要做的就是围绕这几个算符展开讨论了。
+    \section{平移对称性}
+    我们看能不能把$\hat{T}(a)$用函数的求导等运算表示。首先注意到变换后的函数$\psi(x-a)$可以表示为泰勒展式：
+    \begin{equation}
+        \psi(x-a)=\sum_{n=0}^\infty \frac{(-a)^n}{n!}\left(\frac{d}{dx}\right)^n\psi(x)
+    \end{equation}
+    一定要注意上面的展开式不是对于一个固定的点展开, 比如说我要用幂级数表示$\psi(1-a)$我就把$\psi(x)$在1处展开然后代入$x=1-a$, 一次类推便清楚如此展开的意义了。  
+    
+    利用动量算符, 上面的式子可以写成:
+    \begin{equation}
+        \hat{T}(a)\psi(x)=\sum_{n=0}^{\infty} \frac{1}{n !}\left(\frac{-i a}{\hbar} \hat{p}\right)^{n} \psi(x)
+    \end{equation}
+    显然, 这意味着：
+    \begin{equation}
+        \boxed{
+            \hat{T}(a)=\exp \left[-\frac{i a}{\hbar} \hat{p}\right]
+        }
+    \end{equation}
+    如果用李群去描述对称性, 我们会说\textbf{动量是平移的生成元}。
+    下面的性质也非常容易证明：
+    \begin{equation}
+        \boxed{\hat{T}^\dagger(a)\hat{T}(a)=\mathbbm{1}}
+    \end{equation}
+    显然, \textbf{平移算符是幺正算符}。
+    \begin{define}{算符的平移变换}
+        我们定义\footnote{后面你会看到为啥要这样定义},算符$\hat{Q}$平移后的算符$\hat{Q}\prime$由下式给出：
+        \begin{equation}
+            \Braket{\psi^\prime|\hat Q|\psi^\prime}=\Braket{\psi|\hat Q|\psi}
+        \end{equation}
+        其中$\ket{\psi^\prime}\equiv\hat{T}(a)\ket{\psi}$。上面的定义式也可以写成下面更便于计算的等价形式：
+        \begin{equation}
+            \boxed{\hat{Q}^{\prime}=\hat{T}^{\dagger} \hat{Q} \hat{T}}
+        \end{equation}
+        这就是一个幺正变换, 在实矩阵理论中对应的就是矩阵间的相似变换。
+    \end{define}
+    例如：
+    $$\hat{x}^\prime=\hat x +a,\hat{p}^\prime=\hat{p}$$
+    如果某个一般的力学量算符可以写成$\hat{x},\hat{p}$的幂级数展开形式, 那么有：
+    \begin{equation}
+        \hat{Q}^\prime(\hat x,\hat p)=\hat{Q}(\hat x+a,\hat p)
+    \end{equation}
+    
+    这也是非常符合常理的, 我们说平移可以有两种观点, 一种是主动观点, 就是参考系不动, 把整个系统平移；二是系统不动, 把参考系相对系统向相反方向平移。这两种观点是等价的,
+    无论使用那种观点, 最终结果都是把所有的$x$换成$x-a$, $\hat{Q}^\prime$就是平移后系统的力学量算符。
+
+    我们现在再来解释一下这样定义的原因。注意, 我们说平移一个系统, 应当认为粒子和势场它们这个整体构成了一个系统, 所以平移应当是粒子和势场整体的平移。如果你对这种主动观点保有疑问, 那就使用被动观点,
+    认为平移就是坐标系平移下。
+
+    物理规律是有平移对称性的, 这一点我们必须承认, 我们现在考虑体系的薛定谔定态方程：
+    \begin{equation}
+        \hat{H}\ket{\psi}=E\ket{\psi}
+    \end{equation}
+    假设平移后系统的哈密顿算符为$\hat{H}^\prime$, 定态方程为：
+    \begin{equation}
+        \hat{H^\prime}\ket{\psi^\prime}=E^\prime\ket{\psi^\prime} 
+    \end{equation}
+    显然平移后定态解$\psi^\prime(x)$应该就是以前的解$\psi(x)$的平移, 而且对应的本征值相同。所以：
+    $\ket{\psi^\prime}=\hat{T}(a)\ket{\psi},E=E^\prime$
+    我们立即得到平移后的哈密顿算符应该由下式决定：
+    $$\hat{H}^\prime=\hat{T}^\dagger\hat{H}\hat{T}$$
+    这个式子我们已经得到过了！只要把$Q$换成$H$即可, 而幺正变换恰恰也是不改变本征值的, 所以这一切都是如此的自洽。
+    
+    系统具有对称性是说在某种变换下保持不变, 在经典力学中我们是谈到拉格朗日量在平移变换下的不变性, 因为这样可以得出变换前后系统的运动方程压根就没变, 对应的通解一模一样。
+    到了量子力学, 运动方程变成了薛定谔方程, 我们上面已经讨论了系统平移对运动方程的影响, 如果运动方程具有平移不变性, 那么这恰恰是要求$\hat{H}^\prime=\hat{H}$, 也就是：
+    \begin{equation}
+        \hat{H}=\hat{T}^\dagger\hat{H}\hat{T}
+    \end{equation}
+    利用$\hat{T}$的幺正性我们得到:
+    \begin{equation}
+        \boxed{\left[\hat{H},\hat{T}(a)\right]=0}
+    \end{equation}
+    
+    所以系统具有平移a的对称性要求的是系统的哈密顿量与对应的平移算符对易。比如上一章的狄拉克梳, 是一个周期势, 显然系统对于a的整数倍的平移具有不变性, 很容易验证其满足上面的条件。
+    
+    狄拉克梳这样的例子是\textbf{分立对称性}的典例, 平移前后的系统定态薛定谔方程形式为：
+    $$\hat{H}\psi(x)=E\psi(x),\hat{H}\psi(x-a)=E\psi(x-a)$$
+    $\psi(x)$和$\psi(x-a)$是相同的运动方程的解, 最trivial的情况就是相差一个相因子, 这不就是布洛赫定理给我们描述的定态解的性质吗！我们下面来详细证明一下布洛赫定理：
+    \begin{thinknote}
+        Proof:
+        
+        \setlength\parindent{2em}哈密顿算符与平移算符对易, 这意味着两个算符具有相同的一组本征矢构成完备正交基, 也就是说定态解一定可以取为满足下面的两个本征方程：
+        $$\hat{H}\ket{\psi}=E\ket{\psi},\hat{T}(a)\ket{\psi}=\lambda\ket{\psi}$$
+        所以这些定态波函数有性质：
+        $$\psi(x-a)=\lambda\psi(x)$$
+        而平移算符是幺正的, 那么$|\lambda|=1$, 我们便可以把$\lambda$写成$e^{-iqa}$的形式, 其中$\hbar q$称为\textbf{晶格动量}。所以：
+        $$\psi(x-a)=e^{-iqa}\psi(x)$$
+        进一步可以得到：
+        \begin{equation}
+            \boxed{\psi(x)=e^{iqx}u(x)}
+        \end{equation}
+        其中$u(x)$是一个周期为a的函数。并不是说所有的定态波函数都有这个性质, 但我们始终可以选取一组完备基, 可以分解为一个周期波函数和行波。 
+        \hfill $\square$\par
+    \end{thinknote}
+
+    我们再来谈一下\textbf{连续对称性}, 也就是说系统具有的平移对称性是连续的, $\hat{T}(a)$中的a可以取任意值,那么我们首先就考虑无穷小平移：
+    \begin{equation}
+        \hat{T}(\delta)=e^{-i\frac{\delta}{\hbar}\hat{p}}\xrightarrow[]{忽略高阶小量}\mathbbm{1}-i\frac{\delta}{\hbar}\hat{p}
+    \end{equation}
+    根据对称性要求：
+    \begin{equation}
+        [\hat{H}, \hat{T}(\delta)]=\left[\hat{H}, 1-i \frac{\delta}{\hbar} \hat{p}\right]=0 \Rightarrow[\hat{H}, \hat{p}]=0
+    \end{equation}
+    再根据式\ref{广义欸费斯托定理}得到：
+    \begin{equation}
+        \frac{d}{dt}\braket{p}=\frac{i}{\hbar}\left[\hat{H},\hat{p}\right]=0
+    \end{equation}
+    这就是量子力学中的动量守恒！确实, 对于单个粒子, 连续平移对称性的要求就是粒子在匀强势场下的运动, 你可能说这比较trivial, 不过对于多粒子系统还是有non-trivial的
+    情况。比如二体问题：
+    $$\hat{H}=-\frac{\hbar^{2}}{2 m_{1}} \frac{\partial^{2}}{\partial x_{1}^{2}}-\frac{\hbar^{2}}{2 m_{2}} \frac{\partial^{2}}{\partial x_{2}^{2}}+V\left(\left|x_{1}-x_{2}\right|\right)$$
+    这个时候平移算符为：
+    \begin{equation}
+        \hat{T}(a) \psi\left(x_{1}, x_{2}\right)=\psi\left(x_{1}-a, x_{2}-a\right)
+    \end{equation}
+    
+    总之要知道动量守恒是系统的连续平移对称性的直接结果, 对于离散的情况, 动量虽然不是守恒的, 但是晶格动量是守恒的, 这就是固体物理中的内容了。
     \include{appendix.tex}
 \end{document}  

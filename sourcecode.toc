@@ -43,18 +43,20 @@
 \contentsline {section}{\numberline {5.3}固体}{106}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}自由电子气理论}{107}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}价带结构}{110}{subsection.5.3.2}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{114}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{114}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{115}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{117}{section.A.3}%
-\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{121}{section.A.4}%
-\contentsline {section}{\numberline {A.5}直角坐标里的张量}{123}{section.A.5}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{130}{appendix.B}%
-\contentsline {section}{\numberline {B.1}向量空间}{130}{section.B.1}%
-\contentsline {section}{\numberline {B.2}内积}{131}{section.B.2}%
-\contentsline {section}{\numberline {B.3}波函数的空间}{133}{section.B.3}%
-\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{135}{section.B.4}%
-\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{140}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{144}{section.B.6}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{147}{appendix.C}%
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}量子力学中的对称性}{114}{chapter.6}%
+\contentsline {section}{\numberline {6.1}平移对称性}{116}{section.6.1}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{120}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{120}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{121}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{123}{section.A.3}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{127}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{129}{section.A.5}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{136}{appendix.B}%
+\contentsline {section}{\numberline {B.1}向量空间}{136}{section.B.1}%
+\contentsline {section}{\numberline {B.2}内积}{137}{section.B.2}%
+\contentsline {section}{\numberline {B.3}波函数的空间}{139}{section.B.3}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{141}{section.B.4}%
+\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{146}{section.B.5}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{150}{section.B.6}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{153}{appendix.C}%
 \contentsfinish 
