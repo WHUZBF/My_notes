@@ -570,7 +570,7 @@
         \subfigure[$n=3$]{
             \includegraphics[scale=0.7]{fig/2-3-c.eps}
         }   
-        \caption{可以看到, 图像之间的递推联系还是满足前面的规则的}
+        \caption{可以看到, 图像之间的递推联系还是满足前面的规则的。}
     \end{figure}
     \subsection{分析方法}
     \begin{define}{两个无量纲数}
@@ -616,7 +616,7 @@
     我们不加证明地列出波函数归一化后的解与厄米多项式之间的关系\footnote{前面因子的相位按照惯例按最简单的取}:
     \begin{lequation}
         \boxed{
-            \psi(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{4}}\frac{1}{\sqrt{2^nn!}}H_n(\xi)e^{-\xi^2/2}
+            \psi_n(x)=\left(\frac{m\omega}{\pi\hbar}\right)^{\frac{1}{4}}\frac{1}{\sqrt{2^nn!}}H_n(\xi)e^{-\xi^2/2}
         }
     \end{lequation}
     \begin{theorem}{$H_n(\xi)$的诸多性质}
@@ -3760,6 +3760,7 @@
     $$\hat{x}^\prime=\hat x +a,\hat{p}^\prime=\hat{p}$$
     如果某个一般的力学量算符可以写成$\hat{x},\hat{p}$的幂级数展开形式, 那么有：
     \begin{equation}
+        \label{eq:6.11}
         \hat{Q}^\prime(\hat x,\hat p)=\hat{Q}(\hat x+a,\hat p)
     \end{equation}
     
@@ -3823,7 +3824,7 @@
     \begin{equation}
         [\hat{H}, \hat{T}(\delta)]=\left[\hat{H}, 1-i \frac{\delta}{\hbar} \hat{p}\right]=0 \Rightarrow[\hat{H}, \hat{p}]=0
     \end{equation}
-    再根据式\ref{广义欸费斯托定理}得到：
+    再根据式\ref{广义欸费斯托定理}得到\footnote{在经典力学中, 某个力学量是运动积分的条件是它与哈密顿量的泊松括号为0, 在量子力学中变成了对易括号。}：
     \begin{equation}
         \frac{d}{dt}\braket{p}=\frac{i}{\hbar}\left[\hat{H},\hat{p}\right]=0
     \end{equation}
@@ -3834,7 +3835,98 @@
     \begin{equation}
         \hat{T}(a) \psi\left(x_{1}, x_{2}\right)=\psi\left(x_{1}-a, x_{2}-a\right)
     \end{equation}
+    且定义总动量：
+    $$\hat{P}\equiv\hat{p}_1+\hat{p}_2$$
+    不难证明下式成立：
+    $$\hat{T}(a)=e^{i\frac{a}{\hbar}}\hat{P}$$
+    后面的就和前面的单粒子体系推导差不多了,依然是先说明：
+    \[\left[\hat{H},\hat{T}(a)\right]=0\]
+    对于任意的$a$都成立, 也就是说体系具有连续的平移对称性。再次考虑无限小体系的平移变换, 即可说明总动量$P$是守恒的。
+
+    讲到这里我们或许要明确说明一下量子力学中的守恒律, 这在经典力学里面是个很蠢的论题, 因为经典力学我们考虑的都是决定性的系统。但是在量子力学里面我们说一个量是守恒的有下面两种\textbf{等价}的说法：
+    \begin{itemize}
+        \item $\braket{Q}$的值不随时间变化
+        \item 测量$Q$得到的结果及其相应的概率都不会随时间变化
+    \end{itemize}
+
+    前者就是我们前面隐含的“守恒律”的表述, 后者对于前者的充分性是显然的, 我们现在来考虑一下必要性。还是考虑哈密顿算符不显含时间的系统, 对于这种系统我们在第三章末尾证明了它一定是可以分离时间变量的,体系一般的态可以写为：
+    \[\ket{\Psi}=\sum_n e^{-iE_nt/\hbar} c_n\ket{\psi_n}\]
     
-    总之要知道动量守恒是系统的连续平移对称性的直接结果, 对于离散的情况, 动量虽然不是守恒的, 但是晶格动量是守恒的, 这就是固体物理中的内容了。
+    现在假设算符$\hat{Q}$的本征值为$\lambda_n$对应的本征矢为$\ket{q_n}$,\footnote{我们的讨论都是以非简并情况为例} 根据广义概率诠释, 测量值为$\lambda_m$的概率为：
+    \begin{equation}
+        \label{eq:6.21}
+        P_n=|\braket{q_m|\Psi}|=\sum_n|e^{-iE_nt/\hbar}c_n\braket{q_n|\psi_n}|
+    \end{equation}
+
+    继续假设算符$\hat{Q}$不显含时间, 那么第一条陈述等价于$\hat{Q},\hat{H}$可交换。这直接导致可以选取一组共同本征矢作为正交归一基底, 不失一般性, 令$\ket{q_n}=\ket{\psi_n}$。
+    代入\ref{eq:6.21}：
+    \begin{equation}
+        P_n=\sum_n|e^{-iE_nt/\hbar}c_n\delta_{nm}|=|c_m|
+    \end{equation}
+    而$c_m$是由初始状态确定的常数, 所以看来在绝大多数条件下, 这两个陈述完全等价, 这也是我们描述量子力学守恒律的方式。从前面几章的推导中也能领会到很多时候经典力学的一些运动定律, 
+    把物理量换成对应的平均值在量子力学中就能继续奏效了。
+
+    总之, 现在应该明白动量守恒是系统的连续平移对称性的直接结果, 对于离散的情况, 动量虽然不是守恒的, 但是晶格动量是守恒的, 这就是固体物理中的内容了。
+    
+    \section{宇称守恒}
+    这部分的内容很多都是上一节的简单换皮, 当作上一节思想的运用实例也蛮好。
+    
+    不难发现, 宇称算符满足幺正性和厄米性：
+    \[\hat{Pi}^\dagger\hat{Pi}=\mathbbm{1},\hat{Pi}^\dagger=\hat{Pi}\]
+    
+    实际上宇称算符和前面的平移算符的不同点在于它是一个观察算符,对应了一个可观测量,即宇称。根据线性代数不难知道宇称算符的本征值只能是$\pm 1$, 对应波函数的奇偶性。
+
+    同样的, 我们可以定义对算符的宇称操作：
+    \begin{equation}
+        \hat{Q}^\prime=\hat{\Pi}^\dagger\hat{Q}\hat{Pi}
+    \end{equation}
+    \begin{thinknote}
+        例如：
+        \[\hat{\mathbf{r}}^\dagger=-\hat{\mathbf{r}},\hat{\mathbf{p}}^\dagger=-\hat{\mathbf{p}}\]
+        类似于\ref{eq:6.11}, 有：
+        \begin{equation}
+            \hat{Q}^\prime(\hat{\mathbf{r}},\hat{\mathbf{p}})=\hat{Q}(-\hat{\mathbf{r}},-\hat{\mathbf{p}})
+        \end{equation}
+        例如角动量算符：
+        \begin{equation}
+            \hat{\mathbf{L}}^\prime=(-\hat{\mathbf{r}})\times(-\hat{\mathbf{p}})=\hat{\mathbf{r}}\times\hat{\mathbf{p}}=\hat{\mathbf{L}}
+        \end{equation}
+        像这种在宇称变换下不变的矢量我们称为\textbf{赝矢量(Pseudovector)},也称为\textbf{轴矢量(axial vector)}, 这是对矢量的又一细分。同样的, 在宇称变换下变号的标量我们称为\textbf{赝标量(Pseudoscalar)}, 如图\ref{fig:6.3}。
+    \end{thinknote}
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=2]{fig/6.3.pdf}
+        \caption{图中的两辆车互为镜像, 都向纸面内运动, 可以发现它们的后轮的角动量是同向的。镜像有时候来解释这个问题其实是不妥的, 因为这实际上只反演了一个坐标, 但是大致是这个意思。}
+        \label{fig:6.3}
+    \end{figure}
+
+    如果系统有空间反演对称性\footnote{镜面对称, 或者严格点说空间三个正交基反向都行。}, 也即：
+    \begin{equation}
+        \label{eq:6.26}
+        \hat{H}^\prime=\hat{H}\Rightarrow\boxed{\left[\hat{H},\hat{\Pi}\right]=0}
+    \end{equation}
+    同样的我们得到下面的宇称守恒：
+    \begin{equation}
+        \boxed{\frac{d}{dt}\braket{\Pi}=0}
+    \end{equation}
+    
+    \ref{eq:6.26}中的对易式也说明了始终可以取或奇或偶的$\psi_n(x)$作为一组完备基。对于一维情况, $\hat{H}$能级非简并, 故对于$V(x)$为偶函数的体系, 也即
+    空间反演对称的体系, 所有的定态解组成的一组正交基一定是由奇偶函数组成, 例如$\S$2-3 的简谐振子。三维情况下由于简并的普遍性, 需要额外去构造具有宇称的定态解,不过好在
+    氢原子求解中的$\psi_{n\ell m}$本身就是有奇偶性的。
+
+    而且宇称守恒告诉我们在空间反演对称的体系中, 偶函数随时间演化绝对不会变成奇函数。
+    
+    \subsubsection*{宇称选择定则(parity selection rule)}
+    像$\hat{\mathbf{r}}$或是$\hat{\mathbf{p}}$一样在宇称变换下反号的我们称为宇称变换下为\textbf{奇}的。再比如下面的电偶极矩算符：
+    \[\hat{\mathbf{p}}_e\equiv q\hat{\mathbf{r}}\]
+    这个算符显然是奇的, 我们来看下两个态之间的矩阵元：
+    \begin{equation}
+        \Braket{\psi^\prime|\hat{\mathbf{p}}_e|\psi}=-\Braket{\psi^\prime|\hat{\Pi}^\dagger\hat{\mathbf{p}}_e\hat{\Pi}|\psi}=(\pm 1)(\pm 1)\Braket{\psi^\prime|\hat{\mathbf{p}}_e|\psi}
+    \end{equation}
+    
+    显然, 当这两个态具有相同的宇称时, 矩阵元为0, 这也叫\textbf{Laporate's rule}, 与原子跃迁有紧密联系。同样的也可证明, 对于角动量算符这种\textbf{偶}的, 
+    两个态的宇称相反时, 它们之间的矩阵元为0.
+
+    \section{旋转对称性}
     \include{appendix.tex}
 \end{document}  
