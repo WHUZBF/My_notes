@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  20 AUG 2022 18:22
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  22 AUG 2022 23:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2273,7 +2273,7 @@ File: fig/4-3.eps Graphic file (type eps)
 [95
 
 ] [96] [97]
-Overfull \hbox (1.88501pt too wide) in paragraph at lines 3153--3160
+Overfull \hbox (1.88501pt too wide) in paragraph at lines 3157--3164
 []\TU/SimSun(0)/m/n/12.045 显 然 $\OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 满 足 这 种 对 称 性 的 粒 子 称 为 \TU/SimSun(0)/b/n/12.045 玻 色 子 \T1/ntxtlf/b/n/12.045 (bosons)\TU/SimSun(0)/m/n/12.045 ；|
  []
 
@@ -2308,7 +2308,7 @@ Missing character: There is no 量 ("91CF) in font ntx-Regular-tlf-ot1!
  [118] [119]
 File: fig/6.3.pdf Graphic file (type pdf)
 <use fig/6.3.pdf>
- [120] [121] [122]
+ [120] [121] [122] [123] [124] [125]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2318,10 +2318,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[123
+[126
 
 
-] [124] [125]
+] [127] [128]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2329,52 +2329,52 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[126] [127] [128]
+[129] [130] [131]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [129] [130]
+ [132] [133]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [131] [132] [133] [134] [135]
+ [134] [135] [136] [137] [138]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [136] [137] [138]
+ [139] [140] [141]
 附录 B
 
-Overfull \hbox (7.7486pt too wide) in paragraph at lines 474--497
+Overfull \hbox (7.7486pt too wide) in paragraph at lines 475--498
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[139
+[142
 
-] [140] [141]
-Overfull \hbox (12.5569pt too wide) in paragraph at lines 600--607
+] [143] [144]
+Overfull \hbox (12.5569pt too wide) in paragraph at lines 601--608
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[142] [143] [144] [145] [146] [147]
+[145] [146] [147] [148] [149] [150]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [148] [149]
+ [151] [152]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [150]
+ [153]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [151]
-Overfull \hbox (2.89873pt too wide) detected at line 910
+ [154]
+Overfull \hbox (2.89873pt too wide) detected at line 911
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[152] [153] [154] [155]
+[155] [156] [157] [158]
 附录 C
-[156
+[159
 
-]) [157] (./sourcecode.aux (./appendix.aux))
+]) [160] (./sourcecode.aux (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
@@ -2383,12 +2383,12 @@ Package rerunfilecheck Info: File `sourcecode.out' has not changed.
 (rerunfilecheck)             Checksum: 45038FEC7CA526A4D2279ADF5F895424;8339.
  ) 
 Here is how much of TeX's memory you used:
- 56616 strings out of 476533
- 1459549 string characters out of 5818886
- 1928083 words of memory out of 5000000
- 75766 multiletter control sequences out of 15000+600000
+ 56623 strings out of 476533
+ 1459610 string characters out of 5818886
+ 1928339 words of memory out of 5000000
+ 75773 multiletter control sequences out of 15000+600000
  536224 words of font info for 264 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,22n,97p,727b,1158s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,22n,97p,727b,1156s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (160 pages).
+Output written on sourcecode.pdf (163 pages).

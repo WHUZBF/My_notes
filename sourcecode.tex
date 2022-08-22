@@ -2194,7 +2194,10 @@
     
     涉及到经典力学中的两个力学量相乘转换为算符时, 可能要考虑一下算符结合的顺序, 但是好在这里我们不需要考虑, 因为正则对易关系的三维形式为:
     \begin{equation}
+        \label{eq:4.48*}
+        \boxed{
         \left[r_i,p_j\right]=i\hbar\delta_{ij}\quad\left[r_i,r_j\right]=\left[p_i,p_j\right]=0
+        }
     \end{equation}
     显然角动量涉及到的都是两个可对易算符相乘。
     
@@ -2326,6 +2329,7 @@
                \equiv& L_x\hat{\bm{i}}+L_y\hat{\bm{j}}+L_z\hat{\bm{k}}
     \end{align*}
     \begin{equation}
+        \label{eq:4.55}
         \boxed{
             L_z = -i\hbar\frac{\partial}{\partial\phi}
         }
@@ -3716,6 +3720,7 @@
     \begin{define}{旋转算符(rotation operator)}
         我们现在只讨论绕z轴的旋转, 这时在球坐标系下讨论是合适的：
         \begin{equation}
+            \label{eq:6.4}
             \boxed{\hat{R(\varphi)}_z\psi(r,\theta,\phi)=\psi(r,\theta,\phi-\varphi)}
         \end{equation}
     \end{define}
@@ -3725,6 +3730,7 @@
     \section{平移对称性}
     我们看能不能把$\hat{T}(a)$用函数的求导等运算表示。首先注意到变换后的函数$\psi(x-a)$可以表示为泰勒展式：
     \begin{equation}
+        \label{eq:6.5}
         \psi(x-a)=\sum_{n=0}^\infty \frac{(-a)^n}{n!}\left(\frac{d}{dx}\right)^n\psi(x)
     \end{equation}
     一定要注意上面的展开式不是对于一个固定的点展开, 比如说我要用幂级数表示$\psi(1-a)$我就把$\psi(x)$在1处展开然后代入$x=1-a$, 一次类推便清楚如此展开的意义了。  
@@ -3872,13 +3878,13 @@
     这部分的内容很多都是上一节的简单换皮, 当作上一节思想的运用实例也蛮好。
     
     不难发现, 宇称算符满足幺正性和厄米性：
-    \[\hat{Pi}^\dagger\hat{Pi}=\mathbbm{1},\hat{Pi}^\dagger=\hat{Pi}\]
+    \[\hat{\Pi}^\dagger\hat{\Pi}=\mathbbm{1},\hat{\Pi}^\dagger=\hat{\Pi}\]
     
     实际上宇称算符和前面的平移算符的不同点在于它是一个观察算符,对应了一个可观测量,即宇称。根据线性代数不难知道宇称算符的本征值只能是$\pm 1$, 对应波函数的奇偶性。
 
     同样的, 我们可以定义对算符的宇称操作：
     \begin{equation}
-        \hat{Q}^\prime=\hat{\Pi}^\dagger\hat{Q}\hat{Pi}
+        \hat{Q}^\prime=\hat{\Pi}^\dagger\hat{Q}\hat{\Pi}
     \end{equation}
     \begin{thinknote}
         例如：
@@ -3928,5 +3934,181 @@
     两个态的宇称相反时, 它们之间的矩阵元为0.
 
     \section{旋转对称性}
+    根据式\ref{eq:6.4}, 我们对$\psi(r,\theta,\phi-\varphi)$在$(r,\theta,\phi)$处作泰勒展开, 就像我们在\ref{eq:6.5}做的一样：
+    \begin{align*}
+        \hat R_z(\varphi)\psi(r,\theta,\phi)&=\sum_{n=0}^\infty\frac{(-\varphi)^n}{n!}\left(\frac{\partial}{\partial \phi}\right)^n\psi(r,\theta,\phi)\\
+        &=\sum_{n=0}^\infty\frac{\left(-i\frac{\varphi}{\hbar}\hat{L}_z\right)^n}{n!}\psi(r,\theta,\phi)\\
+        &=\boxed{e^{-i\frac{\varphi}{\hbar}\hat{L}_z}}
+    \end{align*}
+    其中第二个等号我们利用了角动量算符在球坐标系下的表达, 也即\ref{eq:4.55}。所以我们说绕$z$轴的角动量是绕$z$轴的转动的生成元。很自然的我们可以想到对于一般的转动, 转动算符为：
+    \begin{equation}
+        \boxed{
+            \hat{R}_{\mathbf{n}}(\varphi)=\exp{\left[-i\frac{\varphi}{\hbar}\mathbf{n}\cdot\mathbf{L}\right]}
+        }
+    \end{equation}
+    其中$\mathbf{n}$是转轴的方向向量。所以\textbf{角动量是转动的生成元}。
+
+    现在我们应该开始研究算符的转动变换了, 我们重点研究位置算符$\hat{\mathbf{r}}$。刚体力学中我们常常使用Euler角来描述转动, 所以我们不必直接研究最一般的转动, 我们只需研究$\hat{R}_x,\hat{R}_y,\hat{R}_z$下算符的变换关系即可。
+
+    首先我们来考虑绕x轴的无穷小转动：
+    \begin{equation}
+        \hat{R}_z(\delta)=\mathrm e^{-i\frac{\delta}{\hbar}\hat{L}_x}\approx\mathbbm{1}-i\frac{\delta}{\hbar}\hat{L}_x
+    \end{equation}
+    忽略高阶小量$\mathcal{O}(\delta)$, 有\footnote{我们这里写了这么多$\approx$你可能认为最后得到的只是一个近似结果, 实际上是严格的等式。物理中这里使用$\approx$表示的是扔掉高阶小量, 你可以认为这些运算都是带上极限符号$\lim\limits_{\delta\to0}$, 只是没有明确写出来而已。在极限的语境下我们这些等式显然都是\textbf{严格成立}的。}：
+    \begin{align}
+        \hat{\mathbf{r}}^\prime&=R_x(\delta)^\dagger\hat{\mathbf{r}}R_x(\delta)=\left(1+i\frac{\delta}{\hbar}\hat{L}_x\right)\hat{\mathbf{r}}\left(1-i\frac{\delta}{\hbar}\hat{L}_x\right)\\
+        &\approx\boxed{\hat{\mathbf{r}}+i\frac{\delta}{\hbar}\left[\hat{L}_x,\hat{\mathbf{r}}\right]}
+    \end{align}
+    根据角动量算符的定义$\hat{\mathbf{L}}\equiv\hat{\mathbf{r}}\times\hat{\mathbf{p}}$, 以及基本对易式\ref{eq:4.48*}。可以得到：
+    \begin{equation}
+        \left[\hat{L}_x,\hat{x}\right]=0,\left[\hat{L}_x,\hat{y}\right]=i\hbar z,\left[\hat{L}_x,\hat{z}\right]=-i\hbar y
+    \end{equation}
+    带入后我们将最后的结果写成矩阵形式为：
+    \begin{equation}
+        \label{eq:6.34}
+        \left(\begin{array}{l}
+            \hat{x}^{\prime} \\
+            \hat{y}^{\prime} \\
+            \hat{z}^{\prime}
+            \end{array}\right)=\left(\begin{array}{ccc}
+            1 & 0 & 0 \\
+            0 & 1 & -\delta \\
+            0 & \delta & 1
+            \end{array}\right)\left(\begin{array}{l}
+            \hat{x} \\
+            \hat{y} \\
+            \hat{z}
+            \end{array}\right)
+    \end{equation}
+   
+    考虑完了无穷小转动, 自然要考虑有限大转动。首先注意到绕x轴转动有限大的角度$\varphi$, 相当于施加$N$次$\hat{R}_x\left(\frac{\varphi}{N}\right)$, 当$N\to\infty$时, $\frac{\varphi}{N}\to\delta$。
+    便可以利用\ref{eq:6.34}了, 这也是所谓的无穷大变换的方法。
+    
+    具体来说我们下面要求的是：
+    \begin{equation}
+        \lim_{N\to\infty}
+        \left(\begin{array}{ccc}
+            1 & 0 & 0 \\
+            0 & 1 & -\frac{\varphi}{N} \\
+            0 & \frac{\varphi}{N}& 1
+            \end{array}\right)^N
+    \end{equation}
+    这等价于去求：
+    \begin{equation}
+        \lim_{N\to\infty}
+        \left(\begin{array}{ccc}
+            1 & -\frac{\varphi}{N} \\
+            \frac{\varphi}{N}& 1
+            \end{array}\right)^N
+    \end{equation}
+    记这个矩阵为$\mathrm{M}$, 为了求这个幂, 将$\mathrm{M}$对角化：
+    \begin{equation}
+        \mathrm{\Lambda}=\mathrm{S}^{-1}\mathrm{M}\mathrm{S}=\begin{pmatrix}
+            1+\mathrm i\frac{\varphi}{N} &0 \\
+           0 &1-\mathrm  i\frac{\varphi}{N} 
+          \end{pmatrix}
+    \end{equation}
+    其中$\mathrm{S}$为:
+    \[
+        \frac{1}{\sqrt{2}}\begin{pmatrix}
+            i &1 \\
+            1 &\mathrm i
+           \end{pmatrix}
+    \]
+    注意到根据二项式定理：
+    \begin{equation}
+        \left(1 \pm i \frac{\varphi}{N}\right)^{N}=\sum_{k=0}^{N}\mathrm C_N^{k}\left(\pm i \frac{\varphi}{N}\right)^{k}=\sum_{k=0}^{N} \frac{N !}{(N-k) ! N^{k}} \frac{(\pm i \varphi)^{k}}{k !}
+    \end{equation}
+    再取$N\to \infty$极限：
+    \begin{equation}
+        \lim_{N\to\infty}\mathrm{\Lambda}^N=
+        \begin{pmatrix}
+            e^{i\varphi} &0 \\
+            0 &e^{-i\varphi}
+        \end{pmatrix}
+        =\lim_{N\to\infty}\mathrm{S}^{-1}\mathrm{M}^N\mathrm{S}
+    \end{equation}
+    最后得到对于有限大转动\ref{eq:6.34}应改写为：
+    \begin{equation}
+        \left(\begin{array}{l}
+            \hat{x}^{\prime} \\
+            \hat{y}^{\prime} \\
+            \hat{z}^{\prime}
+            \end{array}\right)=\left(\begin{array}{ccc}
+            1 & 0 & 0 \\
+            0 & \cos\varphi & -\sin\varphi \\
+            0 & \sin\varphi & \cos\varphi
+            \end{array}\right)\left(\begin{array}{l}
+            \hat{x} \\ 
+            \hat{y} \\
+            \hat{z}
+            \end{array}\right)
+    \end{equation}
+    同样的对于绕y轴和z轴的转动, 上面的矩阵应该改为：
+    \begin{equation}
+        \label{eq:6.41}
+        \begin{pmatrix}
+            \cos\varphi & 0 & -\sin\varphi \\
+            0 & 1& 0 \\
+            \sin\varphi& 0  & \cos\varphi
+        \end{pmatrix}\quad\text{and}\quad
+        \begin{pmatrix}
+            \cos\varphi & -\sin\varphi& 0  \\
+            \sin\varphi&  \cos\varphi  &0\\
+            0 & 0& 1
+        \end{pmatrix}
+    \end{equation}
+    
+    这和我们刚体力学中接触到的转动矩阵是完全一致的, 算符$\hat{\mathbf{r}}$的旋转和矢量的旋转是一致的！这就涉及到我们下面要定义的\textbf{矢量算符了}。
+    
+    附录$\S $A.5中我们定义了欧氏空间中的矢量和张量, 这里类似的, 我们可以定义矢量算符就是在旋转变换下各个分量按照$\hat{\mathbf{r}}$的方式(\ref{eq:6.34},\ref{eq:6.41})变换的算符。
+    等等, 这里的矩阵为何与\ref{eq:A.7}相差一个负号？这是因为我们这里的观点就是所谓的主动观点, 整个系统旋转, 原先的坐标系不变, 然后再考察算符的形式。而我们在刚体力学或是附录A中使用的一般是被动形式描述, 也就是说系
+    统本身不变, 参照系反而旋转, 然后再看算符在新的参照系下的形式。这两种观点等价, 数学描述上显然差了个负号, 但是无伤大雅。
+
+    现在回看我们的推导, 不难发现上面的定义等价于说矢量算符$\hat{\mathbf{V}}$和角动量算符之间满足如下的对易关系：
+    \begin{lequation}
+        \boxed{
+            \left[\hat L_i,\hat V_j\right]=\mathrm{i}\hbar\epsilon_{ijk}\hat{V}_k
+        }
+    \end{lequation}
+    用这个式子作为矢量算符的定义是等价的, 更便于操作和叙述。而在转动下不变的算符我们称为\textbf{标量算符}：
+    \begin{lequation}
+        \boxed{
+            \left[\hat{\mathbf L},\hat f\right]=0
+        }
+    \end{lequation}
+
+    上一节中我们讲了算符与宇称算符之间的对易关系可以将矢量和标量分为“赝”和“真”两种, 而标量和矢量的区分方法就是利用其和角动量算符的对易关系, 整理成下表\footnote{其中$\left\{\hat A,\hat B\right\}\equiv\hat A\hat B+\hat B\hat A$.}：
+    \begin{center}
+        \begin{tabular}{llll}
+            \hline \hline & parity & rotations & examples \\
+            \hline true vector $\hat{\mathbf{V}}$ & $\left\{\hat{\Pi}, \hat{V}_{i}\right\}=0$ & {$\left[\hat{L}_{i}, \hat{V}_{j}\right]=i \hbar \epsilon_{i j k} \hat{V}_{k}$} & $\hat{\mathbf{r}}, \hat{\mathbf{p}}$ \\
+            pseudovector $\hat{\mathbf{V}}$ & {$\left[\hat{\Pi}, \hat{V}_{i}\right]=0$} & {$\left[\hat{L}_{i}, \hat{V}_{j}\right]=i \hbar \epsilon_{i j k} \hat{V}_{k}$} & $\hat{\mathbf{L}}$ \\
+            true scalar $\hat{f}$ & {$[\hat{\Pi}, \hat{f}]=0$} & {$\left[\hat{L}_{i}, \hat{f}\right]=0$} & $\hat{\mathbf{r}} \cdot \hat{\mathbf{r}}$ \\
+            pseudoscalar $\hat{f}$ & $\{\hat{\Pi}, \hat{f}\}=0$ & {$\left[\hat{L}_{i}, \hat{f}\right]=0$} & triple product\\
+            \hline \hline
+        \end{tabular}
+    \end{center}
+    
+    \subsubsection*{角动量守恒}
+    若体系具有连续的旋转对称性, 也即各向同性, 则考虑无穷小转动下的哈密顿量不变性：
+    \begin{equation}
+        \left[\hat{H},R_{\mathbf{n}}(\delta)\right]=\left[\hat H,\mathbbm{1}-\mathrm{i}\frac{\delta }{\hbar}\mathbf{n}\cdot\mathbf{L}\right]=-\mathrm i\frac{\delta}{\hbar}\mathbf{n}\cdot\left[\hat{H},\hat{\mathbf{L}}\right]=0
+    \end{equation}
+    还是根据\ref{广义欸费斯托定理}:
+    \begin{equation}
+        \frac{d}{dt}\braket{\mathbf{L}}=\frac{\mathrm i}{\hbar}\left[\hat{H},\hat{\mathbf{L}}\right]=0
+    \end{equation}
+    所以\textbf{角动量守恒是体系各向同性的直接结果}。一个很重要的例子就是中心势场问题, 对于中心势场, 下面的三个对易式是成立的：
+    \begin{equation*}
+        \begin{array}{l}
+        {\left[\hat{H}, \hat{L}^{2}\right]=0,} \\
+        {\left[\hat{H}, \hat{L}_{z}\right]=0,} \\
+        {\left[\hat{L}_{z}, \hat{L}^{2}\right]=0.}
+        \end{array}
+    \end{equation*}
+    
+    实际上, $\hat{H},\hat{L}_z, \hat{L}^2$构成了一个CSCO, 这也是为什么我们选用三个表征着三个算符的本征值的量子数$n\ell m $来描述氢原子系统的原因, 这三个量子数就唯一确定了一个定态, 
+    体系一般的态是这些定态的叠加态。
     \include{appendix.tex}
 \end{document}  
