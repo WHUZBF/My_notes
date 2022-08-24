@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  14 AUG 2022 21:10
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  23 AUG 2022 14:54
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2308,10 +2308,9 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
  [48] [49] [50] [51] [52] [53]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 9.03374pt on input line 293.
- [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65]
+ [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66]
 File: fig/4-1.png Graphic file (type bmp)
 <fig/4-1.png>
- [66]
 File: fig/4-2.eps Graphic file (type eps)
 <fig/4-2.eps>
  [67] [68] [69] [70] [71]
@@ -2428,10 +2427,10 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 30AFC4DFE604043C30CFB2F36146F128;7841.
  ) 
 Here is how much of TeX's memory you used:
- 56293 strings out of 476533
- 1448049 string characters out of 5818886
- 1934733 words of memory out of 5000000
- 75406 multiletter control sequences out of 15000+600000
+ 56297 strings out of 476533
+ 1448082 string characters out of 5818886
+ 1934875 words of memory out of 5000000
+ 75410 multiletter control sequences out of 15000+600000
  536224 words of font info for 264 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,721b,1167s stack positions out of 5000i,500n,10000p,200000b,80000s

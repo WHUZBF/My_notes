@@ -141,7 +141,7 @@
     \[\ell=0,1,2\ldots\Rightarrow m=0,\pm 1,\pm 2,\pm 3,\ldots, \pm \ell\]
     最后归一化\footnote{不要忘记三重积分球坐标换元后的雅可比系数}我们得到:
     \begin{lequation}
-        \boxed{Y_{\ell}^{m}(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^{m l}(\cos \theta)}
+        \boxed{Y_{\ell}^{m}(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^{m}(\cos \theta)}
     \end{lequation}
     在数学上被称为\textbf{球谐函数}, 满足：
     \begin{equation}
@@ -417,7 +417,7 @@
 
     \subsection*{$L^2$和$L_z$的本征矢}
     根据$\S 3.4$的讨论, 不对易的算符找不到一组共同的本征矢, 但是对易的可以, 矩阵的观点看来也即可以同时对角化。显然我们不应浪费时间在寻找三个分量算符之间的共同本征矢上面。
-    根据\[L^2=L_x^2+L_y^2,L_z^2\]我们可以计算
+    根据\[L^2=L_x^2+L_y^2+L_z^2\]我们可以计算
     \begin{align*}
         \left[L^2,L_z\right]&=\left[L_x^2,L_z\right]+\left[L_y^2,L_z\right]+\left[L_z^2,L_z\right]
         \\ &=L_x\left[L_x,L_z\right]+\left[L_x,L_z\right]L_x+L_y\left[L_y,L_z\right]+\left[L_y,L_z\right]L_y
@@ -486,12 +486,13 @@
     \[\ell=0,\frac{1}{2},1,\frac{3}{2},\ldots\]
     当$\lambda$确定之后也便确定了$\ell$, 那么根据升降阶算符生成的两算符之间的共同本征矢可以使用$\ell$和$m$标识:
     \begin{equation}
+        \label{eq:4.53}
         \begin{cases}
             L^2f_\ell^m=\hbar^2\ell\left(\ell+1\right)f_\ell^m\\
             L_zf_\ell^m=\hbar m f_\ell^m
         \end{cases}
     \end{equation}
-    $m$取值为:$-\ell,-\ell+1,\cdot,\ell-1,\ell$
+    $m$取值为:$-\ell,-\ell+1,\cdots,\ell-1,\ell$
 
     求出了$L^2$所有的本征值$\lambda$后我们便确定了$\ell$的取值, $\ell$和$m$便一起标识了$L^2$和$L_z$的本征值, 下一步我们就是要去求出对应的一组共同的本征矢。
     当然, 这两个字母的设置绝不是空穴来风, 我们说氢原子定态解由三个量子数完全描绘, 主量子数$n$与能量相关, 角量子数$\ell $和磁量子数$m$与角动量相关。
@@ -501,6 +502,19 @@
 
         \setlength\parindent{2em}如果你要让角动量只有$z$轴分量, 说明你必须\textbf{同时测得}$L_x=L_y=0$。但是不确定性原理告诉你这是不可能的, 所以角动量矢量的
         尾端始终没有指向一个确定的方位, 这与你的测量是无关的, 这是量子力学本身的性质。
+    \end{thinknote}
+    \begin{thinknote}
+        这里我们来具体求出升降阶算符作用后的系数, 设：
+        \[L_+\ket{f_\ell^m}=A_\ell^m\ket{f_\ell^{m+1}},L_-\ket{f_\ell^m}=B_\ell^m\ket{f_\ell^{m-1}}\]
+        将上面的第一个式子取厄米共轭, 利用$L_+^\dagger=L_-$:
+        \[\bra{f_\ell^m}L_-=(A_\ell^m)^*\bra{f_\ell^{m+1}}\]
+        然后根据态的归一性得：
+        \[A_\ell^m=\sqrt{\braket{f_\ell^m|L_-L_+|f_\ell^m}}\]
+        最后根据\ref{eq:4.52}及\ref{eq:4.53}:
+        \[A_\ell^m=\hbar\sqrt{\ell(\ell+1)-m(m+1)}\]
+        同理可得$B_\ell^m$:
+        \[B_\ell^m=\hbar\sqrt{\ell(\ell+1)-m(m-1)}\]
+        这两个式子有时在计算上比较有用, 免去了一些偏导计算, 涉及到$L_x,L_y$时也可以把它们转换成$L_\pm$来简化计算。
     \end{thinknote}
 
     \subsection*{$L^2$和$L_z$的本征矢}
@@ -611,11 +625,11 @@
     称为内禀角动量。经典力学上我们区分这两种角动量更多的是为了方便, 但是在量子力学中, 自旋的存在是不能类比为粒子的自转的。 其一是我们现在对于基本粒子都处理成数学上一个没有大小
     的点；其二, 如果去按照这种经典的自转去计算电子表面的线速度, 会发现其已远远超过光速。所以现在我们暂且把它的存在当作是公理, 而且认为自旋角动量的代数结构和轨道角动量的完全一致:
     \begin{equation}
-        \boxed{\left[\mathcal{S_x},\mathcal{S_y}\right]=i\hbar \mathcal{S}_z,\left[\mathcal{S_y},\mathcal{S_z}\right]=i\hbar \mathcal{S}_x,\left[\mathcal{S_z},\mathcal{S_x}\right]=i\hbar \mathcal{S}_y}
+        \boxed{\left[\mathcal{S}_x,\mathcal{S}_y\right]=i\hbar \mathcal{S}_z,\left[\mathcal{S}_y,\mathcal{S}_z\right]=i\hbar \mathcal{S}_x,\left[\mathcal{S}_z,\mathcal{S}_x\right]=i\hbar \mathcal{S}_y}
     \end{equation}
     由于代数结构的一致性, 下面这些结论也就直接复制于$\S \operatorname{3.2-3.3}$
     \begin{equation}
-        \boxed{\mathcal{S}^2\ket{s,m}=\hbar^2s\left(s+1\right),\mathcal{S_z}\ket{s,m}=\hbar m\ket{s,m}}
+        \boxed{\mathcal{S}^2\ket{s,m}=\hbar^2s\left(s+1\right),\mathcal{S}_z\ket{s,m}=\hbar m\ket{s,m}}
     \end{equation}
 
     上面的$\ket{s,m}$表示粒子的\textbf{自旋态}, 无法在位置表象下用波函数表示出来, 这也是为何我们要引入狄拉克符号的一个重要原因。现在引入粒子的自旋态后, 这些自旋态也

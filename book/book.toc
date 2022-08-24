@@ -28,10 +28,10 @@
 \contentsline {subsection}{\numberline {4.2.2}氢原子光谱}{57}{subsection.4.2.2}%
 \contentsline {section}{\numberline {4.3}角动量}{57}{section.4.3}%
 \contentsline {section}{\numberline {4.4}自旋}{63}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}自旋1/2}{63}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.1}自旋1/2}{64}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}可观测量的相容性}{65}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}磁场中的带电粒子}{65}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}数学准备：张量积}{67}{section.4.5}%
+\contentsline {section}{\numberline {4.5}数学准备：张量积}{68}{section.4.5}%
 \contentsline {section}{\numberline {4.6}角动量的合成}{70}{section.4.6}%
 \contentsline {section}{\numberline {4.7}电磁相互作用}{75}{section.4.7}%
 \contentsline {section}{\numberline {4.8}两个自旋体系的计算警示}{78}{section.4.8}%

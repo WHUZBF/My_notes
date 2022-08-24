@@ -1909,15 +1909,15 @@
     式\ref{eq:4.17}的解为:
     \begin{equation}
         \label{eq:4.18}
-        \Phi(\phi)=ce^{imt}+de^{-imt},\qquad\text{(c,d为任意常数)}
+        \Phi(\phi)=ce^{im\phi}+de^{-im\phi},\qquad\text{(c,d为任意常数)}
     \end{equation}
     由于薛定谔方程是线性方程, 所以重点是找到一组线性无关解, 那么上面的解可以简写为
-    \[\Phi(\phi)=e^{imt}\]
+    \[\Phi(\phi)=e^{im\phi}\]
     只要允许$m$是负值即可, 这些解和\ref{eq:4.18}表示的解是等价的, 我们把前面的常数因子纳入到$\Theta$中了, 最后再归一化一并求出。
     
     $\Phi$还需要满足边界条件$\Phi(\phi+2\pi)=\Phi(\phi)$, 所以$m$只能取整数：
     \begin{equation}
-        \boxed{\Phi(\phi)=e^{imt}, \quad(m=0,\pm 1,\pm 2,\pm 3\ldots)}
+        \boxed{\Phi(\phi)=e^{im\phi}, \quad(m=0,\pm 1,\pm 2,\pm 3\ldots)}
     \end{equation}
 
     方程\ref{eq:4.16}的求解在一般的数理方法书中都会提到, 它的解可以用\textbf{连带勒让德函数表达}\footnote{当然, 这个方程还有别的解, 但没有物理意义, 详见数学物理方法内容}：
@@ -1941,7 +1941,7 @@
     \[\ell=0,1,2\ldots\Rightarrow m=0,\pm 1,\pm 2,\pm 3,\ldots, \pm \ell\]
     最后归一化\footnote{不要忘记三重积分球坐标换元后的雅可比系数}我们得到:
     \begin{lequation}
-        \boxed{Y_{\ell}^{m}(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^{m l}(\cos \theta)}
+        \boxed{Y_{\ell}^{m}(\theta, \phi)=\sqrt{\frac{(2 \ell+1)}{4 \pi} \frac{(\ell-m) !}{(\ell+m) !}} e^{i m \phi} P_{\ell}^{m}(\cos \theta)}
     \end{lequation}
     在数学上被称为\textbf{球谐函数}, 满足：
     \begin{equation}
@@ -2217,7 +2217,7 @@
 
     \subsection*{$L^2$和$L_z$的本征矢}
     根据$\S 3.4$的讨论, 不对易的算符找不到一组共同的本征矢, 但是对易的可以, 矩阵的观点看来也即可以同时对角化。显然我们不应浪费时间在寻找三个分量算符之间的共同本征矢上面。
-    根据\[L^2=L_x^2+L_y^2,L_z^2\]我们可以计算
+    根据\[L^2=L_x^2+L_y^2+L_z^2\]我们可以计算
     \begin{align*}
         \left[L^2,L_z\right]&=\left[L_x^2,L_z\right]+\left[L_y^2,L_z\right]+\left[L_z^2,L_z\right]
         \\ &=L_x\left[L_x,L_z\right]+\left[L_x,L_z\right]L_x+L_y\left[L_y,L_z\right]+\left[L_y,L_z\right]L_y
@@ -2286,12 +2286,13 @@
     \[\ell=0,\frac{1}{2},1,\frac{3}{2},\ldots\]
     当$\lambda$确定之后也便确定了$\ell$, 那么根据升降阶算符生成的两算符之间的共同本征矢可以使用$\ell$和$m$标识:
     \begin{equation}
+        \label{eq:4.53}
         \begin{cases}
             L^2f_\ell^m=\hbar^2\ell\left(\ell+1\right)f_\ell^m\\
             L_zf_\ell^m=\hbar m f_\ell^m
         \end{cases}
     \end{equation}
-    $m$取值为:$-\ell,-\ell+1,\cdot,\ell-1,\ell$
+    $m$取值为:$-\ell,-\ell+1,\cdots,\ell-1,\ell$
 
     求出了$L^2$所有的本征值$\lambda$后我们便确定了$\ell$的取值, $\ell$和$m$便一起标识了$L^2$和$L_z$的本征值, 下一步我们就是要去求出对应的一组共同的本征矢。
     当然, 这两个字母的设置绝不是空穴来风, 我们说氢原子定态解由三个量子数完全描绘, 主量子数$n$与能量相关, 角量子数$\ell $和磁量子数$m$与角动量相关。
@@ -2301,6 +2302,19 @@
 
         \setlength\parindent{2em}如果你要让角动量只有$z$轴分量, 说明你必须\textbf{同时测得}$L_x=L_y=0$。但是不确定性原理告诉你这是不可能的, 所以角动量矢量的
         尾端始终没有指向一个确定的方位, 这与你的测量是无关的, 这是量子力学本身的性质。
+    \end{thinknote}
+    \begin{thinknote}
+        这里我们来具体求出升降阶算符作用后的系数, 设：
+        \[L_+\ket{f_\ell^m}=A_\ell^m\ket{f_\ell^{m+1}},L_-\ket{f_\ell^m}=B_\ell^m\ket{f_\ell^{m-1}}\]
+        将上面的第一个式子取厄米共轭, 利用$L_+^\dagger=L_-$:
+        \[\bra{f_\ell^m}L_-=(A_\ell^m)^*\bra{f_\ell^{m+1}}\]
+        然后根据态的归一性得：
+        \[A_\ell^m=\sqrt{\braket{f_\ell^m|L_-L_+|f_\ell^m}}\]
+        最后根据\ref{eq:4.52}及\ref{eq:4.53}:
+        \[A_\ell^m=\hbar\sqrt{\ell(\ell+1)-m(m+1)}\]
+        同理可得$B_\ell^m$:
+        \[B_\ell^m=\hbar\sqrt{\ell(\ell+1)-m(m-1)}\]
+        这两个式子有时在计算上比较有用, 免去了一些偏导计算, 涉及到$L_x,L_y$时也可以把它们转换成$L_\pm$来简化计算。
     \end{thinknote}
 
     \subsection*{$L^2$和$L_z$的本征矢}
@@ -2411,11 +2425,11 @@
     称为内禀角动量。经典力学上我们区分这两种角动量更多的是为了方便, 但是在量子力学中, 自旋的存在是不能类比为粒子的自转的。 其一是我们现在对于基本粒子都处理成数学上一个没有大小
     的点；其二, 如果去按照这种经典的自转去计算电子表面的线速度, 会发现其已远远超过光速。所以现在我们暂且把它的存在当作是公理, 而且认为自旋角动量的代数结构和轨道角动量的完全一致:
     \begin{equation}
-        \boxed{\left[\mathcal{S_x},\mathcal{S_y}\right]=i\hbar \mathcal{S}_z,\left[\mathcal{S_y},\mathcal{S_z}\right]=i\hbar \mathcal{S}_x,\left[\mathcal{S_z},\mathcal{S_x}\right]=i\hbar \mathcal{S}_y}
+        \boxed{\left[\mathcal{S}_x,\mathcal{S}_y\right]=i\hbar \mathcal{S}_z,\left[\mathcal{S}_y,\mathcal{S}_z\right]=i\hbar \mathcal{S}_x,\left[\mathcal{S}_z,\mathcal{S}_x\right]=i\hbar \mathcal{S}_y}
     \end{equation}
     由于代数结构的一致性, 下面这些结论也就直接复制于$\S \operatorname{3.2-3.3}$
     \begin{equation}
-        \boxed{\mathcal{S}^2\ket{s,m}=\hbar^2s\left(s+1\right),\mathcal{S_z}\ket{s,m}=\hbar m\ket{s,m}}
+        \boxed{\mathcal{S}^2\ket{s,m}=\hbar^2s\left(s+1\right),\mathcal{S}_z\ket{s,m}=\hbar m\ket{s,m}}
     \end{equation}
 
     上面的$\ket{s,m}$表示粒子的\textbf{自旋态}, 无法在位置表象下用波函数表示出来, 这也是为何我们要引入狄拉克符号的一个重要原因。现在引入粒子的自旋态后, 这些自旋态也
@@ -4110,5 +4124,71 @@
     
     实际上, $\hat{H},\hat{L}_z, \hat{L}^2$构成了一个CSCO, 这也是为什么我们选用三个表征着三个算符的本征值的量子数$n\ell m $来描述氢原子系统的原因, 这三个量子数就唯一确定了一个定态, 
     体系一般的态是这些定态的叠加态。
+
+    \section{简并与对称}
+    事实上, 量子力学中绝大部分的能级简并的原因都可以归结为体系具有某种对称性。\footnote{如果不是因为对称, 我们称为\textbf{偶然简并(accidental degeneracy)}。}
+    这部分要彻底解释清楚需要利用群表示论的相关工具, 这里先挖个坑, 先简短的做个介绍。
+
+    根据前面几节的讨论, 我们已经大致上明白对称性都对应一个幺正算符, 体系的哈密顿算符与某个与对称性有关的幺正算符对易, 那么体系就具有这种对称性。如果$\ket{\psi}$是$\hat{H}$的关于能量$E$的
+    本征矢, 即：
+    \[\hat{H}\ket{\psi}=E\ket{\psi}\]
+    设体系具有$\hat{Q}$的对称性, 根据$\hat{H}\hat{Q}=\hat{Q}\hat{H}$：
+    \begin{equation}
+        \label{eq:6.46}
+        \hat{H}\left(\hat{Q}\ket{\psi}\right)=\hat{Q}\hat{H}\ket{\psi}=E\hat{Q}\ket{\psi}
+    \end{equation}
+    故$\ket{\psi^\prime}=\hat{Q}\ket{\psi}$也是本征值为$E$的本征态, 很明显这时的简并就可以解释为体系的某种对称性了。
+
+    我们拿一个经典的开普勒问题来类比解释, 开普勒问题的一般解是圆锥曲线, 我们考虑椭圆解, 解的能量由半长轴唯一确定：
+    \begin{equation}
+        \label{eq:6.47}
+        E=-\frac{GMm}{2a}
+    \end{equation}
+    
+    有心力场是具有旋转对称性的, 这也是开普勒第二定律(面积定律)的角动量守恒的原因。如果我们已知体系的某个能量为$E$的解, 那么我们将体系转动一个角度\footnote{或者用被动观点, 参考系反方向转动}, 这也是算符$\hat{R}$的作用。
+    显然这时轨道的取向改变了, 但是它还是开普勒问题的解。量子力学的语言就是$\ket{\psi}$是体系的解, 那么$\ket{\psi^\prime}$也是体系的解。更重要的是由于旋转是保长变换, 所以半长轴不变, 根据\ref{eq:6.47}, 这两个解对应同一个能量！
+    这不正好就类似于量子力学中的简并吗？！我们还知道有心力场是具有各向同性的, 所以实际上有无限多个轨道取向, 它们都对应同一个轨道能量(\ref{fig:6.4})。换成量子力学的语言就是$\ket{\psi},\hat{Q}\ket{\psi},\hat{Q}^2\ket{\psi}\ldots$均对应同一个能量, 也就是说看来连续的对称性始终会
+    带来无限多的简并度。
+
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=1.2]{fig/6-4.pdf}
+        \caption{这是行星轨道进动的图, 这里是想说明椭圆轨道的多种不同取向}
+        \label{fig:6.4}
+    \end{figure}   
+
+    经典力学中确实是这样, 但是量子力学中就不一样了, 在经典力学中, 如果两个态相同, 那么它们必须完全一致, 但是在量子力学中它们可以相差一个相因子, 即我们认为$\ket{\psi}$和$\mathrm e^{\mathrm{i}\theta}\ket{\psi}$代表的是同一个物理状态, 这也是为什么我们简并度数的是
+    特征空间的维数, 也就是最大线性无关组的本征矢个数。如果\ref{eq:6.46}中的$\ket{\psi}$是$\hat{Q}$的本征矢, 根据$\ket{Q}$的幺正性:
+    \begin{equation}
+        \ket{\psi^\prime}=\hat{Q}\ket{\psi}=\mathrm e^{\mathrm{i}\theta}\ket{\psi}
+    \end{equation}
+
+    显然这种情况下对称性就无法带来能级的简并了, 这一点和经典力学有很大的不同。事实上, 如果体系仅仅只是拥有一个对称性, 那么显然, 我们可以取$\hat{H}$和$\hat{Q}$的共同本征矢构成的完备正交归一基, 这个时候$\hat{H}$的简并性和
+    体系的对称性没有一丁点关系, 因为这个基底的所有右矢都是$\hat{Q}$的本征矢, $\hat{Q}$作用在其上并不会产生“新”的$\hat{H}$的本征矢, 也就是说对称性对$\hat{H}$任何一个本征空间的维数都没有贡献。
+
+    我们证明过一维问题下束缚态能级都是非简并的, 比如一维谐振子模型, 显然他是有宇称的。但$\hat{Pi}$并没有对能级的简并有贡献, 从谐振子的定态解我们就可以看出其或奇或偶。$\hat{Pi}$作用在这些态上面只会
+    多出一个$\pm 1 $的相位因子, 不会产生额外的简并。
+
+    \begin{proposition}{能级简并和对称性的联系}
+        体系的多个互不对易的对称性是大多数\footnote{这里写“大多数”意思是排除体系的偶然简并}能级简并的原因。
+    \end{proposition}
+
+    假设体系有两种对称性, $\hat{A}$和$\hat{B}$, 但是$\left[\hat{A},\hat{B}\right]\neq 0$.我们可以选取一组由$\hat{H}$和$\hat{A}$的共同本征矢构成的完备正交基$\{\psi_n\}$:
+    \begin{equation}
+        \hat{H}\ket{\psi_n}=E_n\ket{\psi_n},\hat{Q}\ket{\psi_n}=q_n\ket{\psi_n}
+    \end{equation}
+    按照前面的解释, 简并性自然不能归咎于对称性A了, 但是设：
+    \[\ket{g_n}\equiv\hat{B}\ket{\psi_n}\]
+    
+    如果对称性B也无法带来简并, 那么只能说所有的$\ket{\psi_n}$也都是$\ket{B}$的本征矢, 也就是说存在一个$\hat{H},\hat{A},\hat{B}$的共同本征矢构成的完备正交基, 而这必须要求三者两两简并\footnote{对易算符存在一组共同本征矢构成的正交基逆命题也是成立的, 且更容易证明, 扩展到多个算符两两对易的情况也可证明。此命题就像在第三章提到过的, 非常重要, 如果不关注证明细节就当公理吧。}。
+    与$\left[\hat{A},\hat{B}\right]\neq 0$矛盾, 所以这个时候能级简并就可以由体系的对称性来解释了。
+    
+    最后附上一个例子, 我们将用旋转对称性来解释氢原子磁量子数的$2\ell+1$种不同取值(简并)。
+
+    \begin{thinknote}
+        
+    \end{thinknote}
+
+
     \include{appendix.tex}
 \end{document}  
