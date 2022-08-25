@@ -4186,7 +4186,18 @@
     最后附上一个例子, 我们将用旋转对称性来解释氢原子磁量子数的$2\ell+1$种不同取值(简并)。
 
     \begin{thinknote}
-        
+        氢原子的有心力场具有三个轴方向的旋转对称性, 也即各向同性。$\ket{\psi_{n\ell m}}$的能级简并重点就在于$L_x,L_y,L_z$互不对易(式\ref{eq:4.48})！
+        \[\left[\hat{H},\mathbf{L}\right]=0\Rightarrow\left[\hat{H},L_\pm\right]=0\]
+        设$\ket{\psi_{n\ell m}}$是$\hat{H}$的本征矢, 对应的能量为$E_n$:
+        \[\hat{H}\ket{\psi_{n\ell m}}=E_n\ket{\psi_{n\ell m}}\]
+        根据Hamilton与$L_\pm$的对易性得：
+        \[\hat{H}\left(L_\pm\ket{\psi_{n\ell m}}\right)=E_n L_\pm\ket{\psi_{n\ell m}}\]
+        再根据：
+        \[L_\pm \ket{\psi_{n\ell m}}=\hbar\sqrt{\ell(\ell+1)-m(m\pm 1)}\ket{\psi_{n\ell m+1}}\]
+        得出：
+        \[\hat{H}\left(L_\pm\ket{\psi_{n\ell m+1}}\right)=E_n L_\pm\ket{\psi_{n\ell m+1}}\]
+        而$|m|>\ell$时, 上式退化为$0=0$平凡成立。这也就用各向同性解释了$\psi_n\ell m$磁量子数的简并, 而角量子数的简并是因为势能的反比例形式的额外对称性
+        造成的。
     \end{thinknote}
 
 
