@@ -4199,7 +4199,100 @@
         而$|m|>\ell$时, 上式退化为$0=0$平凡成立。这也就用各向同性解释了$\psi_n\ell m$磁量子数的简并, 而角量子数的简并是因为势能的反比例形式的额外对称性
         造成的。
     \end{thinknote}
+    
+    \section{旋转选择定则}
+    我们前面讲了宇称选择定则, 大致就是在计算矩阵元时, 因为算符和宇称算符具有一定的对易关系, 我们可以在计算前就提前确定一些为0的元素, 从而简化计算。这里我们要讲的
+    旋转选择定则实际上是研究当算符和角动量算符具有一定关系的时候\footnote{当然, 这实际上就是与小角度转动$\hat{R}(\delta)$之间的对易关系}, 矩阵元为0的一些条件。我们下面的讨论不涉及宇称, 讨论标量算符和矢量算符的一般结论, 所以对于真赝
+    矢量(标量)都是适用的。\footnote{我们这些讨论最后可以进化为一个量子力学中非常重要的Wigner-Eckart定理}
+    \subsection{标量算符的选择定则}
+    根据标量算符的定义：
+    \begin{equation}
+        \left[\hat{\mathbf{L}},\hat{f}\right]=0\Rightarrow\begin{cases}
+            \left[\hat{L_\pm},\hat{f}\right]=0\\
+            \left[\hat{L}_z,\hat{f}\right]=0\\
+            \left[\hat{L}^2,\hat{f}\right]=0
+        \end{cases}
+    \end{equation}
 
+    下面我们将使用符号$\ket{\alpha\ell m}$来表示某个量子态, $\alpha,\ell,m$三个数是描述这个态相应的量子数, 所有可能取值的集合就构成了体系量子态的一组完备正交归一
+    基底。前面我们使用$\ket{n\ell m}$去描述氢原子, 这实际上是选取了$\hat{H},L^2,L_z$构成的CSCO。这里我们使用$\alpha $而不是$n$去标记就是表明我们完全可以依照研究内容的不同, 方便的取
+    $\hat{Q},L_z,L^2$作为CSCO, $\hat{Q}$不必再是哈密顿量。$\ket{\alpha\ell m}$是它们的共同本征矢, 所以关于角动量的那些代数结构结论我们可以继续用。
+    
+    根据$\left[\hat{L}_z,\hat{f}\right]=0$:
+    \begin{align*}
+        &\Braket{\alpha^\prime   \ell^\prime   m^\prime  |\left[\hat{L}_z,\hat{f}\right]|\alpha \ell m}=0\\
+        \Rightarrow&\Braket{\alpha^\prime   \ell^\prime   m^\prime  |\hat{L}_z\hat{f}|\alpha \ell m}-\Braket{\alpha^\prime   \ell^\prime   m^\prime  |\hat{f}\hat{L}_z|\alpha \ell m}=0\\
+        \Rightarrow&\left(m^\prime-m\right)\Braket{\alpha^\prime   \ell^\prime   m^\prime  |\hat{f}|\alpha \ell m}=0
+    \end{align*}
+    
+    注意上面最后一个等式的得到我们利用了\ref{eq:4.53}, $\hat L_z$的厄米性以及$m\in \mathbb{R}$。根据上面的推导, 当且仅当$m=m^\prime$时矩阵元$\braket{\alpha^\prime   \ell^\prime   m^\prime  |\hat{f}|\alpha \ell m}$
+    \uwave{可能}不为0。同样的, 根据$\left[\hat{L}^2,\hat{f}\right]=0$:
+    \begin{equation}
+        \left[\ell^\prime(ell^\prime +1)-\ell(\ell+1)\right]\Braket{\alpha^\prime   \ell^\prime   m^\prime  |\hat{f}|\alpha \ell m}=0
+    \end{equation}
 
+    这次我们得到的是当且仅当$\ell=\ell^\prime$时矩阵元可能不为0。\footnote{当然上面的方程如果$\ell^\prime=-(\ell+1)$时也会得到trivial的$0=0$, 但是显然根据角量子数的可能取值, 这个解需要舍弃。}
+    继续考虑$\left[\hat{L}_\pm,\hat{f}\right]=0$:
+    \begin{align*}
+        &\Braket{\alpha^\prime   \ell^\prime   m^\prime  |\left[\hat{L}_\pm,\hat{f}\right]|\alpha \ell m}=0\\
+        \Rightarrow&\Braket{\alpha^\prime   \ell^\prime   m^\prime  |\hat{L}_\pm\hat{f}-\hat{f}\hat{L}_\pm|\alpha \ell m}=0\\
+        \Rightarrow&\left(L_\mp\ket{\alpha^\prime   \ell^\prime   m^\prime  }\right)^\dagger\hat{f}\ket{\alpha\ell m}-\Braket{\alpha^\prime   \ell^\prime   m^\prime  |\hat{f}\hat{L}_\pm|\alpha\ell m}\\
+        \Rightarrow&\sqrt{\ell^\prime(\ell^\prime+1)-m^\prime(m^\prime\mp 1)}\Braket{\alpha^\prime   \ell^\prime   (m^\prime\mp 1)  |\hat{f}|\alpha \ell m}\\
+        &-\sqrt{\ell(\ell+1)-m(m\pm 1)}\Braket{\alpha^\prime   \ell^\prime   m^\prime  |\hat{f}|\alpha \ell (m\pm 1)}
+    \end{align*}
+    
+    再根据我们前面的两个结论只有在$m^\prime=m+1 \wedge \ell^\prime=\ell$的情况下, 上面的等式不是trivial的$0=0$。在这种情况下可以继续得到：
+    \begin{equation}
+        \Braket{\alpha^\prime\ell m|\hat{f}|n\ell m}=\Braket{\alpha^\prime\ell (m+1)|\hat{f}|n\ell (m+1)}
+    \end{equation}
+    
+    上面的式子可以反复迭代, 而且结合磁量子数取值的步长为1, 所以上面的式子说明的实际上是$\Braket{\alpha^\prime \ell m|\hat{f}|\alpha\ell m}$的取值与m无关\footnote{一定要注意在这个结论的适用条件下, 矩阵元前后的两个态仅仅是$\alpha$这个量子数有区别},所以这个时候我们可以使用统一的一个不包含m 的符号来指代这一系列相等的矩阵元：
+    \begin{equation}
+        \Braket{\alpha^\prime \ell \|\hat{f}\|\alpha\ell }\equiv\Braket{\alpha^\prime \ell -\ell|\hat{f}|\alpha\ell -\ell}=\cdots=\Braket{\alpha^\prime \ell \ell|\hat{f}|\alpha\ell \ell}
+    \end{equation}
+    这里使用了双竖线来区分, 称为约化矩阵元(reduced matrix element)。
+    
+    结合所有上面的三个结论, 可以发现实际上它们可以写成下面的形式：
+    \begin{lequation}
+        \label{eq:6.54}
+        \boxed{\Braket{\alpha^\prime\ell^\prime m^\prime|\hat{f}|\alpha \ell m}=\delta_{\ell\ell^\prime}\delta_{mm^\prime}\Braket{\alpha^\prime \ell \|\hat{f}\|\alpha\ell }}
+    \end{lequation}
+    下面举个例子来说明如何利用这个定理来简化计算：\footnote{啰嗦一句, 下面最后的计算使用的是球坐标计算, 这个表象下$\hat{r}^2$算符就是直接波函数乘上$r^2$。如果硬是要使用直角坐标计算, 那么这个表象下相当于波函数乘上$x^2+y^2+z^2$}
+    \begin{thinknote}
+        下面是氢原子系统电子的某个轨道量子态, 试求这个态下的$\braket{r^2}$：
+        \begin{equation}
+            \ket{\psi}=\frac{1}{\sqrt{2}}\left(\ket{200}-i\ket{211}\right)
+        \end{equation}
+        根据定义, 我们实际上要计算的是矩阵元$\Braket{\psi|\hat{r}^2|\psi}$, 而$\hat{r}^2$是一个标量算符。
+        \begin{align*}
+            \Braket{r^2}=&\frac{1}{2}\left(\bra{200}+i\bra{211}\right)\hat{r}^2\left(\ket{200}-i\ket{211}\right)\\
+            =&\frac{1}{2}\left(\Braket{200|\hat{r^2}|200}-i\Braket{200|\hat{r^2}|211}+i\Braket{211|\hat{r^2}|200}\right.\\
+            &\left.+\Braket{211|\hat{r^2}|211}\right)
+        \end{align*}
+        根据\ref{eq:6.54}：
+        \begin{equation}
+            \Braket{200|\hat{r^2}|211}=\Braket{211|\hat{r^2}|200}=0
+        \end{equation}
+        而计算另外两个实际上是计算约化矩阵元:
+        \[\Braket{20\|\hat{r^2}\|20}\quad \text{and}\quad \Braket{21\|\hat{r^2}\|21}\]
+        我们可以都选取$m=0$来简化约化矩阵元的计算, 详细计算过程贴在这里了：
+        \begin{align*}
+            \Braket{20\|\hat{r^2}\|20}&=\Braket{200|\hat{r^2}0|200}\\
+            &=\int r^{2}\left|\psi_{200}(r)\right|^{2} d^{3} \mathbf{r} \\
+            &=\int_{0}^{\infty} r^{4}\left|R_{20}(r)\right|^{2} d r \int\left|Y_{0}^{0}(\theta, \phi)\right|^{2} d \Omega \\
+            &=\int_{0}^{\infty} r^{4} \frac{1}{2 a^{3}}\left(1-\frac{1}{2} \frac{r}{a}\right)^{2} e^{-r / a} d r \\
+            &=\boxed{42 a^{2} }
+        \end{align*}
+        \begin{align*}
+            \Braket{21\|\hat{r^2}\|21}&=\Braket{210|\hat{r^2}0|210}\\
+            &=\int r^{2}\left|\psi_{210}(r)\right|^{2} d^{3} \mathbf{r} \\
+            &=\int_{0}^{\infty} r^{4}\left|R_{21}(r)\right|^{2} d r \int\left|Y_{1}^{0}(\theta, \phi)\right|^{2} d \Omega\\
+            &=\int_{0}^{\infty} r^{4} \frac{1}{24 a^{3}} \frac{r^{2}}{a^{2}} e^{-r / a} d r\\
+            &=\boxed{30 a^{2}}
+        \end{align*}
+        所以最终的结果为$36a^2$, $a$是玻尔半径。
+    \end{thinknote}
+
+    \subsection{矢量算符的选择定则}
     \include{appendix.tex}
 \end{document}  
