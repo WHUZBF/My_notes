@@ -1010,12 +1010,13 @@
     
     当然, $m$的取值问题就非常trival了, 直接相加就好了, 并且也会从$-s$取到$s$。而且$\ket{s,m}$(耦合表象)和$\ket{s_1,s_2,m_1,m_2}$(非耦合表象)这两种表象之间有如下的变换关系：
     \begin{equation}
+        \label{eq:4.96}
         \ket{s,m}=\sum_{m_1+m_2=m}C_{m_1m_2m}^{s_1s_2s}\ket{s_1,s_2,m_1,m_2}
     \end{equation}
     其中$C_{m_1m_2m}^{s_1s_2s}$是\textbf{CG系数}\footnote{Clebsch–Gordan coefficients}。利用这个式子, 我们可以根据$s$和$m$的取值推断出测量体系中的单个粒子得到结果的概率分布。
     反过来, 也可以已知单个粒子的状态参量, 根据下面的式子使用$\ket{s,m}$表出, 从而计算出测量结果$s,m$的取值和概率分布：
     \begin{equation}
-        \ket{s_1,s_2,m_1,m_2}=\sum_{m}C_{m_1m_2m}^{s_1s_2s}\ket{s,m}\quad (m=m_1+m_2)
+        \ket{s_1,s_2,m_1,m_2}=\sum_{s}C_{m_1m_2m}^{s_1s_2s}\ket{s,m}\quad (m=m_1+m_2)
     \end{equation}
     
     这一切的一切都需要使用$CG$系数表, 其使用方法从书上的具体例子和习题中去领会。

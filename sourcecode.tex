@@ -2810,12 +2810,13 @@
     
     当然, $m$的取值问题就非常trival了, 直接相加就好了, 并且也会从$-s$取到$s$。而且$\ket{s,m}$(耦合表象)和$\ket{s_1,s_2,m_1,m_2}$(非耦合表象)这两种表象之间有如下的变换关系：
     \begin{equation}
+        \label{eq:4.96}
         \ket{s,m}=\sum_{m_1+m_2=m}C_{m_1m_2m}^{s_1s_2s}\ket{s_1,s_2,m_1,m_2}
     \end{equation}
     其中$C_{m_1m_2m}^{s_1s_2s}$是\textbf{CG系数}\footnote{Clebsch–Gordan coefficients}。利用这个式子, 我们可以根据$s$和$m$的取值推断出测量体系中的单个粒子得到结果的概率分布。
     反过来, 也可以已知单个粒子的状态参量, 根据下面的式子使用$\ket{s,m}$表出, 从而计算出测量结果$s,m$的取值和概率分布：
     \begin{equation}
-        \ket{s_1,s_2,m_1,m_2}=\sum_{m}C_{m_1m_2m}^{s_1s_2s}\ket{s,m}\quad (m=m_1+m_2)
+        \ket{s_1,s_2,m_1,m_2}=\sum_{s}C_{m_1m_2m}^{s_1s_2s}\ket{s,m}\quad (m=m_1+m_2)
     \end{equation}
     
     这一切的一切都需要使用$CG$系数表, 其使用方法从书上的具体例子和习题中去领会。
@@ -3381,7 +3382,7 @@
     根据球坐标换元我们马上可以得到上面积分的结果为：
     \begin{align*}
         \mathrm{Ans}&=\frac{512}{\pi a^6}\int d^3r_1\int_0^{+\infty}\frac{r_2^2 e^{\frac{4(r_1+r_2)}{a}}}{|r_1+r_2|+|r_1-r_2|}dr_2\\
-        &=\int_0^{+\infty}\frac{32}{a^4}e^{-\frac{8r_1}{a}}frac{a(e^{\frac{4r_1}{a}}-1)-2r_1}{r_1}\cdot 4\pi r_1^2dr_1\\
+        &=\int_0^{+\infty}\frac{32}{a^4}e^{-\frac{8r_1}{a}}\frac{a(e^{\frac{4r_1}{a}}-1)-2r_1}{r_1}\cdot 4\pi r_1^2dr_1\\
         &=\boxed{\frac{5}{4a}}
     \end{align*}
     根据上面的算式我们可以估算基态能量的修正值为：
@@ -4081,6 +4082,7 @@
 
     现在回看我们的推导, 不难发现上面的定义等价于说矢量算符$\hat{\mathbf{V}}$和角动量算符之间满足如下的对易关系：
     \begin{lequation}
+        \label{eq:6.42}
         \boxed{
             \left[\hat L_i,\hat V_j\right]=\mathrm{i}\hbar\epsilon_{ijk}\hat{V}_k
         }
@@ -4248,6 +4250,7 @@
     
     上面的式子可以反复迭代, 而且结合磁量子数取值的步长为1, 所以上面的式子说明的实际上是$\Braket{\alpha^\prime \ell m|\hat{f}|\alpha\ell m}$的取值与m无关\footnote{一定要注意在这个结论的适用条件下, 矩阵元前后的两个态仅仅是$\alpha$这个量子数有区别},所以这个时候我们可以使用统一的一个不包含m 的符号来指代这一系列相等的矩阵元：
     \begin{equation}
+        \label{eq:6.53}
         \Braket{\alpha^\prime \ell \|\hat{f}\|\alpha\ell }\equiv\Braket{\alpha^\prime \ell -\ell|\hat{f}|\alpha\ell -\ell}=\cdots=\Braket{\alpha^\prime \ell \ell|\hat{f}|\alpha\ell \ell}
     \end{equation}
     这里使用了双竖线来区分, 称为约化矩阵元(reduced matrix element)。
@@ -4255,7 +4258,7 @@
     结合所有上面的三个结论, 可以发现实际上它们可以写成下面的形式：
     \begin{lequation}
         \label{eq:6.54}
-        \boxed{\Braket{\alpha^\prime\ell^\prime m^\prime|\hat{f}|\alpha \ell m}=\delta_{\ell\ell^\prime}\delta_{mm^\prime}\Braket{\alpha^\prime \ell \|\hat{f}\|\alpha\ell }}
+        \boxed{\Braket{\alpha^\prime\ell^\prime m^\prime|\hat{f}|\alpha \ell m}=\delta_{\ell\ell^\prime}\delta_{mm^\prime}\Braket{\alpha^\prime \ell^\prime \|\hat{f}\|\alpha\ell }}
     \end{lequation}
     下面举个例子来说明如何利用这个定理来简化计算：\footnote{啰嗦一句, 下面最后的计算使用的是球坐标计算, 这个表象下$\hat{r}^2$算符就是直接波函数乘上$r^2$。如果硬是要使用直角坐标计算, 那么这个表象下相当于波函数乘上$x^2+y^2+z^2$}
     \begin{thinknote}
@@ -4277,7 +4280,7 @@
         \[\Braket{20\|\hat{r^2}\|20}\quad \text{and}\quad \Braket{21\|\hat{r^2}\|21}\]
         我们可以都选取$m=0$来简化约化矩阵元的计算, 详细计算过程贴在这里了：
         \begin{align*}
-            \Braket{20\|\hat{r^2}\|20}&=\Braket{200|\hat{r^2}0|200}\\
+            \Braket{20\|\hat{r^2}\|20}&=\Braket{200|\hat{r^2}|200}\\
             &=\int r^{2}\left|\psi_{200}(r)\right|^{2} d^{3} \mathbf{r} \\
             &=\int_{0}^{\infty} r^{4}\left|R_{20}(r)\right|^{2} d r \int\left|Y_{0}^{0}(\theta, \phi)\right|^{2} d \Omega \\
             &=\int_{0}^{\infty} r^{4} \frac{1}{2 a^{3}}\left(1-\frac{1}{2} \frac{r}{a}\right)^{2} e^{-r / a} d r \\
@@ -4294,5 +4297,59 @@
     \end{thinknote}
 
     \subsection{矢量算符的选择定则}
+    矢量算符比标量算符麻烦多了, 首先类似于$\hat L_\pm$, 我们定义$\hat V_\pm$:
+    \begin{equation}
+        \hat V_\pm\equiv\hat{V}_x\pm i \hat{V}_x
+    \end{equation}
+    根据\ref{eq:6.42}, 我们有如下的对易关系：
+    \begin{align}
+        {\left[\hat{L}_{z}, \hat{V}_{z}\right] } &=0 \label{eq:6.57}\\
+        {\left[\hat{L}_{z}, \hat{V}_{\pm}\right] } &=\pm \hbar \hat{V}_{\pm} \label{eq:6.58} \\
+        {\left[\hat{L}_{\pm}, \hat{V}_{\pm}\right] } &=0 \label{eq:6.59} \\
+        {\left[\hat{L}_{\pm}, \hat{V}_{z}\right] } &=\mp \hbar \hat{V}_{\pm} \label{eq:6.60} \\
+        {\left[\hat{L}_{\pm}, \hat{V}_{\mp}\right] } &=\pm 2 \hbar \hat{V}_{z} \label{eq:6.61}
+    \end{align}
+
+    然后我们要干的活儿就和上一节一样了, 还是把这些对易关系夹在中间。\ref{eq:6.57}和\ref{eq:6.58}的计算比较简单, 可以据此得到：
+    \begin{align}
+        \Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{+}| \alpha \ell m}  & = 0 \quad \text { unless } m^{\prime}  = m+1\label{eq:6.63}\\
+        \Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{z}| \alpha \ell m}  & = 0 \quad \text { unless } m^{\prime}  = m\label{eq:6.64}\\
+        \Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{-}| \alpha \ell m}  & = 0 \quad \text { unless } m^{\prime}  = m-1 \label{eq:6.65}
+    \end{align}
+    
+    再根据$\hat{V}_x,\hat{V}_y$与$\hat{V}_+,\hat{V}_-$之间的关系就可以将上述选择定则用于计算$\Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{x}| \alpha \ell m}$和
+    $\Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{y}| \alpha \ell m}$了。
+    
+    比较难的是\ref{eq:6.59}$\sim$\ref{eq:6.61}的计算, 下面给出最一般的结论, 和最最一般的Wigner-Eckart定理已经非常相近了\footnote{这一节Griffiths书后面的习题有一个\uwave{验证性}证明。}：
+    \begin{equation}
+        \label{eq:6.66}
+        \boxed{
+            \begin{aligned}
+                \Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{+}| \alpha \ell m}  & = -\sqrt{2}C^{\ell 1 \ell^\prime}_{m 1 m^\prime}\Braket{\alpha^\prime\ell^\prime\|\mathbf{V}\|\alpha\ell}\\
+                \Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{-}| \alpha \ell m}  & =  \sqrt{2}C^{\ell 1 \ell^\prime}_{m -1 m^\prime}\Braket{\alpha^\prime\ell^\prime\|\mathbf{V}\|\alpha\ell}\\
+                \Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{z}| \alpha \ell m}  & =  C^{\ell 1 \ell^\prime}_{m 0 m^\prime}\Braket{\alpha^\prime\ell^\prime\|\mathbf{V}\|\alpha\ell}
+            \end{aligned}
+        }
+    \end{equation}
+    
+    这里我们又遇到了CG系数$C^{j_1j_2J}_{m_1m_2M}$, 上面的式子实际上是包含了6.63, 6.64和6.65的结论的。因为CG系数仅在
+    \[m_1+m_2=M\quad\text{and}\quad J=(j_1+j_2),(j_1+j_2-1),\ldots,|j_1-j_2|\]
+    的情况下不为0, 可以用角动量合成的理论理解。态$\ket{s,m}$只能分解成那些满足上式取值的态$\ket{s_1,s_2,m_1,m_2}$的线性组合(\ref{eq:4.96})。所以那些不满足这些取值的$C^{j_1j_2J}_{m_1m_2M}$
+    在CG系数表里面压根没有, 也就是说它们等于0. 根据这里的讨论, 我们得出$\hat{\mathbf{V}}$的各个分量的矩阵元$\Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{i}| \alpha \ell m} $
+    \textbf{不为0}的条件是：
+    \begin{equation*}
+        \boxed{
+            \Delta \ell = 0,\pm 1\quad \text{and}\quad \Delta m = 0,\pm 1 
+        }
+    \end{equation*}
+
+    特别注意, 这里的约化矩阵元$\Braket{\alpha^\prime\ell^\prime\|\mathbf{V}\|\alpha\ell}$是一个与$m,m^\prime$无关的量, 但是并不是和\ref{eq:6.53}一般的定义, 也就是
+    说\textbf{不能通过随便选取$m$来计算它}。详细的定义比较复杂, 但是我们可以根据\ref{eq:6.66}来间接计算出它, 比如根据第三个式子, 我们只要按照通常的方法计算矩阵元
+    $\Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{z}| \alpha \ell m} $, 然后再乘上一个系数就可以了。
+
+    最后, 因为$C^{\ell 0\ell^\prime}_{m0m^\prime}=\delta_{mm^\prime}\delta_{\ell\ell^\prime}$, 所以我们可以把标量算符的选择定则\ref{eq:6.54}写成类似的形式：
+    \begin{equation}
+        \boxed{\Braket{\alpha^\prime\ell^\prime m^\prime|\hat{f}|\alpha \ell m}=C^{\ell 0\ell^\prime}_{m0m^\prime}\Braket{\alpha^\prime \ell^\prime \|\hat{f}\|\alpha\ell }}
+    \end{equation}
     \include{appendix.tex}
 \end{document}  
