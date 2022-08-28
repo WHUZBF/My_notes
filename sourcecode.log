@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  28 AUG 2022 00:21
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  29 AUG 2022 00:44
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2311,12 +2311,12 @@ File: fig/6.3.pdf Graphic file (type pdf)
  [121] [122] [123] [124] [125] [126]
 File: fig/6-4.pdf Graphic file (type pdf)
 <use fig/6-4.pdf>
- [127] [128] [129] [130] [131]
+ [127] [128] [129] [130] [131] [132]
 Overfull \hbox (1.51637pt too wide) in paragraph at lines 4350--4351
 []\TU/SimSun(0)/m/n/12.045 最 后\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 因 为 $\OML/ntxmi/m/it/12.045 C[] \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 ^^N[]^^N[]$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 所 以 我 们 可 以 把 标 量 算 符 的 选 择 定 则[][]\T1/ntxtlf/m/n/12.045 6.54[][]\TU/SimSun(0)/m/n/12.045 写
  []
 
-[132] [133]
+[133]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex

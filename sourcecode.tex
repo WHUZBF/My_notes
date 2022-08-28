@@ -3971,7 +3971,7 @@
     \end{equation}
     忽略高阶小量$\mathcal{O}(\delta)$, 有\footnote{我们这里写了这么多$\approx$你可能认为最后得到的只是一个近似结果, 实际上是严格的等式。物理中这里使用$\approx$表示的是扔掉高阶小量, 你可以认为这些运算都是带上极限符号$\lim\limits_{\delta\to0}$, 只是没有明确写出来而已。在极限的语境下我们这些等式显然都是\textbf{严格成立}的。}：
     \begin{align}
-        \hat{\mathbf{r}}^\prime&=R_x(\delta)^\dagger\hat{\mathbf{r}}R_x(\delta)=\left(1+i\frac{\delta}{\hbar}\hat{L}_x\right)\hat{\mathbf{r}}\left(1-i\frac{\delta}{\hbar}\hat{L}_x\right)\\
+        \hat{\mathbf{r}}^\prime&=R_x(\delta)^\dagger\hat{\mathbf{r}}R_x(\delta)=\left(\mathbbm{1}+i\frac{\delta}{\hbar}\hat{L}_x\right)\hat{\mathbf{r}}\left(\mathbbm{1}-i\frac{\delta}{\hbar}\hat{L}_x\right)\\
         &\approx\boxed{\hat{\mathbf{r}}+i\frac{\delta}{\hbar}\left[\hat{L}_x,\hat{\mathbf{r}}\right]}
     \end{align}
     根据角动量算符的定义$\hat{\mathbf{L}}\equiv\hat{\mathbf{r}}\times\hat{\mathbf{p}}$, 以及基本对易式\ref{eq:4.48*}。可以得到：
@@ -4059,13 +4059,13 @@
             \hat{z}
             \end{array}\right)
     \end{equation}
-    同样的对于绕y轴和z轴的转动, 上面的矩阵应该改为：
+    同样的对于绕y轴和z轴的转动, 上面的矩阵应该改为：\footnote{一定要注意绕y轴转动的那个矩阵, $-\sin\phi$在左下方, 和另外两个看起来不同。这是旋转矩阵比较容易记混的地方。}
     \begin{equation}
         \label{eq:6.41}
         \begin{pmatrix}
-            \cos\varphi & 0 & -\sin\varphi \\
+            \cos\varphi & 0 & \sin\varphi \\
             0 & 1& 0 \\
-            \sin\varphi& 0  & \cos\varphi
+            {\color{red}-\sin\varphi}& 0  & \cos\varphi
         \end{pmatrix}\quad\text{and}\quad
         \begin{pmatrix}
             \cos\varphi & -\sin\varphi& 0  \\
@@ -4077,7 +4077,7 @@
     这和我们刚体力学中接触到的转动矩阵是完全一致的, 算符$\hat{\mathbf{r}}$的旋转和矢量的旋转是一致的！这就涉及到我们下面要定义的\textbf{矢量算符了}。
     
     附录$\S $A.5中我们定义了欧氏空间中的矢量和张量, 这里类似的, 我们可以定义矢量算符就是在旋转变换下各个分量按照$\hat{\mathbf{r}}$的方式(\ref{eq:6.34},\ref{eq:6.41})变换的算符。
-    等等, 这里的矩阵为何与\ref{eq:A.7}相差一个负号？这是因为我们这里的观点就是所谓的主动观点, 整个系统旋转, 原先的坐标系不变, 然后再考察算符的形式。而我们在刚体力学或是附录A中使用的一般是被动形式描述, 也就是说系
+    等等, 这里的矩阵为何与\ref{eq:A.7}相差一个负号？这是因为\textbf{我们这里的观点就是所谓的主动观点}, 整个系统旋转, 原先的坐标系不变, 然后再考察算符的形式。而我们在刚体力学或是附录A中使用的一般是被动形式描述, 也就是说系
     统本身不变, 参照系反而旋转, 然后再看算符在新的参照系下的形式。这两种观点等价, 数学描述上显然差了个负号, 但是无伤大雅。
 
     现在回看我们的推导, 不难发现上面的定义等价于说矢量算符$\hat{\mathbf{V}}$和角动量算符之间满足如下的对易关系：

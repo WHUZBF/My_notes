@@ -50,7 +50,7 @@
 \contentsline {section}{\numberline {6.4}简并与对称}{126}{section.6.4}%
 \contentsline {section}{\numberline {6.5}旋转选择定则}{129}{section.6.5}%
 \contentsline {subsection}{\numberline {6.5.1}标量算符的选择定则}{129}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}矢量算符的选择定则}{131}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.2}矢量算符的选择定则}{132}{subsection.6.5.2}%
 \contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{134}{appendix.A}%
 \contentsline {section}{\numberline {A.1}指标运算}{134}{section.A.1}%
 \contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{135}{section.A.2}%
