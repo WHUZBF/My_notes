@@ -33,6 +33,7 @@
 \usepackage{framed}             % 实现方框效果
 \usetikzlibrary{positioning}   % tikz绘图相对位置
 \usetikzlibrary{decorations.pathreplacing} % tikz画大括号
+\usetikzlibrary{arrows.meta} % tikz画各种箭头
 \usetikzlibrary{patterns}  %条纹
 \tikzset{elegant/.style={smooth,thick,samples=50,cyan}}
 \usepackage[]{newtxmath}
@@ -43,6 +44,7 @@
 \DeclareSIUnit\angstrom{\text {Å}}
 \usepackage{diagbox}
 \usepackage[final]{pdfpages}
+\newcommand{\DOI}[1]{doi: \href{https://doi.org/#1}{#1}} % 引用文献超链接
 
 % 定义公式环境
 \newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
@@ -93,5 +95,6 @@
     \include{chapter03.tex}
     \include{chapter04.tex}
     \include{chapter05.tex}
+    \include{chapter06.tex}
     \include{appendix.tex}
 \end{document}

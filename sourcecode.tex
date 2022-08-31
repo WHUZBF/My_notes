@@ -41,6 +41,7 @@
 \DeclareSIUnit\angstrom{\text {Å}}
 \usepackage{diagbox}
 \usepackage[final]{pdfpages}
+\newcommand{\DOI}[1]{doi: \href{https://doi.org/#1}{#1}} % 引用文献超链接
 
 % 定义公式环境
 \newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
@@ -545,6 +546,7 @@
     可以确定递推关系前面的系数(老规矩, 归一化只能确定模长, 但是我们只取最简单的那个值)。
     \begin{lequation}
         \boxed{
+            \label{eq:2.21}
             \hat{a}_+\psi_n=\sqrt[]{n+1}\psi_{n+1},\quad\hat{a}_-\psi_n=\sqrt[]{n}\psi_{n-1}
         }
     \end{lequation}
@@ -1612,7 +1614,7 @@
         &=\frac{i}{\hbar}\Braket{\Psi|\hat H\hat Q|\Psi}+\Braket{\Psi|\frac{\partial \hat{Q}}{\partial t}|\Psi}-\frac{i}{\hbar}\Braket{\Psi|\hat Q\hat H|\Psi}\\
         &=\frac{i}{\hbar}\Braket{\Psi|\left[\hat H,\hat Q\right]|\Psi}+\Braket{\frac{\partial \hat Q}{\partial t}}
     \end{align*}
-    也就是说对于任何的可观测量, 我们可以得到它的平均值随时间变化的规律, 是与体系的哈密顿算符(量)之间相关的：
+    也就是说对于任何的可观测量, 我们可以得到它的平均值随时间变化的规律, 是与体系的哈密顿算符(量)之间相关的：\footnote{回忆一下经典力学中, 力学量$f(q,p,t)$有$\frac{df}{dt}=\left\{f,H\right\}+\frac{\partial f}{\partial t}$, 再次体现了经典力学泊松括号和量子力学对易括号的密切联系。}
     \begin{equation}
         \label{广义欸费斯托定理}
         \boxed{
@@ -3767,7 +3769,7 @@
     \end{equation}
     显然, \textbf{平移算符是幺正算符}。
     \begin{define}{算符的平移变换}
-        我们定义\footnote{后面你会看到为啥要这样定义},算符$\hat{Q}$平移后的算符$\hat{Q}\prime$由下式给出：
+        我们定义\footnote{本章末尾你会看到为啥要这样定义},算符$\hat{Q}$平移后的算符$\hat{Q}\prime$由下式给出：
         \begin{equation}
             \Braket{\psi^\prime|\hat Q|\psi^\prime}=\Braket{\psi|\hat Q|\psi}
         \end{equation}
@@ -3788,7 +3790,7 @@
     这也是非常符合常理的, 我们说平移可以有两种观点, 一种是主动观点, 就是参考系不动, 把整个系统平移；二是系统不动, 把参考系相对系统向相反方向平移。这两种观点是等价的,
     无论使用那种观点, 最终结果都是把所有的$x$换成$x-a$, $\hat{Q}^\prime$就是平移后系统的力学量算符。
 
-    我们现在再来解释一下这样定义的原因。注意, 我们说平移一个系统, 应当认为粒子和势场它们这个整体构成了一个系统, 所以平移应当是粒子和势场整体的平移。如果你对这种主动观点保有疑问, 那就使用被动观点,
+    我们现在初步解释一下这样定义的原因, 重点在于系统变换前后薛定谔方程的变换。注意, 我们说平移一个系统, 应当认为粒子和势场它们这个整体构成了一个系统, 所以平移应当是粒子和势场整体的平移。如果你对这种主动观点保有疑问, 那就使用被动观点,
     认为平移就是坐标系平移下。
 
     物理规律是有平移对称性的, 这一点我们必须承认, 我们现在考虑体系的薛定谔定态方程：
@@ -4320,7 +4322,7 @@
     再根据$\hat{V}_x,\hat{V}_y$与$\hat{V}_+,\hat{V}_-$之间的关系就可以将上述选择定则用于计算$\Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{x}| \alpha \ell m}$和
     $\Braket{\alpha^{\prime} \ell^{\prime} m^{\prime}|\hat{V}_{y}| \alpha \ell m}$了。
     
-    比较难的是\ref{eq:6.59}$\sim$\ref{eq:6.61}的计算, 下面给出最一般的结论, 和最最一般的Wigner-Eckart定理已经非常相近了\footnote{这一节Griffiths书后面的习题有一个\uwave{验证性}证明。}：
+    比较难的是\ref{eq:6.59}$\sim$\ref{eq:6.61}的计算, 下面给出最一般的结论, 和最最一般的Wigner-Eckart定理已经非常相近了\footnote{这一节{\itshape Griffiths}书后面的习题有一个\uwave{验证性}证明。}：
     \begin{equation}
         \label{eq:6.66}
         \boxed{
@@ -4351,5 +4353,170 @@
     \begin{equation}
         \boxed{\Braket{\alpha^\prime\ell^\prime m^\prime|\hat{f}|\alpha \ell m}=C^{\ell 0\ell^\prime}_{m0m^\prime}\Braket{\alpha^\prime \ell^\prime \|\hat{f}\|\alpha\ell }}
     \end{equation}
+
+    \section{时间平移对称性}
+    按照空间平移算符的定义, 或许时间平移算符就是将态在时间轴上平移, 也就是说得到演化一段时间后的态$\ket{\psi(t+t_0)}$。既然谈到态的演化, 我们就更应该用薛定谔方程来详细引入：
+    \[i\hbar\frac{\partial}{\partial t}\ket{\psi(t)}=\hat{H}\ket{\psi(t)}\]
+    这个方程唯一确定了态随时间的演化, 我们如此定义\textbf{时间演化算符}：
+    \begin{equation}
+        \label{eq:6.68}
+        \hat{U}(t,t_0)\ket{\psi(t_0)}=\ket{\psi(t)}
+    \end{equation}
+    我们一般便利的取$t_0=0$下面的推导中我们简写算符为$\hat{U}(t)$。
+
+    我们在位置表象下用波函数来表示\ref{eq:6.68}, 并把波函数对$t$作麦克劳林展开\footnote{并不是所有函数都能随便展开成幂级数形式, 对应的还要考虑收敛域, 所以下面我们得到了时间演化算符的形式严格意义上来说\textbf{并不是普适的}。这篇论文研究了这个问题：\DOI{10.1119/1.4985723}。物理人用起来实际上也很少有问题, 彻底严谨化那套是数学家玩的。}：
+    \begin{align*}
+        \hat{U}(t)\Psi(\mathbf{r},0)&=\Psi(\mathbf{r},t)\\
+        &=\sum_{n=0}^\infty \frac{t^n}{n!}\left.\frac{\partial^{n}}{\partial t^{n}} \Psi(\mathbf{r}, t)\right|_{t=0}
+    \end{align*}
+    如果$\hat{H}$不显含时间, 根据薛定谔方程：
+    \begin{equation}
+        \left.\frac{\partial^{n}}{\partial t^{n}} \Psi(\mathbf{r}, t)\right|_{t=0}=\left(\frac{\hat{H}}{i\hbar}\right)^n\Psi(\mathbf{r},0)
+    \end{equation}
+    代入上面的推导, 我们便得到时间演化算符的具体形式：
+    \begin{equation}
+        \label{eq:6.70}
+        \boxed{\hat{U}(t)=\exp \left[-\frac{i t}{\hbar} \hat{H}\right]}
+    \end{equation}
+    
+    这个玩意和薛定谔方程是等价的, 都唯一确定了量子态在给定初值下的演化。对一个体系, 如果我们得到了其态空间内的一组完备基, 不妨就用$\ket{\psi}$标记\footnote{这里我们选择了最方便的形式, 只有一个指标来标记基底。但实际上可以有多个指标, 这与我们CSCO的选取有关, 比如我们接触过的$\ket{n\ell m}$}。
+    我们可以把初态写成这些的线性组合：
+    \[\ket{\Psi(0)}=\sum_{n=1}^{\infty}c_n\ket{\psi_n}\]
+    则态之后的演化可以根据时间演化算符的作用得到：
+    \[\ket{\Psi(t)}=\hat{U}(t)\ket{\Psi(0)}=\sum_{n=1}^{\infty}c_ne^{-i\frac{t}{\hbar}\hat{H}}\ket{\psi_n}\]
+    如果我们取的就是能量表象, 根据定态方程, 上式可以便为：
+    \[\ket{\Psi(t)}=\sum_{n=1}^{\infty}c_ne^{-i\frac{t}{\hbar}E_n}\ket{\psi_n}\]
+    我们再次得到了前面通过空间时间分离变量得到的结论。
+    
+    \subsection{薛定谔/海森堡绘景}
+    不难发现, 时间演化算符又是一个幺正算符。按照套路, 我们现在应该去研究一般的算符在这个算符下的幺正变换了, 即$\hat Q^\prime=\hat{U}^\dagger\hat{Q}\hat{U}$。前面的这些变换后的算符都可以解释为系统在平移或者旋转这些空间变换之后算符的形式。那这里应该解释成体系在时间演化下
+    算符的变化吗？也即算符随时间的演化？可前面我们说一个系统随时间演化时位置动量算符都不随时间变化啊？！这里我们就需要引入\textbf{薛定谔绘景(Sch\"odinger picture)}和\textbf{海森堡绘景(Heisenberg picture)}了。
+    
+    回到最初我们说对算符的“平移”,“旋转”操作。对于某个力学量$Q$, 我们要计算体系在平移前后力学量的平均值:
+    \begin{align*}
+        \text{before}:&\braket{Q}=\Braket{\psi|\hat{Q}|\psi}\\
+        \text{after}:&\braket{Q}=\Braket{\psi^\prime|\hat{Q}|\psi^\prime}=\Braket{\psi|T^\dagger\hat{Q}T|\psi}
+    \end{align*}
+    
+    不难发现, 我们要计算平移后力学量的平均值, 一种很自然的观点就是算符还是那个算符, 但是体系给平移一下；另一种观念就是态矢我们不变, 还是用原来那个态矢, 但是
+    我们计算的时候中间“夹”的那个算符用“平移后的算符”$\hat{Q}^\prime=T^\dagger\hat{Q}T$。把这个空间平移换成时间平移, 我们前面实际上一直使用的都是薛定谔绘景, 
+    回忆一下计算某个力学量在某个时刻的平均值我们是这样做的：
+    \[\braket{Q}=\Braket{\psi(t)|\hat{Q}_S|\psi(t)}\]
+    
+    动量、位置算符这些本身都不随时间变化, 态矢量按照薛定谔方程随时间演化, 从而导致力学量的演化。为了和后面的海森堡绘景区分, 我们为对应的力学量加上了下标S。
+
+    态矢随时间的演化可以用时间演化算符确定, 将\ref{eq:6.68}代入上式, 我们得到：
+    \[\braket{Q}=\Braket{\psi(0)|\left(\hat{U}^\dagger\hat{Q}_S\hat{U}\right)|\psi(0)}\]
+    我们定义：
+    \begin{equation}
+        \label{eq:6.71}
+        \hat{Q}_H(t)\equiv\hat{U}^\dagger(t)\hat{Q}_S\hat{U}(t)
+    \end{equation}
+    
+    现在我们计算$\braket{Q}$采取态矢量不动(计算时始终用初态$\ket{\psi(0)}$), 而算符随着时间演化的方法。这两个绘景就是描述同一个问题的两种方法, 只是看到底把时间演化归咎于态本身还是力学量算符而已。某种意义上来说, 海森堡绘景就是
+    \textbf{态空间基矢运动, 态矢不动}；薛定谔绘景就是\textbf{基矢不动, 态矢运动}。就像是一个时钟, 我们可以表针不动表盘运动, 也可以表盘运动表针不动, 但都指向同一个正确的时间\footnote{当然还可以表针表盘一起动, 这是相互作用绘景(Dirac绘景)。}。
+    
+    采用薛定谔绘景时\footnote{后面都用这个绘景}, 重点就是利用薛定谔方程计算态矢随时间的变化。而对应的海森堡绘景, 这个时候$\hat{Q}_H(t)$的演化满足\textbf{海森堡方程}, 下面我们
+    对于哈密顿量和力学量$Q$不显含时间的情况加以说明。
+
+    将\ref{eq:6.71}两边对时间微分：
+    \begin{equation}
+        \label{eq:6.72}
+        \frac{d\hat{Q}_H}{dt}=\frac{d\hat{U}^\dagger}{dt}\hat{Q}_S\hat{U}+\hat{U}^\dagger\hat{Q}_S\frac{d\hat{U}}{dt}
+    \end{equation}
+    再根据\ref{eq:6.70}以及附录$\S$B.6相关内容：
+    \begin{equation}
+        \frac{d\hat{U}}{dt}=\frac{\hat{H}}{i\hbar}\hat{U}
+    \end{equation}
+    代入到\ref{eq:6.72}得：
+    \begin{align*}
+        i\hbar\frac{d\hat{Q}_H}{dt}&=\hat{U}^\dagger\hat{Q}_S\hat{H}\hat{U}-\hat{H}\hat{U}^\dagger\hat{Q}_S\hat{U}\\
+        &=\left[\hat{U}^\dagger\hat{Q}_S\hat{U},\hat{H}\right]\equiv\left[\hat{Q}_H,\hat{H}\right]
+    \end{align*}
+
+    注意第二个等号我们利用了$\left[\hat{H},\hat{U}\right]=0$。其实和玩意和反复提及的\ref{广义欸费斯托定理}形式很像是吧。利用它, 我们就可以更为便利的去计算某个具体系统的
+    $\hat{x}_H$等等, 我们下面以谐振子为例。\footnote{注意下面的推导中, 利用了$\hat{Q}_H(0)=\hat{Q}_S$去表达结果}
+    \[\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2x^2\]
+    \begin{thinknote}
+        首先我们直接按照定义来求:
+        \[\hat{x}_H(t)=\mathrm e^{i\frac{t}{\hbar}\hat{H}}\hat{x}\mathrm e^{-i\frac{t}{\hbar}\hat{H}}\]
+        直接这么算肯定很难, 我们得充分利用已知结论, 利用升降阶算符, 我们可以把位置算符写成：
+        \[\hat{x}=\sqrt{\frac{\hbar}{2m\omega}}\left(\hat{a}_++\hat{a}_-\right)\]
+        而算符最终肯定是要作用到态矢量上面的, 我们不妨就选取能量表象下的$\ket{\psi_n}$, 由于它们张成了体系的态空间, 所以只要求出$\hat{x}_H$对每个$\ket{\psi_n}$都成立, 那也就顺理成章的对所有的态都成立了。
+        \begin{align*}
+            \hat{x}_H(t)\ket{\psi_n}&=\mathrm e^{i\frac{t}{\hbar}\hat{H}}\sqrt{\frac{\hbar}{2m\omega}}\left(\hat{a}_++\hat{a}_-\right)\mathrm e^{-i\frac{t}{\hbar}E_n}\ket{\psi_n}\\
+            &=\sqrt{\frac{\hbar}{2m\omega}}\mathrm e^{-i\frac{t}{\hbar}E_n}\mathrm e^{i\frac{t}{\hbar}\hat{H}}\left(\sqrt{n+1}\ket{\psi_{n+1}}+\sqrt{n}\ket{\psi_{n-1}}\right)\\
+            &=\sqrt{\frac{\hbar}{2m\omega}}\mathrm e^{-i\frac{t}{\hbar}E_n}\left[\sqrt{n+1}\ket{\psi_{n+1}}e^{i\frac{t}{\hbar}E_{n+1}}+\sqrt{n}\ket{\psi_{n-1}}e^{i\frac{t}{\hbar}E_{n-1}}\right]\\
+            &=\sqrt{\frac{\hbar}{2 m \omega}}\left[\sqrt{n+1} e^{i \omega t} \ket{\psi_{n+1}}+\sqrt{n} e^{-i \omega t} \ket{\psi_{n-1}}\right]
+        \end{align*}
+        上式第一个等号利用了定态方程, 第二个等号利用了递推关系\ref{eq:2.21}, 最后一个等号利用了能级$E_n=(n+\frac{1}{2})\omega\hbar$。综上,得到：
+        \[\hat{x}_{H}(t)=\sqrt{\frac{\hbar}{2 m \omega}}\left[e^{i \omega t} \hat{a}_{+}+e^{-i \omega t} \hat{a}_{-}\right]\]
+        利用产生湮灭算符的定义, 将上式利用$\hat{x},\hat{p}$亦可重新写为：
+        \[\hat{x}_{H}(t)=\hat{x}_{H}(0) \cos (\omega t)+\frac{1}{m \omega} \hat{p}_{H}(0) \sin (\omega t)\]
+        其实使用海森堡方程, 上面的结论可以很快的得出, 我们下面对一般的势场进行推演：
+        \begin{equation}
+            \begin{aligned}
+                \frac{d}{d t} \hat{x}_{H} &=\frac{1}{i \hbar}\left[\hat{x}_{H}, \hat{H}\right]=\frac{1}{i \hbar}\left[\hat{U}^{\dagger} \hat{x} \hat{U}, \hat{H}\right] \\
+                &=\frac{1}{i \hbar}\left(\hat{U}^{\dagger} \hat{x}\underbrace{\left[\hat{U}, \hat{H}\right ]}_{0}+\hat{U}^{\dagger}[\hat{x}, \hat{H}] \hat{U}+\underbrace{\left[U^{\dagger}, \hat{H}\right]}_{0} \hat{x} \hat{U})\right)\\
+                &=\frac{1}{i \hbar} \hat{U}^{\dagger}\left[\hat{x}, \frac{\hat{p}^{2}}{2 m}+V(x)\right] \hat{U} \\
+                &=\frac{1}{i \hbar} \hat{U}^{\dagger}(\frac{1}{2 m}\left[\hat{x}, \hat{p}^{2}\right]+\underbrace{[\hat{x}, V]}_{0}) \hat{U} \\
+                &=\frac{1}{i \hbar} \hat{U}^{\dagger} \frac{1}{2 m}(\hat{p} \underbrace{[\hat{x}, \hat{p}]}_{i \hbar}+[\hat{x}, \hat{p}] \hat{p}) \hat{U} \\
+                &=\frac{1}{m} \hat{U}^{\dagger} \hat{p} \hat{U}=\frac{1}{m} \hat{p}_{H}(t) 
+            \end{aligned}
+        \end{equation}
+        同理, 对于$\hat{p}_H(t)$：
+        \begin{equation}
+            \begin{aligned}
+                \frac{d}{d t} \hat{p}_{H} &=\frac{1}{i \hbar} \hat{U}^{\dagger}\left[\hat{p}, \frac{\hat{p}^{2}}{2 m}+V\right] \hat{U} \\
+                &=\frac{1}{i \hbar} \hat{U}^{\dagger}\left(\underbrace{\left[\hat{p}, \frac{\hat{p}^{2}}{2 m}\right]}_{0}+[\hat{p}, V(x)]\right) \hat{U} \\
+                &=\frac{1}{i \hbar} \hat{U}^{\dagger}\left(-i \hbar \frac{d V}{d x}\right) \hat{U}\equiv \left(-\frac{d V}{d x}\right)_{H}(t)
+            \end{aligned}
+        \end{equation}
+        写在一起便是
+        \begin{equation}
+            \boxed{m \frac{d \hat{x}_{H}}{d t}=\hat{p}_{H}(t) \quad \frac{d \hat{p}_{H}}{d t}=\left(-\frac{d V}{d x}\right)_{H}}
+        \end{equation}
+
+        \setlength\parindent{2em}这太眼熟了, 这形式上不就是经典力学里面的粒子的运动方程吗？所以海森堡方程告诉我们, 形式上, 算符的演化规律和经典力学里面的位移动量随时间的变化是一样的。
+        你看我们上面的得到的$\hat{x}_H(t)$, 这不是和经典谐振子的简谐运动方程：
+        \[x(t)=x(0)\cos(\omega t)+\frac{v(0)}{\omega}\sin (\omega t)\]
+        形式上一模一样么？
+        \hfill $\square$\par
+    \end{thinknote}
+    \subsection{能量守恒定律}
+    对于一般的系统, 哈密顿算符可能显含时间, 我们依旧可以定义时间演化算符：
+    \begin{equation}
+        \label{eq:6.77}
+        \ket{\Psi(t)}=\hat{U}(t,t_0)\ket{\Psi(t_0)}
+    \end{equation}
+    只是这里的$\hat{U}(t,t_0)$不再具有\ref{eq:6.70}的形式。
+
+    我们下面考察系统无限小时间内的演化, 我们再次回到坐标表象下用波函数$\Psi(\mathbf{r},t)$来写方程, 我们假设波函数始终可以对时间作泰勒展开。对于哈密顿量
+    显含时间的问题, 最麻烦的点就是高阶的$\frac{\partial^n}{\partial t^n}$不能用$\hat{H}$的幂表示。但没关系, 我们考虑的是无穷小演化, 高阶量都可以丢掉。
+    \begin{align*}
+        \Psi(\mathbf{r},t_0+\delta)&=\left(1+\delta\left.\frac{\partial }{\partial t}\right|_{t=t_0}+\mathcal{O}(\delta)\right)\Psi(\mathbf{r},t)\\
+        &=\left(1-\mathrm{i}\frac{\delta}{\hbar}\hat{H}+\mathcal{O}(\delta)\right)\Psi(\mathbf{r},t_0)
+    \end{align*}
+    把后面的那个高阶小量丢掉, 然后和\ref{eq:6.77}对比：
+    \begin{equation}
+        \label{eq:6.78}
+        \hat{U}(t_0+\delta,t_0)\overset{!}{=}\mathbbm{1}-i\frac{\delta}{\hbar}\hat{H}
+    \end{equation}
+    很巧, 这玩意儿我们要是直接用\ref{eq:6.70}, 展开到一阶也能得到, 但我们说过了\ref{eq:6.70}仅适用于哈密顿量不显含时间的系统。
+
+    何谓(连续的)时间平移对称性？我们用形象的语言解释就是周三和周四在同样的初始条件下做实验, 应该得到相同的结果, 仅仅只是你记录实验的初始和末尾的时间有差别而已。
+    转换成标准化的语言来说就是, 态矢量$\ket{\alpha}$在$t_1$时刻开始演化一个无穷小时间到$\ket{\beta}$, 那同样的条件下, $\ket{\alpha}$在$t_2$时刻开始演化一个无穷小时间也应该得到$\ket{\beta}$。
+    也就是说下面的式子对$\forall t_1,t_2$都成立：
+    \[\hat U(t_1+\delta,t_1)=\hat{U}(t_2+\delta,t_2)\]
+    根据\ref{eq:6.78}, 这意味着下面的等式恒成立：
+    \[\hat{H}(t_1)=\hat{H}(t_2)\]
+    这实际上也就是在说\textbf{哈密顿量不显含时间}, $\frac{\partial \hat{H}}{\partial t}=0$。再利用\ref{广义欸费斯托定理}, 我们得到：
+    \[\frac{d}{dt}\braket{H}=0\]
+    即能量守恒, 所以\textbf{时间的连续平移对称性直接导致了体系的能量守恒(Hamiltonian不显含时间)}。
+
+    这一整章我们都在讲对称性和守恒律之间的联系, 因为数学水平有限, 没有涉及到群论来更加深刻的讨论, 等后续补充。而且这章我觉得有些地方我写的也不够清楚, 有待完善。
+    除了连续对称性对应的守恒律, 量子力学中宇称是可观测量, 观测值为$\pm 1$, 离散的宇称变换对称性也对应了宇称守恒。这章最难以理解的估计就是选择定理了, 那东西得上群论才能彻底讲清楚,
+    初量的任务就是理清楚矢量算符的定义就好, 那三个转动矩阵的来历和对应的计算也很重要。
+
     \include{appendix.tex}
 \end{document}  

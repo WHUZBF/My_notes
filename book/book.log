@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  28 AUG 2022 00:24
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  1 SEP 2022 00:06
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -901,6 +901,12 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameSep=\dimen349
 ) (d:/LaTeX/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
 File: tikzlibrarypositioning.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+) (d:/LaTeX/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2021/05/15 v3.1.9a (3.1.9a)
+\pgfarrowinset=\dimen350
+\pgfarrowlength=\dimen351
+\pgfarrowwidth=\dimen352
+\pgfarrowlinewidth=\dimen353
 ) (d:/LaTeX/texlive/2021/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypatterns.code.tex
 File: tikzlibrarypatterns.code.tex 2021/05/15 v3.1.9a (3.1.9a)
  (d:/LaTeX/texlive/2021/texmf-dist/tex/generic/pgf/libraries/pgflibrarypatterns.code.tex
@@ -1018,7 +1024,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 Package: relsize 2013/03/29 ver 4.1
 ) (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/braket/braket.sty) (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/siunitx/siunitx.sty
 Package: siunitx 2021-09-06 v3.0.29 A comprehensive (SI) units package
-\l__siunitx_angle_tmp_dim=\dimen350
+\l__siunitx_angle_tmp_dim=\dimen354
 \l__siunitx_angle_marker_box=\box86
 \l__siunitx_angle_unit_box=\box87
 \l__siunitx_compound_count_int=\count389
@@ -1031,22 +1037,22 @@ Package: translations 2021/01/17 v1.10a internationalization of LaTeX2e packages
 \l__siunitx_number_round_precision_int=\count393
 \l__siunitx_number_group_minimum_int=\count394
 \l__siunitx_table_tmp_box=\box88
-\l__siunitx_table_tmp_dim=\dimen351
-\l__siunitx_table_column_width_dim=\dimen352
+\l__siunitx_table_tmp_dim=\dimen355
+\l__siunitx_table_column_width_dim=\dimen356
 \l__siunitx_table_integer_box=\box89
 \l__siunitx_table_decimal_box=\box90
 \l__siunitx_table_before_box=\box91
 \l__siunitx_table_after_box=\box92
-\l__siunitx_table_before_dim=\dimen353
-\l__siunitx_table_carry_dim=\dimen354
+\l__siunitx_table_before_dim=\dimen357
+\l__siunitx_table_carry_dim=\dimen358
 \l__siunitx_unit_tmp_int=\count395
 \l__siunitx_unit_position_int=\count396
 \l__siunitx_unit_total_int=\count397
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/tools/array.sty
 Package: array 2021/04/20 v2.5e Tabular extension package (FMi)
-\col@sep=\dimen355
+\col@sep=\dimen359
 \ar@mcellbox=\box93
-\extrarowheight=\dimen356
+\extrarowheight=\dimen360
 \NC@list=\toks48
 \extratabsurround=\skip75
 \backup@length=\skip76
@@ -1064,34 +1070,34 @@ Package pict2e Info: Driver file for pict2e: p2e-xetex.def on input line 114.
 File: p2e-xetex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
 \pIIe@GRAPH=\toks49
-\@arclen=\dimen357
-\@arcrad=\dimen358
-\pIIe@tempdima=\dimen359
-\pIIe@tempdimb=\dimen360
-\pIIe@tempdimc=\dimen361
-\pIIe@tempdimd=\dimen362
-\pIIe@tempdime=\dimen363
-\pIIe@tempdimf=\dimen364
+\@arclen=\dimen361
+\@arcrad=\dimen362
+\pIIe@tempdima=\dimen363
+\pIIe@tempdimb=\dimen364
+\pIIe@tempdimc=\dimen365
+\pIIe@tempdimd=\dimen366
+\pIIe@tempdime=\dimen367
+\pIIe@tempdimf=\dimen368
 )
 \diagbox@boxa=\box95
 \diagbox@boxb=\box96
 \diagbox@boxm=\box97
-\diagbox@wd=\dimen365
-\diagbox@ht=\dimen366
-\diagbox@insepl=\dimen367
-\diagbox@insepr=\dimen368
-\diagbox@outsepl=\dimen369
-\diagbox@outsepr=\dimen370
+\diagbox@wd=\dimen369
+\diagbox@ht=\dimen370
+\diagbox@insepl=\dimen371
+\diagbox@insepr=\dimen372
+\diagbox@outsepl=\dimen373
+\diagbox@outsepr=\dimen374
 ) (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2021/03/06 v0.5t Insert pages of external PDF documents (AM)
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/eso-pic/eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen371
-\ESO@tempdimb=\dimen372
+\ESO@tempdima=\dimen375
+\ESO@tempdimb=\dimen376
 )
-\AM@pagewidth=\dimen373
-\AM@pageheight=\dimen374
-\AM@fboxrule=\dimen375
+\AM@pagewidth=\dimen377
+\AM@pageheight=\dimen378
+\AM@fboxrule=\dimen379
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/pdfpages/ppxetex.def
 File: ppxetex.def 2021/03/06 v0.5t Pdfpages driver for XeTeX (AM)
 )
@@ -1103,50 +1109,50 @@ File: ppxetex.def 2021/03/06 v0.5t Pdfpages driver for XeTeX (AM)
 \c@AM@survey=\count400
 \AM@templatesizebox=\box99
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 85.
- (./book.aux (./chapter01.aux) (./chapter02.aux) (./chapter03.aux) (./chapter04.aux) (./chapter05.aux) (./appendix.aux))
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 87.
+ (./book.aux (./chapter01.aux) (./chapter02.aux) (./chapter03.aux) (./chapter04.aux) (./chapter05.aux) (./chapter06.aux) (./appendix.aux))
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 85.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 85.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 87.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 87.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 85.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 85.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 87.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 87.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 85.
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 85.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 85.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 87.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 87.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 85.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 85.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 85.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 87.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 87.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 85.
+LaTeX Font Info:    ... okay on input line 87.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1182,7 +1188,7 @@ LaTeX Font Info:    ... okay on input line 85.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 85.
+Package hyperref Info: Link coloring ON on input line 87.
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1192,9 +1198,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count401
 )
-LaTeX Info: Redefining \ref on input line 85.
-LaTeX Info: Redefining \pageref on input line 85.
-LaTeX Info: Redefining \nameref on input line 85.
+LaTeX Info: Redefining \ref on input line 87.
+LaTeX Info: Redefining \pageref on input line 87.
+LaTeX Info: Redefining \nameref on input line 87.
  (./book.out) (./book.out)
 \@outlinefile=\write4
 \openout4 = `book.out'.
@@ -1207,7 +1213,7 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 85.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 87.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/graphics/lscape.sty
@@ -1216,48 +1222,48 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 22.08249pt on input line 87.
+(Font)              scaled to size 22.08249pt on input line 89.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.05624pt on input line 87.
-LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 87.
+(Font)              scaled to size 15.05624pt on input line 89.
+LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.05624pt on input line 87.
+(Font)              scaled to size 15.05624pt on input line 89.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 87.
+(Font)              scaled to size 12.045pt on input line 89.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 87.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 87.
+(Font)              scaled to size 9.03374pt on input line 89.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 87.
+(Font)              size <14.4> substituted on input line 89.
 
-LaTeX Font Info:    Trying to load font information for U+esint on input line 87.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 89.
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 87.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 87.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 87.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 ) [1
@@ -1267,9 +1273,9 @@ File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.09pt on input line 89.
+(Font)              scaled to size 24.09pt on input line 91.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.09pt on input line 89.
+(Font)              scaled to size 24.09pt on input line 91.
  (./book.toc
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.045pt on input line 1.
@@ -1282,9 +1288,9 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 \openout5 = `book.toc'.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sl' will be
-(Font)              scaled to size 12.045pt on input line 91.
+(Font)              scaled to size 12.045pt on input line 93.
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12.045> not available
-(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 91.
+(Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 93.
  [0]
 \openout2 = `chapter01.aux'.
 
@@ -1334,37 +1340,37 @@ LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 15.05624pt on input line 244.
  [10] [11]
-Invalid UTF-8 byte or sequence at line 329 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 329 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 329 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 329 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 329 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 329 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
 File: fig/2-3-a.eps Graphic file (type eps)
 <fig/2-3-a.eps>
-Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 332 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
 File: fig/2-3-b.eps Graphic file (type eps)
 <fig/2-3-b.eps>
-Invalid UTF-8 byte or sequence at line 335 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 335 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 335 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 335 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 335 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 335 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
 File: fig/2-3-c.eps Graphic file (type eps)
 <fig/2-3-c.eps>
  [12] [13]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 388.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 389.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 388.
+(Font)              scaled to size 12.045pt on input line 389.
 
 Underfull \vbox (badness 4391) has occurred while \output is active []
 
@@ -2123,11 +2129,11 @@ File: videos/wave_group/wave_group-250.png Graphic file (type bmp)
 <videos/wave_group/wave_group-250.png>
  <a0,fr250> [16]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 18.06749pt on input line 497.
+(Font)              scaled to size 18.06749pt on input line 498.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 497.
+(Font)              size <17.28> substituted on input line 498.
 
 File: fig/2-5-1.eps Graphic file (type eps)
 <fig/2-5-1.eps>
@@ -2362,6 +2368,41 @@ File: fig/5-3.jpg Graphic file (type bmp)
 Underfull \vbox (badness 1803) has occurred while \output is active []
 
  [91] [92] [93] [94] [95]) [96]
+\openout2 = `chapter06.aux'.
+
+ (./chapter06.tex
+第六章
+[97
+
+
+
+
+] [98] [99]
+Missing character: There is no 忽 ("5FFD) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 略 ("7565) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 高 ("9AD8) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 阶 ("9636) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 小 ("5C0F) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 量 ("91CF) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 忽 ("5FFD) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 略 ("7565) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 高 ("9AD8) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 阶 ("9636) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 小 ("5C0F) in font ntx-Regular-tlf-ot1!
+Missing character: There is no 量 ("91CF) in font ntx-Regular-tlf-ot1!
+ [100] [101]
+File: fig/6.3.pdf Graphic file (type pdf)
+<use fig/6.3.pdf>
+ [102] [103] [104] [105]
+File: fig/6-4.pdf Graphic file (type pdf)
+<use fig/6-4.pdf>
+ [106] [107] [108] [109] [110] [111] [112] [113]
+Underfull \vbox (badness 2856) has occurred while \output is active []
+
+ [114]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [115]) [116]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2374,68 +2415,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
 Underfull \vbox (badness 1789) has occurred while \output is active []
 
- [97
+ [117
 
 
 
 
-] [98]
+] [118]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [99] [100] [101]
+ [119] [120] [121]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [102] [103]
+ [122] [123]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [104] [105] [106] [107]
+ [124] [125] [126] [127]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [108] [109] [110
+ [128] [129] [130
 
 ]
 附录 B
-[111] [112] [113] [114] [115] [116] [117]
+[131] [132] [133] [134] [135] [136] [137]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [118] [119]
+ [138] [139]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [120]
+ [140]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [121] [122] [123] [124]
+ [141] [142] [143] [144]
 附录 C
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [125
+ [145
 
-]) [126] (./book.aux (./chapter01.aux) (./chapter02.aux) (./chapter03.aux) (./chapter04.aux) (./chapter05.aux) (./appendix.aux))
+]) [146] (./book.aux (./chapter01.aux) (./chapter02.aux) (./chapter03.aux) (./chapter04.aux) (./chapter05.aux) (./chapter06.aux) (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: 30AFC4DFE604043C30CFB2F36146F128;7841.
+(rerunfilecheck)             Checksum: F46062F6B93240A03E381F0D4CB809A9;9351.
  ) 
 Here is how much of TeX's memory you used:
- 56298 strings out of 476533
- 1448091 string characters out of 5818886
- 1934873 words of memory out of 5000000
- 75411 multiletter control sequences out of 15000+600000
+ 57243 strings out of 476533
+ 1470171 string characters out of 5818886
+ 1947249 words of memory out of 5000000
+ 76343 multiletter control sequences out of 15000+600000
  536224 words of font info for 264 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,22n,97p,721b,1167s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,22n,97p,721b,1169s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (130 pages).
+Output written on book.pdf (150 pages).
