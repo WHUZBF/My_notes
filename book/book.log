@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  1 SEP 2022 00:06
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  5 SEP 2022 21:40
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2129,15 +2129,18 @@ File: videos/wave_group/wave_group-250.png Graphic file (type bmp)
 <videos/wave_group/wave_group-250.png>
  <a0,fr250> [16]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 18.06749pt on input line 498.
+(Font)              scaled to size 18.06749pt on input line 505.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 498.
+(Font)              size <17.28> substituted on input line 505.
 
 File: fig/2-5-1.eps Graphic file (type eps)
 <fig/2-5-1.eps>
-[17] [18]
+[17]
+Underfull \vbox (badness 1960) has occurred while \output is active []
+
+ [18]
 File: fig/2-5-2.eps Graphic file (type eps)
 <fig/2-5-2.eps>
  [19] [20] [21]
@@ -2317,9 +2320,13 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
  [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66]
 File: fig/4-1.png Graphic file (type bmp)
 <fig/4-1.png>
+ [67]
 File: fig/4-2.eps Graphic file (type eps)
 <fig/4-2.eps>
- [67] [68] [69] [70] [71]
+ [68] [69]
+Overfull \vbox (0.84024pt too high) has occurred while \output is active []
+
+ [70] [71]
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
@@ -2396,10 +2403,7 @@ File: fig/6.3.pdf Graphic file (type pdf)
  [102] [103] [104] [105]
 File: fig/6-4.pdf Graphic file (type pdf)
 <use fig/6-4.pdf>
- [106] [107] [108] [109] [110] [111] [112] [113]
-Underfull \vbox (badness 2856) has occurred while \output is active []
-
- [114]
+ [106] [107] [108] [109] [110] [111] [112] [113] [114]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [115]) [116]
@@ -2468,11 +2472,11 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: F46062F6B93240A03E381F0D4CB809A9;9351.
  ) 
 Here is how much of TeX's memory you used:
- 57243 strings out of 476533
- 1470171 string characters out of 5818886
- 1947249 words of memory out of 5000000
- 76343 multiletter control sequences out of 15000+600000
- 536224 words of font info for 264 fonts, out of 8000000 for 9000
+ 57259 strings out of 476533
+ 1470455 string characters out of 5818886
+ 1949455 words of memory out of 5000000
+ 76359 multiletter control sequences out of 15000+600000
+ 542706 words of font info for 278 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,721b,1169s stack positions out of 5000i,500n,10000p,200000b,80000s
 

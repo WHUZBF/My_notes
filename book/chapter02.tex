@@ -414,13 +414,20 @@
     注意, \uwave{我们不再有边界条件去直接确定$A$和$B$的值}, \textbf{这个时候定态解的能量的取值并不是离散的!可以取到任何大于$0$的值!}其实本身量子力学就是不排斥
     连续性的, 离散可以有很多种, 不一定就表明某个量一定是离散取值。
 
-    考虑wiggle-function后写成下面的形式\footnote{这里$\psi_k$无法进行归一化, 不像前面一样我们先进行归一化后再去定系数会有很多便利。但是这里我们还是在
-    前面添了一个$\frac{1}{\sqrt{2\pi}}$你很快就可以看见他在数学处理上的妙处}:
+    考虑wiggle-function后写成下面的形式\footnote{这里$\psi_k$无法进行归一化, 我们这里添上系数${\raise0.5ex\hbox{$\scriptstyle 1$}\kern-0.1em/\kern-0.15em
+    \lower0.25ex\hbox{$\scriptstyle {\sqrt {2\pi } }$}}$是狄拉克意义下的正交归一化的考虑。}:
     \begin{lequation}
         \boxed{
-            \Psi_k(x,t)=Ae^{i\left(kx-\frac{k^2\hbar t}{2m}\right)}, \psi(x)=\frac{1}{\sqrt{2\pi}}e^{ikx}
+            \Psi_k(x,t)=Ae^{i\left(kx-\frac{k^2\hbar t}{2m}\right)}, \psi_k(x)=\frac{1}{\sqrt{2\pi}}e^{ikx}
         }
     \end{lequation}
+    
+    \begin{thinknote}
+        实际上我们更常见的写法是用：
+        \[\psi_p(x)=\frac{1}{\sqrt{2\pi\hbar}}e^{i\frac{p}{\hbar}x}\]
+        作为自由粒子体系的能量表象, 这和动量表象表达式相同。详见下一章讨论。
+    \end{thinknote}
+    
     考虑到最后反正要对解进行线性叠加, 而两项仅仅只在$e$指数上面差了一个负号, 所以我们将负号纳入$k$后得到:
     $$k\overset{def}{=}\pm\frac{\sqrt{2mE}}{\hbar}$$观察到每一项就代表一个\uwave{行波}, $k>0$的时候正向传播(向右), 反之负向传播, 不再是前面势阱模型里面的
     驻波。

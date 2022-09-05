@@ -652,13 +652,20 @@
     注意, \uwave{我们不再有边界条件去直接确定$A$和$B$的值}, \textbf{这个时候定态解的能量的取值并不是离散的!可以取到任何大于$0$的值!}其实本身量子力学就是不排斥
     连续性的, 离散可以有很多种, 不一定就表明某个量一定是离散取值。
 
-    考虑wiggle-function后写成下面的形式\footnote{这里$\psi_k$无法进行归一化, 不像前面一样我们先进行归一化后再去定系数会有很多便利。但是这里我们还是在
-    前面添了一个$\frac{1}{\sqrt{2\pi}}$你很快就可以看见他在数学处理上的妙处}:
+    考虑wiggle-function后写成下面的形式\footnote{这里$\psi_k$无法进行归一化, 我们这里添上系数${\raise0.5ex\hbox{$\scriptstyle 1$}\kern-0.1em/\kern-0.15em
+    \lower0.25ex\hbox{$\scriptstyle {\sqrt {2\pi } }$}}$是狄拉克意义下的正交归一化的考虑。}:
     \begin{lequation}
         \boxed{
-            \Psi_k(x,t)=Ae^{i\left(kx-\frac{k^2\hbar t}{2m}\right)}, \psi(x)=\frac{1}{\sqrt{2\pi}}e^{ikx}
+            \Psi_k(x,t)=Ae^{i\left(kx-\frac{k^2\hbar t}{2m}\right)}, \psi_k(x)=\frac{1}{\sqrt{2\pi}}e^{ikx}
         }
     \end{lequation}
+    
+    \begin{thinknote}
+        实际上我们更常见的写法是用：
+        \[\psi_p(x)=\frac{1}{\sqrt{2\pi\hbar}}e^{i\frac{p}{\hbar}x}\]
+        作为自由粒子体系的能量表象, 这和动量表象表达式相同。详见下一章讨论。
+    \end{thinknote}
+    
     考虑到最后反正要对解进行线性叠加, 而两项仅仅只在$e$指数上面差了一个负号, 所以我们将负号纳入$k$后得到:
     $$k\overset{def}{=}\pm\frac{\sqrt{2mE}}{\hbar}$$观察到每一项就代表一个\uwave{行波}, $k>0$的时候正向传播(向右), 反之负向传播, 不再是前面势阱模型里面的
     驻波。
@@ -2503,7 +2510,8 @@
             i&0
         \end{pmatrix}
     \end{equation}
-    观察到这些矩阵前面都有系数$\hbar/2$, 我们定义泡利矩阵：
+    观察到这些矩阵前面都有系数$\hbar/2$, 我们定义泡利矩阵\footnote{关于它的两个常用公式, 第一个根据$\mathcal{S}$分量之间的对易关系来记忆：
+    \[\left[\sigma_i,\sigma_j\right]=2\mathrm{i}\epsilon_{ijk}\sigma_k\]\[(\mathbf{a} \cdot \boldsymbol{\sigma})(\mathbf{b} \cdot \boldsymbol{\sigma})=\mathbf{a} \cdot \mathbf{b}+i(\mathbf{a} \times \mathbf{b}) \cdot \sigma\]}：
     \begin{lequation}
         \boxed{
             \sigma_x\equiv\begin{pmatrix}
@@ -4417,7 +4425,7 @@
     \textbf{态空间基矢运动, 态矢不动}；薛定谔绘景就是\textbf{基矢不动, 态矢运动}。就像是一个时钟, 我们可以表针不动表盘运动, 也可以表盘运动表针不动, 但都指向同一个正确的时间\footnote{当然还可以表针表盘一起动, 这是相互作用绘景(Dirac绘景)。}。
     
     采用薛定谔绘景时\footnote{后面都用这个绘景}, 重点就是利用薛定谔方程计算态矢随时间的变化。而对应的海森堡绘景, 这个时候$\hat{Q}_H(t)$的演化满足\textbf{海森堡方程}, 下面我们
-    对于哈密顿量和力学量$Q$不显含时间的情况加以说明。
+    对于哈密顿量和力学量$Q$不显含时间的情况加以说明。\footnote{对于哈密顿算符显含时间的一般海森堡方程为：\[i \hbar \frac{d}{d t} \hat{Q}_{H}(t)=\left[\hat{Q}_{H}(t), \hat{H}_{H}(t)\right]+\hat{U}^{\dagger} \frac{\partial \hat{Q}}{\partial t} \hat{U}\]}
 
     将\ref{eq:6.71}两边对时间微分：
     \begin{equation}
@@ -4517,6 +4525,7 @@
     这一整章我们都在讲对称性和守恒律之间的联系, 因为数学水平有限, 没有涉及到群论来更加深刻的讨论, 等后续补充。而且这章我觉得有些地方我写的也不够清楚, 有待完善。
     除了连续对称性对应的守恒律, 量子力学中宇称是可观测量, 观测值为$\pm 1$, 离散的宇称变换对称性也对应了宇称守恒。这章最难以理解的估计就是选择定理了, 那东西得上群论才能彻底讲清楚,
     初量的任务就是理清楚矢量算符的定义就好, 那三个转动矩阵的来历和对应的计算也很重要。
+
 
     \include{appendix.tex}
 \end{document}  

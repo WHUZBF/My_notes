@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  1 SEP 2022 00:04
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  5 SEP 2022 21:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2067,19 +2067,19 @@ File: videos/wave_group/wave_group-250.png Graphic file (type bmp)
 <videos/wave_group/wave_group-250.png>
  <a0,fr250>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 18.06749pt on input line 734.
+(Font)              scaled to size 18.06749pt on input line 741.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 734.
+(Font)              size <17.28> substituted on input line 741.
 
 [20]
 File: fig/2-5-1.eps Graphic file (type eps)
 <fig/2-5-1.eps>
- [21] [22]
+ [21] [22] [23]
 File: fig/2-5-2.eps Graphic file (type eps)
 <fig/2-5-2.eps>
- [23] [24] [25] [26] [27]
+ [24] [25] [26] [27]
 File: videos/equation_insection/equation_insection-0.png Graphic file (type bmp)
 <videos/equation_insection/equation_insection-0.png>
  <a1,fr0>
@@ -2174,23 +2174,23 @@ File: fig/2-7-1.eps Graphic file (type eps)
 [35
 
 ]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 1214.
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 1221.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [36]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.045pt on input line 1238.
+(Font)              scaled to size 12.045pt on input line 1245.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 1238.
+(Font)              scaled to size 8.0pt on input line 1245.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 6.0pt on input line 1238.
+(Font)              scaled to size 6.0pt on input line 1245.
  [37] [38] [39] [40]
 File: fig/3-1.eps Graphic file (type eps)
 <fig/3-1.eps>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 1358.
+(Font)              scaled to size 9.03374pt on input line 1365.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 5.0pt on input line 1358.
+(Font)              scaled to size 5.0pt on input line 1365.
  [41]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
@@ -2211,38 +2211,38 @@ Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
  [44] [45] [46] [47] [48]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.045pt on input line 1649.
+(Font)              scaled to size 12.045pt on input line 1656.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.05624pt on input line 1666.
+(Font)              scaled to size 15.05624pt on input line 1673.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 1666.
+(Font)              size <14.4> substituted on input line 1673.
 
 [49]
-Overfull \hbox (8.4405pt too wide) in paragraph at lines 1673--1674
+Overfull \hbox (8.4405pt too wide) in paragraph at lines 1680--1681
 []\TU/SimSun(0)/m/n/12.045 我 们 可 以 给 这 两 个 波 函 数 分 别 对 应 两 个|   []$[] \OML/ntxmi/m/it/12.045 ; []$\TU/SimSun(0)/m/n/12.045 。|  再 根 据[][]\T1/ntxtlf/m/n/12.045 3.31[][]\TU/SimSun(0)/m/n/12.045 我
  []
 
 [50] [51] [52]
-Overfull \hbox (1.5488pt too wide) in paragraph at lines 1757--1758
+Overfull \hbox (1.5488pt too wide) in paragraph at lines 1764--1765
 []\TU/SimSun(0)/m/n/12.045 比 如 三 维 问 题 中 $[]$ 算 符 的 三 个 分 量 算 符 $\OML/ntxmi/m/it/12.045 X; Y; Z$ \TU/SimSun(0)/m/n/12.045 就 构 成 了 一 个 \T1/ntxtlf/m/n/12.045 CSCO,
  []
 
 [53] [54]
 第四章
 
-Overfull \vbox (0.325pt too high) detected at line 1873
+Overfull \vbox (0.325pt too high) detected at line 1880
  []
 
 [55
 
 ] [56]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.03374pt on input line 1887.
+(Font)              scaled to size 9.03374pt on input line 1894.
  [57] [58] [59] [60] [61] [62] [63]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 2095.
+(Font)              scaled to size 9.03374pt on input line 2102.
  [64] [65] [66] [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78]
 File: fig/4-1.png Graphic file (type bmp)
 <fig/4-1.png>
@@ -2273,7 +2273,7 @@ File: fig/4-3.eps Graphic file (type eps)
 [96
 
 ] [97] [98]
-Overfull \hbox (1.88501pt too wide) in paragraph at lines 3174--3181
+Overfull \hbox (1.88501pt too wide) in paragraph at lines 3182--3189
 []\TU/SimSun(0)/m/n/12.045 显 然 $\OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 满 足 这 种 对 称 性 的 粒 子 称 为 \TU/SimSun(0)/b/n/12.045 玻 色 子 \T1/ntxtlf/b/n/12.045 (bosons)\TU/SimSun(0)/m/n/12.045 ；|
  []
 
@@ -2312,17 +2312,21 @@ File: fig/6.3.pdf Graphic file (type pdf)
 File: fig/6-4.pdf Graphic file (type pdf)
 <use fig/6-4.pdf>
  [127] [128] [129] [130] [131] [132]
-Overfull \hbox (1.51637pt too wide) in paragraph at lines 4352--4353
+Overfull \hbox (1.51637pt too wide) in paragraph at lines 4360--4361
 []\TU/SimSun(0)/m/n/12.045 最 后\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 因 为 $\OML/ntxmi/m/it/12.045 C[] \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 ^^N[]^^N[]$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 所 以 我 们 可 以 把 标 量 算 符 的 选 择 定 则[][]\T1/ntxtlf/m/n/12.045 6.54[][]\TU/SimSun(0)/m/n/12.045 写
  []
 
 [133] [134] [135]
-Overfull \hbox (6.30917pt too wide) in paragraph at lines 4437--4439
+Overfull \hbox (6.30917pt too wide) in paragraph at lines 4445--4447
 []\TU/SimSun(0)/m/n/12.045 注 意 第 二 个 等 号 我 们 利 用 了 $[] \U/ntxmia/m/it/12.045 = \OT1/ntxtlf/m/n/12.045 0$\TU/SimSun(0)/m/n/12.045 。|  其 实 和 玩 意 和 反 复 提 及 的[][]\T1/ntxtlf/m/n/12.045 3.27[][]\TU/SimSun(0)/m/n/12.045 形
  []
 
-[136] [137] [138]
-Overfull \hbox (6.31642pt too wide) in paragraph at lines 4514--4516
+[136]
+Underfull \vbox (badness 1365) detected at line 4493
+ []
+
+[137] [138]
+Overfull \hbox (6.31642pt too wide) in paragraph at lines 4522--4524
 \TU/SimSun(0)/m/n/12.045 即 能 量 守 恒\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 所 以 \TU/SimSun(0)/b/n/12.045 时 间 的 连 续 平 移 对 称 性 直 接 导 致 了 体 系 的 能 量 守 恒 \T1/ntxtlf/b/n/12.045 (Hamil-
  []
 
@@ -2397,16 +2401,19 @@ Overfull \hbox (2.89873pt too wide) detected at line 911
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
 (rerunfilecheck)             Checksum: F46062F6B93240A03E381F0D4CB809A9;9351.
  ) 
 Here is how much of TeX's memory you used:
- 56679 strings out of 476533
- 1461330 string characters out of 5818886
- 1928380 words of memory out of 5000000
- 75828 multiletter control sequences out of 15000+600000
- 536224 words of font info for 264 fonts, out of 8000000 for 9000
+ 56694 strings out of 476533
+ 1461597 string characters out of 5818886
+ 1936450 words of memory out of 5000000
+ 75843 multiletter control sequences out of 15000+600000
+ 542706 words of font info for 278 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,22n,97p,727b,1158s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,22n,97p,727b,1160s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on sourcecode.pdf (178 pages).
