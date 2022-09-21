@@ -782,7 +782,18 @@
     态的定态解必须是可归一化的, 这也就间接要求了$E$的非负性。事实上, 你如果在$E<0$的假定下求解这两种模型的解, 你会发现无论是定态还是线性组合后的解都是不可归一化的
     , 没有实在的物理意义。 在这个时候我们就说$E>0$的解已经构成了一个\uwave{完备集}, 初始的波函数一定是可以归一化的, 也一定是可以由对应的定态解组合而成, 然而
     $E<0$的解都不可以归一化, 所以这两种势能模型中仅当粒子$E>0$时有物理意义, 这一点实际上根据经典力学我们可以很容易类比得出。
-
+    \begin{history}{依赖于直觉的推理}
+        下面我们用一种偏向于物理直觉的方法来理解束缚态和散射态。前面提到了束缚态导致离散谱, 散射态导致连续谱, 实际上束缚态也可以\uwave{大致}上理解为波函数局限在某个有限范围内,
+        就像高斯波包一样。那么如果束缚态的谱线是连续谱, 定态解用连续的参数$\alpha$标记：$\ket{\psi(\alpha)}$。而且考虑参数微小的连续变化, 态也会产生一个微小的连续变化：
+        \[\ket{\psi(\alpha+\delta\alpha)}\approx\ket{\psi(\alpha)}+\ket{\delta\psi}\]
+        由于哈密顿算符是厄米算符, 那么$\ket{\psi(\alpha+\delta\alpha)}$和$\ket{\psi(\alpha)}$应该相互正交。\footnote{这个是属于Dirac意义下的正交归一化, 问题不大, “正交”和离散情况还是一样的, “归一”改了改。}
+        \[
+            \braket{\psi(\alpha+\delta\alpha)|\psi(\alpha)}=\braket{\psi(\alpha)|\psi(\alpha)}+\braket{\delta\psi|\psi(\alpha)}
+        \]
+        上式中第一项是正的\footnote{这里我并不想直接说它是“归一”的, 虽然这里只是一种直觉上的推理, 但是我还是想更一般的去讨论它。}。而后面的一项是一个任意小的值, 从波函数空间内的
+        内积定义出发将它写成积分形式可以更好的看出这一点, 被积函数是任意小的, 而积分区间又因为是束缚态被限制了(也即波函数集中在一个有限区间上), 所以总的来说如果束缚态也可以有连续谱的话, 是违背了
+        “正交性”的, 所以束缚态都是离散谱。而散射态积分区域就是全空间, 就没有这个问题了。当然, 体系也可以是部分连续谱部分散射谱, 下面要讲的$\delta$势阱就是一类, 还有比如氢原子的电离和非电离情况也是一类。
+    \end{history}
     \subsection{\texorpdfstring{$\delta$}d函数势阱}
     注意这里我们讨论的是\uwave{势阱}, 主要是为了和后面的\uwave{势垒}区分, 你可以将势阱想象成一口井, 但势垒是一座山。
     \subsubsection*{狄拉克$\delta$函数}
@@ -2198,6 +2209,9 @@
         \item $n_f=2$\quad 谱线位于可见光区, 称为\textbf{Balmer series}
         \item $n_f=3$\quad 谱线位于红外光区, 称为\textbf{Paschen series}
     \end{itemize}
+
+    还有一种极端情况就是电子能量过大而电离, 这个时候就是连续谱了。
+
     \section{角动量}
     在经典力学中, 粒子的角动量定义为:\[\bm{L}=\bm{r}\times\bm{p}\]写成分量形式为:\[L_x=yp_z-zp_y,L_y=zp_x-xp_z,L_z=xp_y-yp_x\]
     
@@ -4209,7 +4223,12 @@
         得出：
         \[\hat{H}\left(L_\pm\ket{\psi_{n\ell m+1}}\right)=E_n L_\pm\ket{\psi_{n\ell m+1}}\]
         而$|m|>\ell$时, 上式退化为$0=0$平凡成立。这也就用各向同性解释了$\psi_n\ell m$磁量子数的简并, 而角量子数的简并是因为势能的反比例形式的额外对称性
-        造成的。
+        造成的。这个额外对称性其实我们在经典力学开普勒问题中就遇到过了, 对应的守恒量是\textbf{Laplace-Runge-Lenz}矢量, 在经典力学中对于$V(r)=\frac{\alpha}{r}$
+        的有心势场, 这个守恒矢量定义为：
+        \[\mathbf{M}=\mathbf{p}\times\mathbf{L}+m\alpha\frac{\mathbf{r}}{r}\]
+        而量子力学中就变成了矢量算符：
+        \[\hat{\mathbf{M}}=\frac{\hat{\mathbf{p}}\times\hat{\mathbf{L}}-\hat{\mathbf{L}}\times\hat{\mathbf{p}}}{2m}+V(r)\mathbf{r}\]
+        这是个观察算符, 对应了一个可观测量, 可以证明$\left[\hat{H},\hat{\mathbf{M}}\right]=0$, 也即这在量子力学中确实意味着一个守恒量。
     \end{thinknote}
     
     \section{旋转选择定则}

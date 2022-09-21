@@ -520,7 +520,12 @@ $$\hat{T}(a)=e^{i\frac{a}{\hbar}}\hat{P}$$
     得出：
     \[\hat{H}\left(L_\pm\ket{\psi_{n\ell m+1}}\right)=E_n L_\pm\ket{\psi_{n\ell m+1}}\]
     而$|m|>\ell$时, 上式退化为$0=0$平凡成立。这也就用各向同性解释了$\psi_n\ell m$磁量子数的简并, 而角量子数的简并是因为势能的反比例形式的额外对称性
-    造成的。
+    造成的。这个额外对称性其实我们在经典力学开普勒问题中就遇到过了, 对应的守恒量是\textbf{Laplace-Runge-Lenz}矢量, 在经典力学中对于$V(r)=\frac{\alpha}{r}$
+    的有心势场, 这个守恒矢量定义为：
+    \[\mathbf{M}=\mathbf{p}\times\mathbf{L}+m\alpha\frac{\mathbf{r}}{r}\]
+    而量子力学中就变成了矢量算符：
+    \[\hat{\mathbf{M}}=\frac{\hat{\mathbf{p}}\times\hat{\mathbf{L}}-\hat{\mathbf{L}}\times\hat{\mathbf{p}}}{2m}+V(r)\mathbf{r}\]
+    这是个观察算符, 对应了一个可观测量, 可以证明$\left[\hat{H},\hat{\mathbf{M}}\right]=0$, 也即这在量子力学中确实意味着一个守恒量。
 \end{thinknote}
 
 \section{旋转选择定则}

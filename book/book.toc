@@ -49,8 +49,8 @@
 \contentsline {section}{\numberline {6.3}旋转对称性}{103}{section.6.3}%
 \contentsline {section}{\numberline {6.4}简并与对称}{106}{section.6.4}%
 \contentsline {section}{\numberline {6.5}旋转选择定则}{108}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}标量算符的选择定则}{108}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}矢量算符的选择定则}{110}{subsection.6.5.2}%
+\contentsline {subsection}{\numberline {6.5.1}标量算符的选择定则}{109}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}矢量算符的选择定则}{111}{subsection.6.5.2}%
 \contentsline {section}{\numberline {6.6}时间平移对称性}{112}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}薛定谔/海森堡绘景}{113}{subsection.6.6.1}%
 \contentsline {subsection}{\numberline {6.6.2}能量守恒定律}{116}{subsection.6.6.2}%
