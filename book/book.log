@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  21 SEP 2022 23:09
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  27 SEP 2022 22:31
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2365,15 +2365,11 @@ File: fig/5-1-a.eps Graphic file (type eps)
 <fig/5-1-a.eps>
 File: fig/5-1-b.eps Graphic file (type eps)
 <fig/5-1-b.eps>
- [86] [87] [88] [89]
+ [86] [87] [88] [89] [90]
 File: fig/5-2.jpg Graphic file (type bmp)
 <fig/5-2.jpg>
- [90]
 File: fig/5-3.jpg Graphic file (type bmp)
 <fig/5-3.jpg>
-
-Underfull \vbox (badness 1803) has occurred while \output is active []
-
  [91] [92] [93] [94] [95]) [96]
 \openout2 = `chapter06.aux'.
 
@@ -2468,17 +2464,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: F46062F6B93240A03E381F0D4CB809A9;9351.
  ) 
 Here is how much of TeX's memory you used:
- 57259 strings out of 476533
- 1470455 string characters out of 5818886
+ 57260 strings out of 476533
+ 1470472 string characters out of 5818886
  1949455 words of memory out of 5000000
- 76359 multiletter control sequences out of 15000+600000
+ 76360 multiletter control sequences out of 15000+600000
  542706 words of font info for 278 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,721b,1169s stack positions out of 5000i,500n,10000p,200000b,80000s

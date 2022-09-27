@@ -96,6 +96,17 @@
         \item 自旋量子数$s$为半整数的粒子是\textbf{费米子}, 满足费米-狄拉克统计
     \end{itemize}
 \end{theorem}
+\begin{history}{全同粒子更一般的说明}
+
+    其实根据全同粒子不可区分的特性, 我们要求的仅仅是交换两个粒子之后物理并不发生改变, 而波函数本身不是物理, 其模方也就是机率幅才是物理。所以我们要求的应该是：
+    \[\left|\psi(\mathbf{r}_1,\mathbf{r}_2)\right|^2=\left|\psi(\mathbf{r}_2,\mathbf{r}_1)\right|^2\]
+    也就是说要求交换后波函数只能相差一个相位：
+    \[\psi(\mathbf{r}_2,\mathbf{r}_1)=e^{i\alpha}\psi(\mathbf{r}_1,\mathbf{r}_2)\]
+
+    \setlength\parindent{2em}实验上观测发现$\alpha$取值为$0$或者$\pi$, 也就是这里的玻色子和费米子。后来物理学家通过更高级的方法严格证明了在一维和三维问题中, $\alpha$确实只能
+    取这两个值, 同时也预言了在二维情况下, $\alpha$可以取$0\sim\pi$之间的任意值。这种粒子我们称为\textbf{任意子(Anyon)}, 最近有研究声称发现了这种粒子\footnote{\href{https://doi.org/10.1126/science.aaz5601}{https://doi.org/10.1126/science.aaz5601}},
+    它的发现对凝聚态理论的发展具有重要意义。
+\end{history}
 
 现在如果两个粒子始终处于完全相同的状态, 也就是说\ref{eq:5.6}中有$\psi_a=\psi_b$。对于玻色子
 \[\psi_+(\mathbf{r}_1,\mathbf{r}_2)=\psi_a(\mathbf{r}_1)\psi_b(\mathbf{r}_2)\]

@@ -40,32 +40,32 @@
 \contentsline {subsection}{\numberline {5.1.1}玻色子和费米子}{99}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}交换力}{101}{subsection.5.1.2}%
 \contentsline {section}{\numberline {5.2}原子}{105}{section.5.2}%
-\contentsline {section}{\numberline {5.3}固体}{108}{section.5.3}%
+\contentsline {section}{\numberline {5.3}固体}{109}{section.5.3}%
 \contentsline {subsection}{\numberline {5.3.1}自由电子气理论}{109}{subsection.5.3.1}%
 \contentsline {subsection}{\numberline {5.3.2}价带结构}{112}{subsection.5.3.2}%
-\contentsline {chapter}{\numberline {第六章\hspace {.3em}}量子力学中的对称性}{116}{chapter.6}%
-\contentsline {section}{\numberline {6.1}平移对称性}{118}{section.6.1}%
-\contentsline {section}{\numberline {6.2}宇称守恒}{122}{section.6.2}%
-\contentsline {section}{\numberline {6.3}旋转对称性}{124}{section.6.3}%
-\contentsline {section}{\numberline {6.4}简并与对称}{127}{section.6.4}%
-\contentsline {section}{\numberline {6.5}旋转选择定则}{130}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}标量算符的选择定则}{131}{subsection.6.5.1}%
-\contentsline {subsection}{\numberline {6.5.2}矢量算符的选择定则}{133}{subsection.6.5.2}%
-\contentsline {section}{\numberline {6.6}时间平移对称性}{135}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}薛定谔/海森堡绘景}{136}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}能量守恒定律}{139}{subsection.6.6.2}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{141}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{141}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{142}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{144}{section.A.3}%
-\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{148}{section.A.4}%
-\contentsline {section}{\numberline {A.5}直角坐标里的张量}{150}{section.A.5}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{157}{appendix.B}%
-\contentsline {section}{\numberline {B.1}向量空间}{157}{section.B.1}%
-\contentsline {section}{\numberline {B.2}内积}{158}{section.B.2}%
-\contentsline {section}{\numberline {B.3}波函数的空间}{160}{section.B.3}%
-\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{162}{section.B.4}%
-\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{167}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{171}{section.B.6}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{174}{appendix.C}%
+\contentsline {chapter}{\numberline {第六章\hspace {.3em}}量子力学中的对称性}{117}{chapter.6}%
+\contentsline {section}{\numberline {6.1}平移对称性}{119}{section.6.1}%
+\contentsline {section}{\numberline {6.2}宇称守恒}{123}{section.6.2}%
+\contentsline {section}{\numberline {6.3}旋转对称性}{125}{section.6.3}%
+\contentsline {section}{\numberline {6.4}简并与对称}{128}{section.6.4}%
+\contentsline {section}{\numberline {6.5}旋转选择定则}{131}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}标量算符的选择定则}{132}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}矢量算符的选择定则}{134}{subsection.6.5.2}%
+\contentsline {section}{\numberline {6.6}时间平移对称性}{136}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}薛定谔/海森堡绘景}{137}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}能量守恒定律}{140}{subsection.6.6.2}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{142}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{142}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{143}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{145}{section.A.3}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{149}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{151}{section.A.5}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{158}{appendix.B}%
+\contentsline {section}{\numberline {B.1}向量空间}{158}{section.B.1}%
+\contentsline {section}{\numberline {B.2}内积}{159}{section.B.2}%
+\contentsline {section}{\numberline {B.3}波函数的空间}{161}{section.B.3}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{163}{section.B.4}%
+\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{168}{section.B.5}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{172}{section.B.6}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{175}{appendix.C}%
 \contentsfinish 
