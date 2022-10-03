@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  27 SEP 2022 22:31
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  3 OCT 2022 22:28
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2439,11 +2439,11 @@ Missing character: There is no º ("BA) in font cmbsy10!
  [124] [125] [126] [127]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [128] [129] [130
-
-]
+ [128] [129] [130]
 附录 B
-[131] [132] [133] [134] [135] [136] [137]
+[131
+
+] [132] [133] [134] [135] [136] [137]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
  [138] [139]
@@ -2465,13 +2465,13 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `book.out' has not changed.
-(rerunfilecheck)             Checksum: F46062F6B93240A03E381F0D4CB809A9;9351.
+(rerunfilecheck)             Checksum: 4C203D4BE6B94B3D03302581F99D70BF;9469.
  ) 
 Here is how much of TeX's memory you used:
- 57260 strings out of 476533
- 1470472 string characters out of 5818886
- 1949455 words of memory out of 5000000
- 76360 multiletter control sequences out of 15000+600000
+ 57263 strings out of 476533
+ 1470507 string characters out of 5818886
+ 1949572 words of memory out of 5000000
+ 76363 multiletter control sequences out of 15000+600000
  542706 words of font info for 278 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,721b,1169s stack positions out of 5000i,500n,10000p,200000b,80000s

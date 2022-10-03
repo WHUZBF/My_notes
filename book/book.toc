@@ -60,6 +60,7 @@
 \contentsline {section}{\numberline {A.3}曲线坐标系}{120}{section.A.3}%
 \contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{122}{section.A.4}%
 \contentsline {section}{\numberline {A.5}直角坐标里的张量}{125}{section.A.5}%
+\contentsline {section}{\numberline {A.6}分部积分法}{130}{section.A.6}%
 \contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{131}{appendix.B}%
 \contentsline {section}{\numberline {B.1}向量空间}{131}{section.B.1}%
 \contentsline {section}{\numberline {B.2}内积}{132}{section.B.2}%

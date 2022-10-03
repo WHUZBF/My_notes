@@ -465,6 +465,49 @@ $z$轴, 角速度方向和$z$轴方向相同), 这也说明转动惯量也应该
 $$L_i=I_{ij}\Omega_j$$
 再从角速度和角动量的矢量性质, 由商法则可以判断$I$是二阶张量, 也正是由于它的张量性质才有了角动量和角速度方向的不同。
 
+\section{分部积分法}
+在单变量微积分中学到的分部积分(Integration by Parts)公式：
+\begin{equation}
+    \int_a^buv^\prime dx=\left. {{uv}} \right|_a^b-\int_a^bu^\prime v dx
+\end{equation}
+是计算积分的强有力的武器, 但是我们在量子力学中遇到的大多数都不是单变量的情况, 所以有必要将上述分部积分法扩展到更高维的情形中去。
+
+下面假设$u$是任意一个标量场, $\mathbf{V}$是任意一个向量场。利用散度的计算公式有：
+\begin{equation}
+    \label{eq:A.11}
+    \nabla\cdot\left(u\mathbf{V}\right)=u\nabla\cdot\mathbf{V}+\nabla u\cdot\mathbf{V}
+\end{equation}
+另外设$\Omega$是$\mathbbm{R}^n$中的一个可积区域, 我们现在对\ref{eq:A.11}两边同时积分：
+\begin{equation}
+    \label{eq:A.12}
+    \int_\Omega \nabla\cdot\left(u\mathbf{V}\right)d\Omega =\int_\Omega u\nabla\cdot\mathbf{V} d\Omega +\int_\Omega\nabla u\cdot\mathbf{V}d\Omega
+\end{equation}
+根据高斯定理\footnote{我们并没有对高维空间中的高斯定理进行一般的证明, 姑且就先承认它在高维空间的推广是显然的。},\ref{eq:A.12}左边应该等于：
+\[\text{l.h.s}=\oint_\partial\Omega u \mathbf{V}\cdot d\mathbf{S}\]
+对比一下单变量的分部积分公式, 我们便可将\ref{eq:A.12}重写为：
+\begin{equation}
+    \label{eq:int-by-parts}
+    \boxed{
+        \int_\Omega u\nabla\cdot\mathbf{V} d\Omega=\oint_\partial\Omega u \mathbf{V}\cdot d\mathbf{S}-\int_\Omega\nabla u\cdot\mathbf{V}d\Omega
+    }
+\end{equation}
+数学上还有一些具体的注意事项我们物理这边就不太在乎了, 实际上这个公式和一维情况是及其相似的, 我们用这个公式的时候很多情况下都是边界项为$0$, 即
+\[\int_\Omega u\nabla\cdot\mathbf{V} d\Omega=-\int_\Omega\nabla u\cdot\mathbf{V}d\Omega\]
+\subsection*{Green's first identity}
+下面取向量场\footnote{$\mathbf{e}_i$是单位向量}$\mathbf{U=u_1\mathbf{e}_1+u_2\mathbf{e}_2+\cdots+u_n\mathbf{e}_n}$, 以及$\mathbf{V}=v\mathbf{e}_1+v\mathbf{e}_2+\cdots+v\mathbf{e}_n$. 我们现在试图去
+求\footnote{已使用爱因斯坦求和约定}:
+\[
+    \int_\Omega u_i\frac{\partial v}{\partial x_i}d\Omega =\oint_{\partial\Omega} u_i v \mathbf{e}_i\cdot d\mathbf{S}-\int_\omega\frac{\partial u_i}{\partial x_i}v d\Omega
+\]
+上式的推导即先将积分和求和交换次序, 对于每个积分我们都认为$v\mathbf{e}_i$可以看作是只有一个分量不为0的向量场, 便可套用公式\ref{eq:int-by-parts}即可证明。
+现在我们将上式写成向量形式：
+\begin{equation}
+    \int_{\Omega} \mathbf{U} \cdot \nabla v d \Omega=\oint_{\partial\Omega} v \mathbf{U} \cdot d\mathbf{S}-\int_{\Omega} v \nabla \cdot \mathbf{U} d \Omega
+\end{equation}
+进一步, 如果$\mathbf{U}$可以写成$\mathbf{\nabla u}$的形式, 那么我们便得到了格林第一恒等式：
+\begin{equation}
+    \int_{\Omega} \nabla u \cdot \nabla v d \Omega=\oint_{\partial\Omega} v \nabla u \cdot  d\mathbf{S}-\int_{\Omega} v \nabla^2 u d \Omega
+\end{equation}
 
 
 \chapter{Linear Algebra}
