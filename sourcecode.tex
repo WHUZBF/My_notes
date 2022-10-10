@@ -2238,7 +2238,7 @@
         }
     \end{lequation}
 
-    \subsection*{$L^2$和$L_z$的本征矢}
+    \subsection*{$L^2$和$L_z$的本征值}
     根据$\S 3.4$的讨论, 不对易的算符找不到一组共同的本征矢, 但是对易的可以, 矩阵的观点看来也即可以同时对角化。显然我们不应浪费时间在寻找三个分量算符之间的共同本征矢上面。
     根据\[L^2=L_x^2+L_y^2+L_z^2\]我们可以计算
     \begin{align*}
@@ -4557,5 +4557,107 @@
     初量的任务就是理清楚矢量算符的定义就好, 那三个转动矩阵的来历和对应的计算也很重要。
 
 
+    \chapter{定态微扰论}
+    理论上讲, 对于任何一个量子力学问题, 我们只要求解出来它的薛定谔方程问题就差不多解决了。但是从$\S$5.2中我们就发现这样做对于绝大多数情况下是不可行的, 比如氢原子我们
+    能得到精确解, 但是哪怕是只多了一个电子, 由于相互作用的存在, 我们也无能为力。所以后面要讲的一些近似方法就是在这样的背景下提出来的。如果任何方程都可以很简单的
+    找到精确解, 我们也不必要画这么多时间去费力的讨论一些只是近似的处理方法。
+    
+    这一章要介绍的是\textbf{微扰论(Perturbation theory)}, 经典力学里面天体问题我们也接触过, 那里叫\textbf{摄动法}, 其实英文和微扰是一样的。据说最先是由
+    波恩引入量子力学的, 因为他做过一些天体物理, 而那个时候摄动法早就已经广泛的用于天体物理分析了。
+
+    \section{非简并微扰论}
+    现在假设对于某个体系, 哈密顿算符为$\hat{H}^0$, 定态薛定谔方程为：
+    \begin{equation}
+        \label{eq:7.1}
+        \hat{H}^0\ket{\psi_n^0}=E_n^0\ket{\psi_n^0}
+    \end{equation}
+    现在假设对体系做一个小扰动, 哈密顿算符变为：
+    \[\hat{H}=\hat{H}^0+\lambda\hat{H}^\prime\quad(\lambda\ll 1)\]
+    \begin{thinknote}
+    \setlength\parindent{2em}这一点可以这么理解, 比如我们考虑一个无限深势阱, 但是这次势阱的底部“鼓起来了一点”, 我们对于无限深势阱本身是很好求解的, 也就是说对于哈密顿量$\hat{H}^0$,很容易下手,
+    对于真实要求解的那个系统, 由于变化不大, 所以说哈密顿量之变化了一个很小的量, 也就是这里的$\hat{H}^\prime$。后面的推导就告诉我们, 这样去做使得我们只需要在原来的无限深势阱模型上
+    加上一个小的修正就能达到很好的近似效果了。另外比如说氦原子里面的双电子体系, 我们说过两个电子之间的相互作用会让问题变得极为复杂, 但是如果两个电子之间没有相互作用,
+    这个问题就是单纯的两个独立的氢原子问题, 波函数求出来之后求乘积就好。这个时候电子之间的相互作用就可以看作是$\hat{H}^\prime$。
+    \end{thinknote}
+
+    显然系统真实的解$\ket{\psi_n}$、$E_n$是和微扰参数$\lambda$有关的, 我们便可以将它们按照$\lambda$的幂级数展开：
+    \begin{equation}
+        \ket{\psi_n}=\ket{\psi_n^0}+\lambda \ket{\psi_n^1}+\lambda^2\ket{\psi_n^2}+\cdots\\
+        E_n=E_n^0+\lambda E_n^1+\lambda^2 E_n^2+\cdots
+    \end{equation}
+    代入定态薛定谔方程并整理后有\footnote{其实一直到这里数学都很不严谨, 特别是最后还涉及到一个级数之间的求积, 这必须要求级数都绝对收敛。}：
+    \begin{equation}
+        \label{eq:7.3}
+        \begin{aligned}
+            &H^0 \ket{\psi_n^0}+\lambda\left(H^0 \ket{\psi_n^1}+H^{\prime} \ket{\psi_n^0}\right)+\lambda^2\left(H^0 \ket{\psi_n^2}+H^{\prime} \ket{\psi_n^1}\right)+\cdots \\
+            &\quad=E_n^0 \ket{\psi_n^0}+\lambda\left(E_n^0 \ket{\psi_n^1}+E_n^1 \ket{\psi_n^0}\right)+\lambda^2\left(E_n^0 \ket{\psi_n^2}+E_n^1 \ket{\psi_n^1}+E_n^2 \ket{\psi_n^0}\right)+\cdots
+        \end{aligned}
+    \end{equation}
+    
+    根据泰勒展开的唯一性, 我们知道式子两边$\lambda$次数对应相同项要相等。对于$\lambda^0$结果很平凡, 我们现在只考虑一阶修正
+    \footnote{\textcolor{red}{特别注意}：我们后面所有的$\hat{H}^\prime$和$E_n^1,E_n^2,\ldots$其实指的都是上面的$\lambda\hat{H}^\prime,\lambda E_n^1,\lambda^2 E_n^2,\ldots$。
+    也就是说令$\lambda=1$或者说把这个微扰因子直接吸收进微扰项了。直接说$\lambda=1$可能不太理解, 因为前面提到他是远小于1的, 其实如果你观察的够仔细的话, 我
+    们若是直接这么去求, 最后还需要将结果前面乘上$\lambda,\lambda^2,\ldots$这些因子。所以我们还不如就把这些因子提前纳入修正项, 哈密顿算符就直接写成$\hat{H}=\hat{H}^0+\hat{H}^\prime$,对于波函数亦然。
+    而前面我们那么写是为了让我们方便理解后面的一阶二阶修正的方程是怎么来的。要是还不理解就想象成麦克劳林级数在1处取值吧。}：
+    \begin{equation}
+        \label{eq:7.4}
+        H^0 \ket{\psi_n^1}+H^{\prime} \ket{\psi_n^0}=E_n^0 \ket{\psi_n^1}+E_n^1 \ket{\psi_n^0}
+    \end{equation}
+    式子两边左乘$\bra{\psi_n^0}$:
+    \[\braket{\psi_n^0|\hat{H}^\prime|\psi_n^0}+\braket{\psi_n^0|\hat{H}^0|\psi_n^1}=E_n^1\braket{\psi_n^0|\psi_n^0}+E_n^0\braket{\psi_n^0|\psi_n^1}\]
+    利用态的归一化和下面的连等式(注意到哈密顿算符是厄米算符, 本征值都是实数)：
+    \[
+        \bra{\psi_n^0}\hat{H}^0=\left(\hat{H}^0\ket{\psi_n^0}\right)^\dagger=E_n^0\bra{\psi_n^0}
+    \]
+    最终得到：
+    \begin{lequation}
+        \label{eq:7.5}
+        \boxed{
+            E_n^1=\braket{\psi_n^0|\hat{H}^\prime|\psi_n^0}=\braket{\hat{H}^\prime}_n^0
+        }
+    \end{lequation}
+    
+    上面就是很重要的一阶能量修正公式, 我们下一步就是去计算对于波函数的一阶修正。
+
+    首先将\ref{eq:7.4}改写为：
+    \begin{equation}
+        \label{eq:7.6}
+        \left(\hat{H}^0-E_n^0\right)=-\left(\hat{H}^\prime-E_n^1\right)\ket{\psi_n^0}
+    \end{equation}
+    
+    根据上面的推导, 上式右边我们已经完全确定, 所以问题的关键就是再去解上面的这个微分方程。当然, 这也绝非易事, 我们注意到$\{\ket{\psi_n^0}\}$是一个正交完备基\footnote{我们总可以取成这个样子。}
+    那么$\ket{\psi_n^1}$实际上就可以在这个基下展开为$\ket{\psi_n^1}=\sum\limits_{m=1}^\infty c_m^{(n)}\ket{\psi_m^0}$, 我们把这个式子代入方程, 便可以充分利用方程的线性简化计算。
+
+    在继续之前我们继续做一个简化, 首先注意到$\ket{\psi_n^1}$在$\ket{\psi_n^0}$上的分量完全是任意的。因为如果$\ket{\psi_n^1}$满足方程\ref{eq:7.6}, 
+    那么$\ket{\psi_n^1}+\alpha\ket{\psi_n^1}$($\alpha$为任意常数)一定也是这个方程的解, 所以我们完全就可以取$c^(n)_n=0$, 这样不仅我们多了一个$\braket{\psi_n^0|\psi_n^1}$这样的正交关系, 
+    $\ket{\psi_n^1}$的展开式还简化为：
+    \[\ket{\psi_n^1}=\sum\limits_{m\neq n}^\infty c_m^{(n)}\ket{\psi_m^0}\]
+    把这个展开式代入\ref{eq:7.4}并将等式两边左乘$\bra{\psi_\ell^0}$:\footnote{其实这一步是非常容易想到的, 我们其实就是想去求第$\ell$个分量, 而这恰恰就是与基底做内积可以得到的。}\footnote{下面的推导不采用Einstein求和约定。}
+    \begin{equation}
+        \sum\limits_{m\neq n}^\infty c_m^{(n)}\braket{\psi_\ell^0|\hat{H}^0-E_n^0|\psi_m^0}=-\braket{\psi_\ell^0|\hat{H}^\prime-E_n^1|\psi_n^0}
+    \end{equation}
+    把这个式子展开, 并且注意到$\braket{\psi_\ell^0|\hat{H}^0|\psi_m^0}=E_\ell^0\delta_{m\ell}$, 可以得到：
+    \begin{equation}
+        c^(n)_\ell \left(E^0_\ell -E^0_n\right)\delta_{n\ell}=-\braket{\psi_\ell^0|\hat{H}^\prime-E_n^1|\psi_n^0}
+    \end{equation}
+    对于$n=\ell$的情况, 上面的式子等价于\ref{eq:7.5}, 从中得不到任何有用的信息。\footnote{这不出我们意料, 因为求解前我们就根据方程的性质强制假定了$\ket{\psi_n^0}$方向分量为0}
+    现在着重看一下$n\neq\ell$的情况, 直接得出：
+    \[c_m^{(n)}=\frac{\braket{\psi_\ell^0|\hat{H}^\prime|\psi_n^0}}{E_n^0-E^0_\ell}\]
+    波函数的一阶修正便为：
+    \begin{lequation}
+        \boxed{
+            \ket{\psi_n^1}=\sum\limits_{m\neq n}^\infty \frac{\braket{\psi_m^0|\hat{H}^\prime|\psi_n^0}}{E_n^0-E^0_m}\ket{\psi_m^0}
+        }
+    \end{lequation}
+    
+    这里问题就出现了, 对于非简并问题, 也就是说\ref{eq:7.1}确定的量子态$\ket{\psi_n^0}$, 不存在能级简并现象, $n \neq m \rightleftarrows E_n\neq E_m$。
+    我们最后得出来的等式就是自洽的。但是一旦能级简并现象存在, 我们这么解就会出现除0问题！这就是我们下一节会讨论的问题。
+
+    最后简要说一下二阶修正, 绝大多数情况下只要考察一阶其实就够了。根据\ref{eq:7.3}:
+    \[H^0 \ket{\psi_n^2}+H^{\prime} \ket{\psi_n^1}=E_n^0 \ket{\psi_n^2}+E_n^1 \ket{\psi_n^1}+E_n^2 \ket{\psi_n^0}\]
+    跟之前\uwave{一模一样}的推导方法, 我们得到能量的二阶修正项, 那个波函数的修正表达式太dirty了, 之后先用现查(推)吧。
+    \begin{lequation}
+        E_n^2=\Braket{\psi_n^0|\hat{H}^\prime|\psi_n^1}=\sum\limits_{m\neq n}^\infty\frac{\left|\Braket{\psi_m^0|\hat{H}^\prime|\psi_n^0}\right|^2}{E_n^0-E_m^0}
+    \end{lequation}
     \include{appendix.tex}
 \end{document}  
