@@ -4659,5 +4659,102 @@
     \begin{lequation}
         E_n^2=\Braket{\psi_n^0|\hat{H}^\prime|\psi_n^1}=\sum\limits_{m\neq n}^\infty\frac{\left|\Braket{\psi_m^0|\hat{H}^\prime|\psi_n^0}\right|^2}{E_n^0-E_m^0}
     \end{lequation}
+    \section{简并微扰论}
+    前面讨论的微扰方法适用的关键是在$\lambda\sim0$时, $\ket{\psi^0}$和$E^0$的变化要很微小,这样$\ket{\psi(\lambda)}$和$E(\lambda)$才能展开成收敛的幂级数形式从而讨论。
+    上一节的最后我们也说明了当能级简并出现时, 会出现发散现象。对于无简并情况, 这是显然的, 对应的态在所研究的微扰下变化肯定很小, 否则我们也不会去谈论微扰。
+    
+    我们先讨论最简单的双重简并情况\footnote{其中$\ket{\psi_a^0}$和$\ket{\psi_a^0}$不成比例}：
+    \[\hat{H}^0\ket{\psi_a^0}=E^0\ket{\psi_a^0},\hat{H}^0\ket{\psi_b^0}=E^0\ket{\psi_b^0}\]
+    对于多重简并, 显然对于$\ket{\psi^0}$有无穷多种不同的选择方式：
+    \[\ket{\psi^0}=\alpha\ket{\psi_a^0}+\beta\ket{\psi_b^0}\]
+    你能确保所有的这些选择都在微扰下变化量很小吗？如果是, 那计算能级微扰就和前面算法一模一样, 但是重点就是我们并非事先能判断出哪个态是我们找寻的进行微扰的态\footnote{后面会介绍一种可直接判断的方法。}。
+
+    下面我们先用一个可以精确求解的例子来说明简并情况下的微扰。
+    \begin{thinknote}
+        考虑二维简谐振子：
+        \[\hat{H}^0=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\left(x^2+y^2\right)\]
+        考虑一个存在交叉项的微扰：
+        \[\hat{H}^\prime=\epsilon m \omega^2 xy\]
+        二维简谐子问题就是两个一维谐振子问题, 我们下面考虑未扰动问题的第一激发态, 这是一个二重简并, 可以取这个子空间的基矢为：
+        \begin{align*}
+            &\ket{\psi^0}=\ket{\psi^0_0}_x\ket{\psi_1^0}_y=\sqrt{\frac{2}{\pi}}\frac{m\omega}{\hbar}y e^{-\frac{m \omega}{2\hbar}(x^2+y^2)}\\
+            &\ket{\psi^0}=\ket{\psi^0_1}_x\ket{\psi_0^0}_y=\sqrt{\frac{2}{\pi}}\frac{m\omega}{\hbar}x e^{-\frac{m \omega}{2\hbar}(x^2+y^2)}
+        \end{align*}
+        为了精确求解这个问题, 我们作换元：
+        \[x=\frac{x^\prime+y^\prime}{\sqrt{2}},y=\frac{x^\prime-y^\prime}{\sqrt{2}}\]
+        哈密顿量便可以写为：
+        \[\hat{H}=\hat{H}^0+\hat{H}^\prime=\frac{1}{2m}\left(\frac{\partial^2}{\partial^2 x^\prime}+\frac{\partial^2}{\partial^2 y^\prime}\right)+\frac{1}{2}m(1+\epsilon)\omega^2 {x^\prime}^2+\frac{1}{2}m(1-\epsilon)\omega^2{y^\prime}^2\]
+        哈密顿量中的二次型化为了标准型, 在这个相当于旋转后的坐标下, 又可以看作是两个独立的简谐振子：
+        \[\psi_mn(x^\prime,y^\prime)=\psi^+_m(x^\prime)\psi^-_n(y^\prime),E=\left(m+\frac{1}{2}\right)\omega_+\hbar+\left(n+\frac{1}{2}\right)\omega_-\hbar\]
+        上式中的上标$^\pm$标识角频率为$\omega_\pm=\sqrt{1\pm\epsilon}\omega$。
+
+        \setlength\parindent{2em}现在我们重点来看第一激发态, 也即$m+n=1$, 显然随着微扰程度的增大, 简并会慢慢消除为两个能量相差越来越大的两个态(\ref{fig:7.1}的$E_3^0$情形), $\psi_{01}=\psi^+_0(x^\prime)\psi^-_1(y^\prime)$和
+        $\psi_{10}=\psi^+_1(x^\prime)\psi^-_0(y^\prime)$。尝试计算下面两个极限：
+        \begin{align*}
+            &\lim_{\epsilon\to0}\psi_{01}(x,y)=\frac{x-y}{\sqrt{2}}\sqrt{\frac{2}{\pi}}\frac{m\omega}{\hbar} e^{-\frac{m \omega}{2\hbar}(x^2+y^2)}\\
+            &\lim_{\epsilon\to0}\psi_{10}(x,y)=\frac{x+y}{\sqrt{2}}\sqrt{\frac{2}{\pi}}\frac{m\omega}{\hbar} e^{-\frac{m \omega}{2\hbar}(x^2+y^2)}
+        \end{align*}
+        可以发现它们并不等于$\psi^0_a$或是$\psi^0_b$, 而是：
+        $$\psi^0(x,y)=\frac{\psi_b^0\pm\psi_a^0}{\sqrt{2}}$$
+    \end{thinknote}
+
+    举上面的这个例子是想说明, 未微扰态和微扰态之间是连续变化的, 而因为能级简并, 未微扰态有很多种, 而真正能进行微扰展开的就那几个, 而这些又不是先验的。
+    所以我们不能盲目的再像上一节一样直接随便选取一个态做微扰。
+
+    下面这张图展现了体系微扰时可能发生的几种情况, 其中每一条曲线上的一个点都代表一个量子态, 而一条曲线就代表未微扰态到微扰态的连续变化。从图中可以清晰的看到简并的消除以及额外简并的出现($\lambda_1$)。
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.7]{fig/7.1.pdf}
+        \caption{简并微扰的多种情况}
+        \label{fig:7.1}
+    \end{figure} 
+
+    下面我们假设我们已经找到了那个合适的态$\ket{\psi^0}=\alpha\ket{\psi_a^0}+\beta\ket{\psi_b^0}$,其中$\alpha$和$\beta$是待定的。
+    
+    那么这个时候我们在$\ket{\psi^0}$附近进行微扰展开是合理的, 根据\ref{eq:7.4}, 我们依旧可以得到一阶近似：
+    \[H^0 \ket{\psi_n^1}+H^{\prime} \ket{\psi_n^0}=E_n^0 \ket{\psi_n^1}+E_n^1 \ket{\psi_n^0}\]
+    还是一样的套路, 这次两边同时左乘$\bra{\psi_a^0}$,得到：
+    \[\alpha\braket{\psi_a^0|\hat{H}^\prime|\psi_a^0}+\beta\braket{\psi_a^0|\hat{H}^\prime|\psi_b^0}=E^1 \alpha\]
+    同理,两边同时左乘$\bra{\psi_b^0}$,得到：
+    \[\alpha\braket{\psi_b^0|\hat{H}^\prime|\psi_a^0}+\beta\braket{\psi_b^0|\hat{H}^\prime|\psi_b^0}=E^1 \beta\]
+    我们定义$W_{i j} \equiv\left\langle\psi_{i}^{0}\left|H^{\prime}\right| \psi_{j}^{0}\right\rangle , (i, j=a, b) $, , 我们可以将上面的方程写成矩阵形式：
+    \begin{equation}
+        {\color{red}
+            \underbrace{\left(\begin{array}{ll}
+                W_{a a} & W_{a b} \\
+                W_{b a} & W_{b b}
+                \end{array}\right)}_{\mathrm{W}}\left(\begin{array}{l}
+                \alpha \\
+                \beta
+                \end{array}\right)=E^{1}\left(\begin{array}{c}
+                \alpha \\
+                \beta
+                \end{array}\right) 
+        }
+    \end{equation}
+    
+    也就是说, 我们要计算能级的一阶修正, 先在简并态子空间中选取任意一组基底${\ket{\psi_a^0},\ket{\psi_b^0}}$, 然后依次写出$\hat{H}^\prime$的矩阵元, 并
+    排列成矩阵$\mathbf{W}$, 它的本征值便是$E^1$, 顺带算出来的本征矢就是$\ket{\psi^0}$。\footnote{但是注意了, 如果计算出来$\mathbf{W}$两个本征值相等, 这个时候依然无法确定$\ket{\psi^0}$, 这个时候就要去认真考虑$\ket{\psi}$的修正了。好在很多情况下研究能级修正就够了。}
+    \begin{equation}
+        \boxed{E_{\pm}^{1}=\frac{1}{2}\left[W_{a a}+W_{b b} \pm \sqrt{\left(W_{a a}-W_{b b}\right)^{2}+4\left|W_{a b}\right|^{2}}\right]}
+    \end{equation}
+    
+    如果我们运气很好, $\ket{\psi_a^0}$和$\ket{\psi_b^0}$恰好就是能够在附近直接微扰展开的态, 显然, 它们将$\mathbf{W}$对角化。这个时候会发现
+    \[E_{+}^{1}=W_{a a}=\left\langle\psi_{a}^{0}\left|H^{\prime}\right| \psi_{a}^{0}\right\rangle, \quad E_{-}^{1}=W_{b b}=\left\langle\psi_{b}^{0}\left|H^{\prime}\right| \psi_{b}^{0}\right\rangle\]
+    这就是我们在非简并情况下的计算公式！也印证了前面说的, 如果选取的$\ket{\psi^0}$合适, 后面的推导和非简并情况是完全一致的。
+
+    自然就会去思考, 有没有一种方式, 能在我们没有求解之前, 就能\uwave{猜出}那些合适的$\ket{\psi^0}$？下面这个定理比较常用。
+    \begin{theorem}{Good State}
+        
+    \end{theorem}
+    \begin{thinknote}
+        Proof:
+    \end{thinknote}
+
+    那问题又来了, 怎么确定那个$\hat{A}$呢？回忆一下第六章, 讨论系统的对成性, 我们知道每一种对称操作对应一个算符, 宇称算符、平移算符、旋转算符, 而系统具有的每一种对称性又对应其中某一种算符
+    与$\hat{H}$的对易性。而系统的对称性我们是可以很直观地通过哈密顿量看出来的。
+
+    \subsection*{多重简并情况}
+    这个推广就很显然了,
     \include{appendix.tex}
 \end{document}  
