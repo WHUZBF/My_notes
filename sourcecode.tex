@@ -4749,9 +4749,8 @@
         \[A \ket{\psi_a^0}=\mu \ket{\psi_a^0}, \quad A \ket{\psi_b^0}=v \ket{\psi_b^0}, \quad {\color{red}\text { and } \mu \neq v}\]
         那么$\ket{\psi_a^0}$和$\ket{\psi_a^0}$就是我们要找的合适的$\ket{\psi^0}$(\textbf{good states})。
     \end{theorem}
-    \begin{thinknote}
-        Proof:
-    \end{thinknote}
+
+    关于这个定理的证明不想说太多, 实际上就是寻找(\uwave{局部的})CSCO的过程。
 
     那问题又来了, 怎么确定那个$\hat{A}$呢？回忆一下第六章, 讨论系统的对成性, 我们知道每一种对称操作对应一个算符, 宇称算符、平移算符、旋转算符, 而系统具有的每一种对称性又对应其中某一种算符
     与$\hat{H}$的对易性。而系统的对称性我们是可以很直观地通过哈密顿量看出来的。
@@ -4759,5 +4758,81 @@
     \subsection*{多重简并情况}
     这个推广就很显然了, 对于最一般的n重简并的态, 只要先选取一套$\hat{H}^0$对应这个能级的本征子空间正交基。写出对应的$W$矩阵, 然后求其本征值得能级一阶修正, 
     求其本征矢得零级波函数$\ket{\psi^0}$。不同的只是这里我们要处理更复杂的$n\times n$矩阵罢了。
+    
+    \section{氢原子的精细结构}
+    第四章中我们详细考虑过氢原子的能级问题, 而且指出每个能级的简并态有$n^2$个。但实际上不是这样的, 首先由于质子并不是不“动”的, 所以实际上我们需要把能级公式中的
+    $m_e$换成约化质量$\mu$, 但是这个问题很trivial, 修正量很小, 而且并不会引发能级消除, 也即改变能级结构。我们重点考虑的是其它效应, 首先说明, 我们下面的所有计算其实
+    在相对论量子力学中(利用Dirac方程)都可以严格求解。
+
+    在行星公转问题中, 比如著名的水星近日点偏移效应, 就是同时考虑了广义和狭义相对论的修正结果。同样在量子力学中, 我们也有相对论修正, 但是我们只考虑狭义相对论。
+    
+    未考虑修正的氢原子能谱称为\textbf{玻尔能级(Bohr energies)}；考虑了狭义相对论效应和电子自旋轨道耦合效应共同的修正称为\textbf{氢原子的精细结构(Fine structure)}；
+    进一步考虑电磁场的量子化效应的修正后称为\textbf{兰姆移位(Lamb shift)}；更进一步考虑电子与质子之间的偶极矩的磁相互作用后称为\textbf{超精细结构(hyperfine structure)}。
+    
+    我们定义氢原子的精细结构常数:
+    \begin{equation}
+        \boxed{\alpha\equiv\frac{e^2}{4\pi \epsilon_0\hbar c}\approx\frac{1}{137.036}}
+    \end{equation}
+    下面这张表总结了不同效应带来的修正的数量级：
+    \begin{center}
+        \begin{tabular}{|rll|}
+            \hline Bohr energies: & of order & $\alpha^2 m_e c^2$ \\
+            Fine structure: & of order & $\alpha^4 m_e c^2$ \\
+            Lamb shift: & of order & $\alpha^5 m_e c^2$ \\
+            Hyperfine splitting: & of order & $(m_e / m_p) \alpha^4 m_e c^2$ \\
+            \hline
+        \end{tabular}
+    \end{center}
+    
+    \subsection*{相对论修正}
+    首先注意到相对论动力学中的与外场相互作用的粒子的拉格朗日量可以写成下面的形式\footnote{具体可以看刘川老师的《理论力学讲义》}：
+    \begin{equation}
+        \mathcal{L}=-mc^2\sqrt{1-\frac{\mathbf{v}^2}{c^2}}e^{\Phi(\mathbf{x},t)}
+    \end{equation}
+    首先我们考虑的电磁相互作用能实际上是远小于$mc^2$的, 所以后面的指数项可以考虑$\Phi(\mathbf{x},t)=\frac{V(\mathbf{x},t)}{mc^2}\ll1$近似后得到：\footnote{注意这里我在后面加上了一个常数项$mc^2$, 它表示的是粒子的静止质能, 加上这一项之后, 后面考虑能级修正的时候就不会整体加上一个碍事的静止质能了。}
+    \begin{equation}
+        \mathcal{L}=-mc^2\sqrt{1-\frac{\mathbf{v}^2}{c^2}}-V(\mathbf{x},t)+mc^2
+    \end{equation}
+    据此可以计算出正则动量：
+    \[\mathbf{P}\equiv\frac{\partial\mathcal{L}}{\partial\mathbf{v}}=\frac{m\mathbf{v}}{\sqrt{1-\frac{\mathbf{v}^2}{c^2}}}\]
+    最后利用勒让德变换计算哈密顿量：
+    \begin{align*}
+        \mathcal{H}&=\mathbf{P}\cdot\mathbf{v}-\mathcal{L}\\
+        &=\sqrt{\mathbf{P}^2c^2+m^2c^4}+V(\mathbf{x})-mc^2\\
+        &\approx \frac{P^2}{2m}-\frac{P^4}{8m^3c^2}+V(\mathbf{x})
+    \end{align*}
+    所以我们得知相对论修正导致的哈密顿量微扰为:
+    \[H_{sr}=-\frac{P^4}{8m_e^3c^2}\]
+    现在因为$\hat{H}^0,H_{sr}$都是具有球对称性的, 也即与$L^2,\mathbf{L}$均对易, 所以之前我们计算Bohr能级时得到的态$\ket{n\ell m }$就可以作为正确的零级波函数使用,
+    使得$\mathbf{W}$矩阵对角化, 便可以直接使用非简并微扰论的公式计算了。
+    \begin{align*}
+        E^{sr}_n&=\braket{n\ell m|H_{sr}|n \ell m}\\
+        &=-\frac{1}{8m_e^3c^2}\braket{P^2\psi_{n\ell m}|P^2\psi_{n\ell m}}\\
+        &=-\frac{1}{2m_ec^2}\braket{\left(E_n-V\right)^2}\\
+        &=-\frac{1}{2m_ec^2}\left[E_n^2-2E_n\frac{e^2}{4\pi\epsilon_0}\Braket{\frac{1}{r}}+\left(\frac{e^2}{4\pi\epsilon_0}\right)^2\Braket{\frac{1}{r^2}}\right]
+    \end{align*}
+    第二个等号利用了$P^2$的厄米性, 第三个等号利用了薛定谔方程：
+    \[P^2\psi_{n\ell m}=2m_e(E_n-V)\psi_{n\ell m}\]
+    比较棘手的就是这里计算$\Braket{r^\nu}$,不过好在已经有人替我们仔细考虑过了\footnote{cf.Hans A. Bethe and Edwin E. Salpeter, {\itshape Quantum Mechanics of
+    One- and Two-Electron Atoms}, Plenum, New York (1977), p. 17}:
+    \begin{equation}
+        \Braket{r^\nu}=\left(\frac{n}{2 Z}\right)^\nu \braket{\varrho^\nu}=\left(\frac{n}{2 Z}\right)^\nu \frac{J_{n+l, 2 l+1}^{(\nu+1)}}{J_{n+l, 2 l+1}^{(1)}}
+    \end{equation}
+    其中：
+    \[\varrho\equiv 2Z\frac{r}{n},\quad Z\equiv a=\frac{m_ee*2}{4\pi\epsilon_0\hbar^2}(\text{Bohr radius})\]
+    \[J_{\lambda \mu}^{(\sigma)}\equiv\frac{1}{\lambda !^2} \int^{\infty} e^{-\varrho} \varrho^{\mu+\sigma}\left[L_\lambda^\mu(\varrho)\right]^2 d \varrho\]
+    
+    注意到这里的计算实际上是和m无关的, 因为m存在于$e^{im\phi}$指数项中, 而这种相位项会在求机率幅时被消去。下面列出了我们需要的几个公式：
+    \[\Braket{\frac{1}{r}}=\frac{1}{n^2a},\quad\Braket{\frac{1}{r^2}}=\frac{1}{\left(\ell+1/2\right)n^3a^2}\]
+    最终我们得到：
+    \begin{equation}
+        E^{sr}_n=-\frac{E_n^2}{2m_ec^2}\left[\frac{4n}{\ell+1/2}-3\right]
+    \end{equation}
+    
+    注意到现在$\ell$所具有的简并性被完全消除了, 但是$m$的简并性还完全保留。这是因为$\ell$的简并性是源于$1/r$势形式带来的额外对称性, 这显然被微扰破坏了, 但是$m$
+    所具有的对称性完全是因为势的球对称性带来的, 而球对称性并未被破坏。
+    
+    \subsection*{自旋轨道耦合效应修正}
+
     \include{appendix.tex}
 \end{document}  
