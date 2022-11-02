@@ -4816,6 +4816,7 @@
     比较棘手的就是这里计算$\Braket{r^\nu}$,不过好在已经有人替我们仔细考虑过了\footnote{cf.Hans A. Bethe and Edwin E. Salpeter, {\itshape Quantum Mechanics of
     One- and Two-Electron Atoms}, Plenum, New York (1977), p. 17}:
     \begin{equation}
+        \label{eq:7.16}
         \Braket{r^\nu}=\left(\frac{n}{2 Z}\right)^\nu \braket{\varrho^\nu}=\left(\frac{n}{2 Z}\right)^\nu \frac{J_{n+l, 2 l+1}^{(\nu+1)}}{J_{n+l, 2 l+1}^{(1)}}
     \end{equation}
     其中：
@@ -4833,6 +4834,62 @@
     所具有的对称性完全是因为势的球对称性带来的, 而球对称性并未被破坏。
     
     \subsection*{自旋轨道耦合效应修正}
+    这一小节的推导中, 会引入一些半经典的量子模型, 我们最终能推导出正确的结论, 但过程非常不严谨, 无论是从数学还是物理上都是如此。但是这是在没有考虑相对论
+    量子力学之前最佳的做法了。
 
+    按照经典解释, 电子围绕质子运动, 同样的, 我们可以认为质子也围绕电子运动。那么在电子自身看来, 质子的运动就会激发出磁场, 我们将质子的运动抽象为半径为r的圆周运动,
+    进而根据B-S定理可以得知磁感应强度为：
+    \begin{equation}
+        \mathbf{B}=\frac{\mu_0I}{2r}=\frac{\mu_0}{2r}\cdot\frac{e}{T}=\frac{\mu_0e}{4\pi r}\mathbf{\omega}
+    \end{equation}
+    注意到电子的角动量可以写成:
+    \[\mathbf{L}=m_e\mathbf{\omega}r^2\]
+    而且$\epsilon_0\mu_0=1/c^2$, 得：
+    \begin{equation}
+        \mathbf{B}=\frac{1}{4\pi\epsilon_0}\cdot\frac{e}{m_ec^2r^3}\mathbf{L}
+    \end{equation}
+    由于电子的自旋效应, 在磁场中电子的哈密顿量要加上一项\footnote{详见$\S4.4.3$}：
+    \begin{equation}
+        \label{eq:7.20}
+        H_{os}=-\mathbf{\mu}\cdot\mathbf{B}=-\gamma \mathbf{S}\cdot\mathbf{B}
+    \end{equation}
+    对于电子, 我们取$\gamma=-\frac{e}{m_e}$, 别问, 问就是考虑相对论效应可以直接算出来, 和电动力学里面的相比多了一倍。
+
+    这里重点又来了, $H_{os}$实际上是下面的形式：
+    \begin{equation}
+        H_{os}={\color{red} \frac{1}{2}}\cdot\frac{e^2}{4\pi\epsilon_0}\cdot\frac{1}{m_e^2c^2r^3}\mathbf{S}\cdot\mathbf{L}
+    \end{equation}
+    好像与\ref{eq:7.20}相比多了一个${\raise0.5ex\hbox{$\scriptstyle 1$}\kern-0.1em/\kern-0.15em\lower0.25ex\hbox{$\scriptstyle 2$}}$因子, 这个
+    实际上是\textbf{托马斯进动效应}\footnote{参见{\itshape Goldstein, Classical Mechanics}, $\S7.3$}带来的, 如果直接使用Dirac方程来研究问题, 这个因子会自然冒出来。
+    这里也不细说了。
+
+    问题来了, $\ket{n\ell m}$能不能和考虑相对论修正时一样也可以直接作为0级波函数呢？很遗憾, 因为$H_{os}$与$\mathbf{S},\mathbf{L}$并不对易, 所以我们不能这么做。
+    但是$H_{os}$实际上是和$\mathbf{L}^2,\mathbf{S}^2$以及$\mathbf{J}=\mathbf{L}+\mathbf{S}$对易的。且这时通常选取$\{H,\mathbf{L}^2,\mathbf{J}^2,\mathbf{J}_z\}$
+    作为CSCO, 它们的共同本征矢$\ket{n\ell j j_z}$可以选取为0级波函数。这里按照角动量的合成理论, $j=\ell\pm\frac{1}{2}, j_z=m\pm\frac{1}{2}$。
+
+    \begin{align*}
+        &\mathbf{J}=\left(\mathbf{L}+\mathbf{S}\right)\cdot\left(\mathbf{L}+\mathbf{S}\right)=\mathbf{L}^2+\mathbf{S}^2+2\mathbf{L}\cdot\mathbf{S}\\
+        \Rightarrow&\mathbf{L}\cdot\mathbf{S}=\frac{1}{2}\left(\mathbf{J}^2-\mathbf{L}^2-\mathbf{S}^2\right)\\
+        \Rightarrow&\text{Eigenvalues of }\left(\mathbf{L}\cdot\mathbf{S}\right)=\frac{1}{2}\left[j(j+1)-\ell(\ell+1)-s(s+1)\right]
+    \end{align*}
+
+    这里对于电子, $s=1$。那么我们就知道$\braket{\mathbf{L}\cdot\mathbf{S}}$就是这里计算的本征值。重点又回到了计算$\braket{r^{-3}}$, 根据\ref{eq:7.16}:
+    \[\Braket{\frac{1}{r^3}}=\frac{1}{\ell\left(\ell+1/2\right)\left(\ell+1\right)n^3a^3}\]
+    
+    可是这个平均我们计算的是对于$\ket{n\ell m}$的平均啊, 为啥这里可以直接用？因为这里实际上我们要取的0级波函数是$\Ket{n\ell j_z\pm\frac{1}{2}}$的线性组合,
+    类似于利用CG系数表来分解。然而求$\braket{r^\nu}$时不必关心m取值, 所以最后得到的均值必然是一样的。
+
+    下面代入\ref{eq:7.20}, 得到：
+    \[E_{so}=\frac{(E_n)^2}{m_ec^2}\cdot\frac{n\left[j\left(j+1\right)-\ell\left(\ell+1\right)-3/4\right]}{\ell(\ell+1/2)(\ell+1)}\]
+    和前面的相对论修正公式合起来之后我们就得到了能级修正公式(一阶), 与$j$直接相关：
+    \begin{equation}
+        E^1_{fs}=\frac{(E_n)^2}{2m_ec^2}\left(3-\frac{4n}{j+1/2}\right)
+    \end{equation}
+    
+    再和前面的未修正的能级公式(Bohr energies)合起来我们得到完整的精细能级表达式(仅考虑一阶修正)：
+    \begin{equation}
+        \boxed{E_{nj}=-\frac{\SI{13.6}{\electronvolt}}{n^2}\left[1+\frac{\alpha^2}{n^2}\left(\frac{n}{j+1/2}-\frac{3}{4}\right)\right]}
+    \end{equation}
+    不仅仅与n有关, 还和总的角量子数j有关。
     \include{appendix.tex}
 \end{document}  
