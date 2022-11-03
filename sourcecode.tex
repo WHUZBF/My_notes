@@ -4878,6 +4878,9 @@
     
     可是这个平均我们计算的是对于$\ket{n\ell m}$的平均啊, 为啥这里可以直接用？因为这里实际上我们要取的0级波函数是$\Ket{n\ell j_z\pm\frac{1}{2}}$的线性组合,
     类似于利用CG系数表来分解。然而求$\braket{r^\nu}$时不必关心m取值, 所以最后得到的均值必然是一样的。
+    \footnote{详细点说就是$\ket{\psi^0}=a\ket{n\ell j_z+\frac{1}{2}}+b\ket{n\ell j_z-\frac{1}{2}}$,其中$a^2+b^2=1$,然后根据标量算符的定义, 我们知道
+    $r^\nu$实际上是标量算符, 那么计算$\braket{r^\nu}=\braket{\psi^0|r^\nu|\psi^0}$时就可以利用标量算符选择定则\ref{eq:6.54}, 最终只留下$\braket{n\ell\|r^\nu\|n\ell}$, 也就是
+    这里引用的$\braket{r^\nu}=\braket{\psi_{n\ell m}|r^\nu|\psi_{n\ell m}}$, 这也是文中所说的\uwave{与m无关}的由来。}
 
     下面代入\ref{eq:7.20}, 得到：
     \[E_{so}=\frac{(E_n)^2}{m_ec^2}\cdot\frac{n\left[j\left(j+1\right)-\ell\left(\ell+1\right)-3/4\right]}{\ell(\ell+1/2)(\ell+1)}\]
@@ -4891,5 +4894,7 @@
         \boxed{E_{nj}=-\frac{\SI{13.6}{\electronvolt}}{n^2}\left[1+\frac{\alpha^2}{n^2}\left(\frac{n}{j+1/2}-\frac{3}{4}\right)\right]}
     \end{equation}
     不仅仅与n有关, 还和总的角量子数j有关。
+    
+    \section{塞曼(Zeeman)效应}
     \include{appendix.tex}
 \end{document}  

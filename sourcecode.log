@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  3 NOV 2022 00:12
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  3 NOV 2022 22:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2409,12 +2409,12 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 2C673128875E6555378BFC18B1802BB0;9975.
+(rerunfilecheck)             Checksum: 5A9224B1CE18E9022D4EDDF672709307;10130.
  ) 
 Here is how much of TeX's memory you used:
  56741 strings out of 476533
  1463371 string characters out of 5818886
- 1936865 words of memory out of 5000000
+ 1936868 words of memory out of 5000000
  75889 multiletter control sequences out of 15000+600000
  542706 words of font info for 278 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

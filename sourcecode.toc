@@ -58,6 +58,7 @@
 \contentsline {section}{\numberline {7.1}非简并微扰论}{142}{section.7.1}%
 \contentsline {section}{\numberline {7.2}简并微扰论}{145}{section.7.2}%
 \contentsline {section}{\numberline {7.3}氢原子的精细结构}{148}{section.7.3}%
+\contentsline {section}{\numberline {7.4}塞曼(Zeeman)效应}{152}{section.7.4}%
 \contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{153}{appendix.A}%
 \contentsline {section}{\numberline {A.1}指标运算}{153}{section.A.1}%
 \contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{154}{section.A.2}%
