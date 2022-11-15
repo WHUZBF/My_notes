@@ -58,20 +58,21 @@
 \contentsline {section}{\numberline {7.1}非简并微扰论}{142}{section.7.1}%
 \contentsline {section}{\numberline {7.2}简并微扰论}{145}{section.7.2}%
 \contentsline {section}{\numberline {7.3}氢原子的精细结构}{148}{section.7.3}%
-\contentsline {section}{\numberline {7.4}塞曼(Zeeman)效应}{152}{section.7.4}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{153}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{153}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{154}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{156}{section.A.3}%
-\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{160}{section.A.4}%
-\contentsline {section}{\numberline {A.5}直角坐标里的张量}{162}{section.A.5}%
-\contentsline {section}{\numberline {A.6}分部积分法}{168}{section.A.6}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{170}{appendix.B}%
-\contentsline {section}{\numberline {B.1}向量空间}{170}{section.B.1}%
-\contentsline {section}{\numberline {B.2}内积}{171}{section.B.2}%
-\contentsline {section}{\numberline {B.3}波函数的空间}{173}{section.B.3}%
-\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{175}{section.B.4}%
-\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{180}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{184}{section.B.6}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{188}{appendix.C}%
+\contentsline {section}{\numberline {7.4}塞曼(Zeeman)效应}{153}{section.7.4}%
+\contentsline {section}{\numberline {7.5}氢原子的超精细结构}{156}{section.7.5}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{157}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{157}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{158}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{160}{section.A.3}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{164}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{166}{section.A.5}%
+\contentsline {section}{\numberline {A.6}分部积分法}{172}{section.A.6}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{174}{appendix.B}%
+\contentsline {section}{\numberline {B.1}向量空间}{174}{section.B.1}%
+\contentsline {section}{\numberline {B.2}内积}{175}{section.B.2}%
+\contentsline {section}{\numberline {B.3}波函数的空间}{177}{section.B.3}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{179}{section.B.4}%
+\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{184}{section.B.5}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{188}{section.B.6}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{192}{appendix.C}%
 \contentsfinish 
