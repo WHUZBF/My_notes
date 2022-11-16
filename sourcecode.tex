@@ -4929,6 +4929,7 @@
         &=\frac{eB_{ext}}{2m}\underbrace{\left[1+\frac{j(j+1)+s(s+1)-\ell(\ell+1)}{2j(j+1)}\right]}_{g_J}\cdot m_j
     \end{align*}
     \begin{equation}
+        \label{eq:7.25}
         \boxed{E_Z^1=\mu_B g_J B_{ext}m_j}
     \end{equation}
     其中：
@@ -4958,6 +4959,7 @@
     \[E_{os}^1=\frac{e^2}{8\pi\epsilon_0}\cdot\frac{m_sm_\ell\hbar^2}{m_e^2c^2}\frac{1}{\ell(\ell+1/2)(\ell+1)n^3a^3}\]
     最后就是根据$E_1,\alpha,a$之间的关系进行化简了, 结果是：
     \begin{equation}
+        \label{eq:7.29}
         E_{fs}^1=\frac{\SI{13.6}{eV}}{n^3}\alpha^2\left\{\frac{3}{4n}-\left[\frac{\ell(\ell+1)-m_sm_\ell}{\ell(\ell+1/2)(\ell+1)}\right]\right\}
     \end{equation}
     \subsection*{$B_{ext}\sim B_{int}$}
@@ -4980,7 +4982,30 @@
         \end{aligned}
     \end{equation*}
     
-    因为前面计算精细能级时已知$\ket{n\ell j m_j}$为$H_{fs}^\prime$的0级波函数, 所以$\mathbf{W}_{fs}$只有对角线非零而且由\ref{eq:7.23}给出。
+    因为前面计算精细能级时已知$\ket{n\ell j m_j}$为$H_{fs}^\prime$的0级波函数, 所以$\mathbf{W}_{fs}$只有对角线非零而且由\ref{eq:7.23}给出。进一步根据
+    解耦后的基底可以算出总的$\mathbf{W}$矩阵\footnote{计算很繁琐, 要多加小心}:
+    \begin{equation*}
+        -\left(\begin{array}{cccccccc}
+        5 \gamma-\beta & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 5 \gamma+\beta & 0 & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & \gamma-2 \beta & 0 & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & \gamma+2 \beta & 0 & 0 & 0 & 0 \\
+        0 & 0 & 0 & 0 & \gamma-\frac{2}{3} \beta & \frac{\sqrt{2}}{3} \beta & 0 & 0 \\
+        0 & 0 & 0 & 0 & \frac{\sqrt{2}}{3} \beta & 5 \gamma-\frac{1}{3} \beta & 0 & 0 \\
+        0 & 0 & 0 & 0 & 0 & 0 & \gamma+\frac{2}{3} \beta & \frac{\sqrt{2}}{3} \beta \\
+        0 & 0 & 0 & 0 & 0 & 0 & \frac{\sqrt{2}}{3} \beta & 5 \gamma+\frac{1}{3} \beta
+        \end{array}\right)
+    \end{equation*}
+    这里：\[\gamma\equiv\left(\frac{\alpha}{8}\right)^2\SI{13.6}{eV},\quad \beta\equiv\mu_BB_{ext}\]
+
+    显然我们更感兴趣它的本征矢, 这里最终结果就直接列在下面方便查阅：
+    \begin{align*}
+        \epsilon_{1} &=E_{2}-5 \gamma+\beta& \epsilon_{5} &=E_{2}-3 \gamma+\beta / 2+\sqrt{4 \gamma^{2}+(2 / 3) \gamma \beta+\beta^{2} / 4} \\
+        \epsilon_{2} &=E_{2}-5 \gamma-\beta& \epsilon_{6} &=E_{2}-3 \gamma+\beta / 2-\sqrt{4 \gamma^{2}+(2 / 3) \gamma \beta+\beta^{2} / 4} \\
+        \epsilon_{3} &=E_{2}-\gamma+2 \beta& \epsilon_{7} &=E_{2}-3 \gamma-\beta / 2+\sqrt{4 \gamma^{2}-(2 / 3) \gamma \beta+\beta^{2} / 4}\\
+        \epsilon_{4} &=E_{2}-\gamma-2 \beta& \epsilon_{8} &=E_{2}-3 \gamma-\beta / 2-\sqrt{4 \gamma^{2}-(2 / 3) \gamma \beta+\beta^{2} / 4}
+    \end{align*}
+    注意到$\gamma$和$\beta$实际上分别表征了$B_{int}$和$B_{ext}$之间的大小, 所以$\beta\ll\gamma$时退化为\ref{eq:7.25};$\beta\gg\gamma$时退化为\ref{eq:7.29}($n=2$)。
     \section{氢原子的超精细结构}
     \include{appendix.tex}
 \end{document}  
