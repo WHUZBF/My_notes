@@ -4645,20 +4645,28 @@
     \[c_m^{(n)}=\frac{\braket{\psi_\ell^0|\hat{H}^\prime|\psi_n^0}}{E_n^0-E^0_\ell}\]
     波函数的一阶修正便为：
     \begin{lequation}
+        \label{eq:7.9}
         \boxed{
             \ket{\psi_n^1}=\sum\limits_{m\neq n}^\infty \frac{\braket{\psi_m^0|\hat{H}^\prime|\psi_n^0}}{E_n^0-E^0_m}\ket{\psi_m^0}
         }
     \end{lequation}
     
-    这里问题就出现了, 对于非简并问题, 也就是说\ref{eq:7.1}确定的量子态$\ket{\psi_n^0}$, 不存在能级简并现象, $n \neq m \rightleftarrows E_n\neq E_m$。
+    这里问题就出现了, 对于非简并问题, 也就是说\ref{eq:7.1}确定的量子态$\ket{\psi_n^0}$, 不存在能级简并现象, $n \neq m \Leftrightarrow E_n\neq E_m$。
     我们最后得出来的等式就是自洽的。但是一旦能级简并现象存在, 我们这么解就会出现除0问题！这就是我们下一节会讨论的问题。
 
     最后简要说一下二阶修正, 绝大多数情况下只要考察一阶其实就够了。根据\ref{eq:7.3}:
     \[H^0 \ket{\psi_n^2}+H^{\prime} \ket{\psi_n^1}=E_n^0 \ket{\psi_n^2}+E_n^1 \ket{\psi_n^1}+E_n^2 \ket{\psi_n^0}\]
     跟之前\uwave{一模一样}的推导方法, 我们得到能量的二阶修正项, 那个波函数的修正表达式太dirty了, 之后先用现查(推)吧。
     \begin{lequation}
+        \label{eq:7.10}
         E_n^2=\Braket{\psi_n^0|\hat{H}^\prime|\psi_n^1}=\sum\limits_{m\neq n}^\infty\frac{\left|\Braket{\psi_m^0|\hat{H}^\prime|\psi_n^0}\right|^2}{E_n^0-E_m^0}
     \end{lequation}
+
+    现在对\ref{eq:7.9}和\ref{eq:7.10}做一点说明：所谓非简并微扰, 是说我们想去修正的那个$E^0_n$是非简并的, 其它的$E^0_m$可以简并; 我们推导过程中考虑了最简单的情况,
+    也就是其它所有$E^0_m$也是简并的, 如果不是, 那么\ref{eq:7.9}和\ref{eq:7.10}中对于$m$求和应该理解为对$E_m^0$的本征子空间$g_m$的所有基矢量求和。
+
+    另外, 其实非简并微扰论还有一个隐含的适用条件就是矩阵元$\braket{\psi_m^0|\hat{H}^\prime|\psi_n^0}$相比于能级间距$\Delta E\equiv E_n^0-E_m^0$是很小的, 否则\ref{eq:7.9}可能不收敛, 
+    $E_n^1$给予不了我们任何信息, 这时候就还是要使用简并微扰论了。
     \section{简并微扰论}
     前面讨论的微扰方法适用的关键是在$\lambda\sim0$时, $\ket{\psi^0}$和$E^0$的变化要很微小,这样$\ket{\psi(\lambda)}$和$E(\lambda)$才能展开成收敛的幂级数形式从而讨论。
     上一节的最后我们也说明了当能级简并出现时, 会出现发散现象。对于无简并情况, 这是显然的, 对应的态在所研究的微扰下变化肯定很小, 否则我们也不会去谈论微扰。
@@ -4734,7 +4742,7 @@
     \end{equation}
     
     也就是说, 我们要计算能级的一阶修正, 先在简并态子空间中选取任意一组基底${\ket{\psi_a^0},\ket{\psi_b^0}}$, 然后依次写出$\hat{H}^\prime$的矩阵元, 并
-    排列成矩阵$\mathbf{W}$, 它的本征值便是$E^1$, 顺带算出来的本征矢就是$\ket{\psi^0}$。\footnote{但是注意了, 如果计算出来$\mathbf{W}$两个本征值相等, 这个时候依然无法确定$\ket{\psi^0}$, 这个时候就要去认真考虑$\ket{\psi}$的修正了。好在很多情况下研究能级修正就够了。}
+    排列成矩阵$\mathbf{W}$, 它的本征值便是$E^1$, 顺带算出来的本征矢就是$\ket{\psi^0}$。\footnote{但是注意了, 如果计算出来$\mathbf{W}$两个本征值相等, 这个时候依然无法确定$\ket{\psi^0}$, 这个时候就要去认真考虑$\ket{\psi}$的修正了(需要使用高阶简并微扰理论)。好在很多情况下研究能级修正就够了。}
     \begin{equation}
         \boxed{E_{\pm}^{1}=\frac{1}{2}\left[W_{a a}+W_{b b} \pm \sqrt{\left(W_{a a}-W_{b b}\right)^{2}+4\left|W_{a b}\right|^{2}}\right]}
     \end{equation}
@@ -5007,5 +5015,7 @@
     \end{align*}
     注意到$\gamma$和$\beta$实际上分别表征了$B_{int}$和$B_{ext}$之间的大小, 所以$\beta\ll\gamma$时退化为\ref{eq:7.25};$\beta\gg\gamma$时退化为\ref{eq:7.29}($n=2$)。
     \section{氢原子的超精细结构}
+    \footnote{这一部分参考的是\href{http://www.damtp.cam.ac.uk/user/tong/topicsinqm.html}{David Tong的在线讲义}}
+
     \include{appendix.tex}
 \end{document}  
