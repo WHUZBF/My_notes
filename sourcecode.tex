@@ -114,7 +114,7 @@
     这时如果引入含有虚部项的势能就可以很好地解释这一点。在量子力学中Schr{\"o}dinger方程的地位和牛顿第二定律一样, 现在只是描述粒子位置的函数变成了波函数。
 
 
-    Born后面给波函数一个统计上的解释, 这也就说明了在量子力学中的不确定性, 我们无法再像牛顿运动定律一样精确的预言一个例子之后的运动, 我们只能给出它之后在某处的\uwave{概率}是多少
+    Born后面给波函数一个统计上的解释, 这也就说明了在量子力学中的不确定性, 我们无法再像牛顿运动定律一样精确的预言一个粒子之后的运动, 我们只能给出它之后在某处的\uwave{概率}是多少
     \begin{proposition}{波函数的统计诠释}
         以一维情形为例, Born在统计上给出了对于波函数的解释, 他认为当一个微观粒子处于状态$\Psi\left(\bm{r},t\right)$时, 表示在$t$时刻在$x$处发现粒子的\uwave{概率}, 更准确的说\footnote{一个常用的代换是$\left|\Psi\left(x,t\right)\right|^{2}=
         \Psi^{*}\left(\left(x,t\right)\right) \Psi\left(x,t\right) $}
@@ -2157,6 +2157,7 @@
     \[\psi_{100}=R_{10}Y_0^0=\frac{1}{\sqrt{4\pi}}R_{10},\quad R_{n\ell}=\frac{1}{r}\rho^{\ell+1}e^{-\rho}v(\rho)\]
     $n=1$时, $c_1=0$, 故$v(\rho)=c_0$, 再根据$\rho=\kappa r=\frac{r}{n a}$, 对波函数进行归一化求得$c_0$后得到基态定态波函数解：
     \begin{lequation}
+        \label{eq:4.41}
         \boxed{\psi_{100}(r,\theta,\phi)=\frac{1}{\sqrt{\pi a^3}}e^{-\frac{r}{a}}}
     \end{lequation}
     \begin{thinknote}
@@ -4628,22 +4629,41 @@
     根据上面的推导, 上式右边我们已经完全确定, 所以问题的关键就是再去解上面的这个微分方程。当然, 这也绝非易事, 我们注意到$\{\ket{\psi_n^0}\}$是一个正交完备基\footnote{我们总可以取成这个样子。}
     那么$\ket{\psi_n^1}$实际上就可以在这个基下展开为$\ket{\psi_n^1}=\sum\limits_{m=1}^\infty c_m^{(n)}\ket{\psi_m^0}$, 我们把这个式子代入方程, 便可以充分利用方程的线性简化计算。
 
-    在继续之前我们继续做一个简化, 首先注意到$\ket{\psi_n^1}$在$\ket{\psi_n^0}$上的分量完全是任意的。因为如果$\ket{\psi_n^1}$满足方程\ref{eq:7.6}, 
-    那么$\ket{\psi_n^1}+\alpha\ket{\psi_n^1}$($\alpha$为任意常数)一定也是这个方程的解, 所以我们完全就可以取$c^(n)_n=0$, 这样不仅我们多了一个$\braket{\psi_n^0|\psi_n^1}$这样的正交关系, 
-    $\ket{\psi_n^1}$的展开式还简化为：
-    \[\ket{\psi_n^1}=\sum\limits_{m\neq n}^\infty c_m^{(n)}\ket{\psi_m^0}\]
-    把这个展开式代入\ref{eq:7.4}并将等式两边左乘$\bra{\psi_\ell^0}$:\footnote{其实这一步是非常容易想到的, 我们其实就是想去求第$\ell$个分量, 而这恰恰就是与基底做内积可以得到的。}\footnote{下面的推导不采用Einstein求和约定。}
+    % 下面是早先的版本, 按照格里菲斯的理解方法
+    % 在继续之前我们继续做一个简化, 首先注意到$\ket{\psi_n^1}$在$\ket{\psi_n^0}$上的分量完全是任意的。因为如果$\ket{\psi_n^1}$满足方程\ref{eq:7.6}, 
+    % 那么$\ket{\psi_n^1}+\alpha\ket{\psi_n^1}$($\alpha$为任意常数)一定也是这个方程的解, 所以我们完全就可以取$c^{(n)}_n=0$, 这样不仅我们多了一个$\braket{\psi_n^0|\psi_n^1}$这样的正交关系, 
+    % $\ket{\psi_n^1}$的展开式还简化为：
+    % \[\ket{\psi_n^1}=\sum\limits_{m\neq n}^\infty c_m^{(n)}\ket{\psi_m^0}\]
+    把这个$\ket{\psi_n^1}$的展开式代入\ref{eq:7.4}并将等式两边左乘$\bra{\psi_\ell^0}$:\footnote{其实这一步是非常容易想到的, 我们其实就是想去求第$\ell$个分量, 而这恰恰就是与基底做内积可以得到的。}\footnote{下面的推导不采用Einstein求和约定。}
     \begin{equation}
-        \sum\limits_{m\neq n}^\infty c_m^{(n)}\braket{\psi_\ell^0|\hat{H}^0-E_n^0|\psi_m^0}=-\braket{\psi_\ell^0|\hat{H}^\prime-E_n^1|\psi_n^0}
+        \sum\limits_{m}^\infty c_m^{(n)}\braket{\psi_\ell^0|\hat{H}^0-E_n^0|\psi_m^0}=-\braket{\psi_\ell^0|\hat{H}^\prime-E_n^1|\psi_n^0}
     \end{equation}
     把这个式子展开, 并且注意到$\braket{\psi_\ell^0|\hat{H}^0|\psi_m^0}=E_\ell^0\delta_{m\ell}$, 可以得到：
     \begin{equation}
-        c^(n)_\ell \left(E^0_\ell -E^0_n\right)\delta_{n\ell}=-\braket{\psi_\ell^0|\hat{H}^\prime-E_n^1|\psi_n^0}
+        c^{(n)}_\ell \left(E^0_\ell -E^0_n\right)\delta_{n\ell}=-\braket{\psi_\ell^0|\hat{H}^\prime-E_n^1|\psi_n^0}
     \end{equation}
-    对于$n=\ell$的情况, 上面的式子等价于\ref{eq:7.5}, 从中得不到任何有用的信息。\footnote{这不出我们意料, 因为求解前我们就根据方程的性质强制假定了$\ket{\psi_n^0}$方向分量为0}
+    
+    对于$n=\ell$的情况, 上面的式子等价于\ref{eq:7.5}, 从中得不到任何有用的信息。
+    % \footnote{这不出我们意料, 因为求解前我们就根据方程的性质强制假定了$\ket{\psi_n^0}$方向分量为0}
     现在着重看一下$n\neq\ell$的情况, 直接得出：
     \[c_m^{(n)}=\frac{\braket{\psi_\ell^0|\hat{H}^\prime|\psi_n^0}}{E_n^0-E^0_\ell}\]
-    波函数的一阶修正便为：
+    $n=\ell$的情况(也即求解$c_n^{(n)}$)可以根据归一化条件得出：\footnote{这里$\mathcal{O}$表示更高阶的小量, 这里我们只保留到一阶$\braket{\psi_n^1|\psi_n^0}$, $\braket{\psi_n^1|\psi_n^1}$是高一阶的小量}
+    \begin{align*}
+        1&=\braket{\psi_n|\psi_n}=\braket{\psi_n^0+\psi_n^1+\mathcal{O}|\psi_n^0+\psi_n^1+\mathcal{O}}\\
+        &=\underbrace{\braket{\psi_n^0|\psi_n^0}}_{=1}+\left(\braket{\psi_n^0|\psi_n^1}+\braket{\psi_n^1|\psi_n^0}\right)+\mathcal{O}
+    \end{align*}
+    也即$$\bar{c}_n^{(n)}+c_n^{(n)}=0\Rightarrow c_n^{(n)}=i\gamma\quad\left(\gamma\ll 1\right)$$ 
+    也就是说这一项系数是一个\uwave{纯虚数}, 那么考虑一阶修正后的波函数可以写成：
+    % \footnote{这里$\lambda c_m^{\prime(n)}\equiv c_m^{(n)}$, 为了下面推导的方便还不能直接取$\lambda=1$, 但最终结果取$\lambda=1$}\footnote{这里第二个等号是因为我们仅考虑到$\mathcal{O}(\lambda)$}
+    \begin{align*}
+        \ket{\psi_n}&\cong \ket{\psi_n^0}+i\gamma\ket{\psi_n^0}+\sum\limits_{m\neq n}^\infty c_m^{(n)}\ket{\psi_m^0}\\
+        &\cong e^{i\gamma\lambda}\ket{\psi_n^0}+\sum\limits_{m\neq n}^\infty c_m^{(n)}\ket{\psi_m^0}
+    \end{align*}
+
+    我们说过, 态矢量的相位因子具有任意性, 两个\uwave{成比例}的态之间是不可区分的。那么这里我们给$\ket{\psi_n}$乘上$e^{i\gamma}$不会有任何影响, 不仅消去了零级波函数前面的相位因子, 而且还对第二项在一阶上没有任何影响。
+    所以无论$\gamma$的选取如何, 最终得到的$\ket{\psi_n}$都只差了一个相位因子, 没有任何区别。所以我们还不如直接取$\gamma=0$, 这样$\ket{\psi_n^1}$和$\ket{\psi_n^1}$之间还是正交的, 有利于后面的讨论。
+    
+    综上所述, 波函数的一阶修正便为：
     \begin{lequation}
         \label{eq:7.9}
         \boxed{
@@ -4767,6 +4787,34 @@
     这个推广就很显然了, 对于最一般的n重简并的态, 只要先选取一套$\hat{H}^0$对应这个能级的本征子空间正交基。写出对应的$W$矩阵, 然后求其本征值得能级一阶修正, 
     求其本征矢得零级波函数$\ket{\psi^0}$。不同的只是这里我们要处理更复杂的$n\times n$矩阵罢了。
     
+    \subsection*{Feynman-Hellmann 定理}
+    \begin{theorem}{Feynman-Hellmann 定理}
+        如果哈密顿量$\hat{H}(\lambda)$依赖于某个参数$\lambda$, 那么\textbf{定态波函数}$\psi_n(\lambda)$和对应的能级$E_n(\lambda)$都会依赖于$\lambda$, 而且有下面等式成立：
+        \begin{equation}
+            \label{eq:fht}
+            \frac{dE_n}{d\lambda}=\Braket{\psi_n|\frac{d\hat{H}}{d\lambda}|\psi_n}
+        \end{equation}
+        其中$E_n$这一能级是不简并的, 或者简并, 但是$\psi_n$为$\lambda$微扰时的零级波函数。
+    \end{theorem}
+    
+    此定理有很多种不同的证明方式, 实际上根据前面学的微扰论可以作如下证明：
+    \begin{thinknote}
+        \textbf{Proof}:
+
+            \begin{equation*}
+                \hat{H}(\lambda+\Delta\lambda)=\hat{H}(\lambda)+\frac{d\hat{H}}{d\lambda}\Delta\lambda+\mathcal{O}(\Delta\lambda)
+            \end{equation*}
+            我们便可以通过微扰论得到能量的一阶修正：
+            \begin{equation*}
+                E_n^\prime=E_n+\Braket{\psi_n|\frac{d\hat{H}}{d\lambda}|\psi_n}\Delta\lambda+\mathcal{O}(\Delta\lambda)
+            \end{equation*}
+            上面的式子也等价于
+            \begin{equation*}
+                \Delta E_n=\Braket{\psi_n|\frac{d\hat{H}}{d\lambda}|\psi_n}\Delta\lambda+\mathcal{O}(\Delta\lambda)
+            \end{equation*}
+            我们把上式两边同时除以$\Delta\lambda$, 再取$\Delta\lambda\to 0$的极限便得到了\ref{eq:fht}。
+    \end{thinknote}
+
     \section{氢原子的精细结构}
     第四章中我们详细考虑过氢原子的能级问题, 而且指出每个能级的简并态有$n^2$个。但实际上不是这样的, 首先由于质子并不是不“动”的, 所以实际上我们需要把能级公式中的
     $m_e$换成约化质量$\mu$, 但是这个问题很trivial, 修正量很小, 而且并不会引发能级消除, 也即改变能级结构。我们重点考虑的是其它效应, 首先说明, 我们下面的所有计算其实
@@ -4830,7 +4878,10 @@
     其中：
     \[\varrho\equiv 2Z\frac{r}{n},\quad Z\equiv a=\frac{m_ee*2}{4\pi\epsilon_0\hbar^2}(\text{Bohr radius})\]
     \[J_{\lambda \mu}^{(\sigma)}\equiv\frac{1}{\lambda !^2} \int^{\infty} e^{-\varrho} \varrho^{\mu+\sigma}\left[L_\lambda^\mu(\varrho)\right]^2 d \varrho\]
-    
+    还有一个递推关系式也可以用来计算$\braket{r^s}$:\footnote{下式中$s\in\mathbbm{Z}$, 这个等式叫做\textbf{Kramers’ relation}}
+    \begin{equation*}
+        \frac{s+1}{n^2}\braket{r^s} -(2 s+1) a\braket{r^{s-1}}+\frac{s}{4}\left[(2 \ell+1)^2-s^2\right] a^2\braket{r^{s-2}}=0
+    \end{equation*}
     注意到这里的计算实际上是和m无关的, 因为m存在于$e^{im\phi}$指数项中, 而这种相位项会在求机率幅时被消去。下面列出了我们需要的几个公式：
     \[\Braket{\frac{1}{r}}=\frac{1}{n^2a},\quad\Braket{\frac{1}{r^2}}=\frac{1}{\left(\ell+1/2\right)n^3a^2}\]
     最终我们得到：
@@ -4877,7 +4928,7 @@
     作为CSCO, 它们的共同本征矢$\ket{n\ell j m_j}$可以选取为0级波函数。这里按照角动量的合成理论, $j=\ell\pm\frac{1}{2}, m_j=m\pm\frac{1}{2}$。
 
     \begin{align*}
-        &\mathbf{J}=\left(\mathbf{L}+\mathbf{S}\right)\cdot\left(\mathbf{L}+\mathbf{S}\right)=\mathbf{L}^2+\mathbf{S}^2+2\mathbf{L}\cdot\mathbf{S}\\
+        &\mathbf{J}^2=\left(\mathbf{L}+\mathbf{S}\right)\cdot\left(\mathbf{L}+\mathbf{S}\right)=\mathbf{L}^2+\mathbf{S}^2+2\mathbf{L}\cdot\mathbf{S}\\
         \Rightarrow&\mathbf{L}\cdot\mathbf{S}=\frac{1}{2}\left(\mathbf{J}^2-\mathbf{L}^2-\mathbf{S}^2\right)\\
         \Rightarrow&\text{Eigenvalues of }\left(\mathbf{L}\cdot\mathbf{S}\right)=\frac{1}{2}\left[j(j+1)-\ell(\ell+1)-s(s+1)\right]
     \end{align*}
@@ -5015,7 +5066,57 @@
     \end{align*}
     注意到$\gamma$和$\beta$实际上分别表征了$B_{int}$和$B_{ext}$之间的大小, 所以$\beta\ll\gamma$时退化为\ref{eq:7.25};$\beta\gg\gamma$时退化为\ref{eq:7.29}($n=2$)。
     \section{氢原子的超精细结构}
-    \footnote{这一部分参考的是\href{http://www.damtp.cam.ac.uk/user/tong/topicsinqm.html}{David Tong的在线讲义}}
+    这个修正比较复杂, 仅仅简要的提一下, 涉及到的电动力学知识比较多, 只给出结论。\footnote{这一部分参考的是\href{http://www.damtp.cam.ac.uk/user/tong/topicsinqm.html}{David Tong的在线讲义}}
 
-    \include{appendix.tex}
+    除了质子相对于电子的运动会产生磁场, 由于质子的自旋, 质子本身也构成了一个磁偶极子, 附近会有磁场分布。质子的磁矩由下式给出：
+    $$\mathbf{\mu}_p=\frac{g_p e}{2m_p}\mathbf{S_p}$$
+    这里$g_p$实验上测得值为$5.59$, 根据电动力学可以写出附近磁场分布：
+    \begin{equation}
+        \mathbf{B}=\frac{\mu_0}{4 \pi r^3}[3(\mu \cdot \hat{r}) \hat{r}-\mu]+\frac{2 \mu_0}{3} \mu \delta^3(\mathbf{r})
+    \end{equation}
+    根据$\S4.4.3$, 可以写出哈密顿量的修正：
+    \begin{equation}
+        H_{\mathrm{hf}}^{\prime}=\frac{\mu_0 g_p e^2}{8 \pi m_p m_e} \frac{\left[3\left(\mathbf{S}_p \cdot \hat{r}\right)\left(\mathbf{S}_e \cdot \hat{r}\right)-\mathbf{S}_p \cdot \mathbf{S}_e\right]}{r^3}+\frac{\mu_0 g_p e^2}{3 m_p m_e} \mathbf{S}_p \cdot \mathbf{S}_e \delta^3(\mathbf{r})
+    \end{equation}
+    
+    可以发现我们之前考虑精细结构时, 质子和电子\textbf{角动量-自旋耦合}, 到了这里就应该是\textbf{自旋-自旋耦合}。使用微扰论得到能量一阶修正：
+    \begin{equation}
+        E^1_{\mathrm{hf}}=\frac{\mu_0 g_p e^2}{8 \pi m_p m_e} \Braket{\frac{3\left(\mathbf{S}_p \cdot \hat{r}\right)\left(\mathbf{S}_e \cdot \hat{r}\right)-\mathbf{S}_p \cdot \mathbf{S}_e}{r^3}}+\frac{\mu_0 g_p e^2}{3 m_p m_e} \Braket{\mathbf{S}_p \cdot \mathbf{S}_e} \left|\psi(0)\right|^2
+    \end{equation}
+    考虑球对称的态, $\ell=0$。只要注意到下面的恒等式：
+    \begin{equation}
+        \int(\mathbf{a} \cdot \hat{r})(\mathbf{b} \cdot \hat{r}) \sin \theta d \theta d \phi=\frac{4 \pi}{3}(\mathbf{a} \cdot \mathbf{b})
+    \end{equation}
+    其中$\hat{r}$为积分时的单位矢径：$\hat{r}=\sin \theta \cos \phi \hat{\imath}+\sin \theta \sin \phi \hat{\jmath}+\cos \theta \hat{k}$, 便可以得出：
+    $$\Braket{\frac{3\left(\mathbf{S}_p \cdot \hat{r}\right)\left(\mathbf{S}_e \cdot \hat{r}\right)-\mathbf{S}_p \cdot \mathbf{S}_e}{r^3}}=0$$
+    我们现在考虑基态氢原子的修正, 根据\ref{eq:4.41}可以得到：
+    \begin{equation}
+        E_{\mathrm{hf}}^{1}=\frac{\mu_{0} g_{p} e^{2}}{3 \pi m_{p} m_{e} a^{3}}\left\langle\mathbf{S}_{p} \cdot \mathbf{S}_{e}\right\rangle
+    \end{equation}
+    
+    然后基本上就和我们求解精细结构一样了, 只是这里把电子轨道角动量换成了电子的自旋量。首先考虑守恒的总自旋量：
+    $$\mathbf{S}\equiv\mathbf{S_p}+\mathbf{S_e}$$
+    类似的上式两边同时平方后有:
+    \begin{equation}
+        \mathbf{S}^2=\mathbf{S_p}^2+\mathbf{S_e}^2+2\mathbf{S_p}\cdot\mathbf{S_e}\Rightarrow\mathbf{S}_{p} \cdot \mathbf{S}_{e}=\frac{1}{2}\left(s^{2}-S_{e}^{2}-S_{p}^{2}\right)
+    \end{equation}
+    我们知道一个粒子的自旋态由$\{S^2,S_z\}$构成完备集。前面解氢原子的态矢量的时候只给出了空间部分, 而自旋部分显然是$\{S_e^2,S_{ez},S_p^2,S_{pz}\}$的本征矢：
+    $$\Braket{S_p^2}=\Braket{S_e^2}=\frac{1}{2}\cdot\left(\frac{1}{2}+1\right)\cdot\hbar^2=\frac{3}{4}\hbar^2$$
+    根据角动量的合成理论$\Braket{S^2}=2\hbar^2$(triplet),$\Braket{S^2}=0$(singlet), 故最终基态能级会分裂为两个：
+    \begin{equation}
+        E_{\mathrm{hf}}^{1}=\frac{4 g_{p} \hbar^{4}}{3 m_{p} m_{e}^{2} c^{2} a^{4}}\left\{\begin{array}{ll}
+            +1 / 4, & \text { (triplet) } \\
+            -3 / 4, & \text { (singlet) }
+            \end{array}\right.
+    \end{equation}
+    实际代入数值计算可以得知两能级之差为：
+    $$\Delta E_hf^1=\frac{4 g_{p} \hbar^{4}}{3 m_{p} m_{e}^{2} c^{2} a^{4}}=\SI{5.88e-6}{eV}$$
+    氢原子基态在这两个超精细能级之间跃迁时便会发射出光子, 波长为:
+    $$\nu=\Delta E/h\approx\SI{1420}{MHz}\Rightarrow \lambda=c/\nu\approx\SI{21}{cm}$$
+    
+    这玩意很著名, 叫\textbf{21-centimeter line}, 在天文观测领域特别重要, 这个波长在微波段, 所以传播过程中由于衍射, 受障碍物影响很小。另外一个比较有名的是铯原子钟, 
+    铯原子是类氢原子, 外层一个电子, 等效的看内层的自旋量子数为$\frac{7}{2}$, 外层电子还是$\frac{1}{2}$不变, 和上面一样, 基态能量依旧会被分裂为两个超精细能级, 考虑铯原子
+    在这两个超精细能级的跃迁, 我们把它的同位素$^{133} \mathrm{Cs}$在这两个能级之间的跃迁$9192631770$个周期的频率称为$\SI{1}{s}$
+
+    \include{appendix.tex} 
 \end{document}  
