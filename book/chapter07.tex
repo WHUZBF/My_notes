@@ -127,6 +127,17 @@
 
     另外, 其实非简并微扰论还有一个隐含的适用条件就是矩阵元$\braket{\psi_m^0|\hat{H}^\prime|\psi_n^0}$相比于能级间距$\Delta E\equiv E_n^0-E_m^0$是很小的, 否则\ref{eq:7.9}可能不收敛, 
     $E_n^1$给予不了我们任何信息, 这时候就还是要使用简并微扰论了。
+    
+    最后, 我们来考虑一下一般的物理量$\Omega$的微扰：
+    \begin{align*}
+        \braket{\hat{\Omega}}&=\Braket{\psi_n|\hat{\Omega}|\psi_n}\\
+        &=\left\langle\psi_{n}^{0}|\hat{\Omega}| \psi_{n}^{0}\right\rangle+\lambda\left[\left\langle\psi_{n}^{1}|\hat{\Omega}| \psi_{n}^{0}\right\rangle+\left\langle\psi_{n}^{0}|\hat{\Omega}| \psi_{n}^{1}\right\rangle\right]+\lambda^{2}(\cdots)+\cdots\\
+        &\Rightarrow \boxed{\Braket{\hat{\Omega_n}}^1=2\mathrm{Re}\left[\Braket{\psi_n^0|\hat{\Omega}|\psi_n^1}\right]}
+    \end{align*}
+    再根据\ref{eq:7.9}我们得到：\footnote{显然这里就只适用于非简并微扰论了, 或者说对于非简并微扰, 上式中的$\psi^0$是求出来的零级波函数, 这个情况下非简并微扰与简并微扰后面的计算是如出一辙的}
+    \begin{equation}
+        \langle\Omega\rangle^{1}=2 \operatorname{Re} \sum_{m \neq n} \frac{\left\langle\psi_{n}^{0}|\hat{\Omega}| \psi_{m}^{0}\right\rangle\left\langle\psi_{m}^{0}\left|H^{\prime}\right| \psi_{n}^{0}\right\rangle}{E_{n}^{0}-E_{m}^{0}}
+    \end{equation}
     \section{简并微扰论}
     前面讨论的微扰方法适用的关键是在$\lambda\sim0$时, $\ket{\psi^0}$和$E^0$的变化要很微小,这样$\ket{\psi(\lambda)}$和$E(\lambda)$才能展开成收敛的幂级数形式从而讨论。
     上一节的最后我们也说明了当能级简并出现时, 会出现发散现象。对于无简并情况, 这是显然的, 对应的态在所研究的微扰下变化肯定很小, 否则我们也不会去谈论微扰。

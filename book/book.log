@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  27 NOV 2022 11:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  11 DEC 2022 00:33
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1341,41 +1341,38 @@ LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 15.05624pt on input line 244.
  [10] [11]
-Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 330 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 344 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 344 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 344 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 344 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 344 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 344 replaced by U+FFFD.
 File: fig/2-3-a.eps Graphic file (type eps)
 <fig/2-3-a.eps>
-Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 333 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 347 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 347 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 347 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 347 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 347 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 347 replaced by U+FFFD.
 File: fig/2-3-b.eps Graphic file (type eps)
 <fig/2-3-b.eps>
-Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 336 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
 File: fig/2-3-c.eps Graphic file (type eps)
 <fig/2-3-c.eps>
  [12] [13]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 389.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 404.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 389.
-
-Underfull \vbox (badness 4391) has occurred while \output is active []
-
- [14] [15]
+(Font)              scaled to size 12.045pt on input line 404.
+ [14] [15] [16]
 File: videos/wave_group/wave_group-0.png Graphic file (type bmp)
 <videos/wave_group/wave_group-0.png>
  <a0,fr0>
@@ -2128,26 +2125,20 @@ File: videos/wave_group/wave_group-249.png Graphic file (type bmp)
  <a0,fr249>
 File: videos/wave_group/wave_group-250.png Graphic file (type bmp)
 <videos/wave_group/wave_group-250.png>
- <a0,fr250> [16]
+ <a0,fr250>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 18.06749pt on input line 505.
+(Font)              scaled to size 18.06749pt on input line 520.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 505.
+(Font)              size <17.28> substituted on input line 520.
 
 File: fig/2-5-1.eps Graphic file (type eps)
 <fig/2-5-1.eps>
-[17]
-Underfull \vbox (badness 1960) has occurred while \output is active []
-
- [18]
+[17] [18] [19]
 File: fig/2-5-2.eps Graphic file (type eps)
 <fig/2-5-2.eps>
- [19] [20] [21]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [22]
+ [20] [21] [22]
 File: videos/equation_insection/equation_insection-0.png Graphic file (type bmp)
 <videos/equation_insection/equation_insection-0.png>
  <a1,fr0>
@@ -2261,14 +2252,12 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
  [33] [34]
 File: fig/3-1.eps Graphic file (type eps)
 <fig/3-1.eps>
+ [35]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 9.03374pt on input line 209.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 5.0pt on input line 209.
-
-Underfull \vbox (badness 1337) has occurred while \output is active []
-
- [35] [36]
+ [36]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
@@ -2291,43 +2280,43 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 12.045pt on input line 500.
  [42]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.05624pt on input line 517.
+(Font)              scaled to size 15.05624pt on input line 535.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 517.
+(Font)              size <14.4> substituted on input line 535.
 
 
-Overfull \hbox (31.73581pt too wide) in paragraph at lines 534--537
+Overfull \hbox (31.73581pt too wide) in paragraph at lines 552--555
 \TU/SimSun(0)/m/n/12.045 实 际 上\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 任 何 一 个 可 观 测 量 对 应 的 观 察 算 符 的 特 征 矢 都 可 以 组 成 一 个 规 范 正 交 基 \T1/ntxtlf/m/n/12.045 (\TU/SimSun(0)/m/n/12.045 满 足[][]\T1/ntxtlf/m/n/12.045 B.12[][]\TU/SimSun(0)/m/n/12.045 和[][]\T1/ntxtlf/m/n/12.045 B.13[][]),
  []
 
-[43] [44] [45]) [46]
+[43] [44] [45] [46]) [47]
 \openout2 = `chapter04.aux'.
 
- (./chapter04.tex
-第四章
-[47
+ (./chapter04.tex [48
 
 
 
 
 ]
+第四章
+[49]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 9.03374pt on input line 85.
- [48] [49] [50] [51] [52] [53]
+ [50] [51] [52] [53] [54] [55]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 9.03374pt on input line 293.
- [54] [55] [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66]
+ [56] [57] [58] [59] [60] [61] [62] [63] [64] [65] [66] [67] [68]
 File: fig/4-1.png Graphic file (type bmp)
 <fig/4-1.png>
- [67]
+ [69]
 File: fig/4-2.eps Graphic file (type eps)
 <fig/4-2.eps>
- [68] [69]
+ [70] [71]
 Overfull \vbox (0.84024pt too high) has occurred while \output is active []
 
- [70] [71]
+ [72] [73]
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
@@ -2336,52 +2325,52 @@ File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
- [72]
+ [74]
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
- [73] [74] [75] [76]
+ [75] [76] [77] [78]
 File: fig/4-3.eps Graphic file (type eps)
 <fig/4-3.eps>
- [77] [78] [79]) [80]
+ [79] [80] [81]) [82]
 \openout2 = `chapter05.aux'.
 
  (./chapter05.tex
 第五章
-[81
+[83
 
 
 
 
-] [82]
+] [84]
 Overfull \hbox (2.83589pt too wide) in paragraph at lines 91--98
 []\TU/SimSun(0)/m/n/12.045 显 然 $\OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 满 足 这 种 对 称 性 的 粒 子 称 为 \TU/SimSun(0)/b/n/12.045 玻 色 子 \T1/ntxtlf/b/n/12.045 (bosons)\TU/SimSun(0)/m/n/12.045 ；|  另 外\T1/ntxtlf/m/n/12.045 , $\OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 =
  []
 
-[83] [84] [85]
+[85] [86] [87]
 File: fig/5-1-a.eps Graphic file (type eps)
 <fig/5-1-a.eps>
 File: fig/5-1-b.eps Graphic file (type eps)
 <fig/5-1-b.eps>
- [86] [87] [88] [89] [90]
+ [88] [89] [90] [91] [92]
 File: fig/5-2.jpg Graphic file (type bmp)
 <fig/5-2.jpg>
 File: fig/5-3.jpg Graphic file (type bmp)
 <fig/5-3.jpg>
- [91] [92] [93] [94] [95]) [96]
+ [93] [94] [95] [96] [97]) [98]
 \openout2 = `chapter06.aux'.
 
  (./chapter06.tex
 第六章
-[97
+[99
 
 
 
 
-] [98] [99]
+] [100] [101]
 Missing character: There is no 忽 ("5FFD) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 略 ("7565) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 高 ("9AD8) in font ntx-Regular-tlf-ot1!
@@ -2394,42 +2383,42 @@ Missing character: There is no 高 ("9AD8) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 阶 ("9636) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 小 ("5C0F) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 量 ("91CF) in font ntx-Regular-tlf-ot1!
- [100] [101]
+ [102] [103]
 File: fig/6.3.pdf Graphic file (type pdf)
 <use fig/6.3.pdf>
- [102] [103] [104] [105]
+ [104] [105] [106] [107]
 File: fig/6-4.pdf Graphic file (type pdf)
 <use fig/6-4.pdf>
- [106] [107]
+ [108] [109]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [108] [109] [110] [111] [112] [113] [114] [115]) [116]
+ [110] [111] [112] [113] [114] [115] [116] [117]) [118]
 \openout2 = `chapter07.aux'.
 
  (./chapter07.tex
 第七章
-[117
+[119
 
 
 
 
-] [118] [119] [120]
+] [120] [121] [122]
 File: fig/7.1.pdf Graphic file (type pdf)
 <use fig/7.1.pdf>
- [121]
-Overfull \hbox (8.52371pt too wide) in paragraph at lines 204--206
+ [123]
+Overfull \hbox (8.52371pt too wide) in paragraph at lines 215--217
 []\TU/SimSun(0)/m/n/12.045 也 就 是 说\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 要 计 算 能 级 的 一 阶 修 正\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 先 在 简 并 态 子 空 间 中 选 取 任 意 一 组 基 底 $[]$\T1/ntxtlf/m/n/12.045 ,
  []
 
-[122] [123]
-Overfull \hbox (6.1708pt too wide) in paragraph at lines 287--289
+[124] [125]
+Overfull \hbox (6.1708pt too wide) in paragraph at lines 298--300
 \TU/SimSun(0)/m/n/12.045 首 先 我 们 考 虑 的 电 磁 相 互 作 用 能 实 际 上 是 远 小 于 $\OML/ntxmi/m/it/12.045 mc[]$ \TU/SimSun(0)/m/n/12.045 的\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 所 以 后 面 的 指 数 项 可 以 考 虑 $\U/ntxmia/m/it/12.045 ^^H\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 x\OML/ntxmi/m/it/12.045 ; t\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 =
  []
 
-[124] [125] [126] [127] [128] [129] [130]) [131]
+[126] [127] [128] [129] [130] [131] [132]) [133]
 \openout2 = `appendix.aux'.
 
- (./appendix.tex [132
+ (./appendix.tex [134
 
 
 
@@ -2444,46 +2433,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
 Underfull \vbox (badness 1789) has occurred while \output is active []
 
- [133] [134]
+ [135] [136]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [135] [136] [137]
+ [137] [138] [139]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [138] [139]
+ [140] [141]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [140] [141] [142] [143]
+ [142] [143] [144] [145]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [144] [145] [146]
+ [146] [147] [148]
 附录 B
-[147
+[149
 
-] [148] [149] [150] [151] [152] [153]
+] [150] [151] [152] [153] [154] [155]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [154] [155]
+ [156] [157]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [156]
+ [158]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [157] [158] [159] [160]
+ [159] [160] [161] [162]
 附录 C
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [161
+ [163
 
-]) [162] (./book.aux (./chapter01.aux) (./chapter02.aux) (./chapter03.aux) (./chapter04.aux) (./chapter05.aux) (./chapter06.aux) (./chapter07.aux) (./appendix.aux))
+]) [164] (./book.aux (./chapter01.aux) (./chapter02.aux) (./chapter03.aux) (./chapter04.aux) (./chapter05.aux) (./chapter06.aux) (./chapter07.aux) (./appendix.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
@@ -2492,12 +2481,12 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 2DA6E4ABF428C137425EEA6EA1A0356D;10279.
  ) 
 Here is how much of TeX's memory you used:
- 57336 strings out of 476533
- 1473191 string characters out of 5818886
- 1950747 words of memory out of 5000000
- 76428 multiletter control sequences out of 15000+600000
+ 57340 strings out of 476533
+ 1473235 string characters out of 5818886
+ 1955826 words of memory out of 5000000
+ 76432 multiletter control sequences out of 15000+600000
  542706 words of font info for 278 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,721b,1169s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (167 pages).
+Output written on book.pdf (169 pages).

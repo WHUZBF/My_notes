@@ -75,7 +75,7 @@
     对于有限维向量空间, 根据\uwave{复谱定理}, 厄米算符$\hat{Q}$一定可对角化, $\mathscr{E}$一定可以写成$g_n$的直和形式, 上面确定的正交归一系一定是$\mathscr{E}$的一个基底。
     但是这个定理在无限维向量空间中并不能推广。
     \begin{define}{观察算符}
-        对于厄米算符$\hat{Q}$, 如果$\mathscr{E}$可以使用它的一组本征矢作为基底, 也就是说\textbf{它的正交归一系满足}:
+        对于厄米算符$\hat{Q}$, 如果$\mathscr{E}$可以使用它的一组本征矢作为基底\footnote{不同的系统态空间不同, 所以将观察算符都是相对于某个体系的态空间而言的}, 也就是说\textbf{它的正交归一系满足}:
         \begin{equation}
             \sum\limits_{n = 1}^\infty  {\sum\limits_{i = 1}^{{g_n}} {\left| {\psi _n^i} \right\rangle \left\langle {\psi _n^i} \right|} }=\mathbbm{1}
         \end{equation}
@@ -499,6 +499,24 @@
         “显著”变化的时间, 这个论述就非常的缺乏严谨性, 非常模棱两可。所以这个不等式中的$\Delta t$在很多情况下都有非常“物理”的解释, 可以说通, 但比不上式\ref{define dt}的
         严谨性, 很多时候这个式子用来估算非常好, 这方面的例子{\itshape Griffiths}书里面有三个。
     \end{thinknote}
+    
+    \subsection*{位力定理}
+    根据\ref{广义欸费斯托定理}, 我们令$\hat{Q}=\hat{x}\hat{p}$得到：
+    \begin{align*}
+        \frac{d}{dt}\braket{\hat{x}\hat{p}}&=-\frac{1}{i\hbar}\Braket{\left[\hat{H},\hat{x}\hat{p}\right]}\\
+        &=-\frac{1}{i\hbar}\Braket{\underbrace{\left[\hat{H},\hat{x}\right]}_{\left[p^2/2m,\hat{x}\right]}\hat{p}+\hat{x}\underbrace{\left[\hat{H},\hat{p}\right]}_{\left[V,\hat{p}\right]}}\\
+        &=2\braket{T}-\Braket{x}\frac{\partial V}{\partial x}
+    \end{align*}
+    上式最后一个等号成立可以参考下式：
+    \begin{equation*}
+        [V, \hat{p}] g=V \frac{\hbar}{i} \frac{d g}{d x}-\frac{\hbar}{i} \frac{d}{d x}(V g)=V \frac{\hbar}{i} \frac{d g}{d x}-\frac{\hbar}{i}\left(\frac{d V}{d x} g+f \frac{d g}{d x}\right)=i \hbar \frac{d V}{d x} g \Rightarrow[V, \hat{p}]=i \hbar \frac{d V}{d x}
+    \end{equation*}
+    对于定态, 物理量不随时间演化, 故$\frac{d}{dt}\braket{\hat{x}\hat{p}}=0$, 我们便得到与经典力学中完全类比的\textbf{位力定理}:
+    \begin{equation}
+        2\Braket{\hat{T}}=\Braket{x\frac{\partial V}{\partial x}}\xlongequal[\text{函数定理}]{\text{Euler齐次}}k\Braket{\hat{V}}
+    \end{equation}
+    
+    这里为了方便我们只讨论了一维情况, 高维情况类似讨论即可。
     \section{表象理论}
     {\itshape Griffiths}书里面的这一节的绝大部分内容在附录\ref{Appendix B}中已讲, 这里我们回到{\itshape Cohen}第二章, 给狄拉克符号相关内容结尾。
     

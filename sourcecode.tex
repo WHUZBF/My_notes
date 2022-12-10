@@ -513,13 +513,15 @@
         }
     \end{lequation}
     \begin{lequation}
+        \label{eq:2.17}
         \boxed{
-            \omega\hbar(\hat{a}_+\hat{a}_-+\frac{1}{2})\psi(x)=E\psi(x)
+            \omega\hbar(\hat{a}_\pm\hat{a}_\mp\pm\frac{1}{2})\psi(x)=E\psi(x)
         }
     \end{lequation}
     \begin{theorem}{谐振子的定态解}
         如果$\psi(x)$是谐振子在能量为$E$时的定态解, 那么$A\hat{a}_+\psi(x)$就是在能量为$E+\frac{1}{2}\omega\hbar$时的定态解\footnote{前面乘上
         常数是归一化需要, 我们前面说过, 你求出来的解都需要进行归一化}, 同理, $A\hat{a}_-\psi(x)$是在能量为$E-\frac{1}{2}\omega\hbar$时的定态解。
+        根据这个性质我们便可知道谐振子是离散谱, 我们用$\ket{\psi_n}$标记这些定态。
     \end{theorem}
     直接根据湮灭和产生算子的定义可以很快地证明上述定理。现在很自然的就可以发现, 因为能量是不能一直递减的, 它至少要大于势能的最小值, 所以我们或许可以找到
     一个具有最低能量的定态解, 不能再使用湮灭算子产生新的解, 这个解我们称为$\psi_0(x)$, 是基态解。构造这个解的思路就是它的下一级是没有物理意义, 不能归一化的。
@@ -530,20 +532,25 @@
         }
     \end{lequation}
     \begin{lequation}
+        \label{eq:2.19}
         \boxed{
             \psi_n(x)=\frac{1}{\sqrt{n!}}\left(\hat{a}_+\right)^n\psi_0(x),E_n=\left(n+\frac{1}{2}\right)\omega \hbar
         }
     \end{lequation}
 
     前面由归一化条件所决定的系数可以使用递推关系来确定, 再次强调, $\hat{a}_+\psi_n(x)=c_n\psi_{n+1}(x)$, $c$要根据归一化去确定, 并不是说使用产生算符可以
-    直接得到高一个能级的解, 前面还有一个归一化条件确定的待定系数。
+    直接得到高一个能级的解, 前面还有一个归一化条件确定的待定系数。产生湮灭算符之间还有如下的非常有用的关系式, 也很容易证明。\footnote{在下一章讲了Dirac符号之后再来回过头来看这些}
     \begin{theorem}{$\hat{a}_-$与$\hat{a}_+$是厄密共轭的(相互为伴随算子)}
         \begin{lequation}
             \int f^*(\hat{a}_\pm g)dx=\int (\hat{a}_\mp f)^* gdx
         \end{lequation}
     \end{theorem}
-    直接计算$\left \| \hat{a}_+\psi_n(x) \right \|$和$\left \| \hat{a}_-\psi_n(x) \right \|$, 并利用$\hat{a}_+\hat{a}_-\psi_n=n\psi_n$及$\hat{a}_-\hat{a}_+\psi_n=(n+1)\psi_n$
-    可以确定递推关系前面的系数(老规矩, 归一化只能确定模长, 但是我们只取最简单的那个值)。
+    
+    根据\ref{eq:2.17}, 以及\ref{eq:2.19}中给出的能级表达式我们可以得知：
+    \[\hat{a}_+\hat{a}_-\psi_n=n\psi_n,\quad\hat{a}_-\hat{a}_+\psi_n=(n+1)\psi_n\]
+    
+    再通过直接计算$\left \| \hat{a}_+\psi_n(x) \right \|$和$\left \| \hat{a}_-\psi_n(x) \right \|$, 并利用上面的等式便
+    可以确定递推关系前面的系数(老规矩, 归一化只能确定模长, 但是我们只取最简单的那个值)：
     \begin{lequation}
         \boxed{
             \label{eq:2.21}
@@ -559,9 +566,16 @@
             p =i\,\sqrt[]{\frac{\hbar m \omega}{2}}\left(\hat{a}_+-\hat{a}_-\right)
         }
     \end{lequation}
+    根据上面的等式可以比较容易的求出下面两个用的比较多的公式：
+    \begin{align*}
+        \left\langle n|x| n^{\prime}\right\rangle & =\sqrt{\frac{\hbar}{2 m \omega}}\left\langle n\left|\left(a_{+}+a_{-}\right)\right| n^{\prime}\right\rangle=\sqrt{\frac{\hbar}{2 m \omega}}\left[\sqrt{n^{\prime}+1}\left\langle n \mid n^{\prime}+1\right\rangle+\sqrt{n^{\prime}}\left\langle n \mid n^{\prime}-1\right\rangle\right] \\
+        & =\sqrt{\frac{\hbar}{2 m \omega}}\left(\sqrt{n^{\prime}+1} \delta_{n, n^{\prime}+1}+\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)=\boxed{\sqrt{\frac{\hbar}{2 m \omega}\left(\sqrt{n} \delta_{n^{\prime}, n-1}+\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)} }\\
+        \left\langle n|p| n^{\prime}\right\rangle & =\boxed{i \sqrt{\frac{m \hbar \omega}{2}}\left(\sqrt{n} \delta_{n^{\prime}, n-1}-\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)}
+    \end{align*}
 
-    下面画出前三个能级对应波函数的能量, 不难看出图像具有的规律性和一维无限深势阱相同。
+    下面\ref{fig:2.2}画出前三个能级对应波函数的能量, 不难看出图像具有的规律性和一维无限深势阱相同。
     \begin{figure}[htbp]
+        \label{fig:2.2}
         \centering
         \subfigure[$n=1$]{
             \includegraphics[scale=0.7]{fig/2-3-a.eps}
@@ -574,6 +588,7 @@
         }   
         \caption{可以看到, 图像之间的递推联系还是满足前面的规则的。}
     \end{figure}
+
     \subsection{分析方法}
     \begin{define}{两个无量纲数}
         \begin{center}
@@ -877,7 +892,7 @@
     向右传播的行波, 反之表示向左传播的行波。结合这个问题, 考虑的解的区间, 这个解可以看作是
     \begin{itemize}
         \item $x<0$,$-\infty\to0$的振幅为$A$的波和$0\to-\infty$的振幅为$B$的波;
-        \item $x>0$,$+\infty\to0$的振幅为$G$的波和$0\to+\infty$的振幅为$G$的波。
+        \item $x>0$,$+\infty\to0$的振幅为$G$的波和$0\to+\infty$的振幅为$F$的波。
     \end{itemize}
     我们考虑比较简单的情况即$G=0$, 也就是说粒子从左边入射, 然后在$x=0$处就如有一个介质一般, 粒子的入射波一部分被反射($B$)一部分透射($F$)
     \begin{lequation}
@@ -1242,7 +1257,7 @@
     对于有限维向量空间, 根据\uwave{复谱定理}, 厄米算符$\hat{Q}$一定可对角化, $\mathscr{E}$一定可以写成$g_n$的直和形式, 上面确定的正交归一系一定是$\mathscr{E}$的一个基底。
     但是这个定理在无限维向量空间中并不能推广。
     \begin{define}{观察算符}
-        对于厄米算符$\hat{Q}$, 如果$\mathscr{E}$可以使用它的一组本征矢作为基底, 也就是说\uwave{它的正交归一系满足}:
+        对于厄米算符$\hat{Q}$, 如果$\mathscr{E}$可以使用它的一组本征矢作为基底\footnote{不同的系统态空间不同, 所以将观察算符都是相对于某个体系的态空间而言的}, 也就是说\uwave{它的正交归一系满足}:
         \begin{equation}
             \sum\limits_{n = 1}^\infty  {\sum\limits_{i = 1}^{{g_n}} {\left| {\psi _n^i} \right\rangle \left\langle {\psi _n^i} \right|} }=\mathbbm{1}
         \end{equation}
@@ -1666,6 +1681,24 @@
         “显著”变化的时间, 这个论述就非常的缺乏严谨性, 非常模棱两可。所以这个不等式中的$\Delta t$在很多情况下都有非常“物理”的解释, 可以说通, 但比不上式\ref{define dt}的
         严谨性, 很多时候这个式子用来估算非常好, 这方面的例子{\itshape Griffiths}书里面有三个。
     \end{thinknote}
+
+    \subsection*{位力定理}
+    根据\ref{广义欸费斯托定理}, 我们令$\hat{Q}=\hat{x}\hat{p}$得到：
+    \begin{align*}
+        \frac{d}{dt}\braket{\hat{x}\hat{p}}&=-\frac{1}{i\hbar}\Braket{\left[\hat{H},\hat{x}\hat{p}\right]}\\
+        &=-\frac{1}{i\hbar}\Braket{\underbrace{\left[\hat{H},\hat{x}\right]}_{\left[p^2/2m,\hat{x}\right]}\hat{p}+\hat{x}\underbrace{\left[\hat{H},\hat{p}\right]}_{\left[V,\hat{p}\right]}}\\
+        &=2\braket{T}-\Braket{x}\frac{\partial V}{\partial x}
+    \end{align*}
+    上式最后一个等号成立可以参考下式：
+    \begin{equation*}
+        [V, \hat{p}] g=V \frac{\hbar}{i} \frac{d g}{d x}-\frac{\hbar}{i} \frac{d}{d x}(V g)=V \frac{\hbar}{i} \frac{d g}{d x}-\frac{\hbar}{i}\left(\frac{d V}{d x} g+f \frac{d g}{d x}\right)=i \hbar \frac{d V}{d x} g \Rightarrow[V, \hat{p}]=i \hbar \frac{d V}{d x}
+    \end{equation*}
+    对于定态, 物理量不随时间演化, 故$\frac{d}{dt}\braket{\hat{x}\hat{p}}=0$, 我们便得到与经典力学中完全类比的\textbf{位力定理}:
+    \begin{equation}
+        2\Braket{\hat{T}}=\Braket{x\frac{\partial V}{\partial x}}\xlongequal[\text{函数定理}]{\text{Euler齐次}}k\Braket{\hat{V}}
+    \end{equation}
+    
+    这里为了方便我们只讨论了一维情况, 高维情况类似讨论即可。
     \section{表象理论}
     {\itshape Griffiths}书里面的这一节的绝大部分内容在附录\ref{Appendix B}中已讲, 这里我们回到{\itshape Cohen}第二章, 给狄拉克符号相关内容结尾。
     
@@ -4687,6 +4720,17 @@
 
     另外, 其实非简并微扰论还有一个隐含的适用条件就是矩阵元$\braket{\psi_m^0|\hat{H}^\prime|\psi_n^0}$相比于能级间距$\Delta E\equiv E_n^0-E_m^0$是很小的, 否则\ref{eq:7.9}可能不收敛, 
     $E_n^1$给予不了我们任何信息, 这时候就还是要使用简并微扰论了。
+
+    最后, 我们来考虑一下一般的物理量$\Omega$的微扰：
+    \begin{align*}
+        \braket{\hat{\Omega}}&=\Braket{\psi_n|\hat{\Omega}|\psi_n}\\
+        &=\left\langle\psi_{n}^{0}|\hat{\Omega}| \psi_{n}^{0}\right\rangle+\lambda\left[\left\langle\psi_{n}^{1}|\hat{\Omega}| \psi_{n}^{0}\right\rangle+\left\langle\psi_{n}^{0}|\hat{\Omega}| \psi_{n}^{1}\right\rangle\right]+\lambda^{2}(\cdots)+\cdots\\
+        &\Rightarrow \boxed{\Braket{\hat{\Omega_n}}^1=2\mathrm{Re}\left[\Braket{\psi_n^0|\hat{\Omega}|\psi_n^1}\right]}
+    \end{align*}
+    再根据\ref{eq:7.9}我们得到：\footnote{显然这里就只适用于非简并微扰论了, 或者说对于非简并微扰, 上式中的$\psi^0$是求出来的零级波函数, 这个情况下非简并微扰与简并微扰后面的计算是如出一辙的}
+    \begin{equation}
+        \langle\Omega\rangle^{1}=2 \operatorname{Re} \sum_{m \neq n} \frac{\left\langle\psi_{n}^{0}|\hat{\Omega}| \psi_{m}^{0}\right\rangle\left\langle\psi_{m}^{0}\left|H^{\prime}\right| \psi_{n}^{0}\right\rangle}{E_{n}^{0}-E_{m}^{0}}
+    \end{equation}
     \section{简并微扰论}
     前面讨论的微扰方法适用的关键是在$\lambda\sim0$时, $\ket{\psi^0}$和$E^0$的变化要很微小,这样$\ket{\psi(\lambda)}$和$E(\lambda)$才能展开成收敛的幂级数形式从而讨论。
     上一节的最后我们也说明了当能级简并出现时, 会出现发散现象。对于无简并情况, 这是显然的, 对应的态在所研究的微扰下变化肯定很小, 否则我们也不会去谈论微扰。

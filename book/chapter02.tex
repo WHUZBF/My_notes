@@ -275,13 +275,15 @@
         }
     \end{lequation}
     \begin{lequation}
+        \label{eq:2.17}
         \boxed{
-            \omega\hbar(\hat{a}_+\hat{a}_-+\frac{1}{2})\psi(x)=E\psi(x)
+            \omega\hbar(\hat{a}_\pm\hat{a}_\mp\pm\frac{1}{2})\psi(x)=E\psi(x)
         }
     \end{lequation}
     \begin{theorem}{谐振子的定态解}
         如果$\psi(x)$是谐振子在能量为$E$时的定态解, 那么$A\hat{a}_+\psi(x)$就是在能量为$E+\frac{1}{2}\omega\hbar$时的定态解\footnote{前面乘上
         常数是归一化需要, 我们前面说过, 你求出来的解都需要进行归一化}, 同理, $A\hat{a}_-\psi(x)$是在能量为$E-\frac{1}{2}\omega\hbar$时的定态解。
+        根据这个性质我们便可知道谐振子是离散谱, 我们用$\ket{\psi_n}$标记这些定态。
     \end{theorem}
     直接根据湮灭和产生算子的定义可以很快地证明上述定理。现在很自然的就可以发现, 因为能量是不能一直递减的, 它至少要大于势能的最小值, 所以我们或许可以找到
     一个具有最低能量的定态解, 不能再使用湮灭算子产生新的解, 这个解我们称为$\psi_0(x)$, 是基态解。构造这个解的思路就是它的下一级是没有物理意义, 不能归一化的。
@@ -292,20 +294,25 @@
         }
     \end{lequation}
     \begin{lequation}
+        \label{eq:2.19}
         \boxed{
             \psi_n(x)=\frac{1}{\sqrt{n!}}\left(\hat{a}_+\right)^n\psi_0(x),E_n=\left(n+\frac{1}{2}\right)\omega \hbar
         }
     \end{lequation}
 
     前面由归一化条件所决定的系数可以使用递推关系来确定, 再次强调, 公式$$\hat{a}_+\psi_n(x)=c_n\psi_{n+1}(x)$$中的$c_n$要根据归一化去确定, 并不是说使用产生算符可以
-    直接得到高一个能级的解, 前面还有一个归一化条件确定的待定系数。
+    直接得到高一个能级的解, 前面还有一个归一化条件确定的待定系数。产生湮灭算符之间还有如下的非常有用的关系式, 也很容易证明。\footnote{在下一章讲了Dirac符号之后再来回过头来看这些}
     \begin{theorem}{$\hat{a}_-$与$\hat{a}_+$是厄密共轭的(相互为伴随算子)}
         \begin{lequation}
             \int f^*(\hat{a}_\pm g)dx=\int (\hat{a}_\mp f)^* gdx
         \end{lequation}
     \end{theorem}
-    直接计算$\left \| \hat{a}_+\psi_n(x) \right \|$和$\left \| \hat{a}_-\psi_n(x) \right \|$, 并利用$\hat{a}_+\hat{a}_-\psi_n=n\psi_n$及$\hat{a}_-\hat{a}_+\psi_n=(n+1)\psi_n$
-    可以确定递推关系前面的系数(老规矩, 归一化只能确定模长, 但是我们只取最简单的那个值)。
+
+    根据\ref{eq:2.17}, 以及\ref{eq:2.19}中给出的能级表达式我们可以得知：
+    \[\hat{a}_+\hat{a}_-\psi_n=n\psi_n,\quad\hat{a}_-\hat{a}_+\psi_n=(n+1)\psi_n\]
+    
+    再通过直接计算$\left \| \hat{a}_+\psi_n(x) \right \|$和$\left \| \hat{a}_-\psi_n(x) \right \|$, 并利用上面的等式便
+    可以确定递推关系前面的系数(老规矩, 归一化只能确定模长, 但是我们只取最简单的那个值)：
     \begin{lequation}
         \boxed{
             \label{eq:2.21}
@@ -321,9 +328,16 @@
             p =i\,\sqrt[]{\frac{\hbar m \omega}{2}}\left(\hat{a}_+-\hat{a}_-\right)
         }
     \end{lequation}
+    根据上面的等式可以比较容易的求出下面两个用的比较多的公式：
+    \begin{align*}
+        \left\langle n|x| n^{\prime}\right\rangle & =\sqrt{\frac{\hbar}{2 m \omega}}\left\langle n\left|\left(a_{+}+a_{-}\right)\right| n^{\prime}\right\rangle=\sqrt{\frac{\hbar}{2 m \omega}}\left[\sqrt{n^{\prime}+1}\left\langle n \mid n^{\prime}+1\right\rangle+\sqrt{n^{\prime}}\left\langle n \mid n^{\prime}-1\right\rangle\right] \\
+        & =\sqrt{\frac{\hbar}{2 m \omega}}\left(\sqrt{n^{\prime}+1} \delta_{n, n^{\prime}+1}+\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)=\boxed{\sqrt{\frac{\hbar}{2 m \omega}\left(\sqrt{n} \delta_{n^{\prime}, n-1}+\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)} }\\
+        \left\langle n|p| n^{\prime}\right\rangle & =\boxed{i \sqrt{\frac{m \hbar \omega}{2}}\left(\sqrt{n} \delta_{n^{\prime}, n-1}-\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)}
+    \end{align*}
 
-    下面画出前三个能级对应波函数的能量, 不难看出图像具有的规律性和一维无限深势阱相同。
+    下面\ref{fig:2.2}画出前三个能级对应波函数的能量, 不难看出图像具有的规律性和一维无限深势阱相同。
     \begin{figure}[htbp]
+        \label{fig:2.2}
         \centering
         \subfigure[$n=1$]{
             \includegraphics[scale=0.7]{fig/2-3-a.eps}
@@ -336,6 +350,7 @@
         }   
         \caption{可以看到, 图像之间的递推联系还是满足前面的规则的}
     \end{figure}
+
     \subsection{分析方法}
     \begin{define}{两个无量纲数}
         \begin{center}
@@ -630,7 +645,7 @@
     向右传播的行波, 反之表示向左传播的行波。结合这个问题, 考虑的解的区间, 这个解可以看作是
     \begin{itemize}
         \item $x<0$,$-\infty\to0$的振幅为$A$的波和$0\to-\infty$的振幅为$B$的波;
-        \item $x>0$,$+\infty\to0$的振幅为$G$的波和$0\to+\infty$的振幅为$G$的波。
+        \item $x>0$,$+\infty\to0$的振幅为$G$的波和$0\to+\infty$的振幅为$F$的波。
     \end{itemize}
     我们考虑比较简单的情况即$G=0$, 也就是说粒子从左边入射, 然后在$x=0$处就如有一个介质一般, 粒子的入射波一部分被反射($B$)一部分透射($F$)
     \begin{lequation}
