@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  11 DEC 2022 00:33
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  16 DEC 2022 00:05
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1109,50 +1109,50 @@ File: ppxetex.def 2021/03/06 v0.5t Pdfpages driver for XeTeX (AM)
 \c@AM@survey=\count400
 \AM@templatesizebox=\box99
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 87.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 89.
  (./book.aux (./chapter01.aux) (./chapter02.aux) (./chapter03.aux) (./chapter04.aux) (./chapter05.aux) (./chapter06.aux) (./chapter07.aux) (./appendix.aux))
 \openout1 = `book.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 87.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 87.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 89.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 87.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 87.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 89.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 87.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 87.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 89.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 87.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 87.
+LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 89.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    ... okay on input line 89.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1188,7 +1188,7 @@ LaTeX Font Info:    ... okay on input line 87.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 87.
+Package hyperref Info: Link coloring ON on input line 89.
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1198,9 +1198,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count401
 )
-LaTeX Info: Redefining \ref on input line 87.
-LaTeX Info: Redefining \pageref on input line 87.
-LaTeX Info: Redefining \nameref on input line 87.
+LaTeX Info: Redefining \ref on input line 89.
+LaTeX Info: Redefining \pageref on input line 89.
+LaTeX Info: Redefining \nameref on input line 89.
  (./book.out) (./book.out)
 \@outlinefile=\write4
 \openout4 = `book.out'.
@@ -1213,7 +1213,7 @@ Package pgfplots notification 'compat/show suggested version=true': document has
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 87.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 89.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/graphics/lscape.sty
@@ -1222,48 +1222,48 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 22.08249pt on input line 89.
+(Font)              scaled to size 22.08249pt on input line 91.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.05624pt on input line 89.
-LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 89.
+(Font)              scaled to size 15.05624pt on input line 91.
+LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 91.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.05624pt on input line 89.
+(Font)              scaled to size 15.05624pt on input line 91.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 89.
+(Font)              scaled to size 12.045pt on input line 91.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 89.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 89.
+(Font)              scaled to size 9.03374pt on input line 91.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 91.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 89.
+(Font)              size <14.4> substituted on input line 91.
 
-LaTeX Font Info:    Trying to load font information for U+esint on input line 89.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 91.
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 91.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 91.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 89.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 91.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 89.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 91.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 89.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 91.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 ) [1
@@ -1273,9 +1273,9 @@ File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.09pt on input line 91.
+(Font)              scaled to size 24.09pt on input line 93.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.09pt on input line 91.
+(Font)              scaled to size 24.09pt on input line 93.
  (./book.toc
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.045pt on input line 1.
@@ -2481,10 +2481,10 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 2DA6E4ABF428C137425EEA6EA1A0356D;10279.
  ) 
 Here is how much of TeX's memory you used:
- 57340 strings out of 476533
- 1473235 string characters out of 5818886
- 1955826 words of memory out of 5000000
- 76432 multiletter control sequences out of 15000+600000
+ 57344 strings out of 476533
+ 1473275 string characters out of 5818886
+ 1955985 words of memory out of 5000000
+ 76436 multiletter control sequences out of 15000+600000
  542706 words of font info for 278 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,721b,1169s stack positions out of 5000i,500n,10000p,200000b,80000s

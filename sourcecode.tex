@@ -58,6 +58,8 @@
 \newtcolorbox[]{theorem}[2][]{title=\textbf{#2}, colback=red!5,colframe=red!75!black,breakable, enhanced jigsaw}
 % 定义
 \newtcolorbox[]{define}[2][]{title=\textbf{#2},colback=SeaGreen!10!CornflowerBlue!10,colframe=RoyalPurple!55!Aquamarine!100!,breakable, enhanced jigsaw}
+% 例子
+\newtcolorbox[]{example}[2][]{title=\textbf{例：#2}, colback=green!5,colframe=green!75!black,breakable, enhanced jigsaw}
 % 思考注记
 \definecolor{formalshade}{rgb}{0.99,0.97,0.93} % 文本框颜色
 \newenvironment{thinknote}{%
@@ -5162,5 +5164,102 @@
     铯原子是类氢原子, 外层一个电子, 等效的看内层的自旋量子数为$\frac{7}{2}$, 外层电子还是$\frac{1}{2}$不变, 和上面一样, 基态能量依旧会被分裂为两个超精细能级, 考虑铯原子
     在这两个超精细能级的跃迁, 我们把它的同位素$^{133} \mathrm{Cs}$在这两个能级之间的跃迁$9192631770$个周期的频率称为$\SI{1}{s}$
 
+    \chapter{变分法}
+    前面的定态微扰论很方便, 也很精确, 但是我们还是要事先求出未微扰的波函数, 然后代入公式计算。\footnote{做{\itshape Griffiths}的习题你就知道有多痛苦了}
+    而下面要介绍的变分法就是在我们完全不知道, 也不用知道波函数的情况下较为近似的给出基态能量大小。当然它也可以进一步推广去求激发态, 现在也有很多计算物理算法是基于此原理的
+
+    \section{基本原理}
+    我们假设体系的基态能量为$E_{gs}$, 基态波函数为$\ket{\psi_{0}}$。方便起见, 先考虑离散谱非简并的系统, $\hat{H}$本征矢构成的正交完备基设为$\{\ket{\psi_n}\}$。\footnote{对于变分法, 简并和非简并情况是可以统一处理的}
+
+    现在我们考虑态空间$\mathscr{E}$中的\uwave{任意}一个归一化的态矢量$\ket{\psi}$, 可以展开为:
+    \[\ket{\psi}=\sum_{n=0}^{\infty}c_n\ket{\psi_n},\quad\sum_{n=0}^{\infty}|c_n|^2=1\]
+    在没有求解方程之前, 我们完全有理由认为这个态矢量为真实的解, 我们求一下在这个态下的能量平均值：
+    \begin{align*}
+        \braket{\psi|\hat{H}|\psi}&=\sum_{n=0}^{\infty}c_n\braket{\psi|\hat{H}|\psi_n}=\sum_{n=0}^{\infty}E_nc_n\braket{\psi|\psi_n}\\
+        &=\sum_{n=0}^{\infty}|c_n|^2E_n\geq E_{gs}\sum_{n=0}^{\infty}|c_n|^2=E_{gs}
+    \end{align*}
+    更一般的情况下我们不要求$\ket{\psi}$本身是归一化的, 我们先给它归一化后再代入计算便可以得到更为通用的形式：
+    \begin{equation}
+        \label{eq:8.1}
+        \boxed{
+            E_{gs}=\mathrm{min}\left[\frac{\braket{\psi|\hat{H}|\psi}}{\braket{\psi|\psi}}\right],\quad\psi\in\mathscr{E}
+        }
+    \end{equation}
+
+    上面这个式子可以理解为粒子找遍了态空间中所有可取的波函数, 最后取了一个可以使得能量最小的波函数作为基态波函数, 是不是有点最小作用量原理的味道了？那这又是怎么和变分联系起来的呢？
+    我们刚才只是证明了它是定态薛定谔方程的必要条件, 现在验证一下充分性。
+
+    我们把$\ref{eq:8.1}$的右边看成是关于$\ket{\psi}$的\uwave{泛函}, 记作$E[\psi]$。基态波函数的选取使得$E[\psi]$取极小值, 或者说一阶变分$\delta E[\psi_0]=0$:
+    \begin{equation*}
+        \delta E[\psi]=\delta\frac{\braket{\psi|\hat{H}|\psi}}{\braket{\psi|\psi}}
+        =\frac{\braket{\psi|\psi}\delta \braket{\psi|\hat{H}|\psi}-\braket{\psi|\hat{H}|\psi}\delta \braket{\psi|\psi}}{\braket{\psi|\psi}^2}
+    \end{equation*}
+    上面的方程在波函数取正确的基态$\ket{\psi_0}$时为0, 记$E_{gs}=E[\psi_0]$:
+    \[\braket{\delta\psi|\hat{H}|\psi_0}+\braket{\psi_0|\hat{H}|\delta\psi}=E_{gs}\left(\braket{\psi_0|\delta\psi}+\braket{\delta\psi|\psi_0}\right)\]
+    $E_gs$是常数, 所以可以直接纳入braket里面, 移项整理后得到：
+    \[\mathrm{Re}\left[\Braket{\delta\psi|\hat{H}-E_{gs}|\psi_0}\right]=0\]
+    
+    和我们推导Euler-Lagrange方程是所做的一样, 上式要对任意的$\delta\psi$成立, 只能有:
+    $$\hat{H}\ket{\psi_0}=E_{gs}\ket{\psi_0}$$
+    而这正是基态的定态薛定谔方程！
+
+    变分问题我们近似的解的话思路就是找一堆可能的函数簇$$\{\psi(x;\alpha_1,\alpha_2,\cdots,\alpha_n)\}$$其中$\alpha_i$表示参数, 我们称之为\uwave{试探函数}。
+    对于每个试探函数我们算一个$E[\psi]$, 我们便确定了基态能量的一个上界, 而且这个上界会越来越小, 越来越趋近于真值, 我们最终计算得到的能量泛函肯定是$\alpha_i$的函数,
+    我们最后取一个最小的上界作为$E_gs$的近似值就好, 也就是说我们还要解方程组：
+    \[\frac{\partial}{\partial\alpha_i}E_\psi[\alpha_1,\alpha_2,\cdots,\alpha_n]=0,\quad (i=1,2,\cdots,n)\]
+
+    我们选取的试探函数参数越多, 形式和$\psi_0$越接近, 近似效果就会越好, 最后看一个例子。
+    \begin{example}{谐振子}
+        谐振子问题$V(x)=\frac{1}{2}m\omega^2x^2$是可以精确求解的, 我们这里用变分法估计一下它的基态能量上界。试探函数一般取为下面的高斯函数：
+        \begin{equation}
+            \label{eq:8.2}
+            \psi(x;b)=Ae^{-bx^2}\xleftarrow[]{normalized}A=\left(\frac{2b}{\pi}\right)^{1/4}
+        \end{equation}
+    不难计算得到$\braket{\psi|\hat{H}|\psi}$:
+    \begin{equation*}
+        \langle T\rangle=-\frac{\hbar^{2}}{2 m}|A|^{2} \int_{-\infty}^{\infty} e^{-b \cdot x^{2}} \frac{d^{2}}{d x^{2}}\left(e^{-b . x^{2}}\right) d x=\frac{\hbar^{2} b}{2 m}
+    \end{equation*}
+    \begin{equation*}
+        \langle V\rangle=\frac{1}{2} m \omega^{2}|A|^{2} \int_{-\infty}^{\infty} e^{-2 b x^{2}} x^{2} d x=\frac{m \omega^{2}}{8 b}
+    \end{equation*}
+    \begin{equation*}
+        \langle H\rangle=\frac{\hbar^{2} b}{2 m}+\frac{m \omega^{2}}{8 b}
+    \end{equation*}
+    我们选取参数$b$得到最小的上界：
+    \begin{equation*}
+        \frac{\partial}{\partial b}\braket{H}=\frac{\hbar^2}{2m}-\frac{m\omega^2}{8b^2}=0\Rightarrow b=\frac{m\omega}{2\hbar}
+    \end{equation*}
+    这样我们便得到:
+    \begin{equation*}
+        E_{gs}\leq\frac{1}{2}\omega\hbar
+    \end{equation*}
+    我们得到的不只是上界还是上确界！究其原因还是因为我们试探函数取的好, 基态波函数恰好就是\ref{eq:8.2}的形式。
+    \end{example}
+
+    变分法其实也能用于激发态的求解, 但是用起来要复杂一些, 所以很少使用。
+    \begin{theorem}{变分法估计第一激发态}
+        如果$\braket{\psi|\psi_{gs}}=0$(normalized), 那么$\braket{H}_\psi\geq E_{fe}$
+    \end{theorem}
+    
+    这个定理的证明和前面的一个套路, 这里就直接略去了。
+    
+    上面的定理的关键在于去找寻与基态正交的试探波函数, 而由于我们有时候甚至不知道基态波函数长什么样, 所以用起来很难。但是当系统具有某种对称性时, 也就是说存在一个厄米算符$\hat{A}$, 有
+    $\left[\hat{A},\hat{H}\right]=0$, 那么各级波函数可以取为他们的共同本征矢, 我们若是知道了$A\psi_{gs}=\lambda\psi_{gs}$, 那么根据厄米性, $A$的本征值为$\nu\neq\lambda$对应
+    的本征矢一定与$\psi_{gs}$正交。比如氢原子, $\hat A$便是$J^2$, 角量子数$\ell=0$说基态取值, 那么我们选取$J^2$的本征值为$\ell=1$的本征矢去试探便可以估计$E_{fs}$的上界。
+    
+    \section{氦原子的基态能量}
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     \include{appendix.tex} 
+    \include{appendix_group.tex}
 \end{document}  
