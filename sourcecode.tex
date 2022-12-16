@@ -5248,12 +5248,77 @@
     的本征矢一定与$\psi_{gs}$正交。比如氢原子, $\hat A$便是$J^2$, 角量子数$\ell=0$说基态取值, 那么我们选取$J^2$的本征值为$\ell=1$的本征矢去试探便可以估计$E_{fs}$的上界。
     
     \section{氦原子的基态能量}
+    首先复习一下氦原子的哈密顿量：
+    \begin{equation}
+        H=-\frac{\hbar^{2}}{2 m}\left(\nabla_{1}^{2}+\nabla_{2}^{2}\right)-\frac{e^{2}}{4 \pi \epsilon_{0}}\left(\frac{2}{r_{1}}+\frac{2}{r_{2}}-\frac{1}{\left|\mathbf{r}_{1}-\mathbf{r}_{2}\right|}\right)
+    \end{equation}
+    难以处理的地方在于电子之间的相互作用势能：
+    \begin{equation}
+        V_{ee}=\frac{e^{2}}{4 \pi \epsilon_{0}} \frac{1}{\left|\mathbf{r}_{1}-\mathbf{r}_{2}\right|}
+    \end{equation}
+    我们前面已经说过, 如果不考虑这个势能, 那么基态波函数就可以写为\footnote{参考\ref{eq:4.41}, 注意这里氦原子核电荷为2, 即$Z=2$,$a\to\frac{a}{2}$}：
+    \begin{equation}
+        \label{eq:8.5}
+        \psi_{0}\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right) \equiv \psi_{100}\left(\mathbf{r}_{1}\right) \psi_{100}\left(\mathbf{r}_{2}\right)=\frac{8}{\pi a^{3}} e^{-2\left(r_{1}+r_{2}\right) / a}
+    \end{equation}
+    
+    或许有疑问电子是费米子, 他的态按照我们前面说的应该是反对称的才对啊？注意这里不要忘了电子的自旋态, 这里波函数$\psi_0$对称, 而他们的自旋态是singlet反对称的。
 
+    上面的这个非常粗略的波函数是略去$V_{ee}$后哈密顿量的本征矢, 给出的基态能量不难发现为$2\times 2^2 E_1=8E_1\approx\SI{-109}{eV}$, 而实验上的结果为$\SI{-78.975}{eV}$。看来完全忽略电子之间的相互作用是不可行的, 但是这给了我们灵感, 
+    利用变分法, 或许我们可以利用\ref{eq:8.5}计算一个基态能量的上界。
+
+    把$H$分解为$H^0+V_{ee}$, 前面已说过$H^0\psi_0=8E_1\psi_0$, 所以我们关键是去求$\braket{V_{ee}}$:
+    \begin{equation}
+        \label{eq:8.6}
+        \braket{V_{ee}}=\left(\frac{e^2}{4\pi\varepsilon_0}\right)^2\left(\frac{8}{\pi a^3}\right)^2\underbrace{\int\frac{e^{-4(r_1+r_2)/a}}{|\mathbf{r}_1-\mathbf{r}_2|}d^3r_1d^3r_2}_{I}
+    \end{equation}
     
+    为了计算这个积分, 我们先对$\mathbf{r}_1$积分, 注意这里的积分含义, 是在$\mathbf{r}_2$确定之后对$\mathbf{r}_1$全空间积分, 所以这个时候我们就可以取一个球坐标系去计算,
+    将这个球坐标系的$z$轴方向取为$\mathbf{r}_2$方向, 其余定义与通常的球坐标系一致, 我们便可以化简得到：
+
+    \begin{align*}
+        I&=\int d^3r_2e^{-4r_2/a}\int^{\infty}_{0}dr_1 r_1^2e^{-4r_1/a}\int_0^\pi\frac{\sin\theta d\theta}{\sqrt{r_1^2+r_2^2-2r_1r_2\cos\theta}}\int_0^{2\pi}d\phi\\
+        &=2\pi\int d^3r_2e^{-4r_2/a}\int^{\infty}_{0}dr_1 \frac{r_1}{r_2}e^{-4r_1/a}\mathrm{min}\{r_1,r_2\}\\
+        &=\frac{\pi a^{3}}{8}\iiint\left[1-\left(1+\frac{2 r_{2}}{a}\right) e^{-4 r_{2} / a}\right] e^{-4 r_{2} / a} r_{2} \sin \theta_{2} d r_{2} d \theta_{2} d \phi_{2}\\
+        &=\frac{5\pi^2a^5}{256}
+    \end{align*} 
+    再代入到\ref{eq:8.6}最终得到：
+    \[\braket{V_{ee}}=\frac{5}{4a}\left(\frac{e^2}{4\pi\varepsilon_0}\right)=-\frac{5}{2}E_1\approx\SI[]{34}{eV}\]
+    能量上界便为$\SI[]{-109}{eV}-(\SI[]{-34}{eV})=\SI[]{-75}{eV}$.
+
+    到这儿还不是变分法的极限, 我们前面不是都是用的一簇函数吗？这里只用了一个波函数去估计上界, 所以差异还是比较大。实际上从结果上来看, \ref{eq:8.5}应该和真实的
+    基态波函数差不多了, 我们只需要再加一点点改进就能让上界更加逼近于真实值。注意到\ref{eq:8.5}这个式子蕴含着\textbf{每个电子感受到的原子核吸引为电荷$2e$}, 但是
+    实际上肯定不是这样, 另一个电子会排斥它, 或者说“中和”掉了原子核的正电荷, 导致最后电子感受到的原子核的核电荷数$Z$必然小于2, 那我们不妨直接把$Z$当作是参数写下这样的一簇试探波函数：
+    \begin{equation}
+        \label{eq:8.7}
+        \psi_{1}\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right) \equiv \frac{Z^{3}}{\pi a^{3}} e^{-Z\left(r_{1}+r_{2}\right) / a}
+    \end{equation}
     
+    这个式子就蕴含着我们刚才的思想, 由于电子之间的相互作用, 现在等效来看原子核的核电荷数$Z<2$。然后我们利用这一簇试探函数求$\braket{H}$。
+
+    我们先再次重组一下哈密顿量：
+    \begin{equation}
+        \label{eq:8.8}
+        \begin{aligned}
+            H &=H_1+H_2\\
+            & -\frac{\hbar^{2}}{2 m}\left(\nabla_{1}^{2}+\nabla_{2}^{2}\right)-\frac{e^{2}}{4 \pi \epsilon_{0}}\left(\frac{Z}{r_{1}}+\frac{Z}{r_{2}}\right) \\
+            & +\frac{e^{2}}{4 \pi \epsilon_{0}}\left(\frac{(Z-2)}{r_{1}}+\frac{(Z-2)}{r_{2}}+\frac{1}{\left|\mathbf{r}_{1}-\mathbf{r}_{2}\right|}\right)
+        \end{aligned}
+    \end{equation}
+    类比后不难知道\ref{eq:8.7}中有$H_1\psi_0=2Z^2E_1$, 所以
+    \begin{equation}
+        \label{eq:8.9}
+        \langle H\rangle=2 Z^{2} E_{1}+2(Z-2)\left(\frac{e^{2}}{4 \pi \epsilon_{0}}\right)\Braket{\frac{1}{r}}+\left\langle V_{e e}\right\rangle
+    \end{equation}
+    根据上一章的\ref{eq:7.16}, 我们知道$\braket{r^{-1}}=Z/a$。\footnote{\ref{eq:8.8}中的$H_1$和氢原子的哈密顿量相比较只是$e\to Ze$的区别, 解的数学形式完全相同, 根据$a$和$e$之间的依赖关系, 我们只需要将$a$替换成$a/Z$就好了。}
     
+    $V_{ee}$的求解和前面完全一样, 现在我们只需要把解中的$a$替换为$2a/Z $就好(本来我们之前就是按照$Z=2$去求的, 相当于$a$先替换为了$a/2$, 所以这里不足为奇)。
+    \[\left\langle V_{e e}\right\rangle=\frac{5 Z}{8 a}\left(\frac{e^{2}}{4 \pi \epsilon_{0}}\right)=-\frac{5 Z}{4} E_{1}\]
+    再根据\ref{eq:8.9}得：
+    \[\langle H\rangle=\left[2 Z^{2}-4 Z(Z-2)-(5 / 4) Z\right] E_{1}=\left[-2 Z^{2}+(27 / 4) Z\right] E_{1}\]
     
-    
+    最后根据变分法我们得到$Z=\frac{27}{16}$时确定了一个最小上界为$\braket{H}=\SI[]{-77.5}{eV}$。这和我们实验仅仅相差不到$\SI[]{1.5}{eV}$
+
     
     
     
