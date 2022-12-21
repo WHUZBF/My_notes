@@ -8,6 +8,8 @@
 
 不是太会用git，所以分支管理这些的很糟糕。。。。目前就会push和pull。。。(~~但也懒得学~~)
 
+sourcecode开头的是源码，也是文章主题，appendix开头的是文章附录，fig文件夹里面放的是note里面的图片，MMASouceCode文件夹里面放的是与note有关的一些mathematica源码(版本12.0)，videos文件夹里面放的是note里面的动画GIF(我也没想到原来可以通过Latex在pdf里面插入动画。。。。)
+
 ## 参考书籍
 
 主要参考的就是*Griffiths*的量子力学英文版和*Cohen*的大部头，比如第三章的形式理论讲述的方式和*Griffiths*的就有很大的不同，直接引入Dirac符号，正是*Cohen*书中第二章的内容。向量分析附录主要参考的是*Mathews*的*Vector Calculus*，内容基础但是讲的非常细致(~~非常适合我这种渣渣~~)。

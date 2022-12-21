@@ -15,6 +15,7 @@
 \usepackage[]{indentfirst}          % 强制段首缩进
 \usepackage[]{bm}
 \usepackage[]{amsmath}
+\allowdisplaybreaks[0]  % 允许公式换页 0表示可以换页但是尽量不换页
 \usepackage[]{esint}
 \usepackage[]{amssymb}
 \usepackage[]{extarrows}
@@ -45,6 +46,8 @@
 \usepackage{diagbox}
 \usepackage[final]{pdfpages}
 \newcommand{\DOI}[1]{doi: \href{https://doi.org/#1}{#1}} % 引用文献超链接
+\usepackage{mhchem} % 化学宏包
+\usepackage{cancel} % 打叉叉的宏包
 
 % 定义公式环境
 \newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
@@ -99,5 +102,6 @@
     \include{chapter05.tex}
     \include{chapter06.tex}
     \include{chapter07.tex}
+    \include{chapter08.tex}
     \include{appendix.tex}
 \end{document}

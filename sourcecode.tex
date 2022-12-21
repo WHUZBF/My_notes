@@ -12,6 +12,7 @@
 \usepackage[]{indentfirst}          % 强制段首缩进
 \usepackage[]{bm}
 \usepackage[]{amsmath}
+\allowdisplaybreaks[0]  % 允许公式换页 0表示可以换页但是尽量不换页
 \usepackage[]{esint}
 \usepackage[]{amssymb}
 \usepackage[]{extarrows}
@@ -42,6 +43,8 @@
 \usepackage{diagbox}
 \usepackage[final]{pdfpages}
 \newcommand{\DOI}[1]{doi: \href{https://doi.org/#1}{#1}} % 引用文献超链接
+\usepackage{mhchem} % 化学宏包
+\usepackage{cancel} % 打叉叉的宏包
 
 % 定义公式环境
 \newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
@@ -4511,7 +4514,7 @@
     注意第二个等号我们利用了$\left[\hat{H},\hat{U}\right]=0$。其实和玩意和反复提及的\ref{广义欸费斯托定理}形式很像是吧。利用它, 我们就可以更为便利的去计算某个具体系统的
     $\hat{x}_H$等等, 我们下面以谐振子为例。\footnote{注意下面的推导中, 利用了$\hat{Q}_H(0)=\hat{Q}_S$去表达结果}
     \[\hat{H}=\frac{\hat{p}^2}{2m}+\frac{1}{2}m\omega^2x^2\]
-    \begin{thinknote}
+    \begin{example}{又是谐振子}
         首先我们直接按照定义来求:
         \[\hat{x}_H(t)=\mathrm e^{i\frac{t}{\hbar}\hat{H}}\hat{x}\mathrm e^{-i\frac{t}{\hbar}\hat{H}}\]
         直接这么算肯定很难, 我们得充分利用已知结论, 利用升降阶算符, 我们可以把位置算符写成：
@@ -4556,7 +4559,7 @@
         \[x(t)=x(0)\cos(\omega t)+\frac{v(0)}{\omega}\sin (\omega t)\]
         形式上一模一样么？
         \hfill $\square$\par
-    \end{thinknote}
+    \end{example}
     \subsection{能量守恒定律}
     对于一般的系统, 哈密顿算符可能显含时间, 我们依旧可以定义时间演化算符：
     \begin{equation}
@@ -5319,12 +5322,224 @@
     
     最后根据变分法我们得到$Z=\frac{27}{16}$时确定了一个最小上界为$\braket{H}=\SI[]{-77.5}{eV}$。这和我们实验仅仅相差不到$\SI[]{1.5}{eV}$
 
+    \section{$\ce{H2^+}$ 和 $\ce{H2}$}
+    这一节中我们将会看到量子化学家是如何将变分原理用于键长和键能的估计的。
+    本节还会略去很多计算过程, 仅保留一些计算提示和计算结果, 相信我, 它们并不太复杂。
+    \subsection*{$\ce{H2^+}$}
+    这个情况简单一些, 类似于限制性三体问题, 我们假设两个质子是不动的($\ce{H}$原子核中的中子对我们的分析没有任何影响), 进一步假设两个质子之间的距离是$R$, 
+    这其实对应化学键键长。那么哈密顿量可以写为：
+    \begin{equation}
+        H=-\frac{\hbar^2}{2m}\nabla^2-\frac{e^2}{4\pi\varepsilon_0}\left(\frac{1}{r}+\frac{1}{r^\prime}\right)+\bcancel{\frac{e^2}{4\pi\varepsilon_0R}}
+    \end{equation}
+    最后一项在$R$取得定值时是常数, 所以们先把它给去掉, 最后把这个能量加上来就好。式中的$r$和$r^\prime$是电子与两个质子之间的距离。
+
+    我们首先考虑一个基态氢原子, 电子的波函数为：
+    \[\psi_0(\mathbf{r})=\frac{1}{\sqrt{\pi a^3}}e^{-r/a}\]
     
+    化学家常常把这个称为电子的“\uwave{轨道}”, 现在考虑另一个质子, 只要$R$与$a$相比不是太小, 我们就可以认为电子的轨道没有变化, 电子相对于另一个质子应该
+    有相同的轨道$\psi(r^\prime)$, 我们把这两个轨道进行线性组合, 认为是新的电子轨道, 当然根据前面的说法, 只有在$R$与$a$相比不是太小时我们才能线性的这么做：
+    \begin{equation}
+        \psi = A\psi_0(\mathbf{r})+B\psi(\mathbf{r^\prime})
+    \end{equation}
+    当然, 这里$r$和$r^\prime$可不是独立的两个坐标, 我们最终要把他们在同一个坐标系下表示。
+
+    化学家称这种方法为\textbf{原子轨道线性组合(LCAO\footnote{\textbf{l}inear \textbf{c}ombination of \textbf{a}tomic \textbf{o}rbitals})}。从物理上看
+    就是有一定逻辑的猜出了试探波函数。根据对称性, 两个质子应该有同等的地位, 所以我们进一步认为$A=B$:
+    \begin{equation}
+        \label{eq:8.12}
+        \psi = A\left[\psi_0(\mathbf{r})+\psi(\mathbf{r^\prime})\right]
+    \end{equation}
+    首先就是要进行归一化得到$A$:
+    \begin{equation}
+        \begin{aligned}
+            1= & \int|\psi|^{2} d^{3} \mathbf{r}=|A|^{2}\left[\int \psi_{0}(r)^{2} d^{3} \mathbf{r}\right. \\
+            & \left.+\int \psi_{0}\left(r^{\prime}\right)^{2} d^{3} \mathbf{r}+2 \int \psi_{0}(r) \psi_{0}\left(r^{\prime}\right) d^{3} \mathbf{r}\right]
+        \end{aligned}
+    \end{equation}
+    括号里面前两项都好说, 都是1, 难算的在后面一个积分, 选取合适的坐标系, 将两个质子安排在$z$轴上并用球坐标计算：
+    \begin{equation}
+        \label{eq:8.14}
+        \begin{aligned}
+            I &\equiv\left\langle\psi_{0}(r) \mid \psi_{0}\left(r^{\prime}\right)\right\rangle=\frac{1}{\pi a^{3}} \int e^{-\left(r+r^{\prime}\right) / a} d^{3} \mathbf{r}\\
+            &=e^{-R / a}\left[1+\left(\frac{R}{a}\right)+\frac{1}{3}\left(\frac{R}{a}\right)^{2}\right]
+        \end{aligned}
+    \end{equation}
+    最终得到：
+    \[|A|^{2}=\frac{1}{2(1+I)}\]
+    下面就开始根据变分法计算基态能量的上界了, 首先注意到下面两个式子：
+    \begin{equation}
+        \label{eq:8.15}
+        \begin{aligned}
+        &\left(-\frac{\hbar^{2}}{2 m} \nabla^{2}-\frac{e^{2}}{4 \pi \epsilon_{0}} \frac{1}{r}\right) \psi_{0}(r)=E_{1} \psi_{0}(r)\\
+        &\left(-\frac{\hbar^{2}}{2 m} \nabla^{2}-\frac{e^{2}}{4 \pi \epsilon_{0}} \frac{1}{r^\prime}\right) \psi_{0}(r^\prime)=E_{1} \psi_{0}(r^\prime)
+        \end{aligned}
+    \end{equation}
+    那么便有：
+    \begin{equation}
+        \begin{aligned}
+            H \psi & =A\left[-\frac{\hbar^{2}}{2 m} \nabla^{2}-\frac{e^{2}}{4 \pi \epsilon_{0}}\left(\frac{1}{r}+\frac{1}{r^{\prime}}\right)\right]\left[\psi_{0}(r)+\psi_{0}\left(r^{\prime}\right)\right] \\
+            & =E_{1} \psi-A\left(\frac{e^{2}}{4 \pi \epsilon_{0}}\right)\left[\frac{1}{r^{\prime}} \psi_{0}(r)+\frac{1}{r} \psi_{0}\left(r^{\prime}\right)\right] 
+        \end{aligned}
+    \end{equation}
+    注意到：
+    \begin{equation}
+        \label{eq:8.17}
+        \begin{aligned}
+            &\Braket{\psi_0(r)|\frac{1}{r^\prime}|\psi_0(r^\prime)}=\Braket{\psi_0(r^\prime)|\frac{1}{r}|\psi_0(r)}\\
+            &\Braket{\psi_0(r)|\frac{1}{r^\prime}|\psi_0(r)}=\Braket{\psi_0(r^\prime)|\frac{1}{r}|\psi_0(r^\prime)}
+        \end{aligned}
+    \end{equation}
     
+    因为这只是相当于积分变量的重新命名$r\leftrightarrow r^\prime$.便有：
+    \begin{equation*}
+        \langle H\rangle=E_{1}-2|A|^{2}\left(\frac{e^{2}}{4 \pi \epsilon_{0}}\right)\left[\underbrace{\left\langle\psi_{0}(r)\left|\frac{1}{r^{\prime}}\right| \psi_{0}(r)\right\rangle}_D+\underbrace{ \left\langle\psi_{0}(r)\left|\frac{1}{r}\right| \psi_{0}\left(r^{\prime}\right)\right\rangle}_X\right]
+    \end{equation*}
+    然后又是两个比较难算的积分, 不过只要知道$I$怎么计算, 这两个也就简单了：
+    \begin{equation}
+        \label{eq:8.18}
+        D=\frac{a}{R}-\left(1+\frac{a}{R}\right) e^{-2 R / a}
+    \end{equation}
+    \begin{equation}
+        \label{eq:8.19}
+        X=\left(1+\frac{R}{a}\right) e^{-R / a}
+    \end{equation}
+    终于我们计算出了$\braket{H}$, 不过别忘了之前我们作为常数在之前计算中忽略的项, 也就是质子之间的电势能, 这里加上来\footnote{第二项实际上可以写为$-\frac{2a}{R}E_1$}：
+    \begin{equation}
+        \label{eq:8.20}
+        E_{gs}\leq\left[1+2 \frac{(D+X)}{(1+I)}\right] E_{1}+\frac{e^{2}}{4 \pi \epsilon_{0}} \frac{1}{R}
+    \end{equation}
     
+    在$R$确定后我们便得到了一个基态能量的估计值, 不过由于能量越低越稳定, 所以我们倾向于$R$的取值会让总能量最低。\footnote{注意, 这不是变分法带来的, 变分计算中我们并没有用$R$作为参数, 
+    变分法在求得\ref{eq:8.20}就用完了。这里只是根据能量越低越稳定进一步估计$R$。}利用上面的方程进行数值计算可以到的最小值在$R=\SI[]{1.3}{\angstrom}$处取得, 这对应共价键键长。
+    $\ce{H2^+}$可以看成基态氢原子(能量为$\SI[]{-13.6}{eV}$), 和电离后的$\ce{H^+}$(能量为0)的结合。但是结合后会损失掉一部分能量储存在共价键中, 按照\ref{eq:8.20}取最小值估计键能为$\SI[]{1.8}{eV}$。
+    实验上测得共价键键长为$\SI[]{1.06}{\angstrom}$, 键能为$\SI[]{2.8}{eV}$.
     
+    \subsection*{$\ce{H2}$}
+    根据下图\ref{fig:8.1}, 我们可以写出哈密顿量：
+    \begin{equation}
+        \hat{H}=-\frac{\hbar^{2}}{2 m}\left(\nabla_{1}^{2}+\nabla_{2}^{2}\right)+\frac{e^{2}}{4 \pi \epsilon_{0}}\left(\frac{1}{r_{12}}+\cancel{\frac{1}{R}}-\frac{1}{r_{1}}-\frac{1}{r_{1}^{\prime}}-\frac{1}{r_{2}}-\frac{1}{r_{2}^{\prime}}\right)
+    \end{equation}
+    同样的, 我们这里先略去质子之间的相互作用。
+    \begin{figure}[htbp]
+        \centering
+        \begin{tikzpicture}[scale=0.8]
+            % 定点
+            \coordinate [label=below:$+e$] (A) at (0,0);
+            \coordinate [label=below:$+e$] (B) at (8,0);
+            \coordinate [label=right:$-e$] (C) at (2,6);
+            \coordinate [label=right:$-e$] (D) at (2.8,3.0);
+            % 画线 % 标记线段
+            \draw (A) -- (B) node[midway,below]{$R$};
+            \draw (B) -- (C) node[midway,right]{$r_1^\prime$};
+            \draw (C) -- (A) node[midway,left]{$r_1$};
+            \draw (D) -- (A) node[midway,right]{$r_2^\prime$};
+            \draw (D) -- (B) node[midway,left]{$r_{2}$};
+            \draw (D) -- (C) node[near start,left]{$r_{12}$};
+            % 画粒子图示
+            \foreach \point in {C,D}
+                \fill [black,opacity=1] (\point) circle (4pt);
+            \foreach \point in {A,B}
+                \fill [red,opacity=1] (\point) circle (4pt);
+        \end{tikzpicture}
+        \caption{$\ce{H2}$图示, 黑点表示电子, {\color{red} 红点}表示质子}
+        \label{fig:8.1}
+    \end{figure}
     
+    我们很自然地首先根据一个电子在两个质子作用下的轨道近似\ref{eq:8.12}得到两个电子的轨道或许具有下面的形式：
+    \begin{equation}
+        \begin{aligned}
+            \psi\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right)&=A\left[{\psi_{0}\left(r_{1}\right)+\psi_{0}\left(r_{1}^{\prime}\right)}\right]\left[{\psi_{0}\left(r_{2}\right)+\psi_{0}\left(r_{2}^{\prime}\right)}\right]\\
+            &=A\left[\psi_{0}\left(r_{1}\right) \psi_{0}\left(r_{2}^{\prime}\right)+\psi_{0}\left(r_{1}^{\prime}\right) \psi_{0}\left(r_{2}\right)+\cancel{\psi_{0}\left(r_{1}\right) \psi_{0}\left(r_{2}\right)}+\cancel{\psi_{0}\left(r_{1}^{\prime}\right) \psi_{0}\left(r_{2}^{\prime}\right)}\right]
+        \end{aligned}
+    \end{equation}
     
+    后面两项我们不要是因为考虑到电子之间有斥力, 而后面两项对应这两个电子相对于同一个质子的轨道耦合, 而根据电子之间的排斥, 两电子相对于同一个质子的轨道之间的耦合
+    应当是微乎其微的, 所以我们要保留的应当是两个电子相对于不同质子之间轨道的耦合。
+    \[\psi_{+}\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right)=A_{+}\left[\psi_{0}\left(r_{1}\right) \psi_{0}\left(r_{2}^{\prime}\right)+\psi_{0}\left(r_{1}^{\prime}\right) \psi_{0}\left(r_{2}\right)\right]\]
+    
+    上面的是对称的波函数, 电子是费米子, 实际上这说明电子的自旋是singlet, 当然, 这也意味着还有一种自旋为triplet所对应的反对称波函数：
+    \[\psi_{-}\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right)=A_{-}\left[\psi_{0}\left(r_{1}\right) \psi_{+}\left(r_{2}^{\prime}\right)+\psi_{0}\left(r_{1}^{\prime}\right) \psi_{0}\left(r_{2}\right)\right]\]
+    
+    这两个试探波函数\footnote{化学家称之为\textbf{Heitler-London近似}}都有一定道理, 因为我们并不能事先知道电子到底选取的是何种自选耦合, 所以现在我们两个一起考虑。首先进行归一化：
+    \begin{equation}
+        \begin{aligned}
+            1= & \iint\left|\psi_{\pm}\left(\mathbf{r}_{1}, \mathbf{r}_{2}\right)\right|^{2} d^{3} \mathbf{r}_{1} d^{3} \mathbf{r}_{2} \\
+            = & A_{\pm}^{2}\left[\int \psi_{0}\left(r_{1}\right)^{2} d^{3} \mathbf{r}_{1} \int \psi_{0}\left(r_{2}^{\prime}\right)^{2} d^{3} \mathbf{r}_{2}+\int \psi_{0}\left(r_{1}^{\prime}\right)^{2} d^{3} \mathbf{r}_{1} \int \psi_{0}\left(r_{2}\right)^{2} d^{3} \mathbf{r}_{2}\right. \\
+            & \left.\pm 2 \int \psi_{0}\left(r_{1}\right) \psi_{0}\left(r_{1}^{\prime}\right) d^{3} \mathbf{r}_{1} \int \psi_{0}\left(r_{2}^{\prime}\right) \psi_{0}\left(r_{2}\right) d^{3} \mathbf{r}_{2}\right]
+        \end{aligned}
+    \end{equation}
+    括号内前面两项是1后面一项实际上是$I^2$(cf.\ref{eq:8.14})。得到归一化因子：
+    \begin{equation}
+        A_{\pm}=\frac{1}{\sqrt{2\left(1 \pm I^{2}\right)}}
+    \end{equation}
+    再根据\ref{eq:8.15}：
+    \begin{equation}
+        \begin{aligned}
+            -\frac{\hbar^{2}}{2 m} \nabla_{1}^{2} \psi_{\pm}= & A_{\pm}\left[\left(-\frac{\hbar^{2}}{2 m} \nabla_{1}^{2} \psi_{0}\left(r_{1}\right)\right) \psi_{0}\left(r_{2}^{\prime}\right) \pm\left(-\frac{\hbar^{2}}{2 m} \nabla_{1}^{2} \psi_{0}\left(r_{1}^{\prime}\right)\right) \psi_{0}\left(r_{2}\right)\right] \\
+            = & A_{\pm}\left[\left(E_{1}+\frac{e^{2}}{4 \pi \epsilon_{0} r_{1}}\right) \psi_{0}\left(r_{1}\right) \psi_{0}\left(r_{2}^{\prime}\right) \pm\left(E_{1}+\frac{e^{2}}{4 \pi \epsilon_{0} r_{1}^{\prime}}\right) \psi_{0}\left(r_{1}^{\prime}\right) \psi_{0}\left(r_{2}\right)\right] \\
+            = & E_{1} \psi_{\pm}+\frac{e^{2}}{4 \pi \epsilon_{0} a} A_{\pm}\left(\frac{a}{r_{1}} \psi_{0}\left(r_{1}\right) \psi_{0}\left(r_{2}^{\prime}\right) \pm \frac{a}{r_{1}^{\prime}} \psi_{0}\left(r_{1}^{\prime}\right) \psi_{0}\left(r_{2}\right)\right) 
+        \end{aligned}
+    \end{equation}
+    根据\ref{eq:8.17}、\ref{eq:8.19}一通计算后：
+    \begin{equation}
+        \Braket{-\frac{\hbar^{2}}{2 m} \nabla_{1}^{2}}=E_{1}+\left(\frac{e^{2}}{4 \pi \epsilon_{0} a}\right) \frac{1 \pm I X}{1 \pm I^{2}}=\Braket{-\frac{\hbar^{2}}{2 m} \nabla_{2}^{2}}
+    \end{equation}
+    又是一个繁琐但是类似的计算, 我们可以得到：
+    \begin{equation}
+        \left\langle-\frac{e^{2}}{4 \pi \epsilon_{0} r_{1}}\right\rangle=-\frac{1}{2}\left(\frac{e^{2}}{4 \pi \epsilon_{0} a}\right) \frac{1+D \pm 2 I X}{1 \pm I^{2}}
+    \end{equation}
+    最后, 来计算一下电子之间的库伦势：
+    \begin{equation}
+        \braket{V_{ee}}\equiv\Braket{\frac{e^2}{4\pi\varepsilon_0}r_{12}}=\left(\frac{e^2}{4\pi\varepsilon_0}\right)\frac{D_2\pm X_2}{1\pm I^2}
+    \end{equation}
+    其中:
+    \begin{equation}
+        \begin{aligned}
+            &D_{2}=\iint\left|\psi_{0}\left(r_{1}\right)\right|^{2} \frac{a}{r_{12}}\left|\psi_{0}\left(r_{2}^{\prime}\right)\right|^{2} d^{3} \mathbf{r}_{1} d^{3} \mathbf{r}_{2} \\
+            &X_{2}=\iint \psi_{0}\left(r_{1}\right) \psi_{0}\left(r_{1}^{\prime}\right) \frac{a}{r_{12}} \psi_{0}\left(r_{2}\right) \psi_{0}\left(r_{2}^{\prime}\right) d^{3} \mathbf{r}_{1} d^{3} \mathbf{r}_{2}
+        \end{aligned}
+    \end{equation}
+
+    第一个的物理意义非常明显, 就是电荷体密度分布分别为$\rho_1=|\psi_0(\mathbf{r}_1)|$和$\rho_2=|\psi_0(\mathbf{r}_2)|$的带电体之间的电势能, 这次给化学家说中了, 
+    就好像是两坨电子云相互作用。这个积分也相对好算一点, 只用注意到现在$\mathbf{r}_1$和$\mathbf{r}_2$之间相互独立, 要作两次三重积分, 结果为：
+    \begin{equation}
+        D_{2}=\frac{a}{R}-e^{-2 R / a}\left[\frac{1}{6}\left(\frac{R}{a}\right)^{2}+\frac{3}{4}\left(\frac{R}{a}\right)+\frac{11}{8}+\frac{a}{R}\right]
+    \end{equation}
+    但是另一个那就是真的难搞了, 详细计算戳这篇文献\footnote{\url{https://doi.org/10.1007/BF01329207}, 但是很不幸, 原始文献是德文的。}:
+    \begin{equation}
+        \begin{aligned}
+            X_{2}= & e^{-2 R / a}\left[\frac{5}{8}-\frac{23}{20} \frac{R}{a}-\frac{3}{5}\left(\frac{R}{a}\right)^{2}-\frac{1}{15}\left(\frac{R}{a}\right)^{3}\right] \\
+            & +\frac{6}{5} \frac{a}{R} I^{2}\left[\gamma+\log \left(\frac{R}{a}\right)+\left(\frac{\tilde{I}}{I}\right)^{2} \mathrm{Ei}\left(-\frac{4 R}{a}\right)-2 \frac{\tilde{I}}{I} \mathrm{Ei}\left(-\frac{2 R}{a}\right)\right]
+        \end{aligned}
+    \end{equation}
+    其中$\gamma=0.5772\ldots$是Euler常数, 
+    \[\operatorname{Ei}(x)\equiv -\int_{-x}^{\infty} \frac{e^{-t}}{t} d t,\quad\tilde{I}\equiv e^{R / a}\left[1-\frac{R}{a}+\frac{1}{3}\left(\frac{R}{a}\right)^{2}\right]\]
+    最后我们加上质子之间的势能：
+    \begin{equation}
+        E_{gs}\leq\braket{H}_{\pm}=2 E_{1}\left[1-\frac{a}{R}+\frac{2 D-D_{2} \pm\left(2 I X-X_{2}\right)}{1 \pm I^{2}}\right]
+    \end{equation}
+    
+    画出$\braket{H}_\pm$的图像\ref{fig:8.2}后可以发现, singlet对应的能量更小, 所以电子更倾向于采取$\psi_+$的轨道。和上一小节类似, 我们可以计算出对应的键长$\SI[]{0.87}{\angstrom}$(实验值$\SI[]{0.74}{\angstrom}$)
+    , 键能$\SI[]{3.15}{eV}$(实验值$\SI[]{4.75}{eV}$)。
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.8]{fig/8-2.eps}
+        \caption{$\braket{H}_\pm$的图像, 虚线表示$\braket{H}_-$, 实线表示$\braket{H}_+$}
+        \label{fig:8.2}
+    \end{figure}
+
+
+
+
+
+    \chapter{WKB近似}
+
+
+
+
+
+
+
     \include{appendix.tex} 
     \include{appendix_group.tex}
 \end{document}  
