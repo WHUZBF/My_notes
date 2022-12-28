@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  21 DEC 2022 21:03
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  29 DEC 2022 03:29
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1117,52 +1117,86 @@ Package mhchem Warning: You did not specify a 'version' option for the mhchem
 
 ) (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/cancel/cancel.sty
 Package: cancel 2013/04/12 v2.2 Cancel math terms
+) (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/ntheorem/ntheorem.sty
+Style `ntheorem', Version 1.33 <2011/08/15>
+Package: ntheorem 2011/08/15 1.33
+\theorem@style=\toks50
+\theorem@@style=\toks51
+\theorembodyfont=\toks52
+\theoremnumbering=\toks53
+\theorempreskipamount=\skip87
+\theorempostskipamount=\skip88
+\theoremframepreskipamount=\skip89
+\theoremframepostskipamount=\skip90
+\theoreminframepreskipamount=\skip91
+\theoreminframepostskipamount=\skip92
+\theorem@preskip=\toks54
+\theorem@postskip=\toks55
+\theorem@framepreskip=\toks56
+\theorem@framepostskip=\toks57
+\theorem@inframepreskip=\toks58
+\theorem@inframepostskip=\toks59
+\theoremindent=\dimen376
+\theorem@indent=\dimen377
+\theoremrightindent=\dimen378
+\theorem@rightindent=\dimen379
+\theoremheaderfont=\toks60
+\theoremseparator=\toks61
+\theoremprework=\toks62
+\theorempostwork=\toks63
+\theoremsymbol=\toks64
+\qedsymbol=\toks65
+\theoremkeyword=\toks66
+\qedsymbol=\toks67
+\thm@topsep=\skip93
+\thm@topsepadd=\skip94
 )
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 89.
+\c@proof=\count402
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 93.
  (./sourcecode.aux (./appendix.aux) (./appendix_group.aux))
 \openout1 = `sourcecode.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 89.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 89.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 93.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 93.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 89.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 89.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 93.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 93.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 89.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 89.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 93.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 93.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 93.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 89.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 89.
+LaTeX Font Info:    ... okay on input line 93.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 93.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 93.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 89.
-Package hyperref Info: Link coloring ON on input line 89.
+LaTeX Font Info:    ... okay on input line 93.
+Package hyperref Info: Link coloring ON on input line 93.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/refcount/refcount.sty
@@ -1170,11 +1204,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (d:/LaTeX/texlive/2021/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count402
+\c@section@level=\count403
 )
-LaTeX Info: Redefining \ref on input line 89.
-LaTeX Info: Redefining \pageref on input line 89.
-LaTeX Info: Redefining \nameref on input line 89.
+LaTeX Info: Redefining \ref on input line 93.
+LaTeX Info: Redefining \pageref on input line 93.
+LaTeX Info: Redefining \nameref on input line 93.
  (./sourcecode.out) (./sourcecode.out)
 \@outlinefile=\write4
 \openout4 = `sourcecode.out'.
@@ -1182,12 +1216,12 @@ LaTeX Info: Redefining \nameref on input line 89.
 
 Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
-\c@mv@tabular=\count403
-\c@mv@boldtabular=\count404
+\c@mv@tabular=\count404
+\c@mv@boldtabular=\count405
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 89.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 93.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/graphics/lscape.sty
@@ -1196,108 +1230,120 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 )
 
-Package chemgreek Info: Activating mapping `default' on line 89.
+Package chemgreek Info: Activating mapping `default' on line 93.
 
+File: titlepage/fourthtitlepage.pdf Graphic file (type pdf)
+<use titlepage/fourthtitlepage.pdf>
+File: titlepage/fourthtitlepage.pdf Graphic file (type pdf)
+<use titlepage/fourthtitlepage.pdf>
+File: titlepage/fourthtitlepage.pdf Graphic file (type pdf)
+<use titlepage/fourthtitlepage.pdf, page 1>
+File: titlepage/fourthtitlepage.pdf Graphic file (type pdf)
+<use titlepage/fourthtitlepage.pdf, page 1>
+File: titlepage/fourthtitlepage.pdf Graphic file (type pdf)
+<use titlepage/fourthtitlepage.pdf, page 1>
+File: titlepage/fourthtitlepage.pdf Graphic file (type pdf)
+<use titlepage/fourthtitlepage.pdf, page 1>
+File: titlepage/fourthtitlepage.pdf Graphic file (type pdf)
+<use titlepage/fourthtitlepage.pdf, page 1>
+ [1
+
+]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 22.08249pt on input line 91.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.05624pt on input line 91.
-LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 91.
+(Font)              scaled to size 24.09pt on input line 96.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 24.09pt on input line 96.
+ (./sourcecode.toc
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.045pt on input line 1.
+LaTeX Font Info:    Trying to load font information for OT1+ntxtlf on input line 2.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/ot1ntxtlf.fd
 File: ot1ntxtlf.fd 2021/05/24 v1.0 font definition file for OT1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 15.05624pt on input line 91.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 91.
-LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 91.
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 91.
- (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-)
-
-LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 91.
-
-LaTeX Font Info:    Trying to load font information for U+esint on input line 91.
-(d:/LaTeX/texlive/2021/texmf-dist/tex/latex/esint/uesint.fd
-File: uesint.fd 
-)
-LaTeX Font Info:    Trying to load font information for U+msa on input line 91.
- (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 91.
- (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 91.
- (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxmia.fd
-File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
-)
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 91.
- (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxsym.fd
-File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
-)
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 91.
- (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxsyc.fd
-File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
-) [1
-
-]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 24.09pt on input line 91.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 24.09pt on input line 91.
- (./sourcecode.toc
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.045pt on input line 1.
+(Font)              scaled to size 12.045pt on input line 2.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.0pt on input line 2.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.0pt on input line 2.
- [1
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 2.
+ (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/jknapltx/ursfs.fd
+File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
+)
+LaTeX Font Info:    Trying to load font information for U+esint on input line 2.
+ (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/esint/uesint.fd
+File: uesint.fd 
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 2.
+ (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
+ (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 2.
+ (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 2.
+ (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2015/03/20 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 2.
+ (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+) [2
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sl' will be
 (Font)              scaled to size 12.045pt on input line 67.
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12.045> not available
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 67.
- [2])
+ [3])
 \tf@toc=\write5
 \openout5 = `sourcecode.toc'.
 
  [0]
 第一章
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 18.06749pt on input line 95.
+(Font)              scaled to size 18.06749pt on input line 100.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 18.06749pt on input line 95.
-LaTeX Font Info:    Trying to load font information for T1+ntxsups on input line 110.
+(Font)              scaled to size 18.06749pt on input line 100.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 15.05624pt on input line 101.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 15.05624pt on input line 101.
+LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
+(Font)              scaled to size 9.03374pt on input line 101.
+
+LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <15.05624> not available
+(Font)              size <14.4> substituted on input line 101.
+
+LaTeX Font Info:    Trying to load font information for T1+ntxsups on input line 115.
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/t1ntxsups.fd
 File: t1ntxsups.fd 2015/01/17 v1.0
 )
 LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
-(Font)              scaled to size 12.045pt on input line 110.
+(Font)              scaled to size 12.045pt on input line 115.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 111.
+(Font)              scaled to size 9.03374pt on input line 116.
 LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 111.
+(Font)              scaled to size 9.03374pt on input line 116.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.0pt on input line 124.
+(Font)              scaled to size 8.0pt on input line 129.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 8.0pt on input line 124.
+(Font)              scaled to size 8.0pt on input line 129.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 125.
+(Font)              scaled to size 5.0pt on input line 130.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 125.
+(Font)              scaled to size 6.0pt on input line 130.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 6.0pt on input line 125.
+(Font)              scaled to size 6.0pt on input line 130.
  [1
 
 ] [2]
-Overfull \hbox (13.34201pt too wide) in paragraph at lines 166--167
+Overfull \hbox (13.34201pt too wide) in paragraph at lines 171--172
 []\TU/SimSun(0)/m/n/12.045 根 据 上 面 的 定 义 我 们 可 以 得 到 一 个 更 加 常 用 的 计 算 标 准 差 的 公 式\T1/ntxtlf/m/n/12.045 : $\OML/ntxmi/m/it/12.045 ^^[\LMS/ntxsy/m/n/12.045 ¹\OML/ntxmi/m/it/12.045 x\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 =
  []
 
@@ -1307,51 +1353,51 @@ Overfull \hbox (13.34201pt too wide) in paragraph at lines 166--167
 
 ] [7]
 LaTeX Font Info:    Font shape `T1/ntxsups/m/n' will be
-(Font)              scaled to size 15.05624pt on input line 315.
+(Font)              scaled to size 15.05624pt on input line 321.
  [8]
-Underfull \hbox (badness 5189) in paragraph at lines 340--342
+Underfull \hbox (badness 5189) in paragraph at lines 346--348
 []\TU/SimSun(0)/m/n/12.045 实 际 上 这 里 的 $\OML/ntxmi/m/it/12.045 k$ \TU/SimSun(0)/m/n/12.045 从 经 典 力 学 上 看 可 以 理 解 为 \TU/SimSun(0)/b/n/12.045 角 波 数\T1/ntxtlf/m/n/12.045 , $\OML/ntxmi/m/it/12.045 k \U/ntxmia/m/it/12.045 =
  []
 
 [9] [10] [11] [12]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.05624pt on input line 487.
+(Font)              scaled to size 15.05624pt on input line 493.
  [13] [14]
-Overfull \hbox (28.46262pt too wide) detected at line 579
+Overfull \hbox (28.46262pt too wide) detected at line 585
 []
  []
 
-Invalid UTF-8 byte or sequence at line 587 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 587 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 587 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 587 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 587 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 587 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
 File: fig/2-3-a.eps Graphic file (type eps)
 <fig/2-3-a.eps>
-Invalid UTF-8 byte or sequence at line 590 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 590 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 590 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 590 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 590 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 590 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 596 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 596 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 596 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 596 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 596 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 596 replaced by U+FFFD.
 File: fig/2-3-b.eps Graphic file (type eps)
 <fig/2-3-b.eps>
-Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 593 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 599 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 599 replaced by U+FFFD.
 File: fig/2-3-c.eps Graphic file (type eps)
 <fig/2-3-c.eps>
 [15] [16] [17]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 647.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 653.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 647.
+(Font)              scaled to size 12.045pt on input line 653.
  [18] [19] [20]
 File: videos/wave_group/wave_group-0.png Graphic file (type bmp)
 <videos/wave_group/wave_group-0.png>
@@ -2107,11 +2153,11 @@ File: videos/wave_group/wave_group-250.png Graphic file (type bmp)
 <videos/wave_group/wave_group-250.png>
  <a0,fr250>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 18.06749pt on input line 761.
+(Font)              scaled to size 18.06749pt on input line 767.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 761.
+(Font)              size <17.28> substituted on input line 767.
 
 [21]
 File: fig/2-5-1.eps Graphic file (type eps)
@@ -2214,23 +2260,23 @@ File: fig/2-7-1.eps Graphic file (type eps)
 [37
 
 ]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 1252.
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 1258.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 ) [38]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.045pt on input line 1276.
+(Font)              scaled to size 12.045pt on input line 1282.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 8.0pt on input line 1276.
+(Font)              scaled to size 8.0pt on input line 1282.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 6.0pt on input line 1276.
+(Font)              scaled to size 6.0pt on input line 1282.
  [39] [40] [41] [42]
 File: fig/3-1.eps Graphic file (type eps)
 <fig/3-1.eps>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 1396.
+(Font)              scaled to size 9.03374pt on input line 1402.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 5.0pt on input line 1396.
+(Font)              scaled to size 5.0pt on input line 1402.
  [43]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
@@ -2252,44 +2298,44 @@ Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
  [47] [48] [49] [50]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.045pt on input line 1687.
+(Font)              scaled to size 12.045pt on input line 1693.
 
-Overfull \hbox (17.9026pt too wide) detected at line 1700
+Overfull \hbox (17.9026pt too wide) detected at line 1706
 \LMS/ntxsy/m/n/12.045 »\OML/ntxmi/m/it/12.045 V; []\LMS/ntxsy/m/n/12.045 ¼\OML/ntxmi/m/it/12.045 g \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 V[][] \LMS/ntxsy/m/n/12.045 ^^@ [][]¹\OML/ntxmi/m/it/12.045 Vg\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 V[][] \LMS/ntxsy/m/n/12.045 ^^@ [] [] \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 i\U/ntxmia/m/it/12.045 \[]\OML/ntxmi/m/it/12.045 g \LMS/ntxsy/m/n/12.045 ) »\OML/ntxmi/m/it/12.045 V; []\LMS/ntxsy/m/n/12.045 ¼ \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 i\U/ntxmia/m/it/12.045 \[]
  []
 
 [51]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 15.05624pt on input line 1722.
+(Font)              scaled to size 15.05624pt on input line 1728.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 1722.
+(Font)              size <14.4> substituted on input line 1728.
 
 
-Overfull \hbox (8.4405pt too wide) in paragraph at lines 1729--1730
+Overfull \hbox (8.4405pt too wide) in paragraph at lines 1735--1736
 []\TU/SimSun(0)/m/n/12.045 我 们 可 以 给 这 两 个 波 函 数 分 别 对 应 两 个|   []$[] \OML/ntxmi/m/it/12.045 ; []$\TU/SimSun(0)/m/n/12.045 。|  再 根 据[][]\T1/ntxtlf/m/n/12.045 3.32[][]\TU/SimSun(0)/m/n/12.045 我
  []
 
 [52] [53] [54]
-Overfull \hbox (1.5488pt too wide) in paragraph at lines 1813--1814
+Overfull \hbox (1.5488pt too wide) in paragraph at lines 1819--1820
 []\TU/SimSun(0)/m/n/12.045 比 如 三 维 问 题 中 $[]$ 算 符 的 三 个 分 量 算 符 $\OML/ntxmi/m/it/12.045 X; Y; Z$ \TU/SimSun(0)/m/n/12.045 就 构 成 了 一 个 \T1/ntxtlf/m/n/12.045 CSCO,
  []
 
 [55] [56] [57]
 第四章
 
-Overfull \vbox (0.325pt too high) detected at line 1929
+Overfull \vbox (0.325pt too high) detected at line 1935
  []
 
 [58
 
 ] [59]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.03374pt on input line 1943.
+(Font)              scaled to size 9.03374pt on input line 1949.
  [60] [61] [62] [63] [64] [65] [66]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 2151.
+(Font)              scaled to size 9.03374pt on input line 2157.
  [67] [68] [69] [70] [71] [72] [73] [74] [75] [76] [77] [78] [79] [80] [81]
 File: fig/4-1.png Graphic file (type bmp)
 <fig/4-1.png>
@@ -2320,7 +2366,7 @@ File: fig/4-3.eps Graphic file (type eps)
 [99
 
 ] [100] [101]
-Overfull \hbox (1.88501pt too wide) in paragraph at lines 3235--3242
+Overfull \hbox (1.88501pt too wide) in paragraph at lines 3241--3248
 []\TU/SimSun(0)/m/n/12.045 显 然 $\OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045 ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 满 足 这 种 对 称 性 的 粒 子 称 为 \TU/SimSun(0)/b/n/12.045 玻 色 子 \T1/ntxtlf/b/n/12.045 (bosons)\TU/SimSun(0)/m/n/12.045 ；|
  []
 
@@ -2359,17 +2405,17 @@ File: fig/6.3.pdf Graphic file (type pdf)
 File: fig/6-4.pdf Graphic file (type pdf)
 <use fig/6-4.pdf>
  [131] [132] [133] [134] [135] [136]
-Overfull \hbox (1.51637pt too wide) in paragraph at lines 4429--4430
+Overfull \hbox (1.51637pt too wide) in paragraph at lines 4435--4436
 []\TU/SimSun(0)/m/n/12.045 最 后\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 因 为 $\OML/ntxmi/m/it/12.045 C[] \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 ^^N[]^^N[]$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 所 以 我 们 可 以 把 标 量 算 符 的 选 择 定 则[][]\T1/ntxtlf/m/n/12.045 6.54[][]\TU/SimSun(0)/m/n/12.045 写
  []
 
 [137] [138] [139]
-Overfull \hbox (6.30917pt too wide) in paragraph at lines 4514--4516
+Overfull \hbox (6.30917pt too wide) in paragraph at lines 4520--4522
 []\TU/SimSun(0)/m/n/12.045 注 意 第 二 个 等 号 我 们 利 用 了 $[] \U/ntxmia/m/it/12.045 = \OT1/ntxtlf/m/n/12.045 0$\TU/SimSun(0)/m/n/12.045 。|  其 实 和 玩 意 和 反 复 提 及 的[][]\T1/ntxtlf/m/n/12.045 3.27[][]\TU/SimSun(0)/m/n/12.045 形
  []
 
 [140] [141] [142]
-Overfull \hbox (6.31642pt too wide) in paragraph at lines 4591--4593
+Overfull \hbox (6.31642pt too wide) in paragraph at lines 4597--4599
 \TU/SimSun(0)/m/n/12.045 即 能 量 守 恒\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 所 以 \TU/SimSun(0)/b/n/12.045 时 间 的 连 续 平 移 对 称 性 直 接 导 致 了 体 系 的 能 量 守 恒 \T1/ntxtlf/b/n/12.045 (Hamil-
  []
 
@@ -2378,7 +2424,7 @@ Overfull \hbox (6.31642pt too wide) in paragraph at lines 4591--4593
 [145
 
 ] [146] [147]
-Overfull \hbox (11.52446pt too wide) in paragraph at lines 4726--4728
+Overfull \hbox (11.52446pt too wide) in paragraph at lines 4732--4734
 []\TU/SimSun(0)/m/n/12.045 另 外\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 其 实 非 简 并 微 扰 论 还 有 一 个 隐 含 的 适 用 条 件 就 是 矩 阵 元 $[]$
  []
 
@@ -2391,43 +2437,43 @@ File: fig/7.1.pdf Graphic file (type pdf)
 
 ] [165] [166] [167] [168]
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 18.06749pt on input line 5325.
+(Font)              scaled to size 18.06749pt on input line 5331.
 
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 5325.
+(Font)              size <17.28> substituted on input line 5331.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5325.
+(hyperref)                removing `math shift' on input line 5331.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mhchem@cee' on input line 5325.
+(hyperref)                removing `\mhchem@cee' on input line 5331.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 5325.
+(hyperref)                removing `superscript' on input line 5331.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5325.
+(hyperref)                removing `math shift' on input line 5331.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5325.
+(hyperref)                removing `math shift' on input line 5331.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mhchem@cee' on input line 5325.
+(hyperref)                removing `\mhchem@cee' on input line 5331.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5325.
+(hyperref)                removing `math shift' on input line 5331.
 
 [169]
 LaTeX Font Info:    Font shape `T1/ntxsups/b/n' will be
-(Font)              scaled to size 12.045pt on input line 5346.
+(Font)              scaled to size 12.045pt on input line 5352.
  [170] [171] [172]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
@@ -2441,12 +2487,12 @@ Package fontspec Info: Could not resolve font "FangSong/B" (it probably
 Package fontspec Info: Could not resolve font "FangSong/I" (it probably
 (fontspec)             doesn't exist).
 
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 5508.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 5514.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.045pt on input line 5508.
+(Font)              scaled to size 12.045pt on input line 5514.
 
 Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             with options [Script={CJK}].
@@ -2459,16 +2505,16 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 5508.
+(Font)              scaled to size 9.03374pt on input line 5514.
  [173]
-Invalid UTF-8 byte or sequence at line 5526 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5526 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5526 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5526 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5526 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5526 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5526 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5526 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5532 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5532 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5532 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5532 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5532 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5532 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5532 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5532 replaced by U+FFFD.
 File: fig/8-2.eps Graphic file (type eps)
 <fig/8-2.eps>
  [174]
@@ -2546,26 +2592,32 @@ Overfull \hbox (2.89873pt too wide) detected at line 954
 
  (./appendix_group.tex
 附录 D
-) [213
+[213
 
 
 
 
-] (./sourcecode.aux (./appendix.aux) (./appendix_group.aux))
+]
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 37.
+ [214] [215] [216] [217]) [218]
+\tf@thm=\write6
+\openout6 = `sourcecode.thm'.
+
+ (./sourcecode.aux (./appendix.aux) (./appendix_group.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 3183B015B1D2B0C31761631EFED2D284;11331.
+(rerunfilecheck)             Checksum: 70316FD1DE1AB625276AA0766E60A024;11607.
  ) 
 Here is how much of TeX's memory you used:
- 57703 strings out of 476533
- 1485926 string characters out of 5818886
- 1978240 words of memory out of 5000000
- 76818 multiletter control sequences out of 15000+600000
- 545141 words of font info for 287 fonts, out of 8000000 for 9000
+ 58052 strings out of 476533
+ 1495265 string characters out of 5818886
+ 1982346 words of memory out of 5000000
+ 77157 multiletter control sequences out of 15000+600000
+ 542352 words of font info for 288 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1164s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (217 pages).
+Output written on sourcecode.pdf (222 pages).

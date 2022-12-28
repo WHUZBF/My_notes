@@ -83,4 +83,6 @@
 \contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{213}{appendix.D}%
 \contentsline {section}{\numberline {D.1}群的基本结构}{213}{section.D.1}%
 \contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{213}{subsection.D.1.1}%
+\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{214}{subsection.D.1.2}%
+\contentsline {subsection}{\numberline {D.1.3}同构与同态}{218}{subsection.D.1.3}%
 \contentsfinish 

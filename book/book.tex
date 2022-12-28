@@ -48,7 +48,12 @@
 \newcommand{\DOI}[1]{doi: \href{https://doi.org/#1}{#1}} % 引用文献超链接
 \usepackage{mhchem} % 化学宏包
 \usepackage{cancel} % 打叉叉的宏包
+\usepackage{ntheorem}
 
+% 证明环境
+\newtheorem*{proof}{证明}
+% 证明结束标志符号
+\newcommand\qed[0]{\hfill$\boxed{\text{搞定}}$}
 % 定义公式环境
 \newenvironment{lequation}{\large\begin{equation}}{\end{equation}}
 \newenvironment{sequation}{\small\begin{equation}}{\end{equation}}
@@ -90,7 +95,8 @@
 \date{\today}                             %最后更新日期
 
 \begin{document}
-    \maketitle              %制作封面
+    % \maketitle              %制作封面
+    \includepdf[height=29.7cm]{../titlepage/fourthtitlepage.pdf} % 插入封面
     \thispagestyle{empty}
     \setcounter{page}{0}
     \tableofcontents        %制作目录
@@ -104,4 +110,5 @@
     \include{chapter07.tex}
     \include{chapter08.tex}
     \include{appendix.tex}
+    \include{appendix_group.tex}
 \end{document}
