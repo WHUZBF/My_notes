@@ -126,7 +126,7 @@ $g\in H$时$gH$和$Hg$构成一个群，就是$H$本身。
 \end{define}
 下面这个定理是和前面的定义等价的，有的书常常也用这个定理作为正规子群定义。
 \begin{theorem}{正规子群左右陪集完全重合}
-    $H\unlhd G\Leftrightarrow \forall g\in G,gH=Hg$
+    $H\unlhd G\iff \forall g\in G,gH=Hg$
 \end{theorem}
 \begin{proof}
     先证必要性，等价于证明$H\unlhd G\rightarrow gHg^{-1}=H$.
@@ -162,3 +162,157 @@ $g\in H$时$gH$和$Hg$构成一个群，就是$H$本身。
 \end{define}
 这个概念其实有点像线性空间里面的仿射子集建立的商空间。
 \subsection{同构与同态}
+\begin{define}{群同构}
+    若从群$G\circ$到$F\star$上\footnote{后面的符号表示群乘法符号}存在一个一一对应的映射（同时满足单性和满性）$\Phi:G\mapsto F$，而且满足\textbf{乘积的映射等于映射的乘积}：
+    \begin{equation}
+        \label{eq:D.1}
+        \Phi(g_1\circ g_1)=\Phi(g_1)\star\Phi(g_2),\forall g_1,g_2\in G
+    \end{equation}
+    那么我们就称群$G$和$F$是同构的，记作$G\cong F$.
+\end{define}
+其实群的同构意味着两个群实质上代数结构完全一致，只是看起来指代不同的内容，关系过强从而意义有时并不大，下面我们弱化一下刚才的定义，得到所谓群同态的定义。
+\begin{define}{群同态}
+    若$\exists \Phi:G\mapsto F$，这个映射可以是多对一的，也不必是满映射，但是仍满足乘积的映射等于映射的乘积(\ref{eq:D.1}). 我们便称$G$与$F$同态，记为$G\sim F$.
+\end{define}
+上面的定义是数学中的定义，但物理中用的比较多的同态关系满足$\Phi(G)=F$，也就是说$\Phi$是满映射，这样我们之后表述定理就不必像数学家那样去用$\mathrm{range}\Phi$表述了，所以
+之后谈同态，{\color{red}默认$\Phi$是满映射}。
+\begin{figure}[h]
+    \centering
+    \subfigure[同构关系]{
+        \includegraphics[width=0.4\linewidth]{fig/fig_D.1a.eps}
+    }
+    \quad
+    \subfigure[同态关系]{
+        \includegraphics[width=0.4\linewidth]{fig/fig_D.1b.eps}
+    }
+    \caption{同构与同态}
+    \label{fig:D.1}
+\end{figure}
+我们还可以很容易得到同态和同构映射的两个重要性质：
+\begin{itemize}
+    \item \textbf{幺元映射为幺元}：$\Phi(g_0)=f_0$
+    \item \textbf{逆元映射为逆元}：$\Phi(g^{-1})=\Phi(g)^{-1}$
+\end{itemize}
+\begin{define}{同态核}
+    $G$中所有与$F$中单位元素$f_0$所对应的元素的集合：
+    \[\mathrm{Ker}\Phi\equiv\{h\in G|\Phi(h)=f_0\}\]
+\end{define}
+这个定义和线性代数里面线性映射的核(Kernel)\footnote{有的书也叫做零空间}的定义是类似的。
+\begin{theorem}{同态核定理}
+    设$G\cong F$，$H$是同态核，那么：
+    \begin{itemize}
+        \item $H\unlhd G$
+        \item $G/H\cong F$
+    \end{itemize}
+    注意这个定理的表述默认$\Phi$是满的，否则要用$\mathrm{Im}\Phi$替换$F$
+\end{theorem}
+\begin{proof}
+    第一点是比较容易证明的，首先不难$H$是子群，我们再稍微说明一下它是不变子群。我们要证明的实际上是$\forall h\in H,\forall g\in G\rightarrow ghg^{-1}\in H$，注意到
+    $\Phi(ghg^{-1})=\Phi(g)\Phi(h)\Phi(g^{-1})=\Phi(g)\Phi(g^{-1})=f_0$，便直接证明$H\unlhd G$.
+
+    第二点的证明我们实际上是需要去构建一个合适的同构映射，我们自然的可以想到这样的一个映射，将$G/H$中的元素$g_iH$映射到$\Phi(g_i)$上，你可以按照前面的图\ref{fig:D.1}理解为图b中的每一个小圈圈对应$G/H$中的一个
+    陪集，构造的同构映射就是在同态映射的基础上将每个小圈圈对应$F$中的一个元素. 根据同态的性质，满性已然成立，下面要证明的是单性，也就是不同陪集对应不同元素.
+
+    还是利用反证法来证明. 设$g_iH$和$g_jH$是两个不同的陪集，但是对应相同的$F$中元素$f$，那么$\forall h\in H, \Phi(g_i^{-1}g_jh)=f^{-1}ff_0=f_0\rightarrow g_i^{-1}g_jh\in H\rightarrow g_i^{-1}g_j\in H$，
+    再根据重排定理，$g_i^{-1}g_jH=H\rightarrow g_iH=g_jH$，与假设矛盾.
+    \qed
+\end{proof}
+
+看前面的图\ref{fig:D.1}，这个定理实际上是在说与$F$中单位元素$f_0$对应的子群是$G$的一个不变子群，其它的小圈圈是他的陪集，所以每个小圈圈中的元素个数都相等，而且把这些小圈圈
+单独看成一个个元素构成的商群和$F$同构。
+
+\begin{define}{自然同态}
+    如果$K\unlhd G$，那么映射$\pi:G\mapsto G/K$将$g$映射为陪集$gK$，建立了$G$和$G/K$之间的一个满同态\footnote[1]{也就是说$\mathrm{range}\pi=G/K$}，而且同态核为
+    $\mathrm{Ker}\pi=K$.我们称这个同态映射$\pi$为群$G$的自然同态.
+\end{define}
+这个实际上进一步告诉我们同态核和正规子群是一样的，也就是说一个正规子群可以看做某个群同态的同态核，反之同态核一定是某个正规子群。证明的话其实就是同态核定理逆推回去。
+\begin{define}{自同构映射}
+    自同构映射建立的是群和它自己的同构映射，$\nu :G\mapsto G$，最平凡的例子就是恒等映射。    
+\end{define}
+\begin{define}{自同构映射群}
+    所有的自同构映射构成了一个群，乘法定义就是复合映射概念，我们记为$A(G)$.
+\end{define}
+\begin{define}{内自同构映射}
+    还有一类同构映射比较特殊，$\forall u\in G$，我们可以依此构造一个自同构映射，我们定义映射为$\nu(g)=ugu^{-1}$，其实就是去找某个与$g$同类的元素。和上面类似的，自同构映射放在一起也构成了一个群，
+    即自同构映射群，记为$I(G)$.
+\end{define}
+下面我们证明\textbf{内自同构映射群是自同构映射群的不变子群}。
+\begin{proof}
+    $I(G)\leq A(G)$这一点很容易证明，下面我们要证明$\forall \mu\in I(G),\nu\in A(G)\rightarrow\nu\mu\nu^{-1}\in I(G)$. 设$g_\alpha,g_\beta\in G, 
+    \mu(g_\alpha)=u g_\alpha u^{-1},\nu(g_\alpha)=g_\beta$，那么$\nu\mu\nu^{-1}(g_\beta)=\nu\mu(g_\alpha)=\nu(ug_\alpha u^{-1})=\nu(u)g_\beta \nu(u)^{-1}$，
+    根据$I(G)$的定义便得知$I(G)\unlhd A(G)$.
+    \qed
+\end{proof}
+\subsection{群作用与变换群}
+\begin{define}{左右作用与伴随作用}
+    $\bigstar$左作用：$\forall g\in G$可以定义一个左作用$L_g:G\rightarrow G$，效果为$\forall g^\prime \in G,L_gg^\prime\equiv gg^\prime$.
+    
+    $\bigstar$右作用：$\forall g\in G$可以定义一个右作用$R_g:G\rightarrow G$，效果为$\forall g^\prime \in G,R_gg^\prime\equiv g^\prime g^{-1}$.
+
+    $\bigstar$伴随作用：$\forall g\in G$可以定义一个伴随作用$\mathrm{Ad}_g:G\rightarrow G$，效果为$\forall g^\prime \in G,\mathrm{Ad}_gg^\prime\equiv gg^\prime g^{-1}$.
+\end{define}
+伴随作用就是前面说的内自同构映射的概念，也是三个作用里面最为重要的一个，而其它两个都不是同构映射。
+
+\begin{define}{变换和变换群}
+    设变换对象$X$是一个非空集合，则双射$f:X\rightarrow X$称为$X$上的一个变换或置换。定义这些置换的乘法为$f\circ g(x)=f(g(x))$，则所有的这些置换构成了一个群，
+    称为$X$上的完全对称群$S_X$， 一般所说的变换群是$S_X$的子群。如果$X$有$n$个元素，则称其上的完全对称群为$X$上的$n$阶置换群$S_n$.如果我们变换的对象还构成一个群，
+    它也有完全对称群$S_G$.
+\end{define}
+
+回到前面左右作用的定义，我们发现右作用不是直接右乘，而是右乘逆元。$\forall g\in G$，我们可以确定左右作用$L_g,R_g$，而这个确定给每个群元确定一个左（右）作用的过程其实就是一个$G\to S_G$的映射，当然这个映射不是满的，
+但是却是个同态映射，很容易确定$L_{gg^\prime}=L_gL_{g^\prime}$，$R$同理。
+\begin{theorem}{Cayley定理}
+    群$G$同构于其完全变换群$S_G$的一个子群
+\end{theorem}
+\begin{proof}
+    显然$G$中生成的左作用$L_g$构成的群$\{L_g|g\in G\}$就是这个子群而且与$G$同构.\qed
+\end{proof}
+\begin{define}{等价与轨道}
+    设$G$为$X$上的变换群，若对$x,y\in X,\exists g\in G$，使得$g(x)=y$，那我们便称$x$与$y$等价，记为$x\sim y$. $X$中所有与$x$等价的元素的集合称为$x$的$G$轨道：
+    $\mathcal{O}_x^G\equiv\{g(x)|g\in G\}$.
+\end{define}
+\begin{define}{不变子集}
+    设$G$为$X$上的变换群，$Y\subseteq X$，满足$G$中的任意元素$g$作用在$Y$中元素上得到的结果还属于$Y$，那我们称$Y$为群$G$在$X$上的不变子集。
+\end{define}
+其实这个概念和线性代数里面的不变子空间概念是很像的。$\mathcal{O}_x^G$以及它们的并显然就是一些不变子集。
+\begin{define}{迷向子群}
+    设$G$为$X$上的变换群，$x\in X$，若$G^{x}\leq G$且保持$x$不变，即$G^{x}=\{h\in G|h(x)=x\}$，则称$G^{x}$是$G$对$x$的迷向子群。
+\end{define}
+\begin{define}{$\mathcal{O}_x^G$和$G^{x}$的左陪集一一对应}
+    $G^{x}$的每个左陪集把$x$映为其$G$轨道上的点，且不同陪集映射到不同点。
+\end{define}
+由此我们便知$|\mathcal{O}_x^G|=|G|/|G^{x}|$.
+\subsection{直积与半直积}
+笛卡尔直积$\times$的概念就是两个集合中各取一个元素构成一个有序对来生成新的集合，我们进一步定义这个集合元素间的乘法是可以将其升级为群的。
+\begin{define}{直积群}
+    两个群中各取一个群元$g_{1\alpha},g_{2\beta}$构成一个有序对$g_{\alpha\beta}=(g_{1\alpha},g_{2\beta})$，且定义乘法，$g_{\alpha\beta}\times g_{\alpha^\prime\beta^\prime}
+    =(g_{1\alpha}g_{1\alpha^\prime},g_{2\beta}g_{2\beta^\prime})$. 在这个乘法意义下这些有序对形成了一个新的群$G$，记为$G_1,G_2$的直积群$G_1\otimes G_2$.
+\end{define}
+\begin{define}{直积分解}
+    若群$G$中的元素都可以唯一地拆写为$g_{\alpha\beta}=g_{1\alpha}g_{2\beta}$，其中$g_{1\alpha}\in G_1,g_{2\beta}\in G_2$，而且两个群之间的元素乘法满足交换律，即$\forall g_1\in G_1,g_2\in G_2\rightarrow g_1g_2=g_2g_1$，那
+    自然的我们便将$G$中元素写成了有序对的形式，而且$G=G_1\otimes G_2$，$G_1,G_2$称为直积因子。
+\end{define}
+\begin{theorem}{直积因子的结构关系}
+    群$G$的直积因子$G_1$和$G_2$满足：
+    \begin{itemize}
+        \item \textbf{只有一个公共元素幺元}：$G_1\cap G_2={e}$
+        \item \textbf{都是正规子群}：$G_1\unlhd G, G_2\unlhd G$
+    \end{itemize}
+\end{theorem}
+\begin{proof}
+    第一点使用反证法证明，如果$G_1\cap G_2=a\neq e$，那么$G$中元素$a$可以写为$a=a\cdot e=e\cdot a$，都是前者属于$G_1$后者属于$G_2$，但显然拆分不唯一，不是直和分解定义。
+
+    再看第二点，以$G_1$为例。$\forall g_1\in G,g=g_\alpha g_\beta\in G\rightarrow (g_\alpha g_\beta)g_1(g_\alpha g_\beta)^{-1}=g_{\alpha} g_1 g_{\alpha}^{-1}\in G_1$\qed
+\end{proof}
+
+\begin{define}{半直积}
+    对于群$G_1$，如果$G_2\sim A(G_1)$，也就是说对于$G_2$中任意一个元素都能找到对应的一个$G_1$群的自同构映射$\nu_{g_{2\beta}}$.我们定义$G_1$和$G_2$之间元素构成的有序对集合$G=\{\left \langle g_{1\alpha},g_{2\beta}\right\rangle\}$
+    之间的乘法满足
+    \[\left\langle {{g_{1\alpha }},{g_{2\beta }}} \right\rangle  \times \left\langle {{g_{1\alpha '}},{g_{2\beta '}}} \right\rangle  = \left\langle {{g_{1\alpha }}{\nu _{{g_{2\beta }}}}({g_{1\alpha '}}),{g_{2\beta }}{g_{2\beta '}}} \right\rangle \]
+    这样构造的新群称为$G_1,G_2$的半直积群，记为$G_1 \rtimes G_2$.
+\end{define}
+要证明这样定义乘法的正确性，注意$\nu_{g_{\beta}}(g_{\alpha}g_{\alpha^\prime})=\nu_{g_{\beta}}(g_{\alpha})\nu_{g_{\beta}}(g_{\alpha^\prime})$和$\nu_{g_\alpha g_\beta}=\nu_{g\alpha}\nu_{g_\beta}$即可。
+
+从定义就可以看出来$G_1,G_2$的地位不是对称的，实际上这里$G_1\unlhd G$而$G_2$不再有这一性质。
+
+\section{群表示论}

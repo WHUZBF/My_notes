@@ -1,1 +1,2 @@
-*.eps linguist-language=Tex
+*.eps linguist-language=Tex // eps格式图片禁用统计
+*.otf linguist-language=Tex // otf格式的字体文件禁用统计

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  29 DEC 2022 03:29
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  4 JAN 2023 21:02
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2599,7 +2599,12 @@ Overfull \hbox (2.89873pt too wide) detected at line 954
 
 ]
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 37.
- [214] [215] [216] [217]) [218]
+ [214] [215] [216] [217] [218]
+File: fig/fig_D.1a.eps Graphic file (type eps)
+<fig/fig_D.1a.eps>
+File: fig/fig_D.1b.eps Graphic file (type eps)
+<fig/fig_D.1b.eps>
+ [219] [220] [221] [222] [223]) [224]
 \tf@thm=\write6
 \openout6 = `sourcecode.thm'.
 
@@ -2608,16 +2613,22 @@ Package hyperref Info: bookmark level for unknown proof defaults to 0 on input l
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
-Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 70316FD1DE1AB625276AA0766E60A024;11607.
+
+Package rerunfilecheck Warning: File `sourcecode.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `sourcecode.out':
+(rerunfilecheck)             Before: A0279BECCAA30FA83AEC48919C097E1A;11899
+(rerunfilecheck)             After:  7FF660C68A847F231BEAADB319541B51;12009.
  ) 
 Here is how much of TeX's memory you used:
- 58052 strings out of 476533
- 1495265 string characters out of 5818886
- 1982346 words of memory out of 5000000
- 77157 multiletter control sequences out of 15000+600000
+ 58083 strings out of 476533
+ 1495807 string characters out of 5818886
+ 1982417 words of memory out of 5000000
+ 77186 multiletter control sequences out of 15000+600000
  542352 words of font info for 288 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,727b,1164s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (222 pages).
+Output written on sourcecode.pdf (228 pages).
