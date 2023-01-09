@@ -77,11 +77,11 @@
 \contentsline {section}{\numberline {B.3}波函数的空间}{161}{section.B.3}%
 \contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{163}{section.B.4}%
 \contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{167}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{170}{section.B.6}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{173}{appendix.C}%
-\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{175}{appendix.D}%
-\contentsline {section}{\numberline {D.1}群的基本结构}{175}{section.D.1}%
-\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{175}{subsection.D.1.1}%
-\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{176}{subsection.D.1.2}%
-\contentsline {subsection}{\numberline {D.1.3}同构与同态}{179}{subsection.D.1.3}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{171}{section.B.6}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{175}{appendix.C}%
+\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{177}{appendix.D}%
+\contentsline {section}{\numberline {D.1}群的基本结构}{177}{section.D.1}%
+\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{177}{subsection.D.1.1}%
+\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{178}{subsection.D.1.2}%
+\contentsline {subsection}{\numberline {D.1.3}同构与同态}{181}{subsection.D.1.3}%
 \contentsfinish 

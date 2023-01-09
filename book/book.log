@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  29 DEC 2022 03:28
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  9 JAN 2023 20:19
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2637,26 +2637,26 @@ Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
  [168]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [169] [170] [171] [172]
+ [169] [170]
+Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 995.
+ [171] [172] [173] [174
+
+]
 附录 C
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [173
-
-]) [174]
+ [175]) [176]
 \openout2 = `appendix_group.aux'.
 
  (./appendix_group.tex
 附录 D
-[175
+[177
 
 
 
 
-]
-Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 37.
- [176] [177] [178]) [179]
+] [178] [179] [180]) [181]
 \tf@thm=\write6
 \openout6 = `book.thm'.
 
@@ -2669,12 +2669,12 @@ Package rerunfilecheck Info: File `book.out' has not changed.
 (rerunfilecheck)             Checksum: 44F6C5FE4354CB1CD70E17CB5E0D4332;11493.
  ) 
 Here is how much of TeX's memory you used:
- 58638 strings out of 476533
- 1504472 string characters out of 5818886
- 2001089 words of memory out of 5000000
- 77680 multiletter control sequences out of 15000+600000
+ 58661 strings out of 476533
+ 1505930 string characters out of 5818886
+ 2001099 words of memory out of 5000000
+ 77703 multiletter control sequences out of 15000+600000
  542352 words of font info for 288 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,22n,97p,721b,1169s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (184 pages).
+Output written on book.pdf (186 pages).

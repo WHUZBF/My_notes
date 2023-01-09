@@ -78,7 +78,7 @@
 \contentsline {section}{\numberline {B.3}波函数的空间}{196}{section.B.3}%
 \contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{198}{section.B.4}%
 \contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{203}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{207}{section.B.6}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{208}{section.B.6}%
 \contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{211}{appendix.C}%
 \contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{213}{appendix.D}%
 \contentsline {section}{\numberline {D.1}群的基本结构}{213}{section.D.1}%
@@ -88,4 +88,6 @@
 \contentsline {subsection}{\numberline {D.1.4}群作用与变换群}{222}{subsection.D.1.4}%
 \contentsline {subsection}{\numberline {D.1.5}直积与半直积}{223}{subsection.D.1.5}%
 \contentsline {section}{\numberline {D.2}群表示论}{224}{section.D.2}%
+\contentsline {subsection}{\numberline {D.2.1}群表示基本概念}{224}{subsection.D.2.1}%
+\contentsline {subsection}{\numberline {D.2.2}群代数与正则表示}{228}{subsection.D.2.2}%
 \contentsfinish 

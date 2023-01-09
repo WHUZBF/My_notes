@@ -930,7 +930,7 @@ $$\left\{\begin{array}{l}\text { 将常数换成其共轭复数 } \\ \text { 将
         A^{\dagger}{ }_{i j}=\left\langle u_{i}\left|\hat{A}^{\dagger}\right| u_{j}\right\rangle=\left\langle u_{j}|\hat{A}| u_{i}\right\rangle^{*}=A_{j i}{ }^{*}
     }
     \end{equation*}
-在正交归一基下, 对算符进行厄米共轭操作, 它的矩阵相当于转置后再取复数共轭。
+\textbf{在正交归一基下}, 对算符进行厄米共轭操作, 它的矩阵相当于转置后再取复数共轭。
 \begin{define}{厄米算符/矩阵}
     若$\hat{A}^\dagger=\hat{A}$我们就趁算符$\hat{A}$是厄米的。由于我们前面说明了厄米共轭和复数共轭的相似性, 这里厄米算符也可以和实数类比。按照定义, 厄米算符的
     矩阵的对角线上元素全为实数。
@@ -975,6 +975,35 @@ $$
     \end{aligned} 
 \end{equation*}
 右矢左矢的变换也是一样的推导, 不用背公式, 使用狄拉克符号插入$\mathbbm{1}$即可。
+\subsection*{线性变换矩阵的一般说明}
+对于一个$V\mapsto W$的一个线性变换$T$，我们用矩阵表示它需要确定$V$和$W$中的一组基底$\{\mathbf{e}_1,\cdots\mathbf{e}_n\}$和$\{\mathbf{f}_1,\cdots\mathbf{f}_m\}$
+在这样的两组基底下，线性算子$T$的矩阵记为$\mathcal{M}(T,\{\mathbf{e}_1,\cdots\mathbf{e}_n\},\{\mathbf{f}_1,\cdots\mathbf{f}_m\})$，\textbf{其第$i$列的意义是$T$作用到$e_i$上在$W$的基底$\{f\}$上的
+展开系数。}
+
+对于线性算子$T$，也就是$V\mapsto V$的线性变换，为了矩阵表示这个算子我们一般取两组相同的基底，矩阵就简记为$\mathcal{M}(T,\{\mathbf{e}_1,\cdots\mathbf{e}_n\})$，量子力学中我们最喜爱用的就是
+正交归一的基底，那根据定义便有$A_{ij}=\braket{e_i|\hat{A}|e_j}$.但是别忘了这并不是一般的情况，是我们选取了正交归一的基底。而且只有在正交归一的基底选取下，才会有简单的$\hat{A}^\dagger$的矩阵等于$\hat{A}$的矩阵
+的厄米共轭。
+
+我们量子力学中考虑的表象是正交归一基底，不同的表象算符的矩阵不同，用Dirac符号可以很容易表示不同矩阵之间的关系。当然这也并不是最一般的情况，我们考虑$T:V\mapsto V$在两组不同基底下的矩阵：
+\[\mathcal{M}(T,\{\mathbf{e}_1,\cdots\mathbf{e}_n\})\quad \text{and} \quad\mathcal{M}(T,\{\mathbf{f}_1,\cdots\mathbf{f}_m\})\]
+恒等映射在两个基底下的矩阵记为$A=\mathcal{M}(I,\{\mathbf{e}_1,\cdots\mathbf{e}_n\},\{\mathbf{f}_1,\cdots\mathbf{f}_m\})$
+\begin{theorem}{基变更公式}
+    \begin{equation*}
+        \mathcal{M}(T,\{\mathbf{e}_1,\cdots\mathbf{e}_n\})=A^{-1}\mathcal{M}(T,\{\mathbf{f}_1,\cdots\mathbf{f}_m\})A
+    \end{equation*}
+\end{theorem}
+\begin{proof}
+    要证明这个公式我们只需要注意到：
+    \begin{align*}
+        &\mathcal{M}(ST,\{u_1,\ldots,u_n\},\{w_1,\ldots,w_n\})=\\
+        &\mathcal{M}(S,\{v_1,\ldots,v_n\},\{w_1,\ldots,w_n\})\mathcal{M}(T,\{u_1,\ldots,u_n\},\{v_1,\ldots,v_n\})
+    \end{align*}
+
+    这个根据定义很容易看出来，其中$S,T$都是$V$上的算子，$\{u_1,\ldots,u_n\}$和$\{w_1,\ldots,w_n\}$以及$\{v_1,\ldots,v_n\}$都是$V$的基底（不一定要正交归一）.\qed
+\end{proof}
+
+我们这里所有谈到的线性代数知识更全面的了解请参看{\itshape Linear Algebra Done Right}这本书。
+
 \section{*线性算符的一些性质}
 \subsection*{本征值和本征矢}
 对于$\mathscr{E}$的子空间$\mathscr{E}_q$, 如果算符$\hat{A}$将其中的矢量仍旧全部映射为$\mathscr{E}_q$中的矢量, 那么称其为算符$\hat{A}$作用下的\uwave{不变子空间}, 不

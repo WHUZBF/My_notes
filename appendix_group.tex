@@ -316,3 +316,153 @@ $g\in H$时$gH$和$Hg$构成一个群，就是$H$本身。
 从定义就可以看出来$G_1,G_2$的地位不是对称的，实际上这里$G_1\unlhd G$而$G_2$不再有这一性质。
 
 \section{群表示论}
+这一节我们的首要任务就是将一个抽象的群用具体的矩阵表示出来，基本工具是附录B中的线性代数。
+\subsection{群表示基本概念}
+\begin{define}{线性变换群}
+    定义线性空间$V$上两个线性变换的乘法为它俩的相继作用，那么$n$维复线性空间$V$上的全部\textbf{非奇异}线性变换构成了一个群，称为复一般线性变换群，记为$GL(V,\mathbb{C})$.
+    用的更多的是它的任一子群$L(V,\mathbb{C})$称为$V$上的线性变换群。
+\end{define}
+上面的定义中需要注意的是\uwave{非奇异}这个条件，否则就不满足逆元存在这一条件了。另外，对于实向量空间，也可对应定义$GL(V,\mathbb{R})$、$L(V,\mathbb{R})$，只是用的少些罢了。
+
+\begin{define}{线性表示}
+    对于群$G$，如果存在一个从$G$到线性空间$V$上的某个线性变换群$L(V,\mathbb{C})$的同态映射$\mathscr{A}$，那么我们称$\mathscr{A}$是群$G$的一个线性表示，$V$是表示空间，
+    $\mathrm{dim}V$是表示的维数。如果我们选取了$V$上的一组基，那么$\mathscr{A}(g)$就可以和一个矩阵$\mathcal{A}(g)$联系起来\footnote[1]{今后用花体$\mathscr{A}$作为群表示符号，手写体$\mathcal{A}$作为对应矩阵的符号。}，所以物理上常常也就说群表示就是用矩阵表示一个抽象群。
+\end{define}
+\begin{define}{忠实表示}
+    如果表示$\mathscr{A}$是一个同构映射，那我们称他为忠实表示。
+\end{define}
+从上面的这些定义可以看出群表示有无穷多个，比如把所有群元对应到恒等映射$\{I\}$就是一个表示，称为平庸表示，而且不同表示之间其实还可以相互联系，我们真正关系的是那些不可约且相互不等价的表示。
+\begin{define}{等价表示}
+    如果两个$V$上的表示$\mathscr{A},\mathscr{B}$可以由$V$上的一个非奇异变换$P$联系起来，即$\mathscr{B}(g)=P^{-1}\mathscr{A}(g)P$，其中$P$与群元$g$无关，我们就称
+    两个表示等价。
+\end{define}
+这个还可以这么理解，我们在同一个基底下写下两个表示的矩阵$\mathcal{A},\mathcal{B}$，根据上面的定义，$\mathcal{B}=P^{-1}\mathcal{A}P$，也就是说这两组矩阵由一个相似变换联系起来，
+况且我们还知道，两个相似的矩阵可以看成是同一个线性变换在不同基底下的矩阵表示，基于这些，我们便可以理解为啥这么定义表示等价了。
+\begin{define}{可约表示}
+    $\mathscr{A}$是群$G$在$V$上的表示，如果存在一个$G$不变的$V$的真子空间\footnote[1]{$W\subset V,W\neq V,W\neq \varnothing$}$W$，其中$G$不变意味着$\forall g\in G, \ket{v}\in W,\mathscr{A}(g)\ket{v}\in W$，
+    也就是所有的线性变换$\mathscr{g}$的不变子空间的交集。那我们就称表示$\mathscr{A}$是可约的。
+\end{define}
+从矩阵的观点来看其实就是\textbf{存在}一组$V$中的基底$\left\{\mathbf{e}_1,\mathbf{e}_2,\ldots,\mathbf{e}_m,\mathbf{e}_{m+1},\right.\\\left.\ldots,\mathbf{e}_n\right\}$，其中$W=\mathrm{span}\{\mathbf{e}_1,\mathbf{e}_2,\ldots,\mathbf{e}_m\}$在这个基底的选取下，$\mathscr{A}$表示的矩阵都是下面的形式：
+\begin{equation}
+    \label{eq:D.2}
+    \mathcal{A}(g)=\begin{pmatrix}
+    R(g) &N(g) \\
+     {0} & B(g)
+   \end{pmatrix}
+\end{equation}
+
+那显然对于$\ket{v}=\begin{pmatrix}v_1&v_2&\cdots&v_m&0&\cdots&0\end{pmatrix}^{\mathrm{T}}\in W$，有$\mathcal{A}(g)\ket{v}\in W$. 最直观的判断一个群表示是否可约的方法
+就是看他的矩阵表示有没有\ref{eq:D.2}的形式，另外，如果一个群表示的矩阵没有\ref{eq:D.2}的形式也有可能是基底没有选对，不能直接就说群表示不可约。
+
+群表示可约其实就是说这个群表示可以由更加基本的“小”一些的表示构成，比如这里就可以拆分出一个独立的，小一些的在$V$的子空间$W$中的表示$R(g)$. 但是这里$\mathscr{A}$可以拆出来一个$\mathscr{R}$，但是$V$中$W$之外的
+那一部分空间并不能保证也是$G$不变的，也就是说$\mathscr{A}$可约，但是这种拆分不能进行到底，与之对应的就是下面的完全可约的概念。
+\begin{define}{直和分解}
+    两个线性空间$W$和$U$的和定义为，$U+W\equiv \{\ket{u}+\ket{w}|\forall \ket{u}\in U,\ket{w}\in W\}$，如果$V$中的任意一个向量$\ket{v}$可以分解为$\ket{u}+\ket{w}$，其中
+    $\ket{u}\in U,\ket{w}\in W$，那么显然$V$可以写成$U+W$的形式。进一步如果这种分解是\textbf{唯一的}，那么我们称$V$是$U$和$W$的直和，记为$V=U\oplus W$.
+
+    \setlength\parindent{2em}这种唯一分解的条件，或者说两个线性空间的和是直和的条件等价于$U\cap W={0}$.这有点像群的直积分解的条件，也是判断和是直和的简易手段。
+\end{define}
+\begin{define}{完全可约}
+    如果$\mathscr{A}$的表示空间可以直和分解为$V=U\oplus W$，而且$U$和$W$都是$G$不变的，那么我们就称$\mathscr{A}$表示完全可约。
+\end{define}
+这个定义其实就是说我们可以选取一组$V$中的基底$\left\{\mathbf{e}_1,\mathbf{e}_2,\ldots,\mathbf{e}_m,\mathbf{e}_{m+1},\right.\\\left.\ldots,\mathbf{e}_n\right\}$，其中$W=\mathrm{span}\{\mathbf{e}_1,\mathbf{e}_2,\ldots,\mathbf{e}_m\},V=\mathrm{span}\{\mathbf{e}_{m+1},\ldots,\mathbf{e}_n\}$在这个基底的选取下，
+$\mathcal{A}(g)$有如下形式：
+\begin{equation}
+    \label{eq:D.3}
+    \mathcal{A}(g)=\begin{pmatrix}
+        \mathcal{R}_2(g) &{0} \\
+         {0} & \mathcal{R}_2(g)
+       \end{pmatrix}
+\end{equation}
+
+用线性代数中的术语就是$\mathcal{A}(g)$都是可以分块对角化的，而且这种对角化是同时的。显然现在$\mathscr{A}$可以分解为两个较小的表示，两个表示空间和起来才是$V$，
+我们记为$\mathscr{A}=\mathscr{R}_1\oplus\mathscr{R}_2$.进一步如果$\mathscr{R}_1,\mathscr{R}_2$也是完全可约表示，那最后我们就可以将$\mathscr{A}$约化为不可约表示的直和：
+$\mathscr{A}=\bigoplus_p \mathscr{A}_p$. 矩阵观点来看就是在某组基底下$\mathcal{A}(g)$都是分块矩阵，而且这些“块”不止两个。
+
+\begin{theorem}{定理}
+    对于\textbf{有限群}，表示可约则完全可约
+\end{theorem}
+\begin{proof}
+    $\mathscr{A}$可约意味着在某组基底下有：
+    \begin{equation}
+        \label{eq:D.4}
+        \mathcal{A}(g)=\begin{pmatrix}
+            \mathcal{R}_2(g) & \mathcal{N}(g) \\
+             {0} & \mathcal{R}_2(g)
+           \end{pmatrix}
+    \end{equation}
+    下面我们要证明存在一组基底，或者说存在与群元$g$无关的$P$使得：
+    \begin{equation}
+        \label{eq:D.5}
+        P^{-1}\mathcal{A}(g)P=\begin{pmatrix}
+            \mathcal{R}_2(g) &{0} \\
+             {0} & \mathcal{R}_2(g)
+           \end{pmatrix}
+    \end{equation}
+    我们假设$P$的形式为：
+    \begin{equation}
+        \label{eq:D.6}
+        P=\begin{pmatrix}
+            \mathbbm{1}_m &\mathcal{C} \\
+             {0} & \mathbbm{1}_{n-m}
+           \end{pmatrix}
+    \end{equation}
+    \ref{eq:D.4},\ref{eq:D.5},\ref{eq:D.6}联合计算后发现等价于找到一个与$g$无关的$C$满足：
+    \begin{equation}
+        \label{eq:D.7}
+        \mathcal{R}_1(g)\mathcal{C}+\mathcal{N}(g)=\mathcal{C}\mathcal{R}_1(g)
+    \end{equation}
+    
+    又因为$\mathscr{A}$是群表示，所以同态满足$\mathcal{A}(g_\alpha g_\beta)=\mathcal{A}(g_\alpha)\mathcal{A}(g_\beta)$，即$\mathcal{A}(g)\mathcal{A}(g^{-1})=\mathbbm{1}$.代入矩阵运算后得到：
+    \begin{equation}
+        \label{eq:D.8}
+        \mathcal{R}_1(g)\mathcal{R}_1(g^{-1})=\mathbbm{1}_{m},\quad\mathcal{R}_2(g)\mathcal{R}_2(g^{-1})=\mathbbm{1}_{n-m}
+    \end{equation}
+    上面的式子实际上是$g_\beta$取$g_\alpha^{-1}$的特殊情况，更一般的有：
+    \begin{equation*}
+        \mathcal{R}_1(g_\alpha)\mathcal{R}_1(g_\beta)=\mathcal{R}_1(g_\alpha g_\beta),\quad \mathcal{R}_2(g_\alpha)\mathcal{R}_2(g_\beta)=\mathcal{R}_2(g_\alpha g_\beta)
+    \end{equation*}
+    而且：
+    \begin{equation}
+        \label{eq:D.9}
+        \mathcal{R}_1{g_\alpha}\mathcal{N}(g_\beta)+\mathcal{N}(g_\alpha)\mathcal{R}_2(g_\beta)=\mathcal{N}(g_\alpha g_\beta)
+    \end{equation}
+    将$\ref{eq:D.7}$两侧同时乘上$\mathcal{R}_2(g^{-1})$并根据\ref{eq:D.8}得到：
+    \begin{equation}
+        \label{eq:D.10}
+        \mathcal{R}_1(g)\mathcal{C}\mathcal{R}_2(g^{-1})=\mathcal{C}-\mathcal{N}(g)\mathcal{R}_2(g^{-1})
+    \end{equation}
+    这个$\mathcal{C}$的构造就属于是神来之笔了：
+    \begin{equation}
+        \mathcal{C}=\frac{1}{|G|}\sum_{g_\alpha\in G}\mathcal{N}(g_\alpha)\mathcal{R}_2(g_{\alpha}^{-1})        
+    \end{equation}
+    我们对$G$中所有群元求和，所以$\mathcal{C}$自然与$g$无关.代入\ref{eq:D.10}验证：
+    \begin{align*}
+        \mathrm{LHS}&=\mathcal{R}_1(g_\alpha)\frac{1}{|G|}\sum_{g_\alpha\in G}\mathcal{N}(g_\alpha)\mathcal{R}_2(g_{\alpha}^{-1})\mathcal{R}_2(g^{-1})\\
+        &=\frac{1}{|G|}\sum_{g_\alpha\in G}\mathcal{R}_1(g_\alpha)\mathcal{N}(g_\alpha)\mathcal{R}_2((gg_{\alpha})^{-1})\\
+        &\overset{\ref{eq:D.9}}{=}\frac{1}{|G|}\sum_{g_\alpha\in G}\left[\mathcal{N}(gg_\alpha)-\mathcal{N}(g)\mathcal{R}_2(g_\alpha)\right]\mathcal{R}_2((gg_\alpha)^{-1})\\
+        &=\frac{1}{|G|}\sum_{g_\alpha\in G}\left[\mathcal{N}(gg_\alpha)\mathcal{R}_2((gg_\alpha)^{-1})\right]-\frac{1}{|G|}\sum_{g_\alpha\in G}\mathcal{N}(g)\mathcal{R}_2(g^{-1})
+    \end{align*}
+   
+    根据重排定理，$g_\alpha$走遍$G$，$gg_\alpha$便也走遍了$G$，所以上式的第一项等于$\mathcal{C}$，第二部分由于求和与$g$无关，所以等于$\mathcal{N}(g)\mathcal{R}_2(g^{-1})$.
+    这样便验证了\ref{eq:D.10}.\qed
+\end{proof}    
+上面的证明我们用到了对$G$所有群元的求和，所以这个定理\textbf{只适用于有限群}。
+\begin{define}{酉(幺正)表示}
+    这个表示依赖于一个内积空间$V$，满足$\mathscr{U}^\dagger(g)\mathscr{U}(g)=\mathbbm{1}$，其中$\mathscr{U}^\dagger(g)$是$\mathscr{U}(g)$的伴随算符，\textbf{如果选取的是正交归一基底}，则$\mathscr{U}^\dagger(g)$
+    的矩阵为$\mathcal{U}$的厄米共轭，即$\tilde{\mathcal{U}}^{*}$.
+\end{define}
+\begin{theorem}{定理}
+    酉表示可约则完全可约
+\end{theorem}
+有了上面更强的关于有限群的可约表示定理，这个定理看起来没那么重要了，不过它的证明要更加简单。
+\begin{proof}
+    $\mathscr{U}$是可约酉表示，那么$\exists W\subset V\rightarrow \forall g\in G,\forall\ket{w}\in W,\mathscr{U}(g)\ket{w}\in W$，注意到内积空间$V$都可以进行直和分解为$V=W\oplus w^{\perp}$.
+    其中$W^{\perp}$是$W$的正交补，定义为$W^{\perp}\equiv \{\ket{v}\in V|\braket{v|w}=0,\forall \ket{w}\in W\}$. 
+
+    我们下面要证明$W^{\perp}$也是$G$不变的，$\forall \ket{v}\in W^{\perp},\ket{w}\in W\rightarrow \braket{v|w}=0\rightarrow\braket{v|\mathbbm{1}|w}=\braket{v|\mathscr{U}^\dagger(g)\mathscr{U}(g)|w}=\braket{\mathscr{U}(g)v|\mathscr{U}(g)w}=0$
+    ，注意到$\mathscr{U}(g)\ket{w}\in W$所以根据正交补定义$\mathscr{U}(g)\ket{v}\in W^{\perp}$，这里$g$是任取的，$\ket{v}$也是任取的，所以我们证明了$W^{\perp}$也是$G$不变的.\qed
+\end{proof}
+\subsection{群代数与正则表示}
+
+
