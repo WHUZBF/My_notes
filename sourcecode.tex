@@ -5540,11 +5540,137 @@
 
 
     \chapter{WKB近似}
+    这一整章涉及到的内容特别针对于\textbf{一维薛定谔定态方程}的近似求解问题，其实是一种半经典近似，最终我们要得到历史上有名的Sommerfeld量子化条件。
+    
+    经典力学里面粒子的运动区域是$E>V(x)$，而量子力学允许隧穿，所以我们还要考虑$E<V(x)$的区域，最后我们会去考虑$E\approx V(x)$的区域如何近似。
+    
+    \section{基本原理}
+    \subsection*{经典区域}
+    \begin{figure}
+        \centering
+        \includegraphics[width=5cm]{fig/9-1.pdf}
+        \caption{WKB近似}
+        \label{fig:9.1}
+    \end{figure}
+    我们首先考虑$E>V(x)$区域内WKB近似方法的基本原理，也就是图\ref{fig:9.1}中的$(x_1,x_2)$。
+
+    这一区域内定义：
+    \begin{equation}
+        p(x)\equiv\sqrt{2m\left[E-V(x)\right]}
+    \end{equation}
+    那么定态薛定谔方程\ref{time-independent-equation}就可以改写为：
+    \begin{equation}
+        \label{eq:9.2}
+        \frac{d^2\psi}{dx^2}=-\frac{p^2}{\hbar^2}\psi(x)
+    \end{equation}
+    我们知道$\psi(x)$是个波函数，所以无非有两大要素，一是复振幅，另外是相位，所以我们可以一般的将其设为：
+    \[\psi(x)=A(x)\mathrm{e}^{\mathrm{i}\phi(x)}\]
+    代入\ref{eq:9.2}后得到两个方程：
+    \begin{equation}
+        \label{eq:9.3}
+        \begin{aligned}
+            & A^{\prime\prime}-A\phi^2+\frac{p^2}{\hbar^2}A=0\\
+            & A\phi^{\prime\prime}+2A^\prime\phi^\prime=0\Leftrightarrow \left(A^2\phi^\prime\right)^\prime=0
+        \end{aligned}
+    \end{equation}
+
+    到现在为止，我们还没有进行任何近似，只是把\ref{eq:9.2}改写为了与之等价的两个方程。\ref{eq:9.3}中的第二个方程很好求解，$A^2\phi^\prime=C$，但是第一个方程
+    的求解难度和\ref{eq:9.2}差不多。现在我们假设$A(x)$是关于$x$的缓变函数，所以我们可以略去$A^{\prime\prime}$得到：
+    \[\phi^\prime(x)=\pm\frac{p}{\hbar}\Rightarrow\phi(x)=\pm\int\frac{p}{\hbar}dx\]
+
+    这个近似什么时候是合理的呢？我们知道如果$V(x)$是常数，那么最终的解为$\psi(x)\sim Ae^{ikx}$，前面的振幅是不随$x$变化的常数。这是一个正弦波，波长为$\frac{2\pi}{k}$，
+    只要$V(x)$在一个波长的范围内变化不大，那我们就可以认为$V(x)$近似为常函数，可见波长越小，在一个波长内$V(x)$的变化相对而言就越小，近似就越精确。而$\lambda\propto\frac{1}{k}\propto\frac{1}{\sqrt{E}}$，所以WKB近似对于高能级情况比较适用，也就是$n$很大的情况，
+    这时粒子的量子效应比较小。
+
+    那显然我们可以得到WKB近似下的定态波函数\footnote{$\phi(x)$中的积分因子合并到$C$中去了。}：
+    \begin{equation}
+        \boxed{\psi(x)\approx\frac{C}{\sqrt{p(x)}}\mathrm{e}^{\pm\frac{\mathrm{i}}{\hbar}\int p(x)dx}\quad E>V(x)}
+    \end{equation}
+    所以在经典区域，我们的波函数就可以设为：
+    \begin{equation}
+        \label{eq:9.5}
+        \psi(x)\approx\frac{C_+}{\sqrt{p(x)}}\mathrm{e}^{\frac{\mathrm{i}}{\hbar}\int p(x)dx}+\frac{C_-}{\sqrt{p(x)}}\mathrm{e}^{-\frac{\mathrm{i}}{\hbar}\int p(x)dx}
+    \end{equation}
+    
+    
+    不过WKB近似的有效范围不能靠拐点$x_1,x_2$太近，因为显然$p(x_1)=p(x_2)=0$，上面的结果时发散的，我们后面会专门处理这种情况。
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=5cm]{fig/9-2.pdf}
+        \caption{两边无限高势阱}
+        \label{fig:9.2}
+    \end{figure}
+    \begin{example}{两边无限高一维势阱}
+        我们考虑两边无限高但是底部不一定“平坦”的势阱，之前讨论过的无限深势阱就是底部平坦$V(x)=0$的特殊情况。不过我们求解的情况是$E>V(x)$，如图\ref{fig:9.2}所示：
+        
+        首先我们按照\ref{eq:9.5}设波函数为：
+        \[\psi(x)\approx\frac{1}{\sqrt{p(x)}}\left[C_+\mathrm{e}^{i\phi(x)}+C_-\mathrm{e}^{-i\phi(x)}\right],\quad \phi(x)=\frac{1}{\hbar}\int_{0}^{x}p(x^\prime)dx^\prime\]
+        或者用三角形式：
+        \[\psi(x)\approx\frac{1}{\sqrt{p(x)}}\left[C_1\sin\phi(x)+C_2\cos\phi(x)\right]\]
+        然后因为势阱外部$\psi(x)=0$，所以$\psi(0)=\psi(a)=0$，所以有$C_2=0,\phi(a)=n\pi$，即：
+        \begin{equation}
+            \boxed{\int_{0}^{a}p(x)dx=n\pi\hbar,\quad \left(n=1,2,3,\ldots\right)}
+        \end{equation}
+        代入具体的$p(x)$便可以近似得出束缚态能级，而且$n$越大近似越好。对于$V(x)=0$的情况，恰好得到的就是精确解。
+    \end{example}
+    \subsection*{非经典区域}
+        $E<V(x)$时推导过程和前面是一样的，只是$p(x)$为纯虚数，所以近似变为：
+        \begin{equation}
+            \boxed{\psi(x)\approx\frac{C}{\sqrt{|p(x)|}}\mathrm{e}^{\pm\frac{1}{\hbar}\int |p(x)|dx}\quad E>V(x)}
+        \end{equation}
+    \section{量子隧穿}
+    我们考虑的量子隧穿是两边无限高的势垒情形，这样WKB近似在拐点处就是可行的，后面我们再来考虑一般情形。
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=5cm]{fig/9-3.pdf}
+        \caption{量子隧穿效应}
+    \end{figure}
+    根据$\S 2.5$中对散射问题的讨论，$-\infty\to 0$有一个入射波和反射波，$a\to\infty$有一个透射波，中间是非经典区域，所以总的来说波函数可以设为：
+    \begin{equation}
+        \psi(x)\approx\begin{cases}
+            A\mathrm{e}^{ikx}+B\mathrm{e}^{-ikx}&(-\infty,0)\\
+            \frac{C_+}{\sqrt{|p(x)|}}\mathrm{e}^{\pm\frac{1}{\hbar}\int |p(x)|dx}+\frac{C_-}{\sqrt{|p(x)|}}\mathrm{e}^{-\frac{1}{\hbar}\int |p(x)|dx}& (0,a)\\
+            F\mathrm{e}^{ikx}&(a,+\infty)
+        \end{cases}
+    \end{equation}
+    可以发现$C_+$那一项是增加透过率的，$C_-$那一项是减少透过率的。现在我们考虑\textbf{势垒很高，很厚，所以透过率很低$T\ll 1$}，这样的话便可以认为$C_+\approx 0$：
+    \[\frac{|F|}{|A|}\sim \mathrm{e}^{-\gamma},\quad\gamma\equiv\frac{1}{\hbar}\int_{0}^{a}|p(x)|dx\]
+    即：
+    \begin{equation}
+        \boxed{
+            T=\frac{|F|^2}{|A|^2}\approx \mathrm{e}^{-2\gamma},\quad\gamma\equiv\frac{1}{\hbar}\int_{0}^{a}|p(x)|dx
+        }
+    \end{equation}
+    
+    \begin{example}{Gamow的$\alpha$衰变理论}
+        所谓的$\alpha$粒子其实就是氦核$\mathrm{He}_{2}^{4}$，$\alpha$衰变就是释放$\alpha$粒子的过程。上面的理论其实可以用于近似计算$\alpha$衰变的半衰期。
 
 
+    \end{example}
+    \section{连接公式}
+    现在我们开始考虑吧如何处理$E\approx V(x)$，也就是拐点附近的WKB近似问题，前面的步骤显然失效了。
 
-
-
+    我们首先看\ref{fig:9.1}中$x=x_2$附近的情况\footnote{这里说明一下，$V(x)$在$(x_1,x_2)$之外不再与$V=E$有交点。}。由于我们仅仅考虑$x_2$附近的一小段情况，所以这一段完全可以用直线替代曲线，也即：
+    \[V(x)\approx E+V^\prime(x_2)(x-x_2),\quad V^\prime(x_2)>0\]
+    在$x=x_2$两侧，但是却又离$x_2$没有那么近的区域可以用常规的WKB近似设$\psi(x)$为：
+    \begin{equation}
+        \psi(x)\approx\begin{cases}
+            \frac{A}{\sqrt{p(x)}}\mathrm{e}^{\frac{i}{\hbar}\int_{x_2}^{x}p(x)dx}+\frac{B}{\sqrt{p(x)}}\mathrm{e}^{-\frac{i}{\hbar}\int_{x_2}^{x}p(x)dx}&x<x_2\\
+            \frac{C}{\sqrt{|p(x)|}}\mathrm{e}^{-\frac{1}{\hbar}\int_{x_2}^{x}|p(x)|dx}+\frac{D}{\sqrt{|p(x)|}}\mathrm{e}^{\frac{1}{\hbar}\int_{x_2}^{x}|p(x)|dx}&x>x_2
+        \end{cases}
+    \end{equation}
+    至于前面的WKB失效的那一部分我们假设波函数为$\psi_p(x)$. 注意到$V(x)$的线性化以及令：
+    \begin{equation}
+        \alpha\equiv\left[\frac{2m}{\hbar^2}V^\prime(x_2)\right]^\frac{1}{3}\quad z\equiv\alpha(x-x_2)
+    \end{equation}
+    那么$\psi_p(x)$的定态方程可以简化为：
+    \begin{equation}
+        \frac{d^2\psi_p}{dz^2}=z\psi_p(z)
+    \end{equation}
+    
+    这个方程是\textbf{艾里方程}，解是特殊函数Airy function：
+    \[\psi_p(z)=a\mathrm{Ai}(z)+b\mathrm{Bi}(z)\]
+    现在我们的任务是确定$a$和$b$.
 
 
     \include{appendix.tex} 

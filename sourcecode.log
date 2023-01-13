@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  9 JAN 2023 20:10
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  14 JAN 2023 03:22
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2541,9 +2541,21 @@ File: fig/8-2.eps Graphic file (type eps)
 <fig/8-2.eps>
  [174]
 第九章
+File: fig/9-1.pdf Graphic file (type pdf)
+<use fig/9-1.pdf>
 [175
 
 ]
+File: fig/9-2.pdf Graphic file (type pdf)
+<use fig/9-2.pdf>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[176]
+File: fig/9-3.pdf Graphic file (type pdf)
+<use fig/9-3.pdf>
+ [177] [178] [179]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -2553,10 +2565,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[176
+[180
 
 
-] [177] [178]
+] [181] [182]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -2564,79 +2576,79 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[179] [180] [181]
+[183] [184] [185]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [182] [183]
+ [186] [187]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [184] [185] [186] [187] [188]
+ [188] [189] [190] [191] [192]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [189] [190] [191] [192]
+ [193] [194] [195] [196]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 517--540
 []\TU/SimSun(0)/m/n/12.045 在 附 录 \T1/ntxtlf/m/n/12.045 A \TU/SimSun(0)/m/n/12.045 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[193
+[197
 
-] [194] [195]
+] [198] [199]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 643--650
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[196] [197] [198] [199] [200] [201]
+[200] [201] [202] [203] [204] [205]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [202] [203]
+ [206] [207]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [204]
+ [208]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [205]
+ [209]
 Overfull \hbox (2.89864pt too wide) detected at line 954
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[206] [207]
+[210] [211]
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 996.
- [208] [209] [210]
+ [212] [213] [214]
 附录 C
-[211
+[215
 
-]) [212]
+]) [216]
 \openout2 = `appendix_group.aux'.
 
  (./appendix_group.tex
 附录 D
-[213
+[217
 
 
 
 
-] [214] [215] [216] [217] [218]
+] [218] [219] [220] [221] [222]
 File: fig/fig_D.1a.eps Graphic file (type eps)
 <fig/fig_D.1a.eps>
 File: fig/fig_D.1b.eps Graphic file (type eps)
 <fig/fig_D.1b.eps>
- [219] [220] [221] [222] [223] [224] [225]
+ [223] [224] [225] [226] [227] [228] [229]
 Overfull \hbox (4.64157pt too wide) in paragraph at lines 368--370
 []\TU/SimSun(0)/m/n/12.045 这 个 定 义 其 实 就 是 说 我 们 可 以 选 取 一 组 $\OML/ntxmi/m/it/12.045 V$ \TU/SimSun(0)/m/n/12.045 中 的 基 底 $[] [] 
  []
 
-[226]
+[230]
 Overfull \hbox (31.82376pt too wide) in paragraph at lines 416--417
 []\TU/SimSun(0)/m/it/12.045 又 因 为 $\OML/ntxmi/m/it/12.045 ^^8e$ \TU/SimSun(0)/m/it/12.045 是 群 表 示，|  所 以 同 态 满 足 $\LMS/ntxsy/m/n/12.045 A¹\OML/ntxmi/m/it/12.045 g[]g[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \LMS/ntxsy/m/n/12.045 A¹\OML/ntxmi/m/it/12.045 g[]\LMS/ntxsy/m/n/12.045 ºA¹\OML/ntxmi/m/it/12.045 g[]\LMS/ntxsy/m/n/12.045 º$\TU/SimSun(0)/m/it/12.045 ，|  即 $\LMS/ntxsy/m/n/12.045 A¹\OML/ntxmi/m/it/12.045 g\LMS/ntxsy/m/n/12.045 ºA¹\OML/ntxmi/m/it/12.045 g[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 =
  []
 
-[227]) [228]
+[231]) [232]
 \tf@thm=\write6
 \openout6 = `sourcecode.thm'.
 
@@ -2646,15 +2658,15 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: EA4AA120B0FBF0A6FBE5DC100ECA199C;12317.
+(rerunfilecheck)             Checksum: 11734FF7E23EA706D314F51320C137AB;12644.
  ) 
 Here is how much of TeX's memory you used:
- 58340 strings out of 476533
- 1500467 string characters out of 5818886
- 1985810 words of memory out of 5000000
- 77439 multiletter control sequences out of 15000+600000
+ 58372 strings out of 476533
+ 1500959 string characters out of 5818886
+ 1985976 words of memory out of 5000000
+ 77468 multiletter control sequences out of 15000+600000
  542352 words of font info for 288 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,23n,97p,727b,1164s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (232 pages).
+Output written on sourcecode.pdf (236 pages).

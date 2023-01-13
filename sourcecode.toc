@@ -65,29 +65,32 @@
 \contentsline {section}{\numberline {8.2}氦原子的基态能量}{167}{section.8.2}%
 \contentsline {section}{\numberline {8.3}$\ce {H2^+}$ 和 $\ce {H2}$}{169}{section.8.3}%
 \contentsline {chapter}{\numberline {第九章\hspace {.3em}}WKB近似}{175}{chapter.9}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{176}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{176}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{177}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{179}{section.A.3}%
-\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{183}{section.A.4}%
-\contentsline {section}{\numberline {A.5}直角坐标里的张量}{185}{section.A.5}%
-\contentsline {section}{\numberline {A.6}分部积分法}{191}{section.A.6}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{193}{appendix.B}%
-\contentsline {section}{\numberline {B.1}向量空间}{193}{section.B.1}%
-\contentsline {section}{\numberline {B.2}内积}{194}{section.B.2}%
-\contentsline {section}{\numberline {B.3}波函数的空间}{196}{section.B.3}%
-\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{198}{section.B.4}%
-\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{203}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{208}{section.B.6}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{211}{appendix.C}%
-\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{213}{appendix.D}%
-\contentsline {section}{\numberline {D.1}群的基本结构}{213}{section.D.1}%
-\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{213}{subsection.D.1.1}%
-\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{214}{subsection.D.1.2}%
-\contentsline {subsection}{\numberline {D.1.3}同构与同态}{219}{subsection.D.1.3}%
-\contentsline {subsection}{\numberline {D.1.4}群作用与变换群}{222}{subsection.D.1.4}%
-\contentsline {subsection}{\numberline {D.1.5}直积与半直积}{223}{subsection.D.1.5}%
-\contentsline {section}{\numberline {D.2}群表示论}{224}{section.D.2}%
-\contentsline {subsection}{\numberline {D.2.1}群表示基本概念}{224}{subsection.D.2.1}%
-\contentsline {subsection}{\numberline {D.2.2}群代数与正则表示}{228}{subsection.D.2.2}%
+\contentsline {section}{\numberline {9.1}基本原理}{175}{section.9.1}%
+\contentsline {section}{\numberline {9.2}量子隧穿}{178}{section.9.2}%
+\contentsline {section}{\numberline {9.3}连接公式}{178}{section.9.3}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{180}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{180}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{181}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{183}{section.A.3}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{187}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{189}{section.A.5}%
+\contentsline {section}{\numberline {A.6}分部积分法}{195}{section.A.6}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{197}{appendix.B}%
+\contentsline {section}{\numberline {B.1}向量空间}{197}{section.B.1}%
+\contentsline {section}{\numberline {B.2}内积}{198}{section.B.2}%
+\contentsline {section}{\numberline {B.3}波函数的空间}{200}{section.B.3}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{202}{section.B.4}%
+\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{207}{section.B.5}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{212}{section.B.6}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{215}{appendix.C}%
+\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{217}{appendix.D}%
+\contentsline {section}{\numberline {D.1}群的基本结构}{217}{section.D.1}%
+\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{217}{subsection.D.1.1}%
+\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{218}{subsection.D.1.2}%
+\contentsline {subsection}{\numberline {D.1.3}同构与同态}{223}{subsection.D.1.3}%
+\contentsline {subsection}{\numberline {D.1.4}群作用与变换群}{226}{subsection.D.1.4}%
+\contentsline {subsection}{\numberline {D.1.5}直积与半直积}{227}{subsection.D.1.5}%
+\contentsline {section}{\numberline {D.2}群表示论}{228}{section.D.2}%
+\contentsline {subsection}{\numberline {D.2.1}群表示基本概念}{228}{subsection.D.2.1}%
+\contentsline {subsection}{\numberline {D.2.2}群代数与正则表示}{232}{subsection.D.2.2}%
 \contentsfinish 
