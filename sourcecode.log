@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  14 JAN 2023 22:24
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  16 JAN 2023 22:11
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -2643,36 +2643,52 @@ Overfull \hbox (2.89864pt too wide) detected at line 954
 
 [218] [219]
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input line 996.
- [220] [221] [222]
+ [220] [221] [222] [223]
+LaTeX Font Info:    Font shape `T1/ntxsups/m/it' will be
+(Font)              scaled to size 12.045pt on input line 1127.
+ [224]
 附录 C
-[223
+[225
 
-]) [224]
+]) [226]
 \openout2 = `appendix_group.aux'.
 
  (./appendix_group.tex
 附录 D
-[225
+[227
 
 
 
 
-] [226] [227] [228] [229] [230]
+] [228] [229] [230] [231] [232]
 File: fig/fig_D.1a.eps Graphic file (type eps)
 <fig/fig_D.1a.eps>
 File: fig/fig_D.1b.eps Graphic file (type eps)
 <fig/fig_D.1b.eps>
- [231] [232] [233] [234] [235] [236] [237]
-Overfull \hbox (4.64157pt too wide) in paragraph at lines 368--370
+ [233] [234] [235] [236] [237] [238] [239]
+Overfull \hbox (4.64157pt too wide) in paragraph at lines 373--375
 []\TU/SimSun(0)/m/n/12.045 这 个 定 义 其 实 就 是 说 我 们 可 以 选 取 一 组 $\OML/ntxmi/m/it/12.045 V$ \TU/SimSun(0)/m/n/12.045 中 的 基 底 $[] [] 
  []
 
-[238]
-Overfull \hbox (31.82376pt too wide) in paragraph at lines 416--417
+[240]
+Overfull \hbox (31.82376pt too wide) in paragraph at lines 421--422
 []\TU/SimSun(0)/m/it/12.045 又 因 为 $\OML/ntxmi/m/it/12.045 ^^8e$ \TU/SimSun(0)/m/it/12.045 是 群 表 示，|  所 以 同 态 满 足 $\LMS/ntxsy/m/n/12.045 A¹\OML/ntxmi/m/it/12.045 g[]g[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \LMS/ntxsy/m/n/12.045 A¹\OML/ntxmi/m/it/12.045 g[]\LMS/ntxsy/m/n/12.045 ºA¹\OML/ntxmi/m/it/12.045 g[]\LMS/ntxsy/m/n/12.045 º$\TU/SimSun(0)/m/it/12.045 ，|  即 $\LMS/ntxsy/m/n/12.045 A¹\OML/ntxmi/m/it/12.045 g\LMS/ntxsy/m/n/12.045 ºA¹\OML/ntxmi/m/it/12.045 g[]\LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 =
  []
 
-[239]) [240]
+[241] [242] [243]
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
+(Font)              scaled to size 12.045pt on input line 521.
+ [244] [245]
+Overfull \hbox (17.87273pt too wide) in paragraph at lines 580--582
+[]\TU/SimSun(0)/m/it/12.045 如 果 两 空 间 维 数 相 等 $[] \OML/ntxmi/m/it/12.045 V \U/ntxmia/m/it/12.045 = [] \OML/ntxmi/m/it/12.045 W$\TU/SimSun(0)/m/it/12.045 ，|  基 底 分 别 为 $\LMS/ntxsy/m/n/12.045 f\OT1/ntxtlf/b/n/12.045 e[]\OML/ntxmi/m/it/12.045 ; [] ; \OT1/ntxtlf/b/n/12.045 e[]\LMS/ntxsy/m/n/12.045 g$ \TU/SimSun(0)/m/it/12.045 和 $\LMS/ntxsy/m/n/12.045 f\OT1/ntxtlf/b/n/12.045 f[]\OML/ntxmi/m/it/12.045 ; [] ; \OT1/ntxtlf/b/n/12.045 f[]\LMS/ntxsy/m/n/12.045 g$\TU/SimSun(0)/m/it/12.045 ，|
+ []
+
+
+Underfull \hbox (badness 1259) in paragraph at lines 595--597
+[]\TU/SimSun(0)/m/n/12.045 算 子 能 否 对 角 化 取 决 于 其 线 性 空 间 是 否 能 够 写 成 其 本 征 空 间 的
+ []
+
+[246] [247]) [248]
 \tf@thm=\write6
 \openout6 = `sourcecode.thm'.
 
@@ -2682,15 +2698,15 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 6A7F6B8C3C92A6DB636A0052DB4D4E95;12760.
+(rerunfilecheck)             Checksum: 84D2DBE2E0E2A869CBB81CC468384313;13113.
  ) 
 Here is how much of TeX's memory you used:
- 58438 strings out of 476533
- 1502399 string characters out of 5818886
- 1986767 words of memory out of 5000000
- 77530 multiletter control sequences out of 15000+600000
- 542352 words of font info for 288 fonts, out of 8000000 for 9000
+ 58472 strings out of 476533
+ 1503422 string characters out of 5818886
+ 1986802 words of memory out of 5000000
+ 77562 multiletter control sequences out of 15000+600000
+ 546140 words of font info for 290 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,23n,97p,727b,1165s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (244 pages).
+Output written on sourcecode.pdf (252 pages).

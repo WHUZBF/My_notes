@@ -1087,6 +1087,53 @@ $$
 最后强调, 实分析中的求导公式, 在这里要小心使用, 例如, $\left[\hat{A}(t),\frac{\mathrm{d}\hat{A}}{\mathrm{d}t}\right]\neq 0$时
 \[\frac{\mathrm{d} }{\mathrm{d} t}e^{\hat{A}(t) }\neq\frac{\mathrm{d} \hat{A}(t)}{\mathrm{d} x}e^{\hat{A}(t) }\]
 
+\section{*对偶空间和对偶映射}
+左矢其实是处于右矢的对偶空间之中的，现在我们用严谨的数学语言对对偶空间进行一般的简要介绍。不过我们的介绍集中于有限维向量空间，和量子力学中的Hilbert空间有所差距。
+
+线性泛函和线性空间$V$的对偶空间$V^*$的定义与$\S$B.4中的定义是一致的，下面谈到的一堆定理如果从数学上严谨证明前摇过长，我们仅从物理上“感觉”一下。
+\begin{theorem}{$\mathrm{dim} V=\mathrm{dim} V^*$}
+    对于有限维向量空间$V$，其对偶空间$V^*$也是有限维的，且$\mathrm{dim} V=\mathrm{dim} V^*$. 所以他们俩也是同构的。
+\end{theorem}
+\begin{define}{对偶基底}
+    有限维向量空间$V$的基底为$\{e_1,\ldots,e_n\}$，它们的对偶基为$V^*$中的一组基底$\{e^1,\ldots,e^n\}$，定义为：
+    \begin{equation*}
+        \boxed{e^i(e_j)=\delta_j^i}
+    \end{equation*}
+\end{define}
+\begin{define}{对偶映射}
+    若$T\in\mathcal{L}(V,W)$\footnote{$\mathcal{L}(V,W)$意思为所有$V\rightarrow W$的线性映射的集合}，则$T$的对偶映射$T^*\in\mathcal{L}(W^*,V^*)$，满足:\footnote{$\circ$的含义为两映射的复合}
+    \[\forall\varphi\in W^*,T^*(\varphi)=\varphi\circ T\]
+\end{define}
+
+不难验证对偶映射有下面的代数性质：
+\begin{itemize}
+    \item[$\bullet$] $\forall S,T\in\mathcal{L}(V,W)\rightarrow(S+T)^*=S^*+T^*$
+    \item[$\bullet$] $\forall T\in\mathcal{L}(V,W),\lambda\in\mathbb{C}\rightarrow(\lambda T)^*=\lambda T^*$
+    \item[$\bullet$] $\forall T\in\mathcal{L}(U,V),S\in\mathcal{L}(V,W)\rightarrow(ST)^*=T^*S^*$
+\end{itemize}
+
+这个对偶映射在量子力学里面是有定义的，算符$\hat{A}$从定义之初就是作用与右矢的，而作用于左矢没有定义，所以矩阵元应理解为$\braket{\varphi|\hat{A}|\psi}=\bra{\phi|(\hat{A}|\psi)}$.但是这样
+未免有点麻烦，我们不妨认为定义$\hat A$作用于左矢$\bra{\phi}$的效果为：
+\[\forall \ket{\psi}\in\mathscr{E},\braket{\left(\varphi|A\right)|\psi}=\braket{\varphi|\left(A|\psi\right)}\]
+显然我们在悄然之间定义了一个$\hat A$的对偶映射。
+
+\begin{theorem}{对偶映射的矩阵}
+    $T\in \mathcal{L}(V,W),T^*\in\mathcal{L}(W^*,V^*)$，$V,W$基底分别为$\{e_i\},\{f_i\}$且$V^*$，$W^*$的基底取对应的对偶基底$\{e^i\},\{f^i\}$，那么按照上述基底计算的
+    两映射矩阵为转置关系，即\[\mathcal{M}(T)=\left(\mathcal{M}(T^*)\right)^\mathrm{T}\]
+\end{theorem}
+\begin{proof}
+    为了后续证明的表述简便，定义$A=\mathcal{M}(T),B=\mathcal{M}(T^*)$.
+
+    根据线性映射矩阵的定义我们可以得到\footnote{利用爱因斯坦求和约定}：
+    \[T(e_j)=A_{ij}f_i,\quad T^*(f^j)=f^j\circ T=B_{ij}e^i\]
+    将$e_k$同时作用在第二个式子两端我们得到：
+    \[(f^j\circ T)(e_k)=B_{ij}e^i(e_k)=B_{ij}\delta_k^i=B_{kj}\]
+    而上式左端为：
+    \[(f^j\circ T)(e_k)=f^j(Te_k)=f^j(A_{ik}f_i)=A_{ik}\delta^j_i=A{jk}\]
+    故$A_{jk}=B_{kj}$，这正意味着$A=B^\mathrm{T}$
+\end{proof}
+
+这里并不要求基正交归一了，因为对偶空间这些概念都不必建立在内积空间之上。
 
 \chapter{Gaussian Integral}
 \section*{1-dimensional Gaussian integral}
