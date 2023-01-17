@@ -1,0 +1,53 @@
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%编译用Texlive2019或其高版本,不能用Ctex，会出错
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%要用xelatex编译2次。不能用pdflatex,因为有中文，会出错
+\documentclass[a4,dvipsnames]{ctexbook}
+\usepackage{tikz,pgfornament-han}%%%使用pgfornament上有边框
+%\usepackage{newtxtext}
+\usepackage{hyperref}
+\usepackage[final]{qrcode}
+\usepackage{pst-barcode}
+\qrset{link, height=1.5cm}
+\usepackage{geometry}
+\geometry{papersize={15.2cm,22.9cm}}
+%\geometry{left=1cm,right=2cm,top=3cm,bottom=4cm}
+\definecolor{orange}{rgb}{1,0.7,0}%%%%%定义新颜色
+\definecolor{mygreen}{RGB}{0,83,67}% 深一点的绿色和封面左侧一致
+\definecolor{one}{RGB}{255,172,188}% 互补色
+\definecolor{yourgreen}{RGB}{71,128,115} %浅一点的绿色
+\definecolor{two}{RGB}{154,97,140} % 互补色
+\begin{document}
+
+  \begin{tikzpicture}[remember picture, overlay]
+  \fill[white](current page.south east)rectangle (current page.north west);%%整个页面为白底遮住页码
+  \coordinate (A) at (current page.south west);
+  \coordinate (B) at (current page.north west);
+  \node[anchor=north east,blue!30,scale=0.5] at (current page.north east)
+  {\pgfornamenthan[symmetry=v]{9}};
+  \node[anchor=south east,blue!30,scale=0.5] at (current page.south east)
+  {\pgfornamenthan[symmetry=c]{9}};
+  \coordinate (C) at ([yshift=0.95\textheight]A);%%%从下向上0.9倍页高
+  \coordinate (D) at ([yshift=0.001\textheight]A);
+  \coordinate (E) at (D-|current page.south east);
+  \coordinate (F) at (C-|current page.north east);
+  \node [scale=2,font=\heiti,color=black] at (5.5,0){\fontencoding{T1}\fontfamily{ptm}\bfseries\selectfont FBI WARNING  };%%%
+   \node [scale=1,font=\heiti,color=black] at (5.9,-2){\fontencoding{T1}\fontfamily{ptm}\bfseries\selectfont 世界图书出版社有限公司北京分公司购权英文图书仅限中国大陆销售,不得以 };%%%
+    \node [scale=1,font=\heiti,color=black] at (5.4,-3){\fontencoding{T1}\fontfamily{ptm}\bfseries\selectfont 任何方式销往 中国大陆以外地区，一旦发现违规者，我公司将追究其法律责任, };%%%
+      \node [scale=1,font=\heiti,color=black] at (3.2,-4){\fontencoding{T1}\fontfamily{ptm}\bfseries\selectfont 追偿其违规行为给本公司及合作方造成的经济损失。  };%%%
+  \fill[orange] (C)--(D)-- (E) -- (F) -- cycle;%封底颜色
+  % \node [scale=3,font=\heiti] at (6.5,-9){\fontencoding{T1}\fontfamily{ptm}\bfseries\selectfont Armand Borel };
+%    \node [scale=5,font=\heiti] at (6.5,-11){\fontencoding{T1}\fontfamily{ptm}\bfseries\selectfont Linear Algebraic Groups  };
+ %     \node [scale=3,font=\heiti] at (6.5,-13){\fontencoding{T1}\fontfamily{ptm}\bfseries\selectfont Second Enlarged Edition };
+      %  \node [scale=5,font=\heiti] at (6.5,-15){\fontencoding{T1}\fontfamily{ptm}\bfseries\selectfont Working  };
+       %   \node [scale=5,font=\heiti] at (6.5,-17){\fontencoding{T1}\fontfamily{ptm}\bfseries\selectfont Mathematician  };
+
+%%%%%出版社信息%%%%
+  \node[scale=2] at ([yshift=2cm]current page.south){\bf We must know, and we will know! };%最底部的字
+  \node[scale=2] at (10,-15){\href{https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.788.recommend_more_video.-1}{\qrcode[hyperlink,height=0.5in]{https://www.bilibili.com/video/BV1GJ411x7h7/?spm_id_from=333.788.recommend_more_video.-1}}};% 二维码
+  \node[scale=1,yshift=-0.65in] at (10,-15) {\bf  扫码有惊喜！};%二维码下面的字
+  \node at (0,-15) {\begin{pspicture}(0,-8pt)(1.5in,1in)\psbarcode{241078}{includetext width=1.5 height=1}{code39}\end{pspicture}};% 条形码，这个还在尝试
+ %  \node[scale=2] at ([yshift=1cm]current page.south){\href{https://www.latexstudio.net/}{\bf  Paris Tokyo Hong Kong Barcelona}};
+\end{tikzpicture}
+\end{document}

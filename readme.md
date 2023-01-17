@@ -12,6 +12,8 @@ sourcecode开头的是源码，也是文章主题，appendix开头的是文章�
 
 这个很帅的封面不是我自己用tikz写的，咱也没那能力，来源于：[封面 - LaTeX 工作室 (latexstudio.net)](https://www.latexstudio.net/index/details/index/mid/3121.html)
 
+这个很牛逼的封底也不是我自己写的，自己做了点改动，来源于[GTM封底 - LaTeX 工作室 (latexstudio.net)](https://www.latexstudio.net/index/details/index/mid/2719.html)
+
 ## 参考书籍
 
 主要参考的就是*Griffiths*的量子力学英文版和*Cohen*的大部头，比如第三章的形式理论讲述的方式和*Griffiths*的就有很大的不同，直接引入Dirac符号，正是*Cohen*书中第二章的内容。向量分析附录主要参考的是*Mathews*的*Vector Calculus*，内容基础但是讲的非常细致(~~非常适合我这种渣渣~~)。
@@ -26,17 +28,25 @@ sourcecode开头的是源码，也是文章主题，appendix开头的是文章�
 
 这部分推荐的就是格里菲斯的习题全部，习题都非常有启发意义，而且网上也有*Griffiths*自己写的答案。再就是一本比较老的习题集*Selected Problems in quantum mechanics* 作者是*D.ter Haar*。我目前只做了第一章，很多题型都覆盖到了。
 
+# 附录说明
+
+这本笔记的附录是个大杂烩（有空再补充说明）
+
+
+
 #  一些计划 
 
 - [ ] 最后附录补一下有限差分法(FDM)的相关内容
 - [ ] 相对论量子力学部分附录补一下
-- [ ] 群论附录
+- [x] 群论附录
 
 # 后记
 
 格里菲斯这本书读完前半部分理论部分后我打算先暂停笔记的更新，定态微扰那些计算理论暂时先不看，继续去看Sakurai的摩登量子力学，把基础概念再强化一下，而且还有很厚的Goldstein需要研读，所以可能也没有时间再认真写笔记了。等有时间了一定会继续读完格里菲斯补完笔记，我估计格里菲斯看完，Sakura看一看，有时间再研读下Cohen的书，量子力学应该就差不多了，不过我应该会多读几遍量子力学圣经——Dirac的著作。对量子力学理解的越深，我应该就会回来不断完善这个笔记，最终就不限于格里菲斯的书了。（~~woc，我画了好大一个饼，这些认真看完我估计我都大学快毕业了~~）
 
-11.2 update 额😓大二上学期的模电和其它各种事导致Griffith可能要看整整一年了🤣。不知道Sakurai和QFT啥时候可以开始。
+22.11.2 update 额😓大二上学期的模电和其它各种事导致Griffith可能要看整整一年了🤣。不知道Sakurai和QFT啥时候可以开始。
+
+23.1.17 update 不知为啥这几天vscode的tex插件好像都很慢，很难加载成功，所以换为TexStudio进行开发。
 
 # 联系方式
 

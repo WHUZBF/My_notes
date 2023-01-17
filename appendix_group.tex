@@ -627,3 +627,242 @@ $\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$. $m_p$指的是表示$\mathscr{A}^p$�
     复向量空间上的算子一定有非零本征矢，所以$\forall v\in E(\lambda,M),Mv=\lambda v$，再根据$M$与任意的$\mathscr{A}(g)$对易，$\mathscr{A}(g)Mv=M\mathscr{A}(g)v=\lambda\mathscr{A}(g)v$.
     也就是说$E(\lambda,M)$是$G$不变的，而$\mathscr{A}$是不可约的，而且对于复线性空间上算子$E(\lambda,M)\neq \{0\}$，所以$E(\lambda,M)=V$，也即$M=\lambda I$.
 \end{proof}
+
+\begin{theorem}{有限群在内积空间上的每一个表示都有等价的酉表示}	
+	对于内积空间$V$上的任意一个表示$\mathscr{A}$,存在一个$X:V\mapsto V$使得$X^{-1}\mathscr{A}X$是酉表示。
+\end{theorem}
+\begin{proof}
+	假设在内积空间$V$上的内积定义为$(\cdot|\cdot)$，如果$\mathscr{A}$是酉表示，那么$\forall g\in G,\forall \mathbf{x},\mathbf{y}\in V,(\mathscr{A}(g)\mathbf{x}|\mathscr{A}(g)\mathbf{y})=(\mathbf{x}|\mathbf{y})$，那现在显然我们要考虑上述等式不成立的情况下中找到一个$X$使得$(X^{-1}\mathscr{A}X\mathbf{x}|X^{-1}\mathscr{A}X\mathbf{y})=(\mathbf{x}|\mathbf{y})$.
+	
+	对于一个内积空间，我们不止有一种定义内积的方式，我们在原先内积定义的基础上定义内积$\braket{\cdot|\cdot}$：
+	\[\braket{\mathbf{x}|\mathbf{y}}\equiv\frac{1}{|G|}\sum\limits_{j=1}^{|G|}(\mathscr{A}(g_j)\mathbf{x}|\mathscr{A}(g_j)\mathbf{y})\]
+	不难发现，在这个新的内积的定义下$\mathscr{A}$是酉表示：
+	\[\forall g\in G\rightarrow\braket{\mathscr{A}(g)\mathbf{x}|\mathscr{A}(g)\mathbf{y}}=\braket{\mathbf{x}|\mathbf{y}}\]
+	
+	不过这并未说明我们的证明完成了，因为我们要证明的是在同一个内积空间定义下表示等价，我们这里引进新的内积定义只是为了后续帮助我们找到$X$.
+	
+	我们选取$V$的两组基底$\{\mathbf{e}_i\}$和$\{\mathbf{f}_i\}$. 这两组基底分别在$(\cdot|\cdot)$和$\braket{\cdot|\cdot}$两种内积定义下正交归一.
+	线性空间的任意两组基底都可以用一个非奇异变换联系起来，我们就叫他$X$，满足下式：
+	\[(\mathbf{f}_1,\mathbf{f}_2,\cdots,\mathbf{f}_n)=(\mathbf{e}_1,\mathbf{e}_2,\cdots,\mathbf{e}_n)X\]
+	
+	设任意一个$V$中向量$\mathbf{x}$在$\{\mathbf{e}_i\}$和$\{\mathbf{f}_i\}$基底下的坐标分别为$\{x_i\}$和$\{x^\prime_i\}$，这两组坐标之间显然有关系：
+	\[\begin{pmatrix}
+		{x^\prime_1} \\
+		\vdots \\
+		{x^\prime_n}
+	\end{pmatrix}=X^{-1}\begin{pmatrix}
+		{x_1} \\
+		\vdots \\
+		{x_n}
+	\end{pmatrix}\]
+	因为我们选取的是正交归一的基底，所以有：
+	\[(\mathbf{x}|\mathbf{y}) = \begin{pmatrix}
+		x_1^*& \cdots  &x_n^*
+	\end{pmatrix}\begin{pmatrix}
+		{y_1} \\
+		\vdots \\
+		{y_n}
+	\end{pmatrix}\]
+	对于另一个内积关系也类似有：
+	\[\braket{\mathbf{x}|\mathbf{y}} = \begin{pmatrix}
+		x_1^{\prime*}& \cdots  &x_n^{\prime*}
+	\end{pmatrix}\begin{pmatrix}
+		y_1^{\prime} \\
+		\vdots \\
+		y_n^{\prime}
+	\end{pmatrix}\]
+	利用两组坐标之间的关系我们最终得到：
+	\[\braket{\mathbf{x}|\mathbf{y}} = \begin{pmatrix}
+		x_1^*& \cdots  &x_n^*
+	\end{pmatrix}(X^{-1})^{\dagger}(X^{-1})\begin{pmatrix}
+		{y_1} \\
+		\vdots \\
+		{y_n}
+	\end{pmatrix}\]
+	显然上面这些式子意味着：
+	\[\braket{X\mathbf{x}|X\mathbf{y}}=\braket{\mathbf{x}|\mathbf{y}}\]
+	下面的推导便证明了此定理：
+	\begin{align*}
+		(X^{-1}\mathscr{A}(g)X\mathbf{x}|X^{-1}\mathscr{A}(g)X\mathbf{y})&=\braket{XX^{-1}\mathscr{A}(g)X\mathbf{x}|XX^{-1}\mathscr{A}(g)X\mathbf{y}}\\
+		&=\braket{\mathscr{A}(g)X\mathbf{x}|\mathscr{A}(g)X\mathbf{y}}\\
+		&=\braket{X\mathbf{x}|X\mathbf{y}}=(\mathbf{x}|\mathbf{y})
+	\end{align*}
+	\qed
+\end{proof}
+
+上面这个定理的证明过程也自然的告诉了我们如何去寻找某个表示等价的酉表示。不过这个定理最有价值的地方在于，前面我们说过表示可以分解为一系列不等价不可约表示的直和，而这些不等价不可约表示根据这个定理又都有对应的等价酉表示，所以最终对于任意一个群，我们要研究其表示，只需要关注于它的那些不等价不可约酉表示即可。
+
+\begin{define}{群函数}
+	群函数是将$G\mapsto \mathbb{C}$的函数，这些函数显然有无穷多个，但是在通常的函数加法定义下，群函数构成了一个向量空间，群函数空间，本文记作$F_G$。
+\end{define}
+\begin{theorem}{$F_G\cong V_G$}
+	群函数空间与群空间同构
+\end{theorem}
+\begin{proof}
+	我们知道群空间中的任意一个向量$\mathbf{f}$都可以在群元确定的自然基底下进行分解，而这种分解自然就确定了一个群函数$f(g)$，即$\mathbf{f}=\sum\limits_{i}^{|G|}f(g_i)g_i$. 这个过程显然是可逆的，对于任何一个群函数，我们也可以反过来将其作为$g_i$前的投影系数从而对应一个$V_G$中的向量。这样我们便建立了两个空间中的同构关系，群空间的维数为$|G|$，所以群函数空间的维数也为$|G|$，这一点比较重要.\qed
+\end{proof}
+
+既然群函数与群空间的一个向量完全等价，所以我们也可以根据群空间中群代数的定义去定义群函数空间的代数，具体就是下面的三个式子，$x,y$的含义是两个群函数。
+\begin{itemize}
+	\item $(ax)(g_i)=ax(g_i)$
+	\item $(x+y)(g_i)=x(g_i)+y(g_i)$
+	\item $(xy)(g_i)=\sum\limits_{i=1}^{|G|}x(g_j)y(g_j^{-1}g_i)$
+\end{itemize}
+
+前面两个式子很好理解，第三个式子其实就是前面群代数定义中两个向量乘法的定义，这里的$i$指标就对应前面求和公式里面的$\gamma$指标。
+
+在群函数空间中可以选取一组基底，它们与群空间中的基底一一对应，那显然我们现在要考虑群元作为群空间中的向量所对应的群函数，为了避免混淆，我们用$g^i$表示。那根据群元自身在群空间中自然基地下的分解，我们有：
+\[g^i(g_j)=\delta^i_j\]
+这也很好理解，对于自变量为有限个的函数，$\delta$函数确实可以作为函数空间中的一组基底。
+
+我们在群函数空间中定义内积：
+\begin{equation}
+	\braket{f|h}=\frac{1}{|G|}\sum_{i=1}^{|G|}f^*(g_i)h(g_i)
+\end{equation}
+在这一内积定义下$g^i$之间正交，但是不归一化。
+
+虽然在数学人眼中群表示是把每个群元对应一个线性映射，但是在物理人眼中线性映射取基底后就是一个矩阵，所以群表示就是把每个群元对应一个矩阵，而对于一个$S$维表示，表示矩阵由$S^2$个数确定，所以一个表示就直接确定了$S^2$个群函数。下面我们要讨论的就是由群表示确定的这些群函数在群函数空间中的关系，当然我们的讨论集中在不等价不可约酉表示上。
+
+\begin{theorem}{$\bigstar$正交性定理}
+	设有限群$G$的所有不等价不可约酉表示为\footnote{互相等价的表示可看作一个表示，我们取其中的一个代表研究就好。}：$\mathscr{A}^1,\mathscr{A}^2,\ldots,\mathscr{A}^p,\ldots,\mathscr{A}^r,\ldots$.这些表示就是群表示最基本的单元.若记它们的维数分别为$S_1,S_2,\ldots,S_p,\ldots,S_r,\ldots$,那么这些不等价不可约表示的矩阵元作为群函数在群函数空间中有正交关系：
+	\begin{equation}
+		\boxed{
+		\braket{\mathcal{A}^p_{\mu\nu}|\mathcal{A}^r_{\sigma\rho}}=\frac{1}{S_p}\delta_{pr}\delta_{\mu\sigma}\delta_{\nu\rho}	
+	}
+	\end{equation}
+	
+	也就是说由这些不等价不可约表示确定的总共$\sum_i S^2_i$个群函数在群函数空间中是正交的。我们还可以利用群函数内积的定理改写为：
+	\begin{equation}
+		\sum_{i=1}^{|G|}(\mathcal{A}^p_{\mu\nu}(g_i))^*\mathcal{A}^r_{\sigma\rho}(g_i)=\frac{1}{S_p}\delta_{pr}\delta_{\mu\sigma}\delta_{\nu\rho}	
+	\end{equation}
+	或者用酉表示的性质写为\footnote{这也意味着我们选取的是正交归一基底}：
+	\begin{eqnarray}
+		\sum_{i=1}^{|G|}(\mathcal{A}^p_{\nu\mu}(g_i^{-1}))^*\mathcal{A}^r_{\sigma\rho}(g_i)=\frac{1}{S_p}\delta_{pr}\delta_{\mu\sigma}\delta_{\nu\rho}
+	\end{eqnarray}
+\end{theorem}
+\begin{proof}
+	我们先看两个相同表示，基于任意的一个$S_p$维矩阵$\mathcal{D}$，我们定义：
+	\begin{equation*}
+		\mathcal{C}=\frac{1}{|G|}\sum_{i=1}^{|G|}\mathcal{A}^p(g_i)\mathcal{D}\mathcal{A}^p(g_i^{-1})
+	\end{equation*}
+			在这个定义下$\forall g\in G$：
+	\begin{align*}
+		\mathcal{A}^p(g)\mathcal{C}&=\frac{1}{|G|}\sum_{i=1}^{|G|}\mathcal{A}^p(gg_i)\mathcal{D}\mathcal{A}^p(g_i^{-1})\\
+		&=\frac{1}{|G|}\sum_{i=1}^{|G|}\mathcal{A}^p(gg_i)\mathcal{D}\mathcal{A}^p((gg_i)^{-1})\mathcal{A}^p(g)\\
+		&=\mathcal{C}\mathcal{A}^p(g)
+	\end{align*}
+	
+	根据schur引理，$\mathcal{C}=\lambda(\mathcal{D})\mathcal{I}_{S_p\times S_p}$.我们的证明过程中完全没有规定$\mathcal{D}$的形式，所以现在我们取一个特殊的$\mathcal{D}_{ij}=\delta_{i\rho}\delta_{j\nu}$，也就是除了第$\rho$行第$\nu$列为$1$，其它都为$0$.
+	\begin{align*}
+		\mathcal{C}_{\mu_1\mu_2}&=\frac{1}{|G|}\sum_{\alpha}^{|G|}\sum_{\mu_1,\mu_2}\mathcal{A}_{\mu_1i}^p(g_\alpha)\delta_{i\rho}\delta_{j\nu}\mathcal{A}_{j\mu_2}^p(g_\alpha^{-1})\\
+		&=\frac{1}{|G|}\sum_{\alpha}^{|G|}\mathcal{A}_{\mu_1\rho}^p(g_\alpha)\mathcal{A}_{\nu\mu_2}^p(g_\alpha^{-1})\\
+		&=\frac{1}{|G|}\sum_{\alpha}^{|G|}\mathcal{A}_{\mu_1\rho}^p(g_\alpha)(\mathcal{A}_{\mu_2\nu}^p(g_\alpha))^*\\
+		&=\lambda(\mathcal{D})\delta_{\mu_1\mu_2}
+	\end{align*}
+	行之间的正交关系就出来了.
+	
+	我们再来看看$\lambda(\mathcal{D})$具体是什么，对$\mathcal{C}$取迹：
+	\begin{align*}
+		\mathrm{Tr} (\mathcal{C})&=\sum_{\mu=1}^{S_p}\frac{1}{|G|}\sum_{\alpha}^{|G|}\mathcal{A}_{\mu\rho}^p(g_\alpha)\mathcal{A}_{\nu\mu}^p(g_\alpha^{-1})=\frac{1}{|G|}\sum_{\alpha}^{|G|}\sum_{\mu=1}^{S_p}\mathcal{A}_{\nu\mu}^p(g_\alpha^{-1})\mathcal{A}_{\mu\rho}^p(g_\alpha)\\
+		&=\frac{1}{|G|}\sum_{\alpha}^{|G|}\left[\mathcal{A}^p(g_\alpha^{-1}g_\alpha)\right]_{\nu\rho}=\delta_{\nu\rho}\\
+		&=\lambda(\mathcal{D})\mathrm{Tr} (\mathcal{I})=\lambda(\mathcal{D})S_p
+	\end{align*}
+	列之间的正交关系也出来了，现在我们利用Schur引理一来证明矩阵之间的正交关系。
+	
+	跟前面类似的我们基于任意一个$S_r\times S_p$的矩阵$\mathcal{D}^\prime$定义：
+	\begin{equation*}
+		\mathcal{C}^\prime=\frac{1}{|G|}\sum_{i=1}^{|G|}\mathcal{A}^p(g_i)\mathcal{D}^\prime\mathcal{A}^p(g_i^{-1})
+	\end{equation*}
+	和前面一样，显然这样定义的$\mathcal{C}^\prime$对$\forall g\in G$:
+	\[\mathcal{C}^\prime\mathcal{A}^p(g)=\mathcal{A}^r(g)\mathcal{C}^\prime\]
+	可是我们已经说过这两个表示是不等价不可约表示，故$\mathcal{C}^\prime=0$.
+	
+	另一方面我们依旧取$\mathcal{D}_{ij}=\delta_{i\rho}\delta_{j\nu}$然后同样得到$\mathcal{C}^\prime$的矩阵元为：
+	\begin{equation}
+		\mathcal{C}^\prime_{\mu_1\mu_2}=\frac{1}{|G|}\sum_{\alpha}^{|G|}\mathcal{A}_{\mu_1\rho}^r(g_\alpha)(\mathcal{A}_{\mu_2\nu}^p(g_\alpha))^*=0
+	\end{equation}
+	这正是不同表示之间的正交关系.\qed
+\end{proof}
+
+自然我们会去想这些群函数在群空间中是否完备，或者说这些正交的群函数是否确定了群函数空间的一组正交完备基底。我们在学习特征标的概念后再回过头来证明这一点，因为借用这一概念后证明会简单很多。
+\begin{define}{类函数}
+	类函数就是把群中的每一个类$K_i$对应到一个数，和群函数很相似，类函数可以理解为现在同类元素对应到同一个数，自变量不再是群元，而由类来决定。类函数也张成了一个类函数空间，而且\textbf{维数为群的不同类的个数}。
+\end{define}
+
+特征标就是一类重要的类函数。类函数空间中的内积定义和群函数空间内积定义是一致的：
+\begin{equation}
+	\braket{\chi_1|\chi_2}=\frac{1}{|G|}\sum_{i=1}^{|G|}\chi_1^*(g_i)\chi_2(g_i)=\frac{1}{|G|}\sum_{i=1}|K_i|\chi_1^*(K_i)\chi_2(K_i)
+\end{equation}
+式中$\{K_i\}$指的是群的一个类。
+\begin{define}{特征标}
+	对于群$G$的表示$\mathcal{A}$定义一个群函数特征标为：
+	\begin{equation}
+		\chi(g)=\mathrm{Tr}\mathscr{A}(g)
+	\end{equation}
+\end{define}
+因为$\mathrm{Tr}(AB)=\mathrm{Tr}(BA)$，所以特征标确实是一个类函数。而且很容易证明\textbf{等价表示的特征标相同}。
+\begin{theorem}{特征标第一正交定理}
+	有限群的不等价不可约表示的特征标满足：
+	\begin{equation}
+		\boxed{
+			\braket{\chi^p|\chi^r}=\frac{1}{|G|}\sum_{i=1}|K_i|\chi_1^*(K_i)\chi_2(K_i)=\delta_{pr}
+		}
+	\end{equation}
+
+\setlength\parindent{2em}上标$p,r$区分群的所有不等价不可约表示集合中的不同表示$\mathscr{A}^p,\mathscr{A}^r$，也可以看成区分两个不可约表示是否等价。另外这个正交定理没有酉表示这个要求，因为任何一个表示都有等价的酉表示，而等价表示的特征标相同。
+\end{theorem}
+\begin{proof}
+	我们为了使用前面的正交性定理，我们先将$\mathscr{A}^p,\mathscr{A}^r$换成等价的酉表示$\mathscr{A}^{\prime p},\mathscr{A}^{\prime r}$. 由于等价表示的特征标相同，所以我们只需要证明等价酉表示的特征标内积$\braket{\chi^{\prime p}|\chi^{\prime r}}$满足正交性即可.
+	\begin{align*}
+		\braket{\chi^{\prime p}|\chi^{\prime r}}& =\frac{1}{n} \sum_{i=1}^{n}\left[\left(\sum_{\mu=1}^{S_{p}} \mathcal{A}_{\mu \mu}^{\prime p}\left(g_{i}\right)\right)^{*}\left(\sum_{\mu^{\prime}=1}^{S_{r}} \mathcal{A}_{\mu^{\prime} \mu^{\prime}}^{\prime r}\left(g_{i}\right)\right)\right] \\
+		& =\sum_{\mu=1}^{S_{p}} \sum_{\mu^{\prime}=1}^{S_{r}}\left(\frac{1}{n} \sum_{i=1}^{n}\mathcal{A}_{\mu \mu}^{\prime p *}\left(g_{i}\right) \mathcal{A}_{\mu^{\prime} \mu^{\prime}}^{\prime r}\left(g_{i}\right)\right) \\
+		& =\sum_{\mu=1}^{S_{p}} \sum_{\mu^{\prime}=1}^{S_{r}} \frac{1}{S_{p}} \delta_{p r} \delta_{\mu \mu^{\prime}}=\delta_{p r}
+	\end{align*}\qed
+\end{proof}
+
+我们前面说过任何一个表示都可以分解为那些等价不可约表示的直和，$\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$，显然\footnote{联系表示矩阵想一想}$\chi^\mathscr{A}=\sum_p m_p\chi^{\mathscr{A}^p}$. 那么根据特征标定理我们可以得到下面的重数计算公式：
+\begin{equation}
+	\boxed{
+	\Braket{\chi^{\mathscr{A}^p}|\chi^{\mathscr{A}}}=\Braket{\chi^{\mathscr{A}^p}|\bigoplus_p m_p\mathscr{A}^p}=m_p
+}
+\end{equation}
+根据上面式子我们还能知道\textbf{对于可约表示，特征标内积总是大于1的}：
+\begin{equation}
+	\Braket{\chi^{\mathscr{A}}|\chi^{\mathscr{A}}}=\Braket{\bigoplus_p m_p\mathscr{A}^p|\bigoplus_{p^\prime} m_{p^\prime}\mathscr{A}^{p^\prime}}=\sum_p m_p^2>1
+\end{equation}
+
+所以$\Braket{\chi^{\mathscr{A}}|\chi^{\mathscr{A}}}=1$可以作为表示不可约的充要条件。
+\begin{proposition}{正则表示特征标}
+	\begin{equation}
+		\chi^{c}(g)=\delta_{g}^{g_e}|G|
+	\end{equation}
+这里的$\delta$符号表示当$g$为单位元素时取1，其它时候取0.
+\end{proposition}
+\begin{proof}
+	我们对左正则表示证明这一点，右正则类似。
+	\begin{align*}
+		\chi^{\mathscr{L}}(g)&=\sum_{i=1}^{\dim \mathscr{L}}\mathcal{L}_{ii}(g)=\sum_{i=1}^{|G|}\mathrm{Prj}_{g_i}(gg_i)\\
+		&=\sum_{i=1}^{|G|}\delta_{gg_i}^{g_i}=\delta_{g}^{g_e}|G|
+	\end{align*}
+
+	正则表示的表示空间是群空间，所以正则表示是$|G|$维的。证明中我们选取的是群空间中的自然基底，$\mathrm{Prj}_{g_i}$表示按照自然基底展开后在$g_i$上的展开系数。\qed
+\end{proof}
+
+现在我们来证明完备性定理。
+\begin{theorem}{完备性定理}
+	有限群$G$的所有不等价不可约表示\footnote{显然这种不等价不可约表示的集合有很多组，它们之间互相等价，所以这里我觉得可以更好的表述为“对于任意一组完全的不等价不可约表示集合”}的矩阵元所确定的那$\sum_{p}S^2_p$个群函数不仅在群函数空间正交，还在群函数空间中是完备的。
+\end{theorem}
+\begin{proof}
+	\qed
+\end{proof}
+
+证明过程中顺带得到下面非常重要的Burnside定理。
+\begin{theorem}{Burnside定理}
+	若群$G$的不等价不可约表示的维数分别为$S_1,S_2,\ldots,S_q$,那么下面等式成立：
+	\begin{equation}
+		\boxed{
+			S^2_1+S^2_2+\cdots+S^2_q=|G|
+	}
+	\end{equation}
+\end{theorem}
+根据正交完备定理我们立刻得知这些群函数构成了群函数空间的一组基底。

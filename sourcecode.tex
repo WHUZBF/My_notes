@@ -1,4 +1,5 @@
 % 导言区
+% !TEX program = xelatex
 \documentclass[a4paper,zihao=-4,linespread=1]{ctexrep}
 
 \usepackage[]{mathrsfs}
@@ -5656,7 +5657,7 @@
         所谓的$\alpha$粒子其实就是氦核$\mathrm{He}_{2}^{4}$，$\alpha$衰变就是释放$\alpha$粒子的过程。上面的理论其实可以用于近似计算$\alpha$衰变的半衰期。
 
         \setlength\parindent{2em}$\alpha$粒子带电$2e$，原子核带电$Ze$，$\alpha$粒子衰变的过程其实就是$\alpha$粒子隧穿效应离开的过程，这个势垒是一个库伦势，
-        但是显然库伦势在$r=0$处发散，所以实际上我们这里的$V(r)$在$r=0$附近用一个有限深势阱来代替，$r_1$是原子核的半径。\footnote{这个问题实际上是个三维问题，不过由于各向同性而且我们是近似计算，所以丢掉离心势后考虑径向看成一维问题也没多大毛病。}
+        但是显然库伦势在$r=0$处发散，所以实际上我们这里的$V(r)$在$r=0$附近用一个有限深势阱来代替，$r_1$是原子核的半径。\footnote{这个问题实际上是个三维问题，不过由于各向同性而且我们是近似计算，所以丢掉离心势后考虑径向看成一维问题也没多大毛病。当然, 例如对于氢原子, 更精确的方式是根据\ref{eq:4.13}考虑离心势后进行计算。}
         其物理意义就是原子核对$\alpha$粒子的禁闭，$\alpha$粒子一般情况下就老老实实呆在$0\sim r_1$的势阱内，也就是原子核内。如图\ref{fig:9.x}所示。
 
         \setlength\parindent{2em}$E$的含义这里可以理解为出射的$\alpha$粒子的动能，可以根据质量亏损算出来，根据\ref{eq:9.9}，我们计算一下$\gamma$：
@@ -5906,4 +5907,5 @@
 
     \include{appendix.tex} 
     \include{appendix_group.tex}
+    \includepdf[height=29.7cm]{back_cover/cover.pdf} % 插入封底
 \end{document}  
