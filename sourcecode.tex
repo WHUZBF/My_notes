@@ -48,6 +48,7 @@
 \usepackage{cancel} % 打叉叉的宏包
 \usepackage{ntheorem}
 \usepackage{arydshln} % 分块矩阵横竖线绘制
+\usepackage{epigraph} % 章节引用名人名言
 % 证明环境
 \newtheorem*{proof}{证明}
 % 证明结束标志符号
@@ -94,7 +95,7 @@
 
 \begin{document}
     % \maketitle              %制作封面
-    \includepdf[height=29.7cm]{titlepage/fourthtitlepage.pdf} % 插入封面 height参数将封面拉伸为a4尺寸
+    \includepdf[height=29.7cm,width=21.0cm]{titlepage/fourthtitlepage.pdf} % 插入封面 height参数将封面拉伸为a4尺寸
     \tableofcontents        %制作目录
     \setcounter{page}{0}
     \thispagestyle{empty}
@@ -5900,12 +5901,84 @@
             T=\frac{|F|^2}{|A|^2}\approx \frac{e^{-2\gamma}}{\left[1+\left(e^{-2\gamma}/4\right)\right]^2}
         }
     \end{equation}
-    显然，在$\gamma\gg 1$也就是$T\ll 1$时，\ref{eq:34}退化为\ref{eq:9.9}。
-    
-    \chapter{散射理论}
 
+    显然，在$\gamma\gg 1$也就是$T\ll 1$时，\ref{eq:34}退化为\ref{eq:9.9}。而且对于经典极限，$\hbar\to 0$，$\gamma\to+\infty$，所以透射系数就趋近于0.
+    
+    \subsection*{反射系数}
+    类似于前面一直在求的势垒贯穿问题，是$E<V_{\max}$的情况，我们可以考虑另一类$E>V_{\max}$的情况。在经典情形下粒子会从左侧完全越过势垒到右侧，不再返回，但是量子情形下，和隧穿效应类似，会有一个微弱的反射系数$R$。你如果尝试直接从\ref{fig:9.3}所示的情况下出发你会得到$R=0$的结论，所以我们需要更精细的利用WKB近似考虑图\ref{fig:9.7}(a)中能量为$E_>$的情况。如果直接在位置表象下计算，过程比较复杂而且物理意义并不明显\footnote{详见Landau书的$\S 52$}。下面我们将考虑一个对称的势垒$V(x)$并说明，位置空间波函数的反射实际上等价于其对应动量空间波函数的透射，并利用动量空间下的WKB近似来计算反射系数。\footnote{这一小节的内容引自文章：\DOI{https://doi.org/10.1119/1.3298428}}
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=0.8\linewidth]{fig/9-7.pdf}
+    	\label{fig:9.7}
+    	\caption{在动量空间看，位置空间中反射和透射意义互换。图a中的$A,B,F$是对$E_<$而言的，对于$E>$，箭头的端点应该放在$x=0$处。}
+    \end{figure}
+    
+    在位置空间中左侧来的入射波复振幅为$A$，动量大于$0$而且由于$p(x)=\sqrt{2m(E-V(x))}$，所以由于$V(x)$的增大，越靠近$x=0$动量就会越小，最终达到$p_{\min}$.在动量空间看就是从右侧往左侧的入射过程，图\ref{fig:9.7}(b)中曲线是动能曲线，经典情形下在动量空间中看显然就是从右往左的入射，然后到$p=p_{\min}$后在动量空间中反射。这个反射在位置空间对应着什么呢？我们发现位置空间按中的透射波$F$正是与$A$相反动量从$p_{\min}$开始逐渐变大的一个波，所以就正好与动量空间的哪个反射波对应了。现在考虑量子效应，位置空间中还会有一个反射波$B$，它和$A$正好差了一个负号，动量从$-p_{\min}$然后随着往左走慢慢向着$-\infty$趋近，这在动量空间中看正像是穿透了阴影区域的透射波，要知道在经典力学中粒子是不可能越过阴影区域的。所以现在我们说明了在位置空间中的反射等价于动量空间中的隧穿效应。
+    
+    我们下面举一个经典力学中的例子来更好的说明这一点。考虑势垒$V(x)=\frac{1}{2}m\omega^2x^2$，在相空间$p-x$中粒子的轨迹是一簇双曲线，如图\ref{fig:9.8}所示。图中$A\to B\& C\to D$在$x$上看是一种关于$p$轴透射，但是在$p$上看是关于$x$轴的反射，同理$E\to F\& H\to G$也表现你了透射和反射的角色互换。
+    \begin{figure}
+    	\centering
+    	\includegraphics[width=0.65\linewidth]{fig/9-8.pdf}
+    	\label{fig:9.8}
+    	\caption{“反胡克势”下粒子相空间轨迹}
+    \end{figure}
+	
+	现在我们在动量表象下写薛定谔定态方程，注意在动量表象下$\hat{p}\to p,\hat{x}\to i\hbar d/dp$.
+	\begin{equation}
+		\label{eq:9.35}
+		\left[\frac{p^2}{2m}+V(i\hbar\frac{d}{dp})\right]\phi(p)=E\phi(p)
+	\end{equation}
+	
+	在动量空间下考虑WKB近似比位置空间要麻烦许多，微分算符藏在了形式未知的势能函数中。我们设动量空间波函数为：\footnote{这里并不失一般性，因为$\sigma(p)$是任意的复变函数}
+	\begin{equation}
+		\label{eq:9.36}
+		\phi(p)=e^{i\sigma(p)/\hbar}
+	\end{equation}
+	
+	把上式带到\ref{eq:9.35}中，考虑$\sigma(p)$是缓变函数，$\sigma^{\prime\prime}(p)\approx 0$，那么我们把$V(i\hbar\frac{d}{dp})$展开幂级数，而且注意到$\sigma(p)$高阶导数近似为$0$我们得到下面的式子：
+	\begin{equation}
+		\frac{p^2}{2m}+V(-\sigma^{\prime}(p))=E
+	\end{equation}
+	不难发现这里$-\sigma^{\prime}(p)$正是$p(x)$的反函数，我们记为$x(p)$，利用$V$的反函数$V^{-1}$可以算出：
+	\begin{equation}
+		\sigma(p)=-\int^{p} d p^{\prime} x\left(p^{\prime}\right)=-\int^{p} d p^{\prime} V^{-1}\left(E-\frac{p^{\prime 2}}{2 m}\right)
+	\end{equation}
+	
+	最后带入到\ref{eq:9.36}便得到了相空间中的WKB近似。这里看似只有一个解，不像位置空间中有$\pm$两个线性无关解，WKB近似设为两者的线性组合，但实际上这里是一样的，就拿反谐振子$V(x)=\frac{1}{2}\alpha x^2$来说，我们可以得到其反函数为$V^{-1}(\xi)=\pm\sqrt{2\xi/\alpha}$，也是线性无关的两个解。
+	
+	考虑到$R\ll 1$，我们这里就不考虑连接公式那种情况了，类似于$\S$9.2中的考虑我们可以得到\footnote{注意在$(-p_{\min},p_{\min})$也就是经典情况不允许的区域内$x(p)$始终是纯虚数}：
+	\begin{equation}
+		\boxed{
+		R\equiv \frac{|B|^2}{|A|^2}\approx e^{-2\zeta},\quad \zeta\equiv\int_{-p_{\min}}^{p_{\min}}|x(p)|dp}
+	\end{equation}
+	或者显式写为：
+	\begin{equation}
+		\label{eq:9.40}
+		\boxed{
+		R=\exp \left[-\frac{2}{\hbar} \operatorname{Im} \int_{-p_{\min }}^{p_{\min }} d p V^{-1}\left(E-\frac{p^{2}}{2 m}\right)\right]	
+	}
+	\end{equation}
+	这个公式更广为人知的形式是Landau书中给出的复变函数积分形式：
+	\begin{equation}
+		\label{eq:9.41}
+		\boxed{
+		R=\exp \left[-\frac{4}{\hbar} \operatorname{Im} \int_{z_{1}}^{z_{0}}  p(z)dz\right]
+	}
+	\end{equation}
+
+	其中$p(z)=\sqrt{2m(E-V(z))}$，$z_0$是上半平面内使得$p(z_0)=0$的点。$z_1$是实轴上的任意一个点，因为$p(z)$认为是解析函数，而且$p(z)$在实轴上的取值都是实数，所以$z_1$的选取有任意性，可以根据计算的方便选取。下面我们来证明\ref{eq:9.40}和\ref{eq:9.41}等价，首先对于任意一个势垒我们都可以通过概念势能零点以及坐标原点使得$V(0)=V_{\max}=0$，然后对于对称势垒$z_0=iy_0$在虚轴上。取$z_1$沿着虚轴积分\ref{eq:9.41}得到：
+	\begin{align*}
+		R&=\exp \left[-\frac{4}{\hbar} \operatorname{Im} \int_{0}^{y_{0}} i d y p(i y)\right]\\
+		&=\exp\left[-\frac{4}{\hbar}\left(\left.y p(i y)\right|_{0} ^{y_{0}}+\int_{0}^{p_{\min }} d p y(p)\right)\right]\\
+		&\overset{p(iy_0)=0}{=}\exp\left[-\frac{2}{\hbar}\int_{-p_{\min}}^{p_{\min }} d p y(p)\right]
+	\end{align*}
+	再注意到$iy(p)=V^{-1}\left(E-\frac{p^{2}}{2 m}\right)$便回归到了\ref{eq:9.40}。
+	
+	
+    \chapter{散射理论}
+	
 
     \include{appendix.tex} 
     \include{appendix_group.tex}
-    \includepdf[height=29.7cm]{back_cover/cover.pdf} % 插入封底
+    \includepdf[height=29.7cm,width=21.0cm]{back_cover/cover.pdf} % 插入封底
 \end{document}  

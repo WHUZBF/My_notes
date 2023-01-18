@@ -1,7 +1,8 @@
 % 这是有限群附录
 
 \chapter{Finit Group}
-这篇附录是根据李新征老师群论讲义个教学录像整理而成的笔记, 大致只打算写完有限群, 对于高量学习绰绰有余。
+\epigraphhead[40]{\epigraph{数学书有两种，一种是看一面就看不下去的，一种是看了一行就看不下去的。}{杨振宁}}
+这篇附录是根据李新征老师群论讲义和教学录像整理而成的笔记, 大致只打算写完有限群, 对于高量学习绰绰有余。
 \section{群的基本结构}
 \subsection{群的定义和一些基本定理}
 其实在接受前面对于线性空间的抽象定义之后也很好接受群的概念：
@@ -834,6 +835,7 @@ $\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$. $m_p$指的是表示$\mathscr{A}^p$�
 所以$\Braket{\chi^{\mathscr{A}}|\chi^{\mathscr{A}}}=1$可以作为表示不可约的充要条件。
 \begin{proposition}{正则表示特征标}
 	\begin{equation}
+		\label{eq:D.23}
 		\chi^{c}(g)=\delta_{g}^{g_e}|G|
 	\end{equation}
 这里的$\delta$符号表示当$g$为单位元素时取1，其它时候取0.
@@ -850,10 +852,15 @@ $\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$. $m_p$指的是表示$\mathscr{A}^p$�
 
 现在我们来证明完备性定理。
 \begin{theorem}{完备性定理}
-	有限群$G$的所有不等价不可约表示\footnote{显然这种不等价不可约表示的集合有很多组，它们之间互相等价，所以这里我觉得可以更好的表述为“对于任意一组完全的不等价不可约表示集合”}的矩阵元所确定的那$\sum_{p}S^2_p$个群函数不仅在群函数空间正交，还在群函数空间中是完备的。
+	有限群$G$的所有不等价不可约酉表示\footnote{显然这种不等价不可约表示的集合有很多组，它们之间互相等价，所以这里我觉得可以更好的表述为“对于任意一组完全的不等价不可约表示集合”}的矩阵元所确定的那$\sum_{p}S^2_p$个群函数不仅在群函数空间正交，还在群函数空间中是完备的。
 \end{theorem}
 \begin{proof}
-	\qed
+	我们考虑正则表示的直和分解$\mathscr{R}=\bigoplus\limits_{p}m_p\mathscr{A}^p$，$m_p=\braket{\chi^{\mathscr{A}^p}|\chi^{\mathscr{R}}}=\frac{1}{|G|}\sum_i\left[\chi^{\mathscr{A}^p}(g_i)\right]^*\chi^{\mathscr{R}}(g_i)$，再利用\ref{eq:D.23}我们就知道$m_p=\dim \mathscr{A}^p$，对正则表示直和分解两边同时取维度得到：
+	\[|G|\dim \mathscr{R}=\sum_p\dim \mathscr{A}^p\cdot\dim \mathscr{A}^p\]
+	
+	右边是这些正交的群函数的个数，左边是群的阶数也是群函数空间的维数，这样我们便证明了完备性。
+	
+	但是这个证明还有一个小问题，我们考虑的是正则表示可约的情况，那如果正则表示不可约呢？那我们知道正则表示确定了$|G|^2$个正交的群函数，那么根据正交性定理，如果还有其它的不等价不可约表示，这就说明再群函数空间中可以找到多于$|G|$个线性无关的群函数，而这是不可能的。也就是说如果正则表示可约，那么他是唯一的不等价不可约表示。而且一定会有$|G|^2=|G|=1$. 得到的正交的群函数还是完备的。我们还顺带证明了除非是只含单位群元的平凡群，正则表示都是可约的。\qed
 \end{proof}
 
 证明过程中顺带得到下面非常重要的Burnside定理。
@@ -865,4 +872,58 @@ $\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$. $m_p$指的是表示$\mathscr{A}^p$�
 	}
 	\end{equation}
 \end{theorem}
-根据正交完备定理我们立刻得知这些群函数构成了群函数空间的一组基底。
+根据正交完备定理我们立刻得知这些群函数构成了群函数空间的一组基底。任何群函数都可以用这些(不等价不可约酉表示的)矩阵元确定的群函数展开。
+
+\begin{theorem}{特征标在类函数空间完备}
+	有限群的所有不等价不可约表示的特征标在类函数空间中是完备的
+\end{theorem}
+\begin{proof}
+	同样，这个定理没有酉表示的要求，我们只需要证明对于所有不等价不可约酉表示的特征标是完备的即完成了证明，我们设这些不等价不可约酉表示为$\mathscr{A}^{\prime p}$.
+	
+	首先注意到根据完备性定理，我们知道对于任何一个群函数$f(g_i)$都可以写成：
+	\[f(g_i)=\sum_{p,\mu,\nu}a^p_{\mu,\nu}\mathcal{A}^{\prime p}_{\mu,\nu}(g_i)\]
+	进一步如果这个群函数还是一个类函数，那么$f(g_i)=f(g_j^{-1}g_ig_j)$对$\forall g_j\in G$成立，所以有下面的等式\footnote{为了方便，下面用$n$指代$|G|$}：
+	\[f(g_i)=\frac{1}{n}\sum_{i}^{n}f(g_j^{-1}g_ig_j)\]
+	这两个式子合起来，任意一个类函数都可以写为：
+	\begin{equation*}
+		\begin{aligned}
+			f\left(g_{i}\right) & =\frac{1}{n} \sum_{j=1}^{n} \sum_{p, \mu, \nu} a_{\mu, \nu}^{p} \mathcal{A}_{\mu, \nu}^{\prime p}\left(g_{j}^{-1} g_{i} g_{j}\right) \\
+			& =\frac{1}{n} \sum_{j=1}^{n} \sum_{p, \mu, \nu} \sum_{\lambda, \sigma} a_{\mu, \nu}^{p} \mathcal{A}_{\mu, \lambda}^{\prime p}\left(g_{j}^{-1}\right) \mathcal{A}_{\lambda, \sigma}^{\prime p}\left(g_{i}\right) \mathcal{A}_{\sigma, \nu}^{\prime p}\left(g_{j}\right) \\
+			& =\sum_{p, \mu, \nu} \sum_{\lambda, \sigma} a_{\mu, \nu}^{p} \mathcal{A}_{\lambda, \sigma}^{\prime p}\left(g_{i}\right)\left(\frac{1}{n} \sum_{j=1}^{n} \mathcal{A}_{\mu, \lambda}^{\prime p}\left(g_{j}^{-1}\right) \mathcal{A}_{\sigma, \nu}^{\prime p}\left(g_{j}\right)\right) \\
+			& =\sum_{p, \mu, \nu} \sum_{\lambda, \sigma} a_{\mu, \nu}^{p} \mathcal{A}_{\lambda, \sigma}^{\prime p}\left(g_{i}\right)\left(\frac{1}{n} \sum_{j=1}^{n} \mathcal{A}_{\lambda, \mu}^{\prime p *}\left(g_{j}\right) \mathcal{A}_{\sigma, \nu}^{\prime p}\left(g_{j}\right)\right) \\
+			& =\sum_{p, \mu, \nu} \sum_{\lambda, \sigma} a_{\mu, \nu}^{p} \mathcal{A}_{\lambda, \sigma}^{\prime p}\left(g_{i}\right)\left(\frac{1}{S_{p}} \delta_{\lambda, \sigma} \delta_{\mu, \nu}\right)=\sum_{p, \mu} \sum_{\lambda} \frac{1}{S_{p}} a_{\mu, \mu}^{p} \mathcal{A}_{\lambda, \lambda}^{\prime p}\left(g_{i}\right) \\
+			& =\sum_{p}\left(\frac{1}{S_{p}} \sum_{\mu} a_{\mu, \mu}^{p}\right)\left(\sum_{\lambda} \mathcal{A}_{\lambda, \lambda}^{\prime p}\left(g_{i}\right)\right)=\sum_{p} a^{p} \chi^{\prime p}\left(g_{i}\right)=\sum_{p} a^{p} \chi^{p}\left(g_{i}\right)
+		\end{aligned}
+	\end{equation*}
+	
+	证明中用到的操作：由群函数 $\forall \phi: G \rightarrow \mathbb{C}$定义$\phi^{\mathrm{Ad}}(g) \equiv \frac{1}{|G|} \sum_{g_{\alpha}} \phi\left(g_{\alpha} g g_{\alpha}^{-1}\right)$ 其中$g, g_{\alpha} \in G $。也就是对于任何一个群函数诱导出一个类函数的操作称为$\mathrm{Ad}$分解.\qed
+\end{proof}
+所以所有不可约不等价表示的特征标可以在类函数空间中作为一组基底。两个表示的特征标相同，说明它们对应的类函数相同，而同一个类函数根据完备性，在类函数空间中是可以分解为相同的不等价不可约表示特征标函数的线性组合的。也就是说如果表示$\mathscr{A}$和$\mathscr{B}$都可约，那么最后分解为的$\bigoplus_p m_p\mathscr{A}^p$形式完全相同。从表示矩阵上看就是两个表示矩阵可以通过一个相似变换变成有同样分块结构的表示矩阵。也就是说两个矩阵等价，那我们便得到了下面这个定理。
+\begin{theorem}{表示等价的充要条件}
+	两个表示等价$\iff$它们的特征标相同
+\end{theorem}
+这也直接说明了类函数空间的维数等于不等价不可约表示的个数。
+\begin{theorem}{特征标第二正交定理}
+	\begin{equation}
+		\frac{1}{|G|}|K_i|\chi^{p*}(K_i)\chi^{p}(K_j)=\delta_{ij}
+	\end{equation}
+\end{theorem}
+\begin{proof}
+	我们设计一个$q\times q$的矩阵$F$\footnote{$q$的意思是群中所有类的个数}，$F$的形式为：
+	\[F_{ri}=\sqrt{\frac{n_i}{n}}\chi^r(K_i)\]
+	前面的特征标第一定理为：
+	\[\frac{1}{n}\sum_{i=1}^n|K_i|\chi^{p*}(K_i)\chi^r(K_i)=\delta_{pr}\]
+	注意到$F*_{pi}=(F^\dagger)_{ip}$，上面的等式可以写成：
+	\[\sum_{i=1}^q F_{ri}(F^\dagger)_{ip}=(FF^\dagger)_{rp}=\delta_{pr}\]
+	再代入$F$的定义我们便从特征标第一正交定理得到了特征标第二正交定理.
+	
+	\qed
+\end{proof}
+
+第一正交定理说的是不同表示之间的特征标的正交性对类求和，而这个正交定理是对与不同类说的，对于所有表示求和。
+
+我们做的所有这些工作都是为了引出最重要的特征标表的概念，去求群的所有不等价不可约表示。我们介绍完特征标之后举几个例子求求特征标表和对应的不等价不可约表示。
+
+有限群最重要的部分我们就讲完了，这个附录最开始的部分我们引用了杨振宁的一句话，看了这些群论定理的证明，你应该能稍微体会到这句话了。
+
+\section{置换群}

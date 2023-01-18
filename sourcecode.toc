@@ -68,32 +68,33 @@
 \contentsline {section}{\numberline {9.1}基本原理}{175}{section.9.1}%
 \contentsline {section}{\numberline {9.2}量子隧穿}{178}{section.9.2}%
 \contentsline {section}{\numberline {9.3}连接公式}{180}{section.9.3}%
-\contentsline {chapter}{\numberline {第十章\hspace {.3em}}散射理论}{187}{chapter.10}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{188}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{188}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{189}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{191}{section.A.3}%
-\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{195}{section.A.4}%
-\contentsline {section}{\numberline {A.5}直角坐标里的张量}{197}{section.A.5}%
-\contentsline {section}{\numberline {A.6}分部积分法}{203}{section.A.6}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{205}{appendix.B}%
-\contentsline {section}{\numberline {B.1}向量空间}{205}{section.B.1}%
-\contentsline {section}{\numberline {B.2}内积}{206}{section.B.2}%
-\contentsline {section}{\numberline {B.3}波函数的空间}{208}{section.B.3}%
-\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{210}{section.B.4}%
-\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{215}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{220}{section.B.6}%
-\contentsline {section}{\numberline {B.7}*对偶空间和对偶映射}{223}{section.B.7}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{225}{appendix.C}%
-\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{227}{appendix.D}%
-\contentsline {section}{\numberline {D.1}群的基本结构}{227}{section.D.1}%
-\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{227}{subsection.D.1.1}%
-\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{228}{subsection.D.1.2}%
-\contentsline {subsection}{\numberline {D.1.3}同构与同态}{233}{subsection.D.1.3}%
-\contentsline {subsection}{\numberline {D.1.4}群作用与变换群}{236}{subsection.D.1.4}%
-\contentsline {subsection}{\numberline {D.1.5}直积与半直积}{237}{subsection.D.1.5}%
-\contentsline {section}{\numberline {D.2}群表示论}{238}{section.D.2}%
-\contentsline {subsection}{\numberline {D.2.1}群表示基本概念}{238}{subsection.D.2.1}%
-\contentsline {subsection}{\numberline {D.2.2}群代数与正则表示}{243}{subsection.D.2.2}%
-\contentsline {subsection}{\numberline {D.2.3}特征标理论及正交完备性定理}{245}{subsection.D.2.3}%
+\contentsline {chapter}{\numberline {第十章\hspace {.3em}}散射理论}{190}{chapter.10}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{191}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{191}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{192}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{194}{section.A.3}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{198}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{200}{section.A.5}%
+\contentsline {section}{\numberline {A.6}分部积分法}{206}{section.A.6}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{208}{appendix.B}%
+\contentsline {section}{\numberline {B.1}向量空间}{208}{section.B.1}%
+\contentsline {section}{\numberline {B.2}内积}{209}{section.B.2}%
+\contentsline {section}{\numberline {B.3}波函数的空间}{211}{section.B.3}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{213}{section.B.4}%
+\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{218}{section.B.5}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{223}{section.B.6}%
+\contentsline {section}{\numberline {B.7}*对偶空间和对偶映射}{226}{section.B.7}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{228}{appendix.C}%
+\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{230}{appendix.D}%
+\contentsline {section}{\numberline {D.1}群的基本结构}{230}{section.D.1}%
+\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{230}{subsection.D.1.1}%
+\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{231}{subsection.D.1.2}%
+\contentsline {subsection}{\numberline {D.1.3}同构与同态}{236}{subsection.D.1.3}%
+\contentsline {subsection}{\numberline {D.1.4}群作用与变换群}{239}{subsection.D.1.4}%
+\contentsline {subsection}{\numberline {D.1.5}直积与半直积}{240}{subsection.D.1.5}%
+\contentsline {section}{\numberline {D.2}群表示论}{241}{section.D.2}%
+\contentsline {subsection}{\numberline {D.2.1}群表示基本概念}{241}{subsection.D.2.1}%
+\contentsline {subsection}{\numberline {D.2.2}群代数与正则表示}{246}{subsection.D.2.2}%
+\contentsline {subsection}{\numberline {D.2.3}特征标理论及正交完备性定理}{248}{subsection.D.2.3}%
+\contentsline {section}{\numberline {D.3}置换群}{261}{section.D.3}%
 \contentsfinish 
