@@ -1,4 +1,5 @@
 % 导言区
+% !TEX program = xelatex
 \documentclass[a4paper,zihao=-4,linespread=1]{ctexbook}
 
 \usepackage{geometry}
@@ -49,7 +50,8 @@
 \usepackage{mhchem} % 化学宏包
 \usepackage{cancel} % 打叉叉的宏包
 \usepackage{ntheorem}
-
+\usepackage{arydshln} % 分块矩阵横竖线绘制
+\usepackage{epigraph} % 章节引用名人名言
 % 证明环境
 \newtheorem*{proof}{证明}
 % 证明结束标志符号
@@ -109,6 +111,8 @@
     \include{chapter06.tex}
     \include{chapter07.tex}
     \include{chapter08.tex}
+    \include{chapter09.tex}
     \include{appendix.tex}
     \include{appendix_group.tex}
+    \includepdf[height=29.7cm,width=21.0cm]{../back_cover/cover.pdf} % 插入封底
 \end{document}

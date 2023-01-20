@@ -115,6 +115,7 @@
     \end{theorem}
     \begin{figure}[htbp]
         \label{fig-1.1}
+        \centering
         \begin{tikzpicture}[scale=0.4] %缩放，还可以设置xscale, yscale
         \draw[->](4,-2)--(4,8) node[above]{$\Psi (x,0^-)$};
         \draw[->](0,2)--(12,2) node[below]{$x$};  % 画坐标轴
@@ -147,3 +148,43 @@
         \setlength\parindent{2em}对的, 整个过程就是这么的没有道理, 所以我们说这个方程是猜出来的, 后来海森堡证明了波动力学与其创立的矩阵力学是等价的。薛定谔自己其实也没搞清楚他搞出来
         的波函数有什么意义, 也是后来波恩给出了个统计解释, 不禁感叹新兴学科的发展总是迂回曲折!
     \end{history}
+	
+	\section{概率流密度}
+	用$\Psi^*$左乘\ref{S-3-D}得到：
+	\begin{equation}
+		i\hbar\Psi^*\frac{\partial}{\partial t}\Psi=-\frac{\hbar^2}{2m}\Psi^*\nabla^2\Psi+\Psi^*V\Psi
+	\end{equation}
+	然后再对上式取复共轭
+	\begin{equation}
+		-i\hbar\Psi\frac{\partial}{\partial 	t}\Psi^*=-\frac{\hbar^2}{2m}\Psi\nabla^2\Psi^*+\Psi V\Psi^*
+	\end{equation}
+	再将上面两式相减：
+	\begin{equation*}
+		\begin{aligned}
+			&i\hbar \left(\Psi^*\frac{\partial}{\partial t}\Psi+\Psi\frac{\partial}{\partial t}\Psi^*\right)=-\frac{\hbar^2}{2m}\left(\Psi^*\nabla^2\Psi-\Psi\nabla^2\Psi^*\right)\\
+			\Leftrightarrow&\frac{\partial}{\partial t}|\Psi|^2+\frac{i\hbar}{2m}\left(\Psi\nabla^2\Psi^*-\Psi^*\nabla^2\Psi\right)=0\\
+			\Leftrightarrow&\frac{\partial\rho}{\partial t}+\nabla\cdot\left[\frac{-i\hbar}{2m}\left(\Psi^*\nabla\Psi-\Psi\nabla\Psi^*\right)\right]=0
+		\end{aligned}
+	\end{equation*}
+	最终可以写成下面的连续性方程的形式：
+	\begin{equation}
+		\label{eq:1.12}
+		\boxed{
+		\frac{\partial\rho}{\partial t}+\nabla\cdot\mathbf{j}=0}
+	\end{equation}
+	
+	其中$\rho\equiv |\Psi|^2$意义是概率密度分布
+	\begin{equation}
+		\boxed{
+			\mathbf{j}\equiv \frac{-i\hbar}{2m}\left(\Psi^*\nabla\Psi-\Psi\nabla\Psi^*\right)=\operatorname{Re}\left(\Psi^*\hat {\mathbf{v}}\Psi\right)
+	}
+	\end{equation}
+	
+	上式中$\hat {\mathbf{v}}\equiv \hat {\mathbf{p}}/m$定义为速度算符。类似于流体力学中或是电动力学中的连续性方程，这里\ref{eq:1.12}也可以看成是某种“概率流”的连续性方程。$\mathbf{j}$就是对应的\textbf{概率流密度}。
+	
+	根据Stokes公式我们任意选取一个区域$\Omega$，连续性方程可以写成下面的积分形式：
+	\[\frac{\partial }{\partial t}\int_{\Omega}\rho dV+\oiint_{\partial\Omega}\mathbf{j}\cdot d\mathbf{S}=0\]
+	
+	第一项是在闭区域内发现粒子的概念，第二项可以看作是“概率流”流入这个区域的量。对于下一章我们要将的定态，$\partial \rho/\partial t=0$，那这就意味着概率不会“堆积”在某处，和其它领域内的连续性方程意义是一致的，只是现在不是那些具象的电荷或是水流了，而是抽象的概率。
+	
+	之后我们在讨论量子力学的散射问题时会用到这个概念。
