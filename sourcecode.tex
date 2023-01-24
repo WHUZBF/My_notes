@@ -4593,7 +4593,120 @@
     除了连续对称性对应的守恒律, 量子力学中宇称是可观测量, 观测值为$\pm 1$, 离散的宇称变换对称性也对应了宇称守恒。这章最难以理解的估计就是选择定理了, 那东西得上群论才能彻底讲清楚,
     初量的任务就是理清楚矢量算符的定义就好, 那三个转动矩阵的来历和对应的计算也很重要。
 
+	\section{*费曼路径积分}
+	量子力学三大表述，一个是薛定谔方程，一个是海森堡方程，还有一个路径积分没有提过。前面我们的讨论都集中于构建量子力学中的Hamiltonian，而路径积分则是去考察量子力学中对应的Lagrangian。
+	
+	\subsection*{数学准备}
+	在经典力学中我们讨论过“泛函”的概念，简单点说，函数就是数到数的对应，泛函就是函数到数的映射。现在我们来看怎么对泛函作积分，首先强调，我们下面的讨论都是数学上及不严格但是非常复合物理直觉的讨论，严谨的那些论证我们留给数学家。
+	
+	考察对于函数$\xi(x)$的泛函$F[\xi]$，首先我们把函数$\xi$的定义域$[a,b]$分成一堆小元胞$\Delta x$，这其实就是把原先的函数$\xi(x)$看成是一个数列\footnote{或者准确点说是叫数集}$\xi(x)\to\{\xi_x\}$，这里$x$取值范围是$x_0=a,x_1,\ldots,x_N=b$，类似于黎曼积分的定义，这里$xi_x$取元胞内的任意一处的函数值就好，因为最终我们感兴趣的是$N\to+\infty$的情况。原先的泛函也就变成了这个数集的函数$F[\xi]=F(\xi_x)$积分可以定义为下列无穷维的重积分：
+	\begin{equation}
+		\label{6.79}
+		\int \mathcal{D}[\xi]F[\xi]\equiv\lim_{\Delta x\to 0}\int\left(\Pi_x\frac{d\xi_x}{C(\Delta x)}\right)F(\xi_x)
+	\end{equation}
+	
+	上面的$\mathcal{D}[x]$完全是一个记号，因为$N\to\infty$的时候积分元有无穷多个，所以我们就用这个记号来表示这是一种特殊的积分。另外$C(\Delta x)$是适当选取的一个结构常数，使得最后积分有限，我们暂时不用管它。
+	
+	这个积分首先是无穷维空间中的一个空间，体积元是$dx_1dx_2\cdots$，我们想一下黎曼积分的本质\footnote{这里实际上需要使用勒贝格积分定义，我们也不管这么多了，选最好理解的一种方式。}就是先对积分空间进行分割得到一系列体积元，积分就是现在积分空间中选取一个点代入函数，然后与点附近的体积元相乘，最后再把所有的这些加起来。那么这里\ref{6.79}，这些体积元是$d\xi_1d\xi_2\cdots$，那么我们在积分空间中选定某个点之后就相当于选定了一个$\{\xi_x\}$也就是一个函数$\xi(x)$，积分空间的每个点都遍历一边就相当于选遍了所有的显然积分做的就是把所有的这些$[a,b]$上的函数，也就是泛函$F$的自变量。那显然我们积分做的就是\textbf{把所有的这些$\xi(x)$函数的贡献加起来。}
+	
+	\subsection*{传播子}
+	前面我们定义了时间演化算符$\hat {U}(t,t_0)$，我们对\ref{eq:6.68}两边同时取位置表象得到：\footnote{后面的写作中，我们用小写字母$\mathbf{r}$,$\mathbf{p}$表示位置和动量表象，对应的算符用大写字母表示}
+	\begin{align*}
+		&\psi(\mathbf{r},t)=\braket{\mathbf{r}|\hat {U}(t,t_0)|\psi(t_0)}=\braket{\mathbf{r}|\hat {U}(t,t_0)\mathbbm{1}|\psi(t_0)}\\
+		\Leftrightarrow&\int d^3r_0\braket{\mathbf{r}|\hat {U}(t,t_0)\mathbf{r}_0}\braket{\mathbf{r}_0|\psi(t_0)}
+	\end{align*}
+	定义传播子为：
+	\begin{equation}
+		\label{eq:6.80}
+		\boxed{
+		K(\mathbf{r},t;\mathbf{r}_0,t_0)\equiv \braket{\mathbf{r}|\hat {U}(t,t_0)\mathbf{r}_0}	
+	}
+	\end{equation}
+	那么最终我们有：
+	\begin{equation}
+		\label{eq:6.81}
+		\psi(\mathbf{r},t)=\int d^3r_0	K(\mathbf{r},t;\mathbf{r}_0,t_0)\psi(\mathbf{r}_0,t_0)
+	\end{equation}
+	我们若是利用\ref{eq:6.70}以及能量表象下的完备性关系式，可以得到与\ref{eq:6.80}等价的：
+	\begin{equation}
+		K(\mathbf{r},t;\mathbf{r}_0,t_0)=\sum_n\braket{\mathbf{r}|n}e^{-iE_n(t-t_0)/\hbar}\braket{n|\mathbf{r_0}}
+	\end{equation}
+	既然我们是在看演化所以考虑的都是$t>t_0$的情况，可以定义：
+	\[K_{\mathrm{ret }}\left(\mathbf{r} , t ; \mathbf{r}_0, t_{0}\right)\equiv\theta\left(t-t_{0}\right) K\left(\mathbf{r} , t ; \mathbf{r}_0, t_{0}\right)\]
+	将\ref{eq:6.81}代入薛定谔方程之中我们会发现传播子满足的方程为：
+	\[\left(i \hbar \partial_{t}+\frac{\hbar^{2}}{2 m} \nabla^{2}-V(\mathbf{r})\right)K_{\mathrm{ret }}\left(\mathbf{r} , t ; \mathbf{r}_0, t_{0}\right)=i \hbar \delta^{3}\left(\mathbf{r}-\mathbf{r}_0 \right) \delta\left(t-t^{\prime}\right)\]
+	上面这其实说明我们实际上是在用含时的格林函数法解决问题，传播子就是格林函数。
+	
+	我们再看下传播子的物理意义。我们假设我们已知初始态是$\ket{\mathbf{r}_0}$，也就是说$\braket{\mathbf{r}_0|\psi(t_0)}=1$，现在我们求粒子在$t$时测量到在$\mathbf{r}$的概率。
+	\begin{align*}
+		P&=\braket{\psi(t_0)|\hat{U}^\dagger(t,t_0)|\mathbf{r}}\braket{\mathbf{r}|\hat{U}(t,t_0)|\psi(t_0)}\\
+		&=\int d^3r_1d^2r_2 \braket{\psi(t_0)|\mathbf{r_1}}\braket{\mathbf{r_1}|\hat{U}^\dagger(t,t_0)|\mathbf{r}}\braket{\mathbf{r}|\hat{U}(t,t_0)|\mathbf{r}_2}\braket{\mathbf{r}_2|\psi(t_0)}\\
+		&=|\braket{\mathbf{r}|\hat{U}(t,t_0)|\mathbf{r}_0}|^2=	|K(\mathbf{r},t;\mathbf{r}_0,t_0)|^2
+	\end{align*}
 
+	所以传播子的模方就是\textbf{已知$t_0$时刻粒子在态$\ket{\mathbf{r_0}}$，$t-t_0$时间后演化到$\ket{\mathbf{r}}$的概率幅，是一个条件概率。}
+	
+	下面我们来推导一个及其重要的等式，这是后面论证的基础：
+	\begin{equation}
+		\label{eq:6.83}
+		\begin{aligned}
+		K(\mathbf{r},t;\mathbf{r}_0,t_0)&\equiv \braket{\mathbf{r}|\hat {U}(t,t_0)\mathbf{r}_0}	= \braket{\mathbf{r}|\hat {U}(t,t^\prime)\hat {U}(t^\prime,t_0)\mathbf{r}_0}\\
+		&=\int d^3r^\prime \braket{\mathbf{r}|\hat {U}(t,t^\prime)\hat {U}|\mathbf{r^\prime}}\braket{\mathbf{r^\prime}|(t^\prime,t_0)\mathbf{r}_0}\\
+		&=\boxed{	\int  d^3r^\prime K(\mathbf{r},t;\mathbf{r}^\prime,t^\prime)	K(\mathbf{r}^\prime,t^\prime;\mathbf{r}_0,t_0)}
+		\end{aligned}
+	\end{equation}
+	
+	\subsection*{量子力学路径积分表述}
+	看来我们考虑的重点是如何形式上得出一套求解传播子的公式，式\ref{eq:6.83}显然是可以推广的，现在我们考虑将$[t_0,t]$分成$N$份，端点处值为$t_0,t_1,\ldots,t_N=t$。这个分割是任意的，不需要等分，而且我们记$\Delta t_n=t_n-t_{n-1}$。那么传播子就可以写成：
+	\begin{equation}
+		K\left(\mathbf{r}, t ; \mathbf{r}_{0}, t_{0}\right)=\int\left[\prod_{n=1}^{N} K\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right)\right] \mathrm{d}^3{r}_1 \cdots \mathrm{d}^3{r}_{N-1}
+	\end{equation}
+	
+	现在考虑$\Delta t_n\to 0$，我们把上式更改一下符号，提醒我们积分号里面的是个无穷小传播子，后面我们还会利用它独有的性质进一步简化：
+	\begin{equation}
+		\label{eq:6.85}
+		K\left(\mathbf{r}, t ; \mathbf{r}_{0}, t_{0}\right)=\int\left[\prod_{n=1}^{N} \mathcal{K}\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right)\right] \mathrm{d}^3{r}_1 \cdots \mathrm{d}^3{r}_{N-1}
+	\end{equation}
+	\subsubsection{相空间路径积分}
+	要想计算$K$，就要先搞清楚$\mathcal{K}$：
+	\[
+	\mathcal{K}\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right)=\left\langle\mathbf{r}_{n}\left|U\left(t_{n}, t_{n-1}\right)\right| \mathbf{r}_{n-1}\right\rangle=\left\langle\mathbf{r}_{n}\left|e^{-\frac{i H}{n} \Delta t_{n}}\right| \mathbf{r}_{n-1}\right\rangle
+	\]
+	考虑到：\footnote{一般来说是没有$e^{AB}=e^Ae^B=e^Be^A$成立的，但是这里$\Delta t_{n} \to 0$，动能势能之间的对易子是个二阶小量，所以可认为上面公式成立。}
+	\[
+	e^{-\frac{i}{\hbar} H \Delta t_{n}}=e^{-\frac{i}{\hbar}\left[\frac{P^{2}}{2 m}+V\left(\vec{R}, t_{n}\right)\right] \Delta t_{n}\xlongequal{\Delta t_{n} \to 0}} e^{-\frac{i}{\hbar} V\left(\vec{R}, t_{n}\right) \Delta t_{n}} e^{-\frac{i}{\hbar} \frac{P^{2}}{2 m} \Delta t_{n}}
+	\]
+	下面的推导的具体说明就略去了，重点就在于插入完备性关系式：\footnote{这里我们用$\mathbf{p_n}$而不是直接用$\mathbf{p}$是因为我们最终传播子要用$\mathcal{K}$累乘，插入的这$N$个完备性关系式显然都要单独积分。}
+	\begin{align*}
+		\mathcal{K}\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right) & = \left\langle\mathbf{r}_{n}\left|e^{-\frac{i}{\hbar} V\left(\mathbf{R}, t_{n}\right) \Delta t_{n}} e^{-\frac{i}{\hbar} \frac{P^{2}}{2 m} \Delta t_{n}}\right| \mathbf{r}_{n-1}\right\rangle \\ & = e^{-\frac{i}{\hbar} V\left(\mathbf{r}_{n}, t_{n}\right) \Delta t_{n}}\left\langle\mathbf{r}_{n}\left|e^{-\frac{i}{\hbar} \frac{P^{2}}{2 m} \Delta t_{n}}\right| \mathbf{r}_{n-1}\right\rangle \\ & = \int \mathrm{d}^3p_n e^{-\frac{i}{\hbar} V\left(\mathbf{r}_{n}, t_{n}\right) \Delta t_{n}}\left\langle\mathbf{r}_{n} \mid \mathbf{p}_{n}\right\rangle\left\langle\mathbf{p}_{n}\left|e^{-\frac{i}{\hbar} \frac{P^{2}}{2 m} \Delta t_{n}}\right| \mathbf{r}_{n-1}\right\rangle \\ & = \int \mathrm{d}^3p_n e^{-\frac{i}{\hbar} V\left(\mathbf{r}_{n}, t_{n}\right) \Delta t_{n}}\left\langle\mathbf{r}_{n} \mid \mathbf{p}_{n}\right\rangle e^{-\frac{i}{\hbar} \frac{p_{n}^{2}}{2 m} \Delta t_{n}}\left\langle\mathbf{p}_{n} \mid \mathbf{r}_{n-1}\right\rangle \\
+		 & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{-\frac{i}{\hbar} V\left(\mathbf{r}_{n}, t_{n}\right) \Delta t_{n}} e^{i \frac{\mathbf{p}_{n}}{\hbar} \cdot \Delta \mathbf{r}_{n}} e^{-\frac{i}{\hbar} \frac{p_{n}^{2}}{2 m} \Delta t_{n}} \mathrm{~d} \mathbf{p}_{n} \\ & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{\frac{i}{\hbar}\left[\mathbf{p}_{n} \cdot \frac{\Delta \mathbf{r}_{n}}{\Delta t_{n}}-H\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right)\right] \Delta t_{n}} \mathrm{~d} \mathbf{p}_{n} \\ & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{\frac{i}{\hbar}\left[\mathbf{p}_{n} \cdot \dot{\mathbf{r}}_{n}-H\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right)\right] \Delta t_{n}} \mathrm{~d} \mathbf{p}_{n} \\ & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{i \frac{{\color{red}L\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right)} }{\hbar}\Delta t_{n}} \mathrm{d} \mathbf{p}_{n}
+	\end{align*}
+	
+	这个推导明显的表示现在我们把经典力学中的Lagrangian凑上来了，不过注意这都是形式上的，形式上定义$\dot{\mathbf{r}}_{n}\equiv \frac{\Delta \mathbf{r}_{n}}{\Delta t_{n}}$，并不是经典力学里面的速度，因为我们考虑的路径实际上绝大多数都不是可微的！
+	
+	把我们刚才得到的结果带入到\ref{eq:6.85}中得到：
+	\begin{equation}
+		\label{eq:6.86}
+		\begin{aligned}
+			K\left(\mathbf{r}, t ; \mathbf{r}_{0}, t_{0}\right) & = \int\left[\prod_{n = 1}^{N} \mathcal{K}\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right)\right] \mathrm{d} ^3{r}_{1} \cdots \mathrm{d}^3{r}_{N-1} \\
+			& = \int \prod_{n = 1}^{N}\left[\frac{1}{(2 \pi \hbar)^{3}} \int e^{\frac{i}{\hbar} L\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right) \Delta t_{n}} \mathrm{~d} ^3{p}_{n}\right]  \mathrm{d} ^3{r}_{1} \cdots \mathrm{d}^3{r}_{N-1} \\
+			& = \frac{1}{(2 \pi \hbar)^{3 N}} \int\left[\int e^{\frac{i}{\hbar} \sum_{n = 1}^{N} L\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right) \Delta t_{n}} \mathrm{~d} ^3{p}_{1} \cdots \mathrm{d} ^3{p}_{N}\right]  \mathrm{d} ^3{r}_{1} \cdots \mathrm{d}^3{r}_{N-1} \\
+			& \xlongequal{\max\Delta t_n\to0} \frac{1}{(2 \pi \hbar)^{3 N}} \int e^{\frac{i}{\hbar} \int_{t_0}^t L(\mathbf{r}, \mathbf{p}, \tau) \mathrm{d} \tau} \mathrm{d} ^3{r}_{1} \cdots \mathrm{d}^3{r}_{N-1} \mathrm{~d} ^3{p}_{1} \cdots \mathrm{d} ^3{p}_{N} \\
+			& = \frac{1}{(2 \pi \hbar)^{3 N}} \int \mathcal{D} [\mathbf{r}] \mathcal{D} [\mathbf{p}]e^{i \frac{{\color{red}S\left(\mathbf{r},\mathbf{p}, t;t_0\right)}}{\hbar}}
+		\end{aligned}
+	\end{equation}
+	
+	回头看一下泛函积分的定义，这里的推导完美符合定义，而且更劲爆的是我们把传播子的计算和经典力学中的泛函——作用量联系起来了。而且还有更劲爆的，上式中作用量那一项蕴含的是相位，然而根据前面的讨论，这个泛函积分的物理意义就是所有路径\footnote{这里真的就是字面意义“所有”，包括那些奇奇怪怪的不可导路径，粒子违反物理规律的瞬移路径都算，所以实际上这里在数学上会出现麻烦，我们先不管这个，能用就行！}对作用量确定的那个相位加权之后求和就能得到跃迁振幅\footnote{换了个高大上的名字，其实就是传播子表示的所谓跃迁概率幅。}。当然由于我们传播子讨论的是$\psi(\mathbf{r},t)$和$\psi(\mathbf{r_0},t_0)$，所以我们固定了初末端点，这也是上面推导中没出现$d^3r_0,d^3r_N$的原因，固定端点显然不会参与积分求和，所以这些路径都是从$\mathbf{r}_0(t_0)$到$\mathbf{r}(t)$的路径。不过动量积分比$r$多一层，没有啥端点束缚，这在经典力学中也有对应，经典力学中我们在相空间和位形空间中利用最小作用量原理的时候都是固定广义坐标的两端，而对广义动量的两端无限制。\footnote{变分时候限制了也不会导致用变分法推出的方程不一样，而且同时限制广义动量的两端还能在讨论正则变换母函数的时候有一定的方便，对此更多的讨论请参见Goldstein书。}
+	
+	所以人们常说量子力学其实粒子每条可能路径都走了，最后总和才是真实路径，当然这句话还是有一定的误导性的。
+	
+	我们现在来看一下经典极限。经典情况下$S$相对于$\hbar$之间非常非常大，所以只要$S$有一点点的改变，反映到相位上面都是非常快的震荡。那如果我们考虑一条作用量附近变分不是0的路径，那么它附近的路径由于作用量相对来说会发生变化，相位震荡的又非常迅速，所以这附近的路径在相位加权后对$K$的净贡献是$0$。但是对于作用量变分为$0$的路径就不一样了，它附近的路径由于作用量相对而言不发生改变，相位自然不变，所以求和后就会出现非零的贡献。所以对于经典力学下的极限，我们就认为\ref{eq:6.86}说明了经典力学中的粒子会走作用量变分为$0$的路径，不涉及到多路径求和算概率了，退化为决定论了。
+	
+	\subsubsection*{位形空间路径积分}
+	常常看到的路径积分一般不是用\ref{eq:6.86}写的，而是把动量部分先积分积掉，只剩下$\mathbf{r}$。
+	
+	
+	
     \chapter{定态微扰论}
     理论上讲, 对于任何一个量子力学问题, 我们只要求解出来它的薛定谔方程问题就差不多解决了。但是从$\S$5.2中我们就发现这样做对于绝大多数情况下是不可行的, 比如氢原子我们
     能得到精确解, 但是哪怕是只多了一个电子, 由于相互作用的存在, 我们也无能为力。所以后面要讲的一些近似方法就是在这样的背景下提出来的。如果任何方程都可以很简单的
