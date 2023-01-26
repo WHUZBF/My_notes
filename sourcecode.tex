@@ -291,7 +291,7 @@
 	根据Stokes公式我们任意选取一个区域$\Omega$，连续性方程可以写成下面的积分形式：
 	\[\frac{\partial }{\partial t}\int_{\Omega}\rho dV+\oiint_{\partial\Omega}\mathbf{j}\cdot d\mathbf{S}=0\]
 	
-	第一项是在闭区域内发现粒子的概念，第二项可以看作是“概率流”流入这个区域的量。对于下一章我们要将的定态，$\partial \rho/\partial t=0$，那这就意味着概率不会“堆积”在某处，和其它领域内的连续性方程意义是一致的，只是现在不是那些具象的电荷或是水流了，而是抽象的概率。
+	第一项是在闭区域内发现粒子的概念，第二项可以看作是“概率流”流入这个区域的量。对于下一章我们要将的定态，$\partial \rho/\partial t=0$，那这就意味着概率不会“堆积”在某处，和其它领域内的连续性方程意义是一致的，只是现在不是那些具象的电荷或是水流了，而是抽象的概率。可以把$\mathbf{j}\cdot d\mathbf{sigma}$解释为单位时间内粒子通过面元$ d\mathbf{sigma}$的概率。
 	
 	之后我们在讨论量子力学的散射问题时会用到这个概念。
     \newpage
@@ -4631,6 +4631,15 @@
 	\begin{equation}
 		K(\mathbf{r},t;\mathbf{r}_0,t_0)=\sum_n\braket{\mathbf{r}|n}e^{-iE_n(t-t_0)/\hbar}\braket{n|\mathbf{r_0}}
 	\end{equation}
+	\begin{example}{自由粒子传播子}
+		利用定义式\ref{eq:6.80}有：
+		\begin{equation*}
+		\begin{aligned}   K\left( \mathbf{r},t;{{{\mathbf{r}}}_{0}},{{t}_{0}} \right)&=\langle \mathbf{r}|{{e}^{-i\frac{H}{\hbar }\left( t-{{t}_{0}} \right)}}\left| {{{\mathbf{r}}}_{0}} \right\rangle =\int \left\langle \mathbf{r}|\mathbf{p} \right\rangle \langle \mathbf{p}|{{e}^{-i\frac{{{P}^{2}}}{2m\hbar }\left( t-{{t}_{0}} \right)}}\left| {{\mathbf{p}}'} \right\rangle \left\langle {\mathbf{p}}'|{{{\mathbf{r}}}_{0}} \right\rangle \mathrm{~d}^3{p}\mathrm{~d}{^3{p}^\prime}\\&=\frac{1}{{{\left( 2\pi \hbar  \right)}^{3}}}\int{{{e}^{i\frac{{\mathbf{p}}}{\hbar }\cdot \mathbf{r}}}{{e}^{-i\frac{{{p}^{2}}}{2m\hbar }\left( t-{{t}_{0}} \right)}}{{e}^{-i\frac{{\mathbf{p}}}{\hbar }\cdot {{{\mathbf{r}}}_{0}}}}\mathrm{~d}p}\int{\delta \left( \mathbf{p}-{\mathbf{p}}^\prime \right)\mathrm{~d}^3{p^\prime}}
+		\\   & =\frac{1}{{{\left( 2\pi \hbar  \right)}^{3}}}\int{{{e}^{\frac{i}{\hbar }\left[ \mathbf{p}\cdot \left( \mathbf{r}-{{{\mathbf{r}}}_{0}} \right)-\frac{{{{\mathbf{p}}}^{2}}}{2m}\left( t-{{t}_{0}} \right) \right]}}\mathrm{~d}^3{p}}\\
+		&={{\left[ \frac{m}{2\pi i\hbar \left( t-{{t}_{0}} \right)} \right]}^{{3}/{2}\;}}\exp \left[ i\frac{m{{\left( \mathbf{r}-{{{\mathbf{r}}}_{0}} \right)}^{2}}}{2\hbar \left( t-{{t}_{0}} \right)} \right]
+		\end{aligned}
+		\end{equation*}
+	\end{example}
 	既然我们是在看演化所以考虑的都是$t>t_0$的情况，可以定义：
 	\[K_{\mathrm{ret }}\left(\mathbf{r} , t ; \mathbf{r}_0, t_{0}\right)\equiv\theta\left(t-t_{0}\right) K\left(\mathbf{r} , t ; \mathbf{r}_0, t_{0}\right)\]
 	将\ref{eq:6.81}代入薛定谔方程之中我们会发现传播子满足的方程为：
@@ -4662,7 +4671,7 @@
 		K\left(\mathbf{r}, t ; \mathbf{r}_{0}, t_{0}\right)=\int\left[\prod_{n=1}^{N} K\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right)\right] \mathrm{d}^3{r}_1 \cdots \mathrm{d}^3{r}_{N-1}
 	\end{equation}
 	
-	现在考虑$\Delta t_n\to 0$，我们把上式更改一下符号，提醒我们积分号里面的是个无穷小传播子，后面我们还会利用它独有的性质进一步简化：
+	现在考虑$\Delta t_n\to 0$，我们把上式更改一下符号，提醒我们积分号里面的是个无穷小传播子，后面我们还会利用它独有的性质进一步简化：\footnote{由于后面的推导都会基于无穷小传播子，所以我们的推导后面都是在$\Delta t_n\to 0$的情形下进行的，所以就略去了极限符号，偶尔在推导末尾写写是为了再次强调，将无穷维积分最后改写为泛函积分。}
 	\begin{equation}
 		\label{eq:6.85}
 		K\left(\mathbf{r}, t ; \mathbf{r}_{0}, t_{0}\right)=\int\left[\prod_{n=1}^{N} \mathcal{K}\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right)\right] \mathrm{d}^3{r}_1 \cdots \mathrm{d}^3{r}_{N-1}
@@ -4672,26 +4681,29 @@
 	\[
 	\mathcal{K}\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right)=\left\langle\mathbf{r}_{n}\left|U\left(t_{n}, t_{n-1}\right)\right| \mathbf{r}_{n-1}\right\rangle=\left\langle\mathbf{r}_{n}\left|e^{-\frac{i H}{n} \Delta t_{n}}\right| \mathbf{r}_{n-1}\right\rangle
 	\]
-	考虑到：\footnote{一般来说是没有$e^{AB}=e^Ae^B=e^Be^A$成立的，但是这里$\Delta t_{n} \to 0$，动能势能之间的对易子是个二阶小量，所以可认为上面公式成立。}
+	考虑到：\footnote{一般来说是没有$e^{AB}=e^Ae^B=e^Be^A$成立的，但是这里$\Delta t_{n} \to 0$，动能势能之间的对易子是个二阶小量，所以可认为上面公式成立。也正是从这开始$\mathcal{K}\neq K$，两者函数形式不再一致。}
 	\[
-	e^{-\frac{i}{\hbar} H \Delta t_{n}}=e^{-\frac{i}{\hbar}\left[\frac{P^{2}}{2 m}+V\left(\vec{R}, t_{n}\right)\right] \Delta t_{n}\xlongequal{\Delta t_{n} \to 0}} e^{-\frac{i}{\hbar} V\left(\vec{R}, t_{n}\right) \Delta t_{n}} e^{-\frac{i}{\hbar} \frac{P^{2}}{2 m} \Delta t_{n}}
+	e^{-\frac{i}{\hbar} H \Delta t_{n}}=e^{-\frac{i}{\hbar}\left[\frac{P^{2}}{2 m}+V\left(\mathbf{R}, t_{n}\right)\right] \Delta t_{n}\xlongequal{\Delta t_{n} \to 0}} e^{-\frac{i}{\hbar} V\left(\mathbf{R}, t_{n}\right) \Delta t_{n}} e^{-\frac{i}{\hbar} \frac{P^{2}}{2 m} \Delta t_{n}}
 	\]
 	下面的推导的具体说明就略去了，重点就在于插入完备性关系式：\footnote{这里我们用$\mathbf{p_n}$而不是直接用$\mathbf{p}$是因为我们最终传播子要用$\mathcal{K}$累乘，插入的这$N$个完备性关系式显然都要单独积分。}
-	\begin{align*}
+	\begin{equation}
+		\label{eq:6.86}
+	\begin{aligned}
 		\mathcal{K}\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right) & = \left\langle\mathbf{r}_{n}\left|e^{-\frac{i}{\hbar} V\left(\mathbf{R}, t_{n}\right) \Delta t_{n}} e^{-\frac{i}{\hbar} \frac{P^{2}}{2 m} \Delta t_{n}}\right| \mathbf{r}_{n-1}\right\rangle \\ & = e^{-\frac{i}{\hbar} V\left(\mathbf{r}_{n}, t_{n}\right) \Delta t_{n}}\left\langle\mathbf{r}_{n}\left|e^{-\frac{i}{\hbar} \frac{P^{2}}{2 m} \Delta t_{n}}\right| \mathbf{r}_{n-1}\right\rangle \\ & = \int \mathrm{d}^3p_n e^{-\frac{i}{\hbar} V\left(\mathbf{r}_{n}, t_{n}\right) \Delta t_{n}}\left\langle\mathbf{r}_{n} \mid \mathbf{p}_{n}\right\rangle\left\langle\mathbf{p}_{n}\left|e^{-\frac{i}{\hbar} \frac{P^{2}}{2 m} \Delta t_{n}}\right| \mathbf{r}_{n-1}\right\rangle \\ & = \int \mathrm{d}^3p_n e^{-\frac{i}{\hbar} V\left(\mathbf{r}_{n}, t_{n}\right) \Delta t_{n}}\left\langle\mathbf{r}_{n} \mid \mathbf{p}_{n}\right\rangle e^{-\frac{i}{\hbar} \frac{p_{n}^{2}}{2 m} \Delta t_{n}}\left\langle\mathbf{p}_{n} \mid \mathbf{r}_{n-1}\right\rangle \\
-		 & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{-\frac{i}{\hbar} V\left(\mathbf{r}_{n}, t_{n}\right) \Delta t_{n}} e^{i \frac{\mathbf{p}_{n}}{\hbar} \cdot \Delta \mathbf{r}_{n}} e^{-\frac{i}{\hbar} \frac{p_{n}^{2}}{2 m} \Delta t_{n}} \mathrm{~d} \mathbf{p}_{n} \\ & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{\frac{i}{\hbar}\left[\mathbf{p}_{n} \cdot \frac{\Delta \mathbf{r}_{n}}{\Delta t_{n}}-H\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right)\right] \Delta t_{n}} \mathrm{~d} \mathbf{p}_{n} \\ & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{\frac{i}{\hbar}\left[\mathbf{p}_{n} \cdot \dot{\mathbf{r}}_{n}-H\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right)\right] \Delta t_{n}} \mathrm{~d} \mathbf{p}_{n} \\ & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{i \frac{{\color{red}L\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right)} }{\hbar}\Delta t_{n}} \mathrm{d} \mathbf{p}_{n}
-	\end{align*}
+		 & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{-\frac{i}{\hbar} V\left(\mathbf{r}_{n}, t_{n}\right) \Delta t_{n}} e^{i \frac{\mathbf{p}_{n}}{\hbar} \cdot \Delta \mathbf{r}_{n}} e^{-\frac{i}{\hbar} \frac{p_{n}^{2}}{2 m} \Delta t_{n}} \mathrm{~d}^3{p}_{n} \\ & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{\frac{i}{\hbar}\left[\mathbf{p}_{n} \cdot \frac{\Delta \mathbf{r}_{n}}{\Delta t_{n}}-H\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right)\right] \Delta t_{n}} \mathrm{~d} ^3{p}_{n} \\ & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{\frac{i}{\hbar}\left[\mathbf{p}_{n} \cdot \dot{\mathbf{r}}_{n}-H\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right)\right] \Delta t_{n}} \mathrm{~d}^3{p}_{n} \\ & = \frac{1}{(2 \pi \hbar)^{3}} \int e^{i \frac{{\color{red}L\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right)} }{\hbar}\Delta t_{n}} \mathrm{d}^3{p}_{n}
+	\end{aligned}
+	\end{equation}
 	
-	这个推导明显的表示现在我们把经典力学中的Lagrangian凑上来了，不过注意这都是形式上的，形式上定义$\dot{\mathbf{r}}_{n}\equiv \frac{\Delta \mathbf{r}_{n}}{\Delta t_{n}}$，并不是经典力学里面的速度，因为我们考虑的路径实际上绝大多数都不是可微的！
+	这个推导明显的表示现在我们把经典力学中的Lagrangian凑上来了，不过注意这都是形式上的，形式上定义$\dot{\mathbf{r}}_{n}\equiv \frac{\Delta \mathbf{r}_{n}}{\Delta t_{n}}$，并不是经典力学里面的速度，因为我们考虑的路径实际上绝大多数都不是可微的！\footnote{这里$L$你也理解成只是一个为了后面行文方便的记号吧，毕竟我们都把它写成$\mathbf{r},\mathbf{p}$的函数了，你听说过相空间中用拉式量的？？？}
 	
 	把我们刚才得到的结果带入到\ref{eq:6.85}中得到：
 	\begin{equation}
-		\label{eq:6.86}
+		\label{eq:6.87}
 		\begin{aligned}
 			K\left(\mathbf{r}, t ; \mathbf{r}_{0}, t_{0}\right) & = \int\left[\prod_{n = 1}^{N} \mathcal{K}\left(\mathbf{r}_{n}, t_{n} ; \mathbf{r}_{n-1}, t_{n-1}\right)\right] \mathrm{d} ^3{r}_{1} \cdots \mathrm{d}^3{r}_{N-1} \\
 			& = \int \prod_{n = 1}^{N}\left[\frac{1}{(2 \pi \hbar)^{3}} \int e^{\frac{i}{\hbar} L\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right) \Delta t_{n}} \mathrm{~d} ^3{p}_{n}\right]  \mathrm{d} ^3{r}_{1} \cdots \mathrm{d}^3{r}_{N-1} \\
 			& = \frac{1}{(2 \pi \hbar)^{3 N}} \int\left[\int e^{\frac{i}{\hbar} \sum_{n = 1}^{N} L\left(\mathbf{r}_{n}, \mathbf{p}_{n}, t_{n}\right) \Delta t_{n}} \mathrm{~d} ^3{p}_{1} \cdots \mathrm{d} ^3{p}_{N}\right]  \mathrm{d} ^3{r}_{1} \cdots \mathrm{d}^3{r}_{N-1} \\
-			& \xlongequal{\max\Delta t_n\to0} \frac{1}{(2 \pi \hbar)^{3 N}} \int e^{\frac{i}{\hbar} \int_{t_0}^t L(\mathbf{r}, \mathbf{p}, \tau) \mathrm{d} \tau} \mathrm{d} ^3{r}_{1} \cdots \mathrm{d}^3{r}_{N-1} \mathrm{~d} ^3{p}_{1} \cdots \mathrm{d} ^3{p}_{N} \\
+			& \xlongequal{\max\Delta t_n\to0} \frac{1}{(2 \pi \hbar)^{3 N}} \int e^{\frac{i}{\hbar} \int_{t_0}^t L(\mathbf{r}, \mathbf{p}, \tau) \mathrm{d} \tau} \mathrm{d} ^3{r}_{{\color{red} 1}} \cdots \mathrm{d}^3{r}_{{\color{red} N-1}} \mathrm{~d} ^3{p}_{1} \cdots \mathrm{d} ^3{p}_{N} \\
 			& = \frac{1}{(2 \pi \hbar)^{3 N}} \int \mathcal{D} [\mathbf{r}] \mathcal{D} [\mathbf{p}]e^{i \frac{{\color{red}S\left(\mathbf{r},\mathbf{p}, t;t_0\right)}}{\hbar}}
 		\end{aligned}
 	\end{equation}
@@ -4700,17 +4712,100 @@
 	
 	所以人们常说量子力学其实粒子每条可能路径都走了，最后总和才是真实路径，当然这句话还是有一定的误导性的。
 	
-	我们现在来看一下经典极限。经典情况下$S$相对于$\hbar$之间非常非常大，所以只要$S$有一点点的改变，反映到相位上面都是非常快的震荡。那如果我们考虑一条作用量附近变分不是0的路径，那么它附近的路径由于作用量相对来说会发生变化，相位震荡的又非常迅速，所以这附近的路径在相位加权后对$K$的净贡献是$0$。但是对于作用量变分为$0$的路径就不一样了，它附近的路径由于作用量相对而言不发生改变，相位自然不变，所以求和后就会出现非零的贡献。所以对于经典力学下的极限，我们就认为\ref{eq:6.86}说明了经典力学中的粒子会走作用量变分为$0$的路径，不涉及到多路径求和算概率了，退化为决定论了。
+	我们现在来看一下经典极限。经典情况下$S$相对于$\hbar$之间非常非常大，所以只要$S$有一点点的改变，反映到相位上面都是非常快的震荡。那如果我们考虑一条作用量附近变分不是0的路径，那么它附近的路径由于作用量相对来说会发生变化，相位震荡的又非常迅速，所以这附近的路径在相位加权后对$K$的净贡献是$0$。但是对于作用量变分为$0$的路径就不一样了，它附近的路径由于作用量相对而言不发生改变，相位自然不变，所以求和后就会出现非零的贡献\footnote{在量子涨落不明显的时候，就可以近似认为只有经典路径附近的路径会有非零的贡献，这是驻定相位微扰方法近似计算路径积分的基本思想。}。所以对于经典力学下的极限，我们就认为\ref{eq:6.87}说明了经典力学中的粒子会走作用量变分为$0$的路径，不涉及到多路径求和算概率了，退化为决定论了。
 	
 	\subsubsection*{位形空间路径积分}
-	常常看到的路径积分一般不是用\ref{eq:6.86}写的，而是把动量部分先积分积掉，只剩下$\mathbf{r}$。
+	常常看到的路径积分一般不是用\ref{eq:6.87}写的，而是把动量部分先积分积掉，只剩下$\mathbf{r}$。
 	
+	我们现在目的是直接将$\ref{eq:6.86}$中第五个等号的积分直接积出来：\footnote{参见附录C里面的高斯积分}
+	\begin{equation}
+		\label{eq:6.88}
+		\begin{aligned}
+			\mathcal{K}\left(\mathbf{r}_n, t_n ; \mathbf{r}_{n-1}, t_{n-1}\right) & =\frac{1}{(2 \pi \hbar)^3} \int e^{-\frac{i}{\hbar} V\left(\mathbf{r}_n, t_n\right) \Delta t_n} e^{i \frac{\mathbf{p}_n}{\hbar} \cdot \Delta \mathbf{r}_n} e^{-\frac{i}{\hbar} \frac{p_n^2}{2 m} \Delta t_n} \mathrm{~d}^3{p}_n \\
+			& =\left(\frac{m}{2 \pi i \hbar \Delta t_n}\right)^{\frac{3}{2}} e^{-\frac{i}{\hbar} V\left(\mathbf{r}_n, t_n\right) \Delta t_n} e^{i \frac{m\left(\Delta \mathbf{r}_n\right)^2}{2 \hbar \Delta t_n}} \\
+			& =\left(\frac{m}{2 \pi i \hbar \Delta t_n}\right)^{\frac{3}{2}} e^{\frac{i}{\hbar}\left[\frac{1}{2} m \frac{\left(\Delta \mathbf{r}_n\right)^2}{\left(\Delta t_n\right)^2}-V\left(\mathbf{r}_n, t_n\right)\right] \Delta t_n} \\
+			& =\left(\frac{m}{2 \pi i \hbar \Delta t_n}\right)^{\frac{3}{2}} e^{\frac{i}{\hbar}\left[\frac{1}{2} m \dot{\mathbf{r}}_n^2-V\left(\mathbf{r}_n, t_n\right)\right] \Delta t_n}
+		\end{aligned}
+	\end{equation}
 	
+	不过细细推究会发现我们这里直接形式上用Gauss公式是有问题的，因为前面的系数出现了$\sqrt{i}$，众所周知，复数域上求根是有多指性的，事实上严谨的求解方式是用Euler公式把指数形式换成三角形式之后利用Frenel积分公式计算。这里不想讨论计算细节\footnote{因为最终表现在波函数上就是一个相位差别，没有物理影响，要是追求极致的数学严格可以细细考究。}，我们这里就直接定义${\color{red}\sqrt{i}=exp[i\pi/2]}$.
 	
+	然后再利用$\mathcal{K}$计算$K$，我们得到：
+	\begin{equation}
+		\label{eq:6.89}
+		\begin{aligned}    K\left( \mathbf{r},t;{{{\mathbf{r}}}_{0}},{{t}_{0}} \right)&=\int{\left[ \prod\limits_{n=1}^{N}{\mathcal{K}\left( {{{\mathbf{r}}}_{n}},{{t}_{n}};{{{\mathbf{r}}}_{n-1}},{{t}_{n-1}} \right)} \right]\mathrm{~d}^3{{{{r}}}_{1}}\cdots \mathrm{~d}^3{{{{r}}}_{N-1}}} \\   & =\int{\left[ \prod\limits_{n=1}^{N}{{{\left( \frac{m}{2\pi i\hbar \Delta {{t}_{n}}} \right)}^{\frac{3}{2}}}{{e}^{\frac{i}{\hbar }\left[ \frac{1}{2}m\dot{\mathbf{r}}_{n}^{2}-V\left( {{{\mathbf{r}}}_{n}},{{t}_{n}} \right) \right]\Delta {{t}_{n}}}}} \right]\mathrm{~d}^3{{{{r}}}_{1}}\cdots \mathrm{~d}^3{{{{r}}}_{N-1}}} \\   & =\prod\limits_{n=1}^{N}{{{\left( \frac{m}{2\pi i\hbar \Delta {{t}_{n}}} \right)}^{\frac{3}{2}}}}\int{{{e}^{\frac{i}{\hbar }\sum\limits_{n=1}^{N}{\left[ \frac{1}{2}m\dot{\mathbf{r}}_{n}^{2}-V\left( {{{\mathbf{r}}}_{n}},{{t}_{n}} \right) \right]\Delta {{t}_{n}}}}}\mathrm{~d}^3{{{{r}}}_{1}}\cdots \mathrm{~d}^3{{{{r}}}_{N-1}}} \\   &  \xlongequal[]{\Delta r_n\to 0}\prod\limits_{n=1}^{N}{{{\left( \frac{m}{2\pi i\hbar \Delta {{t}_{n}}} \right)}^{\frac{3}{2}}}}\int{{{e}^{\frac{i}{\hbar }\int_{{{t}_{0}}}^{t}{\frac{1}{2}m\dot{\mathbf{r}}_{n}^{2}-V\left( \mathbf{r},\tau  \right)\mathrm{~d}\tau }}}\mathrm{~d}^3{{{{r}}}_{1}}\cdots \mathrm{~d}^3{{{{r}}}_{N-1}}} \\   &  =\prod\limits_{n=1}^{\infty}{{{\left( \frac{m}{2\pi i\hbar \Delta {{t}_{n}}} \right)}^{\frac{3}{2}}}}\int{\mathcal{D}[\mathbf{r}]{{e}^{i\frac{S\left( \mathbf{r},\dot{\mathbf{r}},t;t_0 \right)}{\hbar }}}} \\  \end{aligned}
+	\end{equation}
+	
+	现在我们得到了两种等价的传播子的路径积分形式：
+	\begin{equation}
+		\label{eq:6.90}
+		K\left( \mathbf{r},t;{{{\mathbf{r}}}_{0}},{{t}_{0}} \right)=\begin{cases}
+			\frac{1}{(2 \pi \hbar)^{3 N}} \int \mathcal{D} [\mathbf{r}] \mathcal{D} [\mathbf{p}]e^{i \frac{S\left(\mathbf{r},\mathbf{p}, t;t_0\right)}{\hbar}}
+			\\
+			\prod\limits_{n=1}^{\infty}{{{\left( \frac{m}{2\pi i\hbar \Delta {{t}_{n}}} \right)}^{\frac{3}{2}}}}\int{\mathcal{D}[\mathbf{r}]{{e}^{i\frac{S\left( \mathbf{r},\dot{\mathbf{r}},t;t_0 \right)}{\hbar }}}} 
+		\end{cases}\quad(N\to \infty)
+	\end{equation}
+
+	那么现在\uwave{形式上}我们便把量子力学问题从解薛定谔方程的问题转变为了求泛函积分的问题，其中这种第二种形式$\Delta t_n$的分法是任意的，计算时可以为了简便就等分。
+	
+	这两个泛函积分算起来还是有相当大的难度，最直接粗暴的就是根据定义，根据这两个积分的推导过程化为无穷维积分然后取极限\footnote{说详细点就是\ref{eq:6.87}和\ref{eq:6.89}的倒数第二个等式}。
+	
+	前面我们计算自由粒子的传播子直接使用定义计算，现在我们用路径积分再算一次，我们就以位形空间中路径积分为例。
+	\subsubsection{自由粒子路径积分}
+	直接根据\ref{eq:6.90}计算路径积分那太难搞，我们还是根据推导过程，根据\ref{eq:6.88}，注意到$V=0$，我们得到：
+	\begin{equation}
+		\label{eq:6.91}
+		\mathcal{K}\left(\mathbf{r}_n, t_n ; \mathbf{r}_{n-1}, t_{n-1}\right)=\left(\frac{m}{2 \pi i \hbar \Delta t_n}\right)^{\frac{3}{2}} e^{\frac{im}{2\hbar}\frac{({\Delta\mathbf{r}}_n)^2}{ \Delta t_n}}
+	\end{equation}
+	下面我们要做的是乘起来然后无穷维积分，我们从两个相乘开始计算：\footnote{下面的计算精髓在于配平方}
+	\begin{equation}
+		\label{eq:6.92}
+		\begin{aligned}
+			&\int \mathcal{K}(\mathbf{r_2},t_2;\mathbf{r_1},t_1)\mathcal{K}(\mathbf{r_1},t_1;\mathbf{r_0},t_0)\mathrm{~d}^3r_1\\
+			=&\int \left(\frac{m}{2 \pi i \hbar \Delta t_2}\right)^{\frac{3}{2}}\left(\frac{m}{2 \pi i \hbar \Delta t_1}\right)^{\frac{3}{2}} e^{\frac{im}{2\hbar}\frac{({\Delta\mathbf{r}}_2)^2}{ \Delta t_2}} e^{\frac{im}{2\hbar}\frac{({\Delta\mathbf{r}}_1)^2}{ \Delta t_1}}\mathrm{~d}^3r_1\\
+			=& \left(\frac{m}{2 \pi i \hbar \Delta t_2}\right)^{\frac{3}{2}}\left(\frac{m}{2 \pi i \hbar \Delta t_1}\right)^{\frac{3}{2}}\int e^{\frac{im}{2\hbar}\frac{(\mathbf{r}_2-\mathbf{r}_1)^2}{ \Delta t_2}} e^{\frac{im}{2\hbar}\frac{(\mathbf{r}_1-\mathbf{r}_0)^2}{ \Delta t_1}}\mathrm{~d}^3r_1\\
+			=&(\cdot)^\frac{3}{2}(\circ)^\frac{3}{2}e^{\frac{im}{2\hbar}\frac{(\mathbf{r_2}-\mathbf{r}_0)^2}{\Delta t_2+\Delta t_1}}\int\mathrm{~d}^3r_1e^{\frac{im}{2\hbar}\left(\frac{1}{\Delta t_2}+\frac{1}{\Delta t_1}\right)\left[\mathbf{r}_1-\left(\frac{\Delta t_1\Delta t_2}{\Delta t_1+\Delta t_2}\right)\left(\frac{\mathbf{r}_2}{\Delta t_2}+\frac{\mathbf{r}_0}{\Delta t_1}\right)\right]^2}\\
+			=&\left(\frac{m}{2 \pi i \hbar \Delta t_2}\right)^{\frac{3}{2}}\left(\frac{m}{2 \pi i \hbar \Delta t_1}\right)^{\frac{3}{2}}e^ {i\frac{m{{\left( \mathbf{r}-{{{\mathbf{r}}}_{0}} \right)}^{2}}}{2\hbar \left( t-{{t}_{0}} \right)} }\int\mathrm{~d}^3x e^{\frac{im}{2\hbar}\left(\frac{1}{\Delta t_2}+\frac{1}{\Delta t_1}\right)\mathbf{x}^2}\\
+			=&\left(\frac{m}{2 \pi i \hbar \Delta t_2}\right)^{\frac{3}{2}}\left(\frac{1}{\pi i  \Delta t_1}\right)^{\frac{3}{2}}e^ {i\frac{m{{\left( \mathbf{r}-{{{\mathbf{r}}}_{0}} \right)}^{2}}}{2\hbar \left( t-{{t}_{0}} \right)}}\left(\frac{\pi i\Delta t_2\Delta t_1}{t_2-t_0}\right)^\frac{3}{2}\\
+			=&\left[\frac{m}{2\pi\hbar(t_2-t_0)}\right]^\frac{3}{2}e^ {i\frac{m{{\left( \mathbf{r}-{{{\mathbf{r}}}_{0}} \right)}^{2}}}{2\hbar \left( t-{{t}_{0}} \right)}}=\mathcal{K}(\mathbf{r}_2,t_2;\mathbf{r}_0,t_0)
+		\end{aligned}
+	\end{equation}
+
+	这个结果说明对于自由粒子，无穷小传播子和有限的传播子具有相同的形式！要知道，前面我们特意将无穷小传播子用$\mathcal{K}$去标记正是因为我们后面再计算无穷小传播子的时候一直在强调等式只有在$\Delta t_n\to 0$，也就是无穷小传播子的时候才适用，\ref{eq:6.86}和\ref{eq:6.86}都是只对无穷小传播子适用，所以你不能就说算出来无穷小传播子$\mathcal{K}$之后把$\mathbf{r}_n,t_n$换成对应的初末端点之后就得到了$K$。因为你计算无穷小传播子的那个过程就悄悄暗示了$\mathcal{K}\neq K$，所以前面我们要在推到前先区分它们，这样才不至于引起混淆。
+	
+	但是对于自由粒子，我们上面的推理\ref{eq:6.92}显然是能一直延伸到无穷多个$\mathcal{K}$相乘的。我们说明了对于自由粒子$\mathcal{K}=K$，单单作为$r,t$的函数形式是一致的。所以代入端点值后，我们再次得到了自由粒子的传播子。
+	
+	路径积分真的很难算的，能解析计算的很少基本都是想办法近似计算，谐振子是可以解析计算的一例，我们下面给出谐振子形式势能的传播子一般形式。
+	\begin{theorem}{Van Vleck-Plauli公式}
+		对于势能是坐标的二次型的情况，传播子由下式给出：
+		\begin{equation}
+			K(x_f,t_f;x_i,t_i)=\sqrt{\frac{i}{2\pi\hbar}\frac{\partial^2S_c}{\partial x_f\partial x_i}}e^{\frac{i}{\hbar}S_c}
+		\end{equation}
+		这个$S_c$就是经典情况下的作用量，利用经典情况下的粒子运动轨迹积分后写成初末态坐标$(x_f,t_f;x_i,t_i)$的函数形式。
+	\end{theorem}
+	
+	对于$V(x)=\frac{1}{2}m\omega^2x^2$的谐振子，经典路径是$x_c=A\sin(\omega t+\phi)$，初末坐标取$(x_f,t;x_i,0)$，那么经典作用量：	\footnote{注意最后经典作用量中可以含$\omega$这种势能自带的常数参数，但是经典路径依赖于初始条件的积分常数$A,\phi$这些就不能有。要先根据初末坐标把经典路径先定下来。}
+	\begin{equation}
+		\label{eq:6.94}
+		\begin{aligned}
+			S_c&=\int_{0}^t L(x_c,\dot{x}_c,t) \mathrm{~d}t\\
+			&=\int_{0}^t \frac{1}{2}m\omega A\cos(\omega t+\phi)-\frac{1}{2}m\omega^2 A\sin(\omega t+\phi)\mathrm{~d}t\\
+			&=\frac{1}{2}m\omega^2 A\cos(\omega t+\phi)-\frac{1}{2}m\omega^2 A\cos(\phi)+\frac{1}{2}m A\sin(\omega t+\phi)-\frac{1}{2}mA\sin(\phi)\\
+			&=\frac{m\omega}{2} \frac{(x_f^2+x_i^2)\cos\omega t-2x_fx_i}{\sin\omega t}
+		\end{aligned}
+	\end{equation}
+	
+	代入上面给的公式我们便得到了谐振子的传播子：
+	\begin{equation}
+		K(x_f,t;x_i,0)=e^{iS_c/\hbar}\sqrt{\frac{m\omega}{2\pi i\hbar\sin\omega t}}
+	\end{equation}
+	式中$S_c$由\ref{eq:6.94}给定。
+	
+	费曼路径积分来解决一般的量子力学问题那简直是杀鸡用牛刀，不过量子场论没了它还是真不行。
     \chapter{定态微扰论}
     理论上讲, 对于任何一个量子力学问题, 我们只要求解出来它的薛定谔方程问题就差不多解决了。但是从$\S$5.2中我们就发现这样做对于绝大多数情况下是不可行的, 比如氢原子我们
     能得到精确解, 但是哪怕是只多了一个电子, 由于相互作用的存在, 我们也无能为力。所以后面要讲的一些近似方法就是在这样的背景下提出来的。如果任何方程都可以很简单的
-    找到精确解, 我们也不必要画这么多时间去费力的讨论一些只是近似的处理方法。
+    找到精确解, 我们也不必要花这么多时间去费力的讨论一些只是近似的处理方法。
     
     这一章要介绍的是\textbf{微扰论(Perturbation theory)}, 经典力学里面天体问题我们也接触过, 那里叫\textbf{摄动法}, 其实英文和微扰是一样的。据说最先是由
     波恩引入量子力学的, 因为他做过一些天体物理, 而那个时候摄动法早就已经广泛的用于天体物理分析了。

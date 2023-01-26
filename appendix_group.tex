@@ -1012,11 +1012,67 @@ $\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$. $m_p$指的是表示$\mathscr{A}^p$�
 	\end{floatrow}
 \end{figure}
 
-我们还是举$D_3$群的例子，这次的任务不是求特征标这些，而是求具体的表示，求群在具体的某个函数空间上的表示。
+我们还是举$D_3$群的例子，这次的任务不是求特征标这些，而是求具体的表示，求群在具体的某个函数空间上的表示。因为物理上说的群很多都是变换群，是一堆对称操作的集合，而且群在函数空间上的表示对量子力学的研究有很大意义。
 
-在举例之前我们要先说明，
-$D_3$
+在举例之前我们要先说明，$D_3$群在几何意义上是用一个三角性的操作对称性定义的：\footnote{下面的旋转都是逆时针}
+\begin{align*}
+	&e:\text{啥也不干}&&d:\text{绕1轴转$\pi$}\\
+	&d:\text{绕$z$轴转$4\pi/3$}&&b:\text{绕2轴转$\pi$}\\
+	&f:\text{绕$z$轴转$4\pi/3$}&&c:\text{绕3轴转$\pi$}
+\end{align*}
+
+你要是单单把这些群元看成是对三角形的操作就比较狭隘了，我们用三角形作为载体是说明了$D_3$群对应的对称性，实际上我们完全可以把$D_3$群元看作是对Euclid空间中的向量的变换。我们这里说的函数也都是指的Euclid空间中向量的函数。
+
+其实函数空间确定了我们有很多方式确定群的表示，不过物理上关心那类有物理意义的。我们这样想，$\mathbbm{R}^3$中的一个点对应系统的一个状态，群$G$中群元$g:\mathbbm{R}^3\mapsto\mathbbm{R}^3$，原先是用Euclid空间中的向量$\mathbf{r}$对应的点$\mathcal{P}$对应系统状态$\mathcal{S}$，现在改用$g\mathbf{r}$对应的点$\mathcal{P}^\prime$对应
+$\mathcal{S}$。与其说函数空间中的函数$\Psi$是Euclid空间中的向量的函数，我们还不如说他是系统状态的函数$\mathscr{Y}(\mathcal{S})$，$\Psi$只是在Euclid空间中将物理量$\mathscr{Y}$具体写出来。在函数那么群元对向量变换后，$\Psi$作为$\mathbf{r}$的函数形式必然会发生改变$\Psi\to\Psi^\prime$，不过我们说过要把它们看成是物理量，看作是系统状态的函数，所以会有：$\Psi(\mathbf{r})=\Psi^\prime(g\mathbf{r})=\mathscr{Y}(S)$，群表示$\mathscr{A}(g)$既然是对函数的作用，也就是对函数形式的变换，我们要求这个表示使得$[\mathscr{A}(g)\Psi](\mathbf{r})=[\Psi^\prime](\mathbf{r})$。\footnote{相信读者如果仔细学过正则变换作为相空间的变换，应该懂得我们此处的解释。}那根据前面的讨论显然我们可以根据下面式子来确定群表示：
+\begin{equation}
+	\boxed{[\mathscr{A}(g)\Psi](\mathbf{r})=[\Psi](g^{-1}\mathbf{r})}
+\end{equation}
+今后物理上谈到在函数空间中的表示就是指用上式确定。至于数学家们称作啥就不知道了。
+\begin{example}{$D_3$群在函数空间上的表示}
+	这里函数空间假设是由下面六个函数张成的空间$\{\Psi_1(\mathbf{r})=x^2,\Psi_2(\mathbf{r})=y^2,\Psi_3(\mathbf{r})=z^2,\Psi_4(\mathbf{r})=xy,\Psi_5(\mathbf{r})=yz,\Psi_6(\mathbf{r})=xz\}$
+	
+	我们以$D_3$群中的群元$f$作为例子，根据旋转变换矩阵(主动版本)\ref{eq:6.41}，$d$的作用用矩阵形式写就是：
+	\begin{equation*}
+			f^{-1}\mathbf{r}=d\mathbf{r}=\begin{pmatrix}
+			\mathbf{i} &\mathbf{j}  &\mathbf{k} 
+		\end{pmatrix}
+		\begin{pmatrix}
+			-\frac{1}{2}& -\frac{\sqrt{3}}{2} & 0\\
+			\frac{\sqrt{3}}{2} &   -\frac{1}{2} & 0\\
+			0 &  0&1
+		\end{pmatrix}
+		\begin{pmatrix}
+			x\\
+			y\\
+			z
+		\end{pmatrix}=
+		\begin{pmatrix}
+			\mathbf{i} &\mathbf{j}  &\mathbf{k} 
+		\end{pmatrix}
+		\begin{pmatrix}
+			-\frac{1}{2}x-\frac{\sqrt{3}}{2}y  \\
+			\frac{\sqrt{3}}{2}x-\frac{1}{2}y  \\
+			z
+		\end{pmatrix}
+	\end{equation*}
+
+\setlength\parindent{2em}所以我们得到$f$的表示对函数空间中这六个基底的作用为：$[]\mathscr{f}\Psi_1](\mathbf{r})=\Psi_1(f^-1\mathbf{r})=\Psi_1(d\mathbf{r})=\left(-\frac{1}{2}x-\frac{\sqrt{3}}{2}y\right)^2=\frac{1}{4}x^2+\frac{3}{4}y^2+\frac{\sqrt{3}}{2}xy$.在基底上的展开系数为$\frac{1}{4},\frac{1}{3},0,\frac{3}{2},0,0$.
+
+我们对其它的五个基底也这样做一遍，最后就得到了$\mathscr{A}(f)$的表示矩阵：
+\[\left( {\begin{array}{*{20}{c}}
+		{\frac{1}{4}}&{\frac{3}{4}}&0&{ - \frac{{\sqrt 3 }}{4}}&0&0 \\ 
+		{\frac{3}{4}}&{\frac{1}{4}}&0&{\frac{{\sqrt 3 }}{4}}&0&0 \\ 
+		0&0&1&0&0&0 \\ 
+		{\frac{{\sqrt 3 }}{2}}&{ - \frac{{\sqrt 3 }}{2}}&0&{ - \frac{1}{2}}&0&0 \\ 
+		0&0&0&0&{ - \frac{1}{2}}&{ - \frac{{\sqrt 3 }}{2}} \\ 
+		0&0&0&0&{\frac{{\sqrt 3 }}{2}}&{ - \frac{1}{2}} 
+\end{array}} \right)\]
+类似的方法也可以得到其它几个群元的表示矩阵.
+\end{example}
 
 有限群最重要的部分我们就讲完了，这个附录最开始的部分我们引用了杨振宁的一句话，看了这些群论定理的证明，你应该能稍微体会到这句话了。
 
+\subsection{新表示的构成}
+这一节的目的是通过已知的一些群表示来构成更多有用的群表示。
 \section{置换群}
