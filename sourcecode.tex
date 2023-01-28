@@ -6173,8 +6173,154 @@
 	
 	
     \chapter{散射理论}
+	散射理论是从经典力学一直到量子场论都经久不衰的问题，人们热衷于研究散射问题说到底还是实验上最容易测到的就是微分散射截面，而利用微分散射截面的实验结果便可以验证现有理论或者反推提出新的理论。但就经典力学中散射问题的各种处理都可以单独出一本书，我们自然没法全面的讲述清楚散射理论，仅作基本介绍。
 	
+	经典力学中都是决定论，到了量子力学一切都是概率，所以问题的提法现在要改变了，我们现在关注的是粒子从入射态$\ket{i}$，经过势场散射之后到某个散射态$\ket{f}$的概率。
+	
+	散射研究的既然是两粒子之间的相互作用，那第最简单的情况就是碰撞前后两粒子内部结构不变，称为\uwave{弹性散射}，否则称为\uwave{非弹性散射}，比如核物理中的反应。为我们仅研究弹性散射。
+	
+	另外就是相互作用，最简单的情况就是两粒子之间的相互作用势能$V(\mathbf{r}_1,\mathbf{r}_2)$，我们也称为\textbf{势散射}。不过前面计算氢原子超精细结构的时候我们也看到自旋之间也可以发生相互作用，自然也有可能在散射过程中产生贡献。我们这里只研究势散射。
+	
+	另外散射永远是两个粒子之间的，所以在实验室坐标中散射过程势必同时会影响到靶粒子和入射粒子，不过在研究氢原子有心力场问题的时候我们也提到过，只要我们改用相对坐标系去描述波函数，$\mathbf{r}=\mathbf{r}_1-\mathbf{r}_2$，剩下的问题就重新化为中心势场$V(\mathbf{r})$问题了，只需要把入射粒子质量改成约化质量就好。不过一般的问题靶粒子都很重，所以波函数都是locality的，所以一般近似为靶粒子“不动”是允许的\footnote{经典散射问题直接计算好处理的是质心系，然而最后为了实验验证都需要转到实验室参考系，这个数学处理那可真是很难搞$\cdots$}。
+	
+	\section{定态散射理论}
+	经典力学中我们定义微分散射截面$\sigma(\mathbf{\Omega})$为\footnote{有的教材也用符号$d\sigma/d\Omega$表示}：
+	\begin{equation}
+		\label{eq:10.1}
+		\sigma(\mathbf{\Omega})d\Omega=\frac{\text{单位时间内射入到球面角$d\Omega$内的粒子数目}}{\text{入射粒子流强度}}
+	\end{equation}
+	其中入射粒子流强度指的是单位时间内单位面积有多少粒子数通过。
+	
+	\begin{figure}[h]
+		\centering	
+		\includegraphics[width=0.8 \linewidth]{fig/10-1.png}
+		\label{fig:10.1}
+		\caption{这个图解释散射理论超酷的好不好！}
+	\end{figure}
+	
+	如图\ref{fig:10.1}所示，一般来说势场都是具有各向同性的，所以微分散射截面有下面的计算方式：
+	\begin{equation}
+		\sigma(\Theta)=\frac{s}{\sin\Theta}\left|\frac{\mathrm{~d}s}{\mathrm{~d}\Theta}\right|
+	\end{equation}
+	
+	量子力学里面我们计算微分散射截面还是根据\ref{eq:10.1}来的，回忆一下$\S 1.4$中的概念概率流密度，对于均匀入射粒子流我们应该改用下式计算微分散射截面：
+	\begin{equation}
+		\label{eq:10.3}	
+		\sigma(\theta,\phi) \cancel{d\Omega}	= \frac{\left|\mathbf{j}_f\right|}{\left|\mathbf{j}_i\right|}\times r^2 \cancel{d\Omega}
+	\end{equation}
+	其中$\mathbf{j}_i$指的是入射粒子的概率流密度在$d\mathbf{\Omega}$方向分量，$\mathbf{j}_f$指的是散射波的概率流密度。\footnote{后面的计算中我们认为入射波和散射波之间不相干，因为入射粒子都是集中在很小的范围内的，所以这一近似很可取。}
+	
+	全微分散射截面的定义和经典力学中的完全一致：
+	\[\sigma_T\equiv \int_{4\pi}\sigma(\mathbf{\Omega})\mathrm{~d}\Omega\]
+	
+	定态散射问题，即势场不随时间变化，解Schr{\"o}dinger方程定态方程，由于是定态，入射粒子源源不断射来时，空间各点概率流密度都不随时间而变，定态散射理论就是依赖这一点。
+	
+	我们下面考虑各向同性的势场，散射后的波函数在球坐标系下解。第四章中我们已经解出定态薛定谔方程的角向解是球谐函数$Y_\ell^m(\theta,\phi)$。径向解满足方程：
+	\[-\frac{\hbar^2}{2m}\frac{d^2u}{dr^2}+\left[V(r)+\frac{\hbar^2}{2m}\frac{\ell(\ell+1)}{r^2}\right]u=E_n u\]
+	
+	既然我们测量的时候都是在离散射中心相对很远处，所以我们先在$r$很大很大的地方解径向方程：
+	\[\frac{d^2u}{dr^2}\approx -k^2u\quad (k=\frac{2mE}{\hbar})\]
+	得到两个解：
+	\[R_+(r)\sim \frac{e^{ikr}}{r}\quad R_-(r)\sim \frac{e^{-ikr}}{r}\]
+	
+	这两个解前者代表向外辐射的球面波，后者代表向球内入射的球面波，那显然我们求的是散射后的波函数，所以这两个解取前者。
+	
+	入射粒子的能量是已知的，完整的解是上面的径向解与角向解叠加，最后得到散射波函数有下面的形式：
+	\[\psi_f(\mathbf{r})\sim f(\theta,\phi)\frac{e^{ikr}}{r}\]
+	显然入射波函数是平面波的形式\footnote{或者你在直角坐标系下去解定态薛定谔方程去得到这个平面波解}:
+	\[\psi_i(\mathbf{r})\sim e^{ikz}\]
+	两个合起来就得到了在$r$很大时的解：
+	\begin{equation}
+		\label{eq:10.4}
+		\psi(\mathbf{r})=A\left[e^{ikz}+f(\theta,\phi)\frac{e^{ikr}}{r}\right],\quad (\text{$r$ very very large})
+	\end{equation}
+	再根据\ref{eq:10.3}我们便得到了微分散射截面的表达式：
+	\begin{equation}
+		\boxed{\sigma(\theta,\phi)=\left|f(\theta,\phi)\right|^2}
+	\end{equation}
+	后面我们干的活都是去想如何近似地把\textbf{散射振幅}$f(\theta,\phi)$求出来。
+	\subsection{分波法}
+	非常直接粗暴的方法，我们前面是在$r$很大的地方取解薛定谔方程得到渐进节解，现在为了得到更多关于$f(\theta,\phi)$的信息我们要考虑离散射中心稍微近一点的地方的波函数行为了。
+	
+	我们考虑的是{\itshape locality}的势函数，也就是说存在距离$a$，当$r>a$的时候可以认为$V(r)=0$，但是还不至于忽略平方反比的离心势。$r\gg a$的情况两个势能都可以忽略，前面我们已经得到这个解，现在我们考虑$r>a$时候的解，首先说明这个方法局限性还是很大的，比如对于库伦势就不适用，因为库伦势$1/r$相比于离心势$1/r^2$减小的慢一些，所以你不可能找到一个区域可以忽略库伦势的同时不忽略离心势，但对于$1/r^3$这种我们就可以近似计算。
+	
+	$r>a$时候径向方程形式为(角向解永远是球谐函数我们不用再去管)：
+	\begin{equation}
+		\label{eq:10.6}
+		\frac{d^2u}{dr^2}-\frac{\ell(\ell+1)}{r^2}u=-k^2u
+	\end{equation}
+	在\ref{eq:10.4}作为$r\to\infty$时的边界条件下解方程，方程解为：
+	\[u_\ell(r)=rAj_\ell(kr)+rBn_\ell(kr)\]
+	
+	$j_\ell$和$n_\ell$是两类球贝塞尔函数，不过为了和$r\to\infty$的解衔接，我们要的是球面波形式的解，这两类球贝塞尔函数都没有球面波的形式，不过它们的线性组合，两类球Hankel函数满足：
+	\begin{align*}
+	&h^{(1)}_\ell(x)\equiv j_\ell(x)+in_\ell(x)\xrightarrow{x\gg1}\frac{1}{x}(-i)^{\ell+1}e^{ix}\\
+	&h^{(2)}_\ell(x)\equiv j_\ell(x)-in_\ell(x)\xrightarrow{x\gg1}\frac{1}{x}(i)^{\ell+1}e^{-ix}
+	\end{align*}
+	
+	那么方程\ref{eq:10.6}的解就可以改写为上面两类球Hankel函数的解，不过由于只有$h^{(1)}_\ell$代表向外的球面波，所以我们取：
+	\[u_\ell(r)\sim rh^{(1)}_\ell(kr)\quad R_\ell(r)\sim h^{(1)}_\ell(kr)\]
+	线性叠加后便得到了更精细的波函数形式：
+	\begin{equation}
+		\psi(r,\theta,\phi)=A\left[e^{ikz}+\sum_{\ell,m}c_{\ell,m}h^{(1)}_\ell(kr)Y^m_\ell(\theta,\phi)\right]
+	\end{equation}
 
+	我们考虑的一般是各向同性的势函数，而且入射粒子是沿$z$方向的，所以完全可以认为波函数与$\phi$无关，$m\equiv 0$，从而：
+	\[\psi(r,\theta)=A\left[e^{ikz}+\sum_{\ell}c_{\ell}\sqrt{\frac{2\ell+1}{4\pi}}h^{(1)}_\ell(kr)P_\ell(\cos\theta)\right]\]
+	令$c_\ell=i^{\ell+1}k\sqrt{4\pi(2\ell+1)}a_\ell$，最终得到：
+	\begin{equation}
+		\label{eq:10.8}
+		\psi(r,\theta)=A\left[e^{ikz}+k\sum_{\ell}i^{\ell+1}(2\ell+1)a_\ell h^{(1)}_\ell(kr)P_\ell(\cos\theta)\right]
+	\end{equation}
+	$r\to\infty$时与\ref{eq:10.4}比较即可得到：
+	\begin{equation}
+		\label{eq:10.9}
+		\begin{aligned}
+		&\psi(r,\theta)=A\left[e^{ikz}+\sum_{\ell}(2\ell+1)a_\ell P_\ell(\cos\theta)\frac{e^{ikr}}{r}\right]\\
+		\Rightarrow&f(\theta)=(2\ell+1)a_\ell P_\ell(\cos\theta)\\
+		\Rightarrow&\sigma(\theta)=\sum_{\ell=0}^\infty\sum_{\ell^\prime=0}^\infty(2\ell+1)(2\ell^\prime+1)a_\ell a_{\ell^\prime}^* P_\ell(\cos\theta) P_{\ell^\prime}^*(\cos\theta)\\
+		\Rightarrow&\sigma_T=4\pi\sum_{\ell=0}^\infty(2\ell+1)|a_\ell|^2
+		\end{aligned}
+	\end{equation}
+	
+	问题是如何去计算$a_\ell$？那就需要继续精细点考虑，把$r>a$得到的解作为边界条件，然后在$r<a$内部解薛定谔方程去确定系数。就还真挺麻烦的，不过我们确定系数不会直接使用\ref{eq:10.8}，因为这个式子前一半是在柱坐标系内写的，后一半是在球坐标系下写的，考虑我们在$r<a$内解薛定谔方程都是在球坐标系内进行，所以我们把\ref{eq:10.8}统一在球坐标系下写，需要用到下面的\textbf{Rayleigh公式}
+	\begin{equation}
+		e^{ikz}=\sum_{\ell=0}^\infty i^\ell(2\ell+1)j_\ell(kr)P_\ell(\cos\theta)
+	\end{equation}
+	代入\ref{eq:10.8}得到：
+	\begin{equation}
+		\label{eq:10.11}
+		\boxed{
+		\psi(r,\theta)=A\sum_\ell^\infty i^\ell(2\ell+1)\left[j_\ell(kr)+ika_\ell h^{(1)}_\ell(kr)\right]P_\ell(\cos\theta)\quad(r>a)
+	}
+	\end{equation}
+	
+	\begin{example}{量子力学钢球模型散射}
+		\[V(r)=\begin{cases}
+			0&(r>a)\\
+			\infty &(r<a)
+		\end{cases}\]
+		自然的我们便知道边界条件为$\psi(a,\theta)=0$，与$r>a$时的解衔接，代入\ref{eq:10.11}便得到：
+		\[j_\ell(ka)+ika_\ell h^{(1)}_\ell(ka)=0\Rightarrow a_\ell=i\frac{j_\ell(ka)}{kh_\ell^{(1)}(ka)}\]
+		全微分散射截面精确解即为：
+		\[\sigma_T=\frac{4\pi}{k^2}\sum_\ell^\infty(2\ell+1)\left|\frac{j_\ell(ka)}{h_\ell^{(1)}(ka)}\right|^2\]
+		考虑一下低能情况，入射粒子能量很低$ka\ll1$，注意到$z\to 0$时$n_\ell(z)\to\infty$:
+		\begin{equation*}
+			\begin{aligned}
+				\frac{j_{\ell}(z)}{h_{\ell}^{(1)}(z)} & =\frac{j_{\ell}(z)}{j_{\ell}(z)+i n_{\ell}(z)} \approx-i \frac{j_{\ell}(z)}{n_{\ell}(z)} \\
+				& \approx-i \frac{2^{\ell} \ell ! z^{\ell} /(2 \ell+1) !}{-(2 \ell) ! z^{-\ell-1} / 2^{\ell} \ell !}=\frac{i}{2 \ell+1}\left[\frac{2^{\ell} \ell !}{(2 \ell) !}\right]^{2} z^{2 \ell+1}
+			\end{aligned}
+		\end{equation*}
+		那么全微分散射截面可以近似为：\footnote{忽略高阶项，只取$\ell=0$}
+		\[\sigma \approx \frac{4 \pi}{k^{2}} \sum_{\ell=0}^{\infty} \frac{1}{2 \ell+1}\left[\frac{2^{\ell} \ell !}{(2 \ell) !}\right]^{4}(k a)^{4 \ell+2}\approx4\pi a^2
+		\]
+		计算的结果是经典情况的四倍！
+	\end{example}
+	分波法的计算非常冗杂，能解析计算的例子不多，还有一个比较有意思的例子是球形$\delta$势阱：
+	\[V(r)=\delta(r-a))\]
+	球内和球外都是$V(r)=0$，故解的形式都是\ref{eq:10.11}，不过对于球内问题$a_\ell=0$\footnote{$h^{(1)}_\ell(0)\to\infty$}，然后再根据$r=a$处波函数的连续性以及$r=a$处波函数左右两侧导数之间的关系\footnote{recall $\S 2.5.2$}定系数。
+	
+	\subsubsection*{Phase Shift}
     \include{appendix.tex} 
     \include{appendix_group.tex}
     \includepdf[height=29.7cm,width=21.0cm]{back_cover/cover.pdf} % 插入封底

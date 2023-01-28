@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  26 JAN 2023 21:18
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  28 JAN 2023 22:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3170,9 +3170,11 @@ File: fig/9-8.pdf Graphic file (type pdf)
 <use fig/9-8.pdf>
  [193] [194]
 第十章
+File: fig/10-1.png Graphic file (type bmp)
+<fig/10-1.png>
 [195
 
-]
+] [196] [197] [198] [199] [200]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -3182,10 +3184,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[196
+[201
 
 
-] [197] [198]
+] [202] [203]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -3193,21 +3195,21 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[199] [200] [201]
+[204] [205] [206]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [202] [203]
+ [207] [208]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [204] [205] [206] [207] [208]
+ [209] [210] [211] [212] [213]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [209] [210]
-[211] [212]
+ [214] [215]
+[216] [217]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 517--540
@@ -3215,41 +3217,41 @@ Overfull \hbox (7.7486pt too wide) in paragraph at lines 517--540
 45 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[213
+[218
 
-] [214] [215]
+] [219] [220]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 643--650
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSu
 n(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/
 it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[216] [217] [218] [219] [220] [221]
+[221] [222] [223] [224] [225] [226]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [222] [223]
+ [227] [228]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [224]
+ [229]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [225]
+ [230]
 Overfull \hbox (2.89864pt too wide) detected at line 954
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 
 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[226] [227]
+[231] [232]
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
 line 996.
- [228] [229] [230] [231]
+ [233] [234] [235] [236]
 LaTeX Font Info:    Font shape `T1/ntxsups/m/it' will be
 (Font)              scaled to size 12.045pt on input line 1127.
- [232]
+ [237]
 附录 C
-[233
+[238
 
-]) [234]
+]) [239]
 \openout2 = `appendix_group.aux'.
 
  (./appendix_group.tex
@@ -3272,24 +3274,24 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 26.
 
-[235
+[240
 
 
 
 
-] [236] [237] [238] [239] [240]
+] [241] [242] [243] [244] [245]
 File: fig/fig_D.1a.eps Graphic file (type eps)
 <fig/fig_D.1a.eps>
 File: fig/fig_D.1b.eps Graphic file (type eps)
 <fig/fig_D.1b.eps>
- [241] [242] [243] [244] [245] [246]
-[247]
+ [246] [247] [248] [249] [250] [251]
+[252]
 Overfull \hbox (4.64157pt too wide) in paragraph at lines 374--376
 []\TU/SimSun(0)/m/n/12.045 这 个 定 义 其 实 就 是 说 我 们 可 以 选 取 一 组 $\OML/ntxmi/m/it/1
 2.045 V$ \TU/SimSun(0)/m/n/12.045 中 的 基 底 $[] [] 
  []
 
-[248]
+[253]
 Overfull \hbox (31.82376pt too wide) in paragraph at lines 422--423
 []\TU/SimSun(0)/m/it/12.045 又 因 为 $\OML/ntxmi/m/it/12.045 ^^8e$ \TU/SimSun(0)/m
 /it/12.045 是 群 表 示，|  所 以 同 态 满 足 $\LMS/ntxsy/m/n/12.045 A¹\OML/ntxmi/m/it/12.0
@@ -3300,10 +3302,10 @@ A¹\OML/ntxmi/m/it/12.045 g\LMS/ntxsy/m/n/12.045 ºA¹\OML/ntxmi/m/it/12.045 g[]
 MS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 =
  []
 
-[249] [250] [251]
+[254] [255] [256]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
 (Font)              scaled to size 12.045pt on input line 522.
- [252] [253]
+ [257] [258]
 Overfull \hbox (17.87273pt too wide) in paragraph at lines 581--583
 []\TU/SimSun(0)/m/it/12.045 如 果 两 空 间 维 数 相 等 $[] \OML/ntxmi/m/it/12.045 V \U/n
 txmia/m/it/12.045 = [] \OML/ntxmi/m/it/12.045 W$\TU/SimSun(0)/m/it/12.045 ，|  基
@@ -3320,21 +3322,21 @@ Underfull \hbox (badness 1259) in paragraph at lines 596--598
 的
  []
 
-[254] [255] [256] [257]
-Underfull \hbox (badness 10000) in paragraph at lines 728--729
+[259] [260] [261] [262] [263]
+Underfull \hbox (badness 10000) in paragraph at lines 733--734
 []\TU/SimSun(0)/m/n/12.045 设 有 限 群 $\OML/ntxmi/m/it/12.045 G$ \TU/SimSun(0)/m/n
 /12.045 的 所 有 不 等 价 不 可 约 酉 表 示 为[][][][][]：|
  []
 
 
-Underfull \hbox (badness 2103) in paragraph at lines 728--729
+Underfull \hbox (badness 2103) in paragraph at lines 733--734
 \OML/ntxmi/m/it/12.045 ^^8e[]; ^^8e[]; [] ; ^^8e[]; [] ; ^^8e[]; []$\T1/ntxtlf/
 m/n/12.045 . \TU/SimSun(0)/m/n/12.045 这 些 表 示 就 是 群 表 示 最 基 本 的 单 元\T1/ntxtlf/m
 /n/12.045 .
  []
 
-[258] [259] [260] [261] [262] [263]
-Overfull \hbox (15.13051pt too wide) in paragraph at lines 899--900
+[264] [265] [266] [267] [268] [269]
+Overfull \hbox (15.13051pt too wide) in paragraph at lines 904--905
 []\TU/SimSun(0)/m/it/12.045 证 明 中 用 到 的 操 作：|  由 群 函 数 $\LMS/ntxsy/m/n/12.045 8
 \OML/ntxmi/m/it/12.045 ^^^ \OT1/ntxtlf/m/n/12.045 : \OML/ntxmi/m/it/12.045 G \L
 MS/ntxsy/m/n/12.045 ! \U/ntxsym/m/n/12.045 C$ \TU/SimSun(0)/m/it/12.045 定 义 $\O
@@ -3342,16 +3344,16 @@ ML/ntxmi/m/it/12.045 ^^^[]\LMS/ntxsy/m/n/12.045 ¹\OML/ntxmi/m/it/12.045 g\LMS/n
 txsy/m/n/12.045 º ^^Q [] [][] \OML/ntxmi/m/it/12.045 ^^^ []$
  []
 
-[264]
+[270]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[265] [266]
+[271] [272]
 File: fig/D-1.pdf Graphic file (type pdf)
 <use fig/D-1.pdf>
 File: fig/D-1.pdf Graphic file (type pdf)
 <use fig/D-1.pdf>
- [267] [268]) [269]
+ [273]) [274]
 File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf>
 File: back_cover/cover.pdf Graphic file (type pdf)
@@ -3366,7 +3368,7 @@ File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf, page 1>
 File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf, page 1>
- [270
+ [275
 
 
 ]
@@ -3380,15 +3382,15 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: EB70F25C7CBFF00633C3E30241212B93;13497.
+(rerunfilecheck)             Checksum: A5E1246962D7EB2E7AE79B3F4B8DCE20;13756.
  ) 
 Here is how much of TeX's memory you used:
- 60084 strings out of 476533
- 1535719 string characters out of 5818886
- 2010965 words of memory out of 5000000
- 79146 multiletter control sequences out of 15000+600000
+ 60105 strings out of 476533
+ 1535997 string characters out of 5818886
+ 2011281 words of memory out of 5000000
+ 79166 multiletter control sequences out of 15000+600000
  561673 words of font info for 326 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,23n,117p,1548b,1165s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,23n,117p,1548b,1168s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (275 pages).
+Output written on sourcecode.pdf (280 pages).
