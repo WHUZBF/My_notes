@@ -54,39 +54,42 @@
 \contentsline {section}{\numberline {6.6}时间平移对称性}{114}{section.6.6}%
 \contentsline {subsection}{\numberline {6.6.1}薛定谔/海森堡绘景}{115}{subsection.6.6.1}%
 \contentsline {subsection}{\numberline {6.6.2}能量守恒定律}{118}{subsection.6.6.2}%
-\contentsline {chapter}{\numberline {第七章\hspace {.3em}}定态微扰论}{119}{chapter.7}%
-\contentsline {section}{\numberline {7.1}非简并微扰论}{119}{section.7.1}%
-\contentsline {section}{\numberline {7.2}简并微扰论}{122}{section.7.2}%
-\contentsline {section}{\numberline {7.3}氢原子的精细结构}{125}{section.7.3}%
-\contentsline {section}{\numberline {7.4}塞曼(Zeeman)效应}{129}{section.7.4}%
-\contentsline {section}{\numberline {7.5}氢原子的超精细结构}{132}{section.7.5}%
-\contentsline {chapter}{\numberline {第八章\hspace {.3em}}变分法}{135}{chapter.8}%
-\contentsline {section}{\numberline {8.1}基本原理}{135}{section.8.1}%
-\contentsline {section}{\numberline {8.2}氦原子的基态能量}{137}{section.8.2}%
-\contentsline {section}{\numberline {8.3}$\ce {H2^+}$ 和 $\ce {H2}$}{139}{section.8.3}%
-\contentsline {chapter}{\numberline {第九章\hspace {.3em}}WKB近似}{145}{chapter.9}%
-\contentsline {section}{\numberline {9.1}基本原理}{145}{section.9.1}%
-\contentsline {section}{\numberline {9.2}量子隧穿}{147}{section.9.2}%
-\contentsline {section}{\numberline {9.3}连接公式}{149}{section.9.3}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{157}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{157}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{158}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{160}{section.A.3}%
-\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{162}{section.A.4}%
-\contentsline {section}{\numberline {A.5}直角坐标里的张量}{165}{section.A.5}%
-\contentsline {section}{\numberline {A.6}分部积分法}{170}{section.A.6}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{171}{appendix.B}%
-\contentsline {section}{\numberline {B.1}向量空间}{171}{section.B.1}%
-\contentsline {section}{\numberline {B.2}内积}{172}{section.B.2}%
-\contentsline {section}{\numberline {B.3}波函数的空间}{173}{section.B.3}%
-\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{175}{section.B.4}%
-\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{179}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{183}{section.B.6}%
-\contentsline {section}{\numberline {B.7}*对偶空间和对偶映射}{185}{section.B.7}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{187}{appendix.C}%
-\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{189}{appendix.D}%
-\contentsline {section}{\numberline {D.1}群的基本结构}{189}{section.D.1}%
-\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{189}{subsection.D.1.1}%
-\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{190}{subsection.D.1.2}%
-\contentsline {subsection}{\numberline {D.1.3}同构与同态}{193}{subsection.D.1.3}%
+\contentsline {section}{\numberline {6.7}*费曼路径积分}{119}{section.6.7}%
+\contentsline {subsubsection}{相空间路径积分}{121}{subsubsection*.2}%
+\contentsline {subsubsection}{自由粒子路径积分}{124}{subsubsection*.3}%
+\contentsline {chapter}{\numberline {第七章\hspace {.3em}}定态微扰论}{127}{chapter.7}%
+\contentsline {section}{\numberline {7.1}非简并微扰论}{127}{section.7.1}%
+\contentsline {section}{\numberline {7.2}简并微扰论}{130}{section.7.2}%
+\contentsline {section}{\numberline {7.3}氢原子的精细结构}{133}{section.7.3}%
+\contentsline {section}{\numberline {7.4}塞曼(Zeeman)效应}{137}{section.7.4}%
+\contentsline {section}{\numberline {7.5}氢原子的超精细结构}{140}{section.7.5}%
+\contentsline {chapter}{\numberline {第八章\hspace {.3em}}变分法}{143}{chapter.8}%
+\contentsline {section}{\numberline {8.1}基本原理}{143}{section.8.1}%
+\contentsline {section}{\numberline {8.2}氦原子的基态能量}{145}{section.8.2}%
+\contentsline {section}{\numberline {8.3}$\ce {H2^+}$ 和 $\ce {H2}$}{147}{section.8.3}%
+\contentsline {chapter}{\numberline {第九章\hspace {.3em}}WKB近似}{153}{chapter.9}%
+\contentsline {section}{\numberline {9.1}基本原理}{153}{section.9.1}%
+\contentsline {section}{\numberline {9.2}量子隧穿}{155}{section.9.2}%
+\contentsline {section}{\numberline {9.3}连接公式}{157}{section.9.3}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{165}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{165}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{166}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{168}{section.A.3}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{170}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{173}{section.A.5}%
+\contentsline {section}{\numberline {A.6}分部积分法}{178}{section.A.6}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{179}{appendix.B}%
+\contentsline {section}{\numberline {B.1}向量空间}{179}{section.B.1}%
+\contentsline {section}{\numberline {B.2}内积}{180}{section.B.2}%
+\contentsline {section}{\numberline {B.3}波函数的空间}{181}{section.B.3}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{183}{section.B.4}%
+\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{187}{section.B.5}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{191}{section.B.6}%
+\contentsline {section}{\numberline {B.7}*对偶空间和对偶映射}{193}{section.B.7}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{195}{appendix.C}%
+\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{197}{appendix.D}%
+\contentsline {section}{\numberline {D.1}群的基本结构}{197}{section.D.1}%
+\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{197}{subsection.D.1.1}%
+\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{198}{subsection.D.1.2}%
+\contentsline {subsection}{\numberline {D.1.3}同构与同态}{201}{subsection.D.1.3}%
 \contentsfinish 

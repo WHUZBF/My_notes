@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  20 JAN 2023 20:09
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  31 JAN 2023 01:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1767,11 +1767,11 @@ LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 ) [1]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sl' will be
-(Font)              scaled to size 12.045pt on input line 77.
+(Font)              scaled to size 12.045pt on input line 79.
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12.045> not availab
 le
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-77.
+79.
  [2])
 \tf@toc=\write5
 \openout5 = `book.toc'.
@@ -1828,10 +1828,6 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.0pt on input line 173.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 (Font)              scaled to size 6.0pt on input line 173.
-
-
-LaTeX Warning: Reference `eq:1.12' on page 5 undefined on input line 183.
-
 ) [5]
 \openout2 = `chapter02.aux'.
 
@@ -2984,27 +2980,28 @@ File: fig/6-4.pdf Graphic file (type pdf)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [110]
-[111] [112] [113] [114] [115] [116] [117]) [118]
+[111] [112] [113] [114] [115] [116] [117] [118] [119] [120] [121] [122]
+[123] [124]) [125]
 \openout2 = `chapter07.aux'.
 
- (./chapter07.tex
+ (./chapter07.tex [126
+
+
+
+
+]
 第七章
-[119
-
-
-
-
-] [120] [121] [122]
+[127] [128] [129] [130]
 File: fig/7.1.pdf Graphic file (type pdf)
 <use fig/7.1.pdf>
- [123]
+ [131]
 Overfull \hbox (8.52371pt too wide) in paragraph at lines 215--217
 []\TU/SimSun(0)/m/n/12.045 也 就 是 说\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.
 045 我 们 要 计 算 能 级 的 一 阶 修 正\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 先 在
  简 并 态 子 空 间 中 选 取 任 意 一 组 基 底 $[]$\T1/ntxtlf/m/n/12.045 ,
  []
 
-[124] [125]
+[132] [133]
 Overfull \hbox (6.1708pt too wide) in paragraph at lines 298--300
 \TU/SimSun(0)/m/n/12.045 首 先 我 们 考 虑 的 电 磁 相 互 作 用 能 实 际 上 是 远 小 于 $\OML/ntxmi/
 m/it/12.045 mc[]$ \TU/SimSun(0)/m/n/12.045 的\T1/ntxtlf/m/n/12.045 , \TU/SimSun(
@@ -3013,17 +3010,17 @@ m/it/12.045 mc[]$ \TU/SimSun(0)/m/n/12.045 的\T1/ntxtlf/m/n/12.045 , \TU/SimSun
  º \U/ntxmia/m/it/12.045 =
  []
 
-[126] [127] [128] [129] [130] [131] [132]) [133]
+[134] [135] [136] [137] [138] [139] [140]) [141]
 \openout2 = `chapter08.aux'.
 
- (./chapter08.tex [134
+ (./chapter08.tex [142
 
 
 
 
 ]
 第八章
-[135] [136] [137] [138]
+[143] [144] [145] [146]
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <18.06749> not available
 (Font)              size <17.28> substituted on input line 156.
@@ -3058,7 +3055,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 LaTeX Font Info:    Font shape `T1/ntxsups/b/n' will be
 (Font)              scaled to size 12.045pt on input line 177.
-[139] [140] [141]
+[147] [148] [149]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -3091,7 +3088,7 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
 (Font)              scaled to size 9.03374pt on input line 339.
-[142]
+[150]
 Invalid UTF-8 byte or sequence at line 357 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 357 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 357 replaced by U+FFFD.
@@ -3102,10 +3099,10 @@ Invalid UTF-8 byte or sequence at line 357 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 357 replaced by U+FFFD.
 File: fig/8-2.eps Graphic file (type eps)
 <fig/8-2.eps>
-) [143]
+) [151]
 \openout2 = `chapter09.aux'.
 
- (./chapter09.tex [144
+ (./chapter09.tex [152
 
 
 
@@ -3114,10 +3111,10 @@ File: fig/8-2.eps Graphic file (type eps)
 第九章
 File: fig/9-1.pdf Graphic file (type pdf)
 <use fig/9-1.pdf>
-[145]
+[153]
 File: fig/9-2.pdf Graphic file (type pdf)
 <use fig/9-2.pdf>
- [146]
+ [154]
 File: fig/9-3.pdf Graphic file (type pdf)
 <use fig/9-3.pdf>
 File: fig/9-x.pdf Graphic file (type pdf)
@@ -3126,28 +3123,28 @@ File: fig/9-x.pdf Graphic file (type pdf)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[147] [148] [149]
+[155] [156] [157]
 File: fig/9-4-a.pdf Graphic file (type pdf)
 <use fig/9-4-a.pdf>
 File: fig/9-4-b.pdf Graphic file (type pdf)
 <use fig/9-4-b.pdf>
- [150]
+ [158]
 Underfull \vbox (badness 5607) has occurred while \output is active []
 
- [151]
+ [159]
 File: fig/9-5.pdf Graphic file (type pdf)
 <use fig/9-5.pdf>
 
 Underfull \vbox (badness 3260) has occurred while \output is active []
 
- [152]
-[153]
+ [160]
+[161]
 File: fig/9-7.pdf Graphic file (type pdf)
 <use fig/9-7.pdf>
- [154]
+ [162]
 File: fig/9-8.pdf Graphic file (type pdf)
 <use fig/9-8.pdf>
- [155]) [156]
+ [163]) [164]
 \openout2 = `appendix.aux'.
 
  (./appendix.tex
@@ -3160,50 +3157,50 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
 Underfull \vbox (badness 1789) has occurred while \output is active []
 
- [157
+ [165
 
 
 
 
 ]
-[158]
+[166]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [159]
-[160] [161]
+ [167]
+[168] [169]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [162] [163]
+ [170] [171]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [164] [165] [166] [167]
+ [172] [173] [174] [175]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [168] [169] [170]
+ [176] [177] [178]
 附录 B
-[171
+[179
 
-] [172] [173] [174] [175] [176] [177]
+] [180] [181] [182] [183] [184] [185]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [178] [179]
+ [186] [187]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [180]
+ [188]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [181] [182]
+ [189] [190]
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
 line 995.
 
-[183] [184]
+[191] [192]
 Underfull \hbox (badness 1009) in paragraph at lines 1097--1098
 []\TU/SimSun(0)/m/n/12.045 有 限 维 向 量 空 间 $\OML/ntxmi/m/it/12.045 V$ \TU/SimSun(
 0)/m/n/12.045 的 基 底 为 $\LMS/ntxsy/m/n/12.045 f\OML/ntxmi/m/it/12.045 e[]; [] ; 
@@ -3211,28 +3208,28 @@ e[]\LMS/ntxsy/m/n/12.045 g$\TU/SimSun(0)/m/n/12.045 ，|  它 们 的 对 偶 �
 mi/m/it/12.045 V[]$ \TU/SimSun(0)/m/n/12.045 中 的 一 组 基 底
  []
 
-[185]
+[193]
 LaTeX Font Info:    Font shape `T1/ntxsups/m/it' will be
 (Font)              scaled to size 12.045pt on input line 1126.
- [186]
+ [194]
 附录 C
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [187
+ [195
 
 ])
-[188]
+[196]
 \openout2 = `appendix_group.aux'.
 
  (./appendix_group.tex
 附录 D
-[189
+[197
 
 
 
 
-] [190] [191] [192]) [193]
+] [198] [199] [200]) [201]
 File: ../back_cover/cover.pdf Graphic file (type pdf)
 <use ../back_cover/cover.pdf>
 File: ../back_cover/cover.pdf Graphic file (type pdf)
@@ -3247,7 +3244,7 @@ File: ../back_cover/cover.pdf Graphic file (type pdf)
 <use ../back_cover/cover.pdf, page 1>
 File: ../back_cover/cover.pdf Graphic file (type pdf)
 <use ../back_cover/cover.pdf, page 1>
- [194
+ [202
 
 
 ]
@@ -3262,28 +3259,16 @@ File: ../back_cover/cover.pdf Graphic file (type pdf)
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `book.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `book.out':
-(rerunfilecheck)             Before: C5E5263157ED71BA2EE210FE112C34EA;11980
-(rerunfilecheck)             After:  ABBECF38CB91E8CB54A27A46433D8C1F;12097.
+Package rerunfilecheck Info: File `book.out' has not changed.
+(rerunfilecheck)             Checksum: 07928C28C3EDADC1A7645F057839D51D;12227.
  ) 
 Here is how much of TeX's memory you used:
- 59090 strings out of 476533
- 1512921 string characters out of 5818886
- 2008748 words of memory out of 5000000
- 78101 multiletter control sequences out of 15000+600000
+ 59146 strings out of 476533
+ 1515735 string characters out of 5818886
+ 2009234 words of memory out of 5000000
+ 78157 multiletter control sequences out of 15000+600000
  543330 words of font info for 289 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 90i,23n,97p,725b,1174s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 90i,23n,97p,1569b,1174s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on book.pdf (199 pages).
+Output written on book.pdf (207 pages).

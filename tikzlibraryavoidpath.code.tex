@@ -1,0 +1,150 @@
+% Copyright 2015 by Kpym
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+\typeout{tikz-avoidpath v1.0}
+
+% some additional libraries used by this one
+\usetikzlibrary{calc,math,decorations.markings,patterns}
+
+% style for arrows on the path
+% Usage :
+%  [with arrows=35mm] put arrows every 35mm
+%  [with arrows at positions={35mm,70mm,140mm}] put arrows at 35mm,70mm,140mm
+% -----------------------------------------------------------
+\tikzset{
+  with arrows/.style={
+    decoration={ markings,
+      mark=between positions #1 and .999 step #1 with {\arrow{stealth}}
+    }, postaction={decorate}
+  }, with arrows/.default=13mm,
+  with arrow at/.style={
+    decoration={ markings,
+      mark=at position #1 with {\arrow{stealth}}
+    }, postaction={decorate}
+  }, with arrows/.default=13mm,
+  with arrows at positions/.style={
+   with arrow at/.list={#1}
+  }
+}
+
+% style to draw reversed circle (helpfull when filling, to not fill inside)
+% Usage :
+%   circle[reversed with radius=1cm]
+% -----------------------------------------------------------
+\tikzset{
+  reversed with radius/.style={
+    x radius=#1,
+    y radius=-#1,
+  }
+}
+
+% macros to use tikzmath inside 'to path'
+% -----------------------------------------------------------
+\newcommand\tikzmathextra[1]{\pgfextra{\tikzmath{#1}}}
+\newcommand\insertpath[1]{\pgfkeys{/tikz/insert path={#1}}}
+
+% macros for data dependancies
+% Usage :
+%  .pgfmathparse in=\macroname is like ".store in", but mathparse it first
+%  .pgfmathsync to=\macroname{<formula>} every time the key is set, the <formula> is mathparsed and stored in \macroname
+% -----------------------------------------------------------
+\pgfkeys{
+  /handlers/.pgfmathparse in/.code=\pgfkeysalso{\pgfkeyscurrentpath/.code=\pgfmathsetmacro#1{##1}\ifpgfmathunitsdeclared\edef#1{#1 pt}\else\edef#1{#1 cm}\fi},
+  /handlers/.pgfmathsync to/.code 2 args=\pgfkeysalso{\pgfkeyscurrentpath/.append code=\pgfmathparse{#2}\edef\result{\pgfmathresult}\ifpgfmathunitsdeclared\providecommand#1{\result pt}\else\providecommand#1{\result cm}\fi}
+}
+
+% precision : pgfmathparse is not very precise we consides 0 <=> < \avoidpointprecision
+%  in particular two point are considered identical if the distance is < \avoidpointprecision
+%  for the same reason \avoidonaxeprecision is used to check if the pole is on the line (\tikztostart)--(\tikztotarget)
+% -----------------------------------------------------------
+\tikzset{
+  /avoid/.cd,
+  point precision/.store in=\avoidpointprecision,
+  on axe precision/.store in=\avoidonaxeprecision,
+  precision/.style={point precision=#1,on axe precision=#1},
+  precision=.7pt % the initial precision
+}
+
+% main to path
+% -----------------------------------------------------------
+\tikzset{
+  % styles to set the variables
+  /avoid/.cd,
+    pole/.store in=\avoidpole,
+    radius/.pgfmathparse in=\avoidradius,
+    radius/.pgfmathsync to=\avoidneck{\avoidradius},
+    neck/.pgfmathparse in=\avoidneck,
+    neck/.pgfmathsync to=\avoidradius{\avoidneck},
+    side/.store in=\avoidside, side=0,
+    left/.style={side=1},
+    right/.style={side=-1},
+  /tikz/.cd,
+  % the main style
+  avoid/.style={/avoid/.cd,#1,/tikz/.cd, % set the varaibles
+    to path={
+      \tikzmathextra{
+        point \p; % points
+        real \a; % angles (in degree)
+        \p{start} = (\tikztostart);
+        \p{target} = (\tikztotarget);
+        \p{pole} = \avoidpole; % \avoidpole is like (A) or (1,0)
+        \p{projection} = (\p{start})!(\p{pole})!(\p{target});
+        if (abs(\px{projection}-\px{pole}) + abs(\py{projection}-\py{pole})) < \avoidonaxeprecision then {
+          % if the pole is on the main axe (left and right options are valid)
+          \p{first base} = (\p{projection})!\avoidradius!(\p{start});
+          \a{start} = atan2(\py{start}-\py{projection},\px{start}-\px{projection});
+          if \avoidside >= 0 then {
+            \a{target} = \a{start}-180; % left
+          } else {
+            \a{target} = \a{start}+180; % right
+          };
+          if (abs(\px{first base}-\px{start}) + abs(\py{first base}-\py{start})) > \avoidpointprecision then {
+            {\insertpath{-- (\p{first base})}};
+          };
+          {\insertpath{arc(\a{start}:\a{target}:\avoidradius)}};
+        } else {
+          % if pole outside of the main axe (left and right options are useless)
+          \sameasneck = abs(veclen(\px{target}-\px{start},\py{target}-\py{start})-\avoidneck) < \avoidpointprecision;
+          if \sameasneck then {
+            % if |\p{target}-\p{start}| ~= \avoidneck
+            \p{first base} = (\p{start});
+            \p{second base} = (\p{target});
+          }
+          else{
+            \p{first base} = (\p{projection})!\avoidneck/2!(\p{start});
+            \p{second base} = (\p{projection})!\avoidneck/2!(\p{target});
+          };
+          \p{neck vector} = (\p{pole})!sqrt((\avoidradius)^2-(\avoidneck/2)^2)!(\p{projection})-(\p{projection});
+          \p{first on circle} = (\p{first base}) + (\p{neck vector});
+          \p{second on circle} = (\p{second base}) + (\p{neck vector});
+          \a{start} = atan2(\py{first on circle}-\py{pole},\px{first on circle}-\px{pole});
+          \a{target} = atan2(\py{second on circle}-\py{pole},\px{second on circle}-\px{pole});
+          if abs(\a{start}-\a{target}) < 180 then {
+            if \a{start} < \a{target} then {
+              \a{start} = \a{start} + 360;
+            }
+            else {
+              \a{target} = \a{target} + 360;
+            };
+          };
+          if not \sameasneck then {
+            {\insertpath{-- (\p{first base})}};
+          };
+          {\insertpath{-- (\p{first base}) -- (\p{first on circle}) arc(\a{start}:\a{target}:\avoidradius)}};
+          if not \sameasneck then {
+            {\insertpath{-- (\p{second base})}};
+          };
+        };
+      }% end tikzmathextra
+      --(\tikztotarget) \tikztonodes
+    }% end to path
+  }% end avoid/.style
+}
+
+
+
+
