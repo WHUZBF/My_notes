@@ -34,7 +34,7 @@
 \usetikzlibrary{decorations.pathreplacing} % tikz画大括号
 \usetikzlibrary{arrows.meta} % tikz画各种箭头
 \usetikzlibrary{patterns}  % 条纹
-\tikzset{elegant/.style={smooth,thick,samples=50,cyan}}
+\tikzset{elegant/.style={smooth,thick,samples=50,cyan}} % 新建一种绘图样式 
 \usepackage[]{newtxmath}
 \usepackage[]{bbm}
 \usepackage[]{relsize}
@@ -51,6 +51,7 @@
 \usepackage{epigraph} % 章节引用名人名言
 \usepackage{floatrow}
 \usetikzlibrary{avoidpath}% Github上面的一个绘制复变函数积分围道的tikz宏包
+\usepackage{xpinyin} % 汉语拼音注音
 
 \floatsetup{heightadjust=all, floatrowsep=columnsep}
 \newfloatcommand{figurebox}{figure}[\nocapbeside][\dimexpr(\textwidth-\columnsep)/2\relax]
@@ -3406,7 +3407,7 @@
     \end{proposition}
     我们之前说的$\psi_\pm$的对称化构造是上述假设的特殊形式。
 
-    \section{原子}
+    \section{原子轨道}
     我们现在来考虑一个一般的中性原子, 原子数为$Z$。注意, 由于核外电子质量远小于原子核的质量, 所以我们下面的讨论中可以认为原子核就是不动的, 电子受一个稳定的
     有心势场作用。我们写下核外电子体系的哈密顿量：
     \begin{equation}
@@ -4804,6 +4805,10 @@
 	
 	费曼路径积分来解决一般的量子力学问题那简直是杀鸡用牛刀，不过量子场论没了它还是真不行。
 	
+	\subsection{再谈AB效应}
+	前面我们第四章纯粹使用薛定谔方程和规范不变性解释了这个问题，而这个问题考虑的是电子走两个不同的路径，最终结果根据路径积分天然的就应该是这两个路径的叠加，我们再用路径积分讨论一下两条路径之间的干涉效应。
+	
+	曾谨言书，有空再补
 	
     \chapter{定态微扰论}
     理论上讲, 对于任何一个量子力学问题, 我们只要求解出来它的薛定谔方程问题就差不多解决了。但是从$\S$5.2中我们就发现这样做对于绝大多数情况下是不可行的, 比如氢原子我们
@@ -6333,7 +6338,7 @@
 		计算的结果是经典情况的四倍！
 	\end{example}
 	分波法的计算非常冗杂，能解析计算的例子不多，还有一个比较有意思的例子是球形$\delta$势阱：
-	\[V(r)=\delta(r-a)\]
+	\[V(r)=\alpha\delta(r-a)\]
 	球内和球外都是$V(r)=0$，故解的形式都是\ref{eq:11.11}，不过对于球内问题$a_\ell=0$\footnote{$h^{(1)}_\ell(0)\to\infty$}，然后再根据$r=a$处波函数的连续性以及$r=a$处波函数左右两侧导数之间的关系\footnote{recall $\S 2.5.2$}定系数。
 	
 	从上面的例子也可以看出分波法其实尤其适用于低能散射情况，经典物理图像就是粒子能量相对于势能比较小，散射角比较大。因为\ref{eq:11.9}毕竟是关于$k$的级数形式，那么$ka\approx 0$的时候就可以只取前几项，高阶项扔掉，这样计算起来就比较简洁而且近似的也很好。接下来我们会讲Born近似，尤其适用于高能粒子散射。\footnote{当然这里说的高能指的是非相对论的高能，否则就要去玩费曼图了。}
@@ -6383,36 +6388,544 @@
 	那我们现在用相移具体分析一下散射过程，注意到$r$非常大时：
 	$$j_\ell(kr)\approx \frac{1}{2kr}\left[(-i)^{\ell+1}e^{ikr}+i^{\ell+1}e^{-ikr}\right]$$
 	代入$\psi^{(\ell)}_i$知：
-	\[\psi^{(\ell)}_i(r,\theta)\approx A\frac{2\ell+1}{2ikr}\left[e^{ikr}-(-1)^\ell e^{ikr}\right]P_\ell(\cos\theta)\]
+	\[\psi^{(\ell)}_i(r,\theta)\approx A\frac{2\ell+1}{2ikr}\left[e^{ikr}-(-1)^\ell e^{-ikr}\right]P_\ell(\cos\theta)\]
 	根据前面的分析上面式子的后一项是向内的球面入射波，那个不用管，要紧的是前面一项向外的球面反射波，会出现相移，所以历经散射上式改写为：
 	\begin{equation}
 		\begin{aligned}
-		\psi^{(\ell)}(r,\theta)&\approx A\frac{2\ell+1}{2ikr}\left[e^{i(kr+2\delta)}-(-1)^\ell e^{ikr}\right]P_\ell(\cos\theta)\\
+		\psi^{(\ell)}(r,\theta)&\approx A\frac{2\ell+1}{2ikr}\left[e^{i(kr+2\delta)}-(-1)^\ell e^{-ikr}\right]P_\ell(\cos\theta)\\
 		&=A\left\{\frac{2\ell+1}{2ikr}\left[e^{ikr}-(-1)^\ell e^{-ikr}\right]+\frac{2\ell+1}{r}e^{ikr}\left[\frac{1}{2ik}(e^{2\delta_\ell i}-1)\right]\right\}P_\ell(\cos\theta)
 		\end{aligned}
 	\end{equation}	
 	再根据$j_\ell,h_\ell$的渐进形式稍作计算可以得到\ref{eq:11.11}在$r$非常大时候的渐进形式：
 	\[\psi^{(\ell)}(r,\theta)\approx A\left\{\frac{2\ell+1}{2ikr}\left[e^{ikr}-(-1)^\ell e^{-ikr}\right]+\frac{2\ell+1}{r}e^{ikr}a_\ell\right\}P_\ell(\cos\theta)\]
 	对比上面两个式子，这说明:
-	\[a_\ell=\frac{1}{2ik}(e^{2\delta_\ell i}-1)=\frac{1}{k}e^{i\delta_\ell}\sin\delta_\ell\]
+	\begin{equation}
+		a_\ell=\frac{1}{2ik}(e^{2\delta_\ell i}-1)=\frac{1}{k}e^{i\delta_\ell}\sin\delta_\ell
+	\end{equation}
 	根据定义即得：
-	\[f(\theta)=\frac{1}{k} \sum_{\ell=0}^{\infty}(2 \ell+1) e^{i \delta_{\ell}} \sin \left(\delta_{\ell}\right) P_{\ell}(\cos \theta)\]
-	\[\sigma_T=\frac{4 \pi}{k^{2}} \sum_{\ell=0}^{\infty}(2 \ell+1) \sin ^{2}\left(\delta_{\ell}\right) \]
+	\begin{equation}
+		\label{eq:11.14}
+		f(\theta)=\frac{1}{k} \sum_{\ell=0}^{\infty}(2 \ell+1) e^{i \delta_{\ell}} \sin \left(\delta_{\ell}\right) P_{\ell}(\cos \theta)
+	\end{equation}
+	\begin{equation}
+		\label{eq:11.15}
+		\sigma_T=\frac{4 \pi}{k^{2}} \sum_{\ell=0}^{\infty}(2 \ell+1) \sin ^{2}\left(\delta_{\ell}\right) 
+	\end{equation}
 	
 	这有什么意义？最终看起来不就是对于各向同性势场施加了一个参数$a_\ell$的换元么？首先，这个结果从式子上看更容易从物理上解释，也就是物理图像更加清晰，其次从计算上来看，原先我们面对的是一个复数$a_\ell$，现在面对的是一个实数$\delta_\ell$，简化了一些计算量。
 	
 	\begin{example}{求解实例}
-		d
+		对于球形$\delta$势阱，对于$\ell=0$\footnote{也常常称为S波，因为具有球对称性，第四章我们讲过这对应化学里面说的原子的s轨道。}partial wave.求解对应的相移$\delta_0$.
+		
+		着重看径向方程，在$V=0$处$u(r)$都具有行波解：
+		\begin{equation*}
+			\begin{aligned}
+				&r>a: Ae^{ikr}+Be^{-ikr}\\
+				&r<a: Ce^{ikr}+De^{-ikr}
+			\end{aligned}
+		\end{equation*}
+		所有的行波都会在$r=0$处完全反射，所以最终在$r>a$外肯定有$|B|=|A|$，而且由于对于$r<a$的部分有$u(0)=0$，所以：\footnote{这里系数的含义和上面不同，只是偷个懒用一样的符号}
+		\begin{equation*}
+			\begin{aligned}
+				&r>a: A\left(e^{ikr}-e^{-i(kr+2\delta)}\right)=\underbrace{2ie^{-i\delta}A}_{A^\prime}\sin(kr+\delta)\\
+				&r<a: B\sin (kr)
+			\end{aligned}
+		\end{equation*}
+		由连续性：$u(a^-)=u(a^+)\Rightarrow A^\prime\sin(ka+\delta)=B\sin(ka)$
+		
+		\setlength\parindent{2em}径向方程两边在$a$的邻域内积分可知：$u^\prime(a^+)-u^\prime(a^-)=\frac{\beta}{a}u(a)$，其中$\beta\equiv \frac{2m\alpha a}{\hbar^2}$，代入$u(r)$得到：
+		\[A^\prime k\cos(ka+\delta)-Bk\cos(ka)=\frac{\beta}{a}A^\prime\sin(ka+\delta)\]
+		两式联立，最终得到：
+		\[\delta _0=\cot^{-1}\left[\frac{\beta}{ka}+\cot(ka)\right]-ka= -\cot^{-1}\left[\cot(ka)+\frac{ka}{\beta\sin^2(ka)}\right]\]
 	\end{example}
 	
 	最后总结一下这一节，最重要的就是量子力学中微分散射截面的定义，薛定谔方程在$r\to\infty$处的渐进解很好求，我们这一节就是直接莽上，教你利用渐进解边界条件去解薛定谔方程。另外我们说了本节内容无法处理量子力学中的Rutherford散射，下一节介绍的Born近似方法将会计算这一问题。
 	
 	\section{定态散射形式化理论}
+	形式化理论在计算上不一定更加方便，但是它能够让计算变得程序化，不像前面分波法那样无脑解方程。而且形式理论学了之后方便服务于量子场论中继续计算微分散射截面。
 	\subsection{Lippmann-Schwinger方程}
+	薛定谔定态方程是一个微分方程，对于入射波矢为$k$的粒子，可以写为如下形式：
+	\[\frac{\hbar^2}{2m}\left(\nabla^2+k^2\right)\psi(\mathbf{r})=V(\mathbf{r})\psi(\mathbf{r})\]
+	设函数$G_0(\mathbf{r},k^2)$\footnote{在不引起误会时简记为$G_0(\mathbf{r})$}满足下面方程：
+	\begin{equation}
+		\label{eq:11.16}
+		\frac{\hbar^2}{2m}\left(\nabla^2+k^2\right)G_0(\mathbf{r})=\delta(\mathbf{r})
+	\end{equation}
+	那么原先的微分方程就转变为了下面的积分方程：
+	\begin{equation}
+		\label{eq:11.17}
+		\psi(\mathbf{r})=\psi_0(\mathbf{r})+\int \mathrm{d}^3r^\prime G_0(\mathbf{r}-\mathbf{r}^\prime) V(\mathbf{r}^\prime)\psi(\mathbf{r}^\prime)
+	\end{equation}
+	其中$\psi_0(\mathbf{r})$相当于积分常数一般的存在，是满足下面方程的平面波解：
+	\[\frac{\hbar^2}{2m}\left(\nabla^2+k^2\right)\psi_0(\mathbf{r})=0\]
 	
+	这其实就是在用不含时格林函数法解偏微分方程。我们现在所做的只是把薛定谔方程变了一种形式而已，下面我们具体求出格林函数。
+	
+	\ref{eq:11.16}两边同时对$x$进行傅里叶变换得到：
+	\[\frac{\hbar^2}{2m}\left(k^2-{k^\prime}^2\right)\tilde{G}_0(\mathbf{k}^\prime)=1\]
+	然后再用逆变换变回来：
+	\begin{equation}
+		\label{eq:11.18}
+		\begin{aligned}
+			G_0(\mathbf{r})&=\mathscr{F}^{-1}\left[\tilde{G}_0(\mathbf{k}^\prime)\right]=\frac{1}{(2\pi)^2}\frac{2m}{\hbar^2}\int\mathrm{d}^3k^\prime\frac{e^{i\mathbf{k}^\prime\cdot\mathbf{r}}}{k^2-{k^\prime}^2}\\
+			&=\frac{1}{(2\pi)^2}\frac{2m}{\hbar^2}\int_0^{2\pi}\mathrm{d}\varphi\int_0^\pi\mathrm{d}\theta\sin\theta\int_0^{+\infty}\mathrm{d}k^\prime{k^\prime}^2\frac{e^{i{k}^\prime{r}\cos\theta}}{k^2-{k^\prime}^2}\\
+			&=\frac{m}{\pi^2\hbar^2r}\int_0^{+\infty}\mathrm{d}k^\prime\frac{{k^\prime}}{k^2-{k^\prime}^2}\sin k^\prime r\\
+			&=\frac{m}{2\pi^2\hbar^2r}\int_{-\infty}^{+\infty}\mathrm{d}k^\prime\frac{{k^\prime}}{k^2-{k^\prime}^2}\sin k^\prime r\\
+			&=\frac{m}{2\pi^2\hbar^2r}\operatorname{Im}\left[\int_{-\infty}^{+\infty}\mathrm{d}k^\prime\frac{{k^\prime}}{k^2-{k^\prime}^2}e^{ik^\prime r}\right]
+		\end{aligned}
+	\end{equation}
+	最后一步计算需要使用留数定理绕开$k^\prime=\pm k$两个极点进行计算，我们取下面\ref{fig:11.3.a}和\ref{fig:11.3.b}两种围道：
+	\begin{figure}[h]
+		\centering
+		\subfigure[$G_0^+$]{\label{fig:11.3.a}
+			\begin{tikzpicture}[thick]
+				\draw[->,thick] (-2.2,-0.05) -- (2.2,-0.05) coordinate (xaxis);
+				\draw[->,thick] (0,-0.4) -- (0,2.3) coordinate (yaxis);
+				\draw[with arrows at positions={25mm,55mm,95mm},red]
+				(-2,0) 
+				to[avoid={pole={(-1,0)},radius=2mm}] 
+				(0,0)
+				to[avoid={pole={(1,0)},radius=2mm,right}]
+				(2,0)
+				arc(0:180:2) -- cycle;
+				\fill[blue] (-1,-0.05) circle (1.5pt);
+				\fill[blue] (1,-0.05) circle (1.5pt);
+				\node[below] at (xaxis) {$\operatorname{Re}[k^\prime]$};
+				\node[left] at (yaxis) {$\operatorname{Im}[k^\prime]$};
+				\node[below,blue] at (-1,-0.05) {$-k$};
+				\node[above,blue] at (1,-0.05) {$k$};
+			\end{tikzpicture}}
+		\hspace{0.01\linewidth}
+		\subfigure[$G_0^-$]{\label{fig:11.3.b}
+			\begin{tikzpicture}[thick]
+				\draw[->,thick] (-2.2,-0.05) -- (2.2,-0.05) coordinate (xaxis);
+				\draw[->,thick] (0,-0.4) -- (0,2.3) coordinate (yaxis);
+				\draw[with arrows at positions={25mm,55mm,95mm},red]
+				(-2,0) 
+				to[avoid={pole={(-1,0)},radius=2mm,right}] 
+				(0,0)
+				to[avoid={pole={(1,0)},radius=2mm}]
+				(2,0)
+				arc(0:180:2) -- cycle;
+				\fill[blue] (-1,-0.05) circle (1.5pt);
+				\fill[blue] (1,-0.05) circle (1.5pt);
+				\node[below] at (xaxis) {$\operatorname{Re}[k^\prime]$};
+				\node[left] at (yaxis) {$\operatorname{Im}[k^\prime]$};
+				\node[above,blue] at (-1,-0.05) {$-k$};
+				\node[below,blue] at (1,-0.05) {$k$};
+			\end{tikzpicture}}
+		\vfill
+		\subfigure[$G_0^+$]{\label{fig:11.3.c}
+			\begin{tikzpicture}[thick]
+				\draw[->,thick] (-2.2,-0) -- (2.2,-0) coordinate (xaxis);
+				\draw[->,thick] (0,-0.4) -- (0,2.3) coordinate (yaxis);
+				\draw[with arrows at positions={25mm,55mm,95mm},red]
+				(-2,0) 
+				to
+				(2,0)
+				arc(0:180:2) -- cycle;
+				\fill[blue] (-1,-0.15) circle (1.5pt);
+				\fill[blue] (1,+0.15) circle (1.5pt);
+				\node[below] at (xaxis) {$\operatorname{Re}[k^\prime]$};
+				\node[left] at (yaxis) {$\operatorname{Im}[k^\prime]$};
+				\node[below,blue] at (-1,-0.15) {$-k-i\varepsilon$};
+				\node[above,blue] at (1,+0.15) {$k+i\varepsilon$};
+			\end{tikzpicture}}
+		\hspace{0.01\linewidth}
+		\subfigure[$G_0^-$]{\label{fig:11.3.d}
+			\begin{tikzpicture}[thick]
+				\draw[->,thick] (-2.2,-0) -- (2.2,-0) coordinate (xaxis);
+				\draw[->,thick] (0,-0.4) -- (0,2.3) coordinate (yaxis);
+				\draw[with arrows at positions={25mm,55mm,95mm},red]
+				(-2,0) 
+				to
+				(2,0)
+				arc(0:180:2) -- cycle;
+				\fill[blue] (-1,0.15) circle (1.5pt);
+				\fill[blue] (1,-0.15) circle (1.5pt);
+				\node[below] at (xaxis) {$\operatorname{Re}[k^\prime]$};
+				\node[left] at (yaxis) {$\operatorname{Im}[k^\prime]$};
+				\node[above,blue] at (-1,0.15) {$-k+i\varepsilon$};
+				\node[below,blue] at (1,-0.15) {$k-i\varepsilon$};
+			\end{tikzpicture}}
+		\label{fig:11.3}
+		\caption{格林函数计算}
+	\end{figure}
+	两种围道计算得到的$G_0$为：
+	\begin{equation}
+		\boxed{
+		G_0^\pm(r,k^2)=-\frac{m}{2\pi\hbar^2}\frac{e^{\pm ikr}}{r}}
+	\end{equation}
+	当然你也可以使用其它的围道，例如下面\ref{fig:11.14}两个去计算$G_0$，得到的是$G_0^\pm$的线性组合。
+	\begin{figure}[h]
+		\centering
+		\subfigure[$G_0^++G_0^-$]{\label{fig:11.4.a}
+			\begin{tikzpicture}[thick]
+				\draw[->,thick] (-2.2,-0.05) -- (2.2,-0.05) coordinate (xaxis);
+				\draw[->,thick] (0,-0.4) -- (0,2.3) coordinate (yaxis);
+				\draw[with arrows at positions={25mm,55mm,95mm},red]
+				(-2,0) 
+				to[avoid={pole={(-1,0)},radius=2mm}] 
+				(0,0)
+				to[avoid={pole={(1,0)},radius=2mm}]
+				(2,0)
+				arc(0:180:2) -- cycle;
+				\fill[blue] (-1,-0.05) circle (1.5pt);
+				\fill[blue] (1,-0.05) circle (1.5pt);
+				\node[below] at (xaxis) {$\operatorname{Re}[k^\prime]$};
+				\node[left] at (yaxis) {$\operatorname{Im}[k^\prime]$};
+				\node[below,blue] at (-1,-0.05) {$-k$};
+				\node[below,blue] at (1,-0.05) {$k$};
+		\end{tikzpicture}}
+		\hspace{0.01\linewidth}
+		\subfigure[$G_0^+-G_0^-$]{\label{fig:11.4.b}
+			\begin{tikzpicture}[thick]
+				\draw[->,thick] (-2.2,-0.05) -- (2.2,-0.05) coordinate (xaxis);
+				\draw[->,thick] (0,-0.4) -- (0,2.3) coordinate (yaxis);
+				\draw[with arrows at positions={25mm,55mm,95mm},red]
+				(-2,0) 
+				to[avoid={pole={(-1,0)},radius=2mm,right}] 
+				(0,0)
+				to[avoid={pole={(1,0)},radius=2mm,right}]
+				(2,0)
+				arc(0:180:2) -- cycle;
+				\fill[blue] (-1,-0.05) circle (1.5pt);
+				\fill[blue] (1,-0.05) circle (1.5pt);
+				\node[below] at (xaxis) {$\operatorname{Re}[k^\prime]$};
+				\node[left] at (yaxis) {$\operatorname{Im}[k^\prime]$};
+				\node[above,blue] at (-1,-0.05) {$-k$};
+				\node[above,blue] at (1,-0.05) {$k$};
+		\end{tikzpicture}}
+		\label{fig:11.14}
+		\caption{其它围道}
+	\end{figure}
+	
+	格林函数的这种不确定性正对应\ref{eq:11.17}中的$\psi_0$，相当于积分常数。
+	
+	格林函数还有一种比较赖皮的方式，\footnote{下面的计算中沿用$E\equiv \hbar^2k/2m$}前面的积分不是有两个奇点在积分路径上面么？现在我们想象先把两个奇点移开实轴，也有几种移开方式，根据我们积分围道的选取，对应的移开方式应该是\ref{fig:11.3.c}和\ref{fig:11.3.b}。然后正常积分，最后我们再把奇点移回去，取$\varepsilon\to 0^+$，那么根据\ref{eq:11.18}的第一个等式，格林函数可以用下面的积分式表述：
+	\begin{equation}
+		\boxed{
+			G^{\pm}_0\left(\mathbf{r},k^2\right)=\lim_{\varepsilon\to 0^+}\frac{1}{(2\pi)^3}\int \mathrm{d}^3k^\prime \frac{e^{i\mathbf{k}^\prime\cdot\mathbf{r}}}{E-E^\prime\pm i\varepsilon}
+		}
+	\end{equation}
+	也常常写成下面的双元形式：
+	\begin{equation}
+		\label{eq:11.21}
+		\boxed{
+		G^{\pm}_0\left(\mathbf{r}-\mathbf{r}^\prime,k^2\right)=\lim_{\varepsilon\to 0^+}\frac{1}{(2\pi)^3}\int \mathrm{d}^3k^\prime \frac{e^{i\mathbf{k}^\prime\cdot\left(\mathbf{r}-\mathbf{r}^\prime\right)}}{E-E^\prime\pm i\varepsilon}
+	}
+	\end{equation}
+	今后一律不再写极限符号，并规定运算时一直带着$\varepsilon$，最后再取$\varepsilon\to 0^+$。
+	
+	代入\ref{eq:11.17}得到完整的薛定谔方程积分形式：
+	\begin{equation}
+		\label{eq:11.22}
+		\boxed{\psi^{\pm}(\mathbf{r})={\psi _0}({\mathbf{r}}) - \frac{m}{{2\pi {\hbar ^2}}}\int {\mathrm{~d}^3} {\mathbf{r'}}\frac{{{e^{ \pm ik|{\mathbf{r}} - {\mathbf{r'}}|}}}}{{|{\mathbf{r}} - {\mathbf{r'}}|}}V({\mathbf{r'}}){\psi ^ + }({\mathbf{r'}})}
+	\end{equation}
+	在我们所讨论的散射问题下，根据初始条件，显然$\psi_0(\mathbf{r})$代表的就是入射平面波$e^{ikz}$。
+
+	但不要以为我们直接解出了薛定谔方程的积分形式解，因为积分号里面也有$\psi$本身，不过这个方程天然适用迭代解法，后面再说。这个方程也称为位形表象下的Lippmann-Schiwinger方程。
+	
+	两个格林函数带来了两个线性无关解，这两个解是否都具有物理意义呢？我们看一下方程\ref{eq:11.22}在$r$非常大时候的渐进解。
+	
+	定义$\mathbf{n}=\mathbf{r}/r$，散射振幅最终是$\mathbf{r}$的函数，这里$\mathbf{n}$的意义可以看作是散射粒子的方向向量。
+	
+	首先注意到下面几个式子：
+	\begin{equation}
+		\begin{aligned}
+			|\mathbf{r}-\mathbf{r}^\prime|&\approx r-\mathbf{n}\cdot\mathbf{r}^\prime+\frac{1}{r}(\mathbf{n}\times\mathbf{r}^\prime)+\cdots\\
+			e^{\pm ik|\mathbf{r}-\mathbf{r}^\prime|}&\approx e^{\pm ikr}e^{\mp ik \mathbf{n}\cdot\mathbf{r}^\prime}\left[1\pm\frac{ik}{2r}(\mathbf{n}\times\mathbf{r}^\prime)^2+\cdots\right]\\
+			\frac{1}{|\mathbf{r}-\mathbf{r}^\prime|}&\approx\frac{1}{r}\left[1+\frac{\mathbf{n}\cdot\mathbf{r^\prime}}{r}+\cdots\right]
+		\end{aligned}
+	\end{equation}
+
+	代入\ref{eq:11.22}并保留到一阶得到:\footnote{这里的归一化系数为什么是$1/(2\pi)^{3/2}$？因为根据\ref{eq:11.29}可以得知那里的$\Braket{\psi^\pm_{\mathbf{k}^\prime}|\psi^\pm_{\mathbf{k}}}=\Braket{\mathbf{k}^\prime|\mathbf{k}}=\delta(\mathbf{k}^\prime-\mathbf{k})$，是正交归一的解，这里取的归一化系数刚好可以和\ref{eq:11.29}对应。}
+	\begin{equation}
+		\psi^+(\mathbf{r})\approx \frac{1}{(2\pi)^{3/2}}\left[e^{ikz}+f(\theta,\varphi)\frac{e^{ikr}}{r}\right]
+	\end{equation}
+	其中：
+	\begin{equation}
+		\label{eq:11.25}
+		f(\theta,\varphi)=-\frac{\sqrt{2\pi}m}{\hbar^2}\int\mathrm{d}^3r^\prime e^{-i\mathbf{k}_f\cdot\mathbf{r}^\prime}V(\mathbf{r}^\prime)\psi^+(\mathbf{r^\prime})\quad (\mathbf{k_f}\equiv k\mathbf{n})
+	\end{equation}
+	看似\ref{eq:11.22}得到了简并的两个解，但是另一个解：
+	\[\psi^-(\mathbf{r})\approx \frac{1}{(2\pi)^{3/2}}\left[e^{ikz}+f^\prime(\theta,\varphi)\frac{e^{-ikr}}{r}\right]\]
+	
+	\uwave{在目前定态散射看来是没有物理意义的}，不是前面描述的散射问题的解，前面的平面波项也便无法理解为入射波，其用处将会在含时散射问题中显现。后面的讨论中我们也会$\pm$一起讨论，将有助于分析的连贯性，但是定态散射只用到$+$。
+
+	继续讨论之前我们先规定一下符号，首先与$k$相关的$E,p$这些他们的上下标是相互对应的。讨论散射问题时我们并不会在动量或者坐标表象下讨论，而是在$\ket{\mathbf{k}}$表象下，其也是$\hat{\mathbf{P}}$的本征矢，和动量表象之间的关系为：
+	\[\ket{\mathbf{k}}\equiv\hbar^{\frac{3}{2}}\ket{\mathbf{p}}\quad\mathbf{p}\equiv\hbar\mathbf{k}\]
+	同样满足正交归一关系。
+	
+	直接考虑矢量形式的定态薛定谔方程：\footnote{为了避免后面推导混淆，我们带上了下标$\mathbf{k}$，表示入射态$\ket{\mathbf{k}}$所导致的散射态。}
+	\begin{equation}
+		\hat H\ket{\psi_\mathbf{k}}=E\ket{\psi_\mathbf{k}}
+	\end{equation}
+	$\hat{H}_0\equiv \hat{\mathbf{p}}^2/2m$，显然入射态是其本征矢：
+	\begin{equation}
+		\label{eq:11.27}
+		\hat{H}_0\ket{\mathbf{k}}=E\ket{\mathbf{k}}
+	\end{equation}
+	然后两式相减得到：
+	\begin{equation}
+		\label{eq:11.28}
+		\left(E-\hat{H}_0\right)\left(\ket{\psi_\mathbf{k}}-\ket{\mathbf{k}}\right)=V\ket{\psi_\mathbf{k}}
+	\end{equation}
+
+	我们这么做的目的是把入射态从最终的散射态中分离出来，现在倘若我们知道$E-\hat{H}_0$的逆算符$\frac{1}{E-\hat{H}_0}$，我们便得知了方程的解。\footnote{这一做法其实就是格林函数的思想，一切PDE都可以看作是希尔伯特空间上的算符方程，格林函数法就是去找逆算符。Hassani的数学物理课本就是照着这个思路去讲PDE的。}
+	
+	但是这个逆算符存在吗？直接从\ref{eq:11.27}就可以看出$E-\hat{H}_0$是有$0$这个本征值的，所以其逆其实并没有完好的定义，因为我们要确定一个算符最直接的方式就是看其作用在一组基底下是啥情况，这里我们就取$\ket{\mathbf{k}}$表象，但显然：
+	\[\frac{1}{E-\hat{H}_0}\ket{\mathbf{k}}\to\infty\]
+	
+	不过也还好，也就对那些能量为$E$的入射态会发散，其它的别的能量的入射态都好好的。所以物理学家又想出了个逆天的办法，定义其逆算符为：\footnote{其定义依赖于$E$的，这是一簇算符}
+	\begin{equation}
+		\boxed{
+		G_0^{\pm}(E)\equiv\frac{1}{E-\hat{H}_0\pm i\varepsilon}}
+	\end{equation}
+	称为\textbf{自由格林算符}，\ref{eq:11.28}便可写为如下形式：
+	\begin{equation}
+		\label{eq:11.29}
+		\boxed{
+		\ket{\psi^\pm_{\mathbf{k}}}=\ket{\mathbf{k}}+\frac{1}{E-\hat{H}_0\pm i\varepsilon}V\ket{\psi^\pm_{\mathbf{k}}}
+	}
+	\end{equation}
+	这便是\textbf{Lippmann-Schiwinger方程}，等价于薛定谔定态方程。同样，定态散射我们只用取$\psi^+$作为解。
+	
+	我们还可以把\ref{eq:11.28}写成如下形式：
+	\begin{equation}
+	\left(E-\hat{H}_0\pm i\varepsilon\right)\left(\ket{\psi_\mathbf{k}}-\ket{\mathbf{k}}\right)=V\ket{\psi_\mathbf{k}}
+	\end{equation}
+	得到：
+	\begin{equation}
+		\label{eq:11.31}
+		\boxed{
+			\ket{\psi^\pm_{\mathbf{k}}}=\ket{\mathbf{k}}+\frac{1}{E-\hat{H}\pm i\varepsilon}V\ket{\mathbf{k}}
+		}
+	\end{equation}
+	上面的方程是另一种形式的Lippmann-Schwinger方程，\ref{eq:11.29}和\ref{eq:11.31}在理论分析中都有很大的作用。\textbf{全格林算符}由下式定义：
+	\begin{equation}
+		\boxed{
+			G^{\pm}(E)\equiv\frac{1}{E-\hat{H}\pm i\varepsilon}}
+	\end{equation}
+	
+	注意$G_0$在问题解出之前是已知的，但在问题还没解出来之前我们对$\hat{H}$的本征值本征矢这些一无所知，所以对$G$也就一无所知。所以\ref{eq:11.29}和\ref{eq:11.31}都不会帮助我们直接解出方程，但是对于理论分析会简化很多。
+	
+	我们来看下在位置表象下自由格林算符是啥？位置表象是连续的，所以算符的矩阵是一个连续的矩阵，之前我们在\ref{eq:11.21}中将格林函数写成双变量形式就是为了和这里的矩阵元对应。
+	\begin{equation}
+		\begin{aligned}
+			\Braket{\mathbf{r}|G_0^\pm|\mathbf{r}^\prime}&=\int \mathrm{d}^3k^\prime \braket{\mathbf{r}|\frac{1}{E-\hat{H}_0\pm i\varepsilon}|\mathbf{k}^\prime}\braket{\mathbf{k}^\prime|\mathbf{r}}\\
+			&=\int \mathrm{d}^3k^\prime\frac{1}{E-E^\prime\pm i\varepsilon} \braket{\mathbf{r}|\mathbf{k}^\prime}\braket{\mathbf{k}^\prime|\mathbf{r}}
+		\end{aligned}
+	\end{equation}
+	再注意到：
+	\[\braket{\mathbf{r}|\mathbf{k}^\prime}=\frac{1}{(2\pi)^{3/2}}e^{i\mathbf{k}^\prime\cdot\mathbf{r}}\]
+	
+	便回到了\ref{eq:11.21}，同样，对取位置表象便回到了\ref{eq:11.22}。具体计算上看，\ref{eq:11.21}更有优势，但理论分析上，用矢量形式的方程更方便。\footnote{学力学时我们就知道矢量形式的方程是最有用的，因为它不依赖于参考系的选取，形式具有协变性，具体计算的时候再去建立方便的坐标系。}
+	
+	正负两个格林算符之间是厄米共轭关系：\footnote{之后不加说明，等式两边都是对同一个$E$}
+	\begin{equation}
+		(G_0^\pm)^\dagger=G_0^\mp \quad (G^\pm)^\dagger=G^\mp
+	\end{equation}
+	而且$\ket{\mathbf{k}}$是$G_0$的本征矢，$\ket{\psi_\mathbf{k}}$是$G$的本征矢
+	\subsubsection*{$\star$格林算符的Lippmann-Schwinger方程}
+	\begin{equation}	
+		\boxed{
+		\begin{aligned}
+		&G^\pm=G_0^\pm+G_0^\pm V G^\pm\\
+			&G^\pm=G_0^\pm+G^\pm V G_0^\pm
+		\end{aligned}}
+	\end{equation}
 	\subsection{T,S and $\Omega$}
+	\ref{eq:11.25}可以改写为：\footnote{第二个等号最简单的证法是利用后面的\ref{eq:11.39}和\ref{eq:11.40}}
+	\begin{equation}
+		f(\theta,\varphi)=-\frac{4\pi^2m}{\hbar^2}\braket{\mathbf{k}_f|V|\psi^+_{\mathbf{k}_i}}=-\frac{4\pi^2m}{\hbar^2}\braket{\psi^-_{\mathbf{k}_f}|V|\mathbf{k}_i}
+	\end{equation}
+  	定义\textbf{跃迁算符}$T$：
+  	\begin{equation}
+  		\boxed{T^{\pm}\ket{\mathbf{k}}=V\ket{\psi^\pm_{\mathbf{k}}}}
+  	\end{equation}
+  	则$\mathbf{k}_f$方向出射的散射振幅可以表达为矩阵元形式：
+  	\begin{equation}
+  		\label{eq:11.39}
+  		\boxed{f(\theta,\varphi)=-\frac{4\pi^2m}{\hbar^2}\braket{\mathbf{k}_f|T^+|\mathbf{k}_i}=-{4\pi^2\hbar m}\braket{\mathbf{p}_f|T^+|\mathbf{p}_i}}
+  	\end{equation}
+  	所以求散射振幅的问题变成了对$T$算符性质的研究。
+  	
+  	$T$算符有下面几个重要性质：
+  	\begin{equation}
+  		\label{eq:11.40}
+  		(T^{\pm})^\dagger=T^{\mp}
+  	\end{equation}
+    \begin{equation}
+    	\label{eq:11.41}
+    	{\color{red}
+    	T^{\pm}=V+VG_0^\pm T^\mp}
+    \end{equation}
+	\begin{equation}
+		\label{eq:11.42}
+		{\color{red}
+		T^{\pm}=V+VG^\pm TV}
+	\end{equation}
+	\begin{equation}
+		\label{eq:11.43}
+		G_0^\pm T^\pm=G^\pm V
+	\end{equation}
+	\begin{equation}
+		\label{eq:11.44}
+	T^\pm	G_0^\pm =VG^\pm 
+	\end{equation}
+	\begin{equation}
+		G^\pm=G_0^\pm+G_0^\pm T^\pm G_0^\pm
+	\end{equation}
 	
+	\ref{eq:11.41}和\ref{eq:11.42}称为$T$算符的Lippmann-Schwinger方程，是这些等式中最重要的两个，使用$V$左乘\ref{eq:11.29}和\ref{eq:11.31}即可得到。
+	
+	定义Møller(摩勒)算符$\Omega^{\pm}$为：
+	\begin{equation}
+		\boxed{\Omega^\pm\ket{\mathbf{k}}=\ket{\psi^\pm_{\mathbf{k}}}}
+	\end{equation}
+	但是要注意，两个Møller算符之间没有像\ref{eq:11.40}一样的关系，是彼此独立的两个算符。
+	
+	利用$\ket{\mathbf{k}}$的完备性关系式可以将Møller算符写成下面的形式：
+	\begin{equation}
+		\boxed{
+			\Omega^\pm=\int \mathrm{d}^3k\ket{\psi^\pm_{\mathbf{k}}}\bra{\mathbf{k}}
+		}
+	\end{equation}
+	其厄米共轭：
+	\begin{equation}
+			(\Omega^\pm)^\dagger=\int \mathrm{d}^3k\ket{\mathbf{k}}\bra{\psi^\pm_{\mathbf{k}}}
+	\end{equation}
+	\begin{equation}
+		\label{eq:11.49}
+		\begin{aligned}
+			(\Omega^\pm)^\dagger \Omega^\pm&=\int \mathrm{d}^3k\int \mathrm{d}^3k^\prime\ket{\mathbf{k}}\braket{\psi^\pm_{\mathbf{k}}|\psi^\pm_{\mathbf{k^\prime}}}\bra{\mathbf{k^\prime}}\\
+			&=\int \mathrm{d}^3k\int \mathrm{d}^3k^\prime\ket{\mathbf{k}}\delta(\mathbf{k}-\mathbf{k}^\prime)\bra{\mathbf{k^\prime}}\\
+			&=\int \mathrm{d}^3k\ket{\mathbf{k}}\bra{\mathbf{k}}\\
+			&=\mathbbm{1}
+		\end{aligned}
+	\end{equation}
+	但是：
+	\begin{equation}
+		\begin{aligned}
+			\Omega^\pm(\Omega^\pm)^\dagger &=\int \mathrm{d}^3k\int \mathrm{d}^3k^\prime \ket{\psi^\pm_{\mathbf{k^\prime}}}\braket{\mathbf{k^\prime}|\mathbf{k}}\ket{\psi^\pm_{\mathbf{k}}}\\
+			&=\int \mathrm{d}^3k \ket{\psi_\mathbf{k}}\bra{\psi_\mathbf{k}}
+		\end{aligned}
+	\end{equation}
+	$\hat H$的全体本征矢是有完备性的，但是$\hat H$不只有散射态$\ket{\psi}$，还有束缚态$\ket{\varphi}$。完备性关系应该是：
+	\[\int \mathrm{d}^3k \ket{\psi_\mathbf{k}}\bra{\psi_\mathbf{k}}+\sum_n \ket{\varphi_n}\bra{\varphi_n}=\mathbbm{1}\]
+	
+	所以\textbf{一般来说$\Omega$不是幺正算符！}，只有体系不含束缚态时是。
+	
+	但是我们可以定义$S$算符，也叫\textbf{散射算符}：
+	\begin{equation}
+		\boxed{S\equiv (\Omega^-)^\dagger\Omega^+}
+	\end{equation}
+	\ref{eq:11.49}在任何情况下都成立，所以任何情况下均成立：
+	\[S^\dagger S=SS^\dagger=\mathbbm{1}\]
+	也就是说散射算符任何情况下都是幺正算符。
+	
+	$\ket{\mathbf{k}}$表象下$S$和$T$的矩阵元之间有个非常非常重要的关系：
+	\begin{equation}
+		\begin{aligned}
+			S_{fi}&\equiv\braket{\mathbf{k}_f|S|\mathbf{k}_i}=\braket{\mathbf{k}_f| (\Omega^-)^\dagger\Omega^+|\mathbf{k}_i}\\
+			&=\braket{\psi^-_{\mathbf{k}_f}|\psi^+_{\mathbf{k}_i}}=\left[\bra{\mathbf{k}_f}+\bra{\mathbf{k}_f} V G^+(E_f)\right]\ket{\psi^+_{\mathbf{k}_i}}\\
+			&=\bra{\mathbf{k}_f}\left[\ket{\mathbf{k}_f}+G_0^+(E_i)V\ket{\psi^+_{\mathbf{k}_i}}\right]+\braket{\mathbf{k}_f|VG^+(E_f)|\psi^+_{\mathbf{k}_i}}\\
+			&=\braket{\mathbf{k}_f|\mathbf{k}_i}+\left[\frac{1}{E_i-E_f+i\varepsilon}+\frac{1}{E_f-E_i+i\varepsilon}\right]\braket{\mathbf{k}_f|V|\psi^+_{\mathbf{k}_i}}\\
+			&=\delta({\mathbf{k}_f-\mathbf{k}_i})-\frac{2i\varepsilon}{(E_i-E_f)^2+\varepsilon^2}\braket{\mathbf{k}_f|T^+|{\mathbf{k}_i}}
+		\end{aligned}
+	\end{equation}	
+	注意到下面的恒等式：
+	\begin{equation}
+		\lim_{\varepsilon\to 0}\frac{\varepsilon}{x^2+\varepsilon^2}=\pi\delta(x)
+	\end{equation}
+	最终结果用矩阵元可以写成：\footnote{有的教材也记$\delta_{fi}=\delta({\mathbf{k}_f-\mathbf{k}_i})$}
+	\begin{equation}
+		{\color{red}
+		\boxed{
+		S_{fi}=\delta({\mathbf{k}_f-\mathbf{k}_i})-2\pi i\delta(E_f-E_i) T^+_{fi}
+	}}
+	\end{equation}
+	直接用算符可以写成：
+	\begin{equation}
+		{\color{red}
+			\boxed{
+				S=\mathbbm{1}-2\pi i\delta(E_f-E_i) T^+
+		}}
+	\end{equation}
 	\subsection{Born近似}
+	Born近似的思想总结下来其实就是\textbf{迭代}两字。
+	
+	
+	\subsection{光学定理}
+	根据\ref{eq:11.14}和\ref{eq:11.15}可以得到下面的光学定理：\footnote{为啥叫光学定理？请移步至这篇论文：\DOI{10.1119/1.10324}}
+	\begin{equation}
+		\label{optical_theorem}
+		\boxed{
+		\sigma_T=\frac{4\pi}{k}\operatorname{Im}f(0)
+	}
+	\end{equation}
+	我们下面用前面发展的算符理论证明下面更一般的光学定理：\footnote{$|\mathbf{k}_i|=|\mathbf{k}_f|=k$，而且注意下面积分的意义不是全空间内积分，是在单位球面上积分。}
+	\begin{equation}
+		\boxed{
+		\int \mathrm{d}\Omega_{\hat{\mathbf {k}}^{\prime\prime}}f^*(\hat{\mathbf{k}}^{\prime\prime},\hat{\mathbf{k}}^\prime)f(\hat{\mathbf{k}}^{\prime\prime},\hat{\mathbf{k}})=\frac{4\pi}{k}\operatorname{Im}f(\hat{\mathbf{k}}^\prime,\hat{\mathbf{k}})}
+	\end{equation}
+	其中$f(\hat{\mathbf{k}}_f,\hat{\mathbf{k}}_i)$的意义为入射态$\ket{\mathbf{k}_i}$散射到$\mathbf{k}_f$方向的散射振幅。不难验证$\mathbf{k}^\prime=\mathbf{k}$即对应\ref{optical_theorem}.
+	
+	为符号简便，我们只证明$\mathbf{k}^\prime=\mathbf{k}$的情况，一般的情况的证明完全类似，换下符号便可。
+	
+	利用Lippmann-Schwinger方程可以得到：
+	\begin{equation}
+		\label{eq:11.2.4.3}
+		\begin{aligned}
+			\braket{\mathbf{k}|V|\psi^+}&=\left[\bra{\psi^+}-\bra{\psi^+}V\frac{1}{E-\hat{H}_0-i\varepsilon}\right]V\ket{\psi^+}\\
+			&=\braket{\psi^+|V|\psi^+}-\Braket{\psi^+|V\frac{1}{E-\hat{H}_0-i\varepsilon}V|\psi^+}\\
+			&=\braket{\psi^+|V|\psi^+}-\Braket{\mathbf{k}|T^-\frac{1}{E-\hat{H}_0-i\varepsilon}T^+|\mathbf{k}}
+		\end{aligned}
+	\end{equation}
+	两边同时取虚部，注意到第一项是实数：
+	\begin{equation}
+		\label{eq:11.2.4.4}
+		\begin{aligned}
+			\operatorname{Im}\braket{\mathbf{k}|V|\psi^+}&=-\operatorname{Im}\Braket{\mathbf{k}|T^-\frac{1}{E-\hat{H}_0-i\varepsilon}T^+|\mathbf{k}}\\
+			&=-\operatorname{Im}\int d^3k^\prime\braket{\mathbf{k}|T^-G_0^-(E)|\mathbf{k}^\prime} \braket{\mathbf{k}^\prime|T^+|\mathbf{k}}\\
+			&=	-\operatorname{Im}\int d^3k^\prime\frac{1}{E-E^\prime-i\varepsilon}\braket{\mathbf{k}|T^-|\mathbf{k}^\prime} \braket{\mathbf{k}^\prime|T^+|\mathbf{k}}\\
+		\end{aligned}
+	\end{equation}
+	
+	最后的计算需要将$\varepsilon\to 0^+$，注意到：\footnote{留数定理绕开一个单极点就可以证明。不过你可能对这些推导有一万个问号，记住，能用就好。}
+	\begin{equation}
+		\begin{aligned}
+			\lim_{\varepsilon\to 0^+} \left(\frac{1}{E-E^\prime-i\varepsilon}\right)&=\lim_{\varepsilon\to 0^+} \int_{-\infty}^{+\infty}\frac{\delta(E-E^{\prime\prime})}{E^{\prime\prime}-E^\prime-i\varepsilon}dE^{\prime\prime}\\
+			&=i\pi\delta(E-E^\prime)
+		\end{aligned}
+	\end{equation}
+
+	注意到跃迁矩阵元和散射振幅之间的关系，并继续用$T^+\ket{\psi^+}=V\ket{\psi^+}$代入\ref{eq:11.2.4.4}左边得到：
+	
+	\begin{equation}
+		\begin{aligned}
+			\operatorname{Im}f(\mathbf{k},\mathbf{k})&=\frac{\hbar^2}{4\pi m}\int d^3k^\prime\delta(E-E^\prime)\left|f(\mathbf{k}^\prime,\mathbf{k})\right|^2\\
+			&=\frac{\hbar^2}{4\pi m}\int d^3k^\prime\delta\left(E-\frac{\hbar^2{k^\prime}^2}{2m}\right)\left|f(\mathbf{k}^\prime,\mathbf{k})\right|^2\\
+			&=\frac{\hbar^2}{4\pi m}\underbrace{\int_0^{2\pi}d\phi_{\mathbf{k}^\prime}\int_0^\pi d\theta_{\mathbf{k}^\prime}\sin\theta_{\mathbf{k}^\prime}}_{\int_{4\pi}d\Omega_{\mathbf{k}^\prime}} \int_0^{+\infty} {k^\prime}^2dk^\prime\delta\left(E-\frac{\hbar^2{k^\prime}^2}{2m}\right)\left|f(\mathbf{k}^\prime,\mathbf{k})\right|^2\\
+		\end{aligned}
+	\end{equation}
+	注意到$\delta$函数的重要性质：
+	\begin{equation}
+		\delta\left[\varphi(x)\right]=\sum_{x_0}\frac{\delta(x-x_0)}{|\varphi^\prime(x_0)|}
+	\end{equation}
+	其中$x_0$是$\varphi(x)$的零点。
+	
+	可以利用这个公式进行进一步化简：
+	\begin{equation}
+		\begin{aligned}
+			\operatorname{Im}f(\theta=0)&=\frac{\hbar^2}{4\pi m}\cdot\frac{k^2}{\hbar^2k/m}\int_{4\pi}d\Omega_{\mathbf{k}^\prime}\sigma(\theta,\varphi)\\
+			&=\frac{k}{4\pi}\sigma_T
+		\end{aligned}
+	\end{equation}
+	这样我们便证明了光学定理(Optical Theorem).\qed
+	
+	
 	
 	\section{含时散射理论}
 	这一部分先不急着补，能把含时问题搞完就很好了
