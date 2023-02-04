@@ -34,6 +34,7 @@
 \usetikzlibrary{decorations.pathreplacing} % tikz画大括号
 \usetikzlibrary{arrows.meta} % tikz画各种箭头
 \usetikzlibrary{patterns}  % 条纹
+\usetikzlibrary {angles,quotes}
 \tikzset{elegant/.style={smooth,thick,samples=50,cyan}} % 新建一种绘图样式 
 \usepackage[]{newtxmath}
 \usepackage[]{bbm}
@@ -6747,7 +6748,8 @@
   	则$\mathbf{k}_f$方向出射的散射振幅可以表达为矩阵元形式：
   	\begin{equation}
   		\label{eq:11.39}
-  		\boxed{f(\theta,\varphi)=-\frac{4\pi^2m}{\hbar^2}\braket{\mathbf{k}_f|T^+|\mathbf{k}_i}=-{4\pi^2\hbar m}\braket{\mathbf{p}_f|T^+|\mathbf{p}_i}}
+  		{\color{red}
+  		\boxed{f(\theta,\varphi)=-\frac{4\pi^2m}{\hbar^2}\braket{\mathbf{k}_f|T^+|\mathbf{k}_i}=-{4\pi^2\hbar m}\braket{\mathbf{p}_f|T^+|\mathbf{p}_i}}}
   	\end{equation}
   	所以求散射振幅的问题变成了对$T$算符性质的研究。
   	
@@ -6759,12 +6761,12 @@
     \begin{equation}
     	\label{eq:11.41}
     	{\color{red}
-    	T^{\pm}=V+VG_0^\pm T^\mp}
+    	T^{\pm}=V+VG_0^\pm T^\pm}
     \end{equation}
 	\begin{equation}
 		\label{eq:11.42}
 		{\color{red}
-		T^{\pm}=V+VG^\pm TV}
+		T^{\pm}=V+VG^\pm V}
 	\end{equation}
 	\begin{equation}
 		\label{eq:11.43}
@@ -6835,7 +6837,7 @@
 			&=\delta({\mathbf{k}_f-\mathbf{k}_i})-\frac{2i\varepsilon}{(E_i-E_f)^2+\varepsilon^2}\braket{\mathbf{k}_f|T^+|{\mathbf{k}_i}}
 		\end{aligned}
 	\end{equation}	
-	注意到下面的恒等式：
+	注意到下面的恒等式：\footnote{Wigner-Breit等式}
 	\begin{equation}
 		\lim_{\varepsilon\to 0}\frac{\varepsilon}{x^2+\varepsilon^2}=\pi\delta(x)
 	\end{equation}
@@ -6856,7 +6858,116 @@
 	\subsection{Born近似}
 	Born近似的思想总结下来其实就是\textbf{迭代}两字。
 	
+	根据跃迁算符的性质\ref{eq:11.41}，不断迭代可以得到$T^+$的无穷级数形式，称为$T$算符的\textbf{Born级数}：
+	\begin{equation}
+		\label{11.56}
+		T^+=V+VG_0^+V+VG_0^+VG_0^+V+\cdots
+	\end{equation}
+
+	但是这玩意是不是收敛的还不能直接判断，考虑$V\ll H_0$，\textbf{即粒子能量相对于势能很高的情况}，经典上看就是粒子几乎没咋偏转。\ref{eq:11.56}只取第一项：
+	\[T\sim V\]
+	再根据\ref{eq:11.39}得到\textbf{一级Born近似公式}：
+	\begin{equation}
+		\label{eq:11.57}
+		\boxed{
+		f(\theta,\phi)\approx -\frac{m}{2\pi\hbar^2}\int\mathrm{d}^3r V(\mathbf{r})e^{i\left(\mathbf{k}_i-\mathbf{k}_f\right)\cdot \mathbf{r}}}
+	\end{equation}
+
+	很多情况下我们完全可以近似的大胆点，认为$\mathbf{k}_f$和$\mathbf{k}_i$之间差异很小，或者说相因子本身在积分区域内没啥变化，我们就可以把那个相因子丢到，Born近似变为：
+	\begin{equation}
+		\label{eq:11.58}
+		\boxed{
+			f(\theta,\phi)\approx -\frac{m}{2\pi\hbar^2}\int V(\mathbf{r})\mathrm{d}^3r}
+	\end{equation}
+	这种情况往往在入射粒子能量绝对而言很低时考虑。\footnote{但是相对势能而言还是很高，所以可以继续适用一级近似。}
 	
+	对于球对称的势场，散射振幅只与$\theta$有关，\ref{eq:11.57}可以进一步化简：
+	\begin{equation}
+		\begin{aligned}
+			\label{eq:11.59}
+				f(\theta)&\approx -\frac{m}{2\pi\hbar^2}\int\mathrm{d}^3r V({r})e^{i\left(\mathbf{k}_i-\mathbf{k}_f\right)\cdot \mathbf{r}}\\
+				&=-\frac{m}{2\pi\hbar^2}\int_0^{2\pi}\mathrm{d}\phi^\prime\int_0^{\pi}\mathrm{d}\theta^\prime\sin\theta^\prime\int_0^{+\infty}\mathrm{d}r r^2 V(r)e^{i\left|\mathbf{k}_f-\mathbf{k}_i\right|r\cos\theta^\prime}\\
+				&=\boxed{
+				-\frac{2 m}{\hbar^{2} \kappa} \int_{0}^{\infty} r V(r) \sin (\kappa r) \mathrm{d}r
+			}
+		\end{aligned}
+	\end{equation}
+	其中$\kappa\equiv\left|\mathbf{k}_i-\mathbf{k}_f\right|$， 上面这个公式很常用。
+	\begin{figure}[h]
+		\centering
+		\begin{tikzpicture}
+			\coordinate (A) at (4,0);
+			\coordinate (B) at (0,0);
+			\coordinate (C) at (2.92541,2.72799);
+			\draw[-latex] (0,0) to node [sloped,above] {$\mathbf{k}_i$} (4,0) ;
+			\draw[-latex] (0,0) to node [sloped,above] {$\mathbf{k}_f$} (2.92541,2.72799);
+			\draw[color=red,-latex]  (2.92541,2.72799) to node [sloped,above] {$\vec{\kappa}$} (4,0);
+			\draw (A) -- (B) -- (C)
+			pic [draw=blue!50!black, fill=blue!20, angle radius=9mm,
+			"$\theta$"] {angle = A--B--C};
+		\end{tikzpicture}
+		\label{fig:11.5}
+		\caption{$\vec{\kappa}\equiv \mathbf{k}_i-\mathbf{k}_f$}
+	\end{figure}	
+
+	你也可以在\ref{11.56}中多保留几项得到高阶Born近似，Born近似的公式也可以完全不用算符理论发展它的本质其实就是用迭代法去求解积分方程\ref{eq:11.22}，然后注意到$r\to\infty$的渐进形式从而凑出散射振幅$f(\theta,\phi)$。
+	
+	但是Born近似显然不是万能的，因为Born级数可能收敛的较慢或者压根就收敛。比如对于刚性球散射用分波法很快就能做出来，因为边界条件很容易确定，微分方程很好解，但是这显然不属于$V\ll H_0$的范畴，所以用Born近似不能得到很好的结果。
+	\begin{example}{弹性球散射}
+		\begin{equation}
+			V(r)=\begin{cases}
+				V_0,&r\leq a\\
+				0,&r>a
+			\end{cases}
+		\end{equation}
+		利用\ref{eq:11.59}得到：
+		\begin{equation}
+			\begin{aligned}
+				f(\theta)&\approx -\frac{2m}{\hbar^2\kappa}V_0\int_{0}^a r\sin(\kappa r)\mathrm{d}r\\
+				&=-\frac{2mV_0}{\hbar^2\kappa^3}\left[\sin(\kappa a)-\kappa a\cos(\kappa a)\right]
+			\end{aligned}
+		\end{equation}
+		$\kappa$从图\ref{fig:11.5}中可用余弦定理求出。低能量情况$\kappa\to 0$，近似得到：
+		\begin{equation}
+			\begin{aligned}
+				f(\theta)&\approx -\frac{2mV_0}{\hbar^2\kappa^3}\left[\kappa a-\frac{1}{6}(\kappa a)^2-\kappa a+\frac{1}{2}(\kappa a)^2\right]\\
+				&=-\frac{2ma^3V_0}{3\hbar^2}
+			\end{aligned}
+		\end{equation}
+		不难验证这和直接用\ref{eq:11.58}计算是一致的。
+	\end{example}
+	\begin{example}{汤川(Yukawa)势}
+		\begin{equation}
+			V(r)=\beta\frac{e^{-\mu r}}{r}
+		\end{equation}
+	利用\ref{eq:11.59}
+	\begin{equation}
+		\begin{aligned}
+		f(\theta)&\approx -\frac{2m\beta}{\hbar^2\kappa}\int_0^{+\infty}e^{-\mu r}\sin(\kappa r)\mathrm{d}r\\
+		&=-\frac{2m\beta}{\hbar^2\kappa}\operatorname{Im}\int_0^{+\infty}e^{-\mu r+i\kappa r}\mathrm{d}r\\
+		&=-\frac{2m\beta}{\hbar^2\kappa}\operatorname{Im}\left(\frac{1}{\mu-i\kappa}\right)\\
+		&=-\frac{2m\beta}{\hbar^2(\mu^2+\kappa^2)}
+	\end{aligned}
+	\end{equation}
+	一个特殊情况为$\mu=0,\beta=q_1q_2/(4\pi\varepsilon_0)$，对应的就是库仑势，也就是卢瑟福散射情况，其散射截面为：
+	\begin{equation}
+		\begin{aligned}
+			\sigma(\theta)\approx \left(\frac{mq_1q_2}{2\pi\varepsilon_0\hbar^2\kappa^2}\right)^2\\
+			\left[\frac{q_{1} q_{2}}{16 \pi \epsilon_{0} E \sin ^{2}(\theta / 2)}\right]^{2}
+		\end{aligned}
+	\end{equation}
+	
+	\setlength\parindent{2em}这与经典力学中用牛顿力学得到的结果是一模一样的！所以Rutherford真的就是The Chosen One！如果这两个结果不是恰巧相同，或许当初原子物理学就不会有如此大的进展。
+	\end{example}
+	
+	最后我们写一下二级Born近似的公式以便查阅：
+	\begin{equation}
+		f_2(\theta,\phi)\approx f_1(\theta,\phi)+\left(\frac{m}{2\pi\hbar^2}\right)^2\int\mathrm{d}^3r\int\mathrm{d}^3r^\prime V(\mathbf{r})V(\mathbf{r^\prime})\frac{e^{ik|\mathbf{r}-\mathbf{r^\prime}|}}{|\mathbf{r}-\mathbf{r^\prime}|}e^{i\left(\mathbf{k}_i\mathbf{r}-\mathbf{k}_f\mathbf{r^\prime}\right)}
+	\end{equation}
+	低能量近似下指数项都可以丢掉，剩下：
+	\begin{equation}
+		f_2(\theta,\phi)\approx \tilde{f}_1(\theta,\phi)+\left(\frac{m}{2\pi\hbar^2}\right)^2\int\mathrm{d}^3r\int\mathrm{d}^3r^\prime \frac{1}{|\mathbf{r}-\mathbf{r^\prime}|}V(\mathbf{r})V(\mathbf{r^\prime})
+	\end{equation}
 	\subsection{光学定理}
 	根据\ref{eq:11.14}和\ref{eq:11.15}可以得到下面的光学定理：\footnote{为啥叫光学定理？请移步至这篇论文：\DOI{10.1119/1.10324}}
 	\begin{equation}
@@ -6924,6 +7035,8 @@
 		\end{aligned}
 	\end{equation}
 	这样我们便证明了光学定理(Optical Theorem).\qed
+	
+	上一节举的几个例子似乎都会让你觉得光学定理有问题，但别忘了，我们证明光学定理不依赖于任何近似选取，但前面几节我们计算振幅都使用了某些近似。
 	
 	
 	
