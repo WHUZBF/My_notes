@@ -4485,14 +4485,20 @@
 
     态矢随时间的演化可以用时间演化算符确定, 将\ref{eq:6.68}代入上式, 我们得到：
     \[\braket{Q}=\Braket{\psi(0)|\left(\hat{U}^\dagger\hat{Q}_S\hat{U}\right)|\psi(0)}\]
-    我们定义：
+    我们定义海森堡绘景下的算符，其与我们之前一贯使用的薛定谔绘景下的算符在$t=0$是一致，在之后随时间演化：
     \begin{equation}
         \label{eq:6.71}
-        \hat{Q}_H(t)\equiv\hat{U}^\dagger(t)\hat{Q}_S\hat{U}(t)
+        \boxed{
+        \hat{Q}_H(t)\equiv\hat{U}^\dagger(t)\hat{Q}_S\hat{U}(t)}
     \end{equation}
     
     现在我们计算$\braket{Q}$采取态矢量不动(计算时始终用初态$\ket{\psi(0)}$), 而算符随着时间演化的方法。这两个绘景就是描述同一个问题的两种方法, 只是看到底把时间演化归咎于态本身还是力学量算符而已。某种意义上来说, 海森堡绘景就是
-    \textbf{态空间基矢运动, 态矢不动}；薛定谔绘景就是\textbf{基矢不动, 态矢运动}。就像是一个时钟, 我们可以表针不动表盘运动, 也可以表盘运动表针不动, 但都指向同一个正确的时间\footnote{当然还可以表针表盘一起动, 这是相互作用绘景(Dirac绘景)。}。
+    \textbf{态空间基矢运动, 态矢不动}；薛定谔绘景就是\textbf{基矢不动, 态矢运动}。就像是一个时钟, 我们可以表针不动表盘运动, 也可以表盘运动表针不动, 但都指向同一个正确的时间\footnote{当然还可以表针表盘一起动, 这是相互作用绘景(Dirac绘景)，后面讲含时微扰论的时候我们会碰到。}。
+    
+    总结一下，薛定谔绘景中态矢量随时间变化，满足薛定谔方程，而可观测量，也就是算符不随时间变化：
+    \[\ket{\psi(t)}_S=U(t)\ket{\psi(0)}\]
+    然而在海森堡绘景的时候态矢量就不随时间变化了，恒等于初始态：
+    \[\ket{\psi(t)}_H\equiv \ket{\psi(0)}\]
     
     采用薛定谔绘景时\footnote{后面都用这个绘景}, 重点就是利用薛定谔方程计算态矢随时间的变化。而对应的海森堡绘景, 这个时候$\hat{Q}_H(t)$的演化满足\textbf{海森堡方程}, 下面我们
     对于哈密顿量和力学量$Q$不显含时间的情况加以说明。\footnote{对于哈密顿算符显含时间的一般海森堡方程为：\[i \hbar \frac{d}{d t} \hat{Q}_{H}(t)=\left[\hat{Q}_{H}(t), \hat{H}_{H}(t)\right]+\hat{U}^{\dagger} \frac{\partial \hat{Q}}{\partial t} \hat{U}\]}
@@ -4561,6 +4567,20 @@
         形式上一模一样么？
         \hfill $\square$\par
     \end{example}
+
+	前面我们提到薛定谔绘景下基矢不动态矢运动，这个很好理解，我们取观察算符的一组本征矢量为基矢，然而薛定谔绘景的核心就是$Q_S$不随时间变化，自然我们取定了基矢之后就不变了。
+	
+	我们还提到海森堡绘景下态矢不动基矢运动，还是按照上面的说法来。在薛定谔绘景下，一组基矢满足：
+	\[A_S\ket{a}=a\ket{a}\Rightarrow U^\dagger A_SU U^\dagger\ket{a}=aU^\dagger\ket{a}\]
+	
+	再根据\ref{eq:6.71}不难发现这意味着在海森堡绘景下$U^\dagger(t)\ket{a}$才应该作为一组基矢。形象的理解一下，薛定谔绘景下我们讨论其中态矢量的变化是直接使用的$U(t)$，而海森堡绘景下态矢不动，基矢量根据$U^\dagger (t)$演化，也就是相对于薛定谔绘景“反方向”演化，这么一看两大绘景是不是就和我们研究三维空间中旋转时采用的被动和主动观点类似了。下面的两个式子很好的诠释了两种绘景下态矢量在基矢量下展开的系数关系：
+	\begin{align*}
+		&c_{a}(t)=\underbrace{\left\langle a\right|}_{\text {base bra }} \cdot \underbrace{\left({U}\left|\psi(0)\right\rangle\right)}_{\text {state ket }} &\text { (the Schrödinger picture) } \\
+		&c_{a}(t)=\underbrace{\left(\left\langle a\right| {U}\right)}_{\text {base bra }} \cdot \underbrace{\left|\psi(0)\right\rangle}_{\text {state ket }} & \text { (the Heisenberg picture). }
+	\end{align*}
+	
+	前面的讨论都是设定初始时刻为$t=0$，当然只需要对符号进行一些明显的改动就能将上面的讨论适用于初始时刻为$t_0$的一般问题，例如$U(t)\rightarrow U(t_0,t)$，态矢量$\ket{\psi(t)}\rightarrow\ket{\psi,t_0;t}$，初态$\ket{\psi(0)}\rightarrow\ket{\psi,t_0}$
+	
     \subsection{能量守恒定律}
     对于一般的系统, 哈密顿算符可能显含时间, 我们依旧可以定义时间演化算符：
     \begin{equation}
@@ -6184,6 +6204,8 @@
 	\chapter{含时问题}
 	前面我们一直都在倒腾势能不含时的Sch\"{o}dinger方程，这样时间变数就可以直接变量分离出去，我们只需要去解更简单一点的定态Sch\"{o}dinger方程就好。现在我们来具体考虑含时问题，并为后面讨论含时散射问题打好基础。
 	
+	\section{相互作用绘景}
+	
 	\section{双能级系统}
 	
 	\section{含时微扰论}
@@ -7042,6 +7064,10 @@
 	
 	\section{含时散射理论}
 	这一部分先不急着补，能把含时问题搞完就很好了
+	
+	\chapter{量子信息与量子计算简介}
+	这又是一个超级大坑
+	
 	
     \include{appendix.tex} 
     \include{appendix_group.tex}
