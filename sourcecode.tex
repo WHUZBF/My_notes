@@ -460,6 +460,7 @@
 
     下面要谈到的性质虽然是根据无限深势阱总结来的, 但是他们却是普遍适用的\footnote{$\delta$符号的相关定义见附录A}。
     \begin{theorem}{定态解的重要性质定理}
+    	% 第一点和第二点可以删掉
         1.不管势能本身是否具有对称性, 定态波函数总是关于势阱的中心成奇函数或偶函数(即关于中心轴对称或中心对称), 且随着$n$的变化交替出现;\\
         2.不管势能本身形状如何, 波函数的波节(零点)个数总是随着能量的增大而增大, 且公差为$1$;\\
         $\bigstar$3.\textbf{定态解之间相互正交}\footnote{回忆一下我们已经对$\psi$进行归一化}\footnote{积分为全空间, 对于无限深势阱积分限为$(0,a)$。
@@ -631,7 +632,7 @@
     根据上面的等式可以比较容易的求出下面两个用的比较多的公式：
     \begin{align*}
         \left\langle n|x| n^{\prime}\right\rangle & =\sqrt{\frac{\hbar}{2 m \omega}}\left\langle n\left|\left(a_{+}+a_{-}\right)\right| n^{\prime}\right\rangle=\sqrt{\frac{\hbar}{2 m \omega}}\left[\sqrt{n^{\prime}+1}\left\langle n \mid n^{\prime}+1\right\rangle+\sqrt{n^{\prime}}\left\langle n \mid n^{\prime}-1\right\rangle\right] \\
-        & =\sqrt{\frac{\hbar}{2 m \omega}}\left(\sqrt{n^{\prime}+1} \delta_{n, n^{\prime}+1}+\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)=\boxed{\sqrt{\frac{\hbar}{2 m \omega}\left(\sqrt{n} \delta_{n^{\prime}, n-1}+\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)} }\\
+        & =\sqrt{\frac{\hbar}{2 m \omega}}\left(\sqrt{n^{\prime}+1} \delta_{n, n^{\prime}+1}+\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)=\boxed{\sqrt{\frac{\hbar}{2 m \omega}}\left(\sqrt{n} \delta_{n^{\prime}, n-1}+\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right) }\\
         \left\langle n|p| n^{\prime}\right\rangle & =\boxed{i \sqrt{\frac{m \hbar \omega}{2}}\left(\sqrt{n} \delta_{n^{\prime}, n-1}-\sqrt{n^{\prime}} \delta_{n, n^{\prime}-1}\right)}
     \end{align*}
 
@@ -2582,7 +2583,9 @@
             \end{pmatrix}
         }
     \end{lequation}
-    
+	不难看出这三个自旋算符不是对易的，但它们是反对易的：
+	\[\boxed{\left\{S_i,S_j\right\}=\frac{1}{2}\hbar^2\delta_{ij}}\]
+	
     对应的自旋角动量算符的矩阵只要在前面乘一个$\hbar/2$即可。注意到这些矩阵都是厄米矩阵, 这也力学量算符都是厄米算符相一致。
     
     回到以开始的问题, 假设我们要对$\chi$测量$\mathcal{S}_x$, 我们先去根据$\mathbf{S}_x$计算本征值和本征矢。不难得出$\mathbf{S}_x$的本征值为
@@ -5402,6 +5405,29 @@
     铯原子是类氢原子, 外层一个电子, 等效的看内层的自旋量子数为$\frac{7}{2}$, 外层电子还是$\frac{1}{2}$不变, 和上面一样, 基态能量依旧会被分裂为两个超精细能级, 考虑铯原子
     在这两个超精细能级的跃迁, 我们把它的同位素$^{133} \mathrm{Cs}$在这两个能级之间的跃迁$9192631770$个周期的频率称为$\SI{1}{s}$
 
+	最后说一下，本章中我们比较多的考虑了自旋问题，我们都是将哈密顿量中自旋部分看作是微扰然后用定态微扰论。严格来说我们应该去解\textbf{Pauli方程}。
+	
+	薛定谔方程本身，用态矢写的形式是量子力学中非常一般的原理，对处理自旋问题也适用。如前面的讨论，处理自旋问题时我们应当认为系统的态矢处于空间部分的态空间与内禀的自旋空间的张量积。
+	
+	比如考虑最简单的非平庸自旋问题，电子的自旋空间是二维线性空间，那一般来说其态矢量可以写成如下形式：
+	\[\ket{\psi}=\ket{\psi_+}\otimes\ket{\uparrow}+\ket{\psi_-}\otimes\ket{\downarrow}\]
+	或者直接用一个列矩阵写成下面的形式：
+	\[\ket{\psi}=\begin{pmatrix}
+		\ket{\psi_+}\\\ket{\psi_-}
+	\end{pmatrix}\]
+	其中上面的矢量在位置表象下对应的波函数（的模方）可以理解为测得电子在某位置处且自旋向上的概率。
+	
+	把这个一般的考虑了自旋空间的态矢代入薛定谔方程，我们面对的其实一个矩阵方程：\footnote{或者你可以叫它“矩阵的矩阵”，因为内部的哪个态矢也可以看作是个矩阵。}
+	\begin{equation}
+		i\hbar\frac{\partial}{\partial {t}}\begin{pmatrix}
+			\ket{\psi_+}\\ \ket{\psi_-}
+		\end{pmatrix}=\begin{pmatrix}
+			H_{++}&H_{+-}\\H_{-+}&H_{--}
+		\end{pmatrix}\begin{pmatrix}
+	\ket{\psi_+}\\ \ket{\psi_-}
+	\end{pmatrix}
+	\end{equation}
+	其中$H_{++}$是个算符，定义为$\braket{\uparrow|H|\uparrow}$，其他三个以此类推。
     \chapter{变分法}
     前面的定态微扰论很方便, 也很精确, 但是我们还是要事先求出未微扰的波函数, 然后代入公式计算。\footnote{做{\itshape Griffiths}的习题你就知道有多痛苦了}
     而下面要介绍的变分法就是在我们完全不知道, 也不用知道波函数的情况下较为近似的给出基态能量大小。当然它也可以进一步推广去求激发态, 现在也有很多计算物理算法是基于此原理的

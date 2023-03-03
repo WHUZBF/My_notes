@@ -765,11 +765,11 @@ $\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$. $m_p$指的是表示$\mathscr{A}^p$�
 	
 	也就是说由这些不等价不可约表示确定的总共$\sum_i S^2_i$个群函数在群函数空间中是正交的。我们还可以利用群函数内积的定理改写为：
 	\begin{equation}
-		\sum_{i=1}^{|G|}(\mathcal{A}^p_{\mu\nu}(g_i))^*\mathcal{A}^r_{\sigma\rho}(g_i)=\frac{1}{S_p}\delta_{pr}\delta_{\mu\sigma}\delta_{\nu\rho}	
+		\frac{1}{|G|}\sum_{i=1}^{|G|}(\mathcal{A}^p_{\mu\nu}(g_i))^*\mathcal{A}^r_{\sigma\rho}(g_i)=\frac{1}{S_p}\delta_{pr}\delta_{\mu\sigma}\delta_{\nu\rho}	
 	\end{equation}
 	或者用酉表示的性质写为\footnote{这也意味着我们选取的是正交归一基底}：
 	\begin{eqnarray}
-		\sum_{i=1}^{|G|}(\mathcal{A}^p_{\nu\mu}(g_i^{-1}))^*\mathcal{A}^r_{\sigma\rho}(g_i)=\frac{1}{S_p}\delta_{pr}\delta_{\mu\sigma}\delta_{\nu\rho}
+		\frac{1}{|G|}\sum_{i=1}^{|G|}(\mathcal{A}^p_{\nu\mu}(g_i^{-1}))^*\mathcal{A}^r_{\sigma\rho}(g_i)=\frac{1}{S_p}\delta_{pr}\delta_{\mu\sigma}\delta_{\nu\rho}
 	\end{eqnarray}
 \end{theorem}
 \begin{proof}
@@ -837,7 +837,7 @@ $\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$. $m_p$指的是表示$\mathscr{A}^p$�
 	有限群的不等价不可约表示的特征标满足：
 	\begin{equation}
 		\boxed{
-			\braket{\chi^p|\chi^r}=\frac{1}{|G|}\sum_{i=1}|K_i|\chi_1^*(K_i)\chi_2(K_i)=\delta_{pr}
+			\braket{\chi^p|\chi^r}=\frac{1}{|G|}\sum_{i=1}|K_i|\chi_1^{p*}(K_i)\chi^r(K_i)=\delta_{pr}
 		}
 	\end{equation}
 
@@ -936,7 +936,7 @@ $\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$. $m_p$指的是表示$\mathscr{A}^p$�
 这也直接说明了类函数空间的维数等于不等价不可约表示的个数。
 \begin{theorem}{特征标第二正交定理}
 	\begin{equation}
-		\frac{1}{|G|}|K_i|\chi^{p*}(K_i)\chi^{p}(K_j)=\delta_{ij}
+		\frac{1}{|G|}\sum_{p}|K_i|\chi^{p*}(K_i)\chi^{p}(K_j)=\delta_{ij}
 	\end{equation}
 \end{theorem}
 \begin{proof}
@@ -1180,7 +1180,7 @@ $\mathcal{S}$。与其说函数空间中的函数$\Psi$是Euclid空间中的向�
 
 上面说的是从已知表示构造更大的表示，下面要说的是已知一个群可以作直积分解$G=G_1\times G_2$，已知两个因子的表示如何构造直积群表示。
 \begin{define}{直积群的表示}
-	如果$g_{1\alpha}\in G_1,g_{2\beta\in G_2}$，$\mathscr{A}$和$\mathscr{B}$分别是$G_1$和$G_2$群的表示，那么自然可以得到$G=G_1\times G_2$的一个表示：\footnote{这里我们用$g_1\otimes g_2$表示$G$中群元，而不是前面讲的$(g_1,g_2)$}
+	如果$g_{1\alpha}\in G_1,g_{2\beta}\in G_2$，$\mathscr{A}$和$\mathscr{B}$分别是$G_1$和$G_2$群的表示，那么自然可以得到$G=G_1\times G_2$的一个表示：\footnote{这里我们用$g_1\otimes g_2$表示$G$中群元，而不是前面讲的$(g_1,g_2)$}
 	\[\mathscr{C}(g_{1\alpha}\otimes g_{2\beta})=\mathscr{A}(g_{1\alpha})\otimes\mathscr{B}(g_{2\beta})\]
 \end{define}
 \subsubsection*{诱导表示}
