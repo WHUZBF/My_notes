@@ -934,7 +934,7 @@ $\mathscr{A}=\bigoplus_p m_p\mathscr{A}^p$. $m_p$指的是表示$\mathscr{A}^p$�
 	两个表示等价$\iff$它们的特征标相同
 \end{theorem}
 这也直接说明了类函数空间的维数等于不等价不可约表示的个数。
-\begin{theorem}{特征标第二正交定理}
+\begin{theorem}{特征标第二正交定理（完备性）}
 	\begin{equation}
 		\frac{1}{|G|}\sum_{p}|K_i|\chi^{p*}(K_i)\chi^{p}(K_j)=\delta_{ij}
 	\end{equation}
@@ -1104,6 +1104,33 @@ $\mathcal{S}$。与其说函数空间中的函数$\Psi$是Euclid空间中的向�
 
 有限群最重要的部分我们就讲完了，这个附录最开始的部分我们引用了杨振宁的一句话，看了这些群论定理的证明，你应该能稍微体会到这句话了。
 
+最后我们利用Dirac符号重写一下正交归一定理。
+
+每个表示的矩阵元决定了一个群函数，我们用$\ket{\mu,i,j}$，表示$\mathcal{A}^\mu_{ij}$决定的群函数，且规定：
+\[\braket{g|\mu,i,j}=\sqrt{\frac{n_\mu}{n_G}}\mathcal{A}^\mu_{ij}(g)\]
+也就是说，$\ket{\mu,i,j}$是类似于$(\mathcal A(g_1),\mathcal A(g_2),\ldots)^T$形式的向量，$\bra{\mu,i,j}$自然就是其dagger，也即$(\mathcal {A}^*(g_1),\mathcal {A}^*(g_2),\ldots)$.
+
+类似的，我们也可以用Dirac符号重写特征标决定的类函数：
+\[\Braket{c|\chi^\mu}=\sqrt{\frac{n_c}{n_G}}\chi^\mu(c)\]
+类比Hilbert空间中的正交完备性，我们得到：
+\begin{align}
+	&\braket{\mu,i,j|\nu,k,l}=\delta_{\mu\nu}\delta_{ik}\delta_{jl}&&\sum_{\mu,i,j} \ket{\mu,i,j}\bra{\mu,i,j}=\mathbbm{1}\\
+	&\braket{\chi^\mu|\chi^\nu}=\delta_{\mu\nu}&&\sum_{\mu}\ket{\chi^\mu}\bra{\chi^\mu}=\mathbbm{1}
+\end{align}
+其中第二个式子我们未提到过，实际上它是群函数完备性的数学表述，我们使用$\braket{g|\cdot|g^\prime}$夹在两边可以得到：
+\begin{equation}
+	\boxed{
+	\frac{n_\mu}{n_G}\sum_{\mu,i,j}\mathcal{A}^\mu_{ij}(g)\mathcal{A}^{*\mu}_{ij}(g^\prime)=\delta_{gg^\prime}
+}
+\end{equation}
+
+实际上这种完备性在Lie群中表现得尤为明显，上面的这些公式不仅对于有限群成立，实际上对于紧李群也是成立的，只不过需要将求和换成在不变测度下的积分。一般地说，对于一个紧李群的所有不登记啊不可约表示表示，其确定了函数空间上的一系列群函数\footnote{其中$\mathbf{x}$是确定群元的一组连续参数。}$\mathcal{D}^\mu_{ij}(\mathbf{x})$，这些群函数可以作为在该李群的流形上定义的（平方可积）函数的展开基底，或者说可以用这些群函数对任意一个函数进行广义傅里叶展开。(Peter-Wyle定理)
+\begin{equation}
+	f(\mathbf{x})=\sum_{\mu,i,j}f_{\mu,i,j}\mathcal{D}^\mu_{ij}(\mathbf{x})
+\end{equation}
+
+比如傅里叶变换是以$e^{ipx}$作为基底，对应的是一维平移群$T$的表示；再比如球谐函数$Y^\ell_m(\theta,\phi)$全体作为展开基底，对应的是$SO(3)$群表示的矩阵元；$Bessel$函数对应的是$E_2$群的表示矩阵元$\cdots$更多群论与特殊函数之间的联系可以翻阅{\itshape Wu-Ki Tung}群论的有关章节。
+
 \subsection{新表示的构成}
 这一节的目的是通过已知的一些群表示来构成更多有用的群表示。
 
@@ -1145,7 +1172,7 @@ $\mathcal{S}$。与其说函数空间中的函数$\Psi$是Euclid空间中的向�
 \end{equation}
 同样对于算符$A\otimes B$的矩阵形式，无非就是双层套娃：
 \[(A\otimes B)_{ip,jq}=\Braket{e_if_p|A\otimes B|e_jf_q}=A_{ip}B_{jq}\]
-比如$A\otimes B$矩阵的第12行第34列的矩阵元就是$A_{13}B_{24}$，比如：
+比如$A\otimes B$矩阵的第12行第34列\footnote{这里比较微妙，我们仍旧使用二维的矩阵去表示张量矩阵的做法（也称作矩阵的克罗内克积）实际上是会丢失掉一些信息的，容易让人困惑的一点就是我们需要使用两个“双重”指标去标记矩阵的行和列，这里的“12”，“34”不能看作是普通的十进制数，而是两个数字并起来形成的指标。}的矩阵元就是$A_{13}B_{24}$，比如：
 \begin{equation}
 	\begin{aligned}
 		\mathcal{A}\otimes \mathcal{B}&=\begin{pmatrix}
@@ -1453,5 +1480,5 @@ z_2
 \[R(\alpha,0,0)\Psi_{jm}=e^{-\frac{i}{\hbar}\alpha J_z}\Psi_{jm}=e^{-i\alpha m}\Psi_{jm}\]
 
 上面的计算中利用了$J_z\Psi_{jm}=\hbar m\Psi_{jm}$.显然对于电子$j=1/2$，这意味着只有转$4\pi$也就是两圈才能将系统波函数返回至原位.这就刚好和$SO^D(3)$转动对应起来了，而不是$SO(3)$转动. 所以原先的$SO(3)$对称性在考虑自旋-轨道耦合之后被破坏了.
-\subsection{CG系数}
+\subsection{CG系数与角动量耦合}
 这部分重新看一下角动量耦合以及曾谨言的书后再回来补

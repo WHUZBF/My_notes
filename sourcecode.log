@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  14 MAY 2023 23:07
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  28 MAY 2023 23:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3222,7 +3222,7 @@ File: fig/11-2-a.pdf Graphic file (type pdf)
 File: fig/11-2-b.pdf Graphic file (type pdf)
 <use fig/11-2-b.pdf>
  [204]
-Overfull \hbox (14.10518pt too wide) detected at line 6451
+Overfull \hbox (14.10518pt too wide) detected at line 6453
 [][][]
  []
 
@@ -3231,7 +3231,7 @@ Overfull \hbox (14.10518pt too wide) detected at line 6451
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [207] [208] [209] [210]
-Overfull \hbox (1.18068pt too wide) in paragraph at lines 6764--6765
+Overfull \hbox (1.18068pt too wide) in paragraph at lines 6766--6767
 \TU/SimSun(0)/m/n/12.045 的 本 征 值 本 征 矢 这 些 一 无 所 知，|  所 以 对 $\OML/ntxmi/m/it/12
 .045 G$ \TU/SimSun(0)/m/n/12.045 也 就 一 无 所 知。|  所 以[][]\T1/ntxtlf/m/n/12.045 11
 .30[][]\TU/SimSun(0)/m/n/12.045 和[][]\T1/ntxtlf/m/n/12.045 11.32[][]\TU/SimSun(
@@ -3241,22 +3241,22 @@ Overfull \hbox (1.18068pt too wide) in paragraph at lines 6764--6765
 [211]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6791.
+(hyperref)                removing `math shift' on input line 6793.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Omega' on input line 6791.
+(hyperref)                removing `\Omega' on input line 6793.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6791.
+(hyperref)                removing `math shift' on input line 6793.
 
 [212] [213]
 
-LaTeX Warning: Reference `eq:11.56' on page 214 undefined on input line 6919.
+LaTeX Warning: Reference `eq:11.56' on page 214 undefined on input line 6921.
 
 [214] [215] [216] [217]
-Overfull \hbox (7.91562pt too wide) detected at line 7075
+Overfull \hbox (7.91562pt too wide) detected at line 7077
 [][][]
  []
 
@@ -3452,35 +3452,35 @@ File: fig/D-1.pdf Graphic file (type pdf)
 <use fig/D-1.pdf>
 File: fig/D-1.pdf Graphic file (type pdf)
 <use fig/D-1.pdf>
- [294]
+ [294] [295]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 3.61343pt on input line 1111.
- [295] [296]
+(Font)              scaled to size 3.61343pt on input line 1138.
+ [296] [297]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1199.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1199.
+(hyperref)                removing `math shift' on input line 1226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1199.
+(hyperref)                removing `math shift' on input line 1226.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1199.
+(hyperref)                removing `math shift' on input line 1226.
 
 
-Overfull \hbox (25.27548pt too wide) detected at line 1223
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1226.
+
+
+Overfull \hbox (25.27548pt too wide) detected at line 1250
 [][][]
  []
 
-[297] [298] [299] [300] [301]
+[298] [299] [300] [301] [302]
 File: fig/D.4.pdf Graphic file (type pdf)
 <use fig/D.4.pdf>
- [302] [303]) [304]
+ [303] [304]) [305]
 File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf>
 File: back_cover/cover.pdf Graphic file (type pdf)
@@ -3495,7 +3495,7 @@ File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf, page 1>
 File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf, page 1>
- [305
+ [306
 
 
 ]
@@ -3512,15 +3512,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: 4A8CC5888A820F682335510DA8BC325E;16970.
+(rerunfilecheck)             Checksum: 250D903AE95A29B675823DC9A1A91F86;17199.
  ) 
 Here is how much of TeX's memory you used:
- 108266 strings out of 476533
- 2543685 string characters out of 5818886
+ 108319 strings out of 476533
+ 2547153 string characters out of 5818886
  2297323 words of memory out of 5000000
- 127293 multiletter control sequences out of 15000+600000
+ 127346 multiletter control sequences out of 15000+600000
  564478 words of font info for 327 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,23n,117p,1548b,47306s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (310 pages).
+Output written on sourcecode.pdf (311 pages).

@@ -72,6 +72,7 @@
 \contentsline {section}{\numberline {9.1}基本原理}{183}{section.9.1}%
 \contentsline {section}{\numberline {9.2}量子隧穿}{186}{section.9.2}%
 \contentsline {section}{\numberline {9.3}连接公式}{188}{section.9.3}%
+\contentsline {section}{\numberline {9.4}WKB近似与哈密顿雅可比方程}{196}{section.9.4}%
 \contentsline {chapter}{\numberline {第十章\hspace {.3em}}含时问题}{197}{chapter.10}%
 \contentsline {section}{\numberline {10.1}相互作用绘景}{197}{section.10.1}%
 \contentsline {section}{\numberline {10.2}双能级系统}{197}{section.10.2}%
@@ -116,12 +117,12 @@
 \contentsline {subsection}{\numberline {D.2.1}群表示基本概念}{272}{subsection.D.2.1}%
 \contentsline {subsection}{\numberline {D.2.2}群代数与正则表示}{277}{subsection.D.2.2}%
 \contentsline {subsection}{\numberline {D.2.3}特征标理论及正交完备性定理}{279}{subsection.D.2.3}%
-\contentsline {subsection}{\numberline {D.2.4}新表示的构成}{295}{subsection.D.2.4}%
-\contentsline {section}{\numberline {D.3}置换群}{297}{section.D.3}%
-\contentsline {subsection}{\numberline {D.3.1}基本概念和性质}{297}{subsection.D.3.1}%
-\contentsline {subsection}{\numberline {D.3.2}杨图和杨表}{297}{subsection.D.3.2}%
-\contentsline {section}{\numberline {D.4}转动群}{297}{section.D.4}%
-\contentsline {subsection}{\numberline {D.4.1}$SO(3)$和$SU(2)$}{297}{subsection.D.4.1}%
-\contentsline {subsection}{\numberline {D.4.2}转动群的不可约表示}{299}{subsection.D.4.2}%
-\contentsline {subsection}{\numberline {D.4.3}CG系数}{304}{subsection.D.4.3}%
+\contentsline {subsection}{\numberline {D.2.4}新表示的构成}{296}{subsection.D.2.4}%
+\contentsline {section}{\numberline {D.3}置换群}{298}{section.D.3}%
+\contentsline {subsection}{\numberline {D.3.1}基本概念和性质}{298}{subsection.D.3.1}%
+\contentsline {subsection}{\numberline {D.3.2}杨图和杨表}{298}{subsection.D.3.2}%
+\contentsline {section}{\numberline {D.4}转动群}{298}{section.D.4}%
+\contentsline {subsection}{\numberline {D.4.1}$SO(3)$和$SU(2)$}{298}{subsection.D.4.1}%
+\contentsline {subsection}{\numberline {D.4.2}转动群的不可约表示}{300}{subsection.D.4.2}%
+\contentsline {subsection}{\numberline {D.4.3}CG系数与角动量耦合}{305}{subsection.D.4.3}%
 \contentsfinish 

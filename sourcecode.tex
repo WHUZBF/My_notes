@@ -294,7 +294,7 @@
 	根据Stokes公式我们任意选取一个区域$\Omega$，连续性方程可以写成下面的积分形式：
 	\[\frac{\partial }{\partial t}\int_{\Omega}\rho dV+\oiint_{\partial\Omega}\mathbf{j}\cdot d\mathbf{S}=0\]
 	
-	第一项是在闭区域内发现粒子的概念，第二项可以看作是“概率流”流入这个区域的量。对于下一章我们要将的定态，$\partial \rho/\partial t=0$，那这就意味着概率不会“堆积”在某处，和其它领域内的连续性方程意义是一致的，只是现在不是那些具象的电荷或是水流了，而是抽象的概率。可以把$\mathbf{j}\cdot d\mathbf{sigma}$解释为单位时间内粒子通过面元$ d\mathbf{sigma}$的概率。
+	第一项是在闭区域内发现粒子的概念，第二项可以看作是“概率流”流入这个区域的量。对于下一章我们要将的定态，$\partial \rho/\partial t=0$，那这就意味着概率不会“堆积”在某处，和其它领域内的连续性方程意义是一致的，只是现在不是那些具象的电荷或是水流了，而是抽象的概率。可以把$\mathbf{j}\cdot d\mathbf{\sigma}$解释为单位时间内粒子通过面元$ d\mathbf{\sigma}$的概率。
 	
 	之后我们在讨论量子力学的散射问题时会用到这个概念。
     \newpage
@@ -6163,7 +6163,7 @@
     
     \subsection*{反射系数}
     类似于前面一直在求的势垒贯穿问题，是$E<V_{\max}$的情况，我们可以考虑另一类$E>V_{\max}$的情况。在经典情形下粒子会从左侧完全越过势垒到右侧，不再返回，但是量子情形下，和隧穿效应类似，会有一个微弱的反射系数$R$。你如果尝试直接从\ref{fig:9.3}所示的情况下出发你会得到$R=0$的结论，所以我们需要更精细的利用WKB近似考虑图\ref{fig:9.7}(a)中能量为$E_>$的情况。如果直接在位置表象下计算，过程比较复杂而且物理意义并不明显\footnote{详见Landau书的$\S 52$}。下面我们将考虑一个对称的势垒$V(x)$并说明，位置空间波函数的反射实际上等价于其对应动量空间波函数的透射，并利用动量空间下的WKB近似来计算反射系数。\footnote{这一小节的内容引自文章：\DOI{https://doi.org/10.1119/1.3298428}}
-    \begin{figure}
+    \begin{figure}[h]
     	\centering
     	\includegraphics[width=0.8\linewidth]{fig/9-7.pdf}
     	\label{fig:9.7}
@@ -6230,6 +6230,8 @@
 		&\overset{p(iy_0)=0}{=}\exp\left[-\frac{2}{\hbar}\int_{-p_{\min}}^{p_{\min }} d p y(p)\right]
 	\end{align*}
 	再注意到$iy(p)=V^{-1}\left(E-\frac{p^{2}}{2 m}\right)$便回归到了\ref{eq:9.40}。
+	
+	\section{WKB近似与哈密顿雅可比方程}
 	
 	\chapter{含时问题}
 	前面我们一直都在倒腾势能不含时的Sch\"{o}dinger方程，这样时间变数就可以直接变量分离出去，我们只需要去解更简单一点的定态Sch\"{o}dinger方程就好。现在我们来具体考虑含时问题，并为后面讨论含时散射问题打好基础。
