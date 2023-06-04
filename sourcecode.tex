@@ -506,11 +506,8 @@
         \begin{center}
             \begin{math}
                 \displaystyle
-                \zeta(2n)=\eta_n \pi^{2n}
-            \end{math}
-            \begin{math}
-                \displaystyle
-                 \eta_1=\frac{1}{6},\qquad\eta_n=\sum_{k=1}^{n-1}(-1)^{n-1}\frac{\eta_{n-k}}{(2k+1)!} + (-1)^{n+1}\frac{n}{(2n+1)!}
+                \zeta(2n)=\eta_n \pi^{2n},\quad
+                 \eta_1=\frac{1}{  6},\quad\eta_n=\sum_{k=1}^{n-1}(-1)^{n-1}\frac{\eta_{n-k}}{(2k+1)!} + (-1)^{n+1}\frac{n}{(2n+1)!}
             \end{math}
         \end{center}
     \end{theorem}
@@ -6232,7 +6229,48 @@
 	再注意到$iy(p)=V^{-1}\left(E-\frac{p^{2}}{2 m}\right)$便回归到了\ref{eq:9.40}。
 	
 	\section{WKB近似与哈密顿雅可比方程}
+	\subsection*{薛定谔方程的经典极限}
+	现在我们来考虑薛定谔方程的经典极限，波函数满足方程：
+	\begin{equation}
+		i\hbar\frac{\partial\psi}{\partial t}=\left(-\frac{\hbar^2}{2m}\nabla^2+V\right)\psi
+	\end{equation}
+	这里波函数是个复变函数，我们可以分离它的辐角和模长改写为：
+	\[\psi=R\mathrm{e}^{iS/\hbar},\quad S,R\in\mathbbm{R}^{\mathbbm{R}}\]
+	代入薛定谔方程并令实部和虚部分别相等我们得到：
+	\begin{align}
+		&\frac{\partial R}{\partial t}=-\frac{1}{2m}\left(R\nabla^2S+2\nabla R\cdot \nabla S\right)\\
+		&\frac{\partial S}{\partial t}=-\left[\frac{1}{2m}+V-\frac{\hbar^2}{2m}\frac{\nabla^2 R}{R}\right]
+	\end{align}
+	注意到$\S1.4$中对概率流密度的定义：
+	\[\mathbf{J}=\frac{1}{2m}\left(\psi^*\hat p\psi+\mathrm{c.c.}\right)=\frac{R^2}{m}\nabla S,\quad\rho=|\psi|^2=R^2\]
+	我们发现第一个式子等价概率守恒\ref{eq:1.12},重点是第二个方程，我们把带有普朗克常数的项单独移到一边得到：
+	\begin{equation}
+		\frac{\partial S}{\partial t}+\left[\frac{(\nabla S)^2}{2m}+V\right]=\frac{\hbar^2}{2m}\frac{\nabla^2R}{R}
+	\end{equation}
+	与经典力学中学过的哈密顿雅可比方程对比：
+	$$\frac{\partial S}{\partial t}+ H(q,\frac{\partial S}{\partial q},t)=0,\quad p=\frac{\partial S}{\partial t}$$
+
+	不难发现在宏观世界取$\hbar\to 0$,薛定谔方程自然退化为H-J方程, 波函数的相位$S$就是作用量, 其梯度就是广义动量！等式右边的项可以看作是量子效应带来的某种“量子势”,微观世界$\hbar$不可忽略时才有效。
+	\subsection*{再论WKB近似}
+	WKB近似考虑的是一维薛定谔方程,是一种半经典方法,我们仿照上面对薛定谔方程取经典极限的过程来讨论一下WKB近似。
 	
+	首先我们将一维波函数写为$\exp\left[iS(x)/\hbar\right]$, 注意这里相位$S(x)$是个复变函数。那么定态薛定谔方程可以改写为：
+	\begin{equation}
+		\frac{1}{2m}\left(\frac{dS}{dx}\right)^2+\frac{\hbar}{i}\frac{1}{2m}\frac{d^2 S}{dx^2}=E-V
+	\end{equation}
+	我们将$S(x)$按照$\hbar$的幂次展开：
+	\[S=S_0+\frac{\hbar}{i}S_1+\left(\frac{\hbar}{i}\right)^2S_1+\cdots\]
+	代入方程后比较同幂次项得到：
+	\begin{align}
+		&\frac{1}{2m}{S_0^\prime}^2=E-V\\
+		&2S_0^\prime S_1^\prime+S_0^{\prime\prime}=0\\
+		&2S_0^\prime S_2^\prime+{S_1^\prime}^2+S_1^{\prime\prime}=0
+	\end{align}
+	\underline{0-order}:\[S_0=\pm\int^xp(x) \mathrm{d}x,\qquad p(x)=\sqrt{2m(E-V)}\]
+	\underline{1-order}:\[S^\prime_1=-\frac{S_0^{\prime\prime}}{2S_0^\prime}=-\frac{p^\prime}{2p}=\left(\ln \sqrt{p}\right)^\prime\Rightarrow S_1=\ln p^{-\frac{1}{2}}+C\]
+	
+	
+	按照此方法可以计算到任意阶近似，取零级近似便回到了前面的\ref{eq:9.5}, 另外上面只考虑了经典允许区,经典禁区可以类似讨论。
 	\chapter{含时问题}
 	前面我们一直都在倒腾势能不含时的Sch\"{o}dinger方程，这样时间变数就可以直接变量分离出去，我们只需要去解更简单一点的定态Sch\"{o}dinger方程就好。现在我们来具体考虑含时问题，并为后面讨论含时散射问题打好基础。
 	
