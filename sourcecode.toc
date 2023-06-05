@@ -124,5 +124,5 @@
 \contentsline {section}{\numberline {D.4}转动群}{300}{section.D.4}%
 \contentsline {subsection}{\numberline {D.4.1}$SO(3)$和$SU(2)$}{300}{subsection.D.4.1}%
 \contentsline {subsection}{\numberline {D.4.2}转动群的不可约表示}{302}{subsection.D.4.2}%
-\contentsline {subsection}{\numberline {D.4.3}CG系数与角动量耦合}{307}{subsection.D.4.3}%
+\contentsline {subsection}{\numberline {D.4.3}*CG系数与角动量耦合}{307}{subsection.D.4.3}%
 \contentsfinish 
