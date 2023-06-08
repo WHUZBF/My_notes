@@ -120,9 +120,9 @@
 \contentsline {subsection}{\numberline {D.2.4}新表示的构成}{298}{subsection.D.2.4}%
 \contentsline {section}{\numberline {D.3}置换群}{300}{section.D.3}%
 \contentsline {subsection}{\numberline {D.3.1}基本概念和性质}{300}{subsection.D.3.1}%
-\contentsline {subsection}{\numberline {D.3.2}杨图和杨表}{300}{subsection.D.3.2}%
-\contentsline {section}{\numberline {D.4}转动群}{300}{section.D.4}%
-\contentsline {subsection}{\numberline {D.4.1}$SO(3)$和$SU(2)$}{300}{subsection.D.4.1}%
-\contentsline {subsection}{\numberline {D.4.2}转动群的不可约表示}{302}{subsection.D.4.2}%
-\contentsline {subsection}{\numberline {D.4.3}*CG系数与角动量耦合}{307}{subsection.D.4.3}%
+\contentsline {subsection}{\numberline {D.3.2}置换群的表示}{302}{subsection.D.3.2}%
+\contentsline {section}{\numberline {D.4}转动群}{304}{section.D.4}%
+\contentsline {subsection}{\numberline {D.4.1}$SO(3)$和$SU(2)$}{304}{subsection.D.4.1}%
+\contentsline {subsection}{\numberline {D.4.2}转动群的不可约表示}{306}{subsection.D.4.2}%
+\contentsline {subsection}{\numberline {D.4.3}*CG系数与角动量耦合}{310}{subsection.D.4.3}%
 \contentsfinish 
