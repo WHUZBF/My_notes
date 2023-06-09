@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  9 JUN 2023 00:39
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  10 JUN 2023 00:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1832,11 +1832,11 @@ File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/sl' will be
-(Font)              scaled to size 12.045pt on input line 69.
+(Font)              scaled to size 12.045pt on input line 72.
 LaTeX Font Info:    Font shape `TU/SimSun(0)/m/sl' in size <12.045> not availab
 le
 (Font)              Font shape `TU/SimSun(0)/m/it' tried instead on input line 
-69.
+72.
  [3] [4])
 \tf@toc=\write5
 \openout5 = `sourcecode.toc'.
@@ -2919,9 +2919,9 @@ Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
  [45] [46] [47] [48]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.045pt on input line 1688.
+(Font)              scaled to size 12.045pt on input line 1689.
 
-Overfull \hbox (17.9026pt too wide) detected at line 1701
+Overfull \hbox (17.9026pt too wide) detected at line 1702
 \LMS/ntxsy/m/n/12.045 »\OML/ntxmi/m/it/12.045 V; []\LMS/ntxsy/m/n/12.045 ¼\OML/
 ntxmi/m/it/12.045 g \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 V[][] \LMS/n
 txsy/m/n/12.045 ^^@ [][]¹\OML/ntxmi/m/it/12.045 Vg\LMS/ntxsy/m/n/12.045 º \U/nt
@@ -2935,45 +2935,45 @@ t/12.045 \[]
 [49]
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 1723.
+(Font)              size <14.4> substituted on input line 1724.
 
 
-Overfull \hbox (8.4405pt too wide) in paragraph at lines 1730--1731
+Overfull \hbox (8.4405pt too wide) in paragraph at lines 1731--1732
 []\TU/SimSun(0)/m/n/12.045 我 们 可 以 给 这 两 个 波 函 数 分 别 对 应 两 个|   []$[] \OML/ntxm
 i/m/it/12.045 ; []$\TU/SimSun(0)/m/n/12.045 。|  再 根 据[][]\T1/ntxtlf/m/n/12.045 
 3.32[][]\TU/SimSun(0)/m/n/12.045 我
  []
 
 [50] [51] [52]
-Overfull \hbox (1.5488pt too wide) in paragraph at lines 1814--1815
+Overfull \hbox (1.5488pt too wide) in paragraph at lines 1821--1822
 []\TU/SimSun(0)/m/n/12.045 比 如 三 维 问 题 中 $[]$ 算 符 的 三 个 分 量 算 符 $\OML/ntxmi/m/i
 t/12.045 X; Y; Z$ \TU/SimSun(0)/m/n/12.045 就 构 成 了 一 个 \T1/ntxtlf/m/n/12.045 CS
 CO,
  []
 
-[53] [54] [55]
+[53] [54] [55] [56]
 第四章
 
-Overfull \vbox (0.325pt too high) detected at line 1930
+Overfull \vbox (0.325pt too high) detected at line 1972
  []
 
-[56
+[57
 
-] [57]
+] [58]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.03374pt on input line 1944.
- [58] [59] [60] [61] [62] [63] [64]
+(Font)              scaled to size 9.03374pt on input line 1986.
+ [59] [60] [61] [62] [63] [64] [65]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 2152.
- [65] [66] [67] [68] [69] [70]
-[71] [72] [73] [74] [75] [76] [77] [78] [79]
+(Font)              scaled to size 9.03374pt on input line 2194.
+ [66] [67] [68] [69] [70] [71]
+[72] [73] [74] [75] [76] [77] [78] [79] [80]
 File: fig/4-1.png Graphic file (type bmp)
 <fig/4-1.png>
- [80]
+ [81]
 File: fig/4-2.eps Graphic file (type eps)
 <fig/4-2.eps>
- [81] [82] [83] [84] [85]
-[86]
+ [82] [83] [84] [85] [86]
+[87]
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
@@ -2982,22 +2982,22 @@ File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
- [87]
+ [88]
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
- [88] [89] [90] [91]
+ [89] [90] [91] [92]
 File: fig/4-3.eps Graphic file (type eps)
 <fig/4-3.eps>
- [92] [93] [94] [95] [96]
+ [93] [94] [95] [96] [97]
 第五章
-[97
+[98
 
-] [98] [99]
-Overfull \hbox (1.88501pt too wide) in paragraph at lines 3238--3245
+] [99] [100]
+Overfull \hbox (1.88501pt too wide) in paragraph at lines 3285--3292
 []\TU/SimSun(0)/m/n/12.045 显 然 $\OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045
  ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]
 \LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045  []\LMS/
@@ -3007,23 +3007,32 @@ f/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m
 /12.045 (bosons)\TU/SimSun(0)/m/n/12.045 ；|
  []
 
-[100] [101] [102]
+[101]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3318.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3318.
+
+[102] [103] [104]
 File: fig/5-1-a.eps Graphic file (type eps)
 <fig/5-1-a.eps>
 File: fig/5-1-b.eps Graphic file (type eps)
 <fig/5-1-b.eps>
- [103] [104] [105] [106] [107] [108]
+ [105] [106] [107] [108] [109] [110]
 File: fig/5-2.jpg Graphic file (type bmp)
 <fig/5-2.jpg>
- [109]
+ [111]
 File: fig/5-3.jpg Graphic file (type bmp)
 <fig/5-3.jpg>
- [110] [111]
-[112] [113] [114] [115] [116]
+ [112] [113]
+[114] [115] [116] [117]
 第六章
-[117
+[118
 
-] [118] [119] [120]
+] [119] [120] [121]
 Missing character: There is no 忽 ("5FFD) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 略 ("7565) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 高 ("9AD8) in font ntx-Regular-tlf-ot1!
@@ -3036,121 +3045,121 @@ Missing character: There is no 高 ("9AD8) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 阶 ("9636) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 小 ("5C0F) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 量 ("91CF) in font ntx-Regular-tlf-ot1!
- [121] [122]
+ [122] [123]
 File: fig/6.3.pdf Graphic file (type pdf)
 <use fig/6.3.pdf>
- [123] [124] [125] [126] [127] [128]
+ [124] [125] [126] [127] [128] [129]
 File: fig/6-4.pdf Graphic file (type pdf)
 <use fig/6-4.pdf>
 
-[129] [130] [131] [132] [133] [134]
-Overfull \hbox (1.51637pt too wide) in paragraph at lines 4432--4433
+[130] [131] [132] [133] [134] [135]
+Overfull \hbox (1.51637pt too wide) in paragraph at lines 4498--4499
 []\TU/SimSun(0)/m/n/12.045 最 后\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 
 因 为 $\OML/ntxmi/m/it/12.045 C[] \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 
 ^^N[]^^N[]$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 所 以 我 们 可 以 把 标 量 算
  符 的 选 择 定 则[][]\T1/ntxtlf/m/n/12.045 6.54[][]\TU/SimSun(0)/m/n/12.045 写
  []
 
-[135] [136] [137]
-Overfull \hbox (6.30917pt too wide) in paragraph at lines 4523--4525
+[136] [137] [138]
+Overfull \hbox (6.30917pt too wide) in paragraph at lines 4589--4591
 []\TU/SimSun(0)/m/n/12.045 注 意 第 二 个 等 号 我 们 利 用 了 $[] \U/ntxmia/m/it/12.045 = 
 \OT1/ntxtlf/m/n/12.045 0$\TU/SimSun(0)/m/n/12.045 。|  其 实 和 玩 意 和 反 复 提 及 的[][]
 \T1/ntxtlf/m/n/12.045 3.27[][]\TU/SimSun(0)/m/n/12.045 形
  []
 
-[138] [139] [140] [141]
-Overfull \hbox (6.31642pt too wide) in paragraph at lines 4614--4616
+[139] [140] [141] [142]
+Overfull \hbox (6.31642pt too wide) in paragraph at lines 4680--4682
 \TU/SimSun(0)/m/n/12.045 即 能 量 守 恒\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.
 045 所 以 \TU/SimSun(0)/b/n/12.045 时 间 的 连 续 平 移 对 称 性 直 接 导 致 了 体 系 的 能 量 守 恒 \T
 1/ntxtlf/b/n/12.045 (Hamil-
  []
 
-[142] [143]
-Overfull \hbox (21.3193pt too wide) detected at line 4666
+[143] [144]
+Overfull \hbox (21.3193pt too wide) detected at line 4732
 [][]
  []
 
-[144]
-Overfull \hbox (9.27284pt too wide) in paragraph at lines 4694--4695
+[145]
+Overfull \hbox (9.27284pt too wide) in paragraph at lines 4760--4761
 []\TU/SimSun(0)/m/n/12.045 看 来 我 们 考 虑 的 重 点 是 如 何 形 式 上 得 出 一 套 求 解 传 播 子 的 公 
 式，|  式[][]\T1/ntxtlf/m/n/12.045 6.83[][]\TU/SimSun(0)/m/n/12.045 显
  []
 
 
-Overfull \hbox (0.44519pt too wide) in paragraph at lines 4694--4695
+Overfull \hbox (0.44519pt too wide) in paragraph at lines 4760--4761
 \TU/SimSun(0)/m/n/12.045 然 是 可 以 推 广 的，|  现 在 我 们 考 虑 将 $\LMS/ntxsy/m/n/12.045 
 »\OML/ntxmi/m/it/12.045 t[]; t\LMS/ntxsy/m/n/12.045 ¼$ \TU/SimSun(0)/m/n/12.045
  分 成 $\OML/ntxmi/m/it/12.045 N$ \TU/SimSun(0)/m/n/12.045 份，|  端 点 处 值 为 $\OML/n
 txmi/m/it/12.045 t[]; t[]; [] ; t[] \U/ntxmia/m/it/12.045 =
  []
 
-[145]
-Overfull \hbox (4.8549pt too wide) detected at line 4734
+[146]
+Overfull \hbox (4.8549pt too wide) detected at line 4800
 [][][]
  []
 
-[146] [147] [148]
-Overfull \hbox (2.35635pt too wide) in paragraph at lines 4780--4781
+[147] [148] [149]
+Overfull \hbox (2.35635pt too wide) in paragraph at lines 4846--4847
 []\TU/SimSun(0)/m/n/12.045 直 接 根 据[][]\T1/ntxtlf/m/n/12.045 6.90[][]\TU/SimSun(
 0)/m/n/12.045 计 算 路 径 积 分 那 太 难 搞，|  我 们 还 是 根 据 推 导 过 程，|  根 据[][]\T1/ntxtlf/m
 /n/12.045 6.88[][]\TU/SimSun(0)/m/n/12.045 ，|
  []
 
-[149] [150] [151]
+[150] [151] [152]
 第七章
-[152
+[153
 
-] [153] [154]
-Overfull \hbox (11.52446pt too wide) in paragraph at lines 4963--4965
+] [154] [155]
+Overfull \hbox (11.52446pt too wide) in paragraph at lines 5033--5035
 []\TU/SimSun(0)/m/n/12.045 另 外\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 
 其 实 非 简 并 微 扰 论 还 有 一 个 隐 含 的 适 用 条 件 就 是 矩 阵 元 $[]$
  []
 
-[155] [156]
+[156] [157]
 File: fig/7.1.pdf Graphic file (type pdf)
 <use fig/7.1.pdf>
- [157] [158] [159] [160] [161] [162] [163] [164] [165] [166]
-[167] [168] [169] [170] [171]
+ [158] [159] [160] [161] [162] [163] [164] [165] [166] [167]
+[168] [169] [170] [171] [172]
 第八章
-[172
+[173
 
-] [173] [174] [175] [176]
+] [174] [175] [176] [177]
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 5589.
+(Font)              size <17.28> substituted on input line 5659.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5589.
+(hyperref)                removing `math shift' on input line 5659.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mhchem@cee' on input line 5589.
+(hyperref)                removing `\mhchem@cee' on input line 5659.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 5589.
+(hyperref)                removing `superscript' on input line 5659.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5589.
+(hyperref)                removing `math shift' on input line 5659.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5589.
+(hyperref)                removing `math shift' on input line 5659.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mhchem@cee' on input line 5589.
+(hyperref)                removing `\mhchem@cee' on input line 5659.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 5589.
+(hyperref)                removing `math shift' on input line 5659.
 
-[177]
+[178]
 LaTeX Font Info:    Font shape `T1/ntxsups/b/n' will be
-(Font)              scaled to size 12.045pt on input line 5610.
- [178] [179] [180]
+(Font)              scaled to size 12.045pt on input line 5680.
+ [179] [180] [181]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -3164,13 +3173,13 @@ Package fontspec Info: Could not resolve font "FangSong/I" (it probably
 (fontspec)             doesn't exist).
 
 LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
-5772.
+5842.
 
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.045pt on input line 5772.
+(Font)              scaled to size 12.045pt on input line 5842.
 
 Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             with options [Script={CJK}].
@@ -3183,23 +3192,23 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 5772.
- [181]
-Invalid UTF-8 byte or sequence at line 5790 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5790 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5790 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5790 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5790 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5790 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5790 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 5790 replaced by U+FFFD.
+(Font)              scaled to size 9.03374pt on input line 5842.
+ [182]
+Invalid UTF-8 byte or sequence at line 5860 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5860 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5860 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5860 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5860 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5860 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5860 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 5860 replaced by U+FFFD.
 File: fig/8-2.eps Graphic file (type eps)
 <fig/8-2.eps>
- [182]
+ [183]
 第九章
 File: fig/9-1.pdf Graphic file (type pdf)
 <use fig/9-1.pdf>
-[183
+[184
 
 ]
 File: fig/9-2.pdf Graphic file (type pdf)
@@ -3208,10 +3217,10 @@ File: fig/9-2.pdf Graphic file (type pdf)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[184]
+[185]
 File: fig/9-3.pdf Graphic file (type pdf)
 <use fig/9-3.pdf>
- [185]
+ [186]
 File: fig/9-x.pdf Graphic file (type pdf)
 <use fig/9-x.pdf>
 
@@ -3219,7 +3228,7 @@ File: fig/9-x.pdf Graphic file (type pdf)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (10.43625pt too wide) detected at line 5928
+Overfull \hbox (10.43625pt too wide) detected at line 5998
 \OML/ntxmi/m/it/12.045 K[] \LMS/ntxsy/m/n/12.045 ^^Q [] [] \U/ntxmia/m/it/12.04
 5 = \OT1/ntxtlf/m/n/12.045 1\OML/ntxmi/m/it/12.045 :\OT1/ntxtlf/m/n/12.045 980[
 ][]\OML/ntxmi/m/it/12.045 ;  K[] \LMS/ntxsy/m/n/12.045 ^^Q [][] [] \U/ntxmia/m/
@@ -3227,78 +3236,78 @@ it/12.045 = \OT1/ntxtlf/m/n/12.045 1\OML/ntxmi/m/it/12.045 :\OT1/ntxtlf/m/n/12.
 045 485[][]
  []
 
-[186] [187] [188] [189]
+[187] [188] [189] [190]
 File: fig/9-4-a.pdf Graphic file (type pdf)
 <use fig/9-4-a.pdf>
 File: fig/9-4-b.pdf Graphic file (type pdf)
 <use fig/9-4-b.pdf>
- [190]
+ [191]
 File: fig/9-5.pdf Graphic file (type pdf)
 <use fig/9-5.pdf>
- [191] [192] [193]
+ [192] [193] [194]
 File: fig/9-7.pdf Graphic file (type pdf)
 <use fig/9-7.pdf>
- [194]
+ [195]
 File: fig/9-8.pdf Graphic file (type pdf)
 <use fig/9-8.pdf>
- [195] [196] [197]
-[198]
+ [196] [197] [198]
+[199]
 第十章
-[199
+[200
 
 ]
 第十一章
 File: fig/10-1.png Graphic file (type bmp)
 <fig/10-1.png>
-[200
+[201
 
-] [201] [202] [203] [204] [205]
+] [202] [203] [204] [205] [206]
 File: fig/11-2-a.pdf Graphic file (type pdf)
 <use fig/11-2-a.pdf>
 File: fig/11-2-b.pdf Graphic file (type pdf)
 <use fig/11-2-b.pdf>
- [206]
-Overfull \hbox (14.10518pt too wide) detected at line 6493
+ [207]
+Overfull \hbox (14.10518pt too wide) detected at line 6563
 [][][]
  []
 
-[207] [208]
+[208] [209]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[209] [210] [211] [212]
-Overfull \hbox (1.18068pt too wide) in paragraph at lines 6806--6807
+[210] [211] [212] [213]
+Overfull \hbox (1.18068pt too wide) in paragraph at lines 6876--6877
 \TU/SimSun(0)/m/n/12.045 的 本 征 值 本 征 矢 这 些 一 无 所 知，|  所 以 对 $\OML/ntxmi/m/it/12
 .045 G$ \TU/SimSun(0)/m/n/12.045 也 就 一 无 所 知。|  所 以[][]\T1/ntxtlf/m/n/12.045 11
 .30[][]\TU/SimSun(0)/m/n/12.045 和[][]\T1/ntxtlf/m/n/12.045 11.32[][]\TU/SimSun(
 0)/m/n/12.045 都
  []
 
-[213]
+[214]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6833.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Omega' on input line 6833.
+(hyperref)                removing `math shift' on input line 6903.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6833.
+(hyperref)                removing `\Omega' on input line 6903.
 
-[214] [215]
 
-LaTeX Warning: Reference `eq:11.56' on page 216 undefined on input line 6961.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 6903.
 
-[216] [217] [218] [219]
-Overfull \hbox (7.91562pt too wide) detected at line 7117
+[215] [216]
+
+LaTeX Warning: Reference `eq:11.56' on page 217 undefined on input line 7031.
+
+[217] [218] [219] [220]
+Overfull \hbox (7.91562pt too wide) detected at line 7187
 [][][]
  []
 
-[220] [221]
+[221] [222]
 第十二章
-[222
+[223
 
 ]
 \openout2 = `appendix.aux'.
@@ -3310,10 +3319,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--31
 
  []
 
-[223
+[224
 
 
-] [224] [225]
+] [225] [226]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -3321,21 +3330,21 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 140--141
  [][] 
  []
 
-[226] [227] [228]
+[227] [228] [229]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [229] [230]
+ [230] [231]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [231] [232] [233] [234] [235]
+ [232] [233] [234] [235] [236]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [236] [237]
-[238] [239]
+ [237] [238]
+[239] [240]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 517--540
@@ -3343,41 +3352,41 @@ Overfull \hbox (7.7486pt too wide) in paragraph at lines 517--540
 45 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[240
+[241
 
-] [241] [242]
+] [242] [243]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 643--650
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSu
 n(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/
 it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[243] [244] [245] [246] [247] [248]
+[244] [245] [246] [247] [248] [249]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [249] [250]
+ [250] [251]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [251]
+ [252]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [252]
+ [253]
 Overfull \hbox (2.89864pt too wide) detected at line 954
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 
 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[253] [254]
+[254] [255]
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
 line 996.
- [255] [256] [257] [258]
+ [256] [257] [258] [259]
 LaTeX Font Info:    Font shape `T1/ntxsups/m/it' will be
 (Font)              scaled to size 12.045pt on input line 1127.
- [259]
+ [260]
 附录 C
-[260
+[261
 
-]) [261]
+]) [262]
 \openout2 = `appendix_group.aux'.
 
  (./appendix_group.tex
@@ -3400,12 +3409,12 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 26.
 
-[262
+[263
 
 
 
 
-] [263] [264] [265] [266] [267]
+] [264] [265] [266] [267] [268]
 Overfull \hbox (37.32892pt too wide) in paragraph at lines 176--177
 \TU/SimSun(0)/m/n/12.045 示 绕 中 心 旋 转 $\OT1/ntxtlf/m/n/12.045 2\OML/ntxmi/m/it/1
 2.045 ^^Y\LMS/ntxsy/m/n/12.045 ^^9d\OML/ntxmi/m/it/12.045 n$\TU/SimSun(0)/m/n/1
@@ -3415,18 +3424,18 @@ xmi/m/it/12.045 I; R; R[]; [] ; R[]; r; Rr; R[]r; [] ; R[]r\LMS/ntxsy/m/n/12.04
 5 g$\TU/SimSun(0)/m/n/12.045 ，|
  []
 
-[268]
+[269]
 File: fig/fig_D.1a.eps Graphic file (type eps)
 <fig/fig_D.1a.eps>
 File: fig/fig_D.1b.eps Graphic file (type eps)
 <fig/fig_D.1b.eps>
- [269] [270] [271] [272] [273] [274] [275]
+ [270] [271] [272] [273] [274] [275] [276]
 Overfull \hbox (4.64157pt too wide) in paragraph at lines 400--402
 []\TU/SimSun(0)/m/n/12.045 这 个 定 义 其 实 就 是 说 我 们 可 以 选 取 一 组 $\OML/ntxmi/m/it/1
 2.045 V$ \TU/SimSun(0)/m/n/12.045 中 的 基 底 $[] [] 
  []
 
-[276]
+[277]
 Overfull \hbox (31.82376pt too wide) in paragraph at lines 448--449
 []\TU/SimSun(0)/m/it/12.045 又 因 为 $\OML/ntxmi/m/it/12.045 ^^8e$ \TU/SimSun(0)/m
 /it/12.045 是 群 表 示，|  所 以 同 态 满 足 $\LMS/ntxsy/m/n/12.045 A¹\OML/ntxmi/m/it/12.0
@@ -3437,10 +3446,10 @@ A¹\OML/ntxmi/m/it/12.045 g\LMS/ntxsy/m/n/12.045 ºA¹\OML/ntxmi/m/it/12.045 g[]
 MS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 =
  []
 
-[277] [278] [279]
+[278] [279] [280]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
 (Font)              scaled to size 12.045pt on input line 548.
- [280] [281]
+ [281] [282]
 Overfull \hbox (17.87273pt too wide) in paragraph at lines 607--609
 []\TU/SimSun(0)/m/it/12.045 如 果 两 空 间 维 数 相 等 $[] \OML/ntxmi/m/it/12.045 V \U/n
 txmia/m/it/12.045 = [] \OML/ntxmi/m/it/12.045 W$\TU/SimSun(0)/m/it/12.045 ，|  基
@@ -3457,7 +3466,7 @@ Underfull \hbox (badness 1259) in paragraph at lines 622--624
 的
  []
 
-[282] [283] [284] [285] [286]
+[283] [284] [285] [286] [287]
 Underfull \hbox (badness 10000) in paragraph at lines 759--760
 []\TU/SimSun(0)/m/n/12.045 设 有 限 群 $\OML/ntxmi/m/it/12.045 G$ \TU/SimSun(0)/m/n
 /12.045 的 所 有 不 等 价 不 可 约 酉 表 示 为[][][][][]：|
@@ -3470,7 +3479,7 @@ m/n/12.045 . \TU/SimSun(0)/m/n/12.045 这 些 表 示 就 是 群 表 示 最 �
 /n/12.045 .
  []
 
-[287] [288] [289] [290] [291] [292]
+[288] [289] [290] [291] [292] [293]
 Overfull \hbox (15.13051pt too wide) in paragraph at lines 930--931
 []\TU/SimSun(0)/m/it/12.045 证 明 中 用 到 的 操 作：|  由 群 函 数 $\LMS/ntxsy/m/n/12.045 8
 \OML/ntxmi/m/it/12.045 ^^^ \OT1/ntxtlf/m/n/12.045 : \OML/ntxmi/m/it/12.045 G \L
@@ -3479,58 +3488,53 @@ ML/ntxmi/m/it/12.045 ^^^[]\LMS/ntxsy/m/n/12.045 ¹\OML/ntxmi/m/it/12.045 g\LMS/n
 txsy/m/n/12.045 º ^^Q [] [][] \OML/ntxmi/m/it/12.045 ^^^ []$
  []
 
-[293]
+[294]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[294] [295]
+[295] [296]
 File: fig/D-1.pdf Graphic file (type pdf)
 <use fig/D-1.pdf>
 File: fig/D-1.pdf Graphic file (type pdf)
 <use fig/D-1.pdf>
- [296] [297]
+ [297] [298]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 3.61343pt on input line 1138.
- [298] [299]
+ [299] [300]
 Underfull \hbox (badness 10000) in paragraph at lines 1238--1240
 
  []
 
-[300]
-Underfull \hbox (badness 10000) in paragraph at lines 1255--1256
-
+[301] [302] [303] [304] [305]
+Overfull \hbox (45.0pt too wide) in paragraph at lines 1486--1487
+ [][] 
  []
 
-[301] [302] [303]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1367.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1367.
+(hyperref)                removing `math shift' on input line 1498.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1367.
+(hyperref)                removing `math shift' on input line 1498.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 1367.
+(hyperref)                removing `math shift' on input line 1498.
 
 
-Overfull \hbox (25.27548pt too wide) detected at line 1391
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1498.
+
+
+Overfull \hbox (25.27548pt too wide) detected at line 1522
 [][][]
  []
 
-[304] [305] [306] [307]
+[306] [307] [308] [309] [310]
 File: fig/D.4.pdf Graphic file (type pdf)
 <use fig/D.4.pdf>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[308] [309] [310] [311] [312]) [313]
+ [311] [312] [313] [314]) [315] [316]
 File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf>
 File: back_cover/cover.pdf Graphic file (type pdf)
@@ -3545,15 +3549,15 @@ File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf, page 1>
 File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf, page 1>
- [314
+ [317
 
 
 ]
 \tf@thm=\write6
 \openout6 = `sourcecode.thm'.
 
- (./sourcecode.aux (./appendix.aux)
-(./appendix_group.aux))
+
+(./sourcecode.aux (./appendix.aux) (./appendix_group.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.78749pt have occurred.
@@ -3562,15 +3566,15 @@ LaTeX Font Warning: Size substitutions with differences
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `sourcecode.out' has not changed.
-(rerunfilecheck)             Checksum: B77DBFDBF33D7AE54EB484C2F36330E0;17212.
+(rerunfilecheck)             Checksum: 925A1B36EA7DA36C5D4F60BA61A3A284;18242.
  ) 
 Here is how much of TeX's memory you used:
- 108627 strings out of 476533
- 2555165 string characters out of 5818886
- 2302658 words of memory out of 5000000
- 127638 multiletter control sequences out of 15000+600000
+ 108694 strings out of 476533
+ 2558964 string characters out of 5818886
+ 2302401 words of memory out of 5000000
+ 127705 multiletter control sequences out of 15000+600000
  564478 words of font info for 327 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,23n,117p,1548b,47306s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (319 pages).
+Output written on sourcecode.pdf (322 pages).
