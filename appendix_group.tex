@@ -1231,8 +1231,19 @@ $\mathcal{S}$。与其说函数空间中的函数$\Psi$是Euclid空间中的向�
 
 分导表示一般是可约的，可以想想，原先我们是要找到一个矩阵$P$将所有$D(g),\forall g\in G$同时分块对角化，现在我们只要找到一个矩阵将所有$D(h),\forall h\in H$同时分块对角化。要对角化的矩阵变少了，所以不难想象这样的矩阵$P$或许就存在了，也就是表示是可约表示了，可以按照子群$H$的不等价不可约表示进行分解，物理上也比较关心这样的问题。
 
-\subsubsection*{*诱导表示}
+\subsubsection{用商群构造表示}
+\begin{theorem}{商群的表示也是表示}
+	$H\lhd$G，则商群$G/H$的表示$\mathscr{A}$也定义了$G$上的一个简并表示\footnote{非忠实表示}：\[\mathscr{A}^G:G\to GL(V),\quad g\mapsto \mathscr{A}(gH)\]
+\end{theorem}
 
+\subsubsection*{诱导表示}
+\begin{define}{诱导表示}
+	设$H$是$G$的子群，$\{\rho,V\}$是$H$的一个表示，用$\mathcal{V}^G$表示所有$G\to V$的映射构成的线性空间，则：
+	\[V^G=\{f\in\mathcal{V}^G|f(hg)=\rho(h)f(g),\forall h\in H,g\in G\}\]
+	是$\mathcal{V}^G$的子空间，$\forall g\in G$令$\rho^G(g)$如下：
+	\[\rho^G(g)\circ f(g^\prime)=f(g\prime g)\]
+	这样实际上定义了一个$G$的表示$(\rho^G,V^G)$。
+\end{define}
 
 
 

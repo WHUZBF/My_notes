@@ -2556,7 +2556,7 @@
     我们用$\ket{\frac{1}{2}, \uparrow}$和$\ket{\frac{1}{2},\downarrow}$分别表示对应$\mathcal{S}_z$本征值$\frac{\hbar}{2}$和$-\frac{\hbar}{2}$的自旋态。\footnote{分别称为自旋向上和自旋向下, 因为它们是$\mathcal{S}_z$的定态。}在这两个自旋态构成的表象下, 其它自旋态可以用一个列向量表示, 我们
     称之为\textbf{旋量}$\chi$。
 
-    定义：
+    定义基向量：
     \begin{equation}
         \chi_+\equiv\begin{pmatrix}
             1\\0
@@ -5043,7 +5043,7 @@
     \end{equation}
     \section{简并微扰论}
     前面讨论的微扰方法适用的关键是在$\lambda\sim0$时, $\ket{\psi^0}$和$E^0$的变化要很微小,这样$\ket{\psi(\lambda)}$和$E(\lambda)$才能展开成收敛的幂级数形式从而讨论。
-    上一节的最后我们也说明了当能级简并出现时, 会出现发散现象。对于无简并情况, 这是显然的, 对应的态在所研究的微扰下变化肯定很小, 否则我们也不会去谈论微扰。
+    上一节的最后我们也说明了当能级简并出现时, 会出现发散现象。对于无简并情况, 这是显然的, 对应的态在所研究的微扰下变化肯定很小, 否则我们也不会去谈论微扰。下面让我们在$E_n$本征子空间中讨论每个能级简并的劈裂情况。
     
     我们先讨论最简单的双重简并情况：
     \[\hat{H}^0\ket{\psi_a^0}=E^0\ket{\psi_a^0},\hat{H}^0\ket{\psi_b^0}=E^0\ket{\psi_b^0}, \braket{\psi_a^0|\psi_b^0}\]
@@ -5132,7 +5132,7 @@
         那么$\ket{\psi_a^0}$和$\ket{\psi_a^0}$就是我们要找的合适的$\ket{\psi^0}$(\textbf{good states})。
     \end{theorem}
 
-    关于这个定理的证明不想说太多, 实际上就是寻找(\uwave{局部的})CSCO的过程。
+    根据对易性不难发现在这个基底下$W_{ab}=W_{ba}=0$，所以这个定理实际上是在提前将W矩阵进行对角化，当然，前提是$A$自身不简并，否则一般只能将W分块对角化。与找CSCO类似，$A$简并的时候我们可以引入另一个和$A,H^\prime$都对易的$B$，来进一步对角化W矩阵。
 
     那问题又来了, 怎么确定那个$\hat{A}$呢？回忆一下第六章, 讨论系统的对成性, 我们知道每一种对称操作对应一个算符, 宇称算符、平移算符、旋转算符, 而系统具有的每一种对称性又对应其中某一种算符
     与$\hat{H}$的对易性。而系统的对称性我们是可以很直观地通过哈密顿量看出来的。
@@ -5143,7 +5143,7 @@
     
     现在总结一下，对于简并微扰情况，我们面对的态矢为$\ket{n;\tau}$，这里$n$和$\tau$一般情况下不是单个量子数，而是一组量子数，其中$n$与能量对应，$\tau$是在$E_n$简并本征空间中标记基矢的。我们之后要做的无非就是要计算$E_n$的能级劈裂，就在其本征空间中讨论，然后写出对应的W矩阵，本征值就是微扰能量一级修正，本征矢就是对应的零级波函数(简并完全消除时)。
     
-    不过我们计算上可以寻求一些简化，求$W$矩阵本征值过程无非就是在进行对角化，如果我们事先选择的基底$\ket{n;\tau}$已经足够好，直接就将$W$对角化了呢？那这样实际上我们就可以当作是非简并微扰论来处理了，这样新选择的一组量子数就是“好量子数”。选择量子数来描述量子态的过程无非就是在找寻一组CSCO，$\{\hat{A},\hat{B},\ldots \}$，用它们的共同本征矢构成基底。\footnote{这一组力学量中不必包括哈密顿量，那时前面描述能量的量子数$n$就是通常情况下单一的量子数。}那问题现在变为如何选取这一组力学量，首先我们是在$E_n$本征空间中讨论能级劈裂问题，所以承担$n$，也就是描述能量的量子数对$W$矩阵没啥影响，也就是说这一部分量子数你咋选都没关系，重点是后面的$\tau$，不难证明，你只要选取的承担$\tau$的那部分力学量和微扰$H^\prime$也对易则$W$矩阵自然对角化，问题就轻松很多了。但一般情况下没这么好找，最多只能找到$\tau$中的一部分和$H^\prime$是对易的，但那其实也可以轻松很多，$W$矩阵这时就是分块对角化的了，你就可以在更小的子空间里面讨论问题。\footnote{\href{http://www.cnki.com.cn/Article/CJFDTotal-DXWL712.001.htm}{张永德, 张涵. 各种强度均匀磁场下氢原子定态问题统一求解[J]. 大学物理, 1997, 16(12):3.}}
+    不过我们计算上可以寻求一些简化，求$W$矩阵本征值过程无非就是在进行对角化，如果我们事先选择的基底$\ket{n;\tau}$已经足够好，直接就将$W$对角化了呢？那这样实际上我们就可以当作是非简并微扰论来处理了，这样新选择的一组量子数就是“好量子数”。选择量子数来描述量子态的过程无非就是在找寻一组CSCO，$\{\hat{A},\hat{B},\ldots \}$，用它们的共同本征矢构成基底。\footnote{这一组力学量中不必包括哈密顿量，那时前面描述能量的量子数$n$就是通常情况下单一的量子数。}那问题现在变为如何选取这一组力学量，\textbf{首先我们是在$E_n$本征空间中讨论能级劈裂问题}，所以承担$n$，也就是描述能量的量子数对$W$矩阵没啥影响，也就是说这一部分量子数你咋选都没关系，重点是后面的$\tau$，不难证明，你只要选取的承担$\tau$的那部分力学量和微扰$H^\prime$也对易则$W$矩阵自然对角化，问题就轻松很多了。但一般情况下没这么好找，最多只能找到$\tau$中的一部分和$H^\prime$是对易的，但那其实也可以轻松很多，$W$矩阵这时就是分块对角化的了，你就可以在更小的子空间里面讨论问题。\footnote{\href{http://www.cnki.com.cn/Article/CJFDTotal-DXWL712.001.htm}{张永德, 张涵. 各种强度均匀磁场下氢原子定态问题统一求解[J]. 大学物理, 1997, 16(12):3.}}
     
     \subsection*{Feynman-Hellmann 定理}
     \begin{theorem}{Feynman-Hellmann 定理}
@@ -5275,6 +5275,7 @@
 
     这里重点又来了, $H_{os}$实际上是下面的形式：
     \begin{equation}
+    	\label{eq:7.22}
         H_{os}={\color{red} \frac{1}{2}}\cdot\frac{e^2}{4\pi\epsilon_0}\cdot\frac{1}{m_e^2c^2r^3}\mathbf{S}\cdot\mathbf{L}
     \end{equation}
     好像与\ref{eq:7.20}相比多了一个${\raise0.5ex\hbox{$\scriptstyle 1$}\kern-0.1em/\kern-0.15em\lower0.25ex\hbox{$\scriptstyle 2$}}$因子, 这个
@@ -5313,6 +5314,13 @@
         \boxed{E_{nj}=-\frac{\SI{13.6}{\electronvolt}}{n^2}\left[1+\frac{\alpha^2}{n^2}\left(\frac{n}{j+1/2}-\frac{3}{4}\right)\right]}
     \end{equation}
     不仅仅与n有关, 还和总的角量子数j有关。
+    \subsubsection{自旋轨道耦合势}
+  	实际上本节所有修正都可以在Dirac方程做低能近似之后自然得到，一个比较重要的结果是自旋轨道耦合带来的势能修正：
+  	\begin{equation}
+  		V_{os}=\frac{1}{4\pi\varepsilon_0}\frac{e^2}{2m^2c^2}\frac{1}{c}\frac{\partial V}{\partial r}\mathbf{L}\cdot\mathbf{S}
+  	\end{equation}
+  	
+  	对于库伦势，就是前面的\ref{eq:7.22}式。后面讨论势散射问题时还会用到这个结果。其可以在Dirac方程做低能近似下得到。\footnote{cf.喀兴林}
     
     \section{塞曼(Zeeman)效应}
     考虑一个外加磁场$\mathbf{B}_{ext}$, 由于电子的空间自由度, 根据\ref{eq:4.105}, 哈密顿量可以写为:
@@ -5400,7 +5408,7 @@
     \end{equation*}
     
     因为前面计算精细能级时已知$\ket{n\ell j m_j}$为$H_{fs}^\prime$的0级波函数, 所以$\mathbf{W}_{fs}$只有对角线非零而且由\ref{eq:7.23}给出。进一步根据
-    解耦后的基底可以算出总的$\mathbf{W}$矩阵\footnote{计算很繁琐, 要多加小心}:
+    解耦后的基底可以算出总的$\mathbf{W}$矩阵\footnote{计算很繁琐, 要多加小心。但是不难发现这个矩阵是分块对角化的，说明我们选取的量子数部分是好量子数(与微扰哈密顿对易)，所以，尽可能多的选取好量子数会方便微扰计算。\href{http://dxwl.bnu.edu.cn/CN/abstract/abstract4031.shtml}{张永德 张涵. 各种强度均匀磁场下氢原子定态问题统一求解[J]. , 1997, 16(12): 2-2.}}:
     \begin{equation*}
         -\left(\begin{array}{cccccccc}
         5 \gamma-\beta & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
@@ -5487,7 +5495,7 @@
 		\ket{\psi_+}\\\ket{\psi_-}
 	\end{pmatrix}\]
 	其中上面的矢量在位置表象下对应的波函数（的模方）可以理解为测得电子在某位置处且自旋向上的概率。
-	
+		
 	把这个一般的考虑了自旋空间的态矢代入薛定谔方程，我们面对的其实一个矩阵方程：\footnote{或者你可以叫它“矩阵的矩阵”，因为内部的哪个态矢也可以看作是个矩阵。}
 	\begin{equation}
 		i\hbar\frac{\partial}{\partial {t}}\begin{pmatrix}
@@ -5499,6 +5507,15 @@
 	\end{pmatrix}
 	\end{equation}
 	其中$H_{++}$是个算符，定义为$\braket{\uparrow|H|\uparrow}$，其他三个以此类推。
+	
+	另外，不少文献中也常常使用$\psi(\mathbf{r},\sigma)$表示考虑自旋后的波函数，其本质是$\braket{\mathbf{r},\sigma|\psi}$，$\ket{\mathbf{r},\sigma}$是态空间和自旋空间张量积空间的基矢量，$\sigma=\pm\frac{1}{2}$。一种比较简单的情况是态可以写成下面的形式：
+	\[\ket{\psi}=\ket{\varphi}\otimes\ket{\chi}\]
+	这个时候空间自由度和自旋自由度是完全分离的，按照前面$\S 4$中的记号，波函数可以用一个比较简单的二分量旋量表示：
+	\[\psi(\mathbf{r},\sigma)=\varphi(\mathbf{r})\chi_\sigma^\frac{1}{2}=\varphi(\mathbf{r})\begin{pmatrix}
+		c_1\\
+		c_2
+	\end{pmatrix}\]
+	
     \chapter{变分法}
     前面的定态微扰论很方便, 也很精确, 但是我们还是要事先求出未微扰的波函数, 然后代入公式计算。\footnote{做{\itshape Griffiths}的习题你就知道有多痛苦了}
     而下面要介绍的变分法就是在我们完全不知道, 也不用知道波函数的情况下较为近似的给出基态能量大小。当然它也可以进一步推广去求激发态, 现在也有很多计算物理算法是基于此原理的
@@ -7130,6 +7147,126 @@
 	\begin{equation}
 		f_2(\theta,\phi)\approx \tilde{f}_1(\theta,\phi)+\left(\frac{m}{2\pi\hbar^2}\right)^2\int\mathrm{d}^3r\int\mathrm{d}^3r^\prime \frac{1}{|\mathbf{r}-\mathbf{r^\prime}|}V(\mathbf{r})V(\mathbf{r^\prime})
 	\end{equation}
+	Born近似的公式还可以由下面的费曼规则和费曼图得到：
+	\begin{itemize}
+		\item 画出费曼图，有几个顶点就是几阶近似，每个横线上面标注$\mathbf{q_i}$，纵线标注$\mathbf{p_i}$，并且根据每个顶点的动量守恒确定$\mathbf{p_i}$与$k,q$之间的关系，之后的计算中全部使用$k,q$作为变量。比如下面的第二幅图中就有$\mathbf{p}_1=\mathbf{q}-\mathbf{k_i}$
+		\begin{center}
+			
+			
+			\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
+			
+			\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
+				%uncomment if require: \path (0,243); %set diagram left start at 0, and has height of 243
+				
+				%Straight Lines [id:da441840637131653] 
+				\draw    (70.5,128) -- (103.06,159.61) ;
+				\draw [shift={(104.5,161)}, rotate = 224.14] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da7191685874530023] 
+				\draw    (104.5,161) -- (133.15,129.48) ;
+				\draw [shift={(134.5,128)}, rotate = 132.27] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da46555923374658015] 
+				\draw    (104.5,206) -- (104.5,163) ;
+				\draw [shift={(104.5,161)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da7364233449172539] 
+				\draw    (179.5,128) -- (212.06,159.61) ;
+				\draw [shift={(213.5,161)}, rotate = 224.14] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da8206105546368394] 
+				\draw    (272.5,160) -- (301.15,128.48) ;
+				\draw [shift={(302.5,127)}, rotate = 132.27] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da3955117519176412] 
+				\draw    (213.5,206) -- (213.5,163) ;
+				\draw [shift={(213.5,161)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da39196743467662354] 
+				\draw    (213.5,161) -- (270.5,160.03) ;
+				\draw [shift={(272.5,160)}, rotate = 179.03] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da3068341466498552] 
+				\draw    (272.5,205) -- (272.5,162) ;
+				\draw [shift={(272.5,160)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da6102953050465714] 
+				\draw    (344.5,129) -- (377.06,160.61) ;
+				\draw [shift={(378.5,162)}, rotate = 224.14] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da6064614466800282] 
+				\draw    (496.5,160) -- (525.15,128.48) ;
+				\draw [shift={(526.5,127)}, rotate = 132.27] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da8885589707747727] 
+				\draw    (378.5,207) -- (378.5,164) ;
+				\draw [shift={(378.5,162)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da7259698816933646] 
+				\draw    (378.5,162) -- (435.5,161.03) ;
+				\draw [shift={(437.5,161)}, rotate = 179.03] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da9911644044867562] 
+				\draw    (437.5,206) -- (437.5,163) ;
+				\draw [shift={(437.5,161)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da09383621280369425] 
+				\draw    (437.5,161) -- (494.5,160.03) ;
+				\draw [shift={(496.5,160)}, rotate = 179.03] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				%Straight Lines [id:da3963757254551159] 
+				\draw    (496.5,205) -- (496.5,162) ;
+				\draw [shift={(496.5,160)}, rotate = 90] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+				
+				% Text Node
+				\draw (8,151.4) node [anchor=north west][inner sep=0.75pt]    {$f( \theta ,\phi ) =$};
+				% Text Node
+				\draw (150,156.4) node [anchor=north west][inner sep=0.75pt]    {$+$};
+				% Text Node
+				\draw (56,109.4) node [anchor=north west][inner sep=0.75pt]    {$k_{i}$};
+				% Text Node
+				\draw (136,107.4) node [anchor=north west][inner sep=0.75pt]    {$k_{f}$};
+				% Text Node
+				\draw (93,175.4) node [anchor=north west][inner sep=0.75pt]    {$p$};
+				% Text Node
+				\draw (165,109.4) node [anchor=north west][inner sep=0.75pt]    {$k_{i}$};
+				% Text Node
+				\draw (302,103.4) node [anchor=north west][inner sep=0.75pt]    {$k_{f}$};
+				% Text Node
+				\draw (193,175.4) node [anchor=north west][inner sep=0.75pt]    {$p_{1}$};
+				% Text Node
+				\draw (253,174.4) node [anchor=north west][inner sep=0.75pt]    {$p_{2}$};
+				% Text Node
+				\draw (239,139.4) node [anchor=north west][inner sep=0.75pt]    {$q$};
+				% Text Node
+				\draw (330,110.4) node [anchor=north west][inner sep=0.75pt]    {$k_{i}$};
+				% Text Node
+				\draw (528,106.4) node [anchor=north west][inner sep=0.75pt]    {$k_{f}$};
+				% Text Node
+				\draw (359,176.4) node [anchor=north west][inner sep=0.75pt]    {$p_{1}$};
+				% Text Node
+				\draw (418,176.4) node [anchor=north west][inner sep=0.75pt]    {$p_{2}$};
+				% Text Node
+				\draw (404,140.4) node [anchor=north west][inner sep=0.75pt]    {$q_{1}$};
+				% Text Node
+				\draw (319,156.4) node [anchor=north west][inner sep=0.75pt]    {$+$};
+				% Text Node
+				\draw (458,139.4) node [anchor=north west][inner sep=0.75pt]    {$q_{2}$};
+				% Text Node
+				\draw (479,175.4) node [anchor=north west][inner sep=0.75pt]    {$p_{3}$};
+				% Text Node
+				\draw (546,155.4) node [anchor=north west][inner sep=0.75pt]    {$+\cdots $};
+				
+				
+			\end{tikzpicture}
+		\end{center}
+		\item 每个纵线（外线）带来因子：
+		\begin{center}
+			\tikzstyle{every node}=[font=\large,scale=0.9]
+			\begin{tikzpicture}
+				\draw[->] (0,0)--(0,1.6) node[midway,left]{$\mathbf{p}$};
+				\draw (3.2,0.8) node {$=\tilde{V}( \mathbf{p}) \equiv\int \mathrm{e}^{-i\mathbf{p}\cdot \mathbf{r}^{\prime }} V\left( \mathbf{r}^{\prime }\right)\mathrm{d}^{3} r^{\prime }$};
+			\end{tikzpicture}
+		\end{center}
+		\item 每个横线（内线）带来因子$(\varepsilon\to 0)$：
+		
+		\begin{center}
+			\tikzstyle{every node}=[font=\large,scale=0.9]
+			\begin{tikzpicture}
+				\draw[->] (0,0)--(1.5,0) node[midway,above]{$\mathbf{q}$};
+				\draw (2.65,-0.04) node {$=\frac{1}{k^2-q^2+i\varepsilon}$};
+			\end{tikzpicture}
+		\end{center}
+	
+		\item 对于每条横线（内线），还要进行积分：$-\frac{1}{4\pi}\int\frac{\mathrm{d}^3q}{(2\pi)^3}$
+		\item 最后整体乘上$\frac{m}{2\pi\hbar^2}$便得到散射振幅$f(\theta,\phi)$.
+	\end{itemize}
 	\subsection{光学定理}
 	根据\ref{eq:11.14}和\ref{eq:11.15}可以得到下面的光学定理：\footnote{为啥叫光学定理？请移步至这篇论文：\DOI{10.1119/1.10324}}
 	\begin{equation}
@@ -7200,7 +7337,7 @@
 	
 	上一节举的几个例子似乎都会让你觉得光学定理有问题，但别忘了，我们证明光学定理不依赖于任何近似选取，但前面几节我们计算振幅都使用了某些近似。
 	
-	
+	\section{*再谈分波法}
 	
 	\section{含时散射理论}
 	这一部分先不急着补，能把含时问题搞完就很好了
