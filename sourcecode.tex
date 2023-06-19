@@ -6486,6 +6486,7 @@
 	
 	问题是如何去计算$a_\ell$？那就需要继续精细点考虑，把$r>a$得到的解作为边界条件，然后在$r<a$内部解薛定谔方程去确定系数。就还真挺麻烦的，不过我们确定系数不会直接使用\ref{eq:11.8}，因为这个式子前一半是在柱坐标系内写的，后一半是在球坐标系下写的，考虑我们在$r<a$内解薛定谔方程都是在球坐标系内进行，所以我们把\ref{eq:11.8}统一在球坐标系下写，需要用到下面的\textbf{Rayleigh公式}
 	\begin{equation}
+		\label{eq:11.10}
 		e^{ikz}=\sum_{\ell=0}^\infty i^\ell(2\ell+1)j_\ell(kr)P_\ell(\cos\theta)
 	\end{equation}
 	代入\ref{eq:11.8}得到：
@@ -6821,6 +6822,7 @@
 
 	代入\ref{eq:11.22}并保留到一阶得到:\footnote{这里的归一化系数为什么是$1/(2\pi)^{3/2}$？因为根据\ref{eq:11.29}可以得知那里的$\Braket{\psi^\pm_{\mathbf{k}^\prime}|\psi^\pm_{\mathbf{k}}}=\Braket{\mathbf{k}^\prime|\mathbf{k}}=\delta(\mathbf{k}^\prime-\mathbf{k})$，是正交归一的解，这里取的归一化系数刚好可以和\ref{eq:11.29}对应。}
 	\begin{equation}
+		\label{eq:11.24}
 		\psi^+(\mathbf{r})\approx \frac{1}{(2\pi)^{3/2}}\left[e^{ikz}+f(\theta,\varphi)\frac{e^{ikr}}{r}\right]
 	\end{equation}
 	其中：
@@ -7029,6 +7031,7 @@
 	\end{equation}
 	直接用算符可以写成：
 	\begin{equation}
+		\label{eq:11.55}
 		{\color{red}
 			\boxed{
 				S=\mathbbm{1}-2\pi i\delta(E_f-E_i) T^+
@@ -7039,7 +7042,7 @@
 	
 	根据跃迁算符的性质\ref{eq:11.41}，不断迭代可以得到$T^+$的无穷级数形式，称为$T$算符的\textbf{Born级数}：
 	\begin{equation}
-		\label{11.56}
+		\label{eq:11.56}
 		T^+=V+VG_0^+V+VG_0^+VG_0^+V+\cdots
 	\end{equation}
 
@@ -7338,7 +7341,79 @@
 	上一节举的几个例子似乎都会让你觉得光学定理有问题，但别忘了，我们证明光学定理不依赖于任何近似选取，但前面几节我们计算振幅都使用了某些近似。
 	
 	\section{*再谈分波法}
+	下面在形式理论的基础上继续讨论分波法，其实就是在角动量表象下去解薛定谔方程。
+	\subsection{无自旋情况}
+	\[H=\frac{P^2}{2m}+V(r)\]
+	问题转化为在下面的渐进条件下：\footnote{因为球对称所以$f(\theta,\phi)=f(\theta)$，后面的讨论中一律省略上标“$+$”。另外，这里我们为了后面式子书写的方便，前面的归一化因子取做$1$，而不是与\ref{eq:11.24}一致，这并不会改变最终的结果。}
+	\[\psi_{\mathbf{p}_i}^+\xlongrightarrow{r\to\infty}\mathrm{e}^{ikz}+f(\theta)\frac{e^{ikr}}{r}\]
+	解定态方程$H\psi_{\mathbf{p}_i}=E_i\psi_{\mathbf{p}_i}$。我们首先选取$k\theta\psi$表象，也就是说不用$\mathbf{k}$的三个直角坐标分量表示$\ket{\mathbf{k}}$，而使用大小$k$和方向$\mathbf{k}^0$来标记。
+	\begin{equation}
+		\begin{aligned}
+			\braket{\mathbf{k_f}|T|\mathbf{k_i}}&=\braket{{k_f}|{k_i}}\braket{\mathbf{k_f}^0|T|\mathbf{k_i}^0}\\
+			&=\frac{1}{k_i^2}\delta(\mathbf{k_f}-\mathbf{k_i})\sum_{\ell^\prime m^\prime}\sum{\ell m}\braket{\mathbf{k_f}^0|\ell^\prime m^\prime}\braket{\ell^\prime m^\prime |T |\ell m}\braket{\ell m|\mathbf{k_i}^0}\\
+			&=\frac{\hbar^3}{m p_i}\delta(E_f-E_i)\sum_{\ell^\prime m^\prime}\sum{\ell m}\braket{\mathbf{k_f}^0|\ell^\prime m^\prime}T_\ell\delta_{\ell\ell^\prime}\delta_{mm}\braket{\ell m|\mathbf{k_f}^0}\\
+			&=\frac{\hbar^3}{m p_i}\delta(E_f-E_i)\sum_{\ell m} T_\ell Y^{m*}_\ell(\mathbf{k_f}^0)Y^{m}_\ell(\mathbf{k_i}^0)\\
+			&=\frac{\hbar^3}{m p_i}\delta(E_f-E_i)\sum_\ell\frac{2\ell+1}{4\pi}T_\ell P_\ell(\cos\theta)\\
+			&=-\frac{i\hbar^3}{8\pi^2m p_i}\sum_\ell (2\ell+1)(1-S_\ell)P_\ell(\cos\theta)
+		\end{aligned}
+	\end{equation}
 	
+	首先第一个等式利用了能量守恒，散射算符$T$不会改变$k$的大小，是$\ket{\theta\varphi}$空间中的算符。
+	
+	第二个等号来源于归一化：
+	\[\mathbbm{1}=\int d^3k\ket{\mathbf{k}}\bra{\mathbf{k}}=\int dkk^2\ket{{k}}\bra{{k}}\int \ket{\mathbf{k}^0}\bra{\mathbf{k}^0}d\omega\]
+	所以$\ket{k}$空间中的完全性关系$\mathbbm{1}==\int dkk^2\ket{{k}}\bra{{k}}$说明了这里$1/k^2_i$因子的来历。
+	
+	第三个等号是因为$T$和角动量算符对易，其是零阶球张量算符（标量算符），所以根据Wigner-Eckart定理其只能有对角项不为0。第四个等号就是球谐函数与角动量表象之间的关系而且注意到下面的等式：
+	\begin{equation}
+		\begin{aligned}
+			\delta(E_f-E_i)&=\delta\left[\frac{\hbar^2}{2m}\left(k_f^2-k_i^2\right)\right]\xlongequal{\delta(ax)=\frac{1}{|a|}\delta(x)}\frac{2m}{\hbar^2}\delta\left(k_f^2-k_i^2\right)\\
+			&=\frac{2m}{\hbar^2}\cdot\frac{1}{2k_i}\left[\delta(k_f-k_i)+\cancel{\delta(k_f+k_i)}\right]\xlongequal[k_f>0]{k_i>0}\frac{m}{\hbar^2k_i}\delta(k_f-k_i)
+		\end{aligned}
+	\end{equation}
+	第五个等式利用球谐函数加法定理，最后一个等式注意到\ref{eq:11.55}即可。
+	
+	前面证明了$S$的幺正性，而$S$又是一个对角阵，所以一定有$|S_\ell|=1$，按照惯例记为：
+	\begin{equation}
+		\boxed{S_\ell=\mathrm{e}^{2\mathrm{i}\delta_\ell}}
+	\end{equation}
+	其中$\delta_\ell\in\mathbbm{R}$其实就是前面说的\textbf{相移}。现在再利用\ref{eq:11.39}发现我们又得到了\ref{eq:11.14}和\ref{eq:11.15}。
+	
+	\subsubsection{分波方程}
+	我们将散射定态用球谐函数展开：
+	\[\psi_{\mathbf{p_i}}(\mathbf{r})=\sum_{\ell m}a^\prime_{\ell m} R_\ell (r)Y_\ell^m(\theta,\varphi)\xlongequal[m=0]{\text{spherical symmetry}}\sum_{\ell=0}^\infty a_\ell R_\ell(r)P_\ell(\cos\theta)\]
+	然后代入到薛定谔方程，令$u_\ell=rR_\ell$得到：
+	\begin{equation}
+		\label{eq:11.79}
+		\boxed{\left[\frac{d^2}{dr^2}+k_i^2-\frac{\ell(\ell+1)}{r^2}-\frac{2m}{\hbar^2}V(r)\right]u_\ell=0}
+	\end{equation}	
+	这就是每个分波满足的方程，还要对应的将边界条件进行转化，注意到\ref{eq:11.10}以及球Bessel函数的渐近形式：
+	\[j_\ell(kr)=\sqrt{\frac{\pi}{2kr}}J_{\ell+\frac{1}{2}}(kr)\xlongrightarrow{r\to\infty}\frac{1}{kr}\sin\left(kr-\frac{1}{2}\ell\pi\right)\]
+	代入$\psi_\mathbf{p_i}$满足的边界条件得到：
+	\begin{equation}
+		\label{eq:11.80}
+	\psi_{\mathbf{p}_i}\xlongrightarrow{r\to\infty}\frac{1}{kr}\sum_\ell(2\ell+1)\mathrm{i}^\ell\mathrm{e}^\mathrm{{i}\delta_{\ell}}\sin\left(kr-\frac{1}{2}\ell\pi+\delta_\ell\right)P_\ell(\cos\theta)
+\end{equation}
+	与展开式比较便得到：
+	\begin{equation}
+		\boxed{
+		a_\ell u_\ell(\mathbf{r})\xlongrightarrow{r\to\infty}b_\ell\sin\left(kr-\frac{1}{2}\ell\pi+\delta_\ell\right)}
+	\end{equation}
+	
+	那现在问题就是在上面的渐进条件下解分波方程，而且无需求出具体的解，只需要把渐进解中的$\delta_\ell$用一些数学手段求出来即可。
+	
+	另外还需要$r\to 0$时的边界条件，由于波函数不能有奇异点，所以$R_\ell\to\text{\itshape{有限}}$，则$u_\ell\to 0$。而且如果在$r\to 0$时$V(r)$相对于$1/r^2$可看作$0$，则方程\ref{eq:11.79}化为：
+	\[\left[\frac{d^2}{dr^2}-\frac{\ell(\ell+1)}{r^2}\right]u_\ell=0\]
+	可以得到更加精确的渐进条件：
+	\[u_\ell)(r)\xlongrightarrow{r\to 0}r^{\ell+1}\]
+	\subsubsection{相移}
+	最后再来讨论一下相移，入射平面波在远处渐进形式根据\ref{eq:11.10}可以写为：
+	\[\braket{\mathbf{r}|\mathbf{k}_i}\to\frac{1}{kr}\sum_\ell(2\ell+1)\mathrm{i}^\ell\sin\left(kr-\frac{1}{2}\ell\pi\right)P_\ell(\theta)\]
+	另外注意到散射定态的渐进解\ref{eq:11.80}，两者差别就在相位上面，所以我们可以说势能对入射波的作用就是对远处每个分波产生了相移$\delta_\ell$。
+	
+	\section{$\frac{1}{2}$自旋情况}
+	\subsubsection{与电磁散射类比}
+	如果读者比较熟悉电磁散射理论\footnote{见刘川《电动力学》$\S26$}，会发现许多与我们这里量子力学讨论类似的地方。我们这里使用角动量表象建立分波方程，对波函数进行分波展开，对应的就是电磁辐射中用球面波对辐射场进行多级展开，这里无自旋情况对应的就是不考虑散射波的偏振，有自旋情况就对应将电磁波偏振分开讨论定义相应的散射振幅。
 	\section{含时散射理论}
 	这一部分先不急着补，能把含时问题搞完就很好了
 	
