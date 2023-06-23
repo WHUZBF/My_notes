@@ -5510,14 +5510,15 @@
 	\end{equation}
 	其中$H_{++}$是个算符，定义为$\braket{\uparrow|H|\uparrow}$，其他三个以此类推。
 	
-	另外，不少文献中也常常使用$\psi(\mathbf{r},\sigma)$表示考虑自旋后的波函数，其本质是$\braket{\mathbf{r},\sigma|\psi}$，$\ket{\mathbf{r},\sigma}$是态空间和自旋空间张量积空间的基矢量，$\sigma=\pm\frac{1}{2}$。一种比较简单的情况是态可以写成下面的形式：
+	另外，不少文献中也常常使用$\psi(\mathbf{r},\sigma)$表示考虑自旋后的波函数，其本质是$\braket{\mathbf{r},\sigma|\psi}$，$\ket{\mathbf{r},\sigma}$是态空间和自旋空间张量积空间的基矢量，$\sigma=\pm\frac{1}{2}$，写成列矩阵就是$\left(\psi_+(\mathbf{r}),\psi_-(\mathbf{r})\right)^\mathrm{T}$。一种比较简单的情况是态可以写成下面的形式：
 	\[\ket{\psi}=\ket{\varphi}\otimes\ket{\chi}\]
 	这个时候空间自由度和自旋自由度是完全分离的，按照前面$\S 4$中的记号，波函数可以用一个比较简单的二分量旋量表示：
-	\[\psi(\mathbf{r},\sigma)=\varphi(\mathbf{r})\chi_\sigma^\frac{1}{2}=\varphi(\mathbf{r})\begin{pmatrix}
+	\[\psi(\mathbf{r},\sigma)=\varphi(\mathbf{r})\chi^\frac{1}{2}(\sigma)=\varphi(\mathbf{r})\begin{pmatrix}
 		c_1\\
 		c_2
 	\end{pmatrix}\]
 	
+	这里$\chi^\frac{1}{2}(\sigma)$就是自旋波函数。一般情况下$\psi$并没有$\varphi\chi$这么简单的形式。另外，我们用$\chi^\frac{1}{2}_{\pm\frac{1}{2}}$标记自旋空间中的两个基矢量，$(1,0)^\mathrm{T}$和$(0,1)^\mathrm{T}$
     \chapter{变分法}
     前面的定态微扰论很方便, 也很精确, 但是我们还是要事先求出未微扰的波函数, 然后代入公式计算。\footnote{做{\itshape Griffiths}的习题你就知道有多痛苦了}
     而下面要介绍的变分法就是在我们完全不知道, 也不用知道波函数的情况下较为近似的给出基态能量大小。当然它也可以进一步推广去求激发态, 现在也有很多计算物理算法是基于此原理的
@@ -6360,7 +6361,7 @@
 	
 	
 	按照此方法可以计算到任意阶近似，取零级近似便回到了前面的\ref{eq:9.5}, 另外上面只考虑了经典允许区,经典禁区可以类似讨论。
-	\chapter{含时问题}
+	\chapter{含时问题(施工中)}
 	前面我们一直都在倒腾势能不含时的Sch\"{o}dinger方程，这样时间变数就可以直接变量分离出去，我们只需要去解更简单一点的定态Sch\"{o}dinger方程就好。现在我们来具体考虑含时问题，并为后面讨论含时散射问题打好基础。
 	
 	\section{相互作用绘景}
@@ -7398,6 +7399,7 @@
 \end{equation}
 	与展开式比较便得到：
 	\begin{equation}
+		\label{eq:11.81}
 		\boxed{
 		a_\ell u_\ell(\mathbf{r})\xlongrightarrow{r\to\infty}b_\ell\sin\left(kr-\frac{1}{2}\ell\pi+\delta_\ell\right)}
 	\end{equation}
@@ -7412,7 +7414,7 @@
 	\[u_\ell)(r)\xlongrightarrow{r\to 0}r^{\ell+1}\]
 	\subsubsection{相移}
 	最后再来讨论一下相移，入射平面波在远处渐进形式根据\ref{eq:11.10}可以写为：
-	\[\braket{\mathbf{r}|\mathbf{k}_i}\to\frac{1}{kr}\sum_\ell(2\ell+1)\mathrm{i}^\ell\sin\left(kr-\frac{1}{2}\ell\pi\right)P_\ell(\theta)\]
+	\[\braket{\mathbf{r}|\mathbf{k}_i}\to\frac{1}{kr}\sum_\ell(2\ell+1)\mathrm{i}^\ell\sin\left(kr-\frac{1}{2}\ell\pi\right)P_\ell(\cos\theta)\]
 	另外注意到散射定态的渐进解\ref{eq:11.80}，两者差别就在相位上面，所以我们可以说势能对入射波的作用就是对远处每个分波产生了相移$\delta_\ell$。
 	\subsubsection{近似计算例子}
 	前面讨论的Born近似适用于高能散射，而这里的分波法适用于低能散射，特别是势能在$r>d$后截断，只有前面几项相移不为$0$。我们这里主要说明其与Born近似的统一性。
@@ -7453,11 +7455,99 @@
 	\end{equation}
 	
 	\subsection{自旋$\frac{1}{2}$情况}
-	考虑自旋后，势能项中要加入自旋角动量耦合势\ref{eq:7.24}，
+	考虑自旋后，势能项中要加入自旋角动量耦合势\ref{eq:7.24}，薛定谔方程实际上升级为Pauli方程，对于波函数的自旋部分和角向部分可以用角动量表象$\ket{\ell m_\ell}\ket{sm_s}$展开，下面我们转入耦合表象$\ket{\ell\frac{1}{2}jm}$研究，并且在坐标表象下可以得到$\ket{\ell\frac{1}{2}jm}$对应的基函数：\footnote{这里CG系数采用群论附录中的符号约定}
+	\begin{equation}
+		\label{eq:11.87}
+		Y^{\ell\frac{1}{2}}_{jm}(\mathbf{r}^0)=\sum_{m_\ell m_s}Y^{m_\ell}_\ell (\mathrm{r}^0)\chi_{m_s}^\frac{1}{2}S_{jmm_\ell m_s}^{\ell\frac{1}{2}}
+	\end{equation}
+	而且在坐标表象下有：
+	\[\mathbf{L}\cdot\mathbf{S}Y^{\ell\frac{1}{2}}_{jm}(\mathbf{r}^0)=\frac{\hbar^2}{2}\left[j(j+1)-\ell(\ell+1)-\frac{3}{4}\right]Y^{\ell\frac{1}{2}}_{jm}(\mathbf{r}^0)\equiv\zeta(j\ell)Y^{\ell\frac{1}{2}}_{jm}(\mathbf{r}^0)\]
+	现在可以按照\ref{eq:11.87}对电子的波函数进行展开，因为$Y^{\ell\frac{1}{2}}_{jm}(\mathbf{r}^0)$只在自旋空间和角向完备，故展开系数是关于$r$的函数：
+	\begin{equation}
+		\label{eq:11.88}
+		\psi(\mathbf{r},\sigma)=\frac{1}{r}\sum_{\ell=0}^\infty\sum_{j=\ell-\frac{1}{2}}^{\ell+\frac{1}{2}}\sum_{m=-j}^{j}A^{\ell}_{jm}u_j^\ell(r)Y^{\ell\frac{1}{2}}_{jm}(\mathbf{r}^0)
+	\end{equation}
+	分波方程为：
+	\[\left[\frac{d^2}{dr^2}+k_i^2-\frac{\ell(\ell+1)}{r^2}-\frac{2m}{\hbar^2}e\varphi(r)-\frac{2m}{\hbar^2}\zeta(j\ell)V^\prime(r)\right]u_j^\ell(r)=0\]
+	从其中可看出$u(r)$与$m$无关。现在类比\ref{eq:11.81}，我们得到分波方程的渐进条件：
+	\[u_j^\ell(r)\xlongrightarrow{r\to\infty}b_{\ell j}\sin\left(kr-\frac{1}{2}\ell\pi+\delta_{\ell j}\right)\]
+	代入\ref{eq:11.88}得态函数渐进条件：
+	\begin{equation}
+		\label{eq:11.89}
+		\psi(\mathbf{r},\sigma)\xlongrightarrow{r\to\infty}b_{\ell j}\frac{1}{r}\sum_{\ell j m}A^{\ell}_{jm}\sin\left(kr-\frac{1}{2}\ell\pi+\delta_{\ell j}\right)Y^{\ell\frac{1}{2}}_{jm}(\mathbf{r}^0)
+	\end{equation}
+	
+	另一方面，态函数是入射平面波和散射球面波的叠加，但是这个时候要格外注意自旋，我们考虑入射电子是“极化”的，也就是说是自旋为$S_z$的本征态，而在散射后由于自旋角动量分量$S_z$不守恒，所以出射球面波应该是$\chi^{\frac{1}{2}}_{\pm\frac{1}{2}}$的叠加：
+	\begin{equation}
+		\label{eq:11.90}
+		\psi(\mathbf{r},m_s)\xlongrightarrow{r\to \infty}\chi^\frac{1}{2}_{m_s}\mathrm{e}^{ikz}+\sum_{m_s^\prime}\chi^\frac{1}{2}_{m^\prime_s}\mathcal{M}_{m_s^\prime m_s}(\theta,\varphi)\frac{\mathrm{e}^{ikr}}{r}
+	\end{equation}
+	这里方向因子不再是单一的函数$f(\theta,\varphi)$，而变成了一个矩阵$\mathcal{M}$，其相当于散射振幅。矩阵元的物理意义为：
+	\begin{equation}
+		\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega}(\theta,\varphi;m_s,m_s^\prime)=|\mathcal{M}_{m_s^\prime m_s}(\theta,\varphi)|^2
+	\end{equation}
+	散射截面现在还与出入射自旋相关（考虑电子的“极化”方向）。如果我们不考虑出射电子的自旋，仅仅考虑电子出射到某个立体角的几率，对$m_s^\prime $求和即可：
+	\begin{equation}
+		\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega}(\theta,\varphi)=\sum_{m_s^\prime}|\mathcal{M}_{m_s^\prime m_s}(\theta,\varphi)|^2
+	\end{equation}
+	入射电子如果不是“极化”的，那么根据线性叠加，最终结果加权求和一下就行，后面我们会看到上式其实与$m_s$无关，所以上式对于“非极化”入射也适用。
+	
+	现在我们具体使用相移计算出散射矩阵：
+	\begin{equation}
+		\begin{aligned}
+			\chi_{m_s}^\frac{1}{2}\mathrm{e}^{ikz}&=\chi_{m_s}^\frac{1}{2}\cdot\frac{1}{kr}\sum_\ell(2\ell+1)\mathrm{i}^\ell\sin\left(kr-\frac{1}{2}\ell\pi\right)P_\ell(\cos\theta)\\
+			&=\frac{1}{kr}\sum_\ell(2\ell+1)\mathrm{i}^\ell\sin\left(kr-\frac{1}{2}\ell\pi\right)\frac{4\pi}{2\ell+1}Y_\ell^0(theta)\chi_{m_s}^\frac{1}{2}
+		\end{aligned}
+	\end{equation}
+	根据CG系数的完备性和正交性：
+	\begin{equation}
+		\begin{aligned}
+			\sum_{jm}S_{jm0m^\prime}^{\ell\frac{1}{2}}Y^{\ell\frac{1}{2}_{jm}}&=\sum_{jm}\sum_{m_\ell m_s}Y_\ell^{m_\ell}\chi_{m_s}^\frac{1}{2}S_{jmm_\ell m_s}^{\ell\frac{1}{2}}S_{jm0m^\prime}^{\ell\frac{1}{2}}
+			\\
+			&=\sum_{m_\ell m_s}Y_\ell^{m_\ell}\chi_{m_s}^\frac{1}{2}\delta_{m_\ell}^0\delta_{m_s}^{m^\prime}\\
+			&=Y_\ell^0\chi^\frac{1}{2}_{m^\prime}
+		\end{aligned}
+	\end{equation}
+	故\ref{eq:11.90}右边第一项变为：
+	\begin{equation}
+		\chi_{m_s}^\frac{1}{2}\mathrm{e}^{ikz}=\frac{1}{r}\sum_{jm\ell}\frac{1}{k}\sqrt{4\pi(2\ell+1)}\mathrm{i}^\ell\sin\left(kr-\frac{1}{2}\ell\pi\right)S^{\ell\frac{1}{2}}_{jm0m_s}Y_{jm}^{\ell\frac{1}{2}}
+	\end{equation}
+	注意到：
+	\[\sin\left(kr-\frac{1}{2}\ell\pi+\delta_{\ell j}\right)=\sin\left(kr-\frac{1}{2}\ell\pi\right)\mathrm{e}^{-\mathrm{i}\delta_{\ell j}}+\sin\delta_{\ell j}\mathrm{i}^{-\ell}\mathrm{e}^{\mathrm{i}kr}\]
+	而\ref{eq:11.89}右边可改写为：
+	\begin{equation}
+		\Rightarrow\frac{1}{r}\sum_{\ell j m} A_{jm}^\ell \sin\left(kr-\frac{1}{2}\ell\pi\right)\mathrm{e}^{-\mathrm{i}\delta_{\ell j}} Y^{\ell\frac{1}{2}}_{jm}+(\cdots)e^{ikr}
+	\end{equation}
+	对比得到：
+	\[A_{jm}^\ell=\frac{1}{k}\sqrt{4\pi(2\ell+1)}\mathrm{i}^\ell\mathrm{e}^{\mathrm{i}\delta_{\ell j}}S^{\ell\frac{1}{2}}_{jm0m_s}\]
+	似乎$A_{jm}^\ell$与入射平面波自旋有关，只有$m=m_s$时才不为零，实际上，因为$L_z=-i\hbar\frac{\partial}{\partial\varphi}$，平面波$\mathrm{e}^{\mathrm{i}kz}$为$m_\ell=0$的本征函数，所以必定有$m=m_s+m_\ell=m_s$:
+	\begin{equation}
+		A_{jm}^\ell=\frac{1}{k}\sqrt{4\pi(2\ell+1)}\mathrm{i}^\ell\mathrm{e}^{\mathrm{i}\delta_{\ell j}}S^{\ell\frac{1}{2}}_{jm0m}
+	\end{equation}
+	同样的方法可以计算出：
+	\begin{equation}
+		\mathcal{M}_{m_s^\prime m_s}(\theta,\varphi)=\frac{1}{2\mathrm{i}k}\sum_{\ell j}\sqrt{4\pi(2\ell+1)}\left(\mathrm{e}^{2\mathrm{i}\delta{\ell j}}-1\right)S^{\ell\frac{1}{2}_{jm_s0m_s}}S^{\ell\frac{1}{2}_{jm_s,m_s-m_s^\prime,m^\prime}}Y^{m_s-m_s^\prime}_\ell(\mathrm{r}^0)
+	\end{equation}
+	代入CG系数的具体数值之后得到：
+	\[\mathcal{M}_{++}=\mathcal{M}_{--}=\frac{1}{2\mathrm{i}k}\sum_\ell^{\infty}\left[(\ell+1)\left(\mathrm{e}^{2\mathrm{i}\delta_{\ell,\ell+\frac{1}{2}}}-1\right)+\ell\left(\mathrm{e}^{2\mathrm{i}\delta_{\ell,\ell-\frac{1}{2}}}-1\right)\right]P_\ell(\cos\theta)\]
+	\[\mathcal{M}_{\pm\mp}=\frac{1}{2\mathrm{i}k}\sum_\ell^{\infty}\left(\mathrm{e}^{2\mathrm{i}\delta_{\ell,\ell+\frac{1}{2}}}-\mathrm{e}^{2\mathrm{i}\delta_{\ell,\ell-\frac{1}{2}}}\right)P_\ell^1(\cos\theta)\left(\pm\mathrm{e}^{\mp\mathrm{i}\varphi}\right)\]
+	常常记为如下形式：
+	\[
+	\mathcal{M}(\theta,\varphi)=\begin{pmatrix}
+	f(\theta)	& g(\theta)\mathrm{e}^{-\mathrm{i}\varphi}\\
+	-g(\theta)\mathrm{e}^{\mathrm{i}\varphi}	&f(\theta)
+	\end{pmatrix}=f(\theta)\cdot\mathbbm{1}+\mathrm{i}g(\theta)\mathbf{n}\cdot\mathbf{\sigma}
+	\]
+	其中$\mathbf{n}=\frac{\mathbf{k}_i\times\mathbf{k}_f}{|\mathbf{k}_i\times\mathbf{k}_f|}$，为入射出射方向决定的平面的法向量。$\mathbf{\sigma}$为Pauli矩阵。
+	
+	根据$\mathcal{M}$矩阵元的物理意义，称$f(\theta)$为直接散射振幅，$g(\theta)$为自旋倒转散射振幅。
+	
+	无论$m_s$是多少，不计出射自旋的散射截面均为：
+	\[\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega}(\theta,\varphi)=|f(\theta)|^2+|g(\theta)|^2\]
 	\subsubsection{与电磁散射类比}
 	如果读者比较熟悉电磁散射理论\footnote{见刘川《电动力学》$\S26$}，会发现许多与我们这里量子力学讨论类似的地方。我们这里使用角动量表象建立分波方程，对波函数进行分波展开，对应的就是电磁辐射中用球面波对辐射场进行多级展开，这里无自旋情况对应的就是不考虑散射波的偏振，有自旋情况就对应将电磁波偏振分开讨论定义相应的散射振幅。
 	
-	量子力学中更复杂的一点是涉及到全同粒子，这个时候散射波函数必须是全反对称或者对称的，理论分析或者方程求解更是难上加难，粒子变多，考虑的自旋也变多，散射$M$矩阵也越来越大，这些我们就不分析了。
+	量子力学中更复杂的一点是涉及到全同粒子，这个时候散射波函数必须是全反对称或者对称的，理论分析或者方程求解更是难上加难，粒子变多，考虑的自旋也变多，散射$M$矩阵也越来越大，这些我们就不分析了\footnote{本节参考资料：《量子力学中的散射问题》，熊鈺庆}。
 	\section{含时散射理论}
 	这一部分先不急着补，能把含时问题搞完就很好了
 	
@@ -7465,7 +7555,7 @@
 	\chapter{*再论量子力学中的对称性（施工中）}
 	本章使用群论这一数学工具严格且完整地讨论对称性在量子力学中的体现。
 	
-	\chapter{量子信息与量子计算简介}
+	\chapter{量子信息与量子计算简介（施工中）}
 	这又是一个超级大坑
 	
 	
