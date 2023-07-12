@@ -4671,11 +4671,12 @@
 			Q_H(t)=U^\dagger(t,t_0)Q_SU(t,t_0)
 		}
 	\end{equation}
+	另外根据定义很容易得到下面的性质：\textbf{在不同的绘景下，同一时刻算符之间的对易关系是不会变的}。
 	\subsubsection{正则量子化}
 	这是一种有效的从经典物理过渡到量子物理的手段，前面我们讲五大公理，是在薛定谔绘景下说的，正则量子化则给出了一种从经典力学到海森堡绘景下的量子力学的量子化方案。
 	\begin{itemize}
 		\item [(1)]在经典力学中写下经典哈密顿量（以单自由度系统为例）$H(q,p)$，然后将$q,p$看作是算符，相应的哈密顿量也看成算符。而其它力学量$A(q,p)$也变成了算符。
-		\item[(2)] 将泊松括号改为对易括号：$$\{A(t),B(t)\}\to\frac{1}{i\hbar}[\hat A(t),\hat B(t)]$$
+		\item[(2)] 将泊松括号改为对易括号\footnote{注意前面说过无论是薛定谔绘景还是海森堡绘景，同一时刻的算符对易关系都不会变。}：$$\{A(t),B(t)\}\to\frac{1}{i\hbar}[\hat A(t),\hat B(t)]$$
 		特别地有：$[\hat q(t),\hat p(t)]=i\hbar$
 		\item[(3)] 经典力学中力学量的运动方程相应变为：
 		\[\frac{dA}{dt}=\{A,H\}\to\frac{d\hat A}{dt}=\frac{1}{i\hbar}[\hat A,\hat H]\]
@@ -7098,7 +7099,7 @@
 		f(\theta,\phi)\approx -\frac{m}{2\pi\hbar^2}\int\mathrm{d}^3r V(\mathbf{r})e^{i\left(\mathbf{k}_i-\mathbf{k}_f\right)\cdot \mathbf{r}}}
 	\end{equation}
 
-	很多情况下我们完全可以近似的大胆点，认为$\mathbf{k}_f$和$\mathbf{k}_i$之间差异很小，或者说相因子本身在积分区域内没啥变化，我们就可以把那个相因子丢到，Born近似变为：
+	很多情况下我们完全可以近似的大胆点，认为$\mathbf{k}_f$和$\mathbf{k}_i$之间差异很小，或者说相因子本身在积分区域内没啥变化，我们就可以把那个相因子丢掉，Born近似变为：
 	\begin{equation}
 		\label{eq:11.58}
 		\boxed{
@@ -7135,7 +7136,7 @@
 		\caption{$\vec{\kappa}\equiv \mathbf{k}_i-\mathbf{k}_f$}
 	\end{figure}	
 
-	你也可以在\ref{11.56}中多保留几项得到高阶Born近似，Born近似的公式也可以完全不用算符理论发展它的本质其实就是用迭代法去求解积分方程\ref{eq:11.22}，然后注意到$r\to\infty$的渐进形式从而凑出散射振幅$f(\theta,\phi)$。
+	你也可以在\ref{eq:11.56}中多保留几项得到高阶Born近似，Born近似的公式也可以完全不用算符理论发展，它的本质其实就是用迭代法去求解积分方程\ref{eq:11.22}，然后注意到$r\to\infty$的渐进形式从而凑出散射振幅$f(\theta,\phi)$。
 	
 	但是Born近似显然不是万能的，因为Born级数可能收敛的较慢或者压根就收敛。比如对于刚性球散射用分波法很快就能做出来，因为边界条件很容易确定，微分方程很好解，但是这显然不属于$V\ll H_0$的范畴，所以用Born近似不能得到很好的结果。
 	\begin{example}{弹性球散射}
@@ -7193,9 +7194,9 @@
 	\begin{equation}
 		f_2(\theta,\phi)\approx \tilde{f}_1(\theta,\phi)+\left(\frac{m}{2\pi\hbar^2}\right)^2\int\mathrm{d}^3r\int\mathrm{d}^3r^\prime \frac{1}{|\mathbf{r}-\mathbf{r^\prime}|}V(\mathbf{r})V(\mathbf{r^\prime})
 	\end{equation}
-	Born近似的公式还可以由下面的费曼规则和费曼图得到：
+	Born近似的公式还可以由下面的费曼规则和费曼图得到：\footnote{其实我们这里就是在迭代解方程，而最重要的就是这每一条内线，就是方程微分算子的逆—Green函数，所有这些费曼规则通过微扰解方程都能直接得到，当然量子场论中推导费曼规则最经典的做法是相互作用绘景加上Wick定理（正则量子化），而我们这里类似于Born近似迭代解方程的方法可以套用到其它数理方程求解上，比如用费曼图方法求解N-S方程:\DOI{10.1016/0003-4916(61)90056-2}。另外，本部分参考的是{\itshape David Tong}\href{http://www.damtp.cam.ac.uk/user/tong/topicsinqm.html}{QM\uppercase\expandafter{\romannumeral2}课程讲义}，我认为他那里给出的费曼规则有误，参考\href{https://arxiv.org/abs/2306.05395}{arXiv:2306.05395}进行了修改（至少在二阶Born近似下是对的。）}
 	\begin{itemize}
-		\item 画出费曼图，有几个顶点就是几阶近似，每个横线上面标注$\mathbf{q_i}$，纵线标注$\mathbf{p_i}$，并且根据每个顶点的动量守恒确定$\mathbf{p_i}$与$k,q$之间的关系，之后的计算中全部使用$k,q$作为变量。比如下面的第二幅图中就有$\mathbf{p}_1=\mathbf{q}-\mathbf{k_i}$
+		\item 画出费曼图，有几个顶点就是几阶近似，每个横线上面标注$\mathbf{q}_i$，纵线标注$\mathbf{p}_i$，并且根据每个顶点的动量守恒确定$\mathbf{p}_i$与$k,q$之间的关系，之后的计算中全部使用$k,q$作为变量。比如下面的第二幅图中就有$\mathbf{p}_1=\mathbf{q}-\mathbf{k}_i$
 		\begin{center}
 			
 			
@@ -7310,8 +7311,9 @@
 			\end{tikzpicture}
 		\end{center}
 	
-		\item 对于每条横线（内线），还要进行积分：$-\frac{1}{4\pi}\int\frac{\mathrm{d}^3q}{(2\pi)^3}$
-		\item 最后整体乘上$\frac{m}{2\pi\hbar^2}$便得到散射振幅$f(\theta,\phi)$.
+		\item 对于每条横线（内线），还要进行积分：$\int\frac{\mathrm{d}^3q}{(2\pi)^3}$
+		\item 每个顶点$\bullet$乘上耦合常数$-\frac{2m}{\hbar^2}$
+		\item 最后乘上归一化因子$-\frac{1}{4\pi}$便得到散射振幅$f(\theta,\phi)$.
 	\end{itemize}
 	\subsection{光学定理}
 	根据\ref{eq:11.14}和\ref{eq:11.15}可以得到下面的光学定理：\footnote{为啥叫光学定理？请移步至这篇论文：\DOI{10.1119/1.10324}}
