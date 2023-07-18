@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="21e3be6d-680b-407c-89a2-cecc098054b8" name="变更" comment="" />
+    <list default="true" id="21e3be6d-680b-407c-89a2-cecc098054b8" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/appendix.aux" beforeDir="false" afterPath="$PROJECT_DIR$/appendix.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appendix.tex" beforeDir="false" afterPath="$PROJECT_DIR$/appendix.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appendix_group.aux" beforeDir="false" afterPath="$PROJECT_DIR$/appendix_group.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appendix_group.tex" beforeDir="false" afterPath="$PROJECT_DIR$/appendix_group.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourcecode.aux" beforeDir="false" afterPath="$PROJECT_DIR$/sourcecode.aux" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourcecode.log" beforeDir="false" afterPath="$PROJECT_DIR$/sourcecode.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourcecode.out" beforeDir="false" afterPath="$PROJECT_DIR$/sourcecode.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourcecode.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/sourcecode.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourcecode.synctex.gz" beforeDir="false" afterPath="$PROJECT_DIR$/sourcecode.synctex.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourcecode.tex" beforeDir="false" afterPath="$PROJECT_DIR$/sourcecode.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourcecode.thm" beforeDir="false" afterPath="$PROJECT_DIR$/sourcecode.thm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sourcecode.toc" beforeDir="false" afterPath="$PROJECT_DIR$/sourcecode.toc" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

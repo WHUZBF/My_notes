@@ -1127,10 +1127,10 @@ $$
     \item[$\bullet$] $\forall T\in\mathcal{L}(U,V),S\in\mathcal{L}(V,W)\rightarrow(ST)^*=T^*S^*$
 \end{itemize}
 
-这个对偶映射在量子力学里面是有定义的，算符$\hat{A}$从定义之初就是作用与右矢的，而作用于左矢没有定义，所以矩阵元应理解为$\braket{\varphi|\hat{A}|\psi}=\bra{\phi|(\hat{A}|\psi)}$.但是这样
+这个对偶映射在量子力学里面是有定义的，算符$\hat{A}$从定义之初就是作用与右矢的，而作用于左矢没有定义，所以矩阵元应理解为$\braket{\varphi|\hat{A}|\psi}=\bra{\phi}(\hat{A}\ket{\psi)}$.但是这样
 未免有点麻烦，我们不妨认为定义$\hat A$作用于左矢$\bra{\phi}$的效果为：
 \[\forall \ket{\psi}\in\mathscr{E},\braket{\left(\varphi|A\right)|\psi}=\braket{\varphi|\left(A|\psi\right)}\]
-显然我们在悄然之间定义了一个$\hat A$的对偶映射。
+显然我们在悄然之间定义了一个$\hat A$的对偶映射$A^*$。我们设将右矢变为左矢的算符为$v$\footnote{这是个反线性算符}，那么根据前面的讨论，有$\hat A^\dagger=v^{-1}\circ \hat{A}^*\circ v$
 
 \begin{theorem}{对偶映射的矩阵}
     $T\in \mathcal{L}(V,W),T^*\in\mathcal{L}(W^*,V^*)$，$V,W$基底分别为$\{e_i\},\{f_i\}$且$V^*$，$W^*$的基底取对应的对偶基底$\{e^i\},\{f^i\}$，那么按照上述基底计算的
