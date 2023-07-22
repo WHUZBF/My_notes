@@ -809,7 +809,35 @@
     	tips:利用$\ket{n}$的完全性以及积分公式$\int_0^\infty r^{k}\mathrm{e}^{-r}\mathrm{d}r=k!$\qed
     \end{proof}
     \subsubsection{相干态表象}
-    既然相干态是归一完备的（但不正交），那么就可以作为Hilbert空间的一组基底。
+    既然相干态是归一完备的（但不正交），那么就可以作为Hilbert空间的一组基底将态矢量展开：
+    \[\ket\psi=\frac{1}{\pi}\int \ket z\braket{z|\psi}\mathrm{d}^2z\equiv\frac{1}{\pi}\int \ket z\psi(z)\mathrm{d}^2z\]
+    下面具体来求在相干态表象下，产生湮灭算符作用在态函数上的具体形式。
+    \begin{equation}
+    	\begin{aligned}
+    		\braket{z|A|z^\prime}&=z^\prime\braket{z|z^\prime}=z^\prime \mathrm{e}^{-\frac{1}{2}\left(|z|^2+|z^\prime|^2\right)+z^*z^\prime}\\&=\left(\frac{z}{2}+\frac{\partial}{\partial z^*}\right)\braket{z|z^\prime}
+    	\end{aligned}
+    \end{equation}
+    再插入完全性关系：\footnote{这里我们给$A$加上了$\hat{ }$，强调这是函数空间中的算符，前面都是作用在态矢量空间的算符，或者说是矩阵形式讨论的，不过很多情况下我们不会区分这两者，比如前面我们讨论$\hat{p},\hat {x}$都没有刻意强调是态函数空间算符（详见$\S 3$和附录$\S B$）。}
+    \begin{equation}
+    	\begin{aligned}
+    		\hat {A}\psi(z)&=\braket{z|A|\psi}=\frac{1}{\pi}\int\braket{z|A|z^\prime}\braket{z^\prime|\psi}\mathrm{d}^2z^\prime\\
+    		&=\frac{1}{\pi}\int\left(\frac{z}{2}+\frac{\partial}{\partial z^*}\right)\braket{z|z^\prime}\braket{z^\prime|\psi}\mathrm{d}^2z^\prime\\
+    		&=\left(\frac{z}{2}+\frac{\partial}{\partial z^*}\right)\frac{1}{\pi}\int\braket{z|z^\prime}\braket{z^\prime|\psi}\mathrm{d}^2z^\prime\\
+    		&=\left(\frac{z}{2}+\frac{\partial}{\partial z^*}\right)\psi(z)
+    	\end{aligned}
+    \end{equation}
+    对于产生算符，计算相对容易：
+    \begin{equation}
+    	\begin{aligned}
+    	&A\ket{z}=z\ket{z}\Rightarrow\bra{z}A^\dagger=z^*\bra{z}\\
+    	\Rightarrow&\hat{A}^\dagger\psi(z)=\braket{z|A^\dagger|\psi}=z^*\psi(z)
+    	\end{aligned}
+    \end{equation}
+    最终我们得到相干态表象下的产生湮灭算符形式：
+    \begin{equation}
+    	\boxed{\hat{A}=\left(\frac{z}{2}+\frac{\partial}{\partial z^*}\right)\qquad \hat{A}^\dagger=z^*}
+    \end{equation}
+    
     \section{自由粒子}
     自由粒子情况下即$V \equiv 0$, 不难发现定态薛定谔方程和无限深势阱的形式是一样的, 即$$\frac{d^2\psi}{dx^2}=-k^2\psi$$解的形式为$$Ae^{ikx}+Be^{-ikx}$$
     注意, \uwave{我们不再有边界条件去直接确定$A$和$B$的值}, \textbf{这个时候定态解的能量的取值并不是离散的!可以取到任何大于$0$的值!}其实本身量子力学就是不排斥

@@ -12,10 +12,10 @@
 \contentsline {subsection}{\numberline {2.3.3}*谐振子的相干态}{20}{subsection.2.3.3}%
 \contentsline {subsubsection}{相干态的性质}{21}{subsubsection*.2}%
 \contentsline {subsubsection}{相干态表象}{22}{subsubsection*.3}%
-\contentsline {section}{\numberline {2.4}自由粒子}{22}{section.2.4}%
-\contentsline {section}{\numberline {2.5}$\delta $函数势阱}{25}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}束缚态和散射态}{25}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}$\delta $函数势阱}{27}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.4}自由粒子}{23}{section.2.4}%
+\contentsline {section}{\numberline {2.5}$\delta $函数势阱}{26}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}束缚态和散射态}{26}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}$\delta $函数势阱}{28}{subsection.2.5.2}%
 \contentsline {section}{\numberline {2.6}有限深势阱}{35}{section.2.6}%
 \contentsline {chapter}{\numberline {第三章\hspace {.3em}}形式化理论}{38}{chapter.3}%
 \contentsline {section}{\numberline {3.1}可观测量}{38}{section.3.1}%
