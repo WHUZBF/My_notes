@@ -1508,6 +1508,7 @@
         \setlength\parindent{2em}先考虑离散谱情况。我们对一个量子态$\Psi(x,t)$进行测量, 会得到观察算符$\hat{Q}$的一个本征值$q_n$, 而且因为测量, 体系会坍缩为$q_n$对应的一个本征态$\ket{\psi_n}$。
         且$\ket{\psi_n}$实际上是$\ket{\Psi}$在$q_n$所对应的本征空间的归一化投影。定义投影算符：
         \[P_n\equiv\sum\limits_{i=1}^{g_n} \ket{u_n^i} \bra{u_n^i}\]
+        其中$\ket{u_n^i}$是\textbf{归一化}的算符本征矢。
         那么$\ket{\psi_n}$满足\footnote{利用了$P_n^2=P_n$}:
         \begin{equation}
             \ket{\psi_n}=\frac{P_n\ket{\Psi}}{\sqrt{\braket{\Psi|P_n|\Psi}}}
@@ -1518,7 +1519,7 @@
         	\label{eq:3.13}
             \mathscr{P}_n=\sum\limits_{i=1}^{g_n}\left|\Braket{u_n^i|\Psi}\right|^2=\Braket{\Psi|\hat{P}_n|\Psi}
         \end{equation}
-            
+        这里求和是在简并子空间中进行的，需要选取简并空间中的一组完备基。另外注意上式是先取模方再求和。
         
         \setlength\parindent{2em}对于连续谱, 我们前面提到过其本征矢是没有物理意义的, 也就是说, 进行测量时, 体系不会坍缩为一个确定的本征态, 而是一个很狭窄的
         范围, 因为只有这些本征矢组合成的波包才有确定的物理意义。
@@ -1531,8 +1532,14 @@
 
         \setlength\parindent{2em}至于连续非简并、部分连续部分离散等等情况都很容易依照上面的思路直接进行推广。
     \end{proposition}
-    下面的叙述都以离散非简并情况为例, 对于一般情况也很好扩展。
 
+    \subsubsection{量纲分析}
+    我们来看一下$\braket{\alpha|\psi}$的量纲，对于离散谱，其模平方就是概率，所以它本身是无量纲的。但对于连续谱情况$c(\alpha)=\braket{\alpha|\psi}$是一个PDF（概率密度分布函数），它的模平方在$\mathrm{d}\alpha$测度下积分后才是概率，所以量纲应当是$[\alpha]^{-1}$。
+    
+    这一量纲分析在初等量子力学中还体现的并不明显，但量子场论中会采用$c=\hbar=1$的自然单位制，最终计算结果转换到国际单位制的时候这些分析有大作用。
+
+    下面的叙述都以离散非简并情况为例, 对于一般情况也很好扩展。
+    
     对于观察算符, 我们已经知道它的正交归一系是完备的, 所以态可以展开成:
     \[\left | \Psi  \right \rangle =\sum\limits_{n=1}^{\infty } c_n\left | u_n \right \rangle \]
     $c_n$就是态在某个本征态上的分量, 这样来看似乎前面的概率诠释也很有道理, 但是注意, 概率一定要取这个分量的模方。
@@ -7520,7 +7527,7 @@
 	
 	第二个等号来源于归一化：
 	\[\mathbbm{1}=\int d^3k\ket{\mathbf{k}}\bra{\mathbf{k}}=\int dkk^2\ket{{k}}\bra{{k}}\int \ket{\mathbf{k}^0}\bra{\mathbf{k}^0}d\omega\]
-	所以$\ket{k}$空间中的完全性关系$\mathbbm{1}==\int dkk^2\ket{{k}}\bra{{k}}$说明了这里$1/k^2_i$因子的来历。
+	所以$\ket{k}$空间中的完全性关系$\mathbbm{1}=\int dkk^2\ket{{k}}\bra{{k}}$说明了这里$1/k^2_i$因子的来历。
 	
 	第三个等号是因为$T$和角动量算符对易，其是零阶球张量算符（标量算符），所以根据Wigner-Eckart定理其只能有对角项不为0。第四个等号就是球谐函数与角动量表象之间的关系而且注意到下面的等式：
 	\begin{equation}
@@ -7531,7 +7538,7 @@
 	\end{equation}
 	第五个等式利用球谐函数加法定理，最后一个等式注意到\ref{eq:11.55}即可。
 	
-	前面证明了$S$的幺正性，而$S$又是一个对角阵，所以一定有$|S_\ell|=1$，按照惯例记为：
+	前面证明了$S$的幺正性，而$S$又是一个对角阵（因为前面说了$T$对角，并注意到\ref{eq:11.55}），所以一定有$|S_\ell|=1$，按照惯例记为：
 	\begin{equation}
 		\boxed{S_\ell=\mathrm{e}^{2\mathrm{i}\delta_\ell}}
 	\end{equation}
@@ -7566,7 +7573,7 @@
 	另外还需要$r\to 0$时的边界条件，由于波函数不能有奇异点，所以$R_\ell\to\text{\itshape{有限}}$，则$u_\ell\to 0$。而且如果在$r\to 0$时$V(r)$相对于$1/r^2$可看作$0$，则方程\ref{eq:11.79}化为：
 	\[\left[\frac{d^2}{dr^2}-\frac{\ell(\ell+1)}{r^2}\right]u_\ell=0\]
 	可以得到更加精确的渐进条件：
-	\[u_\ell)(r)\xlongrightarrow{r\to 0}r^{\ell+1}\]
+	\[u_\ell(r)\xlongrightarrow{r\to 0}r^{\ell+1}\]
 	\subsubsection{相移}
 	最后再来讨论一下相移，入射平面波在远处渐进形式根据\ref{eq:11.10}可以写为：
 	\[\braket{\mathbf{r}|\mathbf{k}_i}\to\frac{1}{kr}\sum_\ell(2\ell+1)\mathrm{i}^\ell\sin\left(kr-\frac{1}{2}\ell\pi\right)P_\ell(\cos\theta)\]
@@ -7600,7 +7607,8 @@
 	\end{equation}
 	注意到公式：
 	\[\sum_\ell(2\ell+1)\left[j_\ell(kr)\right]^2P_\ell(\cos\theta)=\frac{\sin Kr}{Kr}\quad(K\equiv2k\sin\frac{\theta}{2})\]
-	利用\ref{eq:11.14}去计算散射振幅，不难发现我们再次得到了球对称势阱下的Born近似方程\ref{eq:11.59}。究其原因，是我们用$v_\ell$替代了$u_\ell$，这正是一级Born近似的核心思想。
+	
+	利用\ref{eq:11.14}去计算散射振幅，不难发现我们再次得到了球对称势阱下的Born近似方程\ref{eq:11.59}。究其原因，是我们用未受扰动的$v_\ell$替代了$u_\ell$，这正是一级Born近似的核心思想。
 	
 	另外对于慢速粒子，入射动量$k$很小，$kd\ll 1$，$d$是力程。这个时候可以利用：
 	\[j_\ell(kr)\xrightarrow{kr\ll1}\frac{(kr)^\ell}{(2\ell+1)!!}\]
