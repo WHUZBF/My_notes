@@ -669,7 +669,7 @@
         你可能对这个形式的得到有所疑问, 实际上, 这就是一个求导的链式法则的问题, 注意, 换元前的方程$\frac{d\psi}{dx}$表示把$\psi$写成$f(x)$后再求导, 而
         换元后的方程中$\frac{d\psi}{d\xi}$表示将$\psi$表示为$\phi(\xi)$后再进行求导。而$\xi=\varphi(x)$, 使用链式法则便可以理解这里的换元了。
     \end{thinknote}
-    使用幂级数方法求解的第一步就是去求其\uwave{渐进解}, 也就是说去观察$\xi \to \pm\infty$的时候方程的行为。这个方程在$\xi\gg K$时
+    使用幂级数方法求解的第一步就是去求其\uwave{渐近解}, 也就是说去观察$\xi \to \pm\infty$的时候方程的行为。这个方程在$\xi\gg K$时
     $$\frac{d^2\psi}{d\xi^2}\approx\xi^2\psi$$这个方程的通解形式是$$\psi\approx Ae^{-\xi^2/2}+Be^{\xi^2/2}$$显然$B\neq 0$时波函数不能进行归一化, 所
     以, 方程\ref{rewrite}的解的形式应该是$\psi = h(\xi)e^{-\xi^2/2}$, 代入后有$$\frac{d^2h}{d\xi^2}-2\xi\frac{dh}{d\xi}+(K-1)h=0$$这是一个二阶方程
     但是是变系数, 所以也很难求解, 只能考虑使用幂级数解法, 两边进行Taylor展开后解得$$h(\xi)=\sum_{j=0}^\infty a_j\xi^j,\qquad a_{j+2}=\frac{2j+1-K}{(j+1)(j+2)}a_j$$
@@ -2273,7 +2273,7 @@
         \label{eq:4.35}
         \frac{d^2u}{d\rho^2}=\left[1+\frac{\ell\left(\ell+1\right)}{\rho^2}-\frac{\rho_0}{\rho}\right]u
     \end{equation}
-    我们考察下这个方程的渐进解:
+    我们考察下这个方程的渐近解:
     \begin{itemize}
         \item $\rho\to\infty$\\
                 方程\ref{eq:4.35}形式变为:
@@ -2287,7 +2287,7 @@
                 同样根据波函数的有界性, 有$D=0$, 故$u_0\sim \rho^{\ell+1}$.
     \end{itemize}
     
-    有了上面的讨论, 我们从$u(\rho)$中分离出渐进解, 下面的变换也显得比较自然：
+    有了上面的讨论, 我们从$u(\rho)$中分离出近进解, 下面的变换也显得比较自然：
     \[u=\rho^{\ell+1}e^{-\rho}v(\rho)\]
     $v(\rho)$是个未知函数, 下面我们将方程\ref{eq:4.35}转换为关于$v(\rho)$的方程：
     \begin{equation}
@@ -2295,7 +2295,7 @@
         \rho\frac{d^2v}{d\rho^2}+2\left(\ell+1-\rho\right)\frac{dv}{d\rho}+\left(\rho_0-2\ell-2\right)v=0
     \end{equation}
     
-    方程在形式上好像并没有变得更加简单, 但是分离出渐进解后, 会让我们后面的级数解讨论变得更加简洁。
+    方程在形式上好像并没有变得更加简单, 但是分离出渐近解后, 会让我们后面的级数解讨论变得更加简洁。
     
     为了解\ref{eq:4.36}, 我们设：
     \[v(\rho)=\sum\limits_{j=0}c_j\rho^j\Rightarrow\frac{dv}{d\rho}=\sum\limits_{j=0}\left(j+1\right)c_{j+1}\rho^j,\frac{d^2v}{d\rho^2}=\sum\limits_{j=0}j\left(j+1\right)c_{j+1}\rho^{j-1}\]
@@ -2306,7 +2306,7 @@
     \end{equation}
     $j$充分大时, 上式变为\footnote{你也可以近似的更狠一点, 把分母中的1拿掉, 也可以导出正确的结果, 但是推导略微复杂一点。}:
     \[c_{j+1}=\frac{2}{j+1}c_j\Rightarrow c_j\approx\frac{2^j}{j!}c_0\Rightarrow v(\rho)=c_0e^{2\rho}\]
-    那么我们得到了一个$u(\rho)$的渐进解：
+    那么我们得到了一个$u(\rho)$的渐近解：
     \[u(\rho)=c_0e\rho\rho^{\ell+1}\]
     显然不满足$\rho\to\infty$时的波函数有界性要求, 所以这个解并不具有物理意义, 回忆一下我们在求解一维谐振子模型中使用过的技巧, 为了让最终的解具有物理意义,
     只能是递推公式\ref{eq:4.37}在某处截断, 这样$j$充分大时$c_j$为$0$.
@@ -6218,7 +6218,7 @@
         \label{eq:9.13}
         \psi(z)\approx\frac{C}{\sqrt{\alpha\hbar}z^{1/4}}\mathrm{e}^{-\frac{2}{3}z^{\frac{3}{2}}}
     \end{equation}
-    艾里函数在$z\gg 0$时有下面的渐进行为：
+    艾里函数在$z\gg 0$时有下面的渐近行为：
     \begin{eqnarray}
         \left.\begin{array}{l}
             \operatorname{Ai}(z) \sim \frac{1}{2 \sqrt{\pi} z^{1 / 4}} e^{-\frac{2}{3} z^{3 / 2}} \\
@@ -6239,7 +6239,7 @@
         \label{eq:9.16}
         \psi(z)\approx\frac{A}{\sqrt{\hbar\alpha}(-z)^{1/4}}\mathrm{e}^{-i\frac{2}{3}(-z)^\frac{3}{2}}+\frac{B}{\sqrt{\hbar\alpha}(-z)^{1/4}}\mathrm{e}^{i\frac{2}{3}(-z)^\frac{3}{2}}
     \end{equation}
-    对于$z\ll 0$的情况，我们也有艾里函数渐进形式：
+    对于$z\ll 0$的情况，我们也有艾里函数渐近形式：
     \begin{equation}
         \left.\begin{array}{l}
             \operatorname{Ai}(z) \sim \frac{1}{\sqrt{\pi}(-z)^{1 / 4}} \sin \left[\frac{2}{3}(-z)^{3 / 2}+\frac{\pi}{4}\right] \\
@@ -6605,7 +6605,7 @@
 	\end{equation}
 	后面我们干的活都是去想如何近似地把\textbf{散射振幅}$f(\theta,\phi)$求出来。
 	\subsection{分波法}
-	非常直接粗暴的方法，我们前面是在$r$很大的地方取解薛定谔方程得到渐进节解，现在为了得到更多关于$f(\theta,\phi)$的信息我们要考虑离散射中心稍微近一点的地方的波函数行为了。
+	非常直接粗暴的方法，我们前面是在$r$很大的地方取解薛定谔方程得到渐近解，现在为了得到更多关于$f(\theta,\phi)$的信息我们要考虑离散射中心稍微近一点的地方的波函数行为了。
 	
 	我们考虑的是{\itshape locality}的势函数，也就是说存在距离$a$，当$r>a$的时候可以认为$V(r)=0$，但是还不至于忽略平方反比的离心势。$r\gg a$的情况两个势能都可以忽略，前面我们已经得到这个解，现在我们考虑$r>a$时候的解，首先说明这个方法局限性还是很大的，比如对于库伦势就不适用，因为库伦势$1/r$相比于离心势$1/r^2$减小的慢一些，所以你不可能找到一个区域可以忽略库伦势的同时不忽略离心势，但对于$1/r^3$这种我们就可以近似计算。
 	
@@ -6741,7 +6741,7 @@
 		&=A\left\{\frac{2\ell+1}{2ikr}\left[e^{ikr}-(-1)^\ell e^{-ikr}\right]+\frac{2\ell+1}{r}e^{ikr}\left[\frac{1}{2ik}(e^{2\delta_\ell i}-1)\right]\right\}P_\ell(\cos\theta)
 		\end{aligned}
 	\end{equation}	
-	再根据$j_\ell,h_\ell$的渐进形式稍作计算可以得到\ref{eq:11.11}在$r$非常大时候的渐进形式：
+	再根据$j_\ell,h_\ell$的渐近形式稍作计算可以得到\ref{eq:11.11}在$r$非常大时候的渐近形式：
 	\[\psi^{(\ell)}(r,\theta)\approx A\left\{\frac{2\ell+1}{2ikr}\left[e^{ikr}-(-1)^\ell e^{-ikr}\right]+\frac{2\ell+1}{r}e^{ikr}a_\ell\right\}P_\ell(\cos\theta)\]
 	对比上面两个式子，这说明:
 	\begin{equation}
@@ -6752,6 +6752,7 @@
 		\label{eq:11.14}
 		f(\theta)=\frac{1}{k} \sum_{\ell=0}^{\infty}(2 \ell+1) e^{i \delta_{\ell}} \sin \left(\delta_{\ell}\right) P_{\ell}(\cos \theta)
 	\end{equation}
+	其中$f_\ell(\theta)\equiv\frac{1}{k}\mathrm{e}^{i\delta_\ell\sin(\delta_\ell)}$称为分波散射振幅。
 	\begin{equation}
 		\label{eq:11.15}
 		\sigma_T=\frac{4 \pi}{k^{2}} \sum_{\ell=0}^{\infty}(2 \ell+1) \sin ^{2}\left(\delta_{\ell}\right) 
@@ -6784,7 +6785,7 @@
 		\[\delta _0=\cot^{-1}\left[\frac{\beta}{ka}+\cot(ka)\right]-ka= -\cot^{-1}\left[\cot(ka)+\frac{ka}{\beta\sin^2(ka)}\right]\]
 	\end{example}
 	
-	最后总结一下这一节，最重要的就是量子力学中微分散射截面的定义，薛定谔方程在$r\to\infty$处的渐进解很好求，我们这一节就是直接莽上，教你利用渐进解边界条件去解薛定谔方程。另外我们说了本节内容无法处理量子力学中的Rutherford散射，下一节介绍的Born近似方法将会计算这一问题。
+	最后总结一下这一节，最重要的就是量子力学中微分散射截面的定义，薛定谔方程在$r\to\infty$处的渐近解很好求，我们这一节就是直接莽上，教你利用渐近解边界条件去解薛定谔方程。另外我们说了本节内容无法处理量子力学中的Rutherford散射，下一节介绍的Born近似方法将会计算这一问题。
 	
 	\section{定态散射形式化理论}
 	形式化理论在计算上不一定更加方便，但是它能够让计算变得程序化，不像前面分波法那样无脑解方程。而且形式理论学了之后方便服务于量子场论中继续计算微分散射截面。
@@ -6971,7 +6972,7 @@
 
 	但不要以为我们直接解出了薛定谔方程的积分形式解，因为积分号里面也有$\psi$本身，不过这个方程天然适用迭代解法，后面再说。这个方程也称为位形表象下的Lippmann-Schiwinger方程。
 	
-	两个格林函数带来了两个线性无关解，这两个解是否都具有物理意义呢？我们看一下方程\ref{eq:11.22}在$r$非常大时候的渐进解。
+	两个格林函数带来了两个线性无关解，这两个解是否都具有物理意义呢？我们看一下方程\ref{eq:11.22}在$r$非常大时候的渐近解。
 	
 	定义$\mathbf{n}=\mathbf{r}/r$，散射振幅最终是$\mathbf{r}$的函数，这里$\mathbf{n}$的意义可以看作是散射粒子的方向向量。
 	
@@ -7256,7 +7257,7 @@
 		\caption{$\vec{\kappa}\equiv \mathbf{k}_i-\mathbf{k}_f$}
 	\end{figure}	
 
-	你也可以在\ref{eq:11.56}中多保留几项得到高阶Born近似，Born近似的公式也可以完全不用算符理论发展，它的本质其实就是用迭代法去求解积分方程\ref{eq:11.22}，然后注意到$r\to\infty$的渐进形式从而凑出散射振幅$f(\theta,\phi)$。
+	你也可以在\ref{eq:11.56}中多保留几项得到高阶Born近似，Born近似的公式也可以完全不用算符理论发展，它的本质其实就是用迭代法去求解积分方程\ref{eq:11.22}，然后注意到$r\to\infty$的渐近形式从而凑出散射振幅$f(\theta,\phi)$。
 	
 	但是Born近似显然不是万能的，因为Born级数可能收敛的较慢或者压根就收敛。比如对于刚性球散射用分波法很快就能做出来，因为边界条件很容易确定，微分方程很好解，但是这显然不属于$V\ll H_0$的范畴，所以用Born近似不能得到很好的结果。
 	\begin{example}{弹性球散射}
@@ -7509,7 +7510,7 @@
 	下面在形式理论的基础上继续讨论分波法，其实就是在角动量表象下去解薛定谔方程。
 	\subsection{无自旋情况}
 	\[H=\frac{P^2}{2m}+V(r)\]
-	问题转化为在下面的渐进条件下：\footnote{因为球对称所以$f(\theta,\phi)=f(\theta)$，后面的讨论中一律省略上标“$+$”。另外，这里我们为了后面式子书写的方便，前面的归一化因子取做$1$，而不是与\ref{eq:11.24}一致，这并不会改变最终的结果。}
+	问题转化为在下面的渐近条件下：\footnote{因为球对称所以$f(\theta,\phi)=f(\theta)$，后面的讨论中一律省略上标“$+$”。另外，这里我们为了后面式子书写的方便，前面的归一化因子取做$1$，而不是与\ref{eq:11.24}一致，这并不会改变最终的结果。}
 	\[\psi_{\mathbf{p}_i}^+\xlongrightarrow{r\to\infty}\mathrm{e}^{ikz}+f(\theta)\frac{e^{ikr}}{r}\]
 	解定态方程$H\psi_{\mathbf{p}_i}=E_i\psi_{\mathbf{p}_i}$。我们首先选取$k\theta\psi$表象，也就是说不用$\mathbf{k}$的三个直角坐标分量表示$\ket{\mathbf{k}}$，而使用大小$k$和方向$\mathbf{k}^0$来标记。
 	\begin{equation}
@@ -7540,6 +7541,7 @@
 	
 	前面证明了$S$的幺正性，而$S$又是一个对角阵（因为前面说了$T$对角，并注意到\ref{eq:11.55}），所以一定有$|S_\ell|=1$，按照惯例记为：
 	\begin{equation}
+		\label{eq:11.78}
 		\boxed{S_\ell=\mathrm{e}^{2\mathrm{i}\delta_\ell}}
 	\end{equation}
 	其中$\delta_\ell\in\mathbbm{R}$其实就是前面说的\textbf{相移}。现在再利用\ref{eq:11.39}发现我们又得到了\ref{eq:11.14}和\ref{eq:11.15}。
@@ -7568,16 +7570,16 @@
 	其中:
 	\[b_\ell=\frac{1}{k}(2\ell+1)\mathrm{i}^\ell\mathrm{e}^{i\delta_\ell}\]
 	
-	那现在问题就是在上面的渐进条件下解分波方程，而且无需求出具体的解，只需要把渐进解中的$\delta_\ell$用一些数学手段求出来即可。
+	那现在问题就是在上面的渐近条件下解分波方程，而且无需求出具体的解，只需要把渐近解中的$\delta_\ell$用一些数学手段求出来即可。
 	
 	另外还需要$r\to 0$时的边界条件，由于波函数不能有奇异点，所以$R_\ell\to\text{\itshape{有限}}$，则$u_\ell\to 0$。而且如果在$r\to 0$时$V(r)$相对于$1/r^2$可看作$0$，则方程\ref{eq:11.79}化为：
 	\[\left[\frac{d^2}{dr^2}-\frac{\ell(\ell+1)}{r^2}\right]u_\ell=0\]
-	可以得到更加精确的渐进条件：
+	可以得到更加精确的渐近条件：
 	\[u_\ell(r)\xlongrightarrow{r\to 0}r^{\ell+1}\]
 	\subsubsection{相移}
-	最后再来讨论一下相移，入射平面波在远处渐进形式根据\ref{eq:11.10}可以写为：
+	最后再来讨论一下相移，入射平面波在远处渐近形式根据\ref{eq:11.10}可以写为：
 	\[\braket{\mathbf{r}|\mathbf{k}_i}\to\frac{1}{kr}\sum_\ell(2\ell+1)\mathrm{i}^\ell\sin\left(kr-\frac{1}{2}\ell\pi\right)P_\ell(\cos\theta)\]
-	另外注意到散射定态的渐进解\ref{eq:11.80}，两者差别就在相位上面，所以我们可以说势能对入射波的作用就是对远处每个分波产生了相移$\delta_\ell$。
+	另外注意到散射定态的渐近解\ref{eq:11.80}，两者差别就在相位上面，所以我们可以说势能对入射波的作用就是对远处每个分波产生了相移$\delta_\ell$。
 	\subsubsection{近似计算例子}
 	前面讨论的Born近似适用于高能散射，而这里的分波法适用于低能散射，特别是势能在$r>d$后截断，只有前面几项相移不为$0$。我们这里主要说明其与Born近似的统一性。
 	
@@ -7595,12 +7597,12 @@
 	\[v_\ell(r)=r(2\ell+1)\mathrm{i}^\ell j_\ell(kr)\xlongrightarrow{r\to\infty}\frac{1}{k}(2\ell+1)\mathrm{i}^\ell\sin\left(kr-\frac{1}{2}\ell\pi\right)\]
 	现在用$v_\ell$乘\ref{eq:11.82}，$u_\ell$乘\ref{eq:11.83}，两式相减并对$r$从$0$积分到$\infty$:
 	\[\left[v_\ell\frac{du_\ell}{dr}-u_\ell\frac{dv_\ell}{dr}\right]_{r\to\infty}=\frac{2m}{\hbar^2}\int_0^\infty V(r) u_\ell(r)v_\ell(r)\mathrm{d}r\]
-	最后将$u_\ell,v_\ell$的渐进式代入得到：
+	最后将$u_\ell,v_\ell$的渐近式代入得到：
 	\begin{equation}
 		\mathrm{e}^{\mathrm{i}\delta_\ell}\sin\delta_\ell=-\frac{2mk}{(2\ell+1)\mathrm{i}^\ell\hbar^2}\int_0^\infty V(r)a_\ell u_\ell(r)v_\ell(r)r^2\mathrm{d}r
 	\end{equation}
 	
-	上式是和分波法解方程等价的计算相移的方程，但右边仍有未知函数$R_\ell$，无法用于实际计算，现在进行近似，我们认为$V_\ell(r)$比较小，相移不大，故$\mathrm{e}^{\mathrm{i}\delta_\ell}\sin\delta_\ell\approx \delta_\ell$，$u_\ell\approx v_\ell$:
+	上式是和分波法解方程等价的计算相移的方程，但右边仍有未知函数$R_\ell$，无法用于实际计算，现在进行近似，我们认为$V(r)$比较小，相移不大，故$\mathrm{e}^{\mathrm{i}\delta_\ell}\sin\delta_\ell\approx \delta_\ell$，$u_\ell\approx v_\ell$:
 	\begin{equation}
 		\label{eq:11.85}
 		\delta_\ell=-\frac{2mk}{\hbar^2}\int_0^\infty V(r) \left[j_\ell(kr)\right]^2r^2\mathrm{d}r
@@ -7616,6 +7618,33 @@
 	\begin{equation}
 		\sin\delta_\ell\approx\frac{2m(kd)^{2\ell+1}}{\left[(2\ell+1)!!\hbar\right]^2}\int_0^dV(r)\left(\frac{r}{d}\right)^{2\ell+1}r\mathrm{d}r
 	\end{equation}
+	抽离出上式关于入射能量的依赖：
+	\[\delta_\ell\sim k^{2\ell+1}\]
+	也就是说在$k$很小时，相移按照$k^{2\ell+1}$趋近于$0$，这一特点称为\textbf{阈值性状}。由此可知，在势场范围有限的低能散射中，主要是$\ell=$的球对称S波在起作用。
+	
+	\subsubsection{束缚态}
+	现在分析\ref{eq:11.78}中$S$矩阵在$\ell=0$处的解析性。将\ref{eq:11.80}展开为$e$指数的形式，并注意到$S$矩阵的定义，我们发现在$\ell=0$的分波下，散射波函数在远处可以写成入射和出射球面波形式：
+	\[\psi_{\mathbf{p}_i}\sim -\frac{\mathrm{-ikr}}{r}+S_{\ell=0}(k)\frac{\mathrm{e}^{ikr}}{r}\]
+	
+	这是散射态。但实际上通过前面几章对一维问题的求解，我们发现其实对于某些特定的（离散的）能量取值，薛定谔方程的解是束缚态，不对应散射过程，相应的波函数在远处行为为：
+	\[\psi_b\sim\frac{\mathrm{e}^{-\kappa r}}{r}\]
+	这两种渐近解其实我们可以统一地写成如下形式：
+	\[a\frac{\mathrm{e}^{ikr}}{r}-b\frac{\mathrm{-ikr}}{r}\]
+	对于束缚态$a=1,b=0,k=i\kappa$，而对于散射态$a=S_\ell(k),b=1,k\in\mathbbm{R}$.
+	
+	更进一步，由于量子态可以差一个相位因子，所以真正有意义地是$a/b$，我们把$S$矩阵也解析延拓到复平面上，其值等于$\frac{a}{b}$，现在$k\in\mathbbm{C}$，这样的话对于散射态，$S_{\ell=0}(k)$解析，而在虚轴上对应束缚态处$S_{\ell=0}(i\kappa)=\infty$，由此得到结论：
+	
+	\textbf{一个束缚态的出现意味着散射$S$矩阵在复平面正虚轴上存在一个单极点。}
+	
+	目前我们对$S$矩阵有三个信息：存在极点$k=i\kappa$，具体位置由束缚态能级决定；幺正，所以$|S_{\ell=0}|=1$，这是对散射态说的，所以条件是$k>0$的实数；$S_{\ell=0}(k=0)=1$，这是根据相移的阈值性状来的。
+	
+	而这些信息其实能够帮助我们在势未知的情况下去构造$S$矩阵。除了束缚态没有其它奇点，最简单的解为：
+	\[S_{\ell=0}(k)=\frac{-k-i\kappa}{k-i\kappa}\]
+	根据$\ref{eq:11.14}$, 不难发现：
+	\[f_{\ell}(k)=\frac{S_\ell(k)-1)}{2ik}\Rightarrow f_{\ell=0}(k)=\frac{1}{-\kappa-i k}\]
+	
+	\subsubsection{共振散射}
+	
 	
 	\subsection{自旋$\frac{1}{2}$情况}
 	考虑自旋后，势能项中要加入自旋角动量耦合势\ref{eq:7.24}，薛定谔方程实际上升级为Pauli方程，对于波函数的自旋部分和角向部分可以用角动量表象$\ket{\ell m_\ell}\ket{sm_s}$展开，下面我们转入耦合表象$\ket{\ell\frac{1}{2}jm}$研究，并且在坐标表象下可以得到$\ket{\ell\frac{1}{2}jm}$对应的基函数：\footnote{这里CG系数采用群论附录中的符号约定}
@@ -7632,9 +7661,9 @@
 	\end{equation}
 	分波方程为：
 	\[\left[\frac{d^2}{dr^2}+k_i^2-\frac{\ell(\ell+1)}{r^2}-\frac{2m}{\hbar^2}e\varphi(r)-\frac{2m}{\hbar^2}\zeta(j\ell)V^\prime(r)\right]u_j^\ell(r)=0\]
-	从其中可看出$u(r)$与$m$无关。现在类比\ref{eq:11.81}，我们得到分波方程的渐进条件：
+	从其中可看出$u(r)$与$m$无关。现在类比\ref{eq:11.81}，我们得到分波方程的渐近条件：
 	\[u_j^\ell(r)\xlongrightarrow{r\to\infty}b_{\ell j}\sin\left(kr-\frac{1}{2}\ell\pi+\delta_{\ell j}\right)\]
-	代入\ref{eq:11.88}得态函数渐进条件：
+	代入\ref{eq:11.88}得态函数渐近条件：
 	\begin{equation}
 		\label{eq:11.89}
 		\psi(\mathbf{r},\sigma)\xlongrightarrow{r\to\infty}b_{\ell j}\frac{1}{r}\sum_{\ell j m}A^{\ell}_{jm}\sin\left(kr-\frac{1}{2}\ell\pi+\delta_{\ell j}\right)Y^{\ell\frac{1}{2}}_{jm}(\mathbf{r}^0)
@@ -7689,7 +7718,7 @@
 	\end{equation}
 	同样的方法可以计算出：
 	\begin{equation}
-		\mathcal{M}_{m_s^\prime m_s}(\theta,\varphi)=\frac{1}{2\mathrm{i}k}\sum_{\ell j}\sqrt{4\pi(2\ell+1)}\left(\mathrm{e}^{2\mathrm{i}\delta{\ell j}}-1\right)S^{\ell\frac{1}{2}_{jm_s0m_s}}S^{\ell\frac{1}{2}_{jm_s,m_s-m_s^\prime,m^\prime}}Y^{m_s-m_s^\prime}_\ell(\mathrm{r}^0)
+		\mathcal{M}_{m_s^\prime m_s}(\theta,\varphi)=\frac{1}{2\mathrm{i}k}\sum_{\ell j}\sqrt{4\pi(2\ell+1)}\left(\mathrm{e}^{2\mathrm{i}\delta{\ell j}}-1\right)S^{\ell\frac{1}{2}}_{jm_s0m_s}S^{\ell\frac{1}{2}}_{jm_s,m_s-m_s^\prime,m^\prime}Y^{m_s-m_s^\prime}_\ell(\mathrm{r}^0)
 	\end{equation}
 	代入CG系数的具体数值之后得到：
 	\[\mathcal{M}_{++}=\mathcal{M}_{--}=\frac{1}{2\mathrm{i}k}\sum_\ell^{\infty}\left[(\ell+1)\left(\mathrm{e}^{2\mathrm{i}\delta_{\ell,\ell+\frac{1}{2}}}-1\right)+\ell\left(\mathrm{e}^{2\mathrm{i}\delta_{\ell,\ell-\frac{1}{2}}}-1\right)\right]P_\ell(\cos\theta)\]

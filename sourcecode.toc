@@ -94,60 +94,62 @@
 \contentsline {section}{\numberline {11.1}定态散射理论基本架构}{207}{section.11.1}%
 \contentsline {subsection}{\numberline {11.1.1}分波法}{209}{subsection.11.1.1}%
 \contentsline {subsection}{\numberline {11.1.2}Phase Shift}{212}{subsection.11.1.2}%
-\contentsline {section}{\numberline {11.2}定态散射形式化理论}{215}{section.11.2}%
+\contentsline {section}{\numberline {11.2}定态散射形式化理论}{216}{section.11.2}%
 \contentsline {subsection}{\numberline {11.2.1}Lippmann-Schwinger方程}{216}{subsection.11.2.1}%
 \contentsline {subsection}{\numberline {11.2.2}T,S and $\Omega $}{221}{subsection.11.2.2}%
-\contentsline {subsection}{\numberline {11.2.3}Born近似}{223}{subsection.11.2.3}%
+\contentsline {subsection}{\numberline {11.2.3}Born近似}{224}{subsection.11.2.3}%
 \contentsline {subsection}{\numberline {11.2.4}光学定理}{227}{subsection.11.2.4}%
 \contentsline {section}{\numberline {11.3}*再谈分波法}{229}{section.11.3}%
 \contentsline {subsection}{\numberline {11.3.1}无自旋情况}{229}{subsection.11.3.1}%
-\contentsline {subsubsection}{分波方程}{230}{subsubsection*.11}%
-\contentsline {subsubsection}{相移}{231}{subsubsection*.12}%
-\contentsline {subsubsection}{近似计算例子}{231}{subsubsection*.13}%
-\contentsline {subsection}{\numberline {11.3.2}自旋$\frac {1}{2}$情况}{233}{subsection.11.3.2}%
-\contentsline {subsubsection}{与电磁散射类比}{235}{subsubsection*.14}%
-\contentsline {section}{\numberline {11.4}含时散射理论}{236}{section.11.4}%
-\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}*再论量子力学中的对称性（施工中）}{237}{chapter.12}%
-\contentsline {chapter}{\numberline {第十三章\hspace {.3em}}量子信息与量子计算简介（施工中）}{238}{chapter.13}%
-\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{239}{appendix.A}%
-\contentsline {section}{\numberline {A.1}指标运算}{239}{section.A.1}%
-\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{240}{section.A.2}%
-\contentsline {section}{\numberline {A.3}曲线坐标系}{242}{section.A.3}%
-\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{246}{section.A.4}%
-\contentsline {section}{\numberline {A.5}直角坐标里的张量}{248}{section.A.5}%
-\contentsline {section}{\numberline {A.6}分部积分法}{254}{section.A.6}%
-\contentsline {section}{\numberline {A.7}*外微分形式与斯托克斯定理（施工中）}{255}{section.A.7}%
-\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{256}{appendix.B}%
-\contentsline {section}{\numberline {B.1}向量空间}{256}{section.B.1}%
-\contentsline {section}{\numberline {B.2}内积}{257}{section.B.2}%
-\contentsline {section}{\numberline {B.3}波函数的空间}{259}{section.B.3}%
-\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{261}{section.B.4}%
-\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{266}{section.B.5}%
-\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{271}{section.B.6}%
-\contentsline {section}{\numberline {B.7}*对偶空间和对偶映射}{274}{section.B.7}%
-\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{276}{appendix.C}%
-\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{278}{appendix.D}%
-\contentsline {section}{\numberline {D.1}群的基本结构}{278}{section.D.1}%
-\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{278}{subsection.D.1.1}%
-\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{279}{subsection.D.1.2}%
-\contentsline {subsection}{\numberline {D.1.3}同构与同态}{285}{subsection.D.1.3}%
-\contentsline {subsection}{\numberline {D.1.4}群作用与变换群}{288}{subsection.D.1.4}%
-\contentsline {subsection}{\numberline {D.1.5}直积与半直积}{289}{subsection.D.1.5}%
-\contentsline {section}{\numberline {D.2}群表示论}{291}{section.D.2}%
-\contentsline {subsection}{\numberline {D.2.1}群表示基本概念}{291}{subsection.D.2.1}%
-\contentsline {subsection}{\numberline {D.2.2}群代数与正则表示}{295}{subsection.D.2.2}%
-\contentsline {subsection}{\numberline {D.2.3}特征标理论及正交完备性定理}{298}{subsection.D.2.3}%
-\contentsline {subsection}{\numberline {D.2.4}新表示的构成}{315}{subsection.D.2.4}%
-\contentsline {subsubsection}{分导表示}{317}{subsubsection*.20}%
-\contentsline {subsubsection}{用商群构造表示}{317}{subsubsection*.21}%
-\contentsline {section}{\numberline {D.3}置换群}{318}{section.D.3}%
-\contentsline {subsection}{\numberline {D.3.1}基本概念和性质}{318}{subsection.D.3.1}%
-\contentsline {subsection}{\numberline {D.3.2}置换群的表示}{320}{subsection.D.3.2}%
-\contentsline {subsection}{\numberline {D.3.3}钩子规则}{323}{subsection.D.3.3}%
-\contentsline {subsection}{\numberline {D.3.4}置换群直积表示约化}{323}{subsection.D.3.4}%
-\contentsline {subsubsection}{计算$S_{n+m}$在子群$S_n\otimes S_m$上的分导表示的约化}{325}{subsubsection*.22}%
-\contentsline {section}{\numberline {D.4}转动群}{326}{section.D.4}%
-\contentsline {subsection}{\numberline {D.4.1}$SO(3)$和$SU(2)$}{326}{subsection.D.4.1}%
-\contentsline {subsection}{\numberline {D.4.2}转动群的不可约表示}{328}{subsection.D.4.2}%
-\contentsline {subsection}{\numberline {D.4.3}*CG系数与角动量耦合}{332}{subsection.D.4.3}%
+\contentsline {subsubsection}{分波方程}{231}{subsubsection*.11}%
+\contentsline {subsubsection}{相移}{232}{subsubsection*.12}%
+\contentsline {subsubsection}{近似计算例子}{232}{subsubsection*.13}%
+\contentsline {subsubsection}{束缚态}{233}{subsubsection*.14}%
+\contentsline {subsubsection}{共振散射}{234}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {11.3.2}自旋$\frac {1}{2}$情况}{234}{subsection.11.3.2}%
+\contentsline {subsubsection}{与电磁散射类比}{237}{subsubsection*.16}%
+\contentsline {section}{\numberline {11.4}含时散射理论}{237}{section.11.4}%
+\contentsline {chapter}{\numberline {第十二章\hspace {.3em}}*再论量子力学中的对称性（施工中）}{238}{chapter.12}%
+\contentsline {chapter}{\numberline {第十三章\hspace {.3em}}量子信息与量子计算简介（施工中）}{239}{chapter.13}%
+\contentsline {chapter}{\numberline {附录 A\hspace {.3em}}Vector Calculus}{240}{appendix.A}%
+\contentsline {section}{\numberline {A.1}指标运算}{240}{section.A.1}%
+\contentsline {section}{\numberline {A.2}梯度, 散度, 旋度}{241}{section.A.2}%
+\contentsline {section}{\numberline {A.3}曲线坐标系}{243}{section.A.3}%
+\contentsline {section}{\numberline {A.4}曲线积分和曲面积分}{247}{section.A.4}%
+\contentsline {section}{\numberline {A.5}直角坐标里的张量}{249}{section.A.5}%
+\contentsline {section}{\numberline {A.6}分部积分法}{255}{section.A.6}%
+\contentsline {section}{\numberline {A.7}*外微分形式与斯托克斯定理（施工中）}{256}{section.A.7}%
+\contentsline {chapter}{\numberline {附录 B\hspace {.3em}}Linear Algebra}{257}{appendix.B}%
+\contentsline {section}{\numberline {B.1}向量空间}{257}{section.B.1}%
+\contentsline {section}{\numberline {B.2}内积}{258}{section.B.2}%
+\contentsline {section}{\numberline {B.3}波函数的空间}{260}{section.B.3}%
+\contentsline {section}{\numberline {B.4}态空间和狄拉克符号}{262}{section.B.4}%
+\contentsline {section}{\numberline {B.5}态空间表象和算子的矩阵表示}{267}{section.B.5}%
+\contentsline {section}{\numberline {B.6}*线性算符的一些性质}{272}{section.B.6}%
+\contentsline {section}{\numberline {B.7}*对偶空间和对偶映射}{275}{section.B.7}%
+\contentsline {chapter}{\numberline {附录 C\hspace {.3em}}Gaussian Integral}{277}{appendix.C}%
+\contentsline {chapter}{\numberline {附录 D\hspace {.3em}}Finit Group}{279}{appendix.D}%
+\contentsline {section}{\numberline {D.1}群的基本结构}{279}{section.D.1}%
+\contentsline {subsection}{\numberline {D.1.1}群的定义和一些基本定理}{279}{subsection.D.1.1}%
+\contentsline {subsection}{\numberline {D.1.2}群的内部结构}{280}{subsection.D.1.2}%
+\contentsline {subsection}{\numberline {D.1.3}同构与同态}{286}{subsection.D.1.3}%
+\contentsline {subsection}{\numberline {D.1.4}群作用与变换群}{289}{subsection.D.1.4}%
+\contentsline {subsection}{\numberline {D.1.5}直积与半直积}{290}{subsection.D.1.5}%
+\contentsline {section}{\numberline {D.2}群表示论}{292}{section.D.2}%
+\contentsline {subsection}{\numberline {D.2.1}群表示基本概念}{292}{subsection.D.2.1}%
+\contentsline {subsection}{\numberline {D.2.2}群代数与正则表示}{296}{subsection.D.2.2}%
+\contentsline {subsection}{\numberline {D.2.3}特征标理论及正交完备性定理}{299}{subsection.D.2.3}%
+\contentsline {subsection}{\numberline {D.2.4}新表示的构成}{316}{subsection.D.2.4}%
+\contentsline {subsubsection}{分导表示}{318}{subsubsection*.22}%
+\contentsline {subsubsection}{用商群构造表示}{318}{subsubsection*.23}%
+\contentsline {section}{\numberline {D.3}置换群}{319}{section.D.3}%
+\contentsline {subsection}{\numberline {D.3.1}基本概念和性质}{319}{subsection.D.3.1}%
+\contentsline {subsection}{\numberline {D.3.2}置换群的表示}{321}{subsection.D.3.2}%
+\contentsline {subsection}{\numberline {D.3.3}钩子规则}{324}{subsection.D.3.3}%
+\contentsline {subsection}{\numberline {D.3.4}置换群直积表示约化}{324}{subsection.D.3.4}%
+\contentsline {subsubsection}{计算$S_{n+m}$在子群$S_n\otimes S_m$上的分导表示的约化}{326}{subsubsection*.24}%
+\contentsline {section}{\numberline {D.4}转动群}{327}{section.D.4}%
+\contentsline {subsection}{\numberline {D.4.1}$SO(3)$和$SU(2)$}{327}{subsection.D.4.1}%
+\contentsline {subsection}{\numberline {D.4.2}转动群的不可约表示}{329}{subsection.D.4.2}%
+\contentsline {subsection}{\numberline {D.4.3}*CG系数与角动量耦合}{333}{subsection.D.4.3}%
 \contentsfinish 
