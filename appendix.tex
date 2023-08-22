@@ -643,6 +643,24 @@ $\left\langle {\alpha }\mathrel{\left | {\vphantom {\alpha  \beta }}\right. \ker
 
 极化恒等式:
 \[{\left\| {\left| \alpha  \right\rangle  + \left| \beta  \right\rangle } \right\|^2} + {\left\| {\left| \alpha  \right\rangle  - \left| \beta  \right\rangle } \right\|^2} = 2\left( {{{\left\| {\left| \alpha  \right\rangle } \right\|}^2} + {{\left\| {\left| \beta  \right\rangle } \right\|}^2}} \right)\]
+
+实际上除了内积，我们还可以定义有点相似的度量概念：
+\begin{define}{度量空间}
+	在线性空间$V$和对应数域$\mathbbm{F}$上可以定义度量运算$d:V\times V\to \mathbbm{F},(u,v)\mapsto d(u,v)$，满足下面三条性质：
+	\begin{itemize}
+		\item \textbf{正定性}：$d(u,v)\geq 0,d(u,v)=0\iff u=v$
+		\item \textbf{对称性}：$d(u,v)=d(v,u)$
+		\item  \textbf{三角恒等式}：$d(u,v)+d(v,w)\geq d(u,w)$
+	\end{itemize}
+	定义了度量的线性空间称为\textbf{度量空间}。
+\end{define}
+注意这里的度量定义不要求线性，但是有一个紧密联系的度规概念：
+\begin{define}{度规}
+	线性空间$V$上的度规$g$是一个双线性对称的非退化映射，数学上讲就是一个$(0,2)$型张量，存在于$V^*\otimes V^*$中。前两个要求在度量中都有，非退化是指$\forall u\in V ,g(u,v)=0\Rightarrow v=0$。广义相对论中常常写两个四矢量的内积$\mathbf{A}\cdot\mathbf{B}=g_{\alpha\beta}A^\alpha B^\beta$其实就是在说$g(\mathbf{A},\mathbf{B})$罢了。\footnote{想要更加形式化的在广义相对论中理解度规、张量，见{\itshape 梁灿彬}老师的三卷广义相对论著作，或者MIT OpenCourse 8.962。}
+\end{define}
+
+从定义不难发现如果度规还满足正定性，那我们还很自然的引入了一个度量，这里都不作深入讨论。后面我们会看到在量子力学中左右矢其实就是矢量和其对偶矢量，诱导对偶矢量是通过内积$\braket{u|\cdot}$诱导的。而广义是用相对论的逆变协变矢量指的也是矢量和其对偶矢量，只不过那里是用度规$g(u,\cdot)$诱导的，升降指标就是在做这件事情，而且涉及到不止一个指标，涉及到多重线性映射，比量子力学中的更加复杂。
+
 \section{波函数的空间}
 函数的和还是函数, 数乘后也是函数, 我们可以验证, 所有函数的集合可以构成一个向量空间。但是这个范围太大了, 由于有物理意义的波函数都需要满足归一化条件, 所以我们
 转而去关注, 平方可积的函数, 也就是下式成立：
@@ -1105,7 +1123,7 @@ $$
 \section{*对偶空间和对偶映射}
 左矢其实是处于右矢的对偶空间之中的，现在我们用严谨的数学语言对对偶空间进行一般的简要介绍。不过我们的介绍集中于有限维向量空间，和量子力学中的Hilbert空间有所差距。
 
-线性泛函和线性空间$V$的对偶空间$V^*$的定义与$\S$B.4中的定义是一致的，下面谈到的一堆定理如果从数学上严谨证明前摇过长，我们仅从物理上“感觉”一下。
+线性泛函和线性空间$V$的对偶空间$V^*$的定义与$\S$B.4中的定义是一致的，下面谈到的一堆定理如果从数学上严谨证明前摇过长，我们仅从物理上“感觉”一下。\footnote{所有证明都可以在{\itshape Linear Algebra Done Right}中找到。}
 \begin{theorem}{$\mathrm{dim} V=\mathrm{dim} V^*$}
     对于有限维向量空间$V$，其对偶空间$V^*$也是有限维的，且$\mathrm{dim} V=\mathrm{dim} V^*$. 所以他们俩也是同构的。
 \end{theorem}
@@ -1130,7 +1148,7 @@ $$
 这个对偶映射在量子力学里面是有定义的，算符$\hat{A}$从定义之初就是作用与右矢的，而作用于左矢没有定义，所以矩阵元应理解为$\braket{\varphi|\hat{A}|\psi}=\bra{\phi}(\hat{A}\ket{\psi)}$.但是这样
 未免有点麻烦，我们不妨认为定义$\hat A$作用于左矢$\bra{\phi}$的效果为：
 \[\forall \ket{\psi}\in\mathscr{E},\braket{\left(\varphi|A\right)|\psi}=\braket{\varphi|\left(A|\psi\right)}\]
-显然我们在悄然之间定义了一个$\hat A$的对偶映射$A^*$。我们设将右矢变为左矢的算符为$v$\footnote{这是个反线性算符}，那么根据前面的讨论，有$\hat A^\dagger=v^{-1}\circ \hat{A}^*\circ v$
+显然我们在悄然之间定义了一个$\hat A$的对偶映射$A^*$。$A^*(\bra{\psi})\equiv\bra{\psi}A$。我们设将右矢变为左矢的算符为$v$\footnote{这是个反线性算符}，那么根据前面的讨论，有$\hat A^\dagger=v^{-1}\circ \hat{A}^*\circ v$
 
 \begin{theorem}{对偶映射的矩阵}
     $T\in \mathcal{L}(V,W),T^*\in\mathcal{L}(W^*,V^*)$，$V,W$基底分别为$\{e_i\},\{f_i\}$且$V^*$，$W^*$的基底取对应的对偶基底$\{e^i\},\{f^i\}$，那么按照上述基底计算的
@@ -1149,6 +1167,15 @@ $$
 \end{proof}
 
 这里并不要求基正交归一了，因为对偶空间这些概念都不必建立在内积空间之上。
+
+左矢就是生活在态空间的对偶空间中的矢量，其实我们在构建左矢的时候利用的是内积进行诱导，回忆我们在定义左矢这个线性泛函的时候要求$\braket{u|v}=(\ket{u},\ket{v})$，也就是说左矢左作用在右矢上相当于两者取内积。这涉及到一个重要定理：
+\begin{theorem}{里斯表示定理}
+	对于\uwave{有限维}向量空间$V$上的任意线性泛函$\chi:V\to \mathbbm{P}$有：
+	\[\exists !{\ }u\in V, \forall v\in V, \chi(u)=(u,v)\]
+\end{theorem}
+
+不过这个定理是对有限维向量空间成立的，如果他对无限维向量空间也成立，那么所有的左矢都应当有对应的右矢了，但是显然比如$\bra{\mathbf{r}}$就不是，它的右矢不是平方可积的，只能进行狄拉克意义上的正交归一化。所以前面我们引入本来不存在于右矢空间中，或者说不是一个合格的物理态的$\ket{\mathbf{r}}$是为了后面计算上的简便，它的波包才是一个合格的物理态。诚然，这样以来平面波$\ket{\mathbf{p}}$也不是合格的物理态，但是在考虑散射问题的时候这是一个合格的近似。\footnote{这一部分详见{\itshape Cohen Tannoudji}书中讨论。}
+
 
 \chapter{Gaussian Integral}
 \section*{1-dimensional Gaussian integral}
