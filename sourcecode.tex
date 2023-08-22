@@ -3978,12 +3978,37 @@
 	\end{theorem}
 	这里$\hat P$的含义是$b^{\alpha^\prime}$这些不变，对$\delta$函数内的$b^\alpha$进行排列。\footnote{上式的推导中需要注意的是，直积空间中的态矢量在进行内积时总是相对应的同一空间中的态矢量进行内积，然后相乘得到最终结果。比如这里就总是下标相同的单粒子态进行内积。}
 	
-	下面的公式是后面推导中经常要用的：
+	下面的公式是后面推导中经常要用的：\footnote{上面提到的这些公式的证明就像是排列组合题，从公式上看只用写几行，难点都在文字叙述理解，为了简化我们都不作证明。}
 	\begin{theorem}{内积定理}
 		\begin{equation}
-			blabla
+			\begin{aligned}
+				&\braket{N;b^{\alpha^\prime}b^{\beta^\prime}\cdots b^{\nu^\prime}|N;b^{\alpha}b^{\beta}\cdots b^{\nu}}\\
+				=&\frac{1}{N}[\braket{b^{\alpha^\prime}|b^\alpha}\braket{N-1;b^{\beta^\prime}b^{\gamma^\prime}\cdots b^{\nu^\prime}|N-1;b^{\beta}b^{\gamma}\cdots b^{\nu}}\\
+				&+\varepsilon\braket{b^{\alpha^\prime}|b^\beta}\braket{N-1;b^{\beta^\prime}b^{\gamma^\prime}\cdots b^{\nu^\prime}|N-1;b^{\alpha}b^{\gamma}\cdots b^{\nu}}\\
+				&+\varepsilon^2\braket{b^{\alpha^\prime}|b^\gamma}\braket{N-1;b^{\beta^\prime}b^{\gamma^\prime}\cdots b^{\nu^\prime}|N-1;b^{\alpha}b^{\beta}\cdots b^{\nu}}\\
+				&+\cdots+\varepsilon^{n-1}\braket{b^{\alpha^\prime}|b^\nu}\braket{N-1;b^{\beta^\prime}b^{\gamma^\prime}\cdots b^{\nu^\prime}|N-1;b^{\alpha}b^{\beta}\cdots b^{\mu}}]
+			\end{aligned}
 		\end{equation}
 	\end{theorem}
+	
+	再来看一下对称化基矢关于对称的量子态，也即真实物理态的完备性。首先注意到所有的基矢（包括不对称的），对$\mathcal{R}$中的任意矢量都完备：
+	\[\ket{\Psi}=c_1\ket{b^\alpha}_1\ket{b^\beta}_2\cdots\ket{b^\nu}_N+c_2\ket{b^{\alpha^\prime}}_1\ket{b^{\beta^\prime}}_2\cdots\ket{b^{\nu^\prime}}_N+\cdots\]
+	再注意到我们关心的是（反）对称态矢：
+	\[\hat P\ket{\Psi}=\varepsilon^{\mathcal{P}}\ket{\Psi}\]
+	进一步得到：
+	\[\sum_P \varepsilon^\mathcal{P}\hat P\ket{\Psi}=c_1\sum\varepsilon^\mathcal{P}P\ket{b^\alpha}_1\ket{b^\beta}_2\cdots\ket{b^\nu}_N+\cdots\]
+	上式左边是$\ket{\Psi}$的$N!$倍，而右边的每一项都是相应的对称化基矢的$N!$倍，所以
+	\[\ket{\Psi}=c_1\ket{N;b^\alpha b^\beta\cdots b^\nu}+c_2\ket{N;b^{\alpha^\prime} b^{\beta^\prime}\cdots b^{\nu^\prime}}+\cdots\]
+	这个式子说明了所有的对称化基矢确实是完备的，也即：\footnote{如果比较仔细，会发现下面的完备性关系我们其实是把所有\uwave{b的排列}当作一个基矢，而不是组合。实际上两种写法是等价的，这种更简洁一些。}
+	\begin{equation}
+		\label{eq:5.49}
+		\int \mathrm{d}b^\alpha\int \mathrm{d}b^\beta\cdots\int \mathrm{d}b^\nu\ket{N;b^\alpha b^\beta\cdots b^\nu}\bra{N;b^\alpha b^\beta\cdots b^\nu}
+	\end{equation}
+	
+	\subsection{产生湮灭算符}
+	\subsubsection{巨希尔伯特空间}
+	
+	
 	
     \chapter{量子力学中的对称性}
     经典力学中我们曾利用拉格朗日量的不变性讨论过了经典力学中的守恒律与对称性之间的关系, 这里我们再来量子力学中探讨一下。
