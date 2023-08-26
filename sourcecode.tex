@@ -4007,9 +4007,82 @@
 	
 	\subsection{产生湮灭算符}
 	\subsubsection{巨希尔伯特空间}
+	首先我们介绍一种与前面用直积构造更大的空间相似的另一种构造方法。
+	\begin{define}{直和空间}
+		任意两个线性空间都可以通过运算“直和$\oplus$”构成一个更大的线性空间，记为$V=U\oplus W$。
+		\[V=\{\ket{u}\oplus\ket{w}|\forall\ket{u}\in U,\forall \ket{w}\in W\}\]
+		也就是两个线性空间中的元素不论顺序的摆在一起，在$V$中我们可以定义加法数乘和内积。
+		\begin{itemize}
+			\item \textbf{加法：}$\ket{\alpha}\oplus\ket{\beta}+\ket{\psi}\oplus\ket{\varphi}=\left(\ket{\alpha}+\ket{\psi}\right)\oplus\left(\ket{\psi}+\ket{\varphi}\right)$
+			\item \textbf{数乘：}$a\left(\ket{\alpha}\oplus\ket{\beta}\right)=\left(a\ket{\alpha}\right)\oplus\left(a\ket{\beta}\right)$
+			\item\textbf{内积：}$\left(\ket{\alpha}\oplus\ket{\beta},\ket{\psi}\oplus\ket{\varphi}\right)=\braket{\alpha|\psi}+\braket{\beta|\varphi}$
+		\end{itemize}
+		上面的$+,\braket{\cdot|\cdot}$这些操作应该按照对象所属的线性空间进行理解，为了负号上的简便同一用同一个符号表示。
+	\end{define}
 	
+	我们一条条对比与直积空间的差别。首先是元素本身，都是两个空间中地元素不论顺序的摆在一起，这个是相同地；其次是加法，直和空间中的加法可以类似于加法结合律一样用两个空间中自带的加法来定义，而直积空间中的加法要重新定义；然后是数乘，直和空间对数乘充分展现出了“和”这一特征，对数乘是类似于加饭分配律，两个构成直和空间的矢量都要乘相同的数，而直积空间就是整体乘一次；最后是内积，两者从公式上看一个是相乘一个是相加，这里的相加可以看作是认定不同空间中矢量内积为0，然后按照分配律展开得到的结果。从维数上看，直积空间维数是相乘而直和空间是相加。
 	
+	另外，我们这里提到的直和和直积与数学上的定义有所不同。数学上讲直和指的更多是内直和，是说一个线性空间$V$有两个子空间$W$和$U$，如果$V$中任意一个元素$\ket{v}$都存在\textbf{唯一的}$\ket{w}\in W,\ket{u}\in U$，有$\ket{v}=\ket{u}+\ket{w}$，那么就称$V$是$U$和$W$的（内）直和。直观上看就是两个子空间“垂直”不相交地并起来。我们这里的直和在数学上来讲是所谓的外直和。
 	
+	如统计力学中的巨正则系综一样，考虑粒子数可变的系统时，系统的态空间应该是更大的，包含了所有的粒子数的态空间之并。毫无疑问这里我们应当选取直和，最后的态矢量应该是不同粒子数空间态矢量的线性叠加，只有线性空间的直和才完美保留了线性叠加这一性质。
+	\[\mathcal{R}_G=\mathcal{R}_0\oplus\mathcal{R}_1\oplus\cdots\oplus\mathcal{R}_N\oplus\cdots\]
+	巨希尔伯特空间中的矢量表示为：
+	\[\left. {\left| \Psi  \right\rangle } \right\rangle  = {c_0}\left| {{\Psi _0}} \right\rangle  \oplus {c_1}\left| {{\Psi _1}} \right\rangle  \oplus  \cdots  \oplus {c_N}\left| {{\Psi _N}} \right\rangle  \oplus  \cdots \]
+	相应的，对成化基矢的完备性关系也要修改为：
+	\[1\]
+	
+	\subsubsection{产生湮灭算符}
+	$\mathcal{R}_0$是平凡的线性空间，只有一个量子态$\ket{0}$，我们称为真空态，意思是啥也没有。对于每一个CSCO取值$b$，都可以定义一个$\mathcal{R}_N\to \mathcal{R}_{N+1}$的线性映射\footnote{在数学上只有在定义域和之余相同的情况下我们才把线性映射称为算子(operator)。物理上我们啥玩意都习惯叫算符(operator)。}$a^\dagger(b)$，作用就是在原先空间中“对称地”产生一个单粒子态$\ket{b}$，所以就成为\textbf{产生算符}。我们用对成化基底对其如下定义：
+	\begin{equation}
+		\label{eq:5.50}
+		\begin{aligned}
+			&a^\dagger(b)\ket{0}=\sqrt{1}\ket{1;b}\\
+			&a^\dagger(b)\ket{1;b^\alpha}=\sqrt{2}\ket{1;bb^\alpha}\\
+			&\vdots\\
+			&a^\dagger(b)\ket{N;b^\alpha b^\beta\cdots b^\nu}=\sqrt{N+1}\ket{N+1;bb^\alpha b^\beta\cdots b^\nu}\\
+		\end{aligned}
+	\end{equation}
+	这里注意$b$都是加在最左边，在这样的顺序要求下，任何一个$N$粒子态都可以从真空态生成：
+	\begin{equation}
+	\boxed{
+		\ket{N;b^\alpha b^\beta\cdots b^\nu}=\frac{1}{\sqrt{N}}a^\dagger(b^\alpha)a^\dagger(b^\beta)\cdots a^\dagger(b^\nu)
+		}
+	\end{equation}
+	
+	前面说过，就对称化基底而言，玻色子随意交换$b^\alpha,b^\beta$都不会带来任何改变，而费米子对于奇置换多一个负号。这将导致下面的对易关系：
+	\begin{equation}
+		\boxed{
+			a^\dagger(b)a^\dagger(b^\prime)-\varepsilon a^\dagger(b^\prime)a^\dagger(b)=0
+		}
+	\end{equation}
+	很多地方也把上面的关系式分开写为：
+	\[\left[a^\dagger(b),a^\dagger(b^\prime)\right]=0\qquad\left\{a^\dagger(b),a^\dagger(b^\prime)\right\}=0\]
+	对于玻色子取对易关系，对于玻色子取反对易关系，后面提到的其它对易关系也可以分开写为对易和反对易形式。后面除非额外说明，我们都使用统一形式。
+	
+	对\ref{eq:5.50}两边同时求厄米共轭我们可以得到$a(b)$算符左作用的定义。
+	\begin{equation}
+		\begin{aligned}
+			&\bra{0}a(b)=\sqrt{1}\bra{1;b}\\
+			&a\bra{1;b^\alpha}a(b=\sqrt{2}\bra{1;bb^\alpha}\\
+			&\vdots\\
+			&\bra{N;b^\alpha b^\beta\cdots b^\nu}a(b=\sqrt{N+1}\bra{N+1;bb^\alpha b^\beta\cdots b^\nu}\\
+		\end{aligned}
+	\end{equation}
+	其作用在右矢上比较麻烦，可以使用内积定理进行计算：
+	\begin{equation}
+		\begin{aligned}
+			&\braket{N-1;b^{\beta^\prime}b^{\gamma^\prime}\cdots b^{\nu^\prime}|a(b)|N;b^\alpha b^\beta b^\gamma\cdots b^\nu}\\
+			=&\sqrt{n}\braket{N;bb^{\beta^\prime}b^{\gamma^\prime}\cdots b^{\nu^\prime}|a(b)|N;b^\alpha b^\beta b^\gamma\cdots b^\nu}\\
+			=&\bra{N-1;b^{\beta^\prime}b^{\gamma^\prime}\cdots b^{\nu^\prime}}\Big\{\frac{1}{\sqrt{N}}[\delta(b-b^\alpha)\ket{N-1;b^\beta b^\gamma\cdots b^\nu}\\
+			&+\varepsilon\delta(b-b^\beta)\ket{N-1;b^\alpha b^\gamma\cdots b^\nu}+\varepsilon^2\delta(b-b^\gamma)\ket{N-1;b^\alpha b^\beta\cdots b^\nu}\\
+			&+\cdots+\varepsilon^{N-1}\delta(b-b^\nu)\ket{N-1;b^\alpha b^\beta\cdots b^\mu}]\Big\}
+		\end{aligned}
+	\end{equation}
+	得到：
+	\begin{equation}
+		1
+	\end{equation}
+	相比于产生算符，这个式子要复杂很多，
     \chapter{量子力学中的对称性}
     经典力学中我们曾利用拉格朗日量的不变性讨论过了经典力学中的守恒律与对称性之间的关系, 这里我们再来量子力学中探讨一下。
 
