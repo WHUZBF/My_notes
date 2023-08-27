@@ -3446,6 +3446,7 @@
     	其中求和是对所有下标的排列方式求和，$N_i$表示下标都为$i$的下标个数（在同一个态的粒子数目）。
     	\subsubsection{反对称构造}
     	\begin{equation}
+    		\label{eq:5.8}
 	    		\psi_A=\frac{1}{N!}\begin{vmatrix}
 	    			\psi_{p_1}(\mathbf{r}_1)&\psi_{p_1}(\mathbf{r}_2)&\cdots&\psi_{p_1}(\mathbf{r}_N) \\
 	    			\psi_{p_2}(\mathbf{r}_1)&\psi_{p_2}(\mathbf{r}_2)&\cdots&\psi_{p_2}(\mathbf{r}_N) \\
@@ -3454,7 +3455,7 @@
 	    		\end{vmatrix} 
     	\end{equation}
     
-    	这个式子也被称为slater行列式，可以很容易看出来任意两个粒子不能有完全相同的量子数（处于相同的状态）。
+    	这个式子也被称为slater行列式，可以很容易看出来任意两个粒子不能有完全相同的量子数（处于相同的状态）。本章最后我们会发展一种更加系统地处理多个全同粒子体系的方法。
     \subsection{交换力}
     我们继续考虑两个粒子, 现在只考虑一维情况。如果两个粒子是可以去区分的, 其中一个处于$\psi_a$另一个处于$\psi_b$而且这两个态是正交归一的。在没有纠缠的情况下, 总的态可以写成：
     \[\psi(x_1,x_2)=\psi_a(x_1)\psi_b(x_2)\]
@@ -3956,7 +3957,7 @@
 			\ket{N;b^\alpha b^\beta\cdot b^\nu}=\frac{1}{N!}\sum_P\varepsilon^{\mathcal{P}} \hat{P}\ket{b^\alpha}_1\ket{b^\beta}_2\cdots\ket{b^\nu}_N
 		}
 	\end{equation}
-	上式左边表示（反）对称化后的基矢，对于费米子$\varepsilon=-1$，对于玻色子$\varepsilon=1$，右边的求和是对所有的下标排列求和\footnote{这里有两种等价的观点，一种是态矢内的$b$不动，对态矢下标轮换，另一种是下标不动对括号内的态矢轮换。}，对于偶置换$\mathcal{P}=1$，否则为$-1$。
+	上式左边表示（反）对称化后的基矢，对于费米子$\varepsilon=-1$，对于玻色子$\varepsilon=1$，右边的求和是对所有的下标排列求和\footnote{这里有两种等价的观点，一种是态矢内的$b$不动，对态矢下标轮换，另一种是下标不动对括号内的态矢轮换。}，对于偶置换$\mathcal{P}=1$，否则为$-1$。而且对于费米子，只要$b^\alpha b^\beta\cdots$中有两个相同的态，则反对称化后为0，这正是\textbf{泡利不相容原理}。这个特点用反对称基矢的行列式形式可以很好地看出来，即\ref{eq:5.8}。
 	
 	但是要注意，虽然从\ref{eq:5.46}的定义来看，对称化基矢依赖于$\ket{N;b^\alpha b^\beta\cdot b^\nu}$中这些$b$的排列顺序，但实际上不难发现不同的排列顺序最多会导致一个负号的差别，而这在基矢的意义上没有差别，选择其中一个为基矢就不必将其它的也选进来了，所以：\textbf{$N$个$b$值的每一种组合，而不是排列代表一个基矢}。
 	
@@ -4006,7 +4007,7 @@
 	\end{equation}
 	
 	\subsection{产生湮灭算符}
-	\subsubsection{巨希尔伯特空间}
+	\subsubsection{巨希尔伯特空间（Fock空间）}
 	首先我们介绍一种与前面用直积构造更大的空间相似的另一种构造方法。
 	\begin{define}{直和空间}
 		任意两个线性空间都可以通过运算“直和$\oplus$”构成一个更大的线性空间，记为$V=U\oplus W$。
@@ -4029,7 +4030,10 @@
 	巨希尔伯特空间中的矢量表示为：
 	\[\left. {\left| \Psi  \right\rangle } \right\rangle  = {c_0}\left| {{\Psi _0}} \right\rangle  \oplus {c_1}\left| {{\Psi _1}} \right\rangle  \oplus  \cdots  \oplus {c_N}\left| {{\Psi _N}} \right\rangle  \oplus  \cdots \]
 	相应的，对成化基矢的完备性关系也要修改为：
-	\[1\]
+	\[
+		\sum_{N=0}^\infty
+		\int \mathrm{d}b^\alpha\int \mathrm{d}b^\beta\cdots\int \mathrm{d}b^\nu\ket{N;b^\alpha b^\beta\cdots b^\nu}\bra{N;b^\alpha b^\beta\cdots b^\nu}
+	\]
 	
 	\subsubsection{产生湮灭算符}
 	$\mathcal{R}_0$是平凡的线性空间，只有一个量子态$\ket{0}$，我们称为真空态，意思是啥也没有。对于每一个CSCO取值$b$，都可以定义一个$\mathcal{R}_N\to \mathcal{R}_{N+1}$的线性映射\footnote{在数学上只有在定义域和之余相同的情况下我们才把线性映射称为算子(operator)。物理上我们啥玩意都习惯叫算符(operator)。}$a^\dagger(b)$，作用就是在原先空间中“对称地”产生一个单粒子态$\ket{b}$，所以就成为\textbf{产生算符}。我们用对成化基底对其如下定义：
@@ -4068,6 +4072,12 @@
 			&\bra{N;b^\alpha b^\beta\cdots b^\nu}a(b=\sqrt{N+1}\bra{N+1;bb^\alpha b^\beta\cdots b^\nu}\\
 		\end{aligned}
 	\end{equation}
+	同样可以得到对易关系：
+	\begin{equation}
+		\boxed{
+			a(b)a(b^\prime)-\varepsilon a(b^\prime)a(b)=0
+		}
+	\end{equation}
 	其作用在右矢上比较麻烦，可以使用内积定理进行计算：
 	\begin{equation}
 		\begin{aligned}
@@ -4080,9 +4090,49 @@
 	\end{equation}
 	得到：
 	\begin{equation}
-		1
+		\begin{aligned}
+			&a(b)\ket{N;b^\alpha b^\beta b^\gamma\cdots b^\nu}\\
+			=&\frac{1}{\sqrt{N}}[\delta(b-b^\alpha)\ket{N-1;b^\beta b^\gamma\cdots b^\nu}\\
+			&+\varepsilon\delta(b-b^\beta)\ket{N-1;b^\alpha b^\gamma\cdots b^\nu}+\varepsilon^2\delta(b-b^\gamma)\ket{N-1;b^\alpha b^\beta\cdots b^\nu}\\
+			&+\cdots+\varepsilon^{N-1}\delta(b-b^\nu)\ket{N-1;b^\alpha b^\beta\cdots b^\mu}]
+		\end{aligned}
 	\end{equation}
-	相比于产生算符，这个式子要复杂很多，
+	
+	相比于产生算符，这个式子要复杂很多，但也很容易看出其作用就是对称地消去一个单粒子态$\ket{b}$，所以我们称$a(b)$为\textbf{湮灭算符}。事实上，这个式子对于费米子还是比较简单的，因为费米子由于泡利不相容原理至多只能有一个处于$b$的粒子，所以上式右侧至多剩下一项。
+	
+	最后，我们写下产生湮灭算符之间的对易关系：
+	\begin{equation}
+		\boxed{
+			a(b)a^\dagger(b^\prime)-\varepsilon a^\dagger(b^\prime)a(b)=\delta(b-b^\prime)
+		}
+	\end{equation}
+	
+	\subsubsection{占有数密度算符和总粒子数算符}
+	根据产生湮灭算符构造\footnote{关于产生湮灭算符在构造粒子数算符时谁先谁后可以从真空态来想，$\hat{N}$作用在真空态上必须为0，这要求先作用湮灭算符。}：
+	\begin{equation}
+		\boxed{\hat{N}(b)\equiv a^\dagger(b)a(b),\quad \hat{N}\equiv\int \mathrm{d}b\hat{N}(b)}
+	\end{equation}
+	不难计算发现：
+	\begin{equation}
+		\begin{aligned}
+			&\hat{N}(b)\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}=\left[\sum_{\mu=\alpha}^\nu \delta(b-b^\mu)\right]\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}
+			&\hat{N}\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}=N\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}
+		\end{aligned}
+	\end{equation}
+	
+	所以$\hat{N}$告诉我们体系总共多少个粒子，$\hat{N}(b)$告诉我们这其中处于$b$量子态的粒子又有几个。它们都是厄米算符，因为对应可观测量。之所以我们叫做占有数\uwave{密度}算符，是因为连续本征值情况不可避免地涉及到$\delta$函数。这些性质在后面发展离散本征值的理论时会更加明显。
+	
+	最后给出它们与产生湮灭算符的对易关系，注意，这个对易关系对玻色子和费米子\textbf{均适用}：
+	\begin{equation}
+		\begin{aligned}
+			&[\hat{N}(b),a^\dagger(b^\prime)]=a^\dagger(b)\delta(b-b^\prime)&&[\hat{N}(b),a(b^\prime)]=-a(b)\delta(b-b^\prime)\\
+			&[N,a^\dagger(b)]=a^\dagger(b)&&[N,a(b)]=-a(b)
+		\end{aligned}
+	\end{equation}
+	\subsubsection{算符的二次量子化形式}
+	
+	\subsubsection{实例：位置表象}
+	
     \chapter{量子力学中的对称性}
     经典力学中我们曾利用拉格朗日量的不变性讨论过了经典力学中的守恒律与对称性之间的关系, 这里我们再来量子力学中探讨一下。
 
