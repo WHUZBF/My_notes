@@ -3964,11 +3964,12 @@
 	另外，我们这里的分析框架完全适用于有自旋体系，只要把自旋希尔伯特空间也纳入进来，一起进行对称化就好。
 	
 	现在考虑对称化基矢的正交归一问题，与一般的公式形式上有所差别。
+	% 请忽略这个报错
 	\begin{equation}
 		\begin{aligned}
 			&\braket{N;b^{\alpha^\prime}b^{\beta^\prime}\cdots b^{\nu^\prime}|N;b^{\alpha}b^{\beta}\cdots b^{\nu}}\\
-			=&\frac{1}{(N!)^2}\sum_{P^\prime}\sum_P\varepsilon^{\mathcal{P}^\prime}\varepsilon^{\mathcal{P}}\hat{P}^\prime\hat{P}{\ }{}_1{\braket{b^{\alpha^\prime}|b^\alpha}}_1{\ }{}_2{\braket{b^{\beta^\prime}|b^\beta}}_2\cdots{}_N{\braket{b^{\nu^\prime}|b^\nu}}_N\\
-			=&\frac{1}{N!}\sum_P\varepsilon^{\mathcal{P}}\hat{P}{\ }{}_1{\braket{b^{\alpha^\prime}|b^\alpha}}_1{\ }{}_2{\braket{b^{\beta^\prime}|b^\beta}}_2\cdots{}_N{\braket{b^{\nu^\prime}|b^\nu}}_N
+			=&\frac{1}{(N!)^2}\sum_{P^\prime}\sum_P\varepsilon^{\mathcal{P}^\prime}\varepsilon^{\mathcal{P}}\hat{P}^\prime\hat{P}\sideset{_1}{_1}{\mathop{\langle b^{\alpha^\prime}|b^\alpha\rangle}}\sideset{_2}{_2}{\mathop{\langle b^{\beta^\prime}|b^\beta\rangle}}\cdots\sideset{_N}{_N}{\mathop{\langle b^{\nu^\prime}|b^\nu\rangle}}\\
+			=&\frac{1}{N!}\sum_P\varepsilon^{\mathcal{P}}\hat{P}\sideset{_1}{_1}{\mathop{\langle b^{\alpha^\prime}|b^\alpha\rangle}}\sideset{_2}{_2}{\mathop{\langle b^{\beta^\prime}|b^\beta\rangle}}\cdots\sideset{_N}{_N}{\mathop{\langle b^{\nu^\prime}|b^\nu\rangle}}
 		\end{aligned}
 	\end{equation}
 	\begin{theorem}{正交归一性}
@@ -4001,10 +4002,13 @@
 	上式左边是$\ket{\Psi}$的$N!$倍，而右边的每一项都是相应的对称化基矢的$N!$倍，所以
 	\[\ket{\Psi}=c_1\ket{N;b^\alpha b^\beta\cdots b^\nu}+c_2\ket{N;b^{\alpha^\prime} b^{\beta^\prime}\cdots b^{\nu^\prime}}+\cdots\]
 	这个式子说明了所有的对称化基矢确实是完备的，也即：\footnote{如果比较仔细，会发现下面的完备性关系我们其实是把所有\uwave{b的排列}当作一个基矢，而不是组合。实际上两种写法是等价的，这种更简洁一些。}
+	
 	\begin{equation}
 		\label{eq:5.49}
 		\int \mathrm{d}b^\alpha\int \mathrm{d}b^\beta\cdots\int \mathrm{d}b^\nu\ket{N;b^\alpha b^\beta\cdots b^\nu}\bra{N;b^\alpha b^\beta\cdots b^\nu}
 	\end{equation}
+	
+	在统计力学中求配分函将会涉及到对一组完备基底和密度算符构成的矩阵元进行求和。Boltzmann统计中我们考虑的态空间是更大的$\mathcal{R}$，那些完备基底是为对称化的$|N;b^{\alpha^\prime} b^{\beta^\prime}\cdots b^{\nu^\prime})$。而Fermi和Bose统计考虑的态空间是$\mathcal{R}_A$与$\mathcal{R}_S$，这也导致完备基底是对称化后的$\ket{N;b^{\alpha^\prime} b^{\beta^\prime}\cdots b^{\nu^\prime}}$，粒子间的全同性导致要求和的态数目上变少了，或者说能级的简并度其实也相应的减少了，各种计数法是统计力学中格外重要也比较麻烦的一点。
 	
 	\subsection{产生湮灭算符}
 	\subsubsection{巨希尔伯特空间（Fock空间）}
@@ -4049,7 +4053,7 @@
 	这里注意$b$都是加在最左边，在这样的顺序要求下，任何一个$N$粒子态都可以从真空态生成：
 	\begin{equation}
 	\boxed{
-		\ket{N;b^\alpha b^\beta\cdots b^\nu}=\frac{1}{\sqrt{N}}a^\dagger(b^\alpha)a^\dagger(b^\beta)\cdots a^\dagger(b^\nu)
+		\ket{N;b^\alpha b^\beta\cdots b^\nu}=\frac{1}{\sqrt{N}}a^\dagger(b^\alpha)a^\dagger(b^\beta)\cdots a^\dagger(b^\nu)\ket{0}
 		}
 	\end{equation}
 	
@@ -4065,11 +4069,12 @@
 	
 	对\ref{eq:5.50}两边同时求厄米共轭我们可以得到$a(b)$算符左作用的定义。
 	\begin{equation}
+		\label{eq:5.53}
 		\begin{aligned}
 			&\bra{0}a(b)=\sqrt{1}\bra{1;b}\\
-			&a\bra{1;b^\alpha}a(b=\sqrt{2}\bra{1;bb^\alpha}\\
+			&\bra{1;b^\alpha}a(b)=\sqrt{2}\bra{1;bb^\alpha}\\
 			&\vdots\\
-			&\bra{N;b^\alpha b^\beta\cdots b^\nu}a(b=\sqrt{N+1}\bra{N+1;bb^\alpha b^\beta\cdots b^\nu}\\
+			&\bra{N;b^\alpha b^\beta\cdots b^\nu}a(b)=\sqrt{N+1}\bra{N+1;bb^\alpha b^\beta\cdots b^\nu}\\
 		\end{aligned}
 	\end{equation}
 	同样可以得到对易关系：
@@ -4115,7 +4120,7 @@
 	不难计算发现：
 	\begin{equation}
 		\begin{aligned}
-			&\hat{N}(b)\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}=\left[\sum_{\mu=\alpha}^\nu \delta(b-b^\mu)\right]\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}
+			&\hat{N}(b)\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}=\left[\sum_{\mu=\alpha}^\nu \delta(b-b^\mu)\right]\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}\\
 			&\hat{N}\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}=N\ket{N;b^{\alpha}b^{\beta}\cdots b^{\nu}}
 		\end{aligned}
 	\end{equation}
@@ -4130,8 +4135,134 @@
 		\end{aligned}
 	\end{equation}
 	\subsubsection{算符的二次量子化形式}
+	现在我们尝试将力学量算符用产生湮灭算符进行改写。$N$粒子体系的物理量可以分成单体算符$g_i^{(1)}$，比如单粒子动量$p_i^2/2m$；还有二体算符$g_{ij}^{(2)}$，涉及到两个粒子之间的相互作用，比如相互作用势$V(|\mathbf{r}_i-\mathbf{r}_j|)$，显然，由于全同性，$g_{ij}^{(2)}=g_{ji}^{(2)}$；另外还有三体算符$g_{ijk}^{(3)}$，对于三个指标都是对称的。所以力学量可以一般的写为：
+	\begin{equation}
+		G=\sum_{i=1}^N g_i^{(2)}+\frac{1}{2!}\sum_{i=1}^N\sum_{j=1,j\neq i}^N g^{(2)}_{ij}+\frac{1}{3!}\sum_{i=1}^N\sum_{j=1}^N\sum_{k=1,k\neq j\neq i}^N g^{(3)}_{ijk}+\cdots
+	\end{equation}
+	
+	但是注意，我们这里所说$g_{ij\cdots}^{(n)}$的指标具有对称性是对绝大多数情况，并不是绝对的。比如$\mathbf{L}_i\cdot\mathbf{L}_j$角动量之间的耦合也是二体算符，但是你这个时候不能说$g_{ij}=g_{ji}$，除非它们以和的形式整体出现。这个时候由于指标对称带来的$1/n!$因子就不能要了。
+	
+	我们假定$G$是$\mathcal{R}_N$中的算符，现在将$\mathcal{R}_N$中的完备性关系\ref{eq:5.49}作用于$G$两侧得到：
+	\begin{equation}
+		\label{eq:5.62}
+		\begin{aligned}
+			G=&\int \mathrm{d}b^{\alpha^\prime}\int \mathrm{d}b^{\beta^\prime}\cdots\int \mathrm{d}b^{\nu^\prime}\int \mathrm{d}b^\alpha\int \mathrm{d}b^\beta\cdots\int \mathrm{d}b^\nu
+			\ket{N;b^{\alpha^\prime} b^{\beta^\prime}\cdots b^{\nu^\prime}}\\
+			&\times\braket{N;b^{\alpha^\prime} b^{\beta^\prime}\cdots b^{\nu^\prime}|G|N;b^\alpha b^\beta\cdots b^\nu}\bra{N;b^\alpha b^\beta\cdots b^\nu}\\
+			=&\frac{1}{N!}\int \mathrm{d}b^{\alpha^\prime}\int \mathrm{d}b^{\beta^\prime}\cdots\int \mathrm{d}b^{\nu^\prime}\int \mathrm{d}b^\alpha\int \mathrm{d}b^\beta\cdots\int \mathrm{d}b^\nu\\
+			&\times a^\dagger(b^{\alpha^\prime})a^\dagger(b^{\beta^\prime})\cdots a^\dagger(b^{\nu^\prime})\ket{0}\braket{N;b^{\alpha^\prime}b^{\beta^\prime}\cdots b^{\nu^\prime}|G|N;b^{\alpha}b^{\beta}\cdots b^{\nu}}\\
+			&\times\bra{0} a(b^\nu)\cdots a(b^\beta)a(b^\alpha)
+		\end{aligned}
+	\end{equation}
+	首先是单体算符项：
+	\begin{equation}
+		\label{eq:5.63}
+		\begin{aligned}
+			&\braket{N;b^{\alpha^\prime}b^{\beta^\prime}\cdots b^{\nu^\prime}|\sum_i{g_i^{(1)}}|N;b^{\alpha}b^{\beta}\cdots b^{\nu}}\\
+			=&\frac{1}{(N!)^2}\sum_{P}\sum_{P^\prime}\varepsilon^{\mathcal{P}+\mathcal{P}^\prime}\hat{P}\hat{P}^\prime\Big[\sideset{_1}{_1}{\mathop{\langle b^{\alpha^\prime}|g^{(1)}_1|b^\alpha\rangle}}\sideset{_2}{_2}{\mathop{\langle b^{\beta^\prime}|b^\beta\rangle}}\cdots\sideset{_N}{_N}{\mathop{\langle b^{\nu^\prime}|b^\nu\rangle}}\\
+			&+\sideset{_1}{_1}{\mathop{\langle b^{\alpha^\prime}|b^\alpha\rangle}}\sideset{_2}{_2}{\mathop{\langle b^{\beta^\prime}|g^{(1)}_2|b^\beta\rangle}}\cdots\sideset{_N}{_N}{\mathop{\langle b^{\nu^\prime}|b^\nu\rangle}}+\cdots\\	
+			&+\sideset{_1}{_1}{\mathop{\langle b^{\alpha^\prime}|b^\alpha\rangle}}\sideset{_2}{_2}{\mathop{\langle b^{\beta^\prime}|b^\beta\rangle}}\cdots\sideset{_N}{_N}{\mathop{\langle b^{\nu^\prime}|g^{(1)}_N|b^\nu\rangle}}\Big]
+		\end{aligned}
+	\end{equation}
+	
+	现在考虑$P,P^\prime$排列，我们采取下标不动，$\{b\}$之间排列的观点。显然在积分的意义下每种排列后，括号内的积分值最多相差一个负号。注意到$\ref{eq:5.62}$还涉及到$a(b^\alpha)\cdots$，而这些产生湮灭算符在积分计算时也要一起排列，由于反对易消除了负号的差异。比如考虑$b^\alpha\leftrightarrow b^\beta$，这个奇置换会带来一个负号，而积分时由于$b^\alpha b^\beta$相当于哑指标，我们将其对调，随之$a(b^\alpha)a^(b^\beta)\leftrightarrow a^(b^\beta)a(b^\alpha)$，为了还原到与\ref{eq:5.63}，即未对调前一致的形式，湮灭算符之间的反对易性又会带来一个负号，最终这些排列得到的$(N!)^2$个项之间完全一致。
+	
+	再者，\ref{eq:5.63}中括号内的$N$项在积分后也是相等的，因为粒子全同，所以单粒子算符对于每个粒子而言地位都是相同的。同理，对于两体算符，我们也会得到类似于\ref{eq:5.63}的式子，其中括号内有$N(N-1)$项，它们积分后仍然是相同的。最终我们可以得到$G$的表达式为：
+	\begin{equation}
+		\label{eq:5.64}
+		\begin{aligned}
+			G=&\frac{1}{N!}\iint\cdots \int \mathrm{d}b^{\alpha^\prime} \mathrm{d}b^{\beta^\prime}\cdots\ \mathrm{d}b^{\nu^\prime}\iint \cdots\int\mathrm{d}b^\alpha \mathrm{d}b^\beta\cdots \mathrm{d}b^\nu\\
+			&\times a^\dagger(b^{\alpha^\prime})a^\dagger(b^{\beta^\prime})\cdots a^\dagger(b^{\nu^\prime})\ket{0}\Big[\\
+			&+N\braket{b^{\alpha^\prime}|g^{(1)}|b^\alpha}\delta(b^{\beta^\prime}-b^\beta)\delta(b^{\gamma^\prime}-b^\gamma)\cdots\delta(b^{\nu^\prime}-b^\nu)\\
+			&+\frac{N(N-1)}{2!}(b^{\alpha^\prime }b^{\beta^\prime}|g^{(2)}|b^\alpha b^\beta)\delta(b^{\gamma^\prime}-b^\gamma)\cdots\delta(b^{\nu^\prime}-b^\nu)\\
+			&+\frac{N(N-1)(N-2)}{3!}(b^{\alpha^\prime }b^{\beta^\prime}b^{\gamma^\prime}|g^{(2)}|b^\alpha b^\beta b^\gamma)\cdots\delta(b^{\nu^\prime}-b^\nu)\\
+			&+\cdots\Big]\times\bra{0}a(b^\nu)\cdots a(b^\beta)a(b^\alpha)
+		\end{aligned}
+	\end{equation}
+	其中$|b^\alpha b^\beta)\equiv\ket{b^\alpha}_1\ket{b_\beta}_2$表示未对称化的基矢，那么
+	\[(b^{\alpha^\prime }b^{\beta^\prime}|g^{(2)}|b^\alpha b^\beta)\equiv \sideset{_i}{}{\mathop{\langle b^{\alpha^\prime}|}}
+	\sideset{_j}{_i}{\mathop{\langle b^{\beta^\prime}|g^{(2)}_{ij}|b^\alpha\rangle}}
+	\sideset{}{_j}{\mathop{| b^{\alpha^\prime}\rangle}}\]其中$i,j$选取是任意的。
+	
+	下面进一步简化\ref{eq:5.64}，以单粒子那一项为例，把所有的$\delta$函数积分之后根据\ref{eq:5.50}和\ref{eq:5.53}，我们会得到一个$\mathcal{R}_{N-1}$中的完全性关系，其它多体算符类似。注意到系数之间的变化后我们得到：
+	\begin{equation}
+		\boxed{
+		\begin{aligned}
+			G=&\iint \mathrm{d}b^{\alpha^\prime} \mathrm{d}b^{\alpha}a^\dagger(b^{\alpha^\prime})\braket{b^{\alpha^\prime}|g^{(1)}|b^{\alpha}}\\
+			&+\frac{1}{2!}\iint\mathrm{d}b^{\alpha^\prime} \mathrm{d}b^{\beta^\prime}\iint\mathrm{d}b^{\alpha} \mathrm{d}b^{\beta}a^\dagger(b^{\alpha^\prime})a^\dagger(b^{\beta^\prime})(b^{\alpha^\prime }b^{\beta^\prime}|g^{(2)}|b^\alpha b^\beta)a(b^\beta)a(b^\alpha) \\
+			&+\frac{1}{3!}\iiint \mathrm{d}b^{\alpha^\prime} \mathrm{d}b^{\beta^\prime}\mathrm{d}b^{\gamma^\prime}\iiint \mathrm{d}b^{\alpha} \mathrm{d}b^{\beta}\mathrm{d}b^{\gamma}a^\dagger(b^{\alpha^\prime})a^\dagger(b^{\beta^\prime})a^\dagger(b^{\gamma^\prime})\\
+			&\times(b^{\alpha^\prime }b^{\beta^\prime}b^{\gamma^\prime}|g^{(3)}|b^\alpha b^\beta b^\gamma)a(b^\gamma)a(b^\beta)a(b^\alpha)+\cdots
+		\end{aligned}
+	}
+	\end{equation}
+	
+	值得注意的是，上式可以推出$[G,N]=0$，其中$G$可以是哈密顿量，这也说明了非相对论量子体系下我们考虑的都是粒子数守恒的系统，态矢量演化始终不会跑出$\mathcal{R}_N$。
 	
 	\subsubsection{实例：位置表象}
+	无论如何，我们总是可以选取CSCO为位置或动量表象来描述体系，这里仅介绍位置表象，动量表象与其只差个傅里叶变换。
+	
+	在这一表象下，对称化基底为$\ket{N;b^\alpha b^\beta,\cdots,b^\nu}$，产生算符我们用$\mathbf{\psi}^\dagger(x)$表示。所有的那些产生湮灭算符之间的对易关系，以及产生算符对基矢的作用，只要在前面讨论中进行替换$b\to x,a\to\mathbf{\psi}$即可。这里我们重要讲一下B表象到位置表象之间的变换。
+	
+	利用$\mathcal{R}_{N+1}$中的完全性关系，我们有：
+	\begin{equation}
+		\begin{aligned}
+			&a^\dagger(b)\ket{N;b^\alpha b^\beta\cdots b^\nu}=\sqrt{N+1}\ket{N+1;bb^\alpha b^\beta\cdots b^\nu}\\
+			=&\sqrt{N+1}\int \mathrm{d}x\int \mathrm{d}x^{\alpha^\prime}\int \mathrm{d}x^{\beta^\prime}\cdots\int \mathrm{d}x^{\nu^\prime}\ket{N+1;xx^{\alpha^\prime} x^{\beta^\prime}\cdots x^{\nu^\prime}}\\
+			&\times\braket{N+1;xx^{\alpha^\prime} x^{\beta^\prime}\cdots x^{\nu^\prime}|N+1;bb^\alpha b^\beta\cdots b^\nu}\\
+			=&\frac{1}{N+1}\int \mathrm{d}x\int \mathrm{d}x^{\alpha^\prime}\int \mathrm{d}x^{\beta^\prime}\cdots\int \mathrm{d}x^{\nu^\prime}\mathbf{\psi}^\dagger(x)\ket{N;x^{\alpha^\prime} x^{\beta^\prime}\cdots x^{\nu^\prime}}\\
+			&\times \left[\braket{x|b}\braket{N;x^{\alpha^\prime} x^{\beta^\prime}\cdots x^{\nu^\prime}|N;b^\alpha b^\beta\cdots b^\nu}\right.\\
+			&+\varepsilon\braket{x^{\alpha^\prime}|b}\braket{N;x x^{\beta^\prime}\cdots x^{\nu^\prime}|N;bb^\alpha b^\beta\cdots b^\nu}\\
+			&\left.+\cdots+\varepsilon^{N-1}\braket{x^{\nu^\prime}|b}\braket{N;xx^{\alpha^\prime} x^{\beta^\prime}\cdots x^{\mu^\prime}|N;bb^\alpha b^\beta \cdots b^\nu}\right]\\
+		\end{aligned}
+	\end{equation}
+	注意到，$\mathbf{\psi}^\dagger(x)\ket{N;x^{\alpha^\prime} x^{\beta^\prime}\cdots x^{\nu^\prime}}=\varepsilon \mathbf{\psi}^\dagger(x^{\alpha^\prime})\ket{N;xx^{\beta^\prime}\cdots x^{\nu^\prime}} =\cdots$，这里$\varepsilon$出现的原因是我们定义产生算符时要求新的粒子统一写在最左边。利用完全性关系有：
+	\begin{equation}
+		\begin{aligned}
+			&a^\dagger(b)\ket{N;b^\alpha b^\beta\cdots b^\nu}\\
+			=&\frac{1}{N+1}\left[\int\mathrm{d}x\braket{x|b}\psi^\dagger(x)+\int\mathrm{d}x^{\alpha^\prime}\braket{x^{\alpha^\prime}|b}\psi^\dagger(x^{\alpha^\prime})\right.\\
+			&\left.+\cdots+\int\mathrm{d}x^{\nu^\prime}\braket{x^{\nu^\prime}|b}\psi^\dagger(x^{\nu^\prime})
+			\right]\ket{N;b^\alpha b^\beta\cdots b^\nu}\\
+			=&\int\mathrm{d}x\braket{x|b}\psi^\dagger(x)\ket{N;b^\alpha b^\beta\cdots b^\nu}
+		\end{aligned}
+	\end{equation}
+	由于$\int\mathrm{d}x\braket{x|b}\psi^\dagger(x)$是任意的，我们得到：
+	\begin{equation}
+		a^\dagger(b)=\int\mathrm{d}x\braket{x|b}\psi^\dagger(x)
+	\end{equation}
+	
+	完全由单粒子表象的矩阵元决定，把$a^\dagger(b),\psi^\dagger(x)$看作是不同表象下的波函数，上式产生算符之间的变换关系竟然与不同表象之间波函数的变换形式完全一致！本章最后我们会讨论这个巧合。
+	
+	\subsubsection{运动方程}
+	前面我们都是在薛定谔绘景下进行讨论，现在切换到海森堡绘景\footnote{略去角标$H$，用算符是否显含时间来区分两大绘景。关于海森堡绘景下算符与薛定谔绘景下的联系见$\S 6.6$。}，考虑算符随时间的演化。根据海森堡方程，我们有：
+	\begin{equation}
+		i \hbar \frac{\partial}{\partial t}\psi(x,t)=\left[\psi(x,t),H\right]
+	\end{equation}
+	根据上一小节的结论，我们可以用$\psi(x,t)$来表示出$H$：
+	\begin{equation}
+		\begin{aligned}
+		H^H=H^S=&\int \mathrm{d}x\psi^\dagger(x,t)\left(\frac{\hbar^2}{2m}\nabla^2+V(x)\right)\psi(x,t)\\
+		&+\frac{1}{2}\iint \mathrm{d}x^\prime dx\psi^\dagger(x^\prime,t)\psi^\dagger(x,t)V(x^\prime,x)\psi(x,t)\psi(x^\prime,t)	
+		\end{aligned}
+	\end{equation}
+	代入海森堡方程得到：
+	\begin{equation}
+		i\hbar\frac{\partial}{\partial t}\psi(x,t)=)\left(\frac{\hbar^2}{2m}\nabla^2+V(x)\right)\psi(x,t)+\left[\int \mathrm{d}y \psi^\dagger(y,t)V(x,y)\psi(y,t)\right]\psi(x,t)
+	\end{equation}
+	
+	当$V=0$时，方程形式上与薛定谔方程一致，但注意这里$\psi$并不是波函数，而是算符。本章最后我们会继续讨论此问题。
+	
+	\subsection{离散本征值}
+	
+	\subsection{占有数表象}
+	kerson huang书中对归一化的讨论
+	
+	\subsection{Hatree-Fock方法（施工中）}
+	
+	\subsection{*密度泛函理论简介（施工中）}
+	
+	\subsection{二次量子化与量子场论}
+	量子化薛定谔场
+	
 	
     \chapter{量子力学中的对称性}
     经典力学中我们曾利用拉格朗日量的不变性讨论过了经典力学中的守恒律与对称性之间的关系, 这里我们再来量子力学中探讨一下。
@@ -7835,6 +7966,7 @@
 	\[f_{\ell}(k)=\frac{S_\ell(k)-1)}{2ik}\Rightarrow f_{\ell=0}(k)=\frac{1}{-\kappa-i k}\]
 	
 	\subsubsection{共振散射}
+	参照曾书进行补充
 	
 	
 	\subsection{自旋$\frac{1}{2}$情况}
@@ -7936,10 +8068,10 @@
 	
 	
 	\chapter{*再论量子力学中的对称性（施工中）}
-	本章使用群论这一数学工具严格且完整地讨论对称性在量子力学中的体现。
+	本章使用群论这一数学工具严格且完整地讨论对称性在量子力学中的体现。主要参考喀兴林。下学期估计也补不完，寒假补这个，先把前面对称性的部分修改一下
 	
 	\chapter{量子信息与量子计算简介（施工中）}
-	这又是一个超级大坑
+	这又是一个超级大坑，上完一学期量子信息课之后搞个简短介绍，只介绍一些中心定理和算法
 	
 	
     \include{appendix.tex} 
