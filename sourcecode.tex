@@ -3598,7 +3598,7 @@
     \end{proposition}
     我们之前说的$\psi_\pm$的对称化构造是上述假设的特殊形式。
 
-    \section{原子轨道}
+    \section{原子轨道近似求解}
     我们现在来考虑一个一般的中性原子, 原子数为$Z$。注意, 由于核外电子质量远小于原子核的质量, 所以我们下面的讨论中可以认为原子核就是不动的, 电子受一个稳定的
     有心势场作用。我们写下核外电子体系的哈密顿量：
     \begin{equation}
@@ -3687,7 +3687,7 @@
 
     所以很多时候排布式只能依靠经验规则写出来, 再经过实验验证, 确实因为电子之间的相互作用给我们求解带来了不少麻烦。至于排布式具体怎么写, 这个化学课上已经讲过, 然后我们再
     根据上面的量子力学背景分析就好了。
-    \section{固体}
+    \section{固体量子模型简介}
     中学就学过, 金属能导电是因为其中有些电子脱离了原子的束缚成为\textbf{自由电子}, 这些电子因为电场的作用在固体结构种移动便形成了电流。我们下面就是要用两种不同的模型基于量子力学的
     原理去研究固体中电子的运动。它们只是固体理论中最最基础的理论。
 
@@ -4252,6 +4252,39 @@
 	当$V=0$时，方程形式上与薛定谔方程一致，但注意这里$\psi$并不是波函数，而是算符。本章最后我们会继续讨论此问题。
 	
 	\subsection{离散本征值}
+	当体系只有束缚态时，二次量子化的理论形式还可以大大简化，首先我们介绍箱归一化方法，这个trick及其有用，可以把许多连续谱当成离散谱来处理。
+	\subsubsection{箱归一化}
+	首先考虑自由粒子，其能量本征态是连续的$\ket{\mathbf{p}}\sim\exp(\mathrm{i}\frac{\mathbf{p}}{\hbar}\cdot \mathbf{r})$，其只能做$\delta$意义下的归一化，真实物理态是叠加而成的波包。无法归一化的关键原因是我们考虑的物理空间无限大\footnote{量子场论中类似的发散称为\uwave{红外发散}}，假设现在我们考虑粒子被束缚在体积为$V$，边长为$L$的立方体（箱子）中，而且我们赋予波函数周期性边界条件，即$\left.\psi\right|_{\text{left-side}}=\left.\psi\right|_{\text{right-side}},\cdots$。\footnote{这样子取边界条件才能让$\hat{\mathbf{p}}=-i\hbar\nabla$在这有限的范围内是厄米算符}显然这个时候就可以对动量本征态进行归一化了：
+	\begin{equation}
+		\psi_\mathbf{p}(\mathbf{r})=\frac{1}{\sqrt{V}}\mathrm{e}^{\mathrm{i}\frac{\mathbf{p}_\mathbf{n}}{\hbar}\cdot \mathbf{r}}
+	\end{equation}
+	而且本征值变为离散的：
+	\[\mathbf{p}_\mathbf{n}=\frac{2\pi\hbar}{L}\mathbf{n}	,\quad\mathbf{n}=(n_x,n_y,n_z)\in\mathbb{Z}^3\]
+	然后就可以按照离散谱情况进行处理，最后只需要在结果中取$V\to \infty$就行了。
+	
+	还要注意在取极限时求和要跟着变成积分：
+	\begin{equation}
+		\begin{aligned}
+			\sum_\mathbf{n}f(\mathbf{p}_\mathbf{n})&=\frac{V}{h^3}\sum_\mathbf{n}f(\mathbf{p}_\mathbf{n})\cdot\frac{h}{L}\cdot\frac{h}{L}\cdot\frac{h}{L}\\
+			&=\frac{V}{h^3}\sum_{n_x}\sum_{n_y}\sum_{n_z}f(\mathbf{p}_\mathbf{n})\cdot\Delta p_z\Delta p_y\Delta p_x\\
+			&\to\frac{V}{h^3}\iiint_\infty \mathrm{d}p_x \mathrm{d}p_y \mathrm{d}p_zf(\mathbf{p})
+		\end{aligned}
+	\end{equation}
+	最后我们利用了黎曼积分定义，所以我们最终需要做替换：
+	\begin{equation}
+			\sum_\mathbf{n}\to\frac{V}{h^3}\iiint_\infty
+	\end{equation}
+	在量子场论中我们有时候还要把时间也考虑进来一起作箱归一化，和这里是一样的思想。这里考虑的是自由粒子，对于二体系统，哈密顿量为：
+	\[H=-\frac{\hbar^2}{2m}\left(\nabla_1^2+\nabla_2^2\right)+V(|\mathbf{r}_1-\mathbf{r}_2|)\]
+	做变量替换：
+	\[\mathbf{R}=\frac{1}{2}\left(\mathbf{r}_1+\mathbf{r}_2\right),\mathbf{r}=\mathbf{r}_1-\mathbf{r}_2\]
+	哈密顿量变为：
+	\[H=-\frac{\hbar^2}{2m}\left(\nabla_\mathbf{R}^2+2\nabla_\mathbf{r}^2\right)+V(r)\]
+	现在$\mathbf{R}$与$\mathbf{r}$完全分离，$\mathbf{R}$部分是自由粒子，解是平面波形式，而体系的势能项全部由$\mathbf{r}$承担。最后波函数可以用箱归一化手段写为：
+	\[\Psi_{\mathbf{P}_\mathbf{n},\alpha}(\mathbf{R},\mathbf{r})=\frac{1}{\sqrt{V}}\exp(\mathrm{i}\frac{\mathbf{P}_\mathbf{n})}\cdot\psi_\alpha(\mathbf{r})\]
+	最后在结果中取$V\to\infty$。
+	
+	\subsubsection{离散本征值}
 	
 	\subsection{占有数表象}
 	kerson huang书中对归一化的讨论
@@ -5378,10 +5411,6 @@
 	
 	费曼路径积分来解决一般的量子力学问题那简直是杀鸡用牛刀，不过量子场论没了它还是真不行。
 	
-	\subsection{再谈AB效应（施工中）}
-	前面我们第四章纯粹使用薛定谔方程和规范不变性解释了这个问题，而这个问题考虑的是电子走两个不同的路径，最终结果根据路径积分天然的就应该是这两个路径的叠加，我们再用路径积分讨论一下两条路径之间的干涉效应。
-	
-	曾谨言书，有空再补
 	
 	
 	
@@ -6363,7 +6392,7 @@
         \label{fig:8.2}
     \end{figure}
 
-    
+    \section{Born-Oppenheimer近似（施工中）}
 
 
 
