@@ -805,8 +805,13 @@
     	\boxed{\frac{1}{\pi}\int\ket{z}\bra{z}\mathrm{d}^2z}
     \end{equation}
     \begin{proof}
-    	只用证明$\frac{1}{\pi}\int\braket{\psi|z}\bra{z|\varphi}\mathrm{d}^2z=\braket{\psi|\varphi}$即可
+    	只用证明$\frac{1}{\pi}\int\braket{\psi|z}\bra{z|\varphi}\mathrm{d}^2z=\braket{\psi|\varphi}$即可。
     	tips:利用$\ket{n}$的完全性以及积分公式$\int_0^\infty r^{k}\mathrm{e}^{-r}\mathrm{d}r=k!$\qed
+    \end{proof}
+    $\bullet$\textbf{相干态使得海森堡不确定性关系取等号}：
+    \[\Delta x\Delta p=\frac{\hbar}{2}\]
+    \begin{proof}
+    	直接代入相干态波函数计算即可。\qed
     \end{proof}
     \subsubsection{相干态表象}
     既然相干态是归一完备的（但不正交），那么就可以作为Hilbert空间的一组基底将态矢量展开：
@@ -2768,6 +2773,12 @@
         \chi=\left(\frac{a+b}{\sqrt{2}}\right) \chi_{+}^{(x)}+\left(\frac{a-b}{\sqrt{2}}\right) \chi_{-}^{(x)}
     \end{equation}
     根据广义概率诠释, 有$|a+b|^2/2$的概率测得$\hbar/2$, 有$|a-b|^2/2$的概率测得$-\hbar/2$.
+    
+    更一般的，对于任意方向的自旋$\mathbf{S}\dot\hat{\mathbf{n}}$，我们可以根据Pauli矩阵写出其在$\mathcal{S}_z$表象下的矩阵，不难证明其本征值为$\pm\frac{\hbar}{2}$，对应的本征矢为：
+    \[
+    	\cos\frac{\beta}{2}\chi_++\sin\frac{\beta}{2}\mathrm{e}^{i\alpha}\chi_-,\quad
+    	\sin\frac{\beta}{2}\chi_+-\cos\frac{\beta}{2}\mathrm{e}^{i\alpha}\chi_-
+    \]
 
     \subsection{可观测量的相容性}
     其实这部分内容在讲不确定性原理的时候就应该讲到了, 但是现在我们将它放到自旋-$\frac{1}{2}$系统中来重新思考一下, 当然也只是一个简单的探讨。
@@ -4389,11 +4400,13 @@
     \begin{define}{算符的平移变换}
         我们定义,算符$\hat{Q}$平移后的算符$\hat{Q}\prime$由下式给出：
         \begin{equation}
-            \Braket{\psi^\prime|\hat Q^\prime|\psi^\prime}=\Braket{\psi|\hat Q|\psi}
+        	\label{eq:6.9}
+        	\int \mathrm{d}^3r\psi^{\prime*}\hat{Q}\psi^{\prime}=\int \mathrm{d}^3r\psi\hat{Q}^\prime\psi
         \end{equation}
-        其中$\ket{\psi^\prime}\equiv\hat{T}(a)\ket{\psi}$。上面的定义式也可以写成下面更便于计算的等价形式：\footnote{{\itshape Griffiths}书中的定义和这里正好是相反的，但我在查阅大量书籍之后接受了这种更加主流的定义。}
+        其中$\ket{\psi^\prime}\equiv\hat{T}(a)\ket{\psi}$。上面的定义式也可以写成下面更便于计算的等价形式：
+%        \footnote{{\itshape Griffiths}书中的定义和这里正好是相反的，但我在查阅大量书籍之后接受了这种更加主流的定义。}
         \begin{equation}
-            \boxed{\hat{Q}^{\prime}=\hat{T}\hat{Q} \hat{T}^{\dagger} }
+            \boxed{\hat{Q}^{\prime}=\hat{T}^{\dagger}\hat{Q} \hat{T} }
         \end{equation}
         这就是一个幺正变换。
     \end{define}
@@ -4405,8 +4418,12 @@
         \hat{Q}^\prime(\hat x,\hat p)=\hat{Q}(\hat x+a,\hat p)
     \end{equation}
     
-    这也是非常符合常理的, 我们说平移可以有两种观点, 一种是主动观点, 就是参考系不动, 把整个系统平移；二是系统不动, 把参考系相对系统向相反方向平移。这两种观点是等价的,
-    无论使用那种观点, 最终结果都是把所有的$x$换成$x-a$, $\hat{Q}^\prime$就是平移后系统的力学量算符。
+    上面的定义有几点需要注意，首先我们并没有采用Dirac符号把\ref{eq:6.9}写成：
+    \[\Braket{\psi^\prime|\hat Q|\psi^\prime}=\Braket{\psi|\hat Q^\prime|\psi}\]
+    因为我们想突出\textbf{在本章讨论对称性，这些算符都是直接对态函数的作用，是波函数空间上的算符，而不是希尔伯特空间上的算符}。其实也就是所谓的被动观点，系统不动，参考系进行变换。后文中为了简化式子表达会使用Dirac符号，但始终记住这些算符都是对波函数的算符，或者Dirac符号直接理解为波函数，从而正确看待这些等式。其次，新旧算符的变换关系是在被动观点下写的，$\S12$中我们会重新使用主动观点来讨论对称性，虽不如波函数方法讨论具象，但是有助于引入群论方法进行分析，主动观点和被动观点新旧算符的变换关系有所不同需要注意。
+    
+%    这也是非常符合常理的, 我们说平移可以有两种观点, 一种是主动观点, 就是参考系不动, 把整个系统平移；二是系统不动, 把参考系相对系统向相反方向平移。这两种观点是等价的,
+%    无论使用那种观点, 最终结果都是把所有的$x$换成$x-a$, $\hat{Q}^\prime$就是平移后系统的力学量算符。
 
 %    我们现在初步解释一下这样定义的原因, 重点在于系统变换前后薛定谔方程的变换。注意, 我们说平移一个系统, 应当认为粒子和势场它们这个整体构成了一个系统, 所以平移应当是粒子和势场整体的平移。如果你对这种主动观点保有疑问, 那就使用被动观点,
 %    认为平移就是坐标系平移下。
@@ -4430,7 +4447,7 @@
     
     哈密顿量唯一决定系统演化，那么系统具有某种对称性就是在说哈密顿量在对应的幺正变换下保持不变：
     \begin{equation}
-        \hat{H}=\hat{T}\hat{H}\hat{T}^\dagger
+        \hat{H}=\hat{T}^\dagger\hat{H}\hat{T}
     \end{equation}
     利用$\hat{T}$的幺正性我们得到:
     \begin{equation}

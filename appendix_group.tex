@@ -1641,7 +1641,7 @@ $\mathcal{S}$。与其说函数空间中的函数$\Psi$是Euclid空间中的向�
 	\end{array}} \right)
 	\end{aligned}
 \end{equation}
-不同的参数化方式就会给出不同的表示，这里选取的是常用的$ZXZ$约定。
+不同的参数化方式就会给出不同的表示，这里选取的是常用的$ZXZ$约定和转动的主动观点。
 
 这些矩阵显然是所谓实向量空间上的等距同构$R^TR=\mathbbm{1}$，而且不改变空间手征$|R|=1$. 所以常常我们也直接称$SO(3)$群为满足上面条件的$3\times 3$矩阵群，英文直译就是特殊正交群。$SO(n)$顺势就可以推广为$n\times n$的特殊正交群，表征$\mathbbm{R}^n$中的转动。\footnote{不要想当然的以为$SO(n)$需要$n$个参数参数化，实际上需要确定$\mathbbm{R}^n$中的转动的参数个数为$n(n-1)/2$.}
 
@@ -1727,6 +1727,10 @@ $\mathbbm{R}^3$中的任意一个向量：
 		{{e^{ - i\left( {\psi  + \phi } \right)/2}}\cos \frac{\theta }{2}}&{i{e^{i\left( {\phi  - \psi } \right)/2}}\sin \frac{\theta }{2}} \\ 
 		{i{e^{ - i\left( {\phi  - \psi } \right)/2}}\sin \frac{\theta }{2}}&{{e^{i\left( {\psi  + \phi } \right)/2}}\cos \frac{\theta }{2}} 
 \end{array}} \right)\]
+另外对于旋转轴$\hat{\mathbf{n}}$，旋转角$\phi$：
+\[
+	\mathcal{U}=\exp\left(-\frac{i\phi}{2}\mathbf{\sigma}\cdot\hat{\mathbf{n}}\right)
+\]
 
 这个同态显然不能升级为同构，$u$和$-u$就对应着同一个$SO(3)$群元。严谨些，从同态核定理出发${I,-I}$显然是同态核，所以这个同态实际上是二对一的关系，常常称$SU(2)$是$SO(3)$的双覆盖。
 

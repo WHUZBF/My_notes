@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  7 SEP 2023 04:44
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2021/W32TeX) (preloaded format=xelatex 2021.9.12)  19 SEP 2023 21:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1961,7 +1961,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
 (Font)              scaled to size 12.045pt on input line 786.
 Package hyperref Info: bookmark level for unknown proof defaults to 0 on input 
 line 787.
- [21] [22] [23] [24]
+ [21] [22] [23] [24] [25]
 File: videos/wave_group/wave_group-0.png Graphic file (type bmp)
 <videos/wave_group/wave_group-0.png>
  <a0,fr0>
@@ -1976,11 +1976,11 @@ File: videos/wave_group/wave_group-3.png Graphic file (type bmp)
  <a0,fr3>
 File: videos/wave_group/wave_group-4.png Graphic file (type bmp)
 <videos/wave_group/wave_group-4.png>
- <a0,fr4>
+
+<a0,fr4>
 File: videos/wave_group/wave_group-5.png Graphic file (type bmp)
 <videos/wave_group/wave_group-5.png>
-
-<a0,fr5>
+ <a0,fr5>
 File: videos/wave_group/wave_group-6.png Graphic file (type bmp)
 <videos/wave_group/wave_group-6.png>
  <a0,fr6>
@@ -2001,11 +2001,11 @@ File: videos/wave_group/wave_group-11.png Graphic file (type bmp)
  <a0,fr11>
 File: videos/wave_group/wave_group-12.png Graphic file (type bmp)
 <videos/wave_group/wave_group-12.png>
- <a0,fr12>
+
+<a0,fr12>
 File: videos/wave_group/wave_group-13.png Graphic file (type bmp)
 <videos/wave_group/wave_group-13.png>
-
-<a0,fr13>
+ <a0,fr13>
 File: videos/wave_group/wave_group-14.png Graphic file (type bmp)
 <videos/wave_group/wave_group-14.png>
  <a0,fr14>
@@ -2023,11 +2023,11 @@ File: videos/wave_group/wave_group-18.png Graphic file (type bmp)
  <a0,fr18>
 File: videos/wave_group/wave_group-19.png Graphic file (type bmp)
 <videos/wave_group/wave_group-19.png>
- <a0,fr19>
+
+<a0,fr19>
 File: videos/wave_group/wave_group-20.png Graphic file (type bmp)
 <videos/wave_group/wave_group-20.png>
-
-<a0,fr20>
+ <a0,fr20>
 File: videos/wave_group/wave_group-21.png Graphic file (type bmp)
 <videos/wave_group/wave_group-21.png>
  <a0,fr21>
@@ -2045,11 +2045,11 @@ File: videos/wave_group/wave_group-25.png Graphic file (type bmp)
  <a0,fr25>
 File: videos/wave_group/wave_group-26.png Graphic file (type bmp)
 <videos/wave_group/wave_group-26.png>
- <a0,fr26>
+
+<a0,fr26>
 File: videos/wave_group/wave_group-27.png Graphic file (type bmp)
 <videos/wave_group/wave_group-27.png>
-
-<a0,fr27>
+ <a0,fr27>
 File: videos/wave_group/wave_group-28.png Graphic file (type bmp)
 <videos/wave_group/wave_group-28.png>
  <a0,fr28>
@@ -2067,11 +2067,11 @@ File: videos/wave_group/wave_group-32.png Graphic file (type bmp)
  <a0,fr32>
 File: videos/wave_group/wave_group-33.png Graphic file (type bmp)
 <videos/wave_group/wave_group-33.png>
- <a0,fr33>
+
+<a0,fr33>
 File: videos/wave_group/wave_group-34.png Graphic file (type bmp)
 <videos/wave_group/wave_group-34.png>
-
-<a0,fr34>
+ <a0,fr34>
 File: videos/wave_group/wave_group-35.png Graphic file (type bmp)
 <videos/wave_group/wave_group-35.png>
  <a0,fr35>
@@ -2089,11 +2089,11 @@ File: videos/wave_group/wave_group-39.png Graphic file (type bmp)
  <a0,fr39>
 File: videos/wave_group/wave_group-40.png Graphic file (type bmp)
 <videos/wave_group/wave_group-40.png>
- <a0,fr40>
+
+<a0,fr40>
 File: videos/wave_group/wave_group-41.png Graphic file (type bmp)
 <videos/wave_group/wave_group-41.png>
-
-<a0,fr41>
+ <a0,fr41>
 File: videos/wave_group/wave_group-42.png Graphic file (type bmp)
 <videos/wave_group/wave_group-42.png>
  <a0,fr42>
@@ -2111,11 +2111,11 @@ File: videos/wave_group/wave_group-46.png Graphic file (type bmp)
  <a0,fr46>
 File: videos/wave_group/wave_group-47.png Graphic file (type bmp)
 <videos/wave_group/wave_group-47.png>
- <a0,fr47>
+
+<a0,fr47>
 File: videos/wave_group/wave_group-48.png Graphic file (type bmp)
 <videos/wave_group/wave_group-48.png>
-
-<a0,fr48>
+ <a0,fr48>
 File: videos/wave_group/wave_group-49.png Graphic file (type bmp)
 <videos/wave_group/wave_group-49.png>
  <a0,fr49>
@@ -2133,11 +2133,11 @@ File: videos/wave_group/wave_group-53.png Graphic file (type bmp)
  <a0,fr53>
 File: videos/wave_group/wave_group-54.png Graphic file (type bmp)
 <videos/wave_group/wave_group-54.png>
- <a0,fr54>
+
+<a0,fr54>
 File: videos/wave_group/wave_group-55.png Graphic file (type bmp)
 <videos/wave_group/wave_group-55.png>
-
-<a0,fr55>
+ <a0,fr55>
 File: videos/wave_group/wave_group-56.png Graphic file (type bmp)
 <videos/wave_group/wave_group-56.png>
  <a0,fr56>
@@ -2155,11 +2155,11 @@ File: videos/wave_group/wave_group-60.png Graphic file (type bmp)
  <a0,fr60>
 File: videos/wave_group/wave_group-61.png Graphic file (type bmp)
 <videos/wave_group/wave_group-61.png>
- <a0,fr61>
+
+<a0,fr61>
 File: videos/wave_group/wave_group-62.png Graphic file (type bmp)
 <videos/wave_group/wave_group-62.png>
-
-<a0,fr62>
+ <a0,fr62>
 File: videos/wave_group/wave_group-63.png Graphic file (type bmp)
 <videos/wave_group/wave_group-63.png>
  <a0,fr63>
@@ -2177,11 +2177,11 @@ File: videos/wave_group/wave_group-67.png Graphic file (type bmp)
  <a0,fr67>
 File: videos/wave_group/wave_group-68.png Graphic file (type bmp)
 <videos/wave_group/wave_group-68.png>
- <a0,fr68>
+
+<a0,fr68>
 File: videos/wave_group/wave_group-69.png Graphic file (type bmp)
 <videos/wave_group/wave_group-69.png>
-
-<a0,fr69>
+ <a0,fr69>
 File: videos/wave_group/wave_group-70.png Graphic file (type bmp)
 <videos/wave_group/wave_group-70.png>
  <a0,fr70>
@@ -2199,11 +2199,11 @@ File: videos/wave_group/wave_group-74.png Graphic file (type bmp)
  <a0,fr74>
 File: videos/wave_group/wave_group-75.png Graphic file (type bmp)
 <videos/wave_group/wave_group-75.png>
- <a0,fr75>
+
+<a0,fr75>
 File: videos/wave_group/wave_group-76.png Graphic file (type bmp)
 <videos/wave_group/wave_group-76.png>
-
-<a0,fr76>
+ <a0,fr76>
 File: videos/wave_group/wave_group-77.png Graphic file (type bmp)
 <videos/wave_group/wave_group-77.png>
  <a0,fr77>
@@ -2221,11 +2221,11 @@ File: videos/wave_group/wave_group-81.png Graphic file (type bmp)
  <a0,fr81>
 File: videos/wave_group/wave_group-82.png Graphic file (type bmp)
 <videos/wave_group/wave_group-82.png>
- <a0,fr82>
+
+<a0,fr82>
 File: videos/wave_group/wave_group-83.png Graphic file (type bmp)
 <videos/wave_group/wave_group-83.png>
-
-<a0,fr83>
+ <a0,fr83>
 File: videos/wave_group/wave_group-84.png Graphic file (type bmp)
 <videos/wave_group/wave_group-84.png>
  <a0,fr84>
@@ -2243,11 +2243,11 @@ File: videos/wave_group/wave_group-88.png Graphic file (type bmp)
  <a0,fr88>
 File: videos/wave_group/wave_group-89.png Graphic file (type bmp)
 <videos/wave_group/wave_group-89.png>
- <a0,fr89>
+
+<a0,fr89>
 File: videos/wave_group/wave_group-90.png Graphic file (type bmp)
 <videos/wave_group/wave_group-90.png>
-
-<a0,fr90>
+ <a0,fr90>
 File: videos/wave_group/wave_group-91.png Graphic file (type bmp)
 <videos/wave_group/wave_group-91.png>
  <a0,fr91>
@@ -2265,11 +2265,11 @@ File: videos/wave_group/wave_group-95.png Graphic file (type bmp)
  <a0,fr95>
 File: videos/wave_group/wave_group-96.png Graphic file (type bmp)
 <videos/wave_group/wave_group-96.png>
- <a0,fr96>
+
+<a0,fr96>
 File: videos/wave_group/wave_group-97.png Graphic file (type bmp)
 <videos/wave_group/wave_group-97.png>
-
-<a0,fr97>
+ <a0,fr97>
 File: videos/wave_group/wave_group-98.png Graphic file (type bmp)
 <videos/wave_group/wave_group-98.png>
  <a0,fr98>
@@ -2287,11 +2287,11 @@ File: videos/wave_group/wave_group-102.png Graphic file (type bmp)
  <a0,fr102>
 File: videos/wave_group/wave_group-103.png Graphic file (type bmp)
 <videos/wave_group/wave_group-103.png>
- <a0,fr103>
+
+<a0,fr103>
 File: videos/wave_group/wave_group-104.png Graphic file (type bmp)
 <videos/wave_group/wave_group-104.png>
-
-<a0,fr104>
+ <a0,fr104>
 File: videos/wave_group/wave_group-105.png Graphic file (type bmp)
 <videos/wave_group/wave_group-105.png>
  <a0,fr105>
@@ -2309,11 +2309,11 @@ File: videos/wave_group/wave_group-109.png Graphic file (type bmp)
  <a0,fr109>
 File: videos/wave_group/wave_group-110.png Graphic file (type bmp)
 <videos/wave_group/wave_group-110.png>
- <a0,fr110>
+
+<a0,fr110>
 File: videos/wave_group/wave_group-111.png Graphic file (type bmp)
 <videos/wave_group/wave_group-111.png>
-
-<a0,fr111>
+ <a0,fr111>
 File: videos/wave_group/wave_group-112.png Graphic file (type bmp)
 <videos/wave_group/wave_group-112.png>
  <a0,fr112>
@@ -2331,11 +2331,11 @@ File: videos/wave_group/wave_group-116.png Graphic file (type bmp)
  <a0,fr116>
 File: videos/wave_group/wave_group-117.png Graphic file (type bmp)
 <videos/wave_group/wave_group-117.png>
- <a0,fr117>
+
+<a0,fr117>
 File: videos/wave_group/wave_group-118.png Graphic file (type bmp)
 <videos/wave_group/wave_group-118.png>
-
-<a0,fr118>
+ <a0,fr118>
 File: videos/wave_group/wave_group-119.png Graphic file (type bmp)
 <videos/wave_group/wave_group-119.png>
  <a0,fr119>
@@ -2353,11 +2353,11 @@ File: videos/wave_group/wave_group-123.png Graphic file (type bmp)
  <a0,fr123>
 File: videos/wave_group/wave_group-124.png Graphic file (type bmp)
 <videos/wave_group/wave_group-124.png>
- <a0,fr124>
+
+<a0,fr124>
 File: videos/wave_group/wave_group-125.png Graphic file (type bmp)
 <videos/wave_group/wave_group-125.png>
-
-<a0,fr125>
+ <a0,fr125>
 File: videos/wave_group/wave_group-126.png Graphic file (type bmp)
 <videos/wave_group/wave_group-126.png>
  <a0,fr126>
@@ -2375,11 +2375,11 @@ File: videos/wave_group/wave_group-130.png Graphic file (type bmp)
  <a0,fr130>
 File: videos/wave_group/wave_group-131.png Graphic file (type bmp)
 <videos/wave_group/wave_group-131.png>
- <a0,fr131>
+
+<a0,fr131>
 File: videos/wave_group/wave_group-132.png Graphic file (type bmp)
 <videos/wave_group/wave_group-132.png>
-
-<a0,fr132>
+ <a0,fr132>
 File: videos/wave_group/wave_group-133.png Graphic file (type bmp)
 <videos/wave_group/wave_group-133.png>
  <a0,fr133>
@@ -2397,11 +2397,11 @@ File: videos/wave_group/wave_group-137.png Graphic file (type bmp)
  <a0,fr137>
 File: videos/wave_group/wave_group-138.png Graphic file (type bmp)
 <videos/wave_group/wave_group-138.png>
- <a0,fr138>
+
+<a0,fr138>
 File: videos/wave_group/wave_group-139.png Graphic file (type bmp)
 <videos/wave_group/wave_group-139.png>
-
-<a0,fr139>
+ <a0,fr139>
 File: videos/wave_group/wave_group-140.png Graphic file (type bmp)
 <videos/wave_group/wave_group-140.png>
  <a0,fr140>
@@ -2419,11 +2419,11 @@ File: videos/wave_group/wave_group-144.png Graphic file (type bmp)
  <a0,fr144>
 File: videos/wave_group/wave_group-145.png Graphic file (type bmp)
 <videos/wave_group/wave_group-145.png>
- <a0,fr145>
+
+<a0,fr145>
 File: videos/wave_group/wave_group-146.png Graphic file (type bmp)
 <videos/wave_group/wave_group-146.png>
-
-<a0,fr146>
+ <a0,fr146>
 File: videos/wave_group/wave_group-147.png Graphic file (type bmp)
 <videos/wave_group/wave_group-147.png>
  <a0,fr147>
@@ -2441,11 +2441,11 @@ File: videos/wave_group/wave_group-151.png Graphic file (type bmp)
  <a0,fr151>
 File: videos/wave_group/wave_group-152.png Graphic file (type bmp)
 <videos/wave_group/wave_group-152.png>
- <a0,fr152>
+
+<a0,fr152>
 File: videos/wave_group/wave_group-153.png Graphic file (type bmp)
 <videos/wave_group/wave_group-153.png>
-
-<a0,fr153>
+ <a0,fr153>
 File: videos/wave_group/wave_group-154.png Graphic file (type bmp)
 <videos/wave_group/wave_group-154.png>
  <a0,fr154>
@@ -2463,11 +2463,11 @@ File: videos/wave_group/wave_group-158.png Graphic file (type bmp)
  <a0,fr158>
 File: videos/wave_group/wave_group-159.png Graphic file (type bmp)
 <videos/wave_group/wave_group-159.png>
- <a0,fr159>
+
+<a0,fr159>
 File: videos/wave_group/wave_group-160.png Graphic file (type bmp)
 <videos/wave_group/wave_group-160.png>
-
-<a0,fr160>
+ <a0,fr160>
 File: videos/wave_group/wave_group-161.png Graphic file (type bmp)
 <videos/wave_group/wave_group-161.png>
  <a0,fr161>
@@ -2485,11 +2485,11 @@ File: videos/wave_group/wave_group-165.png Graphic file (type bmp)
  <a0,fr165>
 File: videos/wave_group/wave_group-166.png Graphic file (type bmp)
 <videos/wave_group/wave_group-166.png>
- <a0,fr166>
+
+<a0,fr166>
 File: videos/wave_group/wave_group-167.png Graphic file (type bmp)
 <videos/wave_group/wave_group-167.png>
-
-<a0,fr167>
+ <a0,fr167>
 File: videos/wave_group/wave_group-168.png Graphic file (type bmp)
 <videos/wave_group/wave_group-168.png>
  <a0,fr168>
@@ -2507,11 +2507,11 @@ File: videos/wave_group/wave_group-172.png Graphic file (type bmp)
  <a0,fr172>
 File: videos/wave_group/wave_group-173.png Graphic file (type bmp)
 <videos/wave_group/wave_group-173.png>
- <a0,fr173>
+
+<a0,fr173>
 File: videos/wave_group/wave_group-174.png Graphic file (type bmp)
 <videos/wave_group/wave_group-174.png>
-
-<a0,fr174>
+ <a0,fr174>
 File: videos/wave_group/wave_group-175.png Graphic file (type bmp)
 <videos/wave_group/wave_group-175.png>
  <a0,fr175>
@@ -2529,11 +2529,11 @@ File: videos/wave_group/wave_group-179.png Graphic file (type bmp)
  <a0,fr179>
 File: videos/wave_group/wave_group-180.png Graphic file (type bmp)
 <videos/wave_group/wave_group-180.png>
- <a0,fr180>
+
+<a0,fr180>
 File: videos/wave_group/wave_group-181.png Graphic file (type bmp)
 <videos/wave_group/wave_group-181.png>
-
-<a0,fr181>
+ <a0,fr181>
 File: videos/wave_group/wave_group-182.png Graphic file (type bmp)
 <videos/wave_group/wave_group-182.png>
  <a0,fr182>
@@ -2551,11 +2551,11 @@ File: videos/wave_group/wave_group-186.png Graphic file (type bmp)
  <a0,fr186>
 File: videos/wave_group/wave_group-187.png Graphic file (type bmp)
 <videos/wave_group/wave_group-187.png>
- <a0,fr187>
+
+<a0,fr187>
 File: videos/wave_group/wave_group-188.png Graphic file (type bmp)
 <videos/wave_group/wave_group-188.png>
-
-<a0,fr188>
+ <a0,fr188>
 File: videos/wave_group/wave_group-189.png Graphic file (type bmp)
 <videos/wave_group/wave_group-189.png>
  <a0,fr189>
@@ -2573,11 +2573,11 @@ File: videos/wave_group/wave_group-193.png Graphic file (type bmp)
  <a0,fr193>
 File: videos/wave_group/wave_group-194.png Graphic file (type bmp)
 <videos/wave_group/wave_group-194.png>
- <a0,fr194>
+
+<a0,fr194>
 File: videos/wave_group/wave_group-195.png Graphic file (type bmp)
 <videos/wave_group/wave_group-195.png>
-
-<a0,fr195>
+ <a0,fr195>
 File: videos/wave_group/wave_group-196.png Graphic file (type bmp)
 <videos/wave_group/wave_group-196.png>
  <a0,fr196>
@@ -2595,11 +2595,11 @@ File: videos/wave_group/wave_group-200.png Graphic file (type bmp)
  <a0,fr200>
 File: videos/wave_group/wave_group-201.png Graphic file (type bmp)
 <videos/wave_group/wave_group-201.png>
- <a0,fr201>
+
+<a0,fr201>
 File: videos/wave_group/wave_group-202.png Graphic file (type bmp)
 <videos/wave_group/wave_group-202.png>
-
-<a0,fr202>
+ <a0,fr202>
 File: videos/wave_group/wave_group-203.png Graphic file (type bmp)
 <videos/wave_group/wave_group-203.png>
  <a0,fr203>
@@ -2617,11 +2617,11 @@ File: videos/wave_group/wave_group-207.png Graphic file (type bmp)
  <a0,fr207>
 File: videos/wave_group/wave_group-208.png Graphic file (type bmp)
 <videos/wave_group/wave_group-208.png>
- <a0,fr208>
+
+<a0,fr208>
 File: videos/wave_group/wave_group-209.png Graphic file (type bmp)
 <videos/wave_group/wave_group-209.png>
-
-<a0,fr209>
+ <a0,fr209>
 File: videos/wave_group/wave_group-210.png Graphic file (type bmp)
 <videos/wave_group/wave_group-210.png>
  <a0,fr210>
@@ -2639,11 +2639,11 @@ File: videos/wave_group/wave_group-214.png Graphic file (type bmp)
  <a0,fr214>
 File: videos/wave_group/wave_group-215.png Graphic file (type bmp)
 <videos/wave_group/wave_group-215.png>
- <a0,fr215>
+
+<a0,fr215>
 File: videos/wave_group/wave_group-216.png Graphic file (type bmp)
 <videos/wave_group/wave_group-216.png>
-
-<a0,fr216>
+ <a0,fr216>
 File: videos/wave_group/wave_group-217.png Graphic file (type bmp)
 <videos/wave_group/wave_group-217.png>
  <a0,fr217>
@@ -2661,11 +2661,11 @@ File: videos/wave_group/wave_group-221.png Graphic file (type bmp)
  <a0,fr221>
 File: videos/wave_group/wave_group-222.png Graphic file (type bmp)
 <videos/wave_group/wave_group-222.png>
- <a0,fr222>
+
+<a0,fr222>
 File: videos/wave_group/wave_group-223.png Graphic file (type bmp)
 <videos/wave_group/wave_group-223.png>
-
-<a0,fr223>
+ <a0,fr223>
 File: videos/wave_group/wave_group-224.png Graphic file (type bmp)
 <videos/wave_group/wave_group-224.png>
  <a0,fr224>
@@ -2683,11 +2683,11 @@ File: videos/wave_group/wave_group-228.png Graphic file (type bmp)
  <a0,fr228>
 File: videos/wave_group/wave_group-229.png Graphic file (type bmp)
 <videos/wave_group/wave_group-229.png>
- <a0,fr229>
+
+<a0,fr229>
 File: videos/wave_group/wave_group-230.png Graphic file (type bmp)
 <videos/wave_group/wave_group-230.png>
-
-<a0,fr230>
+ <a0,fr230>
 File: videos/wave_group/wave_group-231.png Graphic file (type bmp)
 <videos/wave_group/wave_group-231.png>
  <a0,fr231>
@@ -2705,11 +2705,11 @@ File: videos/wave_group/wave_group-235.png Graphic file (type bmp)
  <a0,fr235>
 File: videos/wave_group/wave_group-236.png Graphic file (type bmp)
 <videos/wave_group/wave_group-236.png>
- <a0,fr236>
+
+<a0,fr236>
 File: videos/wave_group/wave_group-237.png Graphic file (type bmp)
 <videos/wave_group/wave_group-237.png>
-
-<a0,fr237>
+ <a0,fr237>
 File: videos/wave_group/wave_group-238.png Graphic file (type bmp)
 <videos/wave_group/wave_group-238.png>
  <a0,fr238>
@@ -2727,11 +2727,11 @@ File: videos/wave_group/wave_group-242.png Graphic file (type bmp)
  <a0,fr242>
 File: videos/wave_group/wave_group-243.png Graphic file (type bmp)
 <videos/wave_group/wave_group-243.png>
- <a0,fr243>
+
+<a0,fr243>
 File: videos/wave_group/wave_group-244.png Graphic file (type bmp)
 <videos/wave_group/wave_group-244.png>
-
-<a0,fr244>
+ <a0,fr244>
 File: videos/wave_group/wave_group-245.png Graphic file (type bmp)
 <videos/wave_group/wave_group-245.png>
  <a0,fr245>
@@ -2749,20 +2749,21 @@ File: videos/wave_group/wave_group-249.png Graphic file (type bmp)
  <a0,fr249>
 File: videos/wave_group/wave_group-250.png Graphic file (type bmp)
 <videos/wave_group/wave_group-250.png>
- <a0,fr250>
-[25]
+
+<a0,fr250>
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 18.06749pt on input line 932.
+(Font)              scaled to size 18.06749pt on input line 937.
 
 
 LaTeX Font Warning: Font shape `U/rsfs/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 932.
+(Font)              size <17.28> substituted on input line 937.
 
 LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
-(Font)              scaled to size 18.06749pt on input line 932.
+(Font)              scaled to size 18.06749pt on input line 937.
+[26]
 File: fig/2-5-1.eps Graphic file (type eps)
 <fig/2-5-1.eps>
-[26] [27] [28] [29]
+ [27] [28] [29]
 File: fig/2-5-2.eps Graphic file (type eps)
 <fig/2-5-2.eps>
  [30] [31] [32] [33]
@@ -2890,20 +2891,20 @@ File: videos/equation_insection/equation_insection-59.png Graphic file (type bm
 p)
 <videos/equation_insection/equation_insection-59.png>
  <a1,fr59> [34] [35] [36]
-[37]
+[37] [38]
 第三章
-[38
+[39
 
 ]
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 136
-7.
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 137
+2.
  (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
-) [39]
-[40] [41] [42] [43]
+) [40]
+[41] [42] [43] [44]
 File: fig/3-1.eps Graphic file (type eps)
 <fig/3-1.eps>
- [44] [45]
+ [45] [46]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
@@ -2918,15 +2919,15 @@ Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [46]
-Underfull \vbox (badness 1546) detected at line 1627
+ [47]
+Underfull \vbox (badness 1546) detected at line 1632
  []
 
-[47]
+[48]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [48] [49] [50] [51] [52]
-Overfull \hbox (17.9026pt too wide) detected at line 1823
+ [49] [50] [51] [52] [53]
+Overfull \hbox (17.9026pt too wide) detected at line 1828
 \LMS/ntxsy/m/n/12.045 »\OML/ntxmi/m/it/12.045 V; []\LMS/ntxsy/m/n/12.045 ¼\OML/
 ntxmi/m/it/12.045 g \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 V[][] \LMS/n
 txsy/m/n/12.045 ^^@ [][]¹\OML/ntxmi/m/it/12.045 Vg\LMS/ntxsy/m/n/12.045 º \U/nt
@@ -2937,48 +2938,48 @@ txsy/m/n/12.045 ¼ \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 i\U/ntxmia/m/i
 t/12.045 \[]
  []
 
-[53]
+[54]
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <15.05624> not available
-(Font)              size <14.4> substituted on input line 1845.
+(Font)              size <14.4> substituted on input line 1850.
 
 
-Overfull \hbox (8.4405pt too wide) in paragraph at lines 1852--1853
+Overfull \hbox (8.4405pt too wide) in paragraph at lines 1857--1858
 []\TU/SimSun(0)/m/n/12.045 我 们 可 以 给 这 两 个 波 函 数 分 别 对 应 两 个|   []$[] \OML/ntxm
 i/m/it/12.045 ; []$\TU/SimSun(0)/m/n/12.045 。|  再 根 据[][]\T1/ntxtlf/m/n/12.045 
 3.32[][]\TU/SimSun(0)/m/n/12.045 我
  []
 
-[54] [55] [56]
-Overfull \hbox (1.5488pt too wide) in paragraph at lines 1942--1943
+[55] [56] [57]
+Overfull \hbox (1.5488pt too wide) in paragraph at lines 1947--1948
 []\TU/SimSun(0)/m/n/12.045 比 如 三 维 问 题 中 $[]$ 算 符 的 三 个 分 量 算 符 $\OML/ntxmi/m/i
 t/12.045 X; Y; Z$ \TU/SimSun(0)/m/n/12.045 就 构 成 了 一 个 \T1/ntxtlf/m/n/12.045 CS
 CO,
  []
 
-[57] [58] [59] [60]
+[58] [59] [60] [61]
 第四章
 
-Overfull \vbox (0.325pt too high) detected at line 2094
+Overfull \vbox (0.325pt too high) detected at line 2099
  []
 
-[61
+[62
 
-] [62]
+] [63]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 9.03374pt on input line 2108.
- [63] [64] [65] [66] [67] [68] [69]
+(Font)              scaled to size 9.03374pt on input line 2113.
+ [64] [65] [66] [67] [68] [69] [70]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 2316.
- [70] [71] [72] [73] [74] [75]
-[76] [77] [78] [79] [80] [81] [82] [83] [84]
+(Font)              scaled to size 9.03374pt on input line 2321.
+ [71] [72] [73] [74] [75] [76]
+[77] [78] [79] [80] [81] [82] [83] [84] [85]
 File: fig/4-1.png Graphic file (type bmp)
 <fig/4-1.png>
- [85]
+ [86]
 File: fig/4-2.eps Graphic file (type eps)
 <fig/4-2.eps>
- [86] [87] [88] [89] [90]
-[91]
+ [87] [88] [89] [90] [91]
+[92]
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
@@ -2987,22 +2988,22 @@ File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
- [92]
+ [93]
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
 File: fig/CG-coefficients.pdf Graphic file (type pdf)
 <use fig/CG-coefficients.pdf, page 1>
- [93] [94] [95] [96]
+ [94] [95] [96] [97]
 File: fig/4-3.eps Graphic file (type eps)
 <fig/4-3.eps>
- [97] [98] [99] [100] [101]
+ [98] [99] [100] [101] [102]
 第五章
-[102
+[103
 
-] [103] [104]
-Overfull \hbox (1.88501pt too wide) in paragraph at lines 3407--3414
+] [104] [105]
+Overfull \hbox (1.88501pt too wide) in paragraph at lines 3418--3425
 []\TU/SimSun(0)/m/n/12.045 显 然 $\OML/ntxmi/m/it/12.045  []\LMS/ntxsy/m/n/12.045
  ¹\OT1/ntxtlf/b/n/12.045 r[]\OML/ntxmi/m/it/12.045 ; \OT1/ntxtlf/b/n/12.045 r[]
 \LMS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045  []\LMS/
@@ -3012,37 +3013,37 @@ f/b/n/12.045 r[]\LMS/ntxsy/m/n/12.045 º$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m
 /12.045 (bosons)\TU/SimSun(0)/m/n/12.045 ；|
  []
 
-[105]
+[106]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3440.
+(hyperref)                removing `math shift' on input line 3451.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3440.
+(hyperref)                removing `math shift' on input line 3451.
 
-[106] [107] [108]
+[107] [108] [109]
 File: fig/5-1-a.eps Graphic file (type eps)
 <fig/5-1-a.eps>
 File: fig/5-1-b.eps Graphic file (type eps)
 <fig/5-1-b.eps>
- [109] [110] [111] [112] [113] [114]
+ [110] [111] [112] [113] [114] [115]
 File: fig/5-2.jpg Graphic file (type bmp)
 <fig/5-2.jpg>
- [115]
+ [116]
 File: fig/5-3.jpg Graphic file (type bmp)
 <fig/5-3.jpg>
- [116] [117]
-[118] [119] [120] [121] [122] [123] [124] [125] [126] [127] [128]
-Overfull \hbox (7.27272pt too wide) detected at line 4197
+ [117] [118]
+[119] [120] [121] [122] [123] [124] [125] [126] [127] [128] [129]
+Overfull \hbox (7.27272pt too wide) detected at line 4208
 [][]
  []
 
-[129] [130] [131] [132] [133]
+[130] [131] [132] [133] [134]
 第六章
-[134
+[135
 
-] [135] [136] [137]
+] [136] [137] [138]
 Missing character: There is no 忽 ("5FFD) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 略 ("7565) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 高 ("9AD8) in font ntx-Regular-tlf-ot1!
@@ -3055,29 +3056,29 @@ Missing character: There is no 高 ("9AD8) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 阶 ("9636) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 小 ("5C0F) in font ntx-Regular-tlf-ot1!
 Missing character: There is no 量 ("91CF) in font ntx-Regular-tlf-ot1!
- [138] [139]
+ [139] [140]
 File: fig/6.3.pdf Graphic file (type pdf)
 <use fig/6.3.pdf>
- [140] [141] [142] [143] [144] [145]
+ [141] [142] [143] [144] [145] [146]
 File: fig/6-4.pdf Graphic file (type pdf)
 <use fig/6-4.pdf>
 
-[146] [147] [148] [149] [150] [151]
-Overfull \hbox (1.51637pt too wide) in paragraph at lines 4977--4978
+[147] [148] [149] [150] [151] [152]
+Overfull \hbox (1.51637pt too wide) in paragraph at lines 4994--4995
 []\TU/SimSun(0)/m/n/12.045 最 后\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 
 因 为 $\OML/ntxmi/m/it/12.045 C[] \U/ntxmia/m/it/12.045 = \OML/ntxmi/m/it/12.045 
 ^^N[]^^N[]$\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 所 以 我 们 可 以 把 标 量 算
  符 的 选 择 定 则[][]\T1/ntxtlf/m/n/12.045 6.52[][]\TU/SimSun(0)/m/n/12.045 写
  []
 
-[152] [153] [154]
-Overfull \hbox (6.30917pt too wide) in paragraph at lines 5068--5070
+[153] [154] [155]
+Overfull \hbox (6.30917pt too wide) in paragraph at lines 5085--5087
 []\TU/SimSun(0)/m/n/12.045 注 意 第 二 个 等 号 我 们 利 用 了 $[] \U/ntxmia/m/it/12.045 = 
 \OT1/ntxtlf/m/n/12.045 0$\TU/SimSun(0)/m/n/12.045 。|  其 实 这 玩 意 和 反 复 提 及 的[][]
 \T1/ntxtlf/m/n/12.045 3.27[][]\TU/SimSun(0)/m/n/12.045 形
  []
 
-[155] [156] [157] [158]
+[156] [157] [158] [159]
 
 Package fontspec Info: Could not resolve font "FangSong/BI" (it probably
 (fontspec)             doesn't exist).
@@ -3091,13 +3092,13 @@ Package fontspec Info: Could not resolve font "FangSong/I" (it probably
 (fontspec)             doesn't exist).
 
 LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 
-5165.
+5182.
 
 (d:/LaTeX/texlive/2021/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.045pt on input line 5165.
+(Font)              scaled to size 12.045pt on input line 5182.
 
 Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             with options [Script={CJK}].
@@ -3110,115 +3111,115 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 5165.
- [159]
-Overfull \hbox (6.31642pt too wide) in paragraph at lines 5195--5197
+(Font)              scaled to size 9.03374pt on input line 5182.
+ [160]
+Overfull \hbox (6.31642pt too wide) in paragraph at lines 5212--5214
 \TU/SimSun(0)/m/n/12.045 即 能 量 守 恒\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.
 045 所 以 \TU/SimSun(0)/b/n/12.045 时 间 的 连 续 平 移 对 称 性 直 接 导 致 了 体 系 的 能 量 守 恒 \T
 1/ntxtlf/b/n/12.045 (Hamil-
  []
 
-[160] [161]
-Overfull \hbox (21.3193pt too wide) detected at line 5249
+[161] [162]
+Overfull \hbox (21.3193pt too wide) detected at line 5266
 [][]
  []
 
-[162]
-Overfull \hbox (9.27284pt too wide) in paragraph at lines 5277--5278
+[163]
+Overfull \hbox (9.27284pt too wide) in paragraph at lines 5294--5295
 []\TU/SimSun(0)/m/n/12.045 看 来 我 们 考 虑 的 重 点 是 如 何 形 式 上 得 出 一 套 求 解 传 播 子 的 公 
 式，|  式[][]\T1/ntxtlf/m/n/12.045 6.85[][]\TU/SimSun(0)/m/n/12.045 显
  []
 
 
-Overfull \hbox (0.44519pt too wide) in paragraph at lines 5277--5278
+Overfull \hbox (0.44519pt too wide) in paragraph at lines 5294--5295
 \TU/SimSun(0)/m/n/12.045 然 是 可 以 推 广 的，|  现 在 我 们 考 虑 将 $\LMS/ntxsy/m/n/12.045 
 »\OML/ntxmi/m/it/12.045 t[]; t\LMS/ntxsy/m/n/12.045 ¼$ \TU/SimSun(0)/m/n/12.045
  分 成 $\OML/ntxmi/m/it/12.045 N$ \TU/SimSun(0)/m/n/12.045 份，|  端 点 处 值 为 $\OML/n
 txmi/m/it/12.045 t[]; t[]; [] ; t[] \U/ntxmia/m/it/12.045 =
  []
 
-[163]
-Overfull \hbox (4.8549pt too wide) detected at line 5317
+[164]
+Overfull \hbox (4.8549pt too wide) detected at line 5334
 [][][]
  []
 
-[164] [165] [166]
-Overfull \hbox (2.35635pt too wide) in paragraph at lines 5363--5364
+[165] [166] [167]
+Overfull \hbox (2.35635pt too wide) in paragraph at lines 5380--5381
 []\TU/SimSun(0)/m/n/12.045 直 接 根 据[][]\T1/ntxtlf/m/n/12.045 6.92[][]\TU/SimSun(
 0)/m/n/12.045 计 算 路 径 积 分 那 太 难 搞，|  我 们 还 是 根 据 推 导 过 程，|  根 据[][]\T1/ntxtlf/m
 /n/12.045 6.90[][]\TU/SimSun(0)/m/n/12.045 ，|
  []
 
-[167] [168] [169]
+[168] [169] [170]
 第七章
-[170
+[171
 
-] [171] [172]
-Overfull \hbox (11.52446pt too wide) in paragraph at lines 5544--5546
+] [172] [173]
+Overfull \hbox (11.52446pt too wide) in paragraph at lines 5561--5563
 []\TU/SimSun(0)/m/n/12.045 另 外\T1/ntxtlf/m/n/12.045 , \TU/SimSun(0)/m/n/12.045 
 其 实 非 简 并 微 扰 论 还 有 一 个 隐 含 的 适 用 条 件 就 是 矩 阵 元 $[]$
  []
 
-[173] [174]
+[174] [175]
 File: fig/7.1.pdf Graphic file (type pdf)
 <use fig/7.1.pdf>
- [175] [176] [177] [178] [179] [180] [181] [182] [183] [184]
-[185] [186] [187] [188] [189] [190]
+ [176] [177] [178] [179] [180] [181] [182] [183] [184] [185]
+[186] [187] [188] [189] [190] [191]
 第八章
-[191
+[192
 
-] [192] [193] [194] [195]
+] [193] [194] [195] [196]
 
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <18.06749> not available
-(Font)              size <17.28> substituted on input line 6189.
+(Font)              size <17.28> substituted on input line 6206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6189.
+(hyperref)                removing `math shift' on input line 6206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mhchem@cee' on input line 6189.
+(hyperref)                removing `\mhchem@cee' on input line 6206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `superscript' on input line 6189.
+(hyperref)                removing `superscript' on input line 6206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6189.
+(hyperref)                removing `math shift' on input line 6206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6189.
+(hyperref)                removing `math shift' on input line 6206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mhchem@cee' on input line 6189.
+(hyperref)                removing `\mhchem@cee' on input line 6206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 6189.
+(hyperref)                removing `math shift' on input line 6206.
 
-[196]
+[197]
 LaTeX Font Info:    Font shape `T1/ntxsups/b/n' will be
-(Font)              scaled to size 12.045pt on input line 6210.
- [197] [198] [199] [200]
-Invalid UTF-8 byte or sequence at line 6390 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 6390 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 6390 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 6390 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 6390 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 6390 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 6390 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 6390 replaced by U+FFFD.
+(Font)              scaled to size 12.045pt on input line 6227.
+ [198] [199] [200] [201]
+Invalid UTF-8 byte or sequence at line 6407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6407 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 6407 replaced by U+FFFD.
 File: fig/8-2.eps Graphic file (type eps)
 <fig/8-2.eps>
- [201]
+ [202]
 第九章
 File: fig/9-1.pdf Graphic file (type pdf)
 <use fig/9-1.pdf>
-[202
+[203
 
 ]
 File: fig/9-2.pdf Graphic file (type pdf)
@@ -3227,10 +3228,10 @@ File: fig/9-2.pdf Graphic file (type pdf)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[203]
+[204]
 File: fig/9-3.pdf Graphic file (type pdf)
 <use fig/9-3.pdf>
- [204]
+ [205]
 File: fig/9-x.pdf Graphic file (type pdf)
 <use fig/9-x.pdf>
 
@@ -3238,7 +3239,7 @@ File: fig/9-x.pdf Graphic file (type pdf)
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Overfull \hbox (10.43625pt too wide) detected at line 6528
+Overfull \hbox (10.43625pt too wide) detected at line 6545
 \OML/ntxmi/m/it/12.045 K[] \LMS/ntxsy/m/n/12.045 ^^Q [] [] \U/ntxmia/m/it/12.04
 5 = \OT1/ntxtlf/m/n/12.045 1\OML/ntxmi/m/it/12.045 :\OT1/ntxtlf/m/n/12.045 980[
 ][]\OML/ntxmi/m/it/12.045 ;  K[] \LMS/ntxsy/m/n/12.045 ^^Q [][] [] \U/ntxmia/m/
@@ -3246,114 +3247,114 @@ it/12.045 = \OT1/ntxtlf/m/n/12.045 1\OML/ntxmi/m/it/12.045 :\OT1/ntxtlf/m/n/12.
 045 485[][]
  []
 
-[205] [206] [207] [208]
+[206] [207] [208] [209]
 File: fig/9-4-a.pdf Graphic file (type pdf)
 <use fig/9-4-a.pdf>
 File: fig/9-4-b.pdf Graphic file (type pdf)
 <use fig/9-4-b.pdf>
- [209]
+ [210]
 File: fig/9-5.pdf Graphic file (type pdf)
 <use fig/9-5.pdf>
- [210] [211] [212]
+ [211] [212] [213]
 File: fig/9-7.pdf Graphic file (type pdf)
 <use fig/9-7.pdf>
- [213]
+ [214]
 File: fig/9-8.pdf Graphic file (type pdf)
 <use fig/9-8.pdf>
- [214] [215] [216]
-[217]
+ [215] [216] [217]
+[218]
 第十章
-[218
+[219
 
 ]
 第十一章
 File: fig/10-1.png Graphic file (type bmp)
 <fig/10-1.png>
-[219
+[220
 
-] [220] [221] [222] [223] [224]
+] [221] [222] [223] [224] [225]
 File: fig/11-2-a.pdf Graphic file (type pdf)
 <use fig/11-2-a.pdf>
 File: fig/11-2-b.pdf Graphic file (type pdf)
 <use fig/11-2-b.pdf>
- [225]
-Overfull \hbox (14.10518pt too wide) detected at line 7094
+ [226]
+Overfull \hbox (14.10518pt too wide) detected at line 7111
 [][][]
  []
 
-[226] [227] [228]
+[227] [228] [229]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[229] [230] [231]
-Overfull \hbox (1.18068pt too wide) in paragraph at lines 7409--7410
+[230] [231] [232]
+Overfull \hbox (1.18068pt too wide) in paragraph at lines 7426--7427
 \TU/SimSun(0)/m/n/12.045 的 本 征 值 本 征 矢 这 些 一 无 所 知，|  所 以 对 $\OML/ntxmi/m/it/12
 .045 G$ \TU/SimSun(0)/m/n/12.045 也 就 一 无 所 知。|  所 以[][]\T1/ntxtlf/m/n/12.045 11
 .30[][]\TU/SimSun(0)/m/n/12.045 和[][]\T1/ntxtlf/m/n/12.045 11.32[][]\TU/SimSun(
 0)/m/n/12.045 都
  []
 
-[232]
+[233]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7436.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Omega' on input line 7436.
+(hyperref)                removing `math shift' on input line 7453.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7436.
+(hyperref)                removing `\Omega' on input line 7453.
 
-[233] [234] [235]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 7453.
+
+[234] [235] [236]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[236] [237]
-Overfull \hbox (70.32968pt too wide) in paragraph at lines 7766--7767
+[237] [238]
+Overfull \hbox (70.32968pt too wide) in paragraph at lines 7783--7784
  [] 
  []
 
-[238] [239]
-Overfull \hbox (7.91562pt too wide) detected at line 7842
+[239] [240]
+Overfull \hbox (7.91562pt too wide) detected at line 7859
 [][][]
  []
 
-[240] [241] [242]
-Overfull \hbox (8.04951pt too wide) in paragraph at lines 7907--7909
+[241] [242] [243]
+Overfull \hbox (8.04951pt too wide) in paragraph at lines 7924--7926
 \TU/SimSun(0)/m/n/12.045 这 就 是 每 个 分 波 满 足 的 方 程，|  还 要 对 应 的 将 边 界 条 件 进 行 转 化
 ，|  注 意 到[][]\T1/ntxtlf/m/n/12.045 11.10[][]\TU/SimSun(0)/m/n/12.045 以
  []
 
-[243] [244] [245]
+[244] [245] [246]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8001.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\begingroup' on input line 8001.
+(hyperref)                removing `math shift' on input line 8018.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\endgroup' on input line 8001.
+(hyperref)                removing `\begingroup' on input line 8018.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@@over' on input line 8001.
+(hyperref)                removing `\endgroup' on input line 8018.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 8001.
+(hyperref)                removing `\@@over' on input line 8018.
 
-[246] [247] [248] [249]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 8018.
+
+[247] [248] [249] [250]
 第十二章
-[250
+[251
 
 ]
 第十三章
-[251
+[252
 
 ]
 \openout2 = `appendix.aux'.
@@ -3365,10 +3366,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 24--32
 
  []
 
-[252
+[253
 
 
-] [253] [254]
+] [254] [255]
 File: fig/a-1.eps Graphic file (type eps)
 <fig/a-1.eps>
 
@@ -3376,21 +3377,21 @@ Overfull \hbox (4.32489pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
-[255] [256] [257]
+[256] [257] [258]
 File: fig/a-3.eps Graphic file (type eps)
 <fig/a-3.eps>
 File: fig/a-2.eps Graphic file (type eps)
 <fig/a-2.eps>
- [258] [259]
+ [259] [260]
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
 Missing character: There is no ¹ ("B9) in font cmbsy10!
 Missing character: There is no º ("BA) in font cmbsy10!
- [260] [261] [262] [263] [264]
+ [261] [262] [263] [264] [265]
 File: fig/a-4.eps Graphic file (type eps)
 <fig/a-4.eps>
- [265] [266]
-[267] [268]
+ [266] [267]
+[268] [269]
 附录 B
 
 Overfull \hbox (7.7486pt too wide) in paragraph at lines 532--555
@@ -3398,38 +3399,38 @@ Overfull \hbox (7.7486pt too wide) in paragraph at lines 532--555
 45 中 我 们 讨 论 的 向 量 和 通 常 物 理 里 面 所 说 的|   []是
  []
 
-[269
+[270
 
-] [270] [271] [272]
+] [271] [272] [273]
 Overfull \hbox (12.5569pt too wide) in paragraph at lines 676--683
 []\TU/SimSun(0)/m/n/12.045 和 通 常 的 向 量 空 间 一 样\T1/ntxtlf/m/n/12.045 , \TU/SimSu
 n(0)/m/n/12.045 我 们 也 可 以 找 出 一 组 基 $\LMS/ntxsy/m/n/12.045 f[] [] \OML/ntxmi/m/
 it/12.045 ; [] [] ; [] [] ; []\LMS/ntxsy/m/n/12.045 g$
  []
 
-[273] [274] [275] [276] [277]
+[274] [275] [276] [277] [278]
 File: fig/b-1.eps Graphic file (type eps)
 <fig/b-1.eps>
- [278] [279] [280]
+ [279] [280] [281]
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
 Missing character: There is no   ("A0) in font ntx-Regular-tlf-ot1!
- [281]
+ [282]
 File: fig/b-2.eps Graphic file (type eps)
 <fig/b-2.eps>
- [282]
+ [283]
 Overfull \hbox (2.89864pt too wide) detected at line 987
 \OML/ntxmi/m/it/12.045 P[] \U/ntxmia/m/it/12.045 = [] [] \LMS/ntxsy/m/n/12.045 
 ! []  [] [] \U/ntxmia/m/it/12.045 = []
  []
 
-[283] [284] [285] [286] [287] [288]
+[284] [285] [286] [287] [288] [289]
 LaTeX Font Info:    Font shape `T1/ntxsups/m/it' will be
 (Font)              scaled to size 12.045pt on input line 1160.
- [289] [290]
+ [290] [291]
 附录 C
-[291
+[292
 
-]) [292]
+]) [293]
 \openout2 = `appendix_group.aux'.
 
  (./appendix_group.tex
@@ -3452,12 +3453,12 @@ LaTeX Font Info:    Font shape `OT1/ntxtlf/b/n' will be
 LaTeX Font Warning: Font shape `U/bbm/m/n' in size <10.53937> not available
 (Font)              size <10.95> substituted on input line 26.
 
-[293
+[294
 
 
 
 
-] [294] [295] [296] [297] [298]
+] [295] [296] [297] [298] [299]
 Overfull \hbox (37.32892pt too wide) in paragraph at lines 180--181
 \TU/SimSun(0)/m/n/12.045 示 绕 中 心 旋 转 $\OT1/ntxtlf/m/n/12.045 2\OML/ntxmi/m/it/1
 2.045 ^^Y\LMS/ntxsy/m/n/12.045 ^^9d\OML/ntxmi/m/it/12.045 n$\TU/SimSun(0)/m/n/1
@@ -3467,7 +3468,7 @@ xmi/m/it/12.045 I; R; R[]; [] ; R[]; r; Rr; R[]r; [] ; R[]r\LMS/ntxsy/m/n/12.04
 5 g$\TU/SimSun(0)/m/n/12.045 ，|
  []
 
-[299]
+[300]
 File: fig/fig_D.1a.eps Graphic file (type eps)
 <fig/fig_D.1a.eps>
 File: fig/fig_D.1b.eps Graphic file (type eps)
@@ -3476,13 +3477,13 @@ File: fig/fig_D.1b.eps Graphic file (type eps)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[300] [301] [302] [303] [304] [305] [306] [307]
+[301] [302] [303] [304] [305] [306] [307] [308]
 Overfull \hbox (4.64157pt too wide) in paragraph at lines 412--414
 []\TU/SimSun(0)/m/n/12.045 这 个 定 义 其 实 就 是 说 我 们 可 以 选 取 一 组 $\OML/ntxmi/m/it/1
 2.045 V$ \TU/SimSun(0)/m/n/12.045 中 的 基 底 $[] [] 
  []
 
-[308]
+[309]
 Overfull \hbox (31.82376pt too wide) in paragraph at lines 460--461
 []\TU/SimSun(0)/m/it/12.045 又 因 为 $\OML/ntxmi/m/it/12.045 ^^8e$ \TU/SimSun(0)/m
 /it/12.045 是 群 表 示，|  所 以 同 态 满 足 $\LMS/ntxsy/m/n/12.045 A¹\OML/ntxmi/m/it/12.0
@@ -3493,10 +3494,10 @@ A¹\OML/ntxmi/m/it/12.045 g\LMS/ntxsy/m/n/12.045 ºA¹\OML/ntxmi/m/it/12.045 g[]
 MS/ntxsy/m/n/12.045 º \U/ntxmia/m/it/12.045 =
  []
 
-[309] [310]
+[310] [311]
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/it' will be
 (Font)              scaled to size 12.045pt on input line 560.
- [311] [312]
+ [312] [313]
 Overfull \hbox (17.87273pt too wide) in paragraph at lines 619--621
 []\TU/SimSun(0)/m/it/12.045 如 果 两 空 间 维 数 相 等 $[] \OML/ntxmi/m/it/12.045 V \U/n
 txmia/m/it/12.045 = [] \OML/ntxmi/m/it/12.045 W$\TU/SimSun(0)/m/it/12.045 ，|  基
@@ -3507,13 +3508,13 @@ txmia/m/it/12.045 = [] \OML/ntxmi/m/it/12.045 W$\TU/SimSun(0)/m/it/12.045 ，|  
 /12.045 ，|
  []
 
-[313]
+[314]
 Underfull \hbox (badness 1259) in paragraph at lines 634--636
 []\TU/SimSun(0)/m/n/12.045 算 子 能 否 对 角 化 取 决 于 其 线 性 空 间 是 否 能 够 写 成 其 本 征 空 间 
 的
  []
 
-[314] [315] [316] [317]
+[315] [316] [317] [318]
 Underfull \hbox (badness 10000) in paragraph at lines 771--772
 []\TU/SimSun(0)/m/n/12.045 设 有 限 群 $\OML/ntxmi/m/it/12.045 G$ \TU/SimSun(0)/m/n
 /12.045 的 所 有 不 等 价 不 可 约 酉 表 示 为[][][][][]：|
@@ -3526,7 +3527,7 @@ m/n/12.045 . \TU/SimSun(0)/m/n/12.045 这 些 表 示 就 是 群 表 示 最 �
 /n/12.045 .
  []
 
-[318] [319] [320] [321] [322] [323]
+[319] [320] [321] [322] [323] [324]
 Overfull \hbox (15.13051pt too wide) in paragraph at lines 942--943
 []\TU/SimSun(0)/m/it/12.045 证 明 中 用 到 的 操 作：|  由 群 函 数 $\LMS/ntxsy/m/n/12.045 8
 \OML/ntxmi/m/it/12.045 ^^^ \OT1/ntxtlf/m/n/12.045 : \OML/ntxmi/m/it/12.045 G \L
@@ -3535,24 +3536,24 @@ ML/ntxmi/m/it/12.045 ^^^[]\LMS/ntxsy/m/n/12.045 ¹\OML/ntxmi/m/it/12.045 g\LMS/n
 txsy/m/n/12.045 º ^^Q [] [][] \OML/ntxmi/m/it/12.045 ^^^ []$
  []
 
-[324]
+[325]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[325] [326]
+[326] [327]
 File: fig/D-1.pdf Graphic file (type pdf)
 <use fig/D-1.pdf>
 File: fig/D-1.pdf Graphic file (type pdf)
 <use fig/D-1.pdf>
- [327] [328] [329]
+ [328] [329] [330]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 3.61343pt on input line 1150.
- [330] [331] [332]
+ [331] [332] [333]
 Underfull \hbox (badness 10000) in paragraph at lines 1274--1276
 
  []
 
-[333] [334] [335] [336] [337] [338] [339]
+[334] [335] [336] [337] [338] [339] [340]
 Overfull \hbox (8.44511pt too wide) detected at line 1579
 \LMS/ntxsy/m/n/12.045 »\OT1/ntxtlf/m/n/12.045 2\OML/ntxmi/m/it/12.045 ; \OT1/nt
 xtlf/m/n/12.045 1\LMS/ntxsy/m/n/12.045 ¼ 
@@ -3574,7 +3575,7 @@ t/12.045 ; \OT1/ntxtlf/m/n/12.045 3\LMS/ntxsy/m/n/12.045 ¼ ^^H »\OT1/ntxtlf/m/
 y/m/n/12.045 ¼
  []
 
-[340]
+[341]
 
 Package amsmath Warning: Bracket group [3,2,1] at formula start!
 (amsmath)                It could be a misspelled positional argument.
@@ -3607,10 +3608,10 @@ Overfull \hbox (25.27548pt too wide) detected at line 1643
 [][][]
  []
 
-[341] [342] [343] [344] [345]
+[342] [343] [344] [345] [346]
 File: fig/D.4.pdf Graphic file (type pdf)
 <use fig/D.4.pdf>
- [346] [347] [348] [349]) [350]
+ [347] [348] [349] [350] [351]) [352]
 File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf>
 File: back_cover/cover.pdf Graphic file (type pdf)
@@ -3625,7 +3626,7 @@ File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf, page 1>
 File: back_cover/cover.pdf Graphic file (type pdf)
 <use back_cover/cover.pdf, page 1>
- [351
+ [353
 
 
 ]
@@ -3642,12 +3643,12 @@ Package rerunfilecheck Info: File `sourcecode.out' has not changed.
 (rerunfilecheck)             Checksum: 37284C08B3133C56DBE936178ED8B0F8;20563.
  ) 
 Here is how much of TeX's memory you used:
- 108839 strings out of 476533
- 2566060 string characters out of 5818886
- 2296825 words of memory out of 5000000
- 127849 multiletter control sequences out of 15000+600000
+ 108841 strings out of 476533
+ 2566085 string characters out of 5818886
+ 2298557 words of memory out of 5000000
+ 127851 multiletter control sequences out of 15000+600000
  564486 words of font info for 328 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  90i,23n,117p,1548b,47306s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sourcecode.pdf (357 pages).
+Output written on sourcecode.pdf (359 pages).
